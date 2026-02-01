@@ -6,118 +6,100 @@ import json
 import logging
 from urllib.parse import quote
 
-# تنظیمات لاگ برای مشاهده وضعیت اجرا
+# تنظیمات لاگ
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-logger = logging.getLogger("SubConverter_Generator")
+logger = logging.getLogger("SubGenerator_Pro")
 
 def run_subconverter():
-    """دانلود، نصب و اجرای سرویس ساب‌کانورتر در پس‌زمینه"""
+    """دانلود و اجرای ساب‌کانورتر در پس‌زمینه"""
     if not os.path.exists("subconverter/subconverter"):
-        logger.info("در حال دانلود موتور ساب‌کانورتر...")
-        # لینک نسخه لینوکس 64 بیتی
+        logger.info("Downloading Subconverter binary...")
         url = "https://github.com/MetaCubeX/subconverter/releases/latest/download/subconverter_linux64.tar.gz"
-        try:
-            subprocess.run(["wget", url, "-O", "subconverter.tar.gz"], check=True)
-            subprocess.run(["tar", "-xvf", "subconverter.tar.gz"], check=True)
-            # اعطای دسترسی اجرایی به فایل اصلی
-            os.chmod("subconverter/subconverter", 0o755)
-        except Exception as e:
-            logger.error(f"خطا در دانلود یا استخراج ساب‌کانورتر: {e}")
-            return None
+        subprocess.run(["wget", url, "-O", "subconverter.tar.gz"], check=True)
+        subprocess.run(["tar", "-xvf", "subconverter.tar.gz"], check=True)
+        os.chmod("subconverter/subconverter", 0o755)
     
-    logger.info("در حال اجرای سرویس ساب‌کانورتر...")
-    # اجرای ساب‌کانورتر روی پورت پیش‌فرض 25500
-    try:
-        proc = subprocess.Popen(
-            ["./subconverter/subconverter"], 
-            stdout=subprocess.DEVNULL, 
-            stderr=subprocess.DEVNULL
-        )
-        # زمان دادن به سرویس برای بالا آمدن کامل
-        time.sleep(3)
-        return proc
-    except Exception as e:
-        logger.error(f"خطا در اجرای سرویس ساب‌کانورتر: {e}")
-        return None
+    # اجرای سرویس روی پورت 25500
+    proc = subprocess.Popen(
+        ["./subconverter/subconverter"], 
+        stdout=subprocess.DEVNULL, 
+        stderr=subprocess.DEVNULL
+    )
+    time.sleep(5) # زمان کافی برای لود شدن کامل دیتابیس‌ها و تمپلیت‌ها
+    return proc
 
 def generate_all_subs():
-    """تولید تمامی کانفیگ‌ها بر اساس پارامترهای فایل JSON"""
-    source_file = "sub/tested/speed_passed_base64.txt"
+    # ۱. آدرس‌دهی فایل‌ها
+    # استفاده از abspath برای جلوگیری از خطای 414 و "Link Not Found" در ساب‌کانورتر
+    source_file = os.path.abspath("sub/tested/speed_passed_base64.txt")
     config_path = "config/sub_params.json"
     output_dir = "sub/final"
-    
-    # اطمینان از وجود پوشه خروجی
     os.makedirs(output_dir, exist_ok=True)
 
-    # بررسی وجود فایل منبع
     if not os.path.exists(source_file):
-        logger.error(f"فایل منبع یافت نشد: {source_file}")
+        logger.error(f"فایل منبع لینک‌ها یافت نشد: {source_file}")
         return
 
-    # بررسی وجود فایل تنظیمات در پوشه config
-    if not os.path.exists(config_path):
-        logger.error(f"فایل تنظیمات در مسیر {config_path} یافت نشد!")
+    # ۲. خواندن تنظیمات کلاینت‌ها
+    try:
+        with open(config_path, "r", encoding="utf-8") as f:
+            client_configs = json.load(f)
+    except Exception as e:
+        logger.error(f"خطا در خواندن فایل تنظیمات JSON: {e}")
         return
-
-    # خواندن لینک‌های خام تست شده
-    with open(source_file, "r", encoding="utf-8") as f:
-        raw_links = f.read().strip()
-    
-    # خواندن تنظیمات اختصاصی هر کلاینت
-    with open(config_path, "r", encoding="utf-8") as f:
-        client_configs = json.load(f)
 
     base_api = "http://127.0.0.1:25500/sub"
 
     for client_name, params in client_configs.items():
-        logger.info(f"در حال پردازش کلاینت: {client_name}")
+        logger.info(f"Generating for: {client_name}")
         
-        # استخراج نام فایل خروجی و حذف آن از پارامترهای ارسالی به API
+        # جدا کردن پارامترهای سیستمی از پارامترهای API
         target_filename = params.pop("filename", f"{client_name}.txt")
         
-        # کپی پارامترها و اضافه کردن لینک منبع
-        payload = params.copy()
-        payload["url"] = raw_links
+        # کپی پارامترها برای ساخت Query
+        api_params = params.copy()
         
-        # ساخت Query String با رعایت URLEncode برای تمامی مقادیر
-        # مقادیر خالی نادیده گرفته می‌شوند
-        query_string = "&".join([f"{k}={quote(str(v))}" for k, v in payload.items() if v != ""])
-        final_request_url = f"{base_api}?{query_string}"
+        # تکنیک اصلی: بجای ارسال 1000 خط لینک، آدرس فایل محلی را به API می‌دهیم
+        # ساب‌کانورتر اجازه دارد فایل‌های محلی را اگر با مسیر مستقیم باشند بخواند
+        api_params["url"] = source_file
+        
+        # ساخت Query String
+        query_parts = []
+        for key, value in api_params.items():
+            if value is not None and value != "":
+                # انکود کردن مقادیر (مخصوصاً لینک‌های تمپلیت در پارامتر config)
+                encoded_val = quote(str(value), safe="")
+                query_parts.append(f"{key}={encoded_val}")
+        
+        final_url = f"{base_api}?{'&'.join(query_parts)}"
 
         try:
-            # ارسال درخواست به سرویس محلی ساب‌کانورتر
-            # افزایش تایم‌اوت به 120 ثانیه برای لیست‌های حجیم
-            response = requests.get(final_request_url, timeout=120)
+            # ارسال درخواست GET (حالا طول URL به دلیل استفاده از مسیر فایل بسیار کوتاه است)
+            response = requests.get(final_url, timeout=120)
             
             if response.status_code == 200:
-                full_output_path = os.path.join(output_dir, target_filename)
-                with open(full_output_path, "w", encoding="utf-8") as out_file:
-                    out_file.write(response.text)
-                logger.info(f"فایل با موفقیت ذخیره شد: {target_filename}")
+                output_path = os.path.join(output_dir, target_filename)
+                with open(output_path, "w", encoding="utf-8") as out:
+                    out.write(response.text)
+                logger.info(f"✅ Successfully created {target_filename}")
             else:
-                logger.error(f"خطا در تبدیل برای {client_name}: کد وضعیت {response.status_code}")
-                
+                logger.error(f"❌ Failed {client_name}: HTTP {response.status_code}")
+                # اگر ساب‌کانورتر خطای داخلی بدهد، معمولاً در بدنه پاسخ دلیلش را می‌نویسد
+                if response.text:
+                    logger.debug(f"API Response Error: {response.text}")
+                    
         except Exception as e:
-            logger.error(f"خطای ارتباطی برای کلاینت {client_name}: {e}")
+            logger.error(f"Request error for {client_name}: {e}")
 
 if __name__ == "__main__":
-    subconverter_process = None
+    sub_proc = None
     try:
-        # ۱. اجرای موتور تبدیل
-        subconverter_process = run_subconverter()
-        
-        if subconverter_process:
-            # ۲. شروع فرآیند تولید فایل‌ها
-            generate_all_subs()
-        else:
-            logger.error("سرویس ساب‌کانورتر اجرا نشد. توقف عملیات.")
-            
-    except KeyboardInterrupt:
-        logger.info("عملیات توسط کاربر متوقف شد.")
+        sub_proc = run_subconverter()
+        generate_all_subs()
+    except Exception as e:
+        logger.error(f"Global error: {e}")
     finally:
-        # ۳. بستن سرویس ساب‌کانورتر پس از اتمام کار
-        if subconverter_process:
-            logger.info("در حال بستن سرویس ساب‌کانورتر...")
-            subconverter_process.terminate()
-            subconverter_process.wait()
-            logger.info("سرویس با موفقیت بسته شد.")
+        if sub_proc:
+            logger.info("Shutting down Subconverter...")
+            sub_proc.terminate()
+            sub_proc.wait()
