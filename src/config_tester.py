@@ -32,17 +32,18 @@ def download_xray_knife():
     os.chmod("xray-knife", 0o755)
 
 def rename_config(link, info_dict):
-    """تغییر نام منعطف کانفیگ بر اساس اطلاعات موجود"""
+    if not link: return None
     flag = get_flag_emoji(info_dict.get('country', ''))
     ping = info_dict.get('ping', '')
     speed = info_dict.get('speed', '')
     
-    # ساختن برچسب نام: [Flag] [Country] | [Ping]ms | [Speed]MB
     parts = [flag, info_dict.get('country', '')]
     if ping: parts.append(f"{ping}ms")
     if speed:
-        s_val = f"{float(speed)/1024:.1f}MB" if str(speed).replace('.','').isdigit() else speed
-        parts.append(s_val)
+        try:
+            s_val = f"{float(speed)/1024:.1f}MB"
+            parts.append(s_val)
+        except: parts.append(str(speed))
     
     info_tag = " | ".join([p for p in parts if p]) + " | "
     
@@ -74,60 +75,73 @@ def test_process():
     os.makedirs(output_dir, exist_ok=True)
     download_xray_knife()
 
-    # --- فاز ۱: تست پینگ بر روی همه ---
-    logger.info("Phase 1: Ping testing all configs...")
+    # --- فاز ۱: تست پینگ ---
+    logger.info("Phase 1: Ping testing...")
     run_test(input_file, "ping_results.csv", threads=50, speedtest=False)
     
+    if not os.path.exists("ping_results.csv"):
+        logger.error("Ping results CSV not found!")
+        return
+
     ping_passed_links = []
-    top_300_input = "top_300_for_speed.txt"
-    
-    if os.path.exists("ping_results.csv"):
-        with open("ping_results.csv", "r", encoding="utf-8") as f:
-            results = list(csv.DictReader(f))
-            # مرتب‌سازی بر اساس پینگ (کمترین پینگ اول)
-            results.sort(key=lambda x: int(x.get('Delay', 9999)) if str(x.get('Delay')).isdigit() else 9999)
+    valid_rows_for_speed = []
+
+    with open("ping_results.csv", "r", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            link = row.get('Config') or row.get('Link')
+            delay_str = row.get('Delay') or row.get('Real Delay')
             
-            for row in results:
-                link = row.get('Config') or row.get('Link')
-                if link and int(row.get('Delay', 0)) > 0:
+            # فقط مواردی که لینک دارند و پینگ‌شان معتبر (عدد مثبت) است
+            if link and delay_str and str(delay_str).isdigit():
+                delay_int = int(delay_str)
+                if delay_int > 0:
                     labeled = rename_config(link, {
-                        'country': row.get('Country Code', 'UN'),
-                        'ping': row.get('Delay')
+                        'country': row.get('Country Code') or row.get('Country', 'UN'),
+                        'ping': delay_str
                     })
-                    ping_passed_links.append(labeled)
+                    if labeled: ping_passed_links.append(labeled)
+                    valid_rows_for_speed.append(row)
 
-        # ذخیره خروجی پینگ‌دارها
-        with open(os.path.join(output_dir, "ping_passed.txt"), "w", encoding="utf-8") as f:
-            f.write("\n".join(ping_passed_links))
-        
-        # جدا کردن ۳۰۰ تای اول برای تست سرعت
-        top_configs = [row.get('Config') or row.get('Link') for row in results[:300]]
+    # ذخیره همه پینگ‌دارها
+    with open(os.path.join(output_dir, "ping_passed.txt"), "w", encoding="utf-8") as f:
+        f.write("\n".join(ping_passed_links))
+    
+    # مرتب‌سازی برای انتخاب ۳۰۰ تای برتر
+    valid_rows_for_speed.sort(key=lambda x: int(x.get('Delay') or x.get('Real Delay') or 9999))
+    top_rows = valid_rows_for_speed[:300]
+    
+    top_configs_links = [r.get('Config') or r.get('Link') for r in top_rows if (r.get('Config') or r.get('Link'))]
+    
+    if top_configs_links:
+        top_300_input = "top_300_for_speed.txt"
         with open(top_300_input, "w", encoding="utf-8") as f:
-            f.write("\n".join(top_configs))
+            f.write("\n".join(top_configs_links))
 
-        # --- فاز ۲: تست سرعت بر روی ۳۰۰ تای برتر ---
-        logger.info("Phase 2: Speed testing top 300 configs...")
+        # --- فاز ۲: تست سرعت ---
+        logger.info(f"Phase 2: Speed testing top {len(top_configs_links)} configs...")
         run_test(top_300_input, "speed_results.csv", threads=10, speedtest=True)
         
         if os.path.exists("speed_results.csv"):
             speed_passed_links = []
             with open("speed_results.csv", "r", encoding="utf-8") as f:
-                s_results = list(csv.DictReader(f))
-                for row in s_results:
-                    link = row.get('Config') or row.get('Link')
-                    speed = row.get('Download Speed') or row.get('Speed', '0')
-                    if link and (float(speed) > 0 if str(speed).replace('.','').isdigit() else False):
-                        labeled = rename_config(link, {
-                            'country': row.get('Country Code', 'UN'),
-                            'ping': row.get('Delay'),
-                            'speed': speed
+                s_reader = csv.DictReader(f)
+                for s_row in s_reader:
+                    s_link = s_row.get('Config') or s_row.get('Link')
+                    s_speed = s_row.get('Download Speed') or s_row.get('Speed', '0')
+                    
+                    if s_link and (float(s_speed) > 0 if str(s_speed).replace('.','').isdigit() else False):
+                        labeled = rename_config(s_link, {
+                            'country': s_row.get('Country Code') or s_row.get('Country', 'UN'),
+                            'ping': s_row.get('Delay') or s_row.get('Real Delay'),
+                            'speed': s_speed
                         })
-                        speed_passed_links.append(labeled)
+                        if labeled: speed_passed_links.append(labeled)
             
             with open(os.path.join(output_dir, "speed_passed.txt"), "w", encoding="utf-8") as f:
                 f.write("\n".join(speed_passed_links))
-            
-            logger.info(f"✅ Finished. Ping-passed: {len(ping_passed_links)}, Speed-passed: {len(speed_passed_links)}")
+    
+    logger.info("✅ All phases completed.")
 
 if __name__ == "__main__":
     test_process()
