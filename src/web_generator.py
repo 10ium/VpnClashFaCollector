@@ -7,7 +7,7 @@ def generate_web_page():
     output_html = "index.html"
     repo_raw_url = "https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main"
     
-    # لیست اولویت‌بندی فایل‌ها برای بخش تست شده (جفت‌جفت برای روبروی هم قرار گرفتن)
+    # ترتیب دقیق فایل‌ها برای بخش تست شده (برای روبروی هم قرار گرفتن)
     tested_file_order = [
         "speed_passed.txt", "speed_passed_base64.txt",
         "ping_passed.txt", "ping_passed_base64.txt",
@@ -16,21 +16,27 @@ def generate_web_page():
         "quantumult.conf", "surge4.conf",
         "ss_android.txt", "ss_sip002.txt",
         "loon.config", "ssr.txt",
-        "ssd.txt", "" # خالی برای حفظ ردیف اگر فرد بود
+        "ssd.txt", "" # جای خالی برای حفظ تراز
     ]
 
-    # لیست اولویت‌بندی برای بقیه منابع
+    # ترتیب دقیق فایل‌ها برای بقیه منابع
     source_file_order = [
         "mixed.txt", "mixed_base64.txt",
         "vless.txt", "vless_base64.txt",
         "vmess.txt", "vmess_base64.txt",
         "trojan.txt", "trojan_base64.txt",
         "ss.txt", "ss_base64.txt",
-        "ssh.txt", "sssh_base64.txt",
-        "wireguard.txt", "swireguard_base64.txt",
-        "warp.txt", "swarp_base64.txt",
+        "ssh.txt", "ssh_base64.txt",
+        "wireguard.txt", "wireguard_base64.txt",
+        "warp.txt", "warp_base64.txt",
         "hysteria2.txt", "hysteria2_base64.txt",
-        "clash.yaml", "clashr.yaml"
+        "clash.yaml", "clashr.yaml",
+        "tg_android.txt", "tg_windows.txt",
+        "v2ray.txt", "surfboard.conf",
+        "quantumult.conf", "surge4.conf",
+        "ss_sip002.txt", "ss_android.txt",
+        "ssr.txt", "ssd.txt",
+        "loon.config", "quanx.conf"
     ]
 
     client_icons = {
@@ -44,7 +50,7 @@ def generate_web_page():
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>پنل مدیریت VpnClashFa</title>
+        <title>VpnClashFa Manager</title>
         <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <style>
@@ -57,24 +63,23 @@ def generate_web_page():
             .tab-active {{ border-bottom: 4px solid #3b82f6; color: #3b82f6; font-weight: 900; }}
             .file-card {{ background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; padding: 12px; }}
             .btn-action {{ transition: all 0.2s; font-size: 14px; font-weight: 700; }}
-            .btn-action:hover {{ transform: translateY(-2px); }}
         </style>
     </head>
     <body class="p-4 md:p-10">
         <div class="max-w-6xl mx-auto">
             <header class="text-center mb-12">
                 <h1 class="text-4xl font-black text-blue-500 mb-2">VpnClashFa Collector</h1>
-                <p class="text-slate-500 text-sm italic">به‌روزرسانی: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M')}</p>
+                <p class="text-slate-500 text-sm italic">بروزرسانی: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M')}</p>
             </header>
 
             <section class="mb-12 glass p-6 rounded-3xl border-t-4 border-sky-500 shadow-2xl">
-                <h2 class="text-2xl font-black mb-6 flex items-center text-sky-400"><i class="fa-brands fa-telegram ml-3"></i> پروکسی‌های تلگرام</h2>
+                <h2 class="text-2xl font-black mb-6 flex items-center text-sky-400"><i class="fa-brands fa-telegram ml-3 text-3xl"></i> پروکسی‌های تلگرام</h2>
                 <div class="flex gap-6 mb-6 border-b border-white/10 text-lg">
-                    <button onclick="switchTG('android')" id="tab-android" class="pb-3 px-2 tab-active">اندروید</button>
-                    <button onclick="switchTG('windows')" id="tab-windows" class="pb-3 px-2 text-slate-400">ویندوز</button>
-                    <button onclick="switchTG('mixed')" id="tab-mixed" class="pb-3 px-2 text-slate-400">میکس</button>
+                    <button onclick="switchTG('android')" id="tab-android" class="pb-3 px-2 tab-active transition-all">اندروید</button>
+                    <button onclick="switchTG('windows')" id="tab-windows" class="pb-3 px-2 text-slate-400 transition-all">ویندوز</button>
+                    <button onclick="switchTG('mixed')" id="tab-mixed" class="pb-3 px-2 text-slate-400 transition-all">میکس</button>
                 </div>
-                <div id="proxy-display" class="proxy-box mb-6">در حال بارگذاری...</div>
+                <div id="proxy-display" class="proxy-box mb-6 shadow-inner">در حال دریافت پروکسی‌ها...</div>
                 <button onclick="copyCurrentProxy()" class="w-full bg-sky-600 hover:bg-sky-500 py-4 rounded-xl font-black transition flex items-center justify-center">
                     <i class="fa-solid fa-copy ml-2 text-xl"></i> کپی تمام پروکسی‌ها
                 </button>
@@ -84,17 +89,17 @@ def generate_web_page():
             <div class="space-y-6">
     """
 
-    # پیدا کردن پوشه‌ها
+    # یافتن پوشه‌ها و اعمال منطق اولویت‌بندی عددی
     folders = [d for d in os.listdir(sub_root) if os.path.isdir(os.path.join(sub_root, d)) and d != "final"]
     
-    # اولویت‌بندی پوشه‌ها
-    # ۱. Tested ۲. بقیه منابع ۳. All (میکس همه)
-    def folder_priority(name):
-        if name.lower() == 'tested': return 0
-        if name.lower() == 'all': return 2
-        return 1
-    
-    sorted_folders = sorted(folders, key=folder_priority)
+    def get_priority(name):
+        n = name.lower()
+        if n == 'tested': return 1 # اولویت ۲ (بعد از پروکسی)
+        if n == 'all': return 2    # اولویت ۳ (میکس همه کانفیگا)
+        return 3                   # اولویت ۴ (بقیه منابع)
+
+    # مرتب‌سازی ابتدا بر اساس رتبه اولویت و سپس الفبا برای منابع رتبه ۳
+    sorted_folders = sorted(folders, key=lambda x: (get_priority(x), x.lower()))
 
     for folder in sorted_folders:
         is_all = folder.lower() == 'all'
@@ -115,40 +120,39 @@ def generate_web_page():
                 <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-4">
         """
 
-        # انتخاب لیست ترتیب فایل بر اساس نوع پوشه
         current_order = tested_file_order if is_tested else source_file_order
-        
-        # جمع‌آوری تمام فایل‌های موجود در دو پوشه اصلی و فینال برای این منبع
         available_files = {}
-        # از پوشه اصلی
+        
+        # جمع‌آوری لینک‌ها
         p1 = os.path.join(sub_root, folder)
         if os.path.exists(p1):
             for f in os.listdir(p1): available_files[f] = f"{repo_raw_url}/sub/{folder}/{f}"
-        # از پوشه فینال
+        
         final_folder_name = "tested_ping_passed" if is_tested else folder
         p2 = os.path.join(final_root, final_folder_name)
         if os.path.exists(p2):
             for f in os.listdir(p2): available_files[f] = f"{repo_raw_url}/sub/final/{final_folder_name}/{f}"
 
-        # چیدمان طبق لیست درخواستی شما
-        for target_file in current_order:
-            if not target_file: # برای ردیف‌های فرد
+        # فیلتر کردن و نمایش فایل‌ها طبق ترتیب درخواستی
+        for target in current_order:
+            if target == "raw_results": continue # حذف raw_results
+            if not target: # جای خالی برای تراز ردیف
                 html_content += '<div class="hidden md:block"></div>'
                 continue
                 
-            if target_file in available_files:
-                furl = available_files[target_file]
-                icon = next((v for k, v in client_icons.items() if k in target_file.lower()), "fa-file-code")
+            if target in available_files:
+                furl = available_files[target]
+                icon = next((v for k, v in client_icons.items() if k in target.lower()), "fa-file-code")
                 html_content += f"""
                 <div class="file-card flex flex-col gap-4">
                     <div class="flex items-center gap-3">
                         <i class="fa-solid {icon} text-blue-400 text-xl"></i>
-                        <span class="text-sm font-bold truncate text-slate-300">{target_file}</span>
+                        <span class="text-sm font-bold truncate text-slate-300">{target}</span>
                     </div>
                     <div class="flex gap-1">
-                        <button onclick="copyText('{furl}')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white">لینک</button>
-                        <button onclick="copyContent('{furl}')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white">متن</button>
-                        <button onclick="downloadFile('{furl}', '{target_file}')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                        <button onclick="copyText('{furl}')" class="flex-1 bg-blue-600/20 text-blue-400 py-2 rounded-lg btn-action hover:bg-blue-600 hover:text-white transition-all">لینک</button>
+                        <button onclick="copyContent('{furl}')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                        <button onclick="downloadFile('{furl}', '{target}')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
                     </div>
                 </div>"""
         
@@ -184,8 +188,10 @@ def generate_web_page():
             }
             function copyText(t) { navigator.clipboard.writeText(t); alert('لینک کپی شد'); }
             async function copyContent(url) {
-                const r = await fetch(url); const t = await r.text();
-                navigator.clipboard.writeText(t); alert('محتوای فایل کپی شد');
+                try {
+                    const r = await fetch(url); const t = await r.text();
+                    navigator.clipboard.writeText(t); alert('محتوای فایل کپی شد');
+                } catch(e) { alert('خطا در کپی متن'); }
             }
             async function downloadFile(url, name) {
                 const r = await fetch(url); const b = await r.blob();
