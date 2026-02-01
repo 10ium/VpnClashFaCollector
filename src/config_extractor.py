@@ -7,14 +7,14 @@ import logging
 logging.basicConfig(level=logging.INFO, format='%(message)s')
 logger = logging.getLogger("Extractor")
 
-# حذف https از لیست برای جلوگیری از ساخت فایل مجزا
+# لیست پروتکل‌های مورد حمایت
 PROTOCOLS = [
     'vmess', 'vless', 'trojan', 'ss', 'ssr', 'tuic', 'hysteria', 'hysteria2', 
     'hy2', 'juicity', 'snell', 'mieru', 'anytls', 'ssh', 'wireguard', 'wg', 
     'warp', 'socks', 'socks4', 'socks5', 'tg'
 ]
 
-# اصلاح Lookahead برای شامل شدن هر دو مدل لینک تلگرام بدون ایجاد فایل https
+# اصلاح Lookahead برای شامل شدن هر دو مدل لینک تلگرام
 NEXT_CONFIG_LOOKAHEAD = r'(?=' + '|'.join([rf'{p}:\/\/' for p in PROTOCOLS if p != 'tg']) + r'|https:\/\/t\.me\/proxy\?|tg:\/\/proxy\?)'
 
 def get_flexible_pattern(protocol_prefix):
@@ -22,7 +22,6 @@ def get_flexible_pattern(protocol_prefix):
     ایجاد الگو با تمرکز بر تجمیع لینک‌های تلگرام در پروتکل tg
     """
     if protocol_prefix == 'tg':
-        # این الگو هر دو مدل لینک تلگرام را می‌گیرد
         prefix = rf'(?:tg:\/\/proxy\?|https:\/\/t\.me\/proxy\?)'
     else:
         prefix = rf'{protocol_prefix}:\/\/'
@@ -32,8 +31,40 @@ def get_flexible_pattern(protocol_prefix):
 # تولید داینامیک الگوها
 PATTERNS = {p: get_flexible_pattern(p) for p in PROTOCOLS}
 
+def is_windows_compatible(link):
+    """
+    بررسی سازگاری لینک MTProxy با نسخه ویندوز تلگرام.
+    ملاک: عدم شروع سکرت با ee و عدم وجود Padding بسیار طولانی.
+    """
+    secret_match = re.search(r"secret=([a-zA-Z0-9]+)", link)
+    if not secret_match:
+        return True
+    secret = secret_match.group(1).lower()
+    
+    # پروتکل ee (Extensible) یا سکرت‌های بسیار طولانی در ویندوز پشتیبانی نمی‌شوند
+    if secret.startswith('ee') or len(secret) > 64:
+        return False
+    return True
+
+def save_content(directory, filename, content_list):
+    """تابع کمکی برای ذخیره متنی و بیس64"""
+    if not content_list:
+        return
+    
+    content_sorted = sorted(list(content_list))
+    content_str = "\n".join(content_sorted)
+    
+    # ذخیره فایل متنی
+    with open(os.path.join(directory, f"{filename}.txt"), "w", encoding="utf-8") as f:
+        f.write(content_str)
+    
+    # ذخیره فایل Base64
+    b64_str = base64.b64encode(content_str.encode("utf-8")).decode("utf-8")
+    with open(os.path.join(directory, f"{filename}_base64.txt"), "w", encoding="utf-8") as f:
+        f.write(b64_str)
+
 def write_files(data_map, output_dir):
-    """ذخیره کانفیگ‌ها - خروجی فقط برای پروتکل‌های تعریف شده در PROTOCOLS"""
+    """ذخیره کانفیگ‌ها با تفکیک هوشمند برای ویندوز و اندروید"""
     if not any(data_map.values()):
         return
 
@@ -44,25 +75,22 @@ def write_files(data_map, output_dir):
         if not lines: continue
         
         mixed_content.update(lines)
-        content_sorted = sorted(list(lines))
-        content_str = "\n".join(content_sorted)
         
-        # نام فایل دقیقا بر اساس کلید پروتکل (مثلا tg.txt)
-        with open(os.path.join(output_dir, f"{proto}.txt"), "w", encoding="utf-8") as f:
-            f.write(content_str)
+        # اگر پروتکل تلگرام است، تفکیک سیستمی انجام شود
+        if proto == 'tg':
+            windows_tg = {l for l in lines if is_windows_compatible(l)}
+            android_tg = lines  # اندروید از همه مدل‌ها پشتیبانی می‌کند
             
-        b64_str = base64.b64encode(content_str.encode("utf-8")).decode("utf-8")
-        with open(os.path.join(output_dir, f"{proto}_base64.txt"), "w", encoding="utf-8") as f:
-            f.write(b64_str)
+            save_content(output_dir, "tg", lines) # فایل اصلی میکس
+            save_content(output_dir, "tg_windows", windows_tg)
+            save_content(output_dir, "tg_android", android_tg)
+        else:
+            # سایر پروتکل‌ها به روال عادی
+            save_content(output_dir, proto, lines)
 
+    # خروجی Mixed کلی
     if mixed_content:
-        mixed_sorted = sorted(list(mixed_content))
-        mixed_str = "\n".join(mixed_sorted)
-        with open(os.path.join(output_dir, "mixed.txt"), "w", encoding="utf-8") as f:
-            f.write(mixed_str)
-        mixed_b64 = base64.b64encode(mixed_str.encode("utf-8")).decode("utf-8")
-        with open(os.path.join(output_dir, "mixed_base64.txt"), "w", encoding="utf-8") as f:
-            f.write(mixed_b64)
+        save_content(output_dir, "mixed", mixed_content)
 
 def main():
     src_dir = "src/telegram"
@@ -79,7 +107,7 @@ def main():
         
         if not os.path.isfile(md_file): continue
         
-        logger.info(f"در حال استخراج (بدون https) از: {channel_name}")
+        logger.info(f"در حال استخراج هوشمند از: {channel_name}")
         
         try:
             with open(md_file, "r", encoding="utf-8") as f:
@@ -99,18 +127,18 @@ def main():
             
             if total_found > 0:
                 write_files(channel_collection, os.path.join(out_dir, channel_name))
-                logger.info(f"   -> {total_found} کانفیگ استخراج شد.")
+                logger.info(f"   -> {total_found} کانفیگ استخراج و تفکیک شد.")
 
         except Exception as e:
             logger.error(f"خطا در پردازش {channel_name}: {e}")
 
     logger.info("="*30)
-    logger.info("در حال ساخت سابسکرایب جامع...")
+    logger.info("در حال ساخت سابسکرایب جامع پلتفرم‌ها...")
     total_global = sum(len(v) for v in global_collection.values())
     
     if total_global > 0:
         write_files(global_collection, os.path.join(out_dir, "all"))
-        logger.info(f"✅ عملیات موفق. خروجی‌ها در {out_dir}/all آماده هستند.")
+        logger.info(f"✅ عملیات موفق. فایلهای tg_windows و tg_android در {out_dir}/all آماده هستند.")
     else:
         logger.warning("⚠️ هیچ کانفیگی یافت نشد.")
 
