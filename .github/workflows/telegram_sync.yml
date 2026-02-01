@@ -1,53 +1,74 @@
-name: Update Telegram Subs
+name: Auto Proxy Update and Convert
 
 on:
-#  schedule:
- #   - cron: '0 */4 * * *'
+  schedule:
+    # اجرا هر 5 ساعت یک بار
+    - cron: '0 */5 * * *'
   workflow_dispatch:
     inputs:
-      run_scraper:
-        description: '1. Run Scraper?'
-        type: boolean
-        default: true
-      run_extractor:
-        description: '2. Run Extractor?'
+      run_fetch:
+        description: 'اجرای اسکریپت جمع‌آوری (fetcher)'
+        required: true
         type: boolean
         default: true
       run_tester:
-        description: '3. Run Tester (xray-knife)?'
+        description: 'اجرای اسکریپت تست سرعت (tester)'
+        required: true
         type: boolean
-        default: false
+        default: true
+      run_generator:
+        description: 'اجرای اسکریپت تبدیل کلاینت‌ها (generator)'
+        required: true
+        type: boolean
+        default: true
+      run_cleaner:
+        description: 'اجرای اسکریپت پاکسازی (cleaner)'
+        required: true
+        type: boolean
+        default: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3
+      - name: Checkout Code
+        uses: actions/checkout@v4
 
-    - name: Setup Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.9'
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
 
-    - name: Install dependencies
-      run: |
-        pip install requests beautifulsoup4 pyyaml lxml
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
 
-    - name: 1. Run Scraper
-      if: github.event_name == 'schedule' || inputs.run_scraper == true
-      run: python src/telegram_scraper.py
+      # مرحله 1: جمع‌آوری لینک‌ها
+      - name: Run Proxy Fetcher
+        if: github.event_name == 'schedule' || inputs.run_fetch == true
+        run: python src/proxy_fetcher.py
 
-    - name: 2. Run Extractor
-      if: github.event_name == 'schedule' || inputs.run_extractor == true
-      run: python src/config_extractor.py
+      # مرحله 2: تست سرعت و کیفیت
+      - name: Run Speed Tester
+        if: github.event_name == 'schedule' || inputs.run_tester == true
+        run: python src/config_tester.py
 
-    - name: 3. Run Tester
-      if: inputs.run_tester == true
-      run: python src/config_tester.py
+      # مرحله 3: تبدیل به فرمت‌های مختلف (Clash, V2Ray, etc.)
+      - name: Run Sub Generator
+        if: github.event_name == 'schedule' || inputs.run_generator == true
+        run: python src/sub_generator.py
 
-    - name: Commit Changes
-      uses: stefanzweifel/git-auto-commit-action@v4
-      with:
-        commit_message: "Auto-update: Configs & Tested Subs [skip ci]"
-        file_pattern: 'src/telegram/* sub/*'
+      # مرحله 4: پاکسازی فایل‌های اضافی (در صورت وجود اسکریپت)
+      - name: Run Cleanup
+        if: github.event_name == 'schedule' || inputs.run_cleaner == true
+        run: python src/cleaner.py || echo "No cleaner script found, skipping."
+
+      # مرحله نهایی: آپلود تغییرات در ریپازیتوری
+      - name: Commit and Push
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add .
+          git commit -m "Auto Update: $(date)" || echo "No changes to commit"
+          git push
