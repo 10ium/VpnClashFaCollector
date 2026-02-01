@@ -29,8 +29,9 @@ def download_xray_knife():
 
 def rename_config(link, info):
     if not link: return None
-    flag = get_flag_emoji(info.get('cc', 'UN'))
-    tag = f"{flag} {info.get('cc', 'UN')} | {info.get('ping', '?')}ms"
+    cc = str(info.get('cc', 'UN')).upper()
+    flag = get_flag_emoji(cc)
+    tag = f"{flag} {cc} | {info.get('ping', '?')}ms"
     if info.get('speed'): tag += f" | {info.get('speed')}"
     tag += " | "
     
@@ -45,73 +46,80 @@ def rename_config(link, info):
         return f"{link}#{quote(tag + 'Server')}"
     except: return link
 
-def run_test(infile, outfile, threads=50, speed=False):
-    # پاک کردن فایل قدیمی اگر وجود داشت
-    if os.path.exists(outfile): os.remove(outfile)
-    cmd = ["./xray-knife", "http", "-f", infile, "-t", str(threads), "-o", outfile, "-x", "csv"]
-    if speed: cmd.append("-p")
-    subprocess.run(cmd, check=False)
-
 def test_process():
     input_file = "sub/all/mixed.txt"
     output_dir = "sub/tested"
     os.makedirs(output_dir, exist_ok=True)
     download_xray_knife()
 
+    # مرحله ۱: تست پینگ
     logger.info("--- Phase 1: Latency Test ---")
-    run_test(input_file, "res_ping.csv", threads=40) # کاهش ترد برای پایداری
+    ping_csv = "res_ping.csv"
+    if os.path.exists(ping_csv): os.remove(ping_csv)
+    
+    subprocess.run(["./xray-knife", "http", "-f", input_file, "-t", "50", "-o", ping_csv, "-x", "csv"], check=False)
 
     ping_ok = []
     top_list = []
 
-    if os.path.exists("res_ping.csv"):
-        with open("res_ping.csv", "r", encoding="utf-8-sig") as f:
+    if os.path.exists(ping_csv):
+        with open(ping_csv, "r", encoding="utf-8-sig") as f:
             reader = csv.DictReader(f)
-            # چاپ نام ستون‌ها برای دیباگ در لاگ گیت‌هاب
-            logger.info(f"Columns found: {reader.fieldnames}")
+            logger.info(f"Detected CSV Columns: {reader.fieldnames}") # بسیار مهم برای دیباگ
             
             for row in reader:
-                # پیدا کردن لینک و پینگ فارغ از نام ستون (جستجوی منعطف)
-                link = next((v for k, v in row.items() if k in ['Config', 'Link', 'URL']), None)
-                delay = next((v for k, v in row.items() if 'Delay' in k or 'Real' in k), '0')
-                cc = next((v for k, v in row.items() if 'Country' in k or 'CC' in k), 'UN')
+                # استخراج منعطف لینک، پینگ و کشور
+                link = next((v for k, v in row.items() if k and k.lower() in ['config', 'link', 'url']), None)
+                delay = next((v for k, v in row.items() if k and ('delay' in k.lower() or 'real' in k.lower())), '0')
+                cc = next((v for k, v in row.items() if k and ('country' in k.lower() or 'cc' in k.lower())), 'UN')
                 
                 if link and str(delay).isdigit() and int(delay) > 0:
-                    ping_ok.append(rename_config(link, {'cc': cc, 'ping': delay}))
-                    row['sort_key'] = int(delay)
-                    top_list.append(row)
+                    labeled = rename_config(link, {'cc': cc, 'ping': delay})
+                    if labeled:
+                        ping_ok.append(labeled)
+                        row['sort_val'] = int(delay)
+                        row['clean_link'] = link
+                        top_list.append(row)
 
-    if ping_ok:
-        with open(os.path.join(output_dir, "ping_passed.txt"), "w", encoding="utf-8") as f:
-            f.write("\n".join(ping_ok))
+    # ذخیره فایل پینگ
+    with open(os.path.join(output_dir, "ping_passed.txt"), "w", encoding="utf-8") as f:
+        f.write("\n".join(ping_ok) if ping_ok else "")
+    
+    logger.info(f"Configs with ping: {len(ping_ok)}")
+
+    # مرحله ۲: تست سرعت (اگر پینگ‌داری وجود داشت)
+    if top_list:
+        top_list.sort(key=lambda x: x['sort_val'])
+        top300_file = "top300.txt"
+        with open(top300_file, "w", encoding="utf-8") as f:
+            f.write("\n".join([r['clean_link'] for r in top_list[:300]]))
+
+        logger.info(f"--- Phase 2: Speed Test on top {len(top_list[:300])} ---")
+        speed_csv = "res_speed.csv"
+        if os.path.exists(speed_csv): os.remove(speed_csv)
         
-        # انتخاب ۳۰۰ تای برتر
-        top_list.sort(key=lambda x: x['sort_key'])
-        with open("top300.txt", "w", encoding="utf-8") as f:
-            f.write("\n".join([next((v for k, v in r.items() if k in ['Config', 'Link']), '') for r in top_list[:300]]))
-
-        logger.info(f"--- Phase 2: Speed Test on {len(top_list[:300])} configs ---")
-        run_test("top300.txt", "res_speed.csv", threads=5, speed=True)
+        subprocess.run(["./xray-knife", "http", "-f", top300_file, "-t", "5", "-o", speed_csv, "-x", "csv", "-p"], check=False)
 
         speed_ok = []
-        if os.path.exists("res_speed.csv"):
-            with open("res_speed.csv", "r", encoding="utf-8-sig") as f:
+        if os.path.exists(speed_csv):
+            with open(speed_csv, "r", encoding="utf-8-sig") as f:
                 for s_row in csv.DictReader(f):
-                    s_link = next((v for k, v in s_row.items() if k in ['Config', 'Link']), None)
-                    s_speed = next((v for k, v in s_row.items() if 'Speed' in k), '0')
-                    s_delay = next((v for k, v in s_row.items() if 'Delay' in k or 'Real' in k), '0')
-                    s_cc = next((v for k, v in s_row.items() if 'Country' in k or 'CC' in k), 'UN')
+                    s_link = next((v for k, v in s_row.items() if k and k.lower() in ['config', 'link']), None)
+                    s_speed = next((v for k, v in s_row.items() if k and 'speed' in k.lower()), '0')
+                    s_delay = next((v for k, v in s_row.items() if k and ('delay' in k.lower() or 'real' in k.lower())), '0')
+                    s_cc = next((v for k, v in s_row.items() if k and ('country' in k.lower() or 'cc' in k.lower())), 'UN')
                     
                     try:
                         if s_link and float(s_speed) > 0:
                             mbps = f"{float(s_speed)/1024:.1f}MB"
-                            speed_ok.append(rename_config(s_link, {'cc': s_cc, 'ping': s_delay, 'speed': mbps}))
+                            labeled = rename_config(s_link, {'cc': s_cc, 'ping': s_delay, 'speed': mbps})
+                            if labeled: speed_ok.append(labeled)
                     except: continue
 
             with open(os.path.join(output_dir, "speed_passed.txt"), "w", encoding="utf-8") as f:
-                f.write("\n".join(speed_ok))
-
-    logger.info("Done!")
+                f.write("\n".join(speed_ok) if speed_ok else "")
+    
+    logger.info("Process finished successfully.")
 
 if __name__ == "__main__":
     test_process()
