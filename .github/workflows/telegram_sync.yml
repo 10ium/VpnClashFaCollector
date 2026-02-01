@@ -1,9 +1,15 @@
 name: Update Telegram Subs
 
 on:
-#  schedule:
-   # - cron: '0 */4 * * *' # هر ۴ ساعت
+ # schedule:
+   # - cron: '0 */4 * * *' # هر ۴ ساعت به صورت خودکار
   workflow_dispatch:
+    inputs:
+      run_scraper:
+        description: 'Run Scraper? (Download Messages)'
+        required: true
+        type: boolean
+        default: true
 
 jobs:
   build:
@@ -22,9 +28,12 @@ jobs:
         pip install requests beautifulsoup4 pyyaml lxml
 
     - name: 1. Run Scraper (Download Messages)
+      # این مرحله فقط اگر اجرای خودکار باشد یا در اجرای دستی تیک خورده باشد اجرا می‌شود
+      if: github.event_name == 'schedule' || inputs.run_scraper == true
       run: python src/telegram_scraper.py
 
     - name: 2. Run Extractor (Process Configs)
+      # این مرحله همیشه اجرا می‌شود
       run: python src/config_extractor.py
 
     - name: Commit Changes
