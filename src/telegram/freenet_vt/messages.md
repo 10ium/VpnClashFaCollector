@@ -1,5 +1,60 @@
 # آرشیو کانال: @freenet_vt
-بازه زمانی: 3 روز گذشته
+بروزرسانی: 2026-02-01 06:04:08 UTC
+
+### 🕒 2026-01-31 18:18:52 UTC
+کسانی که دسترسی یه ساب ندارن این و وارد کنن
+
+---
+
+### 🕒 2026-01-31 18:17:56 UTC
+کانفیگ سینگ باکس سرور های ساب
+
+---
+
+### 🕒 2026-01-31 15:28:55 UTC
+Sub json
+Hiddify 
+`https://drive.google.com/uc?id=174Fz6ruML4qH9hwtg8V2k8URYSo89Uao`
+
+---
+
+### 🕒 2026-01-31 14:43:28 UTC
+ساب میکس سینگ باکس آپدیت کنید سرورها بروز شدند
+
+---
+
+### 🕒 2026-01-31 09:25:18 UTC
+اینم پینگش
+
+---
+
+### 🕒 2026-01-31 09:16:23 UTC
+فقط سرعت و ببینید
+
+---
+
+### 🕒 2026-01-31 09:13:47 UTC
+sub mix config
+hiddify next 
+Singbox
+`https://drive.google.com/uc?export=download&id=1ndF5ireroeaQKl_hKfpSP4oCetk1oApR#mix`
+آپدیت شد
+
+---
+
+### 🕒 2026-01-31 08:55:03 UTC
+ساب بعدی سینگ باکس تو راهه سرعت عالی ردی هیدیفای هم وصله
+
+---
+
+### 🕒 2026-01-31 07:36:51 UTC
+`https://drive.google.com/uc?id=1sIKqCqsfBMdmdeeADkce4YrQ8T4CIbit#sinbox.http`
+ساب sing box
+پروتکل http
+***⚠️***
+Updated
+
+---
 
 ### 🕒 2026-01-30 21:30:38 UTC
 با سرعت خوب رو ایرانسل متصله
@@ -383,6 +438,149 @@ mtn
 
 ### 🕒 2026-01-28 10:15:17 UTC
 npv tunell
+
+---
+
+### 🕒 2026-01-27 16:31:03 UTC
+کانفیگ  ها  متصله
+
+---
+
+### 🕒 2026-01-27 16:31:03 UTC
+وصل نشد چند بار بزنید روی پینگ بخاطر ترافیک پایین ایم ارور میده وصل بشه سرعتش خوبه
+
+---
+
+### 🕒 2026-01-27 16:31:03 UTC
+`vless://ea1dc99b-4adc-4485-852e-f21483bf8beb@185.18.250.252:443?encryption=none&host=delta090.qzz.io&path=%2F35.78.229.176%3A443&security=tls&sni=delta090.qzz.io&type=ws#@free_netc`
+
+---
+
+### 🕒 2026-01-27 16:23:19 UTC
+`vless://ea1dc99b-4adc-4485-852e-f21483bf8beb@188.114.98.0:443?encryption=none&host=delta090.qzz.io&path=%2F138.199.43.139%3A443&security=tls&sni=delta090.qzz.io&type=ws#@free_netc`
+
+---
+
+### 🕒 2026-01-27 16:23:03 UTC
+`vless://0f1b6d8d-3f8c-4713-b32d-c94947083485@188.114.98.0:443?encryption=none&host=apexbhao1.qzz.io&path=%2F43.218.77.16%3D1443&security=tls&sni=apexbhao1.qzz.io&type=ws#@free_netc%20`
+
+---
+
+### 🕒 2026-01-27 16:12:03 UTC
+اینم تست کنید
+
+---
+
+### 🕒 2026-01-27 16:11:54 UTC
+این DNS رسپینا ک میگن شیر فلکه اصلی هست درحال حاضر فقط فقط روی پورت ۵۳ هستش و فقط فقط این DNS کار می‌کنه
+و جالب تر این هستش ک هرچی بهش میگی اوکی میده حتی واتساپ و سایت های فیلتر.
+[2.188.21.130](http://2.188.21.130/)
+آموزش استفاده:
+برای نرم افزار v2ray برید تو تنظیمات و تو قسمت ریموت dns و دامستیک dns این بذارید
+برای netmod گزینه فیک dns روشن کنید و تو قسمت dns ها قرار بدید.
+برای هیدیفای هم مثل ویتوری هستش.
+برای ویتوری و هیدیفای تو قسمت ریموت dns باید اینجوری بزنین
+udp://2.188.21.130
+و یا 
+udp://2.188.21.130:53
+درحال حاضر پورت هاش با کالی لینوکس اسکن گرفتم روی پورت 53 ریزالو میکنه
+
+---
+
+### 🕒 2026-01-27 16:11:04 UTC
+تا می تونید dns تست کنید بی تاثیر نیست جواب گرفتید که عالی نگرفتید بر گردانید به حالت اول
+
+---
+
+### 🕒 2026-01-27 16:09:20 UTC
+> ↪️ **Forwarded**
+
+[https://t.me/proxy?server=74.1.1.134&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQtY2RueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA](https://t.me/proxy?server=74.1.1.134&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQtY2RueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
+[https://t.me/proxy?server=195.254.165.41&port=9443&secret=EERighJJvXrFGRMCIMJdCQ](https://t.me/proxy?server=195.254.165.41&port=9443&secret=EERighJJvXrFGRMCIMJdCQ)
+[https://t.me/proxy?server=195.254.165.136&port=9443&secret=EERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQ%3D%3D](https://t.me/proxy?server=195.254.165.136&port=9443&secret=EERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQ%3D%3D)
+[https://t.me/proxy?server=195.254.165.139&port=9443&secret=EERighJJvXrFGRMCIMJdCQ](https://t.me/proxy?server=195.254.165.139&port=9443&secret=EERighJJvXrFGRMCIMJdCQ)
+[https://t.me/proxy?server=195.254.165.126&port=9443&secret=EERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQ%3D%3D](https://t.me/proxy?server=195.254.165.126&port=9443&secret=EERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQ%3D%3D)
+[https://t.me/proxy?server=195.254.165.125&port=9443&secret=EERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQ%3D%3D](https://t.me/proxy?server=195.254.165.125&port=9443&secret=EERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQ%3D%3D)
+[https://t.me/proxy?server=195.254.165.135&port=9443&secret=EERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQ%3D%3D](https://t.me/proxy?server=195.254.165.135&port=9443&secret=EERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQ%3D%3D)
+[https://t.me/proxy?server=195.254.165.139&port=9443&secret=EERighJJvXrFGRMCIMJdCQ](https://t.me/proxy?server=195.254.165.139&port=9443&secret=EERighJJvXrFGRMCIMJdCQ)
+
+---
+
+### 🕒 2026-01-27 16:08:40 UTC
+دیشب هیچی وصل ممی شد نقطه دستیابی دستکاری می کردم شاید اوکی بشه یادم نبود دیگه تغییرش بدم ایرانسل الان راحت وصل میشم شاید بخاطر اینه
+
+---
+
+### 🕒 2026-01-27 16:06:19 UTC
+من یه تغیراتی توی apn گوشین دادم اصلا یادم نبود اگه وصل نمیشه ید تست کنید نت ایرانسل
+
+---
+
+### 🕒 2026-01-27 15:46:18 UTC
+> ↪️ **Forwarded**
+
+[https://t.me/proxy?server=195.254.165.126&port=9443&secret=EERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQ%3D%3D](https://t.me/proxy?server=195.254.165.126&port=9443&secret=EERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQ%3D%3D)
+[https://t.me/proxy?server=195.254.165.135&port=9443&secret=EERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQ%3D%3D](https://t.me/proxy?server=195.254.165.135&port=9443&secret=EERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQ%3D%3D)
+[https://t.me/proxy?server=195.254.165.139&port=9443&secret=EERighJJvXrFGRMCIMJdCQ](https://t.me/proxy?server=195.254.165.139&port=9443&secret=EERighJJvXrFGRMCIMJdCQ)
+پروکسی همره
+
+---
+
+### 🕒 2026-01-27 15:20:56 UTC
+نپستر ایرانسل یکی   دو دقیقه صبرکنید دیتا بده
+
+---
+
+### 🕒 2026-01-27 13:20:11 UTC
+توبقیه کلاینت ها هم می تونید استفاده کنید او نپستر تست پینگ بگیرید تیکش و فعال کنید سرور های عیر فعال خودش حذف میکنه
+
+---
+
+### 🕒 2026-01-27 13:18:49 UTC
+سرورهای تروجان
+
+---
+
+### 🕒 2026-01-27 12:49:14 UTC
+اینم ست کنید اگه سرور ها قفل میکنه
+
+---
+
+### 🕒 2026-01-27 12:47:42 UTC
+صبر کنید تا متصل بشه به ارورش توجهی نکنید
+
+---
+
+### 🕒 2026-01-27 12:31:13 UTC
+فایل و بلز کنید همه سرورها یکجا کپی کنید توی هیدیفای وارد کنید
+
+---
+
+### 🕒 2026-01-27 11:22:04 UTC
+دارم ساب برای هیدیفای آماده میکنم شاید یه کم طول بکشه فعلا دارم تست پینگ میگیرم  ده هزار تا سرور هست
+
+---
+
+### 🕒 2026-01-27 11:18:47 UTC
+`vless://32c257a1-f18c-42c7-860d-9cb0ead8b07c@185.18.250.252:443?path=%2F47.250.139.59%3D443&security=tls&encryption=none&insecure=0&host=dragonhost9.qzz.io&type=ws&allowInsecure=0&sni=dragonhost9.qzz.io#%23free_netc`
+`vless://1e1b9a1f-47cd-4cb2-a0dc-103a09e253ba@nl.iccgame.site:3000?security=none&encryption=none&host=chess.com&headerType=http&type=tcp#%40free_netc`
+ایرانسل
+
+---
+
+### 🕒 2026-01-27 09:23:54 UTC
+`vless://36935280-27ad-4219-bac0-6f80c8c94248@cf2.xuiprospeed.ir:2053?path=%2Flove&security=tls&alpn=h2%2Chttp%2F1.1&encryption=none&insecure=0&host=heritage.xuiprospeed.ir&fp=chrome&type=ws&allowInsecure=0&sni=heritage.xuiprospeed.ir#%F0%9F%87%A9%F0%9F%87%AA%20%7C%20%40free_netc`
+ایرانسل
+
+---
+
+### 🕒 2026-01-27 09:03:06 UTC
+,ایرانسل
+
+---
+
+### 🕒 2026-01-27 09:02:52 UTC
+`vless://36935280-27ad-4219-bac0-6f80c8c94248@fin.love-speed.sbs:2000?security=reality&encryption=none&pbk=Q-394d0JQhk1CJYBNTxmwoZHHDl1xj5r8egsesyIZmA&headerType=none&fp=chrome&type=tcp&sni=refersion.com&sid=a98e1de9#%F0%9F%87%AB%F0%9F%87%AE%20%7C%20%40REE_NETC`
 
 ---
 

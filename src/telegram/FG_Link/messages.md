@@ -1,5 +1,5 @@
 # آرشیو کانال: @FG_Link
-بازه زمانی: 3 روز گذشته
+بروزرسانی: 2026-02-01 06:04:53 UTC
 
 ### 🕒 2026-01-30 19:08:51 UTC
 vless://8dc7722c-2767-4eea-a28b-2f8daacc07e3@pqh38v3.viripdirect.shop:8880?security=&encryption=none&type=grpc#@meliproxyy

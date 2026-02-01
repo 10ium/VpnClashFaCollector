@@ -1,5 +1,32 @@
 # آرشیو کانال: @arshia_mod_fun
-بازه زمانی: 3 روز گذشته
+بروزرسانی: 2026-02-01 06:05:25 UTC
+
+### 🕒 2026-01-31 20:29:26 UTC
+اگه پایدار موند چند تا دیگه ام اوکی میکنم اگه نموند که امشب دانلود هاتون رو بزنید که فعلا وصله حجمش ام مهم نیست هندله
+***😂***
+
+---
+
+### 🕒 2026-01-31 20:27:46 UTC
+اینم رو ایران فروش تست کردم اوکی بود 
+مال هلنده 
+اینم نت مود اش :
+`nm-vless://A7RqNpHOU2HUrLsTj1mXWtQ49qLeWF1wupQFPjGqXTwn1eIVBOoAFrQUflC6YZeqOIQg8nHui3WveGtJuIEptrbSUrgP8NpYQMAGRe3E46AYhM3LAJ0cMieMid4dNza9jP1eezBfdkUgjJTuGMsMBx0x3MLCVpuBu9KYcPjt58bH4sNaHZF5i3H2vcMUtGw8OJNBdPnDUbhDuM/0T8p4MJ3tlbU2U115VQ9tRemJWvRCAnDaG7Pz/R7EncqKQgIn/p0BI5A8VV006xxINGbg+H/QbxJoZlValwgd605n7OXcdXtYzEFJLpe1WNZPNDMY7mXNrbd0T5V7n77Jtlb4OIWSYcjoTcxKoAxL0wZks70=`
+[@arshia_mod_fun](https://t.me/arshia_mod_fun)
+[@arshiacomplus](https://t.me/arshiacomplus)
+
+---
+
+### 🕒 2026-01-31 20:04:58 UTC
+کانفیگ تست شده رو ایران فروش و همراه اخر تست کنید تا بازه استفاده کنید
+نتیجه رو هم تو کامنتا بگید دمتون جیز
+***❤️***
+برای نت مود :
+`nm-vless://d96XWlZfb63SCjRHlpZcL1wVfWZd5g3xOt4ZIvhxOpGMzfgoH18erCTVNMplFDJkaWG9WgQEtTbqMqafraRbULbSUrgP8NpYQMAGRe3E46CiR2OrJjT1EsSPAGO2AeiHKlS7ssdKP5TFJO0qLIb5rB0x3MLCVpuBu9KYcPjt58bH4sNaHZF5i3H2vcMUtGw8MHVLOLZ9VQRIK3AwPJzSF17FkaYcNgtzoEbps6UZTCv0oiNXPNt0USKbsAFpMtdsBxR+nIabAxfpuJoVKkAjl++9mlL0T5rWFZtjqmy62syGPNybMUt6ZS/ZekXFYhvY6ubf75S5g3yMuibtfxxkt0D2uqhHX0Bi91fw62rIH0U=`
+[@arshia_mod_fun](https://t.me/arshia_mod_fun)
+[@arshiacomplus](https://t.me/arshiacomplus)
+
+---
 
 ### 🕒 2026-01-30 14:31:33 UTC
 MTN-Gfw-Fck.npvt
@@ -109,6 +136,36 @@ _⁠(⁠￣⁠︶⁠￣⁠)⁠_ 2.npvt
 و رو همراه اخر ام فکر نکنم حالا تست کنید تو منطقه خودتون و وضعیتتون رو اعلام کنید( میگن رو همراه ام جوابه )
 [@arshia_mod_fun](https://t.me/arshia_mod_fun)
 [@arshiacomplus](https://t.me/arshiacomplus)
+
+---
+
+### 🕒 2026-01-27 12:17:12 UTC
+منطقه ما عالیه برعکس همجا downlink دارم ولی uplink ندارم رو ایرانسل
+
+---
+
+### 🕒 2026-01-27 12:03:27 UTC
+تست کنید  تو کامنت ها ، بهم بگید رو چه اپراتور ای وصله 
+من رو ایرانسل اوکی بودم 
+[@arshiacomplus](https://t.me/arshiacomplus)
+[@arshia_mod_fun](https://t.me/arshia_mod_fun)
+
+---
+
+### 🕒 2026-01-27 11:11:20 UTC
+یه کانفیگ جدید ام چند  دقیقه دیگه می‌زارم قبلی رو چک نکردم ولی انگار اتصال زیاده خیلی کند شده
+
+---
+
+### 🕒 2026-01-27 11:10:48 UTC
+همون‌طور که قول دادم اینجا رو اوکی کردم  برای اینکه IP و دامین هاتون رو به اشتراک بزارید ، دیگه پروفایل ایناش با شما فرصت  ندارم اگه  ربات درست کار کنه هر یک ساعت فایل کلین ایپی های که جمع شده، ارسال و پین میشه تو همین گپ ﻿ ۱- آیپی تکراری نفرستید لطفا ۲- لطفاً…
+
+---
+
+### 🕒 2026-01-27 10:57:36 UTC
+dpi-Macher P 
+***🧘***
+.npvt
 
 ---
 

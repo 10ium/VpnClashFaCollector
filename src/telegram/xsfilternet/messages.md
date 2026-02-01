@@ -1,5 +1,122 @@
 # آرشیو کانال: @xsfilternet
-بازه زمانی: 3 روز گذشته
+بروزرسانی: 2026-02-01 06:02:23 UTC
+
+### 🕒 2026-01-31 23:17:16 UTC
+احترام از یک فرشته یک شیطان میسازه و از یک شیطان هم یه فرشته!
+به رسم هر شب پاکی طبیعت و انرژی های مثبت نگهدارتون باشه و یادتون نره!
+***☯️***
+***👇***
+[#اینترنت_برای_همه_یا_هیچکس](?q=%23%D8%A7%DB%8C%D9%86%D8%AA%D8%B1%D9%86%D8%AA_%D8%A8%D8%B1%D8%A7%DB%8C_%D9%87%D9%85%D9%87_%DB%8C%D8%A7_%D9%87%DB%8C%DA%86%DA%A9%D8%B3)
+
+---
+
+### 🕒 2026-01-31 20:30:25 UTC
+اینم رو ایران فروش تست کردم اوکی بود 
+مال هلنده 
+اینم نت مود اش :
+`nm-vless://A7RqNpHOU2HUrLsTj1mXWtQ49qLeWF1wupQFPjGqXTwn1eIVBOoAFrQUflC6YZeqOIQg8nHui3WveGtJuIEptrbSUrgP8NpYQMAGRe3E46AYhM3LAJ0cMieMid4dNza9jP1eezBfdkUgjJTuGMsMBx0x3MLCVpuBu9KYcPjt58bH4sNaHZF5i3H2vcMUtGw8OJNBdPnDUbhDuM/0T8p4MJ3tlbU2U115VQ9tRemJWvRCAnDaG7Pz/R7EncqKQgIn/p0BI5A8VV006xxINGbg+H/QbxJoZlValwgd605n7OXcdXtYzEFJLpe1WNZPNDMY7mXNrbd0T5V7n77Jtlb4OIWSYcjoTcxKoAxL0wZks70=`
+[@arshia_mod_fun](https://t.me/arshia_mod_fun)
+[@arshiacomplus](https://t.me/arshiacomplus)
+
+---
+
+### 🕒 2026-01-31 20:07:22 UTC
+کانفیگ تست شده رو ایران فروش و همراه اخر تست کنید تا بازه استفاده کنید
+نتیجه رو هم تو کامنتا بگید دمتون جیز
+***❤️***
+[@arshia_mod_fun](https://t.me/arshia_mod_fun)
+[@arshiacomplus](https://t.me/arshiacomplus)
+
+---
+
+### 🕒 2026-01-31 16:46:21 UTC
+***✨***
+ آپدیت جدید با نسخه 1.1.9 اپلیکیشن اندروید CCloud(فیلم و سریال 
+[#رایگان](?q=%23%D8%B1%D8%A7%DB%8C%DA%AF%D8%A7%D9%86)
+ بدون سانسور)
+***🔥***
+***♻️***
+- اضافه شدن حذف Playlist 
+- اضافه شدن ویرایش نام Playlist
+- اضافه شدن کپی کردن توضیحات فیلم یا سریال
+- اضافه شدن کپی کردن لینک تصویر فیلم یا سریال
+- بهینه شدن سرعت لود برنامه 
+سازگار با اندروید 8 تا 16
+سازگار با تمام پردازنده های اندروید
+دانلود از سایت اصلی:
+[https://ccloud.sbs](https://ccloud.sbs/)
+دانلود سرور 2:
+[https://apps.ccloud.sbs](https://apps.ccloud.sbs/)
+در صورت فیلترینگ شدید از آدرس زیر استفاده کنید:
+[https://zaya.io/50w3m](https://zaya.io/50w3m)
+یک فایل zip دانلود میشه.
+بعد از دانلود، فایل فشرده رو استخراج کنید تا به فایل نصبی برسید و نصب کنید.
+***🌹***
+نظرتون رو زیر همین پست بگید تا در آپدیت های بعدی اضافه کنیم قابلیت های بیشتر.
+[@irdevs_dns](https://t.me/irdevs_dns)
+[@xsfilternet](https://t.me/xsfilternet)
+
+---
+
+### 🕒 2026-01-31 16:16:41 UTC
+[#ساب](?q=%23%D8%B3%D8%A7%D8%A8)
+ لینک قدیمی خودم مجدد فعال شد رفقا الان میتونید بدون هیچ محدودیتی با بروز بودن ۲۴ ساعته از 
+[#اینترنت_آزاد](?q=%23%D8%A7%DB%8C%D9%86%D8%AA%D8%B1%D9%86%D8%AA_%D8%A2%D8%B2%D8%A7%D8%AF)
+ لذت ببرید
+***☯️***
+***♻️***
+(برای اتصال امن از ساب های عمومی استفاده نکنید و برای فقط دسترسی به روش های امن استفاده کنید)
+https://raw.githubusercontent.com/parvinxs/Game/refs/heads/main/Sub_game_fssociety
+[@xsfilternet](https://t.me/xsfilternet)
+
+---
+
+### 🕒 2026-01-31 15:45:38 UTC
+توی ۲۴ ساعت اخیر بیش از هزار کانفیگ رایگان از نوع V2ray، Singbox، MTproto و NPVT روی 
+[#VPNhub](?q=%23VPNhub)
+ قرار گرفته، که بصورت خودکار از منابع عمومی جمع‌آوری شدن
+***🔥***
+***☯️***
+***👉***
+ 
+[t.me/persianvpnhub](http://t.me/persianvpnhub)
+***💡***
+ این تبلیغات نیست! به درخواست کاربران مختلف برای انتشار کانفیگ، یک کانال فرعی راه‌اندازی کردیم تا شاید گره‌ای از کار مردم برای اتصال به اینترنت باز بشه. (توضیحات بیشتر)
+[@xsfilternet](https://t.me/xsfilternet)
+[@ircfspace](https://t.me/ircfspace)
+
+---
+
+### 🕒 2026-01-31 14:59:35 UTC
+`vless://829658bf-03c4-4c28-81e9-dd6ea141b2d0@ip.elcump.top:8443?path=mehrosaboran%3Fed%3D2560&security=tls&alpn=http%2F1.1&encryption=none&insecure=1&host=5jq7fvwpqt5owo2fi198sa6qoxznkzfea7en4m3xroeqrt3u3q.zjde5.de5.net&fp=chrome&type=ws&allowInsecure=1&sni=5jq7fvwpqt5owo2fi198sa6qoxznkzfea7en4m3xroeqrt3u3q.zjde5.de5.net#NetAccountvless://824dc1b1-e35b-4121-ad73-9acaf13d6410@n1761184282.74qxv.top:443?encryption=none&security=tls&sni=n1761184282.74qxv.top&type=ws&host=n1761184282.74qxv.top&path=%2F824dc1b1-e35b-4121-ad73-9acaf13d6410#NetAccountss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpMWVcydzlmd2Ryd2oycUM5TnlUQnVCTktRSlV2a0tuQ3A5VXhWbkZXNkxxZVNwaUNjbnpWMWNNb2hCVW5DQ1dCa2prcDgzclY5d1dlWVFRcVVad011WXUxWXlDdDE3dFc=@media.mothyleela.cfd:40521#NetAccountvless://ea50eba3-2cdd-4979-bca3-1f3aae58028a@185.154.194.217:13094?mode=auto&path=%2FPOST&security=reality&encryption=none&pbk=d9uB5xF7pbw6l68a62blPltVtz6Hg7PEESl6IMiZ_yo&fp=chrome&spx=%2F&type=xhttp&sni=www.yahoo.com&sid=7e#NetAccount`
+[@xsfilternet](https://t.me/xsfilternet)
+
+---
+
+### 🕒 2026-01-31 13:16:27 UTC
+https://msk.vless-balancer.ru/sub/dXNlcl82Nzg4MzMxMjQ5LDE3Njk1MzUzMTkBqGm3A1STd#Subscription  https://chat.tawana.online/sub/tawanaproxy.txt  https://raw.githubusercontent.com/parvinxs/Submahsanetxsparvin/refs/heads/main/Sub.mahsa.xsparvin  https://msk.vless…
+
+---
+
+### 🕒 2026-01-31 13:13:21 UTC
+`vless://8f1a15bf-a352-4c32-aee2-957039a6847b@ipbaz.ping-box.com:8443?path=%2F%3FTELEGRAM--KANAL--JKVPN--JKVPN--JKVPN--JKVPN--JKVPN--JKVPN%3Fed%3D2560&security=tls&alpn=http%2F1.1&encryption=none&insecure=0&host=6nwf5rauksz8126xm.zjde5.de5.net&fp=chrome&type=ws&allowInsecure=0&sni=6nwf5rauksz8126xm.zjde5.de5.net#%F0%9F%87%A9%F0%9F%87%AA%20%40proxy_kafeevless://83f03646-fb28-44cc-9d2c-8853f6c09285@104.17.162.123:8443?path=%2F%3Fed%3D2560&security=tls&alpn=http%2F1.1&encryption=none&insecure=0&host=r4fnviw9jl4i4rx.zjde5.de5.net&fp=random&type=ws&allowInsecure=0&sni=r4fnviw9jl4i4rx.zjde5.de5.net#%F0%9F%87%A9%F0%9F%87%AA%20%40proxy_kafeevless://83f03646-fb28-44cc-9d2c-8853f6c09285@104.17.162.123:8443?path=%2F%3Fed%3D%23TELEGRAM-%40AliXTso%40AliXTso%40AliXTso%40AliXTso%40AliXTso%40AliXTso%40AliXTso%40AliXTso%40AliXTso%40AliXTso%40AliXTso%40AliXTso%40AliXTso%3Fed%3D512&security=tls&alpn=http%2F1.1&encryption=none&insecure=0&host=r4fnviw9jl4i4rx.zjde5.de5.net&fp=random&type=ws&allowInsecure=0&sni=r4fnviw9jl4i4rx.zjde5.de5.net#%F0%9F%8F%B4%E2%80%8D%E2%98%A0%EF%B8%8F%40proxy_kafeevless://0665cf1e-0df8-4981-a8de-a366e37c0866@104.18.15.19:8443?path=%2F%3Fed%3D2560&security=tls&alpn=http%2F1.1&encryption=none&insecure=0&fp=chrome&type=ws&allowInsecure=0&sni=xdol7mayq6wu5kil7wjyrni7o8tnydsafcmhfhn7g6rimbw5o2g6mlm.zjde5.de5.net#%F0%9F%87%A9%F0%9F%87%AA%20%40proxy_kafeetrojan://humanity@172.64.152.23:443?path=%2Fassignment&security=tls&insecure=0&host=www.calmlunch.com&type=ws&allowInsecure=0&sni=www.calmlunch.com#%F0%9F%87%A9%F0%9F%87%AA%20%40proxy_kafeevless://2ddeb056-17d4-421e-a318-39428733d4a2@172.64.149.99:8443?path=%2FTelegram%40V2rayAlpha%2F%3Fed%3D2048&security=tls&alpn=http%2F1.1&encryption=none&insecure=0&host=8p3cfl0ripm.zjde5.de5.net&fp=chrome&type=ws&allowInsecure=0&sni=8p3cfl0ripm.zjde5.de5.net#%F0%9F%8F%B4%E2%80%8D%E2%98%A0%EF%B8%8F%20%40p`
+[@xsfilternet](https://t.me/xsfilternet)
+
+---
+
+### 🕒 2026-01-31 13:10:57 UTC
+[https://t.me/proxy?server=85.133.194.8&port=6443&secret=eeNEgYdJvXrFGRMCIMJdCQRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA](https://t.me/proxy?server=85.133.194.8&port=6443&secret=eeNEgYdJvXrFGRMCIMJdCQRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
+[https://t.me/proxy?server=87.248.149.131&port=443&secret=eeNEgYdJvXrFGRMCIMJdCQRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA](https://t.me/proxy?server=87.248.149.131&port=443&secret=eeNEgYdJvXrFGRMCIMJdCQRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
+[@xsfilternet](https://t.me/xsfilternet)
+
+---
+
+### 🕒 2026-01-31 12:16:18 UTC
+سرعت خوبی داره تست کنید ولی همیشه مراقب امنیت باشید
+***🫰***
+***🔥***
+
+---
 
 ### 🕒 2026-01-30 22:29:18 UTC
 به رسم هر شب شبتون خوش و درپناه و نور طبیعت باشید فردا با کلی آموزش و کانفیگ برمیگردم اگر خدا بخواد مثل همیشه یادتون نره!
@@ -265,7 +382,7 @@ nm-vless://vQzQePvj7vklma+ViiYY70A4UpBDuoLma1xbPCjLh7/S5NFusKTJEaM8ww+i0wsuaevXb
 ---
 
 ### 🕒 2026-01-30 08:18:29 UTC
-> ↪️ **Forwarded Message**
+> ↪️ **Forwarded**
 
 قطع سراسری اینترنت و بعد از اون محدودیت‌های شدید به خوبی نشون داد که دسترسی ساده و سریع به کانفیگ‌های رایگان دیگه مثل قبل ممکن نیست. تعداد کانال‌هایی که کانفیگ منتشر می‌کنن اونقدر زیاد شده که نه میشه توی همشون عضو شد و نه میشه پیامهاشون رو مرتب و دقیق دنبال کرد.
 بخش وسیعی از سابسکریپشن‌ها بخاطر مسدود شدن گیت‌هاب یا قرار گرفتن سرویس‌ها پشت وایت‌لیست عملاً از دسترس خارج شدن، استفاده از ربات‌ها هم راه‌حل مطمئنی نیست؛ هم وقت‌گیره و هم مشخص نیست چه اطلاعاتی از ما دریافت یا ذخیره میشه.
@@ -455,6 +572,9 @@ https://msk.vless-balancer.ru/sub/dXNlcl82Nzg4MzMxMjQ5LDE3Njk1MzUzMTkBqGm3A1STd#
 [https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Reality](https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Reality)
 [https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Clash_Reality](https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Clash_Reality)
 [https://cdn.fildl.ir/sub/TUNrQ2JpLDE3Njc4OTA3OTEyzup1z2RKG#Subscription](https://cdn.fildl.ir/sub/TUNrQ2JpLDE3Njc4OTA3OTEyzup1z2RKG#Subscription)
+[https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Reality](https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Reality)
+[https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Clash_Reality](https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Clash_Reality)
+[https://danesh1118.github.io/Heoehoehdidhwj3978eheheodheoheofhrirh8e7eyhedohdkdheodhh9rehejrjfohrkeje/](https://danesh1118.github.io/Heoehoehdidhwj3978eheheodheoheofhrirh8e7eyhedohdkdheodhh9rehejrjfohrkeje/)
 لینک 
 [#ساب](?q=%23%D8%B3%D8%A7%D8%A8)
  های متصل(مجموع کانفیگ ها)
@@ -485,7 +605,7 @@ https://msk.vless-balancer.ru/sub/dXNlcl82Nzg4MzMxMjQ5LDE3Njk1MzUzMTkBqGm3A1STd#
 ---
 
 ### 🕒 2026-01-29 13:13:17 UTC
-> ↪️ **Forwarded Message**
+> ↪️ **Forwarded**
 
 فیلترشکن متن باز روسی Ftpn
 
@@ -604,7 +724,7 @@ Domestic DNS = DNS برای ترافیک direct
 ---
 
 ### 🕒 2026-01-29 10:26:04 UTC
-> ↪️ **Forwarded Message**
+> ↪️ **Forwarded**
 
 از این کد هدیه تیم NasNet داخل برنامه MahsaNg استفاده کنید کانفیگاشو اوکی هستن 
 • 
@@ -704,7 +824,7 @@ hysteria2://a10d5d6c-7e9b-4735-9242-658928bf132a@us2.anliangjifei.top:54427,5000
 ---
 
 ### 🕒 2026-01-28 23:10:07 UTC
-> ↪️ **Forwarded Message**
+> ↪️ **Forwarded**
 
 `vless://83adcc98-ac23-4e51-9ae0-788a73fd9939@104.17.163.123:8443?path=%2F%3Fed%3D2560&security=tls&alpn=http%2F1.1&encryption=none&insecure=0&host=vjv62pggz1658fuliaf9lri7rra85l8utox0kjtogve4whop.zjde5.de5.net&fp=chrome&type=ws&allowInsecure=0&sni=vjv62pggz1658fuliaf9lri7rra85l8utox0kjtogve4whop.zjde5.de5.netvless://2e46ba5a-db56-4940-9500-a61c7b0bcc0c@cdn.bio4cdn.com:2053?path=%2Fweborder&security=tls&alpn=h2%2Chttp%2F1.1&encryption=none&insecure=0&host=bio.bio4cdn.com&fp=chrome&type=ws&allowInsecure=0&sni=bio.bio4cdn.comvless://83adcc98-ac23-4e51-9ae0-788a73fd9939@104.17.163.123:8443?path=%2F%3Fed%3D%23TELEGRAM-V2rayBaaz-V2rayBaaz-V2rayBaaz-V2rayBaaz-V2rayBaaz-V2rayBaaz-V2rayBaaz-V2rayBaaz-V2rayBaaz-V2rayBaaz-V2rayBaaz-V2rayBaaz-V2rayBaaz-V2rayBaaz-V2rayBaaz-V2rayBaaz-V2rayBaaz-V2rayBaaz-V2rayBaaz-V2rayBaaz-V2rayBaaz-V2rayBaaz-V2rayBaaz%3Fed%3D512&security=tls&alpn=http%2F1.1&encryption=none&insecure=0&host=vjv62pggz1658fuliaf9lri7rra85l8utox0kjtogve4whop.zjde5.de5.net&fp=chrome&type=ws&allowInsecure=0&sni=vjv62pggz1658fuliaf9lri7rra85l8utox0kjtogve4whop.zjde5.de5.netvless://3fea44c8-429c-4e6f-9e41-786cf1bd0de8@185.235.196.80:2087?mode=auto&path=%2F&security=none&encryption=none&extra=%7B%22scMaxEachPostBytes%22%3A%201000000%2C%20%22scMaxConcurrentPosts%22%3A%20100%2C%20%22scMinPostsIntervalMs%22%3A%2030%2C%20%22xPaddingBytes%22%3A%20%22100-1000%22%2C%20%22noGRPCHeader%22%3A%20false%7D&host=zula.ir&type=xhttpvless://ce9a5755-0300-49e2-9c2b-79305337cbeb@zafar.sefrtasad.com:4500?security=none&encryption=none&host=myket.ir&headerType=http&type=tcpvless://ce9a5755-0300-49e2-9c2b-79305337cbeb@sh.love-speed.sbs:4500?security=none&encryption=none&host=myket.ir&headerType=http&type=tcp`
 **V2rayNg, Hiddify, Karing, Happ , exclave**
@@ -781,7 +901,7 @@ Wg tunnel
 ---
 
 ### 🕒 2026-01-28 17:49:27 UTC
-> ↪️ **Forwarded Message**
+> ↪️ **Forwarded**
 
 فایل برنامه Dns xs
 
@@ -868,7 +988,7 @@ Avast Secureline   Activation Code  728S89-3XU4YJ-42CJYJ  3BWDFW-U6ND2J-42CJX6  
 ---
 
 ### 🕒 2026-01-28 08:03:28 UTC
-> ↪️ **Forwarded Message**
+> ↪️ **Forwarded**
 
 **Avast Secureline**
  
@@ -904,6 +1024,480 @@ V2rayNg, hiddify , karing, happ, nekobox
 ***😁***
 ***😁***
 کانفیگ سرقتی اینجوریه
+
+---
+
+### 🕒 2026-01-27 23:05:08 UTC
+هر کسی نمیتونه من باشه چون من هر چندهزار سال یه بار به دنیا میامو تو هر ۹ ماه چند تا منظور از من همون 
+[#ایران](?q=%23%D8%A7%DB%8C%D8%B1%D8%A7%D9%86)
+ بودو تمدن چند هزار ساله وگرنه من کوچیک تر از این حرفام
+***☯️***
+به رسم هرشب شب بخیر سلامت باشید و خدا و نور طبیعت نگهدارتون باشه و یادتون نره!
+***👇***
+[#اینترنت_برای_همه_یا_هیچکس](?q=%23%D8%A7%DB%8C%D9%86%D8%AA%D8%B1%D9%86%D8%AA_%D8%A8%D8%B1%D8%A7%DB%8C_%D9%87%D9%85%D9%87_%DB%8C%D8%A7_%D9%87%DB%8C%DA%86%DA%A9%D8%B3)
+
+---
+
+### 🕒 2026-01-27 22:53:02 UTC
+`vless://4525c260-df3c-4f62-b8f1-f4f5f305694b@66.81.247.155:443?path=%2F%3Fed%3D512&security=tls&encryption=none&insecure=0&host=yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net&fp=chrome&type=ws&allowInsecure=0&sni=yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net#%F0%9F%87%AE%F0%9F%87%B3%20%28%20%40DarcProxy%20%29%20%D8%AA%D9%84%DA%AF%D8%B1%D8%A7%D9%85%20%D8%B3%D8%B1%DA%86%20%DA%A9%D9%86`
+[@xsfilternet](https://t.me/xsfilternet)
+
+---
+
+### 🕒 2026-01-27 22:33:40 UTC
+[https://t.me/proxy?server=185.215.247.247&port=4455&secret=ee1603010200010001fc030386e24c3add63646e2e79656b74616e65742e636f6d](https://t.me/proxy?server=185.215.247.247&port=4455&secret=ee1603010200010001fc030386e24c3add63646e2e79656b74616e65742e636f6d)
+پروکسی متصل
+***✅️***
+[@xsfilternet](https://t.me/xsfilternet)
+
+---
+
+### 🕒 2026-01-27 22:32:02 UTC
+`vless://457aa98e-f4de-4d08-b8ea-b91be325d1f2@212.23.214.136:14075?type=tcp&encryption=none&path=%2F&host=telewebion.com&headerType=http&security=none#%25uvpn_org`
+[@xsfilternet](https://t.me/xsfilternet)
+
+---
+
+### 🕒 2026-01-27 21:58:15 UTC
+#Dns معروف opendns روی برخی اپراتور ها متصل شده!  208.67.220.220 208.67.222.222  Family: 208.67.220.123 208.67.222.123  @xsfilternet
+
+---
+
+### 🕒 2026-01-27 21:56:42 UTC
+#Dns معروف opendns روی برخی اپراتور ها متصل شده!  208.67.220.220 208.67.222.222  Family: 208.67.220.123 208.67.222.123  @xsfilternet
+
+---
+
+### 🕒 2026-01-27 21:48:40 UTC
+[#Dns](?q=%23Dns)
+معروف opendns روی برخی اپراتور ها متصل شده!
+[208.67.220.220](http://208.67.220.220/)
+[208.67.222.222](http://208.67.222.222/)
+Family:
+[208.67.220.123](http://208.67.220.123/)
+[208.67.222.123](http://208.67.222.123/)
+[@xsfilternet](https://t.me/xsfilternet)
+
+---
+
+### 🕒 2026-01-27 21:14:34 UTC
+`vless://0f1b6d8d-3f8c-4713-b32d-c94947083485@188.114.98.0:443?path=%2F43.218.77.16%3D1443&security=tls&encryption=none&insecure=0&host=apexbhao1.qzz.io&fp=chrome&type=ws&allowInsecure=0&sni=apexbhao1.qzz.iovless://0f1b6d8d-3f8c-4713-b32d-c94947083485@188.114.98.0:443?path=%2F43.218.77.16%3D1443&security=tls&encryption=none&insecure=0&host=apexbhao1.qzz.io&fp=chrome&type=ws&allowInsecure=0&sni=apexbhao1.qzz.iovless://ea1dc99b-4adc-4485-852e-f21483bf8beb@188.114.98.0:443?path=%2F138.199.43.139%3A443&security=tls&encryption=none&insecure=0&host=delta090.qzz.io&fp=chrome&type=ws&allowInsecure=0&sni=delta090.qzz.iovless://32c257a1-f18c-42c7-860d-9cb0ead8b07c@188.114.98.0:443?path=%2F47.250.139.59%3D443&security=tls&encryption=none&insecure=0&host=dragonhost9.qzz.io&fp=chrome&type=ws&allowInsecure=0&sni=dragonhost9.qzz.iovless://0f1b6d8d-3f8c-4713-b32d-c94947083485@iran.zone-server-irani.ir:443?path=%2F43.218.77.16%3D1443&security=tls&encryption=none&insecure=0&host=apexbhao1.qzz.io&fp=chrome&type=ws&allowInsecure=0&sni=apexbhao1.qzz.iovless://0f1b6d8d-3f8c-4713-b32d-c94947083485@188.114.98.0:443?path=%2F43.218.77.16%3D1443&security=tls&encryption=none&insecure=0&host=apexbhao1.qzz.io&fp=chrome&type=ws&allowInsecure=0&sni=apexbhao1.qzz.iovless://be695a55-8ac5-40a1-92c2-cc864651360a@94.141.123.12:558?security=reality&encryption=none&pbk=15ZlM5p8DB5Fp4mtva2pvtC4IBtcxSxqeuZ0R7ffkRk&headerType=none&fp=firefox&type=tcp&flow=xtls-rprx-vision&sni=refersion.com&sid=4b8f669536c45c2bvless://83f03646-fb28-44cc-9d2c-8853f6c09285@104.17.162.123:8443?path=%2F%3Fed%3D%23TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI%3Fed%3D512&security=tls&alpn=http%2F1.1&encryption=none&insecure=0&host=r4fnviw9jl4i4rx.zjde5.de5.net&fp=random&type=ws&allowInsecure=0&sni=r4fnviw9jl4i4rx.zjde5.de5.netvless://83f03646-fb28-44cc-9d2c-8853f6c09285@192.144.19.55:8443?path=%2F%3Fed%3D%23TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI%3Fed%3D512&security=tls&alpn=http%2F1.1&encryption=none&insecure=0&host=r4fnviw9jl4i4rx.zjde5.de5.net&fp=random&type=ws&allowInsecure=0&sni=r4fnviw9jl4i4rx.zjde5.de5.netvless://83f03646-fb28-44cc-9d2c-8853f6c09285@192.144.19.55:8443?path=%2F%3Fed%3D2560&security=tls&alpn=http%2F1.1&encryption=none&insecure=0&host=r4fnviw9jl4i4rx.zjde5.de5.net&fp=random&type=ws&allowInsecure=0&sni=r4fnviw9jl4i4rx.zjde5.de5.netvless://83f03646-fb28-44cc-9d2c-8853f6c09285@104.17.162.123:8443?path=%2F%3Fed%3D2560&security=tls&alpn=http%2F1.1&encryption=none&insecure=0&host=r4fnviw9jl4i4rx.zjde5.de5.net&fp=random&type=ws&allowInsecure=0&sni=r4fnviw9jl4i4rx.zjde5.de5.netvless://7718721f-2975-4d82-bdcd-ad92bd1dd779@mpc.mobayandeh.top:443?path=%2F%3Fed%3D2082&security=tls&alpn=http%2F1.1&encryption=none&insecure=0&host=holcdn.wordperessweb.ir&fp=chrome&type=ws&allowInsecure=0&sni=holcdn.wordperessweb.irvless://24159510-d3f9-42db-9bb6-a0b43007b552@104.18.32.47:443?path=%2Fapi%2Fv2%2Fdata&security=tls&alpn=http%2F1.1&encryption=none&insecure=0&host=bupnl.sepotishop.ir&fp=chrome&type=ws&allowInsecure=0&sni=bupnl.sepotishop.ir`
+
+---
+
+### 🕒 2026-01-27 21:14:34 UTC
+[پروکسی](https://t.me/proxy?server=85.133.194.5&amp;port=6443&amp;secret=eeNEgYdJvXrFGRMCIMJdCQRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
+ 
+[پروکسی](https://t.me/proxy?server=85.133.194.7&amp;port=6443&amp;secret=eeNEgYdJvXrFGRMCIMJdCQRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
+ 
+[پروکسی](https://t.me/proxy?server=85.133.194.8&amp;port=6443&amp;secret=eeNEgYdJvXrFGRMCIMJdCQRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
+ 
+[پروکسی](https://t.me/proxy?server=85.133.194.5&amp;port=6443&amp;secret=eeNEgYdJvXrFGRMCIMJdCQRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
+[پروکسی](https://t.me/proxy?server=85.133.194.9&amp;port=6443&amp;secret=eeNEgYdJvXrFGRMCIMJdCQRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
+ 
+[پروکسی](https://t.me/proxy?server=85.133.194.8&amp;port=6443&amp;secret=eeNEgYdJvXrFGRMCIMJdCQRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
+ 
+[پروکسی](https://t.me/proxy?server=85.133.194.9&amp;port=6443&amp;secret=eeNEgYdJvXrFGRMCIMJdCQRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
+ 
+[پروکسی](https://t.me/proxy?server=85.133.194.5&amp;port=6443&amp;secret=eeNEgYdJvXrFGRMCIMJdCQRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
+[ایفون](https://t.me/proxy?server=85.133.194.10&amp;port=6443&amp;secret=eeNEgYdJvXrFGRMCIMJdCQ)
+
+---
+
+### 🕒 2026-01-27 21:01:44 UTC
+> ↪️ **Forwarded**
+
+نسخه جدید فیلتر شکن sing box
+
+---
+
+### 🕒 2026-01-27 20:42:13 UTC
+`vless://4525c260-df3c-4f62-b8f1-f4f5f305694b@66.81.247.155:443?path=%2F%3Fed%3D512&security=tls&encryption=none&host=yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net&fp=chrome&type=ws&sni=yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net#NetAccountvless://d788c8d3-461d-4a4c-a9a2-eceade4531bd@104.18.32.47:2083?path=%2Fgame%3Fed%3D2048&security=tls&encryption=none&host=gr2.education-10.org.&fp=chrome&type=ws&sni=education-10.org#NetAccount`
+[@xsfilternet](https://t.me/xsfilternet)
+
+---
+
+### 🕒 2026-01-27 20:00:03 UTC
+nm-vless://K90wjwtwmH3YBpoG3sJDDKnFab7gboKzMxW3VTkxNRiiRvXDptpjkf+OweurcDpKVlc3NUKIlUs/jGVYN5XuU8z+UR3XZd6KYux458O1GPKoI9KodsohNv/6zD1dE1b3ggPSkMvRHTDb3dZwpVgZR9KkjUo++ExvuUBICXxJM26c3YJgcA4Wz/5z0u/X4uR2iLYIstAg/tr5+sQ9DaEXmDoifPYO02zMMgTsLGtkCVhPzKZ/MZuzoLAOm+1sUFEKPKDRDdY87wGrJ8sDOoonUyFgMbaxx8DOimnW9056EAg=
+نت مود
+***🎀***
+[@xsfilternet](https://t.me/xsfilternet)
+
+---
+
+### 🕒 2026-01-27 19:57:41 UTC
+***🔴***
+ صداوسیما جمهوری اسلامی: مردم از فیلترینگ شکایتی ندارن. چون برنامه های جایگزین داخلی عملکردشون خیلی بهتر از خارجیاست!  @xsfilternet
+
+---
+
+### 🕒 2026-01-27 19:56:38 UTC
+***🔴***
+ صداوسیما جمهوری اسلامی: مردم از فیلترینگ شکایتی ندارن. چون برنامه های جایگزین داخلی عملکردشون خیلی بهتر از خارجیاست!
+[@xsfilternet](https://t.me/xsfilternet)
+
+---
+
+### 🕒 2026-01-27 19:40:04 UTC
+`vless://4525c260-df3c-4f62-b8f1-f4f5f305694b@66.81.247.155:443?path=%2F%3Fed%3D2560&security=tls&encryption=none&host=yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net&fp=chrome&type=ws&sni=yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net#NetAccountvless://7718721f-2975-4d82-bdcd-ad92bd1dd779@mpc.mobayandeh.top:443?path=%2F%3Fed%3D2082&security=tls&alpn=http%2F1.1&encryption=none&host=holcdn.wordperessweb.ir&fp=chrome&type=ws&sni=holcdn.wordperessweb.ir#NetAccountvless://4525c260-df3c-4f62-b8f1-f4f5f305694b@63.141.128.158:443?path=%2F%3Fed%3D2560&security=tls&encryption=none&host=yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net&fp=chrome&type=ws&sni=yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net#NetAccountvless://4525c260-df3c-4f62-b8f1-f4f5f305694b@66.81.247.155:443?path=%2F%3Fed%3D2560&security=tls&encryption=none&host=yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net&fp=chrome&type=ws&sni=yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net#NetAccount`
+[@xsfilternet](https://t.me/xsfilternet)
+
+---
+
+### 🕒 2026-01-27 19:34:57 UTC
+[https://t.me/xsfilternetchat](https://t.me/xsfilternetchat)
+گروه چنل رو دلشته باشید بچها کانفیگ میزارن سوالی هم بود کمک میکنن هوای هم رو داشته باشید
+***🎀***
+***☯️***
+
+---
+
+### 🕒 2026-01-27 19:18:13 UTC
+nm-dns://jQwO4JtgmDPF/NwSdgv799rtaACmEN/3pxse1DOJli5/eScKe71+CCmgbL13o7U7cbzWa8j9yBRXeLmPLYhsneoSzMtuscIkulCL9bzOHIb4QiizwxIMkztKaK+Qo9Ap7HzOOnVTsZSLssXYUg2aZINXia0AISJ54ry1EnrA00iKM6jks+uBQ2hkDXlE1Eepw3rIoioSLgHPivc7cRagWY62DEKuCeuMadSMP4kSlvmFGywIV1CmjomsX3ksm2B5
+نت مود
+***🎀***
+[@xsfilternet](https://t.me/xsfilternet)
+
+---
+
+### 🕒 2026-01-27 19:07:32 UTC
+دوستان یه دوستانی ری اشکن #فیک فاک رو خیلی دوست دارن میشه یه اتحاد ری اکشن فاک داشته باشم ازتون به عنوان هدیه من به اون دوستان دست جمعی یه ری اکشن فاک بزنیم
+***🫰***
+***🖕***
+ 
+***🖕***
+***🖕***
+***🖕***
+***🖕***
+***🖕***
+***🖕***
+
+---
+
+### 🕒 2026-01-27 19:00:07 UTC
+کانفیگ اینجکتور
+
+---
+
+### 🕒 2026-01-27 18:55:40 UTC
+`vless://83f03646-fb28-44cc-9d2c-8853f6c09285@104.17.162.123:8443?path=%2F%3Fed%3D2560&security=tls&alpn=http%2F1.1&encryption=none&host=r4fnviw9jl4i4rx.zjde5.de5.net&fp=random&type=ws&sni=r4fnviw9jl4i4rx.zjde5.de5.net#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobevless://79df85dd-cb40-4b32-828e-f38d918d85e3@63.141.128.3:2053?path=%2F%3Fed%3D2048&security=tls&encryption=none&fp=chrome&type=ws&sni=ip-static-address.wizardxray.net#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobevless://4660d0c6-4367-40c9-b730-864194e7efa7@91.216.71.109:8880?security=none&encryption=none&headerType=none&type=tcp#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobevless://1ca9ceff-e060-4cdf-a5c8-60662d326a87@65.109.219.60:443?path=%2F&security=none&encryption=none&type=ws#%F0%9F%94%A5%20Telegram%3A%20%40wiki_tajrobe`
+[@xsfilternet](https://t.me/xsfilternet)
+
+---
+
+### 🕒 2026-01-27 18:01:00 UTC
+دوستان یه دوستانی ری اشکن #فیک فاک رو خیلی دوست دارن میشه یه اتحاد ری اکشن فاک داشته باشم ازتون به عنوان هدیه من به اون دوستان دست جمعی یه ری اکشن فاک بزنیم
+***🫰***
+***🖕***
+ 
+***🖕***
+***🖕***
+***🖕***
+***🖕***
+***🖕***
+***🖕***
+
+---
+
+### 🕒 2026-01-27 17:56:47 UTC
+دوستان یه دوستانی ری اشکن 
+[#فیک](?q=%23%D9%81%DB%8C%DA%A9)
+ فاک رو خیلی دوست دارن میشه یه اتحاد ری اکشن فاک داشته باشم ازتون به عنوان هدیه من به اون دوستان دست جمعی یه ری اکشن فاک بزنیم
+***🫰***
+***🖕***
+***🖕***
+***🖕***
+***🖕***
+***🖕***
+***🖕***
+***🖕***
+
+---
+
+### 🕒 2026-01-27 17:54:25 UTC
+vless://79df85dd-cb40-4b32-828e-f38d918d85e3@63.141.128.3:2053?path=%2F%3Fed%3D2048&security=tls&encryption=none&fp=chrome&type=ws&sni=ip-static-address.wizardxray.net#%E2%9A%A1Telegram%3A%20%40wiki_tajrobe
+متصل
+***✅️***
+
+---
+
+### 🕒 2026-01-27 17:49:51 UTC
+دوستان منظورم این نیست که بقیه نت ها کسشر نیست منظورم اینه اینا کسشر ترن با احترام
+***🎀***
+
+---
+
+### 🕒 2026-01-27 17:47:01 UTC
+همه اینترنت ها وصل شدن به جز ایرانسل و آسیاتک که شدیدا ت.خمیه هستن!  @xsfilternet
+
+---
+
+### 🕒 2026-01-27 17:45:11 UTC
+همه اینترنت ها وصل شدن به جز ایرانسل و آسیاتک که شدیدا ت.خمیه هستن!
+[@xsfilternet](https://t.me/xsfilternet)
+
+---
+
+### 🕒 2026-01-27 17:07:52 UTC
+رندوم ۱:
+
+---
+
+### 🕒 2026-01-27 16:58:47 UTC
+رندوم ۱:
+
+---
+
+### 🕒 2026-01-27 15:48:17 UTC
+بعد از شک پوریا پورسرخ که فکر نمیکردم یه روزی بهش وصل شم اتابکی دومین شکی بود که بهم وارد شد این مملکت واقعا هر لحظه سوپرایز داره:))))
+[@xsfilternet](https://t.me/xsfilternet)
+
+---
+
+### 🕒 2026-01-27 15:04:58 UTC
+[https://t.me/proxy?server=195.254.165.136&port=9443&secret=EERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQ%3D%3D](https://t.me/proxy?server=195.254.165.136&port=9443&secret=EERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQ%3D%3D)
+[https://t.me/proxy?server=195.254.165.139&port=9443&secret=EERighJJvXrFGRMCIMJdCQ](https://t.me/proxy?server=195.254.165.139&port=9443&secret=EERighJJvXrFGRMCIMJdCQ)
+متصل
+***✅️***
+***☯️***
+[@xsfilternet](https://t.me/xsfilternet)
+
+---
+
+### 🕒 2026-01-27 13:09:10 UTC
+`vless://4525c260-df3c-4f62-b8f1-f4f5f305694b@66.81.247.155:443?path=%2F%3Fed%3D2560&security=tls&encryption=none&insecure=0&host=yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net&fp=chrome&type=ws&allowInsecure=0&sni=yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net#%40proxy_kafeevless://4525c260-df3c-4f62-b8f1-f4f5f305694b@130.250.137.171:443?path=%2F%3Fed%3D2560&security=tls&encryption=none&insecure=0&host=yyzsu%61bw9%653%71d5ud7%69h%695d%78m96oglns%76%7283cjojnm1%65fncfh%729uco%72d%71.zjd%655.d%655.n%65t&fp=chrome&type=ws&allowInsecure=0&sni=yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net#%40proxy_kafeevless://4525c260-df3c-4f62-b8f1-f4f5f305694b@63.141.128.158:443?path=%2F%3Fed%3D2560&security=tls&encryption=none&insecure=0&host=yyzsu%61bw9%653%71d5ud7%69h%695d%78m96oglns%76%7283cjojnm1%65fncfh%729uco%72d%71.zjd%655.d%655.n%65t&fp=chrome&type=ws&allowInsecure=0&sni=yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net#%40proxy_kafeevless://7718721f-2975-4d82-bdcd-ad92bd1dd779@mpc.mobayandeh.top:443?path=%2F%3Fed%3D2082&security=tls&alpn=http%2F1.1&encryption=none&insecure=0&host=holcdn.wordperessweb.ir&fp=chrome&type=ws&allowInsecure=0&sni=holcdn.wordperessweb.ir#%40proxy_kafeevless://c4426a36-247f-4abf-bf4e-e9ea0ed01c32@ip.ali.lat:2053?path=%2F&security=tls&alpn=h2%2Chttp%2F1.1&encryption=none&insecure=0&host=temp.ali.lat&type=ws&allowInsecure=0&sni=temp.ali.lat#%40proxy_kafeevless://79df85dd-cb40-4b32-828e-f38d918d85e3@fast1.zone-server-irani.ir:80?mode=auto&path=%2Fmagicmizban%3Fed%3D2048&security=none&encryption=none&host=amirtoska.global.ssl.fastly.net&type=xhttp#%40proxy_kafeevless://4c80d50d-714a-4799-caa8-2dd372f174af@47.82.0.183:22455?security=none&encryption=none&headerType=none&type=tcp#%proxy_kafee`
+کانفیگv2ray
+***✅️***
+***🔥***
+[@xsfilternet](https://t.me/xsfilternet)
+
+---
+
+### 🕒 2026-01-27 12:48:53 UTC
+سلام اینو تست کردم کار میکنه، بزار چنل استفاده کنن
+***❤️***
+
+---
+
+### 🕒 2026-01-27 12:42:43 UTC
+> ↪️ **Forwarded**
+
+[https://t.me/proxy?server=140.233.167.142&port=443&secret=eeNEgYdJvXrFGRMCIMJdCQRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&@proxyskull](https://t.me/proxy?server=140.233.167.142&port=443&secret=eeNEgYdJvXrFGRMCIMJdCQRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&@proxyskull)
+
+---
+
+### 🕒 2026-01-27 12:32:19 UTC
+تست کنید  تو کامنت ها ، بهم بگید رو چه اپراتور ای وصله 
+من رو ایرانسل اوکی بودم 
+برای نت مود:
+`nm-vless://tk4B/VKKtI59A3D7UIu2ul8ih7DBEWqCUYIBPol6LA42VtQRIGAF65x+4yT5x4i9UBWmsxtjeQERAbXs/M2Ouqzs8g2iMBzRQESvR+PwWZTQ88IBOnqYeozfJqftoC1lSM+MZbrpSI6N+WZIsw8Xx6bjFf3KDDX4DtOJjaE7GLiPG2nb2HRHYJ082A1+li0hAzovHOeMQsLenaWBi8tLz6D+yiYkWb0hQTRceBtpwUVZus4sY5FcT0RxOW+O+6I/VfykPqzHx65IGG6iLfWgcr/4SN97fsbW9lwT3YJ6+was7GS/9ed33phJae8SkF9uJGGXh+hO0qDyQhKQME/yr9UhbmEfpDLm2gDgKQrPCxbq9zcGciibQJnshogy8LsC/+7eM5+P0vFGjRGgvL/4wyRzY41aNZkzp1iOTh+IJNI=`
+[@arshiacomplus](https://t.me/arshiacomplus)
+[@arshia_mod_fun](https://t.me/arshia_mod_fun)
+
+---
+
+### 🕒 2026-01-27 12:30:18 UTC
+nm-vless://9xA48iLhnTPJIFqYw7r1UYwmHnpbrHa7Gjw6sqZDA+i6ktPWShREeecLaOByICv/wAv0qT2DTReyZMIcQHwDSL6e8wtk8Upp2Uo7HVDEoWsSvpm2WU5iBSx4zOXNuY5BwQIZ4IovOr+ncv3YpBncts2VQOjllTX+yj3TRlcZ3aaw1W8KfL8uTzTf5O1cA4BH8FuyKV9ZCR9dy5Os+Dywq5pf6QK7qUmq9dnZdeYddo3lvKmhkTVUBoW91+3P1Yz+7x44YDuxiX0d/6JL6dS/m2JUM0Iu7zXmeTzJ4Y5a5X2+Temlfkag/CyZ8qdtmbnoLnYru0lneFx7OantN19AgYy0mZxC5Ol5kArWECVXq7OzdgmMQgT8+bL1oiW9ycskvaU+REh/rPfD286elzYd3isrcV3j4pdatW73im+3yr6E6oK7AXoy1l71r91uo29FTraOSDLCXttjT80K/axSbFuxYbkzH70ZPsqqUOVapkE=
+[@xsfilternet](https://t.me/xsfilternet)
+
+---
+
+### 🕒 2026-01-27 12:29:39 UTC
+توجه به دوستانی که قبل از قطعی اینترنت سرویس پریمیوم ما رو گرفته بودن ساب عمومی و 
+[#ساب](?q=%23%D8%B3%D8%A7%D8%A8)
+ سرور 
+[#شخصی](?q=%23%D8%B4%D8%AE%D8%B5%DB%8C)
+ آپدیت کنید و دوستانی که ساب 
+[#عمومی](?q=%23%D8%B9%D9%85%D9%88%D9%85%DB%8C)
+ رو خریده بودن لطفا بهم پیم بدن چون سرویس رو میخوام قطع کنم و به همون اندازه گیگ سرور شخصی بدم و قابل توجه دوستان دیگه تو این شرایط فروش نداریم الان وقت فروش نیست 
+[#اینترنت](?q=%23%D8%A7%DB%8C%D9%86%D8%AA%D8%B1%D9%86%D8%AA)
+ برای همه یا هیچکس!
+[#موقت](?q=%23%D9%85%D9%88%D9%82%D8%AA)
+[@xsfilternet](https://t.me/xsfilternet)
+
+---
+
+### 🕒 2026-01-27 12:19:00 UTC
+nm-xray-json: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
+نت مود
+[@xsfilternet](https://t.me/xsfilternet)
+
+---
+
+### 🕒 2026-01-27 12:18:32 UTC
+Amnezia VPN
+همراه اول وصل
+بقیه نت ها معمولی وصله
+روی گزینه اول بزنید و ایران رو انتخاب کنید
+**دانلود برنامه برای سیستم عامل های مختلف:💻**
+[Github](https://github.com/amnezia-vpn/amnezia-client/releases/latest)
+**📱**
+[GooglePlay](https://play.google.com/store/apps/details?id=org.amnezia.vpn)
+**📱**
+[AppStore](https://apps.apple.com/us/app/amneziavpn/id1600529900)
+**کانفیگ خودتان از ربات بگیرید:➡️**
+[@amnezia_free_iran_bot](https://t.me/amnezia_free_iran_bot)
+***⚜️***
+مراحل را به ترتیب انجام دهید (با توجه به شات):
+***1️⃣***
+ Select "I have data to connect".
+***2️⃣***
+ "Open a config file, key or QR-code".
+***3️⃣***
+ key at the.
+***4️⃣***
+ Import Key (سرور رو وارد برنامه کنید)
+***5️⃣***
+ click "Connect"
+﻿
+
+---
+
+### 🕒 2026-01-27 12:03:50 UTC
+حالا که اپ استور و گوگل پلی باز شده سعی کنید این #فیلتر شکن ها رو نصب کنید!
+***☯️***
+***🔥***
+ ios: Defyxvpn  Hiddify   V2box  Npv  Singbox  Karing  .... اندروید: Hiddify   V2rayng   Ftpn vpn  Proxy cloud  Mahsang  Nekobox  Sing box  Amenzia  Npv  Karing   Arogo vpn  @xsfilternet
+
+---
+
+### 🕒 2026-01-27 12:00:32 UTC
+حالا که اپ استور و گوگل پلی باز شده سعی کنید این 
+[#فیلتر](?q=%23%D9%81%DB%8C%D9%84%D8%AA%D8%B1)
+ شکن ها رو نصب کنید!
+***☯️***
+***🔥***
+ios:
+Defyxvpn
+Hiddify 
+V2box
+Npv
+Singbox
+Karing 
+....
+اندروید:
+Hiddify 
+V2rayng 
+Ftpn vpn
+Proxy cloud
+Mahsang
+Nekobox
+Sing box
+Amenzia
+Npv
+Karing 
+Arogo vpn
+[@xsfilternet](https://t.me/xsfilternet)
+
+---
+
+### 🕒 2026-01-27 11:57:12 UTC
+گوگل پلی مجدد در #دسترس قرار گرفته!  @xsfilternet
+
+---
+
+### 🕒 2026-01-27 11:45:38 UTC
+گوگل پلی مجدد در 
+[#دسترس](?q=%23%D8%AF%D8%B3%D8%AA%D8%B1%D8%B3)
+ قرار گرفته!
+[@xsfilternet](https://t.me/xsfilternet)
+
+---
+
+### 🕒 2026-01-27 11:37:33 UTC
+[xsfilternet](https://t.me/xsfilternet)
+ pinned a video
+
+---
+
+### 🕒 2026-01-27 11:32:14 UTC
+[https://t.me/proxy?server=85.133.194.10&port=65535&secret=eeNEgYdJvXrFGRMCIMJdCQ](https://t.me/proxy?server=85.133.194.10&port=65535&secret=eeNEgYdJvXrFGRMCIMJdCQ)
+متصل
+***✅️***
+[@xsfilternet](https://t.me/xsfilternet)
+
+---
+
+### 🕒 2026-01-27 11:19:45 UTC
+> ↪️ **Forwarded**
+
+[https://t.me/proxy?server=85.133.194.8&port=6443&secret=eeNEgYdJvXrFGRMCIMJdCQRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA](https://t.me/proxy?server=85.133.194.8&port=6443&secret=eeNEgYdJvXrFGRMCIMJdCQRueWVrdGFuZXQuY29tZmFyYWthdi5jb212YW4ubmFqdmEuY29tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
+[https://t.me/proxy?server=195.254.165.138&port=8443&secret=104462821249bd7ac519130220c25d09](https://t.me/proxy?server=195.254.165.138&port=8443&secret=104462821249bd7ac519130220c25d09)
+[پروکسی](https://t.me/proxy?server=195.254.165.201&amp;port=13&amp;secret=EERighJJvXrFGRMCIMJdCQ)
+‌ | 
+[پروکسی](https://t.me/proxy?server=195.254.165.166&amp;port=9443&amp;secret=EERighJJvXrFGRMCIMJdCQ)
+‌ | 
+[پروکسی](https://t.me/proxy?server=195.254.165.140&amp;port=9443&amp;secret=EERighJJvXrFGRMCIMJdCQ)
+ |
+[پروکسی](https://t.me/proxy?server=195.254.165.22&amp;port=9443&amp;secret=EERighJJvXrFGRMCIMJdCQ)
+‌‌ | 
+[پروکسی](https://t.me/proxy?server=195.254.165.14&amp;port=9443&amp;secret=EERighJJvXrFGRMCIMJdCQ)
+‌ |
+[پروکسی](https://t.me/proxy?server=195.254.165.4&amp;port=13&amp;secret=EERighJJvXrFGRMCIMJdCQ)
+ | 
+[پروکسی](https://t.me/proxy?server=195.254.165.127&amp;port=9443&amp;secret=EERighJJvXrFGRMCIMJdCQ)
+ | 
+[پروکسی](https://t.me/proxy?server=195.254.165.137&amp;port=9443&amp;secret=EERighJJvXrFGRMCIMJdCQ)
+ |
+[پروکسی](https://t.me/proxy?server=195.254.165.138&amp;port=8443&amp;secret=EERighJJvXrFGRMCIMJdCQ)
+ | 
+[آیفون](https://t.me/proxy?server=195.254.165.110&amp;port=66666&amp;secret=EERighJJvXrFGRMCIMJdCQ)
+ | 
+[آیفون](https://t.me/proxy?server=195.254.165.131&amp;port=66666&amp;secret=EERighJJvXrFGRMCIMJdCQ)
+ |
+[https://t.me/proxy?server=195.254.165.42&port=9443&secret=EERighJJvXrFGRMCIMJdCQ](https://t.me/proxy?server=195.254.165.42&port=9443&secret=EERighJJvXrFGRMCIMJdCQ)
+[https://t.me/proxy?server=46.226.162.204&port=8443&secret=eecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQ%3D%3D](https://t.me/proxy?server=46.226.162.204&port=8443&secret=eecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQ%3D%3D)
+[https://t.me/proxy?server=195.254.165.138&port=8443&secret=EERighJJvXrFGRMCIMJdCQ](https://t.me/proxy?server=195.254.165.138&port=8443&secret=EERighJJvXrFGRMCIMJdCQ)
+[https://t.me/proxy?server=195.254.165.110&port=65535&secret=EERighJJvXrFGRMCIMJdCQ](https://t.me/proxy?server=195.254.165.110&port=65535&secret=EERighJJvXrFGRMCIMJdCQ)
+[https://t.me/proxy?server=185.132.134.66&port=8443&secret=eecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQ%3D%3D](https://t.me/proxy?server=185.132.134.66&port=8443&secret=eecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQeecBAgAeeAfwEEOGEkwEeQ%3D%3D)
+[https://t.me/proxy?server=195.254.165.188&port=9443&secret=EERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQ%3D%3D](https://t.me/proxy?server=195.254.165.188&port=9443&secret=EERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQEERighJJvXrFGRMCIMJdCQ%3D%3D)
+[https://t.me/proxy?server=195.254.165.127&port=9443&secret=EERighJJvXrFGRMCIMJdCQ](https://t.me/proxy?server=195.254.165.127&port=9443&secret=EERighJJvXrFGRMCIMJdCQ)
+[https://t.me/proxy?server=195.254.165.43&port=9443&secret=EERighJJvXrFGRMCIMJdCQ](https://t.me/proxy?server=195.254.165.43&port=9443&secret=EERighJJvXrFGRMCIMJdCQ)
+[https://t.me/proxy?server=195.254.165.137&port=9443&secret=EERighJJvXrFGRMCIMJdCQ](https://t.me/proxy?server=195.254.165.137&port=9443&secret=EERighJJvXrFGRMCIMJdCQ)
+[https://t.me/proxy?server=195.254.165.22&port=9443&secret=EERighJJvXrFGRMCIMJdCQ](https://t.me/proxy?server=195.254.165.22&port=9443&secret=EERighJJvXrFGRMCIMJdCQ)
+
+---
+
+### 🕒 2026-01-27 09:53:42 UTC
+🫟
+**روش اتصال به پروکسی تلگرام اپ DNSTTxyz **
+`DNStt.xyz Config`
+{
+  "version": "1.2",
+  "configs": [
+    {
+      "name": "DNSTT.XYZ Germany",
+      "publicKey": "023678bec148aaaae5e03d450a1d05917129b632ca24ce1bbbd1b42bf377c36e",
+      "tunnelDomain": "tunnel.dnstt.xyz",
+      "tunnelType": "socks5"
+    },
+    {
+      "name": "DNSTT.XYZ Finland",
+      "publicKey": "a5da2ba2da39ab7dd9dca5f639b4bf02acdf8f8da2ab2d4a373dbf5ff3e0563a",
+      "tunnelDomain": "rent.snapp.autos",
+      "tunnelType": "socks5"
+    },
+    {
+      "name": "DNSTT Donated by CappyT",
+      "publicKey": "5aedf20362805d266233b94200ef8e531f6181480ad36ca6781a7ca2154ddc7a",
+      "tunnelDomain": "a.ppyt.it",
+      "tunnelType": "socks5"
+    }
+  ]
+}
+***📥***
+ از اینجا میتونید اپ رو دانلود کنید 
+•
+**GitHub**
+ 
+[https://github.com/dnstt-xyz/dnstt_xyz_app/releases](https://github.com/dnstt-xyz/dnstt_xyz_app/releases)
+***🗃️***
+ اگه فایلش رو خواستید داخل تلگرام دانلود کنید کافیه لینک بالا رو داخل این بات بذارید فایلش رو بهتون بده
+•Bot 
+[@GithubGitlabDownloader_bot](https://t.me/GithubGitlabDownloader_bot)
+▬▭▬▭▬▭▬▭▬
+• 
+[@ConfigWireguard](https://t.me/ConfigWireguard)
 
 ---
 
