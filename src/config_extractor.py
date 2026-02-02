@@ -70,7 +70,11 @@ def write_files(data_map, output_dir):
     mixed_content = set()
     for proto, lines in data_map.items():
         if not lines: continue
-        mixed_content.update(lines)
+        
+        # اصلاح: پروکسی‌های تلگرام به لیست میکس اضافه نشوند
+        if proto != 'tg':
+            mixed_content.update(lines)
+            
         if proto == 'tg':
             windows_tg = {l for l in lines if is_windows_compatible(l)}
             save_content(output_dir, "tg", lines)
