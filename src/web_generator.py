@@ -27,16 +27,17 @@ def generate_web_page():
         "vmess.txt", "vmess_base64.txt",
         "trojan.txt", "trojan_base64.txt",
         "ss.txt", "ss_base64.txt",
+        "hysteria2.txt", "hysteria2_base64.txt",
+        "anytls.txt", "anytls_base64.txt",
+        "ssr.txt", "ssr_base64.txt",
         "ssh.txt", "ssh_base64.txt",
         "wireguard.txt", "wireguard_base64.txt",
         "warp.txt", "warp_base64.txt",
-        "hysteria2.txt", "hysteria2_base64.txt",
         "clash.yaml", "clashr.yaml",
         "tg_android.txt", "tg_windows.txt",
         "v2ray.txt", "surfboard.conf",
         "quantumult.conf", "surge4.conf",
         "ss_sip002.txt", "ss_android.txt",
-        "ssr.txt", "ssd.txt",
         "loon.config", "quanx.conf"
     ]
 
@@ -47,7 +48,7 @@ def generate_web_page():
 
     html_content = f"""
     <!DOCTYPE html>
-    <html lang="fa" dir="rtl">
+    <html lang="fa" dir="rtl" class="scroll-smooth">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -67,12 +68,28 @@ def generate_web_page():
             .btn-action {{ transition: all 0.2s; font-size: 14px; font-weight: 700; }}
             .social-card {{ transition: all 0.3s; border: 1px solid rgba(255,255,255,0.05); }}
             .social-card:hover {{ background: rgba(59, 130, 246, 0.1); border-color: rgba(59, 130, 246, 0.4); transform: translateY(-2px); }}
+            #toast {{ visibility: hidden; min-width: 200px; background-color: #3b82f6; color: #fff; text-align: center; border-radius: 10px; padding: 12px; position: fixed; z-index: 100; left: 50%; bottom: 30px; transform: translateX(-50%); font-weight: bold; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }}
+            #toast.show {{ visibility: visible; animation: fadein 0.5s, fadeout 0.5s 1.5s; }}
+            @keyframes fadein {{ from {{ bottom: 0; opacity: 0; }} to {{ bottom: 30px; opacity: 1; }} }}
+            @keyframes fadeout {{ from {{ bottom: 30px; opacity: 1; }} to {{ bottom: 0; opacity: 0; }} }}
+            .nav-btn {{ position: fixed; right: 20px; width: 45px; height: 45px; border-radius: 50%; display: flex; items-center: center; justify-content: center; z-index: 50; box-shadow: 0 4px 10px rgba(0,0,0,0.5); transition: 0.3s; }}
+            .nav-btn:hover {{ transform: scale(1.1); }}
         </style>
     </head>
-    <body class="p-4 md:p-10">
+    <body class="p-4 md:p-10 relative">
+        <!-- Toast Notification -->
+        <div id="toast">کپی شد!</div>
+
+        <!-- Scroll Buttons -->
+        <button onclick="window.scrollTo(0,0)" class="nav-btn bottom-20 bg-blue-600 text-white" title="برو به بالا">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+        <button onclick="window.scrollTo(0, document.body.scrollHeight)" class="nav-btn bottom-5 bg-slate-700 text-white" title="برو به پایین">
+            <i class="fa-solid fa-arrow-down"></i>
+        </button>
+
         <div class="max-w-6xl mx-auto">
-            <header class="text-center mb-12">
-                <img src="{favicon_url}" alt="Logo" class="w-16 h-16 mx-auto mb-4 rounded-xl shadow-lg shadow-blue-500/20">
+            <header id="top" class="text-center mb-12">
                 <h1 class="text-4xl font-black text-blue-500 mb-2">VpnClashFa Collector</h1>
                 <p class="text-slate-500 text-sm italic">بروزرسانی: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M')}</p>
             </header>
@@ -161,7 +178,7 @@ def generate_web_page():
     html_content += """
             </div>
 
-            <footer class="mt-16 mb-8">
+            <footer id="bottom" class="mt-16 mb-8">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <a href="https://t.me/vpnclashfa" target="_blank" class="social-card glass rounded-2xl p-6 flex items-center justify-between group">
                         <div class="flex items-center gap-4">
@@ -194,9 +211,16 @@ def generate_web_page():
         </div>
 
         <script>
-            let tgData = { android: '', windows: '', mixed: '' };
-            async function loadTGData() {
-                try {
+            let tgData = {{ android: '', windows: '', mixed: '' }};
+            
+            function showToast() {{
+                const t = document.getElementById("toast");
+                t.className = "show";
+                setTimeout(() => {{ t.className = t.className.replace("show", ""); }}, 2000);
+            }}
+
+            async function loadTGData() {{
+                try {{
                     const [a, w, m] = await Promise.all([
                         fetch('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/tg_android.txt').then(r => r.text()),
                         fetch('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/tg_windows.txt').then(r => r.text()),
@@ -204,33 +228,47 @@ def generate_web_page():
                     ]);
                     tgData.android = a.trim(); tgData.windows = w.trim(); tgData.mixed = m.trim();
                     switchTG('android');
-                } catch(e) { console.error(e); }
-            }
-            function switchTG(mode) {
+                }} catch(e) {{ console.error(e); }}
+            }}
+
+            function switchTG(mode) {{
                 document.getElementById('proxy-display').innerText = tgData[mode].split('\\n').join('\\n\\n');
-                ['android', 'windows', 'mixed'].forEach(m => {
+                ['android', 'windows', 'mixed'].forEach(m => {{
                     document.getElementById('tab-' + m).className = 'pb-3 px-2 ' + (m === mode ? 'tab-active' : 'text-slate-400');
-                });
+                }});
                 window.currentMode = mode;
-            }
-            function copyCurrentProxy() { navigator.clipboard.writeText(tgData[window.currentMode]); alert('کپی شد'); }
-            function toggleAccordion(btn) {
+            }}
+
+            function copyCurrentProxy() {{ 
+                navigator.clipboard.writeText(tgData[window.currentMode]); 
+                showToast();
+            }}
+
+            function toggleAccordion(btn) {{
                 btn.parentElement.classList.toggle('open');
                 btn.querySelector('.fa-solid:last-child').classList.toggle('fa-plus');
                 btn.querySelector('.fa-solid:last-child').classList.toggle('fa-minus');
-            }
-            function copyText(t) { navigator.clipboard.writeText(t); alert('لینک کپی شد'); }
-            async function copyContent(url) {
-                try {
+            }}
+
+            function copyText(t) {{ 
+                navigator.clipboard.writeText(t); 
+                showToast();
+            }}
+
+            async function copyContent(url) {{
+                try {{
                     const r = await fetch(url); const t = await r.text();
-                    navigator.clipboard.writeText(t); alert('محتوای فایل کپی شد');
-                } catch(e) { alert('خطا در کپی متن'); }
-            }
-            async function downloadFile(url, name) {
+                    navigator.clipboard.writeText(t); 
+                    showToast();
+                }} catch(e) {{ console.error(e); }}
+            }}
+
+            async function downloadFile(url, name) {{
                 const r = await fetch(url); const b = await r.blob();
                 const a = document.createElement('a'); a.href = URL.createObjectURL(b);
                 a.download = name; a.click();
-            }
+            }}
+
             loadTGData();
         </script>
     </body>
