@@ -20,7 +20,7 @@ PROTOCOLS = [
 # دامنه‌هایی که نشان‌دهنده استفاده از سرویس‌های کلادفلر هستند
 CLOUDFLARE_DOMAINS = ('.workers.dev', '.pages.dev', '.trycloudflare.com', 'chatgpt.com')
 
-# دامین‌های وایت و تمیز کلادفلر برای جایگزینی
+# دامین‌های وایت و تمیز کلادفلر برای جایگزینی (در این نسخه استفاده نمی‌شود اما جهت حفظ ساختار باقی مانده)
 CLEAN_IP_DOMAINS = ['FUCK.TAWANAPROXY.ONLINE', 'FUCK1.TAWANAPROXY.ONLINE']
 
 NEXT_CONFIG_LOOKAHEAD = r'(?=' + '|'.join([rf'{p}:\/\/' for p in PROTOCOLS if p != 'tg']) + r'|https:\/\/t\.me\/proxy\?|tg:\/\/proxy\?|[()\[\]"\'\s])'
@@ -51,10 +51,7 @@ def is_windows_compatible(link):
     return True
 
 def is_behind_cloudflare(link):
-    """
-    بررسی می‌کند که آیا کانفیگ از دامنه‌های کلادفلر استفاده می‌کند یا خیر.
-    این تابع چک می‌کند که آیا دامنه یا زیردامنه‌ای به لیست دامنه‌های کلادفلر ختم می‌شود.
-    """
+    """بررسی می‌کند که آیا کانفیگ از دامنه‌های کلادفلر استفاده می‌کند یا خیر"""
     def check_domain(domain):
         if not domain: return False
         domain = domain.lower()
@@ -87,65 +84,10 @@ def is_behind_cloudflare(link):
 
 def generate_clean_ip_configs(link):
     """
-    دامین‌های کلادفلر را (شامل زیردامنه‌ها) با دامین‌های تمیز جایگزین کرده 
-    و از هر کانفیگ دو نسخه کاملاً اصلاح شده می‌سازد.
+    این تابع فعلاً غیرفعال شده است تا از تولید خروجی کلین ایپی جلوگیری شود.
+    فقط لیست خالی برمی‌گرداند.
     """
-    def replace_domain(domain, new_domain):
-        if not domain: return domain
-        # اگر خود دامنه یا زیردامنه‌اش جزو لیست بود، کل فیلد با دامین تمیز جایگزین شود
-        if domain.lower() == "chatgpt.com" or any(domain.lower().endswith(d) for d in CLOUDFLARE_DOMAINS):
-            return new_domain
-        return domain
-
-    new_configs = []
-    try:
-        for clean_domain in CLEAN_IP_DOMAINS:
-            if not link.startswith('vmess://'):
-                parsed = urlparse(link)
-                query = parse_qs(parsed.query)
-                
-                # جایگزینی در Hostname (آدرس سرور)
-                new_hostname = replace_domain(parsed.hostname, clean_domain)
-                
-                # جایگزینی در تمام پارامترهای کوئری به صورت همزمان
-                for param in ['sni', 'host', 'peer']:
-                    if param in query:
-                        query[param] = [replace_domain(v, clean_domain) for v in query[param]]
-                
-                # بازسازی URL
-                new_query_str = urlencode(query, doseq=True)
-                new_netloc = new_hostname
-                if parsed.port: new_netloc += f":{parsed.port}"
-                if parsed.username: new_netloc = f"{parsed.username}@{new_netloc}"
-                
-                new_link = urlunparse((parsed.scheme, new_netloc, parsed.path, parsed.params, new_query_str, parsed.fragment))
-                new_configs.append(new_link)
-            
-            else:
-                # برای VMess
-                b64_str = link[8:]
-                missing_padding = len(b64_str) % 4
-                if missing_padding: b64_str += '=' * (4 - missing_padding)
-                
-                decoded = base64.b64decode(b64_str).decode('utf-8')
-                data = json.loads(decoded)
-                
-                # جایگزینی در تمام فیلدها به صورت همزمان
-                for field in ['add', 'host', 'sni']:
-                    if field in data:
-                        data[field] = replace_domain(str(data[field]), clean_domain)
-                
-                # اضافه کردن تگ برای تمایز
-                if 'ps' in data:
-                    data['ps'] = f"{data['ps']} - CleanIP"
-                
-                new_b64 = base64.b64encode(json.dumps(data).encode('utf-8')).decode('utf-8')
-                new_configs.append(f"vmess://{new_b64}")
-                
-    except Exception as e:
-        logger.debug(f"Error in clean IP generation: {e}")
-        
-    return new_configs
+    return []
 
 def save_content(directory, filename, content_list):
     if not content_list: return
@@ -163,6 +105,7 @@ def write_files(data_map, output_dir):
     
     mixed_content = set()
     cloudflare_content = set()
+    # لیست مربوط به کلین ایپی خالی می‌ماند
     cloudflare_clean_ip_content = set()
     
     for proto, lines in data_map.items():
@@ -173,6 +116,7 @@ def write_files(data_map, output_dir):
             for line in lines:
                 if is_behind_cloudflare(line):
                     cloudflare_content.add(line)
+                    # فراخوانی تابع تولید کلین ایپی که فعلاً غیرفعال است
                     clean_versions = generate_clean_ip_configs(line)
                     cloudflare_clean_ip_content.update(clean_versions)
             
@@ -188,6 +132,7 @@ def write_files(data_map, output_dir):
         save_content(output_dir, "mixed", mixed_content)
     if cloudflare_content:
         save_content(output_dir, "cloudflare", cloudflare_content)
+    # فایل کلین ایپی فقط در صورتی ساخته می‌شود که محتوایی داشته باشد (که در این نسخه ندارد)
     if cloudflare_clean_ip_content:
         save_content(output_dir, "cloudflare_clean_ip", cloudflare_clean_ip_content)
 
