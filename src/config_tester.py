@@ -5,13 +5,16 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s [%(levelname)s] %(me
 logger = logging.getLogger("ProxyLab")
 
 def to_base64(text):
+    """تبدیل متن به فرمت بیس۶۴"""
     return base64.b64encode(text.encode('utf-8')).decode('utf-8')
 
 def get_flag(cc):
+    """تبدیل کد کشور به ایموجی پرچم"""
     cc = str(cc).upper()
     return "".join(chr(127397 + ord(c)) for c in cc) if len(cc) == 2 else "🌐"
 
 def download_engine():
+    """دانلود موتور ایکس‌ری نایف در صورت عدم وجود"""
     if os.path.exists("xray-knife"): return
     url = "https://github.com/lilendian0x00/xray-knife/releases/latest/download/Xray-knife-linux-64.zip"
     try:
@@ -22,10 +25,13 @@ def download_engine():
             for file in files:
                 if file == "xray-knife": os.rename(os.path.join(root, file), "xray-knife")
         os.chmod("xray-knife", 0o755)
+        # پاکسازی فایل‌های موقت
+        if os.path.exists("engine.zip"): os.remove("engine.zip")
     except Exception as e:
         logger.error(f"Failed to download engine: {e}")
 
 def rename_config(link, info, rank=None):
+    """تغییر نام و برچسب‌گذاری کانفیگ بر اساس نتایج تست"""
     try:
         cc = info.get('cc', 'UN')
         ping = info.get('ping', '?')
@@ -71,24 +77,32 @@ def test_process():
             valid_rows = [r for r in reader if r.get('delay') and str(r['delay']).isdigit() and int(r['delay']) > 0]
             valid_rows.sort(key=lambda x: int(x['delay']))
             
-            ping_passed = [rename_config(r.get('link') or r.get('Config'), {'cc': r.get('location', 'UN'), 'ping': r.get('delay')}) for r in valid_rows]
+            ping_passed_list = [rename_config(r.get('link') or r.get('Config'), {'cc': r.get('location', 'UN'), 'ping': r.get('delay')}) for r in valid_rows]
+            ping_passed_text = "\n".join(filter(None, ping_passed_list))
+            
+            # ذخیره نسخه معمولی پینگ
             with open(os.path.join(base_dir, "ping_passed.txt"), "w", encoding="utf-8") as f: 
-                f.write("\n".join(filter(None, ping_passed)))
+                f.write(ping_passed_text)
+            
+            # اصلاحیه: ذخیره نسخه Base64 پینگ (مشکل قبلی اینجا بود)
+            with open(os.path.join(base_dir, "ping_passed_base64.txt"), "w", encoding="utf-8") as f:
+                f.write(to_base64(ping_passed_text))
+            
+            logger.info(f"Ping test complete. {len(valid_rows)} configs passed.")
             
             # انتخاب ۳۰۰ تای برتر برای تست سرعت
             top_candidates = [r.get('link') or r.get('Config') for r in valid_rows[:300]]
 
-    # --- Phase 2: Speed Test (Sequential/Low Threads) ---
+    # --- Phase 2: Speed Test (Sequential) ---
     if top_candidates:
         tmp_txt = "top_candidates_tmp.txt"
         with open(tmp_txt, "w") as f: f.write("\n".join(filter(None, top_candidates)))
         
-        logger.info("--- Phase 2: Speed Test (5MB - Low Concurrent) ---")
+        logger.info("--- Phase 2: Speed Test (5MB - Sequential) ---")
         s_csv = os.path.join(raw_dir, "speed_raw.csv")
         speed_url = "https://speed.cloudflare.com/__down?bytes=5000000" # 5MB
         
-        # استفاده از t=1 برای تست غیر همزمان (تک‌تک) جهت جلوگیری از ارور too_many_pings
-        # پارامتر a=10000 زمان انتظار برای هر تست را افزایش می‌دهد
+        # t=1 برای تست تک‌تک جهت دقت بالا و جلوگیری از بلاک شدن
         subprocess.run(["./xray-knife", "http", "-f", tmp_txt, "-t", "1", "-o", s_csv, "-x", "csv", "-p", "-u", speed_url, "-a", "10000"], stdout=subprocess.DEVNULL)
 
         speed_results = []
@@ -118,11 +132,15 @@ def test_process():
                 final_list.append(rename_config(res['link'], {'cc': res['cc'], 'ping': res['delay'], 'speed': f_speed}, rank=i))
 
             s_text = "\n".join(filter(None, final_list))
+            # ذخیره نسخه معمولی سرعت
             with open(os.path.join(base_dir, "speed_passed.txt"), "w", encoding="utf-8") as f: f.write(s_text)
+            # ذخیره نسخه Base64 سرعت
             with open(os.path.join(base_dir, "speed_passed_base64.txt"), "w", encoding="utf-8") as f: f.write(to_base64(s_text))
+            
+            logger.info(f"Speed test complete. {len(speed_results)} configs ranked.")
 
     if os.path.exists(tmp_txt): os.remove(tmp_txt)
-    logger.info("Process complete. Ranked by Speed (Sequential Test).")
+    logger.info("All tests finished successfully.")
 
 if __name__ == "__main__":
     test_process()
