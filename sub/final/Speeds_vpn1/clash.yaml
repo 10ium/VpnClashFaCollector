@@ -1,0 +1,1228 @@
+global-client-fingerprint: chrome
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7894
+allow-lan: true
+tcp-concurrent: true
+enable-process: true
+find-process-mode: strict
+ipv6: true
+log-level: debug
+geo-auto-update: true
+geo-update-interval: 168
+secret: ""
+bind-address: "*"
+unified-delay: false
+disable-keep-alive: false
+keep-alive-idle: 30
+keep-alive-interval: 30
+profile:
+  store-selected: true
+  store-fake-ip: true
+dns:
+  enable: true
+  ipv6: true
+  respect-rules: false
+  prefer-h3: true
+  cache-algorithm: arc
+  use-system-hosts: true
+  use-host: true
+  listen: 0.0.0.0:53
+  enhanced-mode: fake-ip
+  fake-ip-filter-mode: blacklist
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - "*.localdomain"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "*.home.arpa"
+    - time.*.com
+    - ntp.*.com
+    - "*.ir"
+  default-nameserver:
+    - 8.8.8.8
+    - 8.8.4.4
+    - 1.0.0.1
+    - 1.1.1.1
+    - 9.9.9.9
+    - 9.9.9.11
+    - 9.9.9.10
+    - 94.140.14.15
+    - 94.140.15.15
+    - 223.5.5.5
+    - 77.88.8.8
+  nameserver:
+    - https://sky.rethinkdns.com/1:-J8AGH8C7_2-___f3_vZ3f_z-f9KagBI
+    - tls://1-7cpqagd7alx73px777p5766z3x77h6p7jjvaasa.max.rethinkdns.com
+  direct-nameserver:
+    - 78.157.42.100
+    - 78.157.42.101
+  proxy-server-nameserver:
+    - 2606:4700:4700::1111
+    - 2606:4700:4700::1001
+    - 2001:4860:4860::8888
+    - 2001:4860:4860::8844
+    - 1.1.1.1
+    - 8.8.8.8
+    - 8.8.4.4
+    - 9.9.9.9
+    - 223.5.5.5
+    - 77.88.8.8
+    - 2400:3200::1
+    - 2a02:6b8::feed:0ff
+    - 2620:fe::fe
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: false
+  sniff:
+    HTTP:
+      ports: [80, 8080, 8880, 2052, 2082, 2086, 2095]
+    TLS:
+      ports: [443, 8443, 2053, 2083, 2087, 2096]
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  auto-detect-interface: true
+  auto-redir: true
+  dns-hijack:
+    - any:53
+    - tcp://any:53
+rule-providers:
+  category_public_tracker:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-public-tracker.yaml
+    interval: 86400
+    path: ./ruleset/category_public_tracker.yaml
+  iran_ads:
+    type: http
+    behavior: domain
+    url: https://github.com/bootmortis/iran-hosted-domains/releases/latest/download/clash_rules_ads.yaml
+    interval: 86400
+    path: ./ruleset/iran_ads.yaml
+  PersianBlocker:
+    type: http
+    behavior: domain
+    url: https://github.com/MasterKia/iran-hosted-domains/releases/latest/download/clash_rules_ads.yaml
+    path: ./ruleset/PersianBlocker.yaml
+    interval: 86400
+  youtube:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/youtube.yaml
+    interval: 86400
+    path: ./ruleset/youtube.yaml
+  telegram:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/telegram.yaml
+    interval: 86400
+    path: ./ruleset/telegram.yaml
+  twitch:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/twitch.yaml
+    interval: 86400
+    path: ./ruleset/twitch.yaml
+  censor:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/main/censor.yaml
+    interval: 86400
+    path: ./ruleset/tahrim.yaml
+  local_ips:
+    type: http
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/local-ips.yaml
+    interval: 86400
+    path: ./ruleset/local_ips.yaml
+  private:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/private.yaml
+    interval: 86400
+    path: ./ruleset/private.yaml
+  category_ir:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-ir.yaml
+    interval: 86400
+    path: ./ruleset/category_ir.yaml
+  iran:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/main/iran.yaml
+    interval: 86400
+    path: ./ruleset/iran.yaml
+  steam:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/main/steam.yaml
+    interval: 86400
+    path: ./ruleset/steam.yaml
+  game:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/game.yaml
+    interval: 86400
+    path: ./ruleset/game.yaml
+  category-games:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/category-games.yaml
+    interval: 86400
+    path: ./ruleset/category-games.yaml
+  ir:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ir.yaml
+    path: ./ruleset/ir.yaml
+    interval: 86400
+  apps:
+    type: http
+    format: yaml
+    behavior: classical
+    url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/apps.yaml
+    path: ./ruleset/apps.yaml
+    interval: 86400
+  ircidr:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ircidr.yaml
+    path: ./ruleset/ircidr.yaml
+    interval: 86400
+  irasn:
+    type: http
+    format: yaml
+    behavior: classical
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/irasn.yaml
+    path: ./ruleset/irasn.yaml
+    interval: 86400
+  arvancloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/arvancloud.yaml
+    path: ./ruleset/arvancloud.yaml
+    interval: 86400
+  derakcloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/derakcloud.yaml
+    path: ./ruleset/derakcloud.yaml
+    interval: 86400
+  iranserver:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/iranserver.yaml
+    path: ./ruleset/iranserver.yaml
+    interval: 86400
+  parspack:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/parspack.yaml
+    path: ./ruleset/parspack.yaml
+    interval: 86400
+  malware:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/malware.yaml
+    path: ./ruleset/malware.yaml
+    interval: 86400
+  phishing:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/phishing.yaml
+    path: ./ruleset/phishing.yaml
+    interval: 86400
+  cryptominers:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/cryptominers.yaml
+    path: ./ruleset/cryptominers.yaml
+    interval: 86400
+  ads:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/category-ads-all.yaml
+    path: ./ruleset/ads.yaml
+    interval: 86400
+  DownloadManagers:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/DownloadManagers.yaml
+    interval: 86400
+    path: ./ruleset/DownloadManagers.yaml
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanProgramAD.yaml
+    interval: 86400
+    path: ./ruleset/BanProgramAD.yaml
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanAD.yaml
+    interval: 86400
+    path: ./ruleset/BanAD.yaml
+  PrivateTracker:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/PrivateTracker.yaml
+    interval: 86400
+    path: ./ruleset/PrivateTracker.yaml
+  BanEasyList:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanEasyList.yaml
+    interval: 86400
+    path: ./ruleset/BanEasyList.yaml
+  Download:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Download.yaml
+    interval: 86400
+    path: ./ruleset/Download.yaml
+  GameDownload:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/GameDownload.yaml
+    interval: 86400
+    path: ./ruleset/GameDownload.yaml
+  SteamRegionCheck:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/SteamRegionCheck.yaml
+    interval: 86400
+    path: ./ruleset/SteamRegionCheck.yaml
+  Xbox:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Xbox.yaml
+    interval: 86400
+    path: ./ruleset/Xbox.yaml
+  YouTubeMusic:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/YouTubeMusic.yaml
+    interval: 86400
+    path: ./ruleset/YouTubeMusic.yaml
+  YouTube:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/YouTube.yaml
+    interval: 86400
+    path: ./ruleset/YouTube.yaml
+  Ponzi:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/Ponzi.yaml
+    interval: 86400
+    path: ./ruleset/Ponzi.yaml
+  warninglist:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/warning-list.yaml
+    interval: 86400
+    path: ./ruleset/warninglist.yaml
+  google:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/google.yaml
+    interval: 86400
+    path: ./ruleset/google.yaml
+  google-play:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/google-play.yaml
+    interval: 86400
+    path: ./ruleset/google-play.yaml
+  xiaomi-ads:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/xiaomi-ads.yaml
+    interval: 86400
+    path: ./ruleset/xiaomi-ads.yaml
+  xiaomi_block_list:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/xiaomi_block_list.yaml
+    path: ./ruleset/xiaomi_block_list.yaml
+    interval: 86400
+  xiaomi_white_list:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/xiaomi_white_list.yaml
+    path: ./ruleset/xiaomi_white_list.yaml
+    interval: 86400
+  cloudflare:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/cloudflare.yaml
+    interval: 86400
+    path: ./ruleset/cloudflare.yaml
+  github:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/github.yaml
+    interval: 86400
+    path: ./ruleset/xgithub.yaml
+  whatsapp:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/whatsapp.yaml
+    interval: 86400
+    path: ./ruleset/whatsapp.yaml
+  LiteAds:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/LiteAds.yaml
+    path: ./ruleset/LiteAds.yaml
+    interval: 86400
+  discord:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/discord.yaml
+    path: ./ruleset/discord.yaml
+    interval: 86400
+  instagram:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/instagram.yaml
+    interval: 86400
+    path: ./ruleset/instagram.yaml
+  category-ai:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/category-ai-!cn.yaml
+    interval: 86400
+    path: ./ruleset/category-ai.yaml
+  stremio:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/stremio.yaml
+    path: ./ruleset/stremio.yaml
+    interval: 86400
+  windows:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/windows.yaml
+    path: ./ruleset/windows.yaml
+    interval: 86400
+  Chotwitter:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/twitter.yaml
+    path: ./ruleset/Chotwitter.yaml
+    interval: 86400
+  mihTwitter:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Twitter.yaml
+    path: ./ruleset/mihTwitter.yaml
+    interval: 86400
+  Domtwitter:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/twitter.yaml
+    interval: 86400
+    path: ./ruleset/Domtwitter.yaml
+  spotifyads:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/spotify-ads.yaml
+    interval: 86400
+    path: ./ruleset/spotifyads.yaml
+  DomainSpotify:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/spotify.yaml
+    interval: 86400
+    path: ./ruleset/DomainSpotify.yaml
+  mihspotify:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Spotify.yaml
+    interval: 86400
+    path: ./ruleset/mihSpotify.yaml
+proxies:
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN", server: 213.156.137.142, port: 43660, type: ss, cipher: chacha20-ietf-poly1305, password: cc27a3012d81a44c, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN 2", server: 162.19.214.191, port: 59724, type: ss, cipher: chacha20-ietf-poly1305, password: e7yQKOelKM4UIJCZYLrzQX, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN`", server: 82.38.31.210, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
+  - {name: "@SPEEDS_VPN1-🫆`", server: kumao1.kkieo555.cn, port: 41274, type: trojan, password: e29f157b-4fe0-4aa6-887a-188b410a935a, sni: Telegram%F0%9F%87%A8%F0%9F%87%B3app_bedal, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN 3", server: 104.18.32.47, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN` 2", server: 104.21.40.34, port: 443, type: trojan, password: humanity, sni: www.gossipglove.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.gossipglove.com}}, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN 4", server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.gossipglove.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.gossipglove.com}}, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN 5", server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.gossipglove.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.gossipglove.com}}, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN` 3", server: 188.114.98.0, port: 443, type: trojan, password: humanity, sni: www.creationlong.org, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org}}, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN` 4", server: fa.faraz360.ir, port: 9829, type: vless, tls: true, packet-encoding: xudp, uuid: 0c0870b0-a253-4861-84b6-e6ce6777e97c, host: pro30afzar.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@SPEEDS_VPN1-🫆` 2", server: c.brimliski.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 227532ac-65f5-4b56-a7d6-b475b0e08834, servername: subtitle.migamet.sbs, alpn: [http%2F1.1], network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: subtitle.migamet.sbs}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@SPEEDS_VPN1-🫆", server: 104.20.1.252, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 2a2a8023-3b4b-407d-a00a-7beb5a158148, network: ws, ws-opts: {path: "/?ed", headers: {Host: SHAggy-AGREEMeNTSpUfz4utdI.SpOrTland.COMPANy.}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@SPEEDS_VPN1-***🩸***‌`", server: 217.60.236.240, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 2dafc3ec-b609-4173-bf29-4bd833d43b09, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN` 5", server: 140.245.46.100, port: 25001, type: vless, tls: true, packet-encoding: xudp, uuid: 302b7370-f6c0-408a-a59c-b56f6cb4a5a0, servername: www.mcdaniel.edu, host: www.mcdaniel.edu, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 5MvE55sHm_m1gELvk4PRRsPU1NEPyBI955o4djmDzEc, short-id: 5a226d27}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@SPEEDS_VPN1-🫆` 3", server: 140.245.46.100, port: 25001, type: vless, tls: true, packet-encoding: xudp, uuid: 302b7370-f6c0-408a-a59c-b56f6cb4a5a0, servername: www.mcdaniel.edu, host: www.mcdaniel.edu, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 5MvE55sHm_m1gELvk4PRRsPU1NEPyBI955o4djmDzEc, short-id: 5a226d27}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN` 6", server: 46.38.146.167, port: 9092, type: vless, tls: true, packet-encoding: xudp, uuid: 34dae96c-1a41-434f-94b6-5507c3a6d318, host: filmnet.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN` 7", server: noda.freedomvpn.live, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 35820f5d-c38e-4890-bf81-d37d39816a63, servername: noda.freedomvpn.live, host: noda.freedomvpn.live, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: l4IDhsP2DW5xnNwtI0rqC0oCHZR7YFM-fmA5Vqayrkw, short-id: 4819f6671beb7c52}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN 6", server: 87.236.38.199, port: 1404, type: vless, tls: true, packet-encoding: xudp, uuid: 38b9a14a-d92d-1bce-06f6-726dc8f26abf, host: cdn.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN 7", server: 104.19.173.68, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 3b1d4dc3-8872-4c8b-aa14-2fabf06a13fc, network: ws, ws-opts: {path: /, headers: {Host: dildodod.decoreland.ir.}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@SPEEDS_VPN1-🫆 2", server: 104.19.173.68, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 3b1d4dc3-8872-4c8b-aa14-2fabf06a13fc, network: ws, ws-opts: {path: /, headers: {Host: dildodod.decoreland.ir.}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN` 8", server: 137.74.119.18, port: 8442, type: vless, tls: true, packet-encoding: xudp, uuid: 3c47ed67-d4a7-4f2b-90b7-98f4b197bb0d, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN` 9", server: c3.darkstrange.ir, port: 2087, type: vless, tls: true, packet-encoding: xudp, uuid: 401fee2f-fbaa-495b-94e8-d35e96d3e200, servername: ce.xo-connection.ir, network: ws, ws-opts: {path: /darkstrange, headers: {Host: ce.xo-connection.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN 8", server: 89.149.242.24, port: 1990, type: vless, tls: true, packet-encoding: xudp, uuid: 48490509-9672-4ddb-b44f-bbfd7560d614, servername: pmeli.appleidcenteral.ir, alpn: [h2%2Chttp%2F1.1], host: pmeli.appleidcenteral.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@SPEEDS_VPN1-🫆 3", server: 194.113.226.197, port: 55555, type: vless, tls: true, packet-encoding: xudp, uuid: 49d97f86-4589-4570-8e4b-794b49556e42, host: uptvs.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN` 10", server: 172.67.175.120, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4b81acdf-9f0e-4a75-9f30-2f0207599d66, servername: x2.tele-shop-too.studio, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: x2.tele-shop-too.studio}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN` 11", server: cdnjs.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 53f0bca8-f170-4ef7-8031-c7d441189dbf, servername: 639057258114114299.civic-perma.info, network: ws, ws-opts: {path: "/cahttingws?ed=2560", headers: {Host: 639057258114114299.civic-perma.info}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN 9", server: hesam.xv98.ir, port: 608, type: vless, tls: true, packet-encoding: xudp, uuid: 546590e9-96bf-4bc7-9909-58d352196f05, network: ws, ws-opts: {path: "/ws?ed=2048", headers: {Host: telewebion.com%2Cuser.telewebion.com%2Cplus.telewebion.com%2Capi.telewebion.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN 10", server: 104.20.1.252, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 546e91b5-c33e-4b04-b20c-c0fc8f6d9d7f, network: ws, ws-opts: {path: "/?ed", headers: {Host: bIZARRe-CEntEryZCvddNcfJ.spORtLand.COmPANY.}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@SPEEDS_VPN1-🫆 4", server: 104.20.1.252, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 546e91b5-c33e-4b04-b20c-c0fc8f6d9d7f, network: ws, ws-opts: {path: "/?ed", headers: {Host: bIZARRe-CEntEryZCvddNcfJ.spORtLand.COmPANY.}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN 11", server: 172.67.153.156, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 57ba2ab1-a283-42eb-82ee-dc3561a805b8, servername: ovhwuxian.pai50288.uk, network: ws, ws-opts: {path: /57ba2ab1, headers: {Host: ovhwuxian.pai50288.uk}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN 12", server: sv2n.tsteamzd.top, port: 10002, type: vless, tls: true, packet-encoding: xudp, uuid: 68c6ab89-6926-4637-b352-93e35805485f, host: zarebin.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@SPEEDS_VPN1-🫆` 4", server: aiframe.org, port: 40428, type: vless, tls: true, packet-encoding: xudp, uuid: 7e7ec4f2-7d6c-4165-bfc1-c0c6bf4ddc0f, host: aiframe.org, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN 13", server: 45.82.251.126, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN 14", server: 45.82.251.135, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@SPEEDS_VPN1-🫆` 5", server: yesok42v2.ip4exordir.shop, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN` 12", server: 37.139.42.234, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 8def6a24-8bd8-4e7d-82ec-938412cae499, servername: www.vk.com, host: www.vk.com, path: /, reality-opts: {public-key: a1xQOijfR3NuJRVfCNfNr4YMdcb7eqsKpvhuv-Gs9l8, short-id: 6670}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@SPEEDS_VPN1-🫆` 6", server: 37.139.42.234, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 8def6a24-8bd8-4e7d-82ec-938412cae499, servername: www.vk.com, host: www.vk.com, path: /, reality-opts: {public-key: a1xQOijfR3NuJRVfCNfNr4YMdcb7eqsKpvhuv-Gs9l8, short-id: 6670}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@SPEEDS_VPN1-🫆` 7", server: 91.98.43.14, port: 24663, type: vless, tls: true, packet-encoding: xudp, uuid: 91ffc858-0f92-4214-831d-2c27a207547f, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@SPEEDS_VPN1-***🩸***‌` 2", server: S1.FASTSPEEDS.IR, port: 2087, type: vless, tls: true, packet-encoding: xudp, uuid: 934021bd-b994-4fe6-a06e-20d0ed61e314, servername: host4.mehrsazi.ir, network: ws, ws-opts: {path: /, headers: {Host: host4.mehrsazi.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN 15", server: www.speedtest.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 98d677be-b14b-4c14-a96b-4a39a3be645a, servername: t86y6leiyaph7tsvb170x7vfx0-3dvh3.vrezht08.workers.dev, alpn: [http%2F1.1], network: ws, ws-opts: {path: "/eyJqdW5rIjoiZHJmTGlJSmciLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119?ed=2560", headers: {Host: t86y6leiyaph7tsvb170x7vfx0-3dvh3.vrezht08.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN 16", server: ip.hamrahto.com, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 9e35a3d0-1309-4697-a61c-e898e6312c35, servername: hm2.mutee.com.tr, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: hm2.mutee.com.tr}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN` 13", server: convera.com, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: a2a396c3-f40e-4dee-bdbb-b1201f12dc1c, servername: snippet.danfeng.de5.net, network: ws, ws-opts: {path: /danfeng, headers: {Host: snippet.danfeng.de5.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🟢***-@SPEEDS_VPN1`", server: lv.matevps.ru, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a4bb211e-39fd-41df-8c34-3d2672b5cd8d, servername: www.microsoft.com, host: www.microsoft.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: Kt3gwKBGWIdsyQAr9LAv2AuTH5GmJ1jRtW4o9XQ9uB0, short-id: 0123456789abcdef}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@SPEEDS_VPN1-🫆` 8", server: 193.84.255.94, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a8b8c7b3-9ac3-4af4-84a8-445fa6bd3c8b, network: ws, ws-opts: {path: /, headers: {Host: soft98.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN` 14", server: 150.241.230.85, port: 52554, type: vless, tls: true, packet-encoding: xudp, uuid: ad39e228-35a9-4629-a16a-d66a97654225, servername: yahoo.com, host: yahoo.com, path: /, reality-opts: {public-key: DCnaVqwxfGF3d7LDHqFKYtlyGw2l6LsbxPvphK776Gc, short-id: 6b4bdb32}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@SPEEDS_VPN1-🫆 5", server: 172.66.128.70, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: ba2bb9d8-9baa-45d6-9e0a-38c9cb6a6a9a, network: ws, ws-opts: {path: "/?ed", headers: {Host: WeaK-preSSUrE3Ga6bzof92.sPorTlaNd.coMPANY.}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@SPEEDS_VPN1-***🩸***", server: 172.64.152.23, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c249ca6f-1bde-479b-af96-da0e948a3800, servername: zitel.digikala-aparat-zula.com, alpn: ["null"], network: ws, ws-opts: {path: /admin, headers: {Host: zitel.digikala-aparat-zula.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN 17", server: tawananet.panbehpanel.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: c33275fd-a4fa-470d-90e4-55da39d849a8, network: ws, ws-opts: {path: /, headers: {Host: tawananet.panbehpanel.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@SPEEDS_VPN1-🫆` 9", server: se.locations-service.com, port: 3039, type: vless, tls: true, packet-encoding: xudp, uuid: d73a9db0-24b5-4592-8ff0-4f0b5329b39f, servername: refersion.com, host: refersion.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@SPEEDS_VPN1-***🩸*** 2", server: 46.38.147.4, port: 5122, type: vless, tls: true, packet-encoding: xudp, uuid: dc4651a0-39c9-4e09-81f9-ef95aa993c8e, host: TABRIZ.NET, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN 18", server: 140.248.159.164, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: dd0cfef0-fda9-47ec-8a65-49d7bc004f82, network: ws, ws-opts: {path: /--Telegram---MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN, headers: {Host: mitivpn3.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@SPEEDS_VPN1-***🩸***‌` 3", server: 140.248.159.164, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: dd0cfef0-fda9-47ec-8a65-49d7bc004f82, network: ws, ws-opts: {path: /--Telegram---MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN, headers: {Host: mitivpn3.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN 19", server: 188.114.97.4, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: dd0cfef0-fda9-47ec-8a65-49d7bc004f82, servername: kos.mitivpn--1--0-1-0--1-1-0--1-0-1-0-1--0-1--0---1--0.workers.dev, network: ws, ws-opts: {path: /--Telegram---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN, headers: {Host: kos.mitivpn--1--0-1-0--1-1-0--1-0-1-0-1--0-1--0---1--0.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN 20", server: fsl.narton.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: dd0cfef0-fda9-47ec-8a65-49d7bc004f82, servername: mitivpn-s1.global.ssl.fastly.net, network: ws, ws-opts: {path: /--Telegram---MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN, headers: {Host: mitivpn-s1.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN` 15", server: fsl.narton.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: dd0cfef0-fda9-47ec-8a65-49d7bc004f82, servername: mitivpn-s1.global.ssl.fastly.net, network: ws, ws-opts: {path: /--Telegram---MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN, headers: {Host: mitivpn-s1.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN` 16", server: fsl.narton.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: dd0cfef0-fda9-47ec-8a65-49d7bc004f82, servername: mitivpn3.global.ssl.fastly.net, network: ws, ws-opts: {path: /--Telegram---MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN, headers: {Host: mitivpn3.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN 21", server: fsl.narton.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: dd0cfef0-fda9-47ec-8a65-49d7bc004f82, servername: mitivpn3.global.ssl.fastly.net, network: ws, ws-opts: {path: /--Telegram---MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN, headers: {Host: mitivpn3.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN 22", server: www.fastly.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: dd0cfef0-fda9-47ec-8a65-49d7bc004f82, network: ws, ws-opts: {path: /--Telegram---MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN, headers: {Host: mitivpn3.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN` 17", server: www.fastly.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: dd0cfef0-fda9-47ec-8a65-49d7bc004f82, network: ws, ws-opts: {path: /--Telegram---MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN, headers: {Host: mitivpn3.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@SPEEDS_VPN1-***🩸*** 3", server: www.fastly.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: dd0cfef0-fda9-47ec-8a65-49d7bc004f82, network: ws, ws-opts: {path: /--Telegram---MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN, headers: {Host: mitivpn3.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN 23", server: TUN-NL.Net-Plus.ir, port: 8004, type: vless, tls: true, packet-encoding: xudp, uuid: debf4e52-4f0b-4710-a44f-32463c004ed5, host: TUN-NL.Net-Plus.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@SPEEDS_VPN1-***🩸*** 4", server: 37.202.232.39, port: 1131, type: vless, tls: true, packet-encoding: xudp, uuid: f81b3a44-d704-4173-a4bd-f935322b6a17, host: skyroom.online%2Cgharar.ir%2Cigap.net, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@SPEEDS_VPN1-***🩸***‌` 4", server: 104.21.40.34, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fef4a93d-eb4f-4657-b56b-32a0dc060045, servername: dev.twistsparrow.xyz, network: ws, ws-opts: {path: /, headers: {Host: dev.twistsparrow.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN 24", server: 104.21.40.34, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fef4a93d-eb4f-4657-b56b-32a0dc060045, servername: dev.twistsparrow.xyz, network: ws, ws-opts: {path: /, headers: {Host: dev.twistsparrow.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@SPEEDS_VPN1-🫆 6", server: 104.21.40.34, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fef4a93d-eb4f-4657-b56b-32a0dc060045, servername: dev.twistsparrow.xyz, network: ws, ws-opts: {path: /, headers: {Host: dev.twistsparrow.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@SPEEDS_VPN1-***🩸*** 5", server: 188.114.98.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fef4a93d-eb4f-4657-b56b-32a0dc060045, servername: dev.twistsparrow.xyz, network: ws, ws-opts: {path: /, headers: {Host: dev.twistsparrow.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@SPEEDS_VPN1-***🩸*** 6", server: 188.114.98.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fef4a93d-eb4f-4657-b56b-32a0dc060045, servername: dev.twistsparrow.xyz, network: ws, ws-opts: {path: /, headers: {Host: dev.twistsparrow.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
+proxy-groups:
+  - name: نوع انتخاب پروکسی 🔀
+    type: select
+    proxies:
+      - اتصال پایدار 🔗
+      - خودکار (بهترین پینگ) 🤖
+      - دستی 🤏🏻
+      - پشتیبان (در صورت قطعی) 🧯
+      - توزیع بار (پایدار) 🧲
+      - توزیع بار (موقت) ⏳
+      - توزیع بار (گردشی) 🔁
+      - قطع اینترنت ⛔
+      - بدون فیلترشکن 🛡️
+  - name: دستی 🤏🏻
+    type: select
+    proxies:
+      - "***🐦‍🔥***-@SPEEDS_VPN"
+      - "***🐦‍🔥***-@SPEEDS_VPN 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN`"
+      - "@SPEEDS_VPN1-🫆`"
+      - "***🐦‍🔥***-@SPEEDS_VPN 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN 4"
+      - "***🐦‍🔥***-@SPEEDS_VPN 5"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 4"
+      - "@SPEEDS_VPN1-🫆` 2"
+      - "@SPEEDS_VPN1-🫆"
+      - "@SPEEDS_VPN1-***🩸***‌`"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 5"
+      - "@SPEEDS_VPN1-🫆` 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 6"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 7"
+      - "***🐦‍🔥***-@SPEEDS_VPN 6"
+      - "***🐦‍🔥***-@SPEEDS_VPN 7"
+      - "@SPEEDS_VPN1-🫆 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 8"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 9"
+      - "***🐦‍🔥***-@SPEEDS_VPN 8"
+      - "@SPEEDS_VPN1-🫆 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 10"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 11"
+      - "***🐦‍🔥***-@SPEEDS_VPN 9"
+      - "***🐦‍🔥***-@SPEEDS_VPN 10"
+      - "@SPEEDS_VPN1-🫆 4"
+      - "***🐦‍🔥***-@SPEEDS_VPN 11"
+      - "***🐦‍🔥***-@SPEEDS_VPN 12"
+      - "@SPEEDS_VPN1-🫆` 4"
+      - "***🐦‍🔥***-@SPEEDS_VPN 13"
+      - "***🐦‍🔥***-@SPEEDS_VPN 14"
+      - "@SPEEDS_VPN1-🫆` 5"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 12"
+      - "@SPEEDS_VPN1-🫆` 6"
+      - "@SPEEDS_VPN1-🫆` 7"
+      - "@SPEEDS_VPN1-***🩸***‌` 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN 15"
+      - "***🐦‍🔥***-@SPEEDS_VPN 16"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 13"
+      - "***🟢***-@SPEEDS_VPN1`"
+      - "@SPEEDS_VPN1-🫆` 8"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 14"
+      - "@SPEEDS_VPN1-🫆 5"
+      - "@SPEEDS_VPN1-***🩸***"
+      - "***🐦‍🔥***-@SPEEDS_VPN 17"
+      - "@SPEEDS_VPN1-🫆` 9"
+      - "@SPEEDS_VPN1-***🩸*** 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN 18"
+      - "@SPEEDS_VPN1-***🩸***‌` 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN 19"
+      - "***🐦‍🔥***-@SPEEDS_VPN 20"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 15"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 16"
+      - "***🐦‍🔥***-@SPEEDS_VPN 21"
+      - "***🐦‍🔥***-@SPEEDS_VPN 22"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 17"
+      - "@SPEEDS_VPN1-***🩸*** 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN 23"
+      - "@SPEEDS_VPN1-***🩸*** 4"
+      - "@SPEEDS_VPN1-***🩸***‌` 4"
+      - "***🐦‍🔥***-@SPEEDS_VPN 24"
+      - "@SPEEDS_VPN1-🫆 6"
+      - "@SPEEDS_VPN1-***🩸*** 5"
+      - "@SPEEDS_VPN1-***🩸*** 6"
+  - name: خودکار (بهترین پینگ) 🤖
+    type: url-test
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    tolerance: 50
+    proxies:
+      - "***🐦‍🔥***-@SPEEDS_VPN"
+      - "***🐦‍🔥***-@SPEEDS_VPN 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN`"
+      - "@SPEEDS_VPN1-🫆`"
+      - "***🐦‍🔥***-@SPEEDS_VPN 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN 4"
+      - "***🐦‍🔥***-@SPEEDS_VPN 5"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 4"
+      - "@SPEEDS_VPN1-🫆` 2"
+      - "@SPEEDS_VPN1-🫆"
+      - "@SPEEDS_VPN1-***🩸***‌`"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 5"
+      - "@SPEEDS_VPN1-🫆` 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 6"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 7"
+      - "***🐦‍🔥***-@SPEEDS_VPN 6"
+      - "***🐦‍🔥***-@SPEEDS_VPN 7"
+      - "@SPEEDS_VPN1-🫆 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 8"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 9"
+      - "***🐦‍🔥***-@SPEEDS_VPN 8"
+      - "@SPEEDS_VPN1-🫆 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 10"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 11"
+      - "***🐦‍🔥***-@SPEEDS_VPN 9"
+      - "***🐦‍🔥***-@SPEEDS_VPN 10"
+      - "@SPEEDS_VPN1-🫆 4"
+      - "***🐦‍🔥***-@SPEEDS_VPN 11"
+      - "***🐦‍🔥***-@SPEEDS_VPN 12"
+      - "@SPEEDS_VPN1-🫆` 4"
+      - "***🐦‍🔥***-@SPEEDS_VPN 13"
+      - "***🐦‍🔥***-@SPEEDS_VPN 14"
+      - "@SPEEDS_VPN1-🫆` 5"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 12"
+      - "@SPEEDS_VPN1-🫆` 6"
+      - "@SPEEDS_VPN1-🫆` 7"
+      - "@SPEEDS_VPN1-***🩸***‌` 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN 15"
+      - "***🐦‍🔥***-@SPEEDS_VPN 16"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 13"
+      - "***🟢***-@SPEEDS_VPN1`"
+      - "@SPEEDS_VPN1-🫆` 8"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 14"
+      - "@SPEEDS_VPN1-🫆 5"
+      - "@SPEEDS_VPN1-***🩸***"
+      - "***🐦‍🔥***-@SPEEDS_VPN 17"
+      - "@SPEEDS_VPN1-🫆` 9"
+      - "@SPEEDS_VPN1-***🩸*** 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN 18"
+      - "@SPEEDS_VPN1-***🩸***‌` 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN 19"
+      - "***🐦‍🔥***-@SPEEDS_VPN 20"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 15"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 16"
+      - "***🐦‍🔥***-@SPEEDS_VPN 21"
+      - "***🐦‍🔥***-@SPEEDS_VPN 22"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 17"
+      - "@SPEEDS_VPN1-***🩸*** 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN 23"
+      - "@SPEEDS_VPN1-***🩸*** 4"
+      - "@SPEEDS_VPN1-***🩸***‌` 4"
+      - "***🐦‍🔥***-@SPEEDS_VPN 24"
+      - "@SPEEDS_VPN1-🫆 6"
+      - "@SPEEDS_VPN1-***🩸*** 5"
+      - "@SPEEDS_VPN1-***🩸*** 6"
+  - name: پشتیبان (در صورت قطعی) 🧯
+    type: fallback
+    url: https://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 50
+    proxies:
+      - "***🐦‍🔥***-@SPEEDS_VPN"
+      - "***🐦‍🔥***-@SPEEDS_VPN 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN`"
+      - "@SPEEDS_VPN1-🫆`"
+      - "***🐦‍🔥***-@SPEEDS_VPN 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN 4"
+      - "***🐦‍🔥***-@SPEEDS_VPN 5"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 4"
+      - "@SPEEDS_VPN1-🫆` 2"
+      - "@SPEEDS_VPN1-🫆"
+      - "@SPEEDS_VPN1-***🩸***‌`"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 5"
+      - "@SPEEDS_VPN1-🫆` 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 6"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 7"
+      - "***🐦‍🔥***-@SPEEDS_VPN 6"
+      - "***🐦‍🔥***-@SPEEDS_VPN 7"
+      - "@SPEEDS_VPN1-🫆 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 8"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 9"
+      - "***🐦‍🔥***-@SPEEDS_VPN 8"
+      - "@SPEEDS_VPN1-🫆 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 10"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 11"
+      - "***🐦‍🔥***-@SPEEDS_VPN 9"
+      - "***🐦‍🔥***-@SPEEDS_VPN 10"
+      - "@SPEEDS_VPN1-🫆 4"
+      - "***🐦‍🔥***-@SPEEDS_VPN 11"
+      - "***🐦‍🔥***-@SPEEDS_VPN 12"
+      - "@SPEEDS_VPN1-🫆` 4"
+      - "***🐦‍🔥***-@SPEEDS_VPN 13"
+      - "***🐦‍🔥***-@SPEEDS_VPN 14"
+      - "@SPEEDS_VPN1-🫆` 5"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 12"
+      - "@SPEEDS_VPN1-🫆` 6"
+      - "@SPEEDS_VPN1-🫆` 7"
+      - "@SPEEDS_VPN1-***🩸***‌` 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN 15"
+      - "***🐦‍🔥***-@SPEEDS_VPN 16"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 13"
+      - "***🟢***-@SPEEDS_VPN1`"
+      - "@SPEEDS_VPN1-🫆` 8"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 14"
+      - "@SPEEDS_VPN1-🫆 5"
+      - "@SPEEDS_VPN1-***🩸***"
+      - "***🐦‍🔥***-@SPEEDS_VPN 17"
+      - "@SPEEDS_VPN1-🫆` 9"
+      - "@SPEEDS_VPN1-***🩸*** 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN 18"
+      - "@SPEEDS_VPN1-***🩸***‌` 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN 19"
+      - "***🐦‍🔥***-@SPEEDS_VPN 20"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 15"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 16"
+      - "***🐦‍🔥***-@SPEEDS_VPN 21"
+      - "***🐦‍🔥***-@SPEEDS_VPN 22"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 17"
+      - "@SPEEDS_VPN1-***🩸*** 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN 23"
+      - "@SPEEDS_VPN1-***🩸*** 4"
+      - "@SPEEDS_VPN1-***🩸***‌` 4"
+      - "***🐦‍🔥***-@SPEEDS_VPN 24"
+      - "@SPEEDS_VPN1-🫆 6"
+      - "@SPEEDS_VPN1-***🩸*** 5"
+      - "@SPEEDS_VPN1-***🩸*** 6"
+  - name: اتصال پایدار 🔗
+    type: url-test
+    url: https://cp.cloudflare.com/generate_204
+    interval: 30
+    tolerance: 50
+    proxies:
+      - خودکار (بهترین پینگ) 🤖
+      - پشتیبان (در صورت قطعی) 🧯
+      - دستی 🤏🏻
+  - name: توزیع بار (پایدار) 🧲
+    type: load-balance
+    strategy: consistent-hashing
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    proxies:
+      - "***🐦‍🔥***-@SPEEDS_VPN"
+      - "***🐦‍🔥***-@SPEEDS_VPN 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN`"
+      - "@SPEEDS_VPN1-🫆`"
+      - "***🐦‍🔥***-@SPEEDS_VPN 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN 4"
+      - "***🐦‍🔥***-@SPEEDS_VPN 5"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 4"
+      - "@SPEEDS_VPN1-🫆` 2"
+      - "@SPEEDS_VPN1-🫆"
+      - "@SPEEDS_VPN1-***🩸***‌`"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 5"
+      - "@SPEEDS_VPN1-🫆` 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 6"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 7"
+      - "***🐦‍🔥***-@SPEEDS_VPN 6"
+      - "***🐦‍🔥***-@SPEEDS_VPN 7"
+      - "@SPEEDS_VPN1-🫆 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 8"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 9"
+      - "***🐦‍🔥***-@SPEEDS_VPN 8"
+      - "@SPEEDS_VPN1-🫆 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 10"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 11"
+      - "***🐦‍🔥***-@SPEEDS_VPN 9"
+      - "***🐦‍🔥***-@SPEEDS_VPN 10"
+      - "@SPEEDS_VPN1-🫆 4"
+      - "***🐦‍🔥***-@SPEEDS_VPN 11"
+      - "***🐦‍🔥***-@SPEEDS_VPN 12"
+      - "@SPEEDS_VPN1-🫆` 4"
+      - "***🐦‍🔥***-@SPEEDS_VPN 13"
+      - "***🐦‍🔥***-@SPEEDS_VPN 14"
+      - "@SPEEDS_VPN1-🫆` 5"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 12"
+      - "@SPEEDS_VPN1-🫆` 6"
+      - "@SPEEDS_VPN1-🫆` 7"
+      - "@SPEEDS_VPN1-***🩸***‌` 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN 15"
+      - "***🐦‍🔥***-@SPEEDS_VPN 16"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 13"
+      - "***🟢***-@SPEEDS_VPN1`"
+      - "@SPEEDS_VPN1-🫆` 8"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 14"
+      - "@SPEEDS_VPN1-🫆 5"
+      - "@SPEEDS_VPN1-***🩸***"
+      - "***🐦‍🔥***-@SPEEDS_VPN 17"
+      - "@SPEEDS_VPN1-🫆` 9"
+      - "@SPEEDS_VPN1-***🩸*** 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN 18"
+      - "@SPEEDS_VPN1-***🩸***‌` 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN 19"
+      - "***🐦‍🔥***-@SPEEDS_VPN 20"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 15"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 16"
+      - "***🐦‍🔥***-@SPEEDS_VPN 21"
+      - "***🐦‍🔥***-@SPEEDS_VPN 22"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 17"
+      - "@SPEEDS_VPN1-***🩸*** 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN 23"
+      - "@SPEEDS_VPN1-***🩸*** 4"
+      - "@SPEEDS_VPN1-***🩸***‌` 4"
+      - "***🐦‍🔥***-@SPEEDS_VPN 24"
+      - "@SPEEDS_VPN1-🫆 6"
+      - "@SPEEDS_VPN1-***🩸*** 5"
+      - "@SPEEDS_VPN1-***🩸*** 6"
+  - name: توزیع بار (گردشی) 🔁
+    type: load-balance
+    strategy: consistent-hashing
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    proxies:
+      - "***🐦‍🔥***-@SPEEDS_VPN"
+      - "***🐦‍🔥***-@SPEEDS_VPN 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN`"
+      - "@SPEEDS_VPN1-🫆`"
+      - "***🐦‍🔥***-@SPEEDS_VPN 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN 4"
+      - "***🐦‍🔥***-@SPEEDS_VPN 5"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 4"
+      - "@SPEEDS_VPN1-🫆` 2"
+      - "@SPEEDS_VPN1-🫆"
+      - "@SPEEDS_VPN1-***🩸***‌`"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 5"
+      - "@SPEEDS_VPN1-🫆` 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 6"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 7"
+      - "***🐦‍🔥***-@SPEEDS_VPN 6"
+      - "***🐦‍🔥***-@SPEEDS_VPN 7"
+      - "@SPEEDS_VPN1-🫆 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 8"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 9"
+      - "***🐦‍🔥***-@SPEEDS_VPN 8"
+      - "@SPEEDS_VPN1-🫆 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 10"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 11"
+      - "***🐦‍🔥***-@SPEEDS_VPN 9"
+      - "***🐦‍🔥***-@SPEEDS_VPN 10"
+      - "@SPEEDS_VPN1-🫆 4"
+      - "***🐦‍🔥***-@SPEEDS_VPN 11"
+      - "***🐦‍🔥***-@SPEEDS_VPN 12"
+      - "@SPEEDS_VPN1-🫆` 4"
+      - "***🐦‍🔥***-@SPEEDS_VPN 13"
+      - "***🐦‍🔥***-@SPEEDS_VPN 14"
+      - "@SPEEDS_VPN1-🫆` 5"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 12"
+      - "@SPEEDS_VPN1-🫆` 6"
+      - "@SPEEDS_VPN1-🫆` 7"
+      - "@SPEEDS_VPN1-***🩸***‌` 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN 15"
+      - "***🐦‍🔥***-@SPEEDS_VPN 16"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 13"
+      - "***🟢***-@SPEEDS_VPN1`"
+      - "@SPEEDS_VPN1-🫆` 8"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 14"
+      - "@SPEEDS_VPN1-🫆 5"
+      - "@SPEEDS_VPN1-***🩸***"
+      - "***🐦‍🔥***-@SPEEDS_VPN 17"
+      - "@SPEEDS_VPN1-🫆` 9"
+      - "@SPEEDS_VPN1-***🩸*** 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN 18"
+      - "@SPEEDS_VPN1-***🩸***‌` 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN 19"
+      - "***🐦‍🔥***-@SPEEDS_VPN 20"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 15"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 16"
+      - "***🐦‍🔥***-@SPEEDS_VPN 21"
+      - "***🐦‍🔥***-@SPEEDS_VPN 22"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 17"
+      - "@SPEEDS_VPN1-***🩸*** 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN 23"
+      - "@SPEEDS_VPN1-***🩸*** 4"
+      - "@SPEEDS_VPN1-***🩸***‌` 4"
+      - "***🐦‍🔥***-@SPEEDS_VPN 24"
+      - "@SPEEDS_VPN1-🫆 6"
+      - "@SPEEDS_VPN1-***🩸*** 5"
+      - "@SPEEDS_VPN1-***🩸*** 6"
+  - name: توزیع بار (موقت) ⏳
+    type: load-balance
+    strategy: consistent-hashing
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    proxies:
+      - "***🐦‍🔥***-@SPEEDS_VPN"
+      - "***🐦‍🔥***-@SPEEDS_VPN 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN`"
+      - "@SPEEDS_VPN1-🫆`"
+      - "***🐦‍🔥***-@SPEEDS_VPN 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN 4"
+      - "***🐦‍🔥***-@SPEEDS_VPN 5"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 4"
+      - "@SPEEDS_VPN1-🫆` 2"
+      - "@SPEEDS_VPN1-🫆"
+      - "@SPEEDS_VPN1-***🩸***‌`"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 5"
+      - "@SPEEDS_VPN1-🫆` 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 6"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 7"
+      - "***🐦‍🔥***-@SPEEDS_VPN 6"
+      - "***🐦‍🔥***-@SPEEDS_VPN 7"
+      - "@SPEEDS_VPN1-🫆 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 8"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 9"
+      - "***🐦‍🔥***-@SPEEDS_VPN 8"
+      - "@SPEEDS_VPN1-🫆 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 10"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 11"
+      - "***🐦‍🔥***-@SPEEDS_VPN 9"
+      - "***🐦‍🔥***-@SPEEDS_VPN 10"
+      - "@SPEEDS_VPN1-🫆 4"
+      - "***🐦‍🔥***-@SPEEDS_VPN 11"
+      - "***🐦‍🔥***-@SPEEDS_VPN 12"
+      - "@SPEEDS_VPN1-🫆` 4"
+      - "***🐦‍🔥***-@SPEEDS_VPN 13"
+      - "***🐦‍🔥***-@SPEEDS_VPN 14"
+      - "@SPEEDS_VPN1-🫆` 5"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 12"
+      - "@SPEEDS_VPN1-🫆` 6"
+      - "@SPEEDS_VPN1-🫆` 7"
+      - "@SPEEDS_VPN1-***🩸***‌` 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN 15"
+      - "***🐦‍🔥***-@SPEEDS_VPN 16"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 13"
+      - "***🟢***-@SPEEDS_VPN1`"
+      - "@SPEEDS_VPN1-🫆` 8"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 14"
+      - "@SPEEDS_VPN1-🫆 5"
+      - "@SPEEDS_VPN1-***🩸***"
+      - "***🐦‍🔥***-@SPEEDS_VPN 17"
+      - "@SPEEDS_VPN1-🫆` 9"
+      - "@SPEEDS_VPN1-***🩸*** 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN 18"
+      - "@SPEEDS_VPN1-***🩸***‌` 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN 19"
+      - "***🐦‍🔥***-@SPEEDS_VPN 20"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 15"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 16"
+      - "***🐦‍🔥***-@SPEEDS_VPN 21"
+      - "***🐦‍🔥***-@SPEEDS_VPN 22"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 17"
+      - "@SPEEDS_VPN1-***🩸*** 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN 23"
+      - "@SPEEDS_VPN1-***🩸*** 4"
+      - "@SPEEDS_VPN1-***🩸***‌` 4"
+      - "***🐦‍🔥***-@SPEEDS_VPN 24"
+      - "@SPEEDS_VPN1-🫆 6"
+      - "@SPEEDS_VPN1-***🩸*** 5"
+      - "@SPEEDS_VPN1-***🩸*** 6"
+  - name: دانلود منیجر 📥
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+      - اجازه ندادن 🚫
+  - name: تلگرام 💬
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: یوتیوب ▶️
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: گوگل 🌍
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: واتس آپ 🟢
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: هوش مصنوعی 🤖
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: توییتر 🐦
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: اسپاتیفای 🎵
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: اینستاگرام 📸
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: تبلیغات 🆎
+    type: select
+    proxies:
+      - اجازه ندادن 🚫
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+  - name: تبلیغات اپ ها 🍃
+    type: select
+    proxies:
+      - اجازه ندادن 🚫
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+  - name: رهگیری جهانی 🛑
+    type: select
+    proxies:
+      - اجازه ندادن 🚫
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+  - name: سایتای مخرب ⚠️
+    type: select
+    proxies:
+      - اجازه ندادن 🚫
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+  - name: استیم 🖥️
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: گیم 🎮
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: توییچ 📡
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: سایتای ایرانی 🇮🇷
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: ویندوز 🧊
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: کلودفلر ☁️
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: گیتهاب 🐙
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: دیسکورد 🗣️
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: انی‌دسک 🔴
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+      - اجازه ندادن 🚫
+  - name: استریمیو 🎬
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+      - اجازه ندادن 🚫
+  - name: سایتای سانسوری 🤬
+    type: select
+    proxies:
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+  - name: بدون فیلترشکن 🛡️
+    type: select
+    proxies:
+      - DIRECT
+  - name: قطع اینترنت ⛔
+    type: select
+    proxies:
+      - REJECT
+  - name: اجازه ندادن 🚫
+    type: select
+    proxies:
+      - REJECT
+ntp:
+  enable: true
+  server: time.apple.com
+  port: 123
+  interval: 30
+rules:
+  - RULE-SET,DownloadManagers,دانلود منیجر 📥
+  - RULE-SET,Download,دانلود منیجر 📥
+  - RULE-SET,stremio,استریمیو 🎬
+  - RULE-SET,BanProgramAD,تبلیغات اپ ها 🍃
+  - RULE-SET,BanAD,رهگیری جهانی 🛑
+  - RULE-SET,PrivateTracker,رهگیری جهانی 🛑
+  - RULE-SET,category_public_tracker,رهگیری جهانی 🛑
+  - RULE-SET,malware,سایتای مخرب ⚠️
+  - RULE-SET,phishing,سایتای مخرب ⚠️
+  - RULE-SET,cryptominers,سایتای مخرب ⚠️
+  - RULE-SET,warninglist,سایتای مخرب ⚠️
+  - RULE-SET,Ponzi,سایتای مخرب ⚠️
+  - RULE-SET,LiteAds,تبلیغات 🆎
+  - RULE-SET,iran_ads,تبلیغات 🆎
+  - RULE-SET,PersianBlocker,تبلیغات 🆎
+  - RULE-SET,ads,تبلیغات 🆎
+  - RULE-SET,BanEasyList,تبلیغات 🆎
+  - RULE-SET,twitch,توییچ 📡
+  - PROCESS-NAME,Telegram.exe,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger.web,تلگرام 💬
+  - RULE-SET,telegram,تلگرام 💬
+  - RULE-SET,YouTube,یوتیوب ▶️
+  - RULE-SET,youtube,یوتیوب ▶️
+  - RULE-SET,YouTubeMusic,یوتیوب ▶️
+  - PROCESS-NAME,com.anydesk.anydeskandroid,انی‌دسک 🔴
+  - PROCESS-NAME,AnyDesk.exe,انی‌دسک 🔴
+  - DOMAIN-SUFFIX,anydesk.com,انی‌دسک 🔴
+  - PROCESS-NAME,Twitter.exe,توییتر 🐦
+  - PROCESS-NAME,com.twitter.android,توییتر 🐦
+  - RULE-SET,Chotwitter,توییتر 🐦
+  - RULE-SET,mihTwitter,توییتر 🐦
+  - RULE-SET,Domtwitter,توییتر 🐦
+  - PROCESS-NAME,com.spotify.music,اسپاتیفای 🎵
+  - PROCESS-NAME,Spotify.exe,اسپاتیفای 🎵
+  - RULE-SET,DomainSpotify,اسپاتیفای 🎵
+  - RULE-SET,mihspotify,اسپاتیفای 🎵
+  - PROCESS-NAME,com.instagram.android,اینستاگرام 📸
+  - RULE-SET,instagram,اینستاگرام 📸
+  - DOMAIN-SUFFIX,deepseek.com,هوش مصنوعی 🤖
+  - DOMAIN-SUFFIX,qwen.ai,هوش مصنوعی 🤖
+  - RULE-SET,category-ai,هوش مصنوعی 🤖
+  - RULE-SET,censor,سایتای سانسوری 🤬
+  - RULE-SET,apps,سایتای ایرانی 🇮🇷
+  - RULE-SET,iran,سایتای ایرانی 🇮🇷
+  - RULE-SET,arvancloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,derakcloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,iranserver,سایتای ایرانی 🇮🇷
+  - RULE-SET,parspack,سایتای ایرانی 🇮🇷
+  - RULE-SET,irasn,سایتای ایرانی 🇮🇷
+  - RULE-SET,ircidr,سایتای ایرانی 🇮🇷
+  - RULE-SET,ir,سایتای ایرانی 🇮🇷
+  - RULE-SET,category_ir,سایتای ایرانی 🇮🇷
+  - RULE-SET,whatsapp,واتس آپ 🟢
+  - RULE-SET,steam,استیم 🖥️
+  - RULE-SET,SteamRegionCheck,استیم 🖥️
+  - RULE-SET,game,گیم 🎮
+  - RULE-SET,GameDownload,گیم 🎮
+  - RULE-SET,category-games,گیم 🎮
+  - RULE-SET,Xbox,گیم 🎮
+  - RULE-SET,discord,دیسکورد 🗣️
+  - RULE-SET,xiaomi_white_list,نوع انتخاب پروکسی 🔀
+  - RULE-SET,xiaomi-ads,تبلیغات اپ ها 🍃
+  - RULE-SET,xiaomi_block_list,تبلیغات اپ ها 🍃
+  - RULE-SET,windows,ویندوز 🧊
+  - RULE-SET,cloudflare,کلودفلر ☁️
+  - RULE-SET,github,گیتهاب 🐙
+  - PROCESS-NAME,com.android.vending,نوع انتخاب پروکسی 🔀
+  - PROCESS-NAME,com.google.android.gms,نوع انتخاب پروکسی 🔀
+  - RULE-SET,google-play,نوع انتخاب پروکسی 🔀
+  - RULE-SET,google,گوگل 🌍
+  - IP-CIDR,10.10.34.0/24,نوع انتخاب پروکسی 🔀
+  - RULE-SET,local_ips,بدون فیلترشکن 🛡️
+  - RULE-SET,private,بدون فیلترشکن 🛡️
+  - MATCH,نوع انتخاب پروکسی 🔀

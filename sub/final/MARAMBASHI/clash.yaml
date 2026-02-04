@@ -1,0 +1,990 @@
+global-client-fingerprint: chrome
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7894
+allow-lan: true
+tcp-concurrent: true
+enable-process: true
+find-process-mode: strict
+ipv6: true
+log-level: debug
+geo-auto-update: true
+geo-update-interval: 168
+secret: ""
+bind-address: "*"
+unified-delay: false
+disable-keep-alive: false
+keep-alive-idle: 30
+keep-alive-interval: 30
+profile:
+  store-selected: true
+  store-fake-ip: true
+dns:
+  enable: true
+  ipv6: true
+  respect-rules: false
+  prefer-h3: true
+  cache-algorithm: arc
+  use-system-hosts: true
+  use-host: true
+  listen: 0.0.0.0:53
+  enhanced-mode: fake-ip
+  fake-ip-filter-mode: blacklist
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - "*.localdomain"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "*.home.arpa"
+    - time.*.com
+    - ntp.*.com
+    - "*.ir"
+  default-nameserver:
+    - 8.8.8.8
+    - 8.8.4.4
+    - 1.0.0.1
+    - 1.1.1.1
+    - 9.9.9.9
+    - 9.9.9.11
+    - 9.9.9.10
+    - 94.140.14.15
+    - 94.140.15.15
+    - 223.5.5.5
+    - 77.88.8.8
+  nameserver:
+    - https://sky.rethinkdns.com/1:-J8AGH8C7_2-___f3_vZ3f_z-f9KagBI
+    - tls://1-7cpqagd7alx73px777p5766z3x77h6p7jjvaasa.max.rethinkdns.com
+  direct-nameserver:
+    - 78.157.42.100
+    - 78.157.42.101
+  proxy-server-nameserver:
+    - 2606:4700:4700::1111
+    - 2606:4700:4700::1001
+    - 2001:4860:4860::8888
+    - 2001:4860:4860::8844
+    - 1.1.1.1
+    - 8.8.8.8
+    - 8.8.4.4
+    - 9.9.9.9
+    - 223.5.5.5
+    - 77.88.8.8
+    - 2400:3200::1
+    - 2a02:6b8::feed:0ff
+    - 2620:fe::fe
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: false
+  sniff:
+    HTTP:
+      ports: [80, 8080, 8880, 2052, 2082, 2086, 2095]
+    TLS:
+      ports: [443, 8443, 2053, 2083, 2087, 2096]
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  auto-detect-interface: true
+  auto-redir: true
+  dns-hijack:
+    - any:53
+    - tcp://any:53
+rule-providers:
+  category_public_tracker:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-public-tracker.yaml
+    interval: 86400
+    path: ./ruleset/category_public_tracker.yaml
+  iran_ads:
+    type: http
+    behavior: domain
+    url: https://github.com/bootmortis/iran-hosted-domains/releases/latest/download/clash_rules_ads.yaml
+    interval: 86400
+    path: ./ruleset/iran_ads.yaml
+  PersianBlocker:
+    type: http
+    behavior: domain
+    url: https://github.com/MasterKia/iran-hosted-domains/releases/latest/download/clash_rules_ads.yaml
+    path: ./ruleset/PersianBlocker.yaml
+    interval: 86400
+  youtube:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/youtube.yaml
+    interval: 86400
+    path: ./ruleset/youtube.yaml
+  telegram:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/telegram.yaml
+    interval: 86400
+    path: ./ruleset/telegram.yaml
+  twitch:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/twitch.yaml
+    interval: 86400
+    path: ./ruleset/twitch.yaml
+  censor:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/main/censor.yaml
+    interval: 86400
+    path: ./ruleset/tahrim.yaml
+  local_ips:
+    type: http
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/local-ips.yaml
+    interval: 86400
+    path: ./ruleset/local_ips.yaml
+  private:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/private.yaml
+    interval: 86400
+    path: ./ruleset/private.yaml
+  category_ir:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-ir.yaml
+    interval: 86400
+    path: ./ruleset/category_ir.yaml
+  iran:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/main/iran.yaml
+    interval: 86400
+    path: ./ruleset/iran.yaml
+  steam:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/main/steam.yaml
+    interval: 86400
+    path: ./ruleset/steam.yaml
+  game:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/game.yaml
+    interval: 86400
+    path: ./ruleset/game.yaml
+  category-games:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/category-games.yaml
+    interval: 86400
+    path: ./ruleset/category-games.yaml
+  ir:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ir.yaml
+    path: ./ruleset/ir.yaml
+    interval: 86400
+  apps:
+    type: http
+    format: yaml
+    behavior: classical
+    url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/apps.yaml
+    path: ./ruleset/apps.yaml
+    interval: 86400
+  ircidr:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ircidr.yaml
+    path: ./ruleset/ircidr.yaml
+    interval: 86400
+  irasn:
+    type: http
+    format: yaml
+    behavior: classical
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/irasn.yaml
+    path: ./ruleset/irasn.yaml
+    interval: 86400
+  arvancloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/arvancloud.yaml
+    path: ./ruleset/arvancloud.yaml
+    interval: 86400
+  derakcloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/derakcloud.yaml
+    path: ./ruleset/derakcloud.yaml
+    interval: 86400
+  iranserver:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/iranserver.yaml
+    path: ./ruleset/iranserver.yaml
+    interval: 86400
+  parspack:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/parspack.yaml
+    path: ./ruleset/parspack.yaml
+    interval: 86400
+  malware:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/malware.yaml
+    path: ./ruleset/malware.yaml
+    interval: 86400
+  phishing:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/phishing.yaml
+    path: ./ruleset/phishing.yaml
+    interval: 86400
+  cryptominers:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/cryptominers.yaml
+    path: ./ruleset/cryptominers.yaml
+    interval: 86400
+  ads:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/category-ads-all.yaml
+    path: ./ruleset/ads.yaml
+    interval: 86400
+  DownloadManagers:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/DownloadManagers.yaml
+    interval: 86400
+    path: ./ruleset/DownloadManagers.yaml
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanProgramAD.yaml
+    interval: 86400
+    path: ./ruleset/BanProgramAD.yaml
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanAD.yaml
+    interval: 86400
+    path: ./ruleset/BanAD.yaml
+  PrivateTracker:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/PrivateTracker.yaml
+    interval: 86400
+    path: ./ruleset/PrivateTracker.yaml
+  BanEasyList:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanEasyList.yaml
+    interval: 86400
+    path: ./ruleset/BanEasyList.yaml
+  Download:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Download.yaml
+    interval: 86400
+    path: ./ruleset/Download.yaml
+  GameDownload:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/GameDownload.yaml
+    interval: 86400
+    path: ./ruleset/GameDownload.yaml
+  SteamRegionCheck:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/SteamRegionCheck.yaml
+    interval: 86400
+    path: ./ruleset/SteamRegionCheck.yaml
+  Xbox:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Xbox.yaml
+    interval: 86400
+    path: ./ruleset/Xbox.yaml
+  YouTubeMusic:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/YouTubeMusic.yaml
+    interval: 86400
+    path: ./ruleset/YouTubeMusic.yaml
+  YouTube:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/YouTube.yaml
+    interval: 86400
+    path: ./ruleset/YouTube.yaml
+  Ponzi:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/Ponzi.yaml
+    interval: 86400
+    path: ./ruleset/Ponzi.yaml
+  warninglist:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/warning-list.yaml
+    interval: 86400
+    path: ./ruleset/warninglist.yaml
+  google:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/google.yaml
+    interval: 86400
+    path: ./ruleset/google.yaml
+  google-play:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/google-play.yaml
+    interval: 86400
+    path: ./ruleset/google-play.yaml
+  xiaomi-ads:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/xiaomi-ads.yaml
+    interval: 86400
+    path: ./ruleset/xiaomi-ads.yaml
+  xiaomi_block_list:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/xiaomi_block_list.yaml
+    path: ./ruleset/xiaomi_block_list.yaml
+    interval: 86400
+  xiaomi_white_list:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/xiaomi_white_list.yaml
+    path: ./ruleset/xiaomi_white_list.yaml
+    interval: 86400
+  cloudflare:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/cloudflare.yaml
+    interval: 86400
+    path: ./ruleset/cloudflare.yaml
+  github:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/github.yaml
+    interval: 86400
+    path: ./ruleset/xgithub.yaml
+  whatsapp:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/whatsapp.yaml
+    interval: 86400
+    path: ./ruleset/whatsapp.yaml
+  LiteAds:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/LiteAds.yaml
+    path: ./ruleset/LiteAds.yaml
+    interval: 86400
+  discord:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/discord.yaml
+    path: ./ruleset/discord.yaml
+    interval: 86400
+  instagram:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/instagram.yaml
+    interval: 86400
+    path: ./ruleset/instagram.yaml
+  category-ai:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/category-ai-!cn.yaml
+    interval: 86400
+    path: ./ruleset/category-ai.yaml
+  stremio:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/stremio.yaml
+    path: ./ruleset/stremio.yaml
+    interval: 86400
+  windows:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/windows.yaml
+    path: ./ruleset/windows.yaml
+    interval: 86400
+  Chotwitter:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/twitter.yaml
+    path: ./ruleset/Chotwitter.yaml
+    interval: 86400
+  mihTwitter:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Twitter.yaml
+    path: ./ruleset/mihTwitter.yaml
+    interval: 86400
+  Domtwitter:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/twitter.yaml
+    interval: 86400
+    path: ./ruleset/Domtwitter.yaml
+  spotifyads:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/spotify-ads.yaml
+    interval: 86400
+    path: ./ruleset/spotifyads.yaml
+  DomainSpotify:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/spotify.yaml
+    interval: 86400
+    path: ./ruleset/DomainSpotify.yaml
+  mihspotify:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Spotify.yaml
+    interval: 86400
+    path: ./ruleset/mihSpotify.yaml
+proxies:
+  - {name: "@MARAMBASHI 🇧🇷", server: 148.113.143.102, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: 8d90009fa5023cfa, udp: true, tfo: false}
+  - {name: "@MARAMBASHI 🇧🇷 2", server: 82.38.31.101, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
+  - {name: "@MARAMBASHI 🐳", server: 45.89.53.115, port: 8443, type: ss, cipher: aes-256-gcm, password: 8563411f-f04c-4a38-8753-11c34e599365, udp: true, tfo: false}
+  - {name: "@MARAMBASHI 🐳 2", server: 89.44.113.169, port: 35591, type: ss, cipher: aes-256-gcm, password: 8IWOh9OEFLJu2KyJs2htA4beYLITyU7xAhR7PxgQVIc=, udp: true, tfo: false}
+  - {name: "@MARAMBASHI 🐳 3", server: 94.183.162.68, port: 9828, type: vless, tls: true, packet-encoding: xudp, uuid: 02263e1e-10d9-4340-a6f1-fe8a4dbe5dff, host: pro30afzar.com%2F%3FBIA_TELEGRAM%40MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MARAMBASHI 💟", server: 104.18.35.85, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 060a8fe8-7175-4ded-94a5-d9808bc645b6, servername: cf.vless.sandesh.fr, network: ws, ws-opts: {path: "/?TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=512", headers: {Host: cf.vless.sandesh.fr}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MARAMBASHI 🇫🇷", server: vip-80.f-sub.cfd, port: 1517, type: vless, tls: true, packet-encoding: xudp, uuid: 292f3ea4-c29c-4906-acf3-e2384e2006ae, host: speedtest.net%2F%3FBIA_TELEGRAM%40MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MARAMBASHI 🐳 4", server: 85.133.200.32, port: 4444, type: vless, tls: true, packet-encoding: xudp, uuid: 335789dd-7b29-4983-9896-d83c7648f261, host: "%2F%3FBIA_TELEGRAM%40MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI", path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MARAMBASHI 💛", server: 46.38.146.167, port: 9092, type: vless, tls: true, packet-encoding: xudp, uuid: 34dae96c-1a41-434f-94b6-5507c3a6d318, host: filmnet.ir%2F%3FBIA_TELEGRAM%40MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MARAMBASHI 🇫🇷 2", server: 194.113.226.197, port: 55555, type: vless, tls: true, packet-encoding: xudp, uuid: 49d97f86-4589-4570-8e4b-794b49556e42, host: uptvs.com%2F%3FBIA_TELEGRAM%40MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MARAMBASHI 🇧🇷 3", server: 78.159.122.223, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 666250e3-362e-440a-b9e3-2b7794c02af8, servername: de-two.asbndx.com, host: de-two.asbndx.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: NLARt-womsWqopLrSLNpfp3bHXy3Pg08_LbFUQPhpjU, short-id: 0f4dacf82203e11f}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MARAMBASHI 🇫🇷 3", server: 172.64.144.74, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 68c89f56-3a15-46f2-9901-8c00a2546b97, servername: rukawa.pages.dev, network: ws, ws-opts: {path: "/?TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=512", headers: {Host: rukawa.pages.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MARAMBASHI 🇫🇷 4", server: ip.hamrahto.com, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 79b03434-d2c6-4ab5-9474-acf450eb7ab9, servername: hm3.mutee.com.tr, network: ws, ws-opts: {path: "/?TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=512", headers: {Host: hm3.mutee.com.tr}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MARAMBASHI 💟 2", server: 85.158.110.62, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 86be7d6e-9dda-433b-8ea8-0c44a7dfcfbd, servername: google.com, host: google.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MARAMBASHI 💟 3", server: 104.17.148.22, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 89b3cbba-e6ac-485a-9481-976a0415eab9, servername: UUHuhyYgESDfgh.UyHjhgvgFCjgujhBuILbVFDXdxM.xYZ, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/?TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=512", headers: {Host: UUHuhyYgESDfgh.UyHjhgvgFCjgujhBuILbVFDXdxM.xYZ}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MARAMBASHI 💟 4", server: 104.26.5.57, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 89b3cbba-e6ac-485a-9481-976a0415eab9, servername: UUHuhyYgESDfgh.UyHjhgvgFCjgujhBuILbVFDXdxM.xYZ, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/?TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=2048", headers: {Host: UUHuhyYgESDfgh.UyHjhgvgFCjgujhBuILbVFDXdxM.xYZ}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MARAMBASHI 💛 2", server: db.moviesdb.ir, port: 9828, type: vless, tls: true, packet-encoding: xudp, uuid: a29a5cb2-572a-43a1-b0a5-8bd68932d864, host: pro30afzar.com%2F%3FBIA_TELEGRAM%40MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MARAMBASHI 🇫🇷`", server: convera.com, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: a2a396c3-f40e-4dee-bdbb-b1201f12dc1c, servername: snippet.danfeng.de5.net, network: ws, ws-opts: {path: "/danfeng#TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=512", headers: {Host: snippet.danfeng.de5.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MARAMBASHI 🇧🇷 4", server: 188.114.96.3, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a44e0875-210f-4941-9062-89b6361a14c6, servername: teams.live.com.afrcloud1.c01.kr, network: ws, ws-opts: {path: "/?TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=512", headers: {Host: teams.live.com.afrcloud1.c01.kr}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MARAMBASHI 💛 3", server: 94.183.164.33, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: b278c7b5-73fa-476a-b546-993be5d0073f, host: myket.ir%2F%3FBIA_TELEGRAM%40MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MARAMBASHI 🇧🇷 5", server: zzula.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c249ca6f-1bde-479b-af96-da0e948a3800, servername: zitel.digikala-aparat-zula.com, network: ws, ws-opts: {path: "/admin#/?TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=2560", headers: {Host: zitel.digikala-aparat-zula.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MARAMBASHI 💛 4", server: 217.60.243.68, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c81dcfec-dd6e-4c2d-acd6-a29ec0bec484, host: "%2F%3FBIA_TELEGRAM%40MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI", path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MARAMBASHI 💛 5", server: 172.64.152.23, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: cbc26294-7dd0-4fb9-a648-ad283236196c, servername: hswis.xtondi.ir, network: ws, ws-opts: {path: /, headers: {Host: hswis.xtondi.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MARAMBASHI 💟 5", server: www.speedtest.net, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: d483e7ab-5223-44bd-b68d-b4f185b1801e, network: ws, ws-opts: {path: "/?TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=512", headers: {Host: PaMCHALL.cOM.}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MARAMBASHI 💟 6", server: 104.18.0.191, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d5c1abb8-2024-4fc0-9810-09dc10a5b948, servername: am.digikala-aparat-zula.com, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/admin#TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=2560", headers: {Host: am.digikala-aparat-zula.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MARAMBASHI 🇫🇷 5", server: 108.162.198.154, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d89d6641-3b1a-4f51-a194-9c9109fd21b6, servername: DiprOX.pages.DEV, network: ws, ws-opts: {path: "/?TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=2560", headers: {Host: DiprOX.pages.DEV}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MARAMBASHI 🐳`", server: www.fastly.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: dd0cfef0-fda9-47ec-8a65-49d7bc004f82, network: ws, ws-opts: {path: "/?TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=2048", headers: {Host: mitivpn3.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MARAMBASHI 🇫🇷 6", server: download.musicdownlodirani7.com, port: 53196, type: vless, tls: true, packet-encoding: xudp, uuid: dff1ebfc-469f-5ccf-ac01-4e0031bf7d12, host: "%2F%3FBIA_TELEGRAM%40MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI", path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MARAMBASHI 🇧🇷 6", server: 104.18.4.130, port: 2087, type: vless, tls: true, packet-encoding: xudp, uuid: e4c18050-3e61-42e3-9345-77d4179541c4, servername: fak.i-farm.ir, alpn: [h3%2Ch2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: fak.i-farm.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MARAMBASHI 💟`", server: 104.18.32.47, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: e9052516-1e37-4665-a0b4-a5c65dd0ab70, network: ws, ws-opts: {path: "/?ed#TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=2048", headers: {Host: TastY-LeaRNInG94aZG31SfF.ECOTouRiss.CO.UK.}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MARAMBASHI 💛`", server: 45.130.125.160, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ea33fc71-2ce3-48e1-93fb-e36142c1e1ee, servername: afrcloud4.c01.kr, network: ws, ws-opts: {path: "/129.150.58.86:57621/?TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=512", headers: {Host: afrcloud4.c01.kr}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MARAMBASHI 🇧🇷`", server: 188.114.97.2, port: 2087, type: vless, tls: true, packet-encoding: xudp, uuid: eda7584e-196f-4190-8be9-844940e7540a, servername: makfornt.get-service.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: makfornt.get-service.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MARAMBASHI 🇧🇷 7", server: gold6.goldspeed.org, port: 40973, type: vmess, uuid: a7918501-9245-42f5-9393-f6e84bda9497, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+proxy-groups:
+  - name: نوع انتخاب پروکسی 🔀
+    type: select
+    proxies:
+      - اتصال پایدار 🔗
+      - خودکار (بهترین پینگ) 🤖
+      - دستی 🤏🏻
+      - پشتیبان (در صورت قطعی) 🧯
+      - توزیع بار (پایدار) 🧲
+      - توزیع بار (موقت) ⏳
+      - توزیع بار (گردشی) 🔁
+      - قطع اینترنت ⛔
+      - بدون فیلترشکن 🛡️
+  - name: دستی 🤏🏻
+    type: select
+    proxies:
+      - "@MARAMBASHI 🇧🇷"
+      - "@MARAMBASHI 🇧🇷 2"
+      - "@MARAMBASHI 🐳"
+      - "@MARAMBASHI 🐳 2"
+      - "@MARAMBASHI 🐳 3"
+      - "@MARAMBASHI 💟"
+      - "@MARAMBASHI 🇫🇷"
+      - "@MARAMBASHI 🐳 4"
+      - "@MARAMBASHI 💛"
+      - "@MARAMBASHI 🇫🇷 2"
+      - "@MARAMBASHI 🇧🇷 3"
+      - "@MARAMBASHI 🇫🇷 3"
+      - "@MARAMBASHI 🇫🇷 4"
+      - "@MARAMBASHI 💟 2"
+      - "@MARAMBASHI 💟 3"
+      - "@MARAMBASHI 💟 4"
+      - "@MARAMBASHI 💛 2"
+      - "@MARAMBASHI 🇫🇷`"
+      - "@MARAMBASHI 🇧🇷 4"
+      - "@MARAMBASHI 💛 3"
+      - "@MARAMBASHI 🇧🇷 5"
+      - "@MARAMBASHI 💛 4"
+      - "@MARAMBASHI 💛 5"
+      - "@MARAMBASHI 💟 5"
+      - "@MARAMBASHI 💟 6"
+      - "@MARAMBASHI 🇫🇷 5"
+      - "@MARAMBASHI 🐳`"
+      - "@MARAMBASHI 🇫🇷 6"
+      - "@MARAMBASHI 🇧🇷 6"
+      - "@MARAMBASHI 💟`"
+      - "@MARAMBASHI 💛`"
+      - "@MARAMBASHI 🇧🇷`"
+      - "@MARAMBASHI 🇧🇷 7"
+  - name: خودکار (بهترین پینگ) 🤖
+    type: url-test
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    tolerance: 50
+    proxies:
+      - "@MARAMBASHI 🇧🇷"
+      - "@MARAMBASHI 🇧🇷 2"
+      - "@MARAMBASHI 🐳"
+      - "@MARAMBASHI 🐳 2"
+      - "@MARAMBASHI 🐳 3"
+      - "@MARAMBASHI 💟"
+      - "@MARAMBASHI 🇫🇷"
+      - "@MARAMBASHI 🐳 4"
+      - "@MARAMBASHI 💛"
+      - "@MARAMBASHI 🇫🇷 2"
+      - "@MARAMBASHI 🇧🇷 3"
+      - "@MARAMBASHI 🇫🇷 3"
+      - "@MARAMBASHI 🇫🇷 4"
+      - "@MARAMBASHI 💟 2"
+      - "@MARAMBASHI 💟 3"
+      - "@MARAMBASHI 💟 4"
+      - "@MARAMBASHI 💛 2"
+      - "@MARAMBASHI 🇫🇷`"
+      - "@MARAMBASHI 🇧🇷 4"
+      - "@MARAMBASHI 💛 3"
+      - "@MARAMBASHI 🇧🇷 5"
+      - "@MARAMBASHI 💛 4"
+      - "@MARAMBASHI 💛 5"
+      - "@MARAMBASHI 💟 5"
+      - "@MARAMBASHI 💟 6"
+      - "@MARAMBASHI 🇫🇷 5"
+      - "@MARAMBASHI 🐳`"
+      - "@MARAMBASHI 🇫🇷 6"
+      - "@MARAMBASHI 🇧🇷 6"
+      - "@MARAMBASHI 💟`"
+      - "@MARAMBASHI 💛`"
+      - "@MARAMBASHI 🇧🇷`"
+      - "@MARAMBASHI 🇧🇷 7"
+  - name: پشتیبان (در صورت قطعی) 🧯
+    type: fallback
+    url: https://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 50
+    proxies:
+      - "@MARAMBASHI 🇧🇷"
+      - "@MARAMBASHI 🇧🇷 2"
+      - "@MARAMBASHI 🐳"
+      - "@MARAMBASHI 🐳 2"
+      - "@MARAMBASHI 🐳 3"
+      - "@MARAMBASHI 💟"
+      - "@MARAMBASHI 🇫🇷"
+      - "@MARAMBASHI 🐳 4"
+      - "@MARAMBASHI 💛"
+      - "@MARAMBASHI 🇫🇷 2"
+      - "@MARAMBASHI 🇧🇷 3"
+      - "@MARAMBASHI 🇫🇷 3"
+      - "@MARAMBASHI 🇫🇷 4"
+      - "@MARAMBASHI 💟 2"
+      - "@MARAMBASHI 💟 3"
+      - "@MARAMBASHI 💟 4"
+      - "@MARAMBASHI 💛 2"
+      - "@MARAMBASHI 🇫🇷`"
+      - "@MARAMBASHI 🇧🇷 4"
+      - "@MARAMBASHI 💛 3"
+      - "@MARAMBASHI 🇧🇷 5"
+      - "@MARAMBASHI 💛 4"
+      - "@MARAMBASHI 💛 5"
+      - "@MARAMBASHI 💟 5"
+      - "@MARAMBASHI 💟 6"
+      - "@MARAMBASHI 🇫🇷 5"
+      - "@MARAMBASHI 🐳`"
+      - "@MARAMBASHI 🇫🇷 6"
+      - "@MARAMBASHI 🇧🇷 6"
+      - "@MARAMBASHI 💟`"
+      - "@MARAMBASHI 💛`"
+      - "@MARAMBASHI 🇧🇷`"
+      - "@MARAMBASHI 🇧🇷 7"
+  - name: اتصال پایدار 🔗
+    type: url-test
+    url: https://cp.cloudflare.com/generate_204
+    interval: 30
+    tolerance: 50
+    proxies:
+      - خودکار (بهترین پینگ) 🤖
+      - پشتیبان (در صورت قطعی) 🧯
+      - دستی 🤏🏻
+  - name: توزیع بار (پایدار) 🧲
+    type: load-balance
+    strategy: consistent-hashing
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    proxies:
+      - "@MARAMBASHI 🇧🇷"
+      - "@MARAMBASHI 🇧🇷 2"
+      - "@MARAMBASHI 🐳"
+      - "@MARAMBASHI 🐳 2"
+      - "@MARAMBASHI 🐳 3"
+      - "@MARAMBASHI 💟"
+      - "@MARAMBASHI 🇫🇷"
+      - "@MARAMBASHI 🐳 4"
+      - "@MARAMBASHI 💛"
+      - "@MARAMBASHI 🇫🇷 2"
+      - "@MARAMBASHI 🇧🇷 3"
+      - "@MARAMBASHI 🇫🇷 3"
+      - "@MARAMBASHI 🇫🇷 4"
+      - "@MARAMBASHI 💟 2"
+      - "@MARAMBASHI 💟 3"
+      - "@MARAMBASHI 💟 4"
+      - "@MARAMBASHI 💛 2"
+      - "@MARAMBASHI 🇫🇷`"
+      - "@MARAMBASHI 🇧🇷 4"
+      - "@MARAMBASHI 💛 3"
+      - "@MARAMBASHI 🇧🇷 5"
+      - "@MARAMBASHI 💛 4"
+      - "@MARAMBASHI 💛 5"
+      - "@MARAMBASHI 💟 5"
+      - "@MARAMBASHI 💟 6"
+      - "@MARAMBASHI 🇫🇷 5"
+      - "@MARAMBASHI 🐳`"
+      - "@MARAMBASHI 🇫🇷 6"
+      - "@MARAMBASHI 🇧🇷 6"
+      - "@MARAMBASHI 💟`"
+      - "@MARAMBASHI 💛`"
+      - "@MARAMBASHI 🇧🇷`"
+      - "@MARAMBASHI 🇧🇷 7"
+  - name: توزیع بار (گردشی) 🔁
+    type: load-balance
+    strategy: consistent-hashing
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    proxies:
+      - "@MARAMBASHI 🇧🇷"
+      - "@MARAMBASHI 🇧🇷 2"
+      - "@MARAMBASHI 🐳"
+      - "@MARAMBASHI 🐳 2"
+      - "@MARAMBASHI 🐳 3"
+      - "@MARAMBASHI 💟"
+      - "@MARAMBASHI 🇫🇷"
+      - "@MARAMBASHI 🐳 4"
+      - "@MARAMBASHI 💛"
+      - "@MARAMBASHI 🇫🇷 2"
+      - "@MARAMBASHI 🇧🇷 3"
+      - "@MARAMBASHI 🇫🇷 3"
+      - "@MARAMBASHI 🇫🇷 4"
+      - "@MARAMBASHI 💟 2"
+      - "@MARAMBASHI 💟 3"
+      - "@MARAMBASHI 💟 4"
+      - "@MARAMBASHI 💛 2"
+      - "@MARAMBASHI 🇫🇷`"
+      - "@MARAMBASHI 🇧🇷 4"
+      - "@MARAMBASHI 💛 3"
+      - "@MARAMBASHI 🇧🇷 5"
+      - "@MARAMBASHI 💛 4"
+      - "@MARAMBASHI 💛 5"
+      - "@MARAMBASHI 💟 5"
+      - "@MARAMBASHI 💟 6"
+      - "@MARAMBASHI 🇫🇷 5"
+      - "@MARAMBASHI 🐳`"
+      - "@MARAMBASHI 🇫🇷 6"
+      - "@MARAMBASHI 🇧🇷 6"
+      - "@MARAMBASHI 💟`"
+      - "@MARAMBASHI 💛`"
+      - "@MARAMBASHI 🇧🇷`"
+      - "@MARAMBASHI 🇧🇷 7"
+  - name: توزیع بار (موقت) ⏳
+    type: load-balance
+    strategy: consistent-hashing
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    proxies:
+      - "@MARAMBASHI 🇧🇷"
+      - "@MARAMBASHI 🇧🇷 2"
+      - "@MARAMBASHI 🐳"
+      - "@MARAMBASHI 🐳 2"
+      - "@MARAMBASHI 🐳 3"
+      - "@MARAMBASHI 💟"
+      - "@MARAMBASHI 🇫🇷"
+      - "@MARAMBASHI 🐳 4"
+      - "@MARAMBASHI 💛"
+      - "@MARAMBASHI 🇫🇷 2"
+      - "@MARAMBASHI 🇧🇷 3"
+      - "@MARAMBASHI 🇫🇷 3"
+      - "@MARAMBASHI 🇫🇷 4"
+      - "@MARAMBASHI 💟 2"
+      - "@MARAMBASHI 💟 3"
+      - "@MARAMBASHI 💟 4"
+      - "@MARAMBASHI 💛 2"
+      - "@MARAMBASHI 🇫🇷`"
+      - "@MARAMBASHI 🇧🇷 4"
+      - "@MARAMBASHI 💛 3"
+      - "@MARAMBASHI 🇧🇷 5"
+      - "@MARAMBASHI 💛 4"
+      - "@MARAMBASHI 💛 5"
+      - "@MARAMBASHI 💟 5"
+      - "@MARAMBASHI 💟 6"
+      - "@MARAMBASHI 🇫🇷 5"
+      - "@MARAMBASHI 🐳`"
+      - "@MARAMBASHI 🇫🇷 6"
+      - "@MARAMBASHI 🇧🇷 6"
+      - "@MARAMBASHI 💟`"
+      - "@MARAMBASHI 💛`"
+      - "@MARAMBASHI 🇧🇷`"
+      - "@MARAMBASHI 🇧🇷 7"
+  - name: دانلود منیجر 📥
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+      - اجازه ندادن 🚫
+  - name: تلگرام 💬
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: یوتیوب ▶️
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: گوگل 🌍
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: واتس آپ 🟢
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: هوش مصنوعی 🤖
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: توییتر 🐦
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: اسپاتیفای 🎵
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: اینستاگرام 📸
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: تبلیغات 🆎
+    type: select
+    proxies:
+      - اجازه ندادن 🚫
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+  - name: تبلیغات اپ ها 🍃
+    type: select
+    proxies:
+      - اجازه ندادن 🚫
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+  - name: رهگیری جهانی 🛑
+    type: select
+    proxies:
+      - اجازه ندادن 🚫
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+  - name: سایتای مخرب ⚠️
+    type: select
+    proxies:
+      - اجازه ندادن 🚫
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+  - name: استیم 🖥️
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: گیم 🎮
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: توییچ 📡
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: سایتای ایرانی 🇮🇷
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: ویندوز 🧊
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: کلودفلر ☁️
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: گیتهاب 🐙
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: دیسکورد 🗣️
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: انی‌دسک 🔴
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+      - اجازه ندادن 🚫
+  - name: استریمیو 🎬
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+      - اجازه ندادن 🚫
+  - name: سایتای سانسوری 🤬
+    type: select
+    proxies:
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+  - name: بدون فیلترشکن 🛡️
+    type: select
+    proxies:
+      - DIRECT
+  - name: قطع اینترنت ⛔
+    type: select
+    proxies:
+      - REJECT
+  - name: اجازه ندادن 🚫
+    type: select
+    proxies:
+      - REJECT
+ntp:
+  enable: true
+  server: time.apple.com
+  port: 123
+  interval: 30
+rules:
+  - RULE-SET,DownloadManagers,دانلود منیجر 📥
+  - RULE-SET,Download,دانلود منیجر 📥
+  - RULE-SET,stremio,استریمیو 🎬
+  - RULE-SET,BanProgramAD,تبلیغات اپ ها 🍃
+  - RULE-SET,BanAD,رهگیری جهانی 🛑
+  - RULE-SET,PrivateTracker,رهگیری جهانی 🛑
+  - RULE-SET,category_public_tracker,رهگیری جهانی 🛑
+  - RULE-SET,malware,سایتای مخرب ⚠️
+  - RULE-SET,phishing,سایتای مخرب ⚠️
+  - RULE-SET,cryptominers,سایتای مخرب ⚠️
+  - RULE-SET,warninglist,سایتای مخرب ⚠️
+  - RULE-SET,Ponzi,سایتای مخرب ⚠️
+  - RULE-SET,LiteAds,تبلیغات 🆎
+  - RULE-SET,iran_ads,تبلیغات 🆎
+  - RULE-SET,PersianBlocker,تبلیغات 🆎
+  - RULE-SET,ads,تبلیغات 🆎
+  - RULE-SET,BanEasyList,تبلیغات 🆎
+  - RULE-SET,twitch,توییچ 📡
+  - PROCESS-NAME,Telegram.exe,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger.web,تلگرام 💬
+  - RULE-SET,telegram,تلگرام 💬
+  - RULE-SET,YouTube,یوتیوب ▶️
+  - RULE-SET,youtube,یوتیوب ▶️
+  - RULE-SET,YouTubeMusic,یوتیوب ▶️
+  - PROCESS-NAME,com.anydesk.anydeskandroid,انی‌دسک 🔴
+  - PROCESS-NAME,AnyDesk.exe,انی‌دسک 🔴
+  - DOMAIN-SUFFIX,anydesk.com,انی‌دسک 🔴
+  - PROCESS-NAME,Twitter.exe,توییتر 🐦
+  - PROCESS-NAME,com.twitter.android,توییتر 🐦
+  - RULE-SET,Chotwitter,توییتر 🐦
+  - RULE-SET,mihTwitter,توییتر 🐦
+  - RULE-SET,Domtwitter,توییتر 🐦
+  - PROCESS-NAME,com.spotify.music,اسپاتیفای 🎵
+  - PROCESS-NAME,Spotify.exe,اسپاتیفای 🎵
+  - RULE-SET,DomainSpotify,اسپاتیفای 🎵
+  - RULE-SET,mihspotify,اسپاتیفای 🎵
+  - PROCESS-NAME,com.instagram.android,اینستاگرام 📸
+  - RULE-SET,instagram,اینستاگرام 📸
+  - DOMAIN-SUFFIX,deepseek.com,هوش مصنوعی 🤖
+  - DOMAIN-SUFFIX,qwen.ai,هوش مصنوعی 🤖
+  - RULE-SET,category-ai,هوش مصنوعی 🤖
+  - RULE-SET,censor,سایتای سانسوری 🤬
+  - RULE-SET,apps,سایتای ایرانی 🇮🇷
+  - RULE-SET,iran,سایتای ایرانی 🇮🇷
+  - RULE-SET,arvancloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,derakcloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,iranserver,سایتای ایرانی 🇮🇷
+  - RULE-SET,parspack,سایتای ایرانی 🇮🇷
+  - RULE-SET,irasn,سایتای ایرانی 🇮🇷
+  - RULE-SET,ircidr,سایتای ایرانی 🇮🇷
+  - RULE-SET,ir,سایتای ایرانی 🇮🇷
+  - RULE-SET,category_ir,سایتای ایرانی 🇮🇷
+  - RULE-SET,whatsapp,واتس آپ 🟢
+  - RULE-SET,steam,استیم 🖥️
+  - RULE-SET,SteamRegionCheck,استیم 🖥️
+  - RULE-SET,game,گیم 🎮
+  - RULE-SET,GameDownload,گیم 🎮
+  - RULE-SET,category-games,گیم 🎮
+  - RULE-SET,Xbox,گیم 🎮
+  - RULE-SET,discord,دیسکورد 🗣️
+  - RULE-SET,xiaomi_white_list,نوع انتخاب پروکسی 🔀
+  - RULE-SET,xiaomi-ads,تبلیغات اپ ها 🍃
+  - RULE-SET,xiaomi_block_list,تبلیغات اپ ها 🍃
+  - RULE-SET,windows,ویندوز 🧊
+  - RULE-SET,cloudflare,کلودفلر ☁️
+  - RULE-SET,github,گیتهاب 🐙
+  - PROCESS-NAME,com.android.vending,نوع انتخاب پروکسی 🔀
+  - PROCESS-NAME,com.google.android.gms,نوع انتخاب پروکسی 🔀
+  - RULE-SET,google-play,نوع انتخاب پروکسی 🔀
+  - RULE-SET,google,گوگل 🌍
+  - IP-CIDR,10.10.34.0/24,نوع انتخاب پروکسی 🔀
+  - RULE-SET,local_ips,بدون فیلترشکن 🛡️
+  - RULE-SET,private,بدون فیلترشکن 🛡️
+  - MATCH,نوع انتخاب پروکسی 🔀

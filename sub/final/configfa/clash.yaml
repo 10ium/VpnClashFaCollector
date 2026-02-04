@@ -1,0 +1,2832 @@
+global-client-fingerprint: chrome
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7894
+allow-lan: true
+tcp-concurrent: true
+enable-process: true
+find-process-mode: strict
+ipv6: true
+log-level: debug
+geo-auto-update: true
+geo-update-interval: 168
+secret: ""
+bind-address: "*"
+unified-delay: false
+disable-keep-alive: false
+keep-alive-idle: 30
+keep-alive-interval: 30
+profile:
+  store-selected: true
+  store-fake-ip: true
+dns:
+  enable: true
+  ipv6: true
+  respect-rules: false
+  prefer-h3: true
+  cache-algorithm: arc
+  use-system-hosts: true
+  use-host: true
+  listen: 0.0.0.0:53
+  enhanced-mode: fake-ip
+  fake-ip-filter-mode: blacklist
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - "*.localdomain"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "*.home.arpa"
+    - time.*.com
+    - ntp.*.com
+    - "*.ir"
+  default-nameserver:
+    - 8.8.8.8
+    - 8.8.4.4
+    - 1.0.0.1
+    - 1.1.1.1
+    - 9.9.9.9
+    - 9.9.9.11
+    - 9.9.9.10
+    - 94.140.14.15
+    - 94.140.15.15
+    - 223.5.5.5
+    - 77.88.8.8
+  nameserver:
+    - https://sky.rethinkdns.com/1:-J8AGH8C7_2-___f3_vZ3f_z-f9KagBI
+    - tls://1-7cpqagd7alx73px777p5766z3x77h6p7jjvaasa.max.rethinkdns.com
+  direct-nameserver:
+    - 78.157.42.100
+    - 78.157.42.101
+  proxy-server-nameserver:
+    - 2606:4700:4700::1111
+    - 2606:4700:4700::1001
+    - 2001:4860:4860::8888
+    - 2001:4860:4860::8844
+    - 1.1.1.1
+    - 8.8.8.8
+    - 8.8.4.4
+    - 9.9.9.9
+    - 223.5.5.5
+    - 77.88.8.8
+    - 2400:3200::1
+    - 2a02:6b8::feed:0ff
+    - 2620:fe::fe
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: false
+  sniff:
+    HTTP:
+      ports: [80, 8080, 8880, 2052, 2082, 2086, 2095]
+    TLS:
+      ports: [443, 8443, 2053, 2083, 2087, 2096]
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  auto-detect-interface: true
+  auto-redir: true
+  dns-hijack:
+    - any:53
+    - tcp://any:53
+rule-providers:
+  category_public_tracker:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-public-tracker.yaml
+    interval: 86400
+    path: ./ruleset/category_public_tracker.yaml
+  iran_ads:
+    type: http
+    behavior: domain
+    url: https://github.com/bootmortis/iran-hosted-domains/releases/latest/download/clash_rules_ads.yaml
+    interval: 86400
+    path: ./ruleset/iran_ads.yaml
+  PersianBlocker:
+    type: http
+    behavior: domain
+    url: https://github.com/MasterKia/iran-hosted-domains/releases/latest/download/clash_rules_ads.yaml
+    path: ./ruleset/PersianBlocker.yaml
+    interval: 86400
+  youtube:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/youtube.yaml
+    interval: 86400
+    path: ./ruleset/youtube.yaml
+  telegram:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/telegram.yaml
+    interval: 86400
+    path: ./ruleset/telegram.yaml
+  twitch:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/twitch.yaml
+    interval: 86400
+    path: ./ruleset/twitch.yaml
+  censor:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/main/censor.yaml
+    interval: 86400
+    path: ./ruleset/tahrim.yaml
+  local_ips:
+    type: http
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/local-ips.yaml
+    interval: 86400
+    path: ./ruleset/local_ips.yaml
+  private:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/private.yaml
+    interval: 86400
+    path: ./ruleset/private.yaml
+  category_ir:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-ir.yaml
+    interval: 86400
+    path: ./ruleset/category_ir.yaml
+  iran:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/main/iran.yaml
+    interval: 86400
+    path: ./ruleset/iran.yaml
+  steam:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/main/steam.yaml
+    interval: 86400
+    path: ./ruleset/steam.yaml
+  game:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/game.yaml
+    interval: 86400
+    path: ./ruleset/game.yaml
+  category-games:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/category-games.yaml
+    interval: 86400
+    path: ./ruleset/category-games.yaml
+  ir:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ir.yaml
+    path: ./ruleset/ir.yaml
+    interval: 86400
+  apps:
+    type: http
+    format: yaml
+    behavior: classical
+    url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/apps.yaml
+    path: ./ruleset/apps.yaml
+    interval: 86400
+  ircidr:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ircidr.yaml
+    path: ./ruleset/ircidr.yaml
+    interval: 86400
+  irasn:
+    type: http
+    format: yaml
+    behavior: classical
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/irasn.yaml
+    path: ./ruleset/irasn.yaml
+    interval: 86400
+  arvancloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/arvancloud.yaml
+    path: ./ruleset/arvancloud.yaml
+    interval: 86400
+  derakcloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/derakcloud.yaml
+    path: ./ruleset/derakcloud.yaml
+    interval: 86400
+  iranserver:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/iranserver.yaml
+    path: ./ruleset/iranserver.yaml
+    interval: 86400
+  parspack:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/parspack.yaml
+    path: ./ruleset/parspack.yaml
+    interval: 86400
+  malware:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/malware.yaml
+    path: ./ruleset/malware.yaml
+    interval: 86400
+  phishing:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/phishing.yaml
+    path: ./ruleset/phishing.yaml
+    interval: 86400
+  cryptominers:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/cryptominers.yaml
+    path: ./ruleset/cryptominers.yaml
+    interval: 86400
+  ads:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/category-ads-all.yaml
+    path: ./ruleset/ads.yaml
+    interval: 86400
+  DownloadManagers:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/DownloadManagers.yaml
+    interval: 86400
+    path: ./ruleset/DownloadManagers.yaml
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanProgramAD.yaml
+    interval: 86400
+    path: ./ruleset/BanProgramAD.yaml
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanAD.yaml
+    interval: 86400
+    path: ./ruleset/BanAD.yaml
+  PrivateTracker:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/PrivateTracker.yaml
+    interval: 86400
+    path: ./ruleset/PrivateTracker.yaml
+  BanEasyList:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanEasyList.yaml
+    interval: 86400
+    path: ./ruleset/BanEasyList.yaml
+  Download:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Download.yaml
+    interval: 86400
+    path: ./ruleset/Download.yaml
+  GameDownload:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/GameDownload.yaml
+    interval: 86400
+    path: ./ruleset/GameDownload.yaml
+  SteamRegionCheck:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/SteamRegionCheck.yaml
+    interval: 86400
+    path: ./ruleset/SteamRegionCheck.yaml
+  Xbox:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Xbox.yaml
+    interval: 86400
+    path: ./ruleset/Xbox.yaml
+  YouTubeMusic:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/YouTubeMusic.yaml
+    interval: 86400
+    path: ./ruleset/YouTubeMusic.yaml
+  YouTube:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/YouTube.yaml
+    interval: 86400
+    path: ./ruleset/YouTube.yaml
+  Ponzi:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/Ponzi.yaml
+    interval: 86400
+    path: ./ruleset/Ponzi.yaml
+  warninglist:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/warning-list.yaml
+    interval: 86400
+    path: ./ruleset/warninglist.yaml
+  google:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/google.yaml
+    interval: 86400
+    path: ./ruleset/google.yaml
+  google-play:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/google-play.yaml
+    interval: 86400
+    path: ./ruleset/google-play.yaml
+  xiaomi-ads:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/xiaomi-ads.yaml
+    interval: 86400
+    path: ./ruleset/xiaomi-ads.yaml
+  xiaomi_block_list:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/xiaomi_block_list.yaml
+    path: ./ruleset/xiaomi_block_list.yaml
+    interval: 86400
+  xiaomi_white_list:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/xiaomi_white_list.yaml
+    path: ./ruleset/xiaomi_white_list.yaml
+    interval: 86400
+  cloudflare:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/cloudflare.yaml
+    interval: 86400
+    path: ./ruleset/cloudflare.yaml
+  github:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/github.yaml
+    interval: 86400
+    path: ./ruleset/xgithub.yaml
+  whatsapp:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/whatsapp.yaml
+    interval: 86400
+    path: ./ruleset/whatsapp.yaml
+  LiteAds:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/LiteAds.yaml
+    path: ./ruleset/LiteAds.yaml
+    interval: 86400
+  discord:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/discord.yaml
+    path: ./ruleset/discord.yaml
+    interval: 86400
+  instagram:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/instagram.yaml
+    interval: 86400
+    path: ./ruleset/instagram.yaml
+  category-ai:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/category-ai-!cn.yaml
+    interval: 86400
+    path: ./ruleset/category-ai.yaml
+  stremio:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/stremio.yaml
+    path: ./ruleset/stremio.yaml
+    interval: 86400
+  windows:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/windows.yaml
+    path: ./ruleset/windows.yaml
+    interval: 86400
+  Chotwitter:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/twitter.yaml
+    path: ./ruleset/Chotwitter.yaml
+    interval: 86400
+  mihTwitter:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Twitter.yaml
+    path: ./ruleset/mihTwitter.yaml
+    interval: 86400
+  Domtwitter:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/twitter.yaml
+    interval: 86400
+    path: ./ruleset/Domtwitter.yaml
+  spotifyads:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/spotify-ads.yaml
+    interval: 86400
+    path: ./ruleset/spotifyads.yaml
+  DomainSpotify:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/spotify.yaml
+    interval: 86400
+    path: ./ruleset/DomainSpotify.yaml
+  mihspotify:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Spotify.yaml
+    interval: 86400
+    path: ./ruleset/mihSpotify.yaml
+proxies:
+  - {name: 🇭🇰 香港家宽 194 -77, server: 85677df4-t9w4g0-tbo02e-4mce.hkt.east.wctype.com, port: 8300, type: anytls, password: 06c625ea-5902-11ee-9e87-f23c9313b177, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇭🇰 香港家宽 288 -4, server: 5cdec792-t9wqo0-tdtx5w-au6.hkt.east.wctype.com, port: 8300, type: anytls, password: 1b609740-eec2-11ef-8543-f23c93136cb3, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇭🇰 香港家宽 270 -173, server: 9d372f01-t9ylc0-tdtx5w-au6.hkt.east.wctype.com, port: 8300, type: anytls, password: 1b609740-eec2-11ef-8543-f23c93136cb3, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇭🇰 香港家宽 308 -117, server: db6164db-t9w4g0-tcj7b6-d70y.hkt.east.wctype.com, port: 8300, type: anytls, password: 537d7098-fdbe-11ef-8ebc-f23c93141fad, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇺🇸 美国 022 -5, server: cd1589cd-t9wqo0-tcm6ys-deip.losjan20.west.wctype.com, port: 8300, type: anytls, password: 7a2512b4-09ee-11f0-8d46-f23c9313b177, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇯🇵 日本 69 -58, server: 160.16.75.254, port: 443, type: anytls, password: a2d12dc9-c111-45ac-b803-87e48f3484d8, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇦🇺 悉尼1-anytls协议, server: au.shiyuandian.shop, port: 4430, type: anytls, password: ae845cbd-08fb-4346-929a-e28a6f3960a8, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇦🇺 悉尼2-anytls协议, server: au2.shiyuandian.shop, port: 4430, type: anytls, password: ae845cbd-08fb-4346-929a-e28a6f3960a8, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇭🇰 香港1-anytls协议, server: hk1.shiyuandian.shop, port: 2058, type: anytls, password: ae845cbd-08fb-4346-929a-e28a6f3960a8, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇮🇳 印度2-anytls协议, server: in2.shiyuandian.shop, port: 4430, type: anytls, password: ae845cbd-08fb-4346-929a-e28a6f3960a8, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇰🇷 韩国1-anytls协议, server: kr1.shiyuandian.shop, port: 4430, type: anytls, password: ae845cbd-08fb-4346-929a-e28a6f3960a8, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇸🇬 新加坡3-anytls协议, server: sg3.shiyuandian.shop, port: 4430, type: anytls, password: ae845cbd-08fb-4346-929a-e28a6f3960a8, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇬🇧 英国3-anytls协议, server: uk3.shiyuandian.shop, port: 4430, type: anytls, password: ae845cbd-08fb-4346-929a-e28a6f3960a8, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇺🇸 美国1-anytls协议, server: us1.shiyuandian.shop, port: 4430, type: anytls, password: ae845cbd-08fb-4346-929a-e28a6f3960a8, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇻🇳 越南1-anytls协议, server: vn1.shiyuandian.shop, port: 2058, type: anytls, password: ae845cbd-08fb-4346-929a-e28a6f3960a8, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇭🇰 香港顶级-anytls协议, server: zy.shiyuandian.shop, port: 4430, type: anytls, password: ae845cbd-08fb-4346-929a-e28a6f3960a8, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇭🇰 香港家宽 299 -119, server: 1b30bbb8-t9wqo0-tb5ob4-64gc.hkt.east.wctype.com, port: 8300, type: anytls, password: d720a490-d56b-11ef-a1cb-f23c9313b177, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇭🇰 香港家宽 272 -158, server: 4e87e994-t9ylc0-tb5ob4-64gc.hkt.east.wctype.com, port: 8300, type: anytls, password: d720a490-d56b-11ef-a1cb-f23c9313b177, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇺🇸 美国 023 -57, server: 5c30c8a8-t9wqo0-tb5ob4-64gc.los.west.wctype.com, port: 8300, type: anytls, password: d720a490-d56b-11ef-a1cb-f23c9313b177, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇺🇸 美国 064 -126, server: e91bce0b-t9ylc0-tee5aa-1glq.losjan20.west.wctype.com, port: 8300, type: anytls, password: df7bed3c-06eb-11f0-8ebc-f23c93141fad, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇺🇸 美国03, server: 152.53.54.139, port: 36001, type: anytls, password: eee0bc24-189b-4f12-8686-2a0a45ae67c5, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 距离下次重置剩余：26 天, server: 152.53.54.139, port: 36001, type: anytls, password: eee0bc24-189b-4f12-8686-2a0a45ae67c5, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: free_netc `, server: 206.71.158.37, port: 35000, type: hysteria2, ports: 35000, password: Yet-Another-Public-Config-1, obfs: salamander, obfs-password: Yet-Another-Public-Config-1, sni: YAPC-1.afshin.ir, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "C3 : @Xvpnplus_bot | WIFI ✅", server: 38.54.29.130, port: 11204, type: ss, cipher: chacha20-ietf-poly1305, password: 4df2be7c6eef0ed6, udp: true, tfo: false}
+  - {name: "Channel id: @proxy_kafee 🇫🇷", server: 57.130.28.148, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: 74918bc801d53a4b, udp: true, tfo: false}
+  - {name: Telegram @Ettehad_vpn اتحاد وی‌پی‌ان, server: 57.130.28.148, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: 74918bc801d53a4b, udp: true, tfo: false}
+  - {name: "@configraygan+mtn", server: 51.75.89.203, port: 13021, type: ss, cipher: chacha20-ietf-poly1305, password: 7a57a403f1acaea1, udp: true, tfo: false}
+  - {name: "Channel id: @proxy_kafee 🇩🇪", server: 135.125.245.131, port: 20939, type: ss, cipher: chacha20-ietf-poly1305, password: 85d3d8ccba287d3e, udp: true, tfo: false}
+  - {name: 148.113.143.102:11201, server: 148.113.143.102, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: 8d90009fa5023cfa, udp: true, tfo: false}
+  - {name: 🇨🇦 >>@FreakConfig::CA, server: 148.113.143.102, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: 8d90009fa5023cfa, udp: true, tfo: false}
+  - {name: "Channel id: @proxy_kafee 🇩🇪 2", server: 141.95.101.202, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: 8e3c75581ade471d, udp: true, tfo: false}
+  - {name: 141.95.106.127:11201, server: 141.95.106.127, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: 94aae0510188e8c5, udp: true, tfo: false}
+  - {name: "@Vpn_Tehran 🦋 تلگرام", server: 141.95.106.127, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: 94aae0510188e8c5, udp: true, tfo: false}
+  - {name: ⚡Telegram, server: 57.129.94.79, port: 11208, type: ss, cipher: chacha20-ietf-poly1305, password: 0047036c45596605, udp: true, tfo: false}
+  - {name: BESTIIVPNBOT, server: 57.129.94.79, port: 11208, type: ss, cipher: chacha20-ietf-poly1305, password: 0047036c45596605, udp: true, tfo: false}
+  - {name: 🇭🇺, server: 5.181.77.247, port: 44748, type: ss, cipher: chacha20-ietf-poly1305, password: 1bdc0331490bc432, udp: true, tfo: false}
+  - {name: " ", server: 5.181.77.247, port: 44748, type: ss, cipher: chacha20-ietf-poly1305, password: 1bdc0331490bc432, udp: true, tfo: false}
+  - {name: 4Sarina-200, server: 154.205.134.155, port: 24852, type: ss, cipher: chacha20-ietf-poly1305, password: 2916150efedd2d17, udp: true, tfo: false}
+  - {name: 4Sarina-201, server: 154.205.134.155, port: 24853, type: ss, cipher: chacha20-ietf-poly1305, password: 2916150efedd2d17, udp: true, tfo: false}
+  - {name: برای اتصال دائمی جوین شو🦚 TelegramID ⌲Express_freevpn 🪩, server: 135.125.247.29, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: 333c4cae01f8bacf, udp: true, tfo: false}
+  - {name: "Channel id: @proxy_kafee 🇩🇪 3", server: 135.125.247.29, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: 333c4cae01f8bacf, udp: true, tfo: false}
+  - {name: YsZ 2 @Outline_Vpn, server: 135.125.247.29, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: 333c4cae01f8bacf, udp: true, tfo: false}
+  - {name: "Channel id: @proxy_kafee 🇩🇪 4", server: 141.95.105.28, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: 37ef4f029f1ac0ac, udp: true, tfo: false}
+  - {name: 62.133.63.169:37096, server: 62.133.63.169, port: 37096, type: ss, cipher: chacha20-ietf-poly1305, password: Ul0rGyAAed5HRDpvFqr2C0, udp: true, tfo: false}
+  - {name: "@Vpn_Tehran 💌 وصلیم", server: 62.133.63.169, port: 37096, type: ss, cipher: chacha20-ietf-poly1305, password: Ul0rGyAAed5HRDpvFqr2C0, udp: true, tfo: false}
+  - {name: "Channel id: @proxy_kafee 🇩🇪 5", server: 57.129.69.122, port: 27130, type: ss, cipher: chacha20-ietf-poly1305, password: a3027c931ae07bce, udp: true, tfo: false}
+  - {name: Telegram @Ettehad_vpn اتحاد وی‌پی‌ان 2, server: 51.68.146.248, port: 10011, type: ss, cipher: chacha20-ietf-poly1305, password: a792ff4b517fdf1c, udp: true, tfo: false}
+  - {name: 🇬🇧 >>@outline_vpn::GB, server: 57.129.129.139, port: 29183, type: ss, cipher: chacha20-ietf-poly1305, password: ab0b81a5bff7ddea, udp: true, tfo: false}
+  - {name: "@configraygan", server: 57.129.129.139, port: 29183, type: ss, cipher: chacha20-ietf-poly1305, password: ab0b81a5bff7ddea, udp: true, tfo: false}
+  - {name: IR @Outline_Vpn, server: 57.129.129.139, port: 29183, type: ss, cipher: chacha20-ietf-poly1305, password: ab0b81a5bff7ddea, udp: true, tfo: false}
+  - {name: QT, server: 57.129.129.139, port: 29183, type: ss, cipher: chacha20-ietf-poly1305, password: ab0b81a5bff7ddea, udp: true, tfo: false}
+  - {name: ⚡Telegram 2, server: 57.128.190.114, port: 10634, type: ss, cipher: chacha20-ietf-poly1305, password: c365a0ad668ee3ba, udp: true, tfo: false}
+  - {name: "@Vpn_Tehran 🔥 تلگرام", server: 213.156.137.142, port: 43660, type: ss, cipher: chacha20-ietf-poly1305, password: cc27a3012d81a44c, udp: true, tfo: false}
+  - {name: 🇫🇷 >>@outline_vpn::FR, server: 57.128.30.201, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: d974573beb3f30d4, udp: true, tfo: false}
+  - {name: "Channel id: @proxy_kafee 🇫🇷 2", server: 57.128.30.201, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: d974573beb3f30d4, udp: true, tfo: false}
+  - {name: 🇬🇧 >>@prrofile_purple::GB, server: 57.128.190.194, port: 10013, type: ss, cipher: chacha20-ietf-poly1305, password: e5c3f903e81d5d4e, udp: true, tfo: false}
+  - {name: "Channel id: @proxy_kafee 🇬🇧", server: 57.128.190.194, port: 10013, type: ss, cipher: chacha20-ietf-poly1305, password: e5c3f903e81d5d4e, udp: true, tfo: false}
+  - {name: 163.171.137.76:47395, server: 163.171.137.76, port: 47395, type: ss, cipher: chacha20-ietf-poly1305, password: eafad96826c79ddd, udp: true, tfo: false}
+  - {name: "Channel id: @proxy_kafee 🇩🇪 6", server: 141.95.107.129, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: ebf915eda54bdfac, udp: true, tfo: false}
+  - {name: 141.95.105.163:11201, server: 141.95.105.163, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: edd359f594dea842, udp: true, tfo: false}
+  - {name: MCi-, server: 141.95.105.163, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: edd359f594dea842, udp: true, tfo: false}
+  - {name: 82.38.31.176:8080, server: 82.38.31.176, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
+  - {name: "@free_netc", server: 82.38.31.176, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
+  - {name: 02@shadowsockskeys, server: 82.38.31.176, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
+  - {name: 🇬🇧 GB-82.38.31.176-0423, server: 82.38.31.176, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
+  - {name: IR 4 @Outline_Vpn, server: 82.38.31.176, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
+  - {name: 82.38.31.184:8080, server: 82.38.31.184, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
+  - {name: "  2", server: 82.38.31.184, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
+  - {name: FATHER_VPN, server: 82.38.31.184, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
+  - {name: 82.38.31.199:8080, server: 82.38.31.199, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
+  - {name: "@free_netc 2", server: 82.38.31.199, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
+  - {name: NetAccount, server: 82.38.31.199, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
+  - {name: VayNora, server: 82.38.31.199, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
+  - {name: "@free_netc`", server: 82.38.31.210, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
+  - {name: "Channel id: @proxy_kafee 🇳🇱", server: 82.38.31.210, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
+  - {name: NetAccount 2, server: 82.38.31.210, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
+  - {name: 57.129.140.88:8388, server: 57.129.140.88, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: k1v5g9FefdoO, udp: true, tfo: false}
+  - {name: ⚡Telegram 3, server: 57.129.140.88, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: k1v5g9FefdoO, udp: true, tfo: false}
+  - {name: "@FreakConfig", server: 57.129.140.88, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: k1v5g9FefdoO, udp: true, tfo: false}
+  - {name: 3.112.130.53:8313, server: 3.112.130.53, port: 8313, type: ss, cipher: chacha20-ietf-poly1305, password: ljqdalu13.., udp: true, tfo: false}
+  - {name: ⚡Telegram 4, server: 3.112.130.53, port: 8313, type: ss, cipher: chacha20-ietf-poly1305, password: ljqdalu13.., udp: true, tfo: false}
+  - {name: 3.112.130.53:8319, server: 3.112.130.53, port: 8319, type: ss, cipher: chacha20-ietf-poly1305, password: ljqdalu13.., udp: true, tfo: false}
+  - {name: ⚡Telegram 5, server: 3.112.130.53, port: 8319, type: ss, cipher: chacha20-ietf-poly1305, password: ljqdalu13.., udp: true, tfo: false}
+  - {name: 03@shadowsockskeys, server: 3.112.130.53, port: 8319, type: ss, cipher: chacha20-ietf-poly1305, password: ljqdalu13.., udp: true, tfo: false}
+  - {name: 𝒄𝒉𝒂𝒏𝒏𝒆𝒍, server: dc3bg1.vpncamp.vip, port: 4432, type: ss, cipher: chacha20-ietf-poly1305, password: oUKtSQ1yDoWY2SIC1AVSeO, udp: true, tfo: false}
+  - {name: 82.38.31.101:8080, server: 82.38.31.101, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
+  - {name: "@Vpn_Tehran 🌼 تلگرام", server: 82.38.31.101, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
+  - {name: "@Vpn_Tehran 💌 وصلیم 2", server: 82.38.31.101, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
+  - {name: "@Vpn_Tehran 🦋 تلگرام 2", server: 82.38.31.101, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
+  - {name: "@vpnbaz 🌊", server: 82.38.31.101, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
+  - {name: "  3", server: 82.38.31.101, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
+  - {name: "@FreakConfig 2", server: 82.38.31.101, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
+  - {name: 82.38.31.122:8080, server: 82.38.31.122, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
+  - {name: "@filembad", server: 82.38.31.122, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
+  - {name: ⚡︎, server: 82.38.31.122, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
+  - {name: "🇬🇧 GB | SS | @v2rayopen #1", server: 82.38.31.122, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
+  - {name: "Telegram:", server: 82.38.31.122, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
+  - {name: 82.38.31.89:8080, server: 82.38.31.89, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
+  - {name: برای اتصال دائمی جوین شو💠 TelegramID ⌲Express_freevpn 🪩, server: 82.38.31.89, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
+  - {name: "Channel id: @proxy_kafee 🇳🇱 2", server: 82.38.31.89, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
+  - {name: TikVPNir`, server: 216.105.168.18, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: pCXLvRgW6ohRb9EBrqmuOU, udp: true, tfo: false}
+  - {name: برای اتصال دائمی جوین شو🍥 TelegramID ⌲Express_freevpn 🪩, server: 54.36.174.134, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: pvgz9pq, udp: true, tfo: false}
+  - {name: 54.36.174.140:443, server: 54.36.174.140, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: pvgz9pq, udp: true, tfo: false}
+  - {name: "@Vpn_Tehran 🔥 تلگرام 2", server: 54.36.174.140, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: pvgz9pq, udp: true, tfo: false}
+  - {name: برای اتصال دائمی جوین شو🍥 TelegramID ⌲Express_freevpn 🪩 2, server: 54.36.174.140, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: pvgz9pq, udp: true, tfo: false}
+  - {name: جوین, server: 54.36.174.140, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: pvgz9pq, udp: true, tfo: false}
+  - {name: سرورهای, server: 54.36.174.140, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: pvgz9pq, udp: true, tfo: false}
+  - {name: ⚡Telegram 6, server: 54.36.174.140, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: pvgz9pq, udp: true, tfo: false}
+  - {name: "  4", server: 54.36.174.140, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: pvgz9pq, udp: true, tfo: false}
+  - {name: FATHER_VPN 2, server: 54.36.174.140, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: pvgz9pq, udp: true, tfo: false}
+  - {name: 🇰🇷 KR-154.90.63.177-0373, server: 154.90.63.177, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
+  - {name: SI-192.71.244.150-0396, server: 192.71.244.150, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
+  - {name: HR-46.183.184.60-4651, server: 46.183.184.60, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
+  - {name: MK-46.183.185.37-0405, server: 46.183.185.37, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
+  - {name: 🇰🇷 KR-221.139.79.57-0406, server: 221.139.79.57, port: 13979, type: ss, cipher: aes-256-cfb, password: qwerREWQ@@, udp: true, tfo: false}
+  - {name: "%�\x11�<'���KM\rK�MM\x0b��\r\x0b�L�M\x0eM%�", server: ssca.irundns.net, port: 443, type: ssr, cipher: aes-128-cfb, password: $$Turb0VPN$$, protocol: auth_aes128_md5, obfs: http_post, protocol-param: "", obfs-param: "", udp: true, tfo: false}
+  - {name: برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩, server: 162.159.152.4, port: 8443, type: trojan, password: T9BpZIVMNv, sni: sweden.vmaxpanel.com, skip-cert-verify: false, network: ws, ws-opts: {path: /amd, headers: {Host: sweden.vmaxpanel.com}}, udp: true, tfo: false}
+  - {name: 47@oneclickvpnkeys, server: v1.dabache.top, port: 8443, type: trojan, password: T9BpZIVMNv, sni: sweden.vmaxpanel.com, skip-cert-verify: false, network: ws, ws-opts: {path: /amd, headers: {Host: sweden.vmaxpanel.com}}, udp: true, tfo: false}
+  - {name: "@internet_azad2 جوین شو", server: 94.140.0.1, port: 443, type: trojan, password: bpb-trojan, sni: singbox.lu567890.us.kg, skip-cert-verify: false, network: ws, ws-opts: {path: "/tr?ed=2560", headers: {Host: singbox.lu567890.us.kg}}, udp: true, tfo: false}
+  - {name: 94.140.0.1:443, server: 94.140.0.1, port: 443, type: trojan, password: bpb-trojan, sni: singbox.lu567890.us.kg, skip-cert-verify: false, network: ws, ws-opts: {path: "/tr?ed=2560", headers: {Host: singbox.lu567890.us.kg}}, udp: true, tfo: false}
+  - {name: IR-@V2rayAlpha-32`, server: 160.16.124.55, port: 491, type: trojan, password: c1d83c0c7d57cead4379ba14a82df69b, sni: www.nintendogames.net, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: lrnbymaa, server: 160.16.124.55, port: 491, type: trojan, password: c1d83c0c7d57cead4379ba14a82df69b, sni: www.nintendogames.net, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: t.me/vmessiraan, server: 104.18.32.47, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true, tfo: false}
+  - {name: "Telegram : @BugFreeNet Meli🇮🇷", server: 104.18.32.47, port: 443, type: trojan, password: humanity, sni: www.gossipglove.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.gossipglove.com}}, udp: true, tfo: false}
+  - {name: برای اتصال دائمی جوین شو🦚 TelegramID ⌲Express_freevpn 🪩 2, server: 104.18.32.47, port: 443, type: trojan, password: humanity, sni: www.multiplydose.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.multiplydose.com}}, udp: true, tfo: false}
+  - {name: "@FarazV2ray", server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true, tfo: false}
+  - {name: "@Vpn_Tehran 💛 ایرانسل", server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true, tfo: false}
+  - {name: NetAccount 3, server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.creationlong.org, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org}}, udp: true, tfo: false}
+  - {name: 42@oneclickvpnkeys, server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.gossipglove.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.gossipglove.com}}, udp: true, tfo: false}
+  - {name: 42@proxy_kafee, server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.gossipglove.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.gossipglove.com}}, udp: true, tfo: false}
+  - {name: ‍🔥-@SPEEDS_VPN, server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.gossipglove.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.gossipglove.com}}, udp: true, tfo: false}
+  - {name: ‍🔥-@SPEEDS_VPN 2, server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.gossipglove.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.gossipglove.com}}, udp: true, tfo: false}
+  - {name: t.me/vmessiraan 2, server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.gossipglove.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.gossipglove.com}}, udp: true, tfo: false}
+  - {name: برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 2, server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.gossipglove.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.gossipglove.com}}, udp: true, tfo: false}
+  - {name: Emadt3ch, server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.multiplydose.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.multiplydose.com}}, udp: true, tfo: false}
+  - {name: "@Lrnbymaa 🪢", server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.multiplydose.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.multiplydose.com}}, udp: true, tfo: false}
+  - {name: برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 3, server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.multiplydose.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.multiplydose.com}}, udp: true, tfo: false}
+  - {name: برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 4, server: 188.114.96.3, port: 443, type: trojan, password: humanity, sni: www.multiplydose.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.multiplydose.com}}, udp: true, tfo: false}
+  - {name: "@FarazV2ray 2", server: 188.114.98.0, port: 443, type: trojan, password: humanity, sni: www.creationlong.org, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org}}, udp: true, tfo: false}
+  - {name: 60@oneclickvpnkeys, server: 208.103.161.110, port: 443, type: trojan, password: humanity, sni: www.creationlong.org, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org}}, udp: true, tfo: false}
+  - {name: "@FATHER_VPN ½", server: www.gossipglove.com, port: 443, type: trojan, password: humanity, sni: www.gossipglove.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.gossipglove.com}}, udp: true, tfo: false}
+  - {name: YMA 4 @Outline_Vpn, server: www.gossipglove.com, port: 443, type: trojan, password: humanity, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment}, udp: true, tfo: false}
+  - {name: برای اتصال دائمی جوین شو💠 TelegramID ⌲Express_freevpn 🪩 2, server: www.multiplydose.com, port: 443, type: trojan, password: humanity, sni: www.multiplydose.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.multiplydose.com}}, udp: true, tfo: false}
+  - {name: free_netc, server: 104.17.162.123, port: 8443, type: trojan, password: u2k1jh0og5vn, sni: oq788320mz7kfruyec7b0q1l4bojfire1bp9lmu7.zjde5.de5.net, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: oq788320mz7kfruyec7b0q1l4bojfire1bp9lmu7.zjde5.de5.net}}, udp: true, tfo: false}
+  - {name: برای اتصال دائمی جوین شو🦚 TelegramID ⌲Express_freevpn 🪩 3, server: 45.89.105.56, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 05b544a4-d479-4ba4-8208-950bd4411453, network: ws, ws-opts: {path: /vless/}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 64@oneclickvpnkeys, server: ws.vpnfreedom.tech, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 05ecc65e-dda1-45ef-962c-a387dcbe0f94, servername: google.com, host: google.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: HJy3Ck8VA7vnrolQ2g7rwOYhD7iZQQMIjOUJ_WQBFX8, short-id: 9a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 44@oneclickvpnkeys, server: z1.n1server.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 071435dc-6ab9-4502-8441-ed4a4b609092, servername: n1.n1server.org, alpn: [h2%2Chttp%2F1.1], network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: YsZ 6 @Outline_Vpn, server: z1.n1server.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 071435dc-6ab9-4502-8441-ed4a4b609092, servername: n1.n1server.org, alpn: [h2%2Chttp%2F1.1], network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "Channel : @Mrsoulb 🏴🏳", server: nl-78w-c.southnetworks.cloud, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 094e66a9-8d92-41fe-85ad-8e7bf9b5fcaa, network: ws, ws-opts: {path: /getWorkerUpdates, headers: {Host: nl-78w-c.southnetworks.cloud}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "[openproxylist.com] vless-IL", server: ilta-wzxrxkdhbjpnprhkkpplsjwawhssvollvxzdhqshiqckwdgrdm.orbnet.xyz, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 0e8a6896-ad90-4a3b-89a3-77d64aa409e2, servername: i2pd.website, host: i2pd.website, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: YVDo7U4O-AT2fa5H9E7hyYHKgfZd1vB6UdbAf2ggWQE, short-id: 55e6af1a35e64a98}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: https://t.me/v2rayNplus |🇮🇹, server: ilta-wzxrxkdhbjpnprhkkpplsjwawhssvollvxzdhqshiqckwdgrdm.orbnet.xyz, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 0e8a6896-ad90-4a3b-89a3-77d64aa409e2, servername: i2pd.website, host: i2pd.website, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: YVDo7U4O-AT2fa5H9E7hyYHKgfZd1vB6UdbAf2ggWQE, short-id: 55e6af1a35e64a98}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@meliproxyy", server: 157.173.127.225, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 11beaf11-726d-4c11-8ce9-27308c1c608c, servername: analytics.google.com, host: analytics.google.com, path: /, reality-opts: {public-key: v3EwzA9RIIh5Ndxm-gypRY6RCJhOpQ-2WO7KaH8nsC8, short-id: eab26c4a32}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@VpnMaan", server: 89.167.17.75, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 19773cc6-89a3-47c6-bc10-885460cd2b7b, host: speedtest.net, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz 🧸", server: 104.20.1.252, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 1a94fbd9-79d2-4aa7-bf1d-074f678d27ab, network: ws, ws-opts: {path: "/?ed", headers: {Host: EqUiPPed-phOToZkoA7K5e6P.eCoTOuRiss.Co.uk.}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@iphone02016vpn", server: 104.20.1.252, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 1a94fbd9-79d2-4aa7-bf1d-074f678d27ab, network: ws, ws-opts: {path: "/?ed", headers: {Host: EqUiPPed-phOToZkoA7K5e6P.eCoTOuRiss.Co.uk.}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 5, server: 5.182.38.91, port: 17267, type: vless, tls: true, packet-encoding: xudp, uuid: 1c7fcc38-e6be-43c5-875f-b8de2516b9f2, servername: yahoo.com, host: yahoo.com, path: /, reality-opts: {public-key: SnWZg6ORcQepuWLI1EVCTTVc4KyfDiGWR4o_CXCMhgk, short-id: 4ae260}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 26@oneclickvpnkeys, server: spark.persiaserverco.com, port: 2087, type: vless, tls: true, packet-encoding: xudp, uuid: 23aa242f-09f1-4f7e-8fcc-9d819fd95798, host: iranserver.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz 🍉", server: ov-france1.09vpn.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 25f86cb1-2140-4085-abcb-c3a0ea7a4be0, network: ws, ws-opts: {path: /vless/, headers: {Host: ov-france1.09vpn.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@SPEEDS_VPN1-🫆", server: 104.20.1.252, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 2a2a8023-3b4b-407d-a00a-7beb5a158148, network: ws, ws-opts: {path: "/?ed", headers: {Host: SHAggy-AGREEMeNTSpUfz4utdI.SpOrTland.COMPANy.}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "Channel : @Mrsoulb 🏴🏳 2", server: 104.20.1.252, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 2a2a8023-3b4b-407d-a00a-7beb5a158148, network: ws, ws-opts: {path: "/?ed", headers: {Host: SHAggy-AGREEMeNTSpUfz4utdI.SpOrTland.COMPANy.}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "اگه میخوای قطع نشی جوین شو : 🚏 TelegramID ⌲Express_freevpn 🪩", server: 77.73.232.61, port: 19747, type: vless, tls: true, packet-encoding: xudp, uuid: 2a9ed01e-5455-44b4-a66a-76ee8165f0ac, servername: yahoo.com, host: yahoo.com, path: /, reality-opts: {public-key: ZO9dTeg1slvTXgVsBsaJ1BDvz_YUImTLJjbHs-GdVyM, short-id: 2001}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "  5", server: nodejs.org, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 33e1a095-1e25-4198-bfe7-ec312e4f98ee, network: ws, ws-opts: {path: "/?ed", headers: {Host: CREDibLe-pLaNt7ddV4jJ7et.OnEeaT.CO.}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ⚫️ Telegram- @Canfing_VPN`, server: 46.38.150.248, port: 9091, type: vless, tls: true, packet-encoding: xudp, uuid: 34dae96c-1a41-434f-94b6-5507c3a6d318, host: myket.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: telegram 🌺 dailyv2ry, server: dojman.global.ssl.fastly.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 36213657-e751-478b-a5d7-547eef892af9, servername: dojman.global.ssl.fastly.net, alpn: [http%2F1.1], network: ws, ws-opts: {path: /containers/fi, headers: {Host: dojman.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 46@proxy_kafee, server: fn.takovpn.ru, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 373a56eb-aaa9-4a92-b209-503dd916900f, servername: www.vk.com, host: www.vk.com, path: /, reality-opts: {public-key: 3cj5R-TwL-wjkLvwMcVW-DJXbm6xOyIIJEP1cC8AhgI, short-id: 286e2d}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 6, server: 104.20.1.252, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 3775d133-dc3a-4a02-8095-5c70c328ae9f, network: ws, ws-opts: {path: "/?ed", headers: {Host: HUge-ActOR48bf36fHJV.ecOTouriSS.co.uK.}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hamedp71::🇨🇦, server: nodejs.org, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 3775d133-dc3a-4a02-8095-5c70c328ae9f, network: ws, ws-opts: {path: "/?ed", headers: {Host: HUge-ActOR48bf36fHJV.ecOTouriSS.co.uK.}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@internet_azad2 3", server: 172.64.152.23, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 396c904b-4b62-4334-b793-ee25fc0c61cc, servername: pages.dev, network: ws, ws-opts: {path: "/eyJqdW5rIjoiTHczMWlhREZIb0ljUDhoaCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=?ed=2560", headers: {Host: pages.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@internet_azad2 4", server: 172.64.152.23, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 396c904b-4b62-4334-b793-ee25fc0c61cc, servername: pages.dev, network: ws, ws-opts: {path: "/eyJqdW5rIjoiTHczMWlhREZIb0ljUDhoaCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=?ed=2560", headers: {Host: pages.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 2|Telegram@unvisible_drops, server: 172.64.152.23, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 396c904b-4b62-4334-b793-ee25fc0c61cc, servername: pages.dev, network: ws, ws-opts: {path: "/eyJqdW5rIjoiTHczMWlhREZIb0ljUDhoaCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=?ed=2560", headers: {Host: pages.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 1|Telegram@unvisible_drops, server: 172.64.152.23, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 396c904b-4b62-4334-b793-ee25fc0c61cc, servername: pages.dev, network: ws, ws-opts: {path: "/eyJqdW5rIjoiTHczMWlhREZIb0ljUDhoaCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=?ed=abasbijan2560", headers: {Host: pages.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Tehran 💘 تلگرام", server: srv30.outlinekeys.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 3ff03067-b0dd-4361-a21f-27bb9474b9b8, servername: srv30.outlinekeys.com, host: srv30.outlinekeys.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 188.114.98.0:443, server: 188.114.98.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4525c260-df3c-4f62-b8f1-f4f5f305694b, network: ws, ws-opts: {path: "/?ed=2560"}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@AzadNet", server: 188.114.98.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4525c260-df3c-4f62-b8f1-f4f5f305694b, servername: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net, network: ws, ws-opts: {path: /V2ynpv-V2ynpv-V2ynpv-V2ynpv-V2ynpv, headers: {Host: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@AzadNet\ufeff", server: 188.114.98.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4525c260-df3c-4f62-b8f1-f4f5f305694b, servername: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net, network: ws, ws-opts: {path: /V2ynpv-V2ynpv-V2ynpv-V2ynpv-V2ynpv, headers: {Host: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 5|Telegram@unvisible_drops, server: ipbaz.ping-box.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4525c260-df3c-4f62-b8f1-f4f5f305694b, network: ws, ws-opts: {path: "/Telegram@V2rayAlpha/?ed=2560", headers: {Host: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: • موقت`, server: fox3.wizard2shop.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 455eaaa7-cff4-4229-ad07-761570b4383c, servername: wwwui.wordperessweb.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: wwwui.wordperessweb.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: • موقت ۱, server: veri.dest2.mimkiscx.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 455eaaa7-cff4-4229-ad07-761570b4383c, servername: gfrdsllls.wordperessweb.ir, alpn: [http%2F1.1], network: ws, ws-opts: {path: "/?ed=2082", headers: {Host: gfrdsllls.wordperessweb.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: • موقت, server: veri.dest2.mimkiscx.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 455eaaa7-cff4-4229-ad07-761570b4383c, servername: dswe.wordperessweb.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: dswe.wordperessweb.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "| @BugFreeNet ¹⁰", server: 89.149.242.24, port: 1990, type: vless, tls: true, packet-encoding: xudp, uuid: 48490509-9672-4ddb-b44f-bbfd7560d614, servername: pmeli.appleidcenteral.ir, alpn: [h2%2Chttp%2F1.1], host: pmeli.appleidcenteral.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: برای اتصال دائمی جوین شو💠 TelegramID ⌲Express_freevpn 🪩 3, server: 51.158.206.93, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "  6", server: 57.129.49.1, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "  7", server: 57.129.53.181, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz 🍭", server: 57.129.53.181, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: NetAccount 4, server: 57.129.53.181, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Join+Telegram:@Farah_VPN🟣, server: 217.16.26.158, port: 7443, type: vless, tls: true, packet-encoding: xudp, uuid: 49aabf68-e986-4722-8fd1-1702ce996bb6, servername: ads.x5.ru, host: ads.x5.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: J5ITJbg5FQFembAfkogKHHQB6DigsFXQxK7xu-QMWUs, short-id: a20d3ed244c76426}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@internet_azad2 جوین شید", server: 104.17.163.123, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 5073081a-a4a6-46e6-a3f5-ff6bb0bbdfab, servername: 4f009rpo6n.zjde5.de5.net, alpn: [http/1.1], network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: 4f009rpo6n.zjde5.de5.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ✅🆔 @iphone02016vpn, server: 104.20.1.252, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 546e91b5-c33e-4b04-b20c-c0fc8f6d9d7f, network: ws, ws-opts: {path: "/?ed", headers: {Host: bIZARRe-CEntEryZCvddNcfJ.spORtLand.COmPANY.}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ‍🔥-@SPEEDS_VPN 3, server: 104.20.1.252, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 546e91b5-c33e-4b04-b20c-c0fc8f6d9d7f, network: ws, ws-opts: {path: "/?ed", headers: {Host: bIZARRe-CEntEryZCvddNcfJ.spORtLand.COmPANY.}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@FarazV2ray 3", server: nodejs.org, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 546e91b5-c33e-4b04-b20c-c0fc8f6d9d7f, network: ws, ws-opts: {path: "/?ed=512", headers: {Host: bIZARRe-CEntEryZCvddNcfJ.spORtLand.COmPANY.}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "  8", server: 104.18.32.47, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 57ba2ab1-a283-42eb-82ee-dc3561a805b8, servername: ovhwuxian.pai50288.uk, network: ws, ws-opts: {path: /57ba2ab1, headers: {Host: ovhwuxian.pai50288.uk}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 60@oneclickvpnkeys 2, server: ovhwuxian.pai50288.uk, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 57ba2ab1-a283-42eb-82ee-dc3561a805b8, servername: ovhwuxian.pai50288.uk, network: ws, ws-opts: {path: /57ba2ab1, headers: {Host: ovhwuxian.pai50288.uk}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "[openproxylist.com] vless-LV", server: srv6.outlinekeys.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 59edf6dc-b1f7-4017-8107-aae4f61a173c, servername: srv6.outlinekeys.com, host: srv6.outlinekeys.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: برای اتصال دائمی جوین شو💠 TelegramID ⌲Express_freevpn 🪩 4, server: 47.89.164.60, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5c183802-747d-4d2f-a6f1-aff2d5d78401, servername: cdn.userway.org, host: cdn.userway.org, path: /, reality-opts: {public-key: DNdTBHyztOVJOBJQX91YXEhNkWbSAntqUoTFBHc6Clw, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@TikVPNir", server: niimb.aparat-movies-download.ir, port: 42555, type: vless, tls: true, packet-encoding: xudp, uuid: 6618b577-b801-4f0c-811a-ac83c70639dc, host: play.google.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ⚫️ Telegram- @Canfing_VPN` 2, server: 81.12.33.6, port: 711, type: vless, tls: true, packet-encoding: xudp, uuid: 69144c55-e1a2-4a13-8cc4-d0f984bebe70, host: igap.net, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "  9", server: nodejs.org, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 6abc2840-25fd-4dd7-b1aa-0892fe98f2d9, network: ws, ws-opts: {path: "/?ed", headers: {Host: MySterIOUS-chECk94Bl5oXQ6C.eCoTOUriSs.cO.uK.}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hamedp71::🏴‍☠️, server: nodejs.org, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 6abc2840-25fd-4dd7-b1aa-0892fe98f2d9, network: ws, ws-opts: {path: "/?ed", headers: {Host: MySterIOUS-chECk94Bl5oXQ6C.eCoTOUriSs.cO.uK.}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@TikVPNir 2", server: 2.188.227.28, port: 1010, type: vless, tls: true, packet-encoding: xudp, uuid: 6beffba5-a483-4226-a76c-a8d25771d1fe, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@freenet_vt`", server: 77.239.124.88, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 72d33e6f-2067-4607-8056-fa45e1967b0c, servername: mskhost.outlinekeys.net, alpn: [h3%2Ch2%2Chttp%2F1.1], host: mskhost.outlinekeys.net, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 33@proxy_kafee, server: 91.184.240.121, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 745d8b0e-1bf2-4921-8058-4d67dd3dbc13, servername: secdn13.suio.me, host: secdn13.suio.me, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@internet_azad2🚀", server: SHOP.CDNPROS.IR, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 7fa13a39-1543-4d5d-a618-4afa7bd77682, servername: excoinoir.space, alpn: ["h2,http/1.1"], host: excoinoir.space, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@AzadNet 2", server: 188.114.98.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 829658bf-03c4-4c28-81e9-dd6ea141b2d0, servername: 5jq7fvwpqt5owo2fi198sa6qoxznkzfea7en4m3xroeqrt3u3q.zjde5.de5.net, alpn: [http%2F1.1], network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: 5jq7fvwpqt5owo2fi198sa6qoxznkzfea7en4m3xroeqrt3u3q.zjde5.de5.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: free_netc 2, server: 104.17.163.123, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 83adcc98-ac23-4e51-9ae0-788a73fd9939, servername: vjv62pggz1658fuliaf9lri7rra85l8utox0kjtogve4whop.zjde5.de5.net, alpn: [http%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: vjv62pggz1658fuliaf9lri7rra85l8utox0kjtogve4whop.zjde5.de5.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: free_netc 3, server: 104.17.162.123, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 83f03646-fb28-44cc-9d2c-8853f6c09285, servername: r4fnviw9jl4i4rx.zjde5.de5.net, alpn: [http%2F1.1], network: ws, ws-opts: {path: "/?ed=#TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=512", headers: {Host: r4fnviw9jl4i4rx.zjde5.de5.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@internet_azad2 جوین شید🌳", server: 104.17.162.123, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 83f03646-fb28-44cc-9d2c-8853f6c09285, servername: r4fnviw9jl4i4rx.zjde5.de5.net, alpn: [http/1.1], network: ws, ws-opts: {path: "/?ed=#ABASBIJAN?ed=512", headers: {Host: r4fnviw9jl4i4rx.zjde5.de5.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@frreenet_vt`", server: 104.17.162.123, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 83f03646-fb28-44cc-9d2c-8853f6c09285, servername: r4fnviw9jl4i4rx.zjde5.de5.net, alpn: [http%2F1.1], network: ws, ws-opts: {path: "/?ed=?ed=512", headers: {Host: r4fnviw9jl4i4rx.zjde5.de5.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2freezone", server: 104.18.4.130, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 83f03646-fb28-44cc-9d2c-8853f6c09285, servername: r4fnviw9jl4i4rx.zjde5.de5.net, alpn: [http%2F1.1], network: ws, ws-opts: {path: "/XIXVPN?ed", headers: {Host: r4fnviw9jl4i4rx.zjde5.de5.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@internet_azad2 جوین شو 2", server: cf.narton.ir, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 83f03646-fb28-44cc-9d2c-8853f6c09285, servername: r4fnviw9jl4i4rx.zjde5.de5.net, alpn: [http/1.1], network: ws, ws-opts: {path: "/?ed", headers: {Host: r4fnviw9jl4i4rx.zjde5.de5.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: iran-optimized, server: 91.107.141.221, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 87ba28f3-088c-481d-b177-28659cc1d6c8, network: ws, ws-opts: {path: /ws, headers: {Host: 91.107.141.221}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz 🍇", server: 45.82.251.126, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@iphone02016vpn 2", server: 45.82.251.126, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: IR 3 Outline_Vpn, server: 45.82.251.126, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: YMA 6 @Outline_Vpn, server: 45.82.251.126, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2_mod_shop 🇺🇸", server: 45.82.251.126, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: IR 5 @Outline_Vpn, server: 45.82.251.135, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ‍🔥-@SPEEDS_VPN 4, server: 45.82.251.135, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: NetAccount 5, server: 45.82.251.135, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz 🫟", server: 45.82.251.135, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@iphone02016vpn 3", server: 45.82.251.135, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: IR 6 @Outline_Vpn, server: 45.82.251.208, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "  10", server: 45.82.251.208, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: IR 7 @Outline_Vpn, server: 45.82.251.208, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@FATHER_VPN ⅕", server: yesok42v2.ip4exordir.shop, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@SPEEDS_VPN1-🫆 2", server: yesok42v2.ip4exordir.shop, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz 🐍", server: yesok42v2.ip4exordir.shop, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@iphone02016vpn 4", server: yesok42v2.ip4exordir.shop, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: All² | @meliproxyy, server: yesok42v2.ip4exordir.shop, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: mmd | ما که وصلیم, server: yesok42v2.ip4exordir.shop, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: t.me/vmessiraan 3, server: yesok42v2.ip4exordir.shop, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@SPEEDS_VPN1-🫆 3", server: 91.98.43.14, port: 24663, type: vless, tls: true, packet-encoding: xudp, uuid: 91ffc858-0f92-4214-831d-2c27a207547f, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "Channel : @Mrsoulb 🏴🏳 3", server: 46.246.98.74, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 95e118b4-4352-4218-8493-f20cc7fc467a, servername: learn.microsoft.com, host: learn.microsoft.com, path: /, reality-opts: {public-key: nBJICh1KzfMblaXtSxpTiPIHGg2TKP5PF8nq-89Q6jg, short-id: 6ed3324b}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 61@oneclickvpnkeys, server: 8.6.112.0, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: 96d9bcb0-9ad2-48be-85a2-a9ab3a005261, servername: ds1-mx-fn154-protection.iranlease.com, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: ds1-mx-fn154-protection.iranlease.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "[🇩🇪] [vl-tl-ws] hamedp71", server: chatgpt.com, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: 96d9bcb0-9ad2-48be-85a2-a9ab3a005261, servername: ds1-mx-fn154-protection.iranlease.com, alpn: [http%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: ds1-mx-fn154-protection.iranlease.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 9, server: 104.18.32.47, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 979b6822-d65a-400d-89f8-30391903ac20, servername: rAyAn-cOnFiG-uk-1.pAriSa.dPdNs.oRg, network: ws, ws-opts: {path: /ws, headers: {Host: rAyAn-cOnFiG-uk-1.pAriSa.dPdNs.oRg}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@FarazV2ray 4", server: www.speedtest.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 98d677be-b14b-4c14-a96b-4a39a3be645a, servername: t86y6leiyaph7tsvb170x7vfx0-3dvh3.vrezht08.workers.dev, alpn: [http%2F1.1], network: ws, ws-opts: {path: "/eyJqdW5rIjoiZHJmTGlJSmciLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119?ed=2560", headers: {Host: t86y6leiyaph7tsvb170x7vfx0-3dvh3.vrezht08.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Tehran 🤍 تلگرام", server: www.speedtest.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 98d677be-b14b-4c14-a96b-4a39a3be645a, servername: t86y6leiyaph7tsvb170x7vfx0-3dvh3.vrezht08.workers.dev, alpn: [http%2F1.1], network: ws, ws-opts: {path: "/eyJqdW5rIjoiZHJmTGlJSmciLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119?ed=2560", headers: {Host: t86y6leiyaph7tsvb170x7vfx0-3dvh3.vrezht08.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ⚡Telegram - @prrofile_purple, server: www.speedtest.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 98d677be-b14b-4c14-a96b-4a39a3be645a, servername: t86y6leiyaph7tsvb170x7vfx0-3dvh3.vrezht08.workers.dev, alpn: [http%2F1.1], network: ws, ws-opts: {path: "/eyJqdW5rIjoiZHJmTGlJSmciLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119?ed=2560", headers: {Host: t86y6leiyaph7tsvb170x7vfx0-3dvh3.vrezht08.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@iphone02016vpn 5", server: www.speedtest.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 98d677be-b14b-4c14-a96b-4a39a3be645a, servername: t86y6leiyaph7tsvb170x7vfx0-3dvh3.vrezht08.workers.dev, alpn: [http%2F1.1], network: ws, ws-opts: {path: "/eyJqdW5rIjoiZHJmTGlJSmciLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119?ed=2560", headers: {Host: t86y6leiyaph7tsvb170x7vfx0-3dvh3.vrezht08.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@freenet_vt` 2", server: 172.64.145.38, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 9e685fe3-e0f9-482d-939c-200a3f89b363, servername: vyznthvt7f5fr.zjde5.de5.net, alpn: [http%2F1.1], network: ws, ws-opts: {path: "/?ed=2560fp=chrome", headers: {Host: vyznthvt7f5fr.zjde5.de5.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@internet_azad2 جوین شو 3", server: cf.narton.ir, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 9e685fe3-e0f9-482d-939c-200a3f89b363, servername: vyznthvt7f5fr.zjde5.de5.net, alpn: [http/1.1], network: ws, ws-opts: {path: "/?ed=2560fp=chrome", headers: {Host: vyznthvt7f5fr.zjde5.de5.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Duikjffgii-glhhinyg, server: digiacc.sooxy.xyz, port: 21132, type: vless, tls: true, packet-encoding: xudp, uuid: 9eef16a2-c769-4b5d-b192-bfd30376ca6f, host: digiacc.sooxy.xyz, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Tehran 💘 تلگرام 2", server: kurd-fr.tawana.online, port: 46248, type: vless, tls: true, packet-encoding: xudp, uuid: a571b94c-a9f3-407a-a8ef-da608dab5472, host: kurd-fr.tawana.online, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ⚡Telegram - @prrofile_purple 2, server: faqatchai.global.ssl.fastly.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a9bac46a-2037-4ad1-a192-08c70927f4ad, servername: faqatchai.global.ssl.fastly.net, alpn: [http%2F1.1], network: ws, ws-opts: {path: /containers/fi, headers: {Host: faqatchai.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: telegram 🌺 dailyv2ry 2, server: faqatchai.global.ssl.fastly.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a9bac46a-2037-4ad1-a192-08c70927f4ad, servername: faqatchai.global.ssl.fastly.net, alpn: [http%2F1.1], network: ws, ws-opts: {path: /containers/fi, headers: {Host: faqatchai.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ⚫️ Telegram- @Canfing_VPN` 3, server: faqatchai.global.ssl.fastly.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a9bac46a-2037-4ad1-a192-08c70927f4ad, servername: faqatchai.global.ssl.fastly.net, alpn: [http%2F1.1], network: ws, ws-opts: {path: /containers/fi, headers: {Host: faqatchai.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: NetAccount 6, server: 150.241.230.85, port: 52554, type: vless, tls: true, packet-encoding: xudp, uuid: ad39e228-35a9-4629-a16a-d66a97654225, servername: yahoo.com, host: yahoo.com, path: /, reality-opts: {public-key: DCnaVqwxfGF3d7LDHqFKYtlyGw2l6LsbxPvphK776Gc, short-id: 6b4bdb32}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 67@oneclickvpnkeys, server: 150.241.230.85, port: 52554, type: vless, tls: true, packet-encoding: xudp, uuid: ad39e228-35a9-4629-a16a-d66a97654225, servername: yahoo.com, host: yahoo.com, path: /, reality-opts: {public-key: DCnaVqwxfGF3d7LDHqFKYtlyGw2l6LsbxPvphK776Gc, short-id: 6b4bdb32}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: All³ | @meliproxyy, server: ov-italy1.09vpn.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: b3051b10-716d-455b-9811-aefcce3d633e, network: ws, ws-opts: {path: /vless/, headers: {Host: ov-italy1.09vpn.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "[openproxylist.com] vless-IT", server: ov-italy1.09vpn.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: b3051b10-716d-455b-9811-aefcce3d633e, network: ws, ws-opts: {path: /vless/, headers: {Host: ov-italy1.09vpn.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@meliproxyy 2", server: 104.20.1.252, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: ba2bb9d8-9baa-45d6-9e0a-38c9cb6a6a9a, network: ws, ws-opts: {path: "/?ed", headers: {Host: WeaK-preSSUrE3Ga6bzof92.sPorTlaNd.coMPANY.}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 4|Telegram@unvisible_drops, server: 66.81.247.155, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: bbdab850-9164-43f3-adf9-26f7c5458e9d, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/?ed=#TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=512", headers: {Host: yyzsuabw9e3qd5ud7ihi5dxm96oglnsvr83cjojnm1efncfhr9ucordq.zjde5.de5.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: روز🆔 @iphone02016vpn  سرطان, server: 144.31.94.99, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: bbed94d9-1120-4b54-8a9c-72d81e411fb8, servername: google.com, host: google.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: -1F5A8N32UdC6w2NqnAc5-GkQW1dgcrImiQPl4WRikk, short-id: ef0b40e707663781}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@free_netc` 2", server: s11.digitalbax.net, port: 17621, type: vless, tls: true, packet-encoding: xudp, uuid: c0a67b6f-91a5-4d2a-b2f9-ae6901cc04d9, servername: cdn.jsdelivr.net, host: cdn.jsdelivr.net, path: /, reality-opts: {public-key: 4iPywBL3nUNzsgD7MOHMD1_4EHTzs7NNFNT0QR_tZXY, short-id: db0d711c41ca}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Tel;@Father_vpn ³, server: zzula.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c249ca6f-1bde-479b-af96-da0e948a3800, servername: zitel.digikala-aparat-zula.com, network: ws, ws-opts: {path: /admin, headers: {Host: zitel.digikala-aparat-zula.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: telegram 🌈 dailyv2ry, server: 104.26.6.35, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: c33275fd-a4fa-470d-90e4-55da39d849a8, network: ws, ws-opts: {path: /, headers: {Host: de.tawana.cf.panbehpanel.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: YsZ 5 @Outline_Vpn, server: ger2.panbehpanel.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c33275fd-a4fa-470d-90e4-55da39d849a8, servername: panbehpanel.ir, host: panbehpanel.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Tehran 💌 وصلیم 3", server: tawananet.panbehpanel.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: c33275fd-a4fa-470d-90e4-55da39d849a8, network: ws, ws-opts: {path: /, headers: {Host: tawananet.panbehpanel.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Tehran 💜 وصلیم", server: tawananet.panbehpanel.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: c33275fd-a4fa-470d-90e4-55da39d849a8, network: ws, ws-opts: {path: /, headers: {Host: tawananet.panbehpanel.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: t.me/vmessiraan 4, server: tawananet.panbehpanel.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: c33275fd-a4fa-470d-90e4-55da39d849a8, network: ws, ws-opts: {path: /, headers: {Host: tawananet.panbehpanel.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "  11", server: 104.18.32.47, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: c5fbb5dd-83bb-43ce-a799-e3e5c29e25da, network: ws, ws-opts: {path: "/?ed", headers: {Host: gLeEfuL-GrassMcKS7Sr4kw.wiNdleR.co.Uk.}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 7, server: 188.114.96.3, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: c659ce22-0a02-4d75-8c89-58d99916b846, servername: ir6.hnbyme.online, network: ws, ws-opts: {path: /, headers: {Host: ir6.hnbyme.online}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Tehran 💌 تلگرام", server: 1.kkcweb.ir, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: c805b05e-339d-40e0-8787-432d97a27345, servername: hajames.amirconfigpaanelllll.com, network: ws, ws-opts: {path: /, headers: {Host: hajames.amirconfigpaanelllll.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 8, server: 1.kkcweb.ir, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: c805b05e-339d-40e0-8787-432d97a27345, servername: hajfron.amirconfigpaanelllll.com, network: ws, ws-opts: {path: /, headers: {Host: hajfron.amirconfigpaanelllll.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "اگه میخوای قطع نشی جوین شو : 🚏 TelegramID ⌲Express_freevpn 🪩 2", server: 137.184.218.169, port: 36925, type: vless, tls: true, packet-encoding: xudp, uuid: c9fd0fb1-8251-4106-b09a-f4b426736f67, servername: www.cloudflare.com, host: www.cloudflare.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Tehran 💘 تلگرام 3", server: 77.239.124.88, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ca911bd2-e08f-42d8-aefb-3117494d3367, servername: mskhost.outlinekeys.net, host: mskhost.outlinekeys.net, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "  12", server: 179.61.132.58, port: 32143, type: vless, tls: true, packet-encoding: xudp, uuid: d4a0cc8c-2f9c-41fb-a5b8-d60c9a2a347d, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "  13", server: 94.103.1.230, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d6b1327d-2bec-4366-a3a1-9b1284f95841, servername: sun6-21.userapi.com, host: sun6-21.userapi.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Tehran 🔥 تلگرام 3", server: creativecommons.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d89d6641-3b1a-4f51-a194-9c9109fd21b6, servername: DiprOX.pages.DEV, network: ws, ws-opts: {path: /assets, headers: {Host: DiprOX.pages.DEV}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: All⁴ | @meliproxyy, server: v1.dabache.top, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d89d6641-3b1a-4f51-a194-9c9109fd21b6, servername: DiprOX.pages.DEV, network: ws, ws-opts: {path: /Tel-@V2rayAlpha, headers: {Host: DiprOX.pages.DEV}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Tehran 🤍 تلگرام 2", server: v1.dabache.top, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d89d6641-3b1a-4f51-a194-9c9109fd21b6, servername: DiprOX.pages.DEV, network: ws, ws-opts: {path: /assets, headers: {Host: DiprOX.pages.DEV}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: t.me/vmessiraan 5, server: v1.dabache.top, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d89d6641-3b1a-4f51-a194-9c9109fd21b6, servername: DiprOX.pages.DEV, network: ws, ws-opts: {path: /assets, headers: {Host: DiprOX.pages.DEV}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 32@oneclickvpnkeys, server: nl01-gmn02-vlr01.tcp-reset-club.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e108f3eb-4d3a-4e20-a09b-7008e333bc23, servername: hls-svod.itunes.apple.com, host: hls-svod.itunes.apple.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg, short-id: 86e999a2cdc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: uc7z7oqo موقت ۲, server: 185.81.96.79, port: 2060, type: vless, tls: true, packet-encoding: xudp, uuid: e224d29d-2109-4dba-9edb-c2770789dbbb, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "  14", server: 104.18.32.47, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: e9052516-1e37-4665-a0b4-a5c65dd0ab70, network: ws, ws-opts: {path: "/?ed", headers: {Host: TastY-LeaRNInG94aZG31SfF.ECOTouRiss.CO.UK.}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 89@oneclickvpnkeys, server: de3.teleport.lat, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f74d98a4-9198-4f78-b921-47d4f4950953, servername: de3.teleport.lat, host: de3.teleport.lat, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@internet_azad2 جوین شید💯", server: 104.17.165.123, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: f85f60b1-2b96-49e9-8bde-b656d1516df0, servername: gx8rw8fz783ncefn332y7uyfsvb59o820mryrxu1cj19jiuuur.zjde5.de5.net, alpn: [http/1.1], network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: gx8rw8fz783ncefn332y7uyfsvb59o820mryrxu1cj19jiuuur.zjde5.de5.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 9, server: 65.108.108.151, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: feaf1d64-b44c-4cc8-b114-4001478c1fd0, servername: fit.jojack.ru, host: fit.jojack.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: u26A516I3BCfUMPOo6rw0-XYt0C2sCWaPNP2pNdtxzw, short-id: f8865ecbb9bc11a3}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@meliproxyy 3", server: fit.jojack.ru, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: feaf1d64-b44c-4cc8-b114-4001478c1fd0, servername: fit.jojack.ru, host: fit.jojack.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: u26A516I3BCfUMPOo6rw0-XYt0C2sCWaPNP2pNdtxzw, short-id: f8865ecbb9bc11a3}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "  15", server: 104.18.32.47, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fef4a93d-eb4f-4657-b56b-32a0dc060045, servername: dev.twistsparrow.xyz, network: ws, ws-opts: {path: /, headers: {Host: dev.twistsparrow.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 104.18.32.47:443, server: 104.18.32.47, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fef4a93d-eb4f-4657-b56b-32a0dc060045, servername: dev.twistsparrow.xyz, network: ws, ws-opts: {path: /, headers: {Host: dev.twistsparrow.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: arashvpn-twist-80-188-0, server: 172.64.152.23, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fef4a93d-eb4f-4657-b56b-32a0dc060045, servername: dev.twistsparrow.xyz, network: ws, ws-opts: {path: /, headers: {Host: dev.twistsparrow.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Tehran 💘 تلگرام 4", server: 188.114.98.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fef4a93d-eb4f-4657-b56b-32a0dc060045, servername: dev.twistsparrow.xyz, network: ws, ws-opts: {path: /, headers: {Host: dev.twistsparrow.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Lrnbymaa / TELEGRAM", server: 188.114.98.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fef4a93d-eb4f-4657-b56b-32a0dc060045, servername: dev.twistsparrow.xyz, network: ws, ws-opts: {path: /, headers: {Host: dev.twistsparrow.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Tehran ❤️‍🔥 تلگرام", server: 188.114.98.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fef4a93d-eb4f-4657-b56b-32a0dc060045, servername: dev.twistsparrow.xyz, network: ws, ws-opts: {path: /, headers: {Host: dev.twistsparrow.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@AzadNet\ufeff`", server: 188.114.98.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fef4a93d-eb4f-4657-b56b-32a0dc060045, servername: dev.twistsparrow.xyz, network: ws, ws-opts: {path: /, headers: {Host: dev.twistsparrow.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 3|Telegram@unvisible_drops, server: 188.114.98.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fef4a93d-eb4f-4657-b56b-32a0dc060045, servername: dev.twistsparrow.xyz, network: ws, ws-opts: {path: /, headers: {Host: dev.twistsparrow.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@internet_azad2 2", server: 188.114.98.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fef4a93d-eb4f-4657-b56b-32a0dc060045, servername: dev.twistsparrow.xyz, network: ws, ws-opts: {path: /, headers: {Host: dev.twistsparrow.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@meliproxyy 4", server: ipbaz.ping-box.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fef4a93d-eb4f-4657-b56b-32a0dc060045, servername: dev.twistsparrow.xyz, network: ws, ws-opts: {path: /, headers: {Host: dev.twistsparrow.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Telegram:@config_proxy, server: ipbaz.ping-box.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fef4a93d-eb4f-4657-b56b-32a0dc060045, servername: dev.twistsparrow.xyz, network: ws, ws-opts: {path: /, headers: {Host: dev.twistsparrow.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "", server: 57.129.132.223, port: 80, type: vmess, uuid: a25cbf11-2908-4a1b-a3a8-9a571777dca3, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /vmess/, headers: {Host: google.com}}, udp: true, tfo: false}
+  - {name: "@vpnbaz 🚇", server: 5.196.29.123, port: 2082, type: vmess, uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc}}, udp: true, tfo: false}
+  - {name: "@VMESSIR4N جهت خرید کانفیگ", server: 38.107.234.57, port: 80, type: vmess, uuid: 567f4be5-12ab-42e1-b8d9-db6fd1fdd31c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /vmess/}, udp: true, tfo: false}
+  - {name: "@free_netc 3", server: 5.196.29.123, port: 2082, type: vmess, uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc}}, udp: true, tfo: false}
+  - {name: -turkey, server: mloc1x4.rootnam3.com, port: 48382, type: vmess, uuid: 66cf67bf-77d0-49df-bae4-3e80f22f2d30, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇩🇪 -germany, server: mloc1x2.rootnam3.com, port: 48380, type: vmess, uuid: 66cf67bf-77d0-49df-bae4-3e80f22f2d30, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇺🇸 -usa, server: mloc1x3.rootnam3.com, port: 48381, type: vmess, uuid: 66cf67bf-77d0-49df-bae4-3e80f22f2d30, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+proxy-groups:
+  - name: نوع انتخاب پروکسی 🔀
+    type: select
+    proxies:
+      - اتصال پایدار 🔗
+      - خودکار (بهترین پینگ) 🤖
+      - دستی 🤏🏻
+      - پشتیبان (در صورت قطعی) 🧯
+      - توزیع بار (پایدار) 🧲
+      - توزیع بار (موقت) ⏳
+      - توزیع بار (گردشی) 🔁
+      - قطع اینترنت ⛔
+      - بدون فیلترشکن 🛡️
+  - name: دستی 🤏🏻
+    type: select
+    proxies:
+      - 🇭🇰 香港家宽 194 -77
+      - 🇭🇰 香港家宽 288 -4
+      - 🇭🇰 香港家宽 270 -173
+      - 🇭🇰 香港家宽 308 -117
+      - 🇺🇸 美国 022 -5
+      - 🇯🇵 日本 69 -58
+      - 🇦🇺 悉尼1-anytls协议
+      - 🇦🇺 悉尼2-anytls协议
+      - 🇭🇰 香港1-anytls协议
+      - 🇮🇳 印度2-anytls协议
+      - 🇰🇷 韩国1-anytls协议
+      - 🇸🇬 新加坡3-anytls协议
+      - 🇬🇧 英国3-anytls协议
+      - 🇺🇸 美国1-anytls协议
+      - 🇻🇳 越南1-anytls协议
+      - 🇭🇰 香港顶级-anytls协议
+      - 🇭🇰 香港家宽 299 -119
+      - 🇭🇰 香港家宽 272 -158
+      - 🇺🇸 美国 023 -57
+      - 🇺🇸 美国 064 -126
+      - 🇺🇸 美国03
+      - 距离下次重置剩余：26 天
+      - free_netc `
+      - "C3 : @Xvpnplus_bot | WIFI ✅"
+      - "Channel id: @proxy_kafee 🇫🇷"
+      - Telegram @Ettehad_vpn اتحاد وی‌پی‌ان
+      - "@configraygan+mtn"
+      - "Channel id: @proxy_kafee 🇩🇪"
+      - 148.113.143.102:11201
+      - 🇨🇦 >>@FreakConfig::CA
+      - "Channel id: @proxy_kafee 🇩🇪 2"
+      - 141.95.106.127:11201
+      - "@Vpn_Tehran 🦋 تلگرام"
+      - ⚡Telegram
+      - BESTIIVPNBOT
+      - 🇭🇺
+      - " "
+      - 4Sarina-200
+      - 4Sarina-201
+      - برای اتصال دائمی جوین شو🦚 TelegramID ⌲Express_freevpn 🪩
+      - "Channel id: @proxy_kafee 🇩🇪 3"
+      - YsZ 2 @Outline_Vpn
+      - "Channel id: @proxy_kafee 🇩🇪 4"
+      - 62.133.63.169:37096
+      - "@Vpn_Tehran 💌 وصلیم"
+      - "Channel id: @proxy_kafee 🇩🇪 5"
+      - Telegram @Ettehad_vpn اتحاد وی‌پی‌ان 2
+      - 🇬🇧 >>@outline_vpn::GB
+      - "@configraygan"
+      - IR @Outline_Vpn
+      - QT
+      - ⚡Telegram 2
+      - "@Vpn_Tehran 🔥 تلگرام"
+      - 🇫🇷 >>@outline_vpn::FR
+      - "Channel id: @proxy_kafee 🇫🇷 2"
+      - 🇬🇧 >>@prrofile_purple::GB
+      - "Channel id: @proxy_kafee 🇬🇧"
+      - 163.171.137.76:47395
+      - "Channel id: @proxy_kafee 🇩🇪 6"
+      - 141.95.105.163:11201
+      - MCi-
+      - 82.38.31.176:8080
+      - "@free_netc"
+      - 02@shadowsockskeys
+      - 🇬🇧 GB-82.38.31.176-0423
+      - IR 4 @Outline_Vpn
+      - 82.38.31.184:8080
+      - "  2"
+      - FATHER_VPN
+      - 82.38.31.199:8080
+      - "@free_netc 2"
+      - NetAccount
+      - VayNora
+      - "@free_netc`"
+      - "Channel id: @proxy_kafee 🇳🇱"
+      - NetAccount 2
+      - 57.129.140.88:8388
+      - ⚡Telegram 3
+      - "@FreakConfig"
+      - 3.112.130.53:8313
+      - ⚡Telegram 4
+      - 3.112.130.53:8319
+      - ⚡Telegram 5
+      - 03@shadowsockskeys
+      - 𝒄𝒉𝒂𝒏𝒏𝒆𝒍
+      - 82.38.31.101:8080
+      - "@Vpn_Tehran 🌼 تلگرام"
+      - "@Vpn_Tehran 💌 وصلیم 2"
+      - "@Vpn_Tehran 🦋 تلگرام 2"
+      - "@vpnbaz 🌊"
+      - "  3"
+      - "@FreakConfig 2"
+      - 82.38.31.122:8080
+      - "@filembad"
+      - ⚡︎
+      - "🇬🇧 GB | SS | @v2rayopen #1"
+      - "Telegram:"
+      - 82.38.31.89:8080
+      - برای اتصال دائمی جوین شو💠 TelegramID ⌲Express_freevpn 🪩
+      - "Channel id: @proxy_kafee 🇳🇱 2"
+      - TikVPNir`
+      - برای اتصال دائمی جوین شو🍥 TelegramID ⌲Express_freevpn 🪩
+      - 54.36.174.140:443
+      - "@Vpn_Tehran 🔥 تلگرام 2"
+      - برای اتصال دائمی جوین شو🍥 TelegramID ⌲Express_freevpn 🪩 2
+      - جوین
+      - سرورهای
+      - ⚡Telegram 6
+      - "  4"
+      - FATHER_VPN 2
+      - 🇰🇷 KR-154.90.63.177-0373
+      - SI-192.71.244.150-0396
+      - HR-46.183.184.60-4651
+      - MK-46.183.185.37-0405
+      - 🇰🇷 KR-221.139.79.57-0406
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩
+      - 47@oneclickvpnkeys
+      - "@internet_azad2 جوین شو"
+      - 94.140.0.1:443
+      - IR-@V2rayAlpha-32`
+      - lrnbymaa
+      - t.me/vmessiraan
+      - "Telegram : @BugFreeNet Meli🇮🇷"
+      - برای اتصال دائمی جوین شو🦚 TelegramID ⌲Express_freevpn 🪩 2
+      - "@FarazV2ray"
+      - "@Vpn_Tehran 💛 ایرانسل"
+      - NetAccount 3
+      - 42@oneclickvpnkeys
+      - 42@proxy_kafee
+      - ‍🔥-@SPEEDS_VPN
+      - ‍🔥-@SPEEDS_VPN 2
+      - t.me/vmessiraan 2
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 2
+      - Emadt3ch
+      - "@Lrnbymaa 🪢"
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 3
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 4
+      - "@FarazV2ray 2"
+      - 60@oneclickvpnkeys
+      - "@FATHER_VPN ½"
+      - YMA 4 @Outline_Vpn
+      - برای اتصال دائمی جوین شو💠 TelegramID ⌲Express_freevpn 🪩 2
+      - free_netc
+      - برای اتصال دائمی جوین شو🦚 TelegramID ⌲Express_freevpn 🪩 3
+      - 64@oneclickvpnkeys
+      - 44@oneclickvpnkeys
+      - YsZ 6 @Outline_Vpn
+      - "Channel : @Mrsoulb 🏴🏳"
+      - "[openproxylist.com] vless-IL"
+      - https://t.me/v2rayNplus |🇮🇹
+      - "@meliproxyy"
+      - "@VpnMaan"
+      - "@vpnbaz 🧸"
+      - "@iphone02016vpn"
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 5
+      - 26@oneclickvpnkeys
+      - "@vpnbaz 🍉"
+      - "@SPEEDS_VPN1-🫆"
+      - "Channel : @Mrsoulb 🏴🏳 2"
+      - "اگه میخوای قطع نشی جوین شو : 🚏 TelegramID ⌲Express_freevpn 🪩"
+      - "  5"
+      - ⚫️ Telegram- @Canfing_VPN`
+      - telegram 🌺 dailyv2ry
+      - 46@proxy_kafee
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 6
+      - hamedp71::🇨🇦
+      - "@internet_azad2 3"
+      - "@internet_azad2 4"
+      - 2|Telegram@unvisible_drops
+      - 1|Telegram@unvisible_drops
+      - "@Vpn_Tehran 💘 تلگرام"
+      - 188.114.98.0:443
+      - "@AzadNet"
+      - "@AzadNet\ufeff"
+      - 5|Telegram@unvisible_drops
+      - • موقت`
+      - • موقت ۱
+      - • موقت
+      - "| @BugFreeNet ¹⁰"
+      - برای اتصال دائمی جوین شو💠 TelegramID ⌲Express_freevpn 🪩 3
+      - "  6"
+      - "  7"
+      - "@vpnbaz 🍭"
+      - NetAccount 4
+      - Join+Telegram:@Farah_VPN🟣
+      - "@internet_azad2 جوین شید"
+      - ✅🆔 @iphone02016vpn
+      - ‍🔥-@SPEEDS_VPN 3
+      - "@FarazV2ray 3"
+      - "  8"
+      - 60@oneclickvpnkeys 2
+      - "[openproxylist.com] vless-LV"
+      - برای اتصال دائمی جوین شو💠 TelegramID ⌲Express_freevpn 🪩 4
+      - "@TikVPNir"
+      - ⚫️ Telegram- @Canfing_VPN` 2
+      - "  9"
+      - hamedp71::🏴‍☠️
+      - "@TikVPNir 2"
+      - "@freenet_vt`"
+      - 33@proxy_kafee
+      - "@internet_azad2🚀"
+      - "@AzadNet 2"
+      - free_netc 2
+      - free_netc 3
+      - "@internet_azad2 جوین شید🌳"
+      - "@frreenet_vt`"
+      - "@v2freezone"
+      - "@internet_azad2 جوین شو 2"
+      - iran-optimized
+      - "@vpnbaz 🍇"
+      - "@iphone02016vpn 2"
+      - IR 3 Outline_Vpn
+      - YMA 6 @Outline_Vpn
+      - "@v2_mod_shop 🇺🇸"
+      - IR 5 @Outline_Vpn
+      - ‍🔥-@SPEEDS_VPN 4
+      - NetAccount 5
+      - "@vpnbaz 🫟"
+      - "@iphone02016vpn 3"
+      - IR 6 @Outline_Vpn
+      - "  10"
+      - IR 7 @Outline_Vpn
+      - "@FATHER_VPN ⅕"
+      - "@SPEEDS_VPN1-🫆 2"
+      - "@vpnbaz 🐍"
+      - "@iphone02016vpn 4"
+      - All² | @meliproxyy
+      - mmd | ما که وصلیم
+      - t.me/vmessiraan 3
+      - "@SPEEDS_VPN1-🫆 3"
+      - "Channel : @Mrsoulb 🏴🏳 3"
+      - 61@oneclickvpnkeys
+      - "[🇩🇪] [vl-tl-ws] hamedp71"
+      - 9
+      - "@FarazV2ray 4"
+      - "@Vpn_Tehran 🤍 تلگرام"
+      - ⚡Telegram - @prrofile_purple
+      - "@iphone02016vpn 5"
+      - "@freenet_vt` 2"
+      - "@internet_azad2 جوین شو 3"
+      - Duikjffgii-glhhinyg
+      - "@Vpn_Tehran 💘 تلگرام 2"
+      - ⚡Telegram - @prrofile_purple 2
+      - telegram 🌺 dailyv2ry 2
+      - ⚫️ Telegram- @Canfing_VPN` 3
+      - NetAccount 6
+      - 67@oneclickvpnkeys
+      - All³ | @meliproxyy
+      - "[openproxylist.com] vless-IT"
+      - "@meliproxyy 2"
+      - 4|Telegram@unvisible_drops
+      - روز🆔 @iphone02016vpn  سرطان
+      - "@free_netc` 2"
+      - Tel;@Father_vpn ³
+      - telegram 🌈 dailyv2ry
+      - YsZ 5 @Outline_Vpn
+      - "@Vpn_Tehran 💌 وصلیم 3"
+      - "@Vpn_Tehran 💜 وصلیم"
+      - t.me/vmessiraan 4
+      - "  11"
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 7
+      - "@Vpn_Tehran 💌 تلگرام"
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 8
+      - "اگه میخوای قطع نشی جوین شو : 🚏 TelegramID ⌲Express_freevpn 🪩 2"
+      - "@Vpn_Tehran 💘 تلگرام 3"
+      - "  12"
+      - "  13"
+      - "@Vpn_Tehran 🔥 تلگرام 3"
+      - All⁴ | @meliproxyy
+      - "@Vpn_Tehran 🤍 تلگرام 2"
+      - t.me/vmessiraan 5
+      - 32@oneclickvpnkeys
+      - uc7z7oqo موقت ۲
+      - "  14"
+      - 89@oneclickvpnkeys
+      - "@internet_azad2 جوین شید💯"
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 9
+      - "@meliproxyy 3"
+      - "  15"
+      - 104.18.32.47:443
+      - arashvpn-twist-80-188-0
+      - "@Vpn_Tehran 💘 تلگرام 4"
+      - "@Lrnbymaa / TELEGRAM"
+      - "@Vpn_Tehran ❤️‍🔥 تلگرام"
+      - "@AzadNet\ufeff`"
+      - 3|Telegram@unvisible_drops
+      - "@internet_azad2 2"
+      - "@meliproxyy 4"
+      - Telegram:@config_proxy
+      - ""
+      - "@vpnbaz 🚇"
+      - "@VMESSIR4N جهت خرید کانفیگ"
+      - "@free_netc 3"
+      - -turkey
+      - 🇩🇪 -germany
+      - 🇺🇸 -usa
+  - name: خودکار (بهترین پینگ) 🤖
+    type: url-test
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    tolerance: 50
+    proxies:
+      - 🇭🇰 香港家宽 194 -77
+      - 🇭🇰 香港家宽 288 -4
+      - 🇭🇰 香港家宽 270 -173
+      - 🇭🇰 香港家宽 308 -117
+      - 🇺🇸 美国 022 -5
+      - 🇯🇵 日本 69 -58
+      - 🇦🇺 悉尼1-anytls协议
+      - 🇦🇺 悉尼2-anytls协议
+      - 🇭🇰 香港1-anytls协议
+      - 🇮🇳 印度2-anytls协议
+      - 🇰🇷 韩国1-anytls协议
+      - 🇸🇬 新加坡3-anytls协议
+      - 🇬🇧 英国3-anytls协议
+      - 🇺🇸 美国1-anytls协议
+      - 🇻🇳 越南1-anytls协议
+      - 🇭🇰 香港顶级-anytls协议
+      - 🇭🇰 香港家宽 299 -119
+      - 🇭🇰 香港家宽 272 -158
+      - 🇺🇸 美国 023 -57
+      - 🇺🇸 美国 064 -126
+      - 🇺🇸 美国03
+      - 距离下次重置剩余：26 天
+      - free_netc `
+      - "C3 : @Xvpnplus_bot | WIFI ✅"
+      - "Channel id: @proxy_kafee 🇫🇷"
+      - Telegram @Ettehad_vpn اتحاد وی‌پی‌ان
+      - "@configraygan+mtn"
+      - "Channel id: @proxy_kafee 🇩🇪"
+      - 148.113.143.102:11201
+      - 🇨🇦 >>@FreakConfig::CA
+      - "Channel id: @proxy_kafee 🇩🇪 2"
+      - 141.95.106.127:11201
+      - "@Vpn_Tehran 🦋 تلگرام"
+      - ⚡Telegram
+      - BESTIIVPNBOT
+      - 🇭🇺
+      - " "
+      - 4Sarina-200
+      - 4Sarina-201
+      - برای اتصال دائمی جوین شو🦚 TelegramID ⌲Express_freevpn 🪩
+      - "Channel id: @proxy_kafee 🇩🇪 3"
+      - YsZ 2 @Outline_Vpn
+      - "Channel id: @proxy_kafee 🇩🇪 4"
+      - 62.133.63.169:37096
+      - "@Vpn_Tehran 💌 وصلیم"
+      - "Channel id: @proxy_kafee 🇩🇪 5"
+      - Telegram @Ettehad_vpn اتحاد وی‌پی‌ان 2
+      - 🇬🇧 >>@outline_vpn::GB
+      - "@configraygan"
+      - IR @Outline_Vpn
+      - QT
+      - ⚡Telegram 2
+      - "@Vpn_Tehran 🔥 تلگرام"
+      - 🇫🇷 >>@outline_vpn::FR
+      - "Channel id: @proxy_kafee 🇫🇷 2"
+      - 🇬🇧 >>@prrofile_purple::GB
+      - "Channel id: @proxy_kafee 🇬🇧"
+      - 163.171.137.76:47395
+      - "Channel id: @proxy_kafee 🇩🇪 6"
+      - 141.95.105.163:11201
+      - MCi-
+      - 82.38.31.176:8080
+      - "@free_netc"
+      - 02@shadowsockskeys
+      - 🇬🇧 GB-82.38.31.176-0423
+      - IR 4 @Outline_Vpn
+      - 82.38.31.184:8080
+      - "  2"
+      - FATHER_VPN
+      - 82.38.31.199:8080
+      - "@free_netc 2"
+      - NetAccount
+      - VayNora
+      - "@free_netc`"
+      - "Channel id: @proxy_kafee 🇳🇱"
+      - NetAccount 2
+      - 57.129.140.88:8388
+      - ⚡Telegram 3
+      - "@FreakConfig"
+      - 3.112.130.53:8313
+      - ⚡Telegram 4
+      - 3.112.130.53:8319
+      - ⚡Telegram 5
+      - 03@shadowsockskeys
+      - 𝒄𝒉𝒂𝒏𝒏𝒆𝒍
+      - 82.38.31.101:8080
+      - "@Vpn_Tehran 🌼 تلگرام"
+      - "@Vpn_Tehran 💌 وصلیم 2"
+      - "@Vpn_Tehran 🦋 تلگرام 2"
+      - "@vpnbaz 🌊"
+      - "  3"
+      - "@FreakConfig 2"
+      - 82.38.31.122:8080
+      - "@filembad"
+      - ⚡︎
+      - "🇬🇧 GB | SS | @v2rayopen #1"
+      - "Telegram:"
+      - 82.38.31.89:8080
+      - برای اتصال دائمی جوین شو💠 TelegramID ⌲Express_freevpn 🪩
+      - "Channel id: @proxy_kafee 🇳🇱 2"
+      - TikVPNir`
+      - برای اتصال دائمی جوین شو🍥 TelegramID ⌲Express_freevpn 🪩
+      - 54.36.174.140:443
+      - "@Vpn_Tehran 🔥 تلگرام 2"
+      - برای اتصال دائمی جوین شو🍥 TelegramID ⌲Express_freevpn 🪩 2
+      - جوین
+      - سرورهای
+      - ⚡Telegram 6
+      - "  4"
+      - FATHER_VPN 2
+      - 🇰🇷 KR-154.90.63.177-0373
+      - SI-192.71.244.150-0396
+      - HR-46.183.184.60-4651
+      - MK-46.183.185.37-0405
+      - 🇰🇷 KR-221.139.79.57-0406
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩
+      - 47@oneclickvpnkeys
+      - "@internet_azad2 جوین شو"
+      - 94.140.0.1:443
+      - IR-@V2rayAlpha-32`
+      - lrnbymaa
+      - t.me/vmessiraan
+      - "Telegram : @BugFreeNet Meli🇮🇷"
+      - برای اتصال دائمی جوین شو🦚 TelegramID ⌲Express_freevpn 🪩 2
+      - "@FarazV2ray"
+      - "@Vpn_Tehran 💛 ایرانسل"
+      - NetAccount 3
+      - 42@oneclickvpnkeys
+      - 42@proxy_kafee
+      - ‍🔥-@SPEEDS_VPN
+      - ‍🔥-@SPEEDS_VPN 2
+      - t.me/vmessiraan 2
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 2
+      - Emadt3ch
+      - "@Lrnbymaa 🪢"
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 3
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 4
+      - "@FarazV2ray 2"
+      - 60@oneclickvpnkeys
+      - "@FATHER_VPN ½"
+      - YMA 4 @Outline_Vpn
+      - برای اتصال دائمی جوین شو💠 TelegramID ⌲Express_freevpn 🪩 2
+      - free_netc
+      - برای اتصال دائمی جوین شو🦚 TelegramID ⌲Express_freevpn 🪩 3
+      - 64@oneclickvpnkeys
+      - 44@oneclickvpnkeys
+      - YsZ 6 @Outline_Vpn
+      - "Channel : @Mrsoulb 🏴🏳"
+      - "[openproxylist.com] vless-IL"
+      - https://t.me/v2rayNplus |🇮🇹
+      - "@meliproxyy"
+      - "@VpnMaan"
+      - "@vpnbaz 🧸"
+      - "@iphone02016vpn"
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 5
+      - 26@oneclickvpnkeys
+      - "@vpnbaz 🍉"
+      - "@SPEEDS_VPN1-🫆"
+      - "Channel : @Mrsoulb 🏴🏳 2"
+      - "اگه میخوای قطع نشی جوین شو : 🚏 TelegramID ⌲Express_freevpn 🪩"
+      - "  5"
+      - ⚫️ Telegram- @Canfing_VPN`
+      - telegram 🌺 dailyv2ry
+      - 46@proxy_kafee
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 6
+      - hamedp71::🇨🇦
+      - "@internet_azad2 3"
+      - "@internet_azad2 4"
+      - 2|Telegram@unvisible_drops
+      - 1|Telegram@unvisible_drops
+      - "@Vpn_Tehran 💘 تلگرام"
+      - 188.114.98.0:443
+      - "@AzadNet"
+      - "@AzadNet\ufeff"
+      - 5|Telegram@unvisible_drops
+      - • موقت`
+      - • موقت ۱
+      - • موقت
+      - "| @BugFreeNet ¹⁰"
+      - برای اتصال دائمی جوین شو💠 TelegramID ⌲Express_freevpn 🪩 3
+      - "  6"
+      - "  7"
+      - "@vpnbaz 🍭"
+      - NetAccount 4
+      - Join+Telegram:@Farah_VPN🟣
+      - "@internet_azad2 جوین شید"
+      - ✅🆔 @iphone02016vpn
+      - ‍🔥-@SPEEDS_VPN 3
+      - "@FarazV2ray 3"
+      - "  8"
+      - 60@oneclickvpnkeys 2
+      - "[openproxylist.com] vless-LV"
+      - برای اتصال دائمی جوین شو💠 TelegramID ⌲Express_freevpn 🪩 4
+      - "@TikVPNir"
+      - ⚫️ Telegram- @Canfing_VPN` 2
+      - "  9"
+      - hamedp71::🏴‍☠️
+      - "@TikVPNir 2"
+      - "@freenet_vt`"
+      - 33@proxy_kafee
+      - "@internet_azad2🚀"
+      - "@AzadNet 2"
+      - free_netc 2
+      - free_netc 3
+      - "@internet_azad2 جوین شید🌳"
+      - "@frreenet_vt`"
+      - "@v2freezone"
+      - "@internet_azad2 جوین شو 2"
+      - iran-optimized
+      - "@vpnbaz 🍇"
+      - "@iphone02016vpn 2"
+      - IR 3 Outline_Vpn
+      - YMA 6 @Outline_Vpn
+      - "@v2_mod_shop 🇺🇸"
+      - IR 5 @Outline_Vpn
+      - ‍🔥-@SPEEDS_VPN 4
+      - NetAccount 5
+      - "@vpnbaz 🫟"
+      - "@iphone02016vpn 3"
+      - IR 6 @Outline_Vpn
+      - "  10"
+      - IR 7 @Outline_Vpn
+      - "@FATHER_VPN ⅕"
+      - "@SPEEDS_VPN1-🫆 2"
+      - "@vpnbaz 🐍"
+      - "@iphone02016vpn 4"
+      - All² | @meliproxyy
+      - mmd | ما که وصلیم
+      - t.me/vmessiraan 3
+      - "@SPEEDS_VPN1-🫆 3"
+      - "Channel : @Mrsoulb 🏴🏳 3"
+      - 61@oneclickvpnkeys
+      - "[🇩🇪] [vl-tl-ws] hamedp71"
+      - 9
+      - "@FarazV2ray 4"
+      - "@Vpn_Tehran 🤍 تلگرام"
+      - ⚡Telegram - @prrofile_purple
+      - "@iphone02016vpn 5"
+      - "@freenet_vt` 2"
+      - "@internet_azad2 جوین شو 3"
+      - Duikjffgii-glhhinyg
+      - "@Vpn_Tehran 💘 تلگرام 2"
+      - ⚡Telegram - @prrofile_purple 2
+      - telegram 🌺 dailyv2ry 2
+      - ⚫️ Telegram- @Canfing_VPN` 3
+      - NetAccount 6
+      - 67@oneclickvpnkeys
+      - All³ | @meliproxyy
+      - "[openproxylist.com] vless-IT"
+      - "@meliproxyy 2"
+      - 4|Telegram@unvisible_drops
+      - روز🆔 @iphone02016vpn  سرطان
+      - "@free_netc` 2"
+      - Tel;@Father_vpn ³
+      - telegram 🌈 dailyv2ry
+      - YsZ 5 @Outline_Vpn
+      - "@Vpn_Tehran 💌 وصلیم 3"
+      - "@Vpn_Tehran 💜 وصلیم"
+      - t.me/vmessiraan 4
+      - "  11"
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 7
+      - "@Vpn_Tehran 💌 تلگرام"
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 8
+      - "اگه میخوای قطع نشی جوین شو : 🚏 TelegramID ⌲Express_freevpn 🪩 2"
+      - "@Vpn_Tehran 💘 تلگرام 3"
+      - "  12"
+      - "  13"
+      - "@Vpn_Tehran 🔥 تلگرام 3"
+      - All⁴ | @meliproxyy
+      - "@Vpn_Tehran 🤍 تلگرام 2"
+      - t.me/vmessiraan 5
+      - 32@oneclickvpnkeys
+      - uc7z7oqo موقت ۲
+      - "  14"
+      - 89@oneclickvpnkeys
+      - "@internet_azad2 جوین شید💯"
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 9
+      - "@meliproxyy 3"
+      - "  15"
+      - 104.18.32.47:443
+      - arashvpn-twist-80-188-0
+      - "@Vpn_Tehran 💘 تلگرام 4"
+      - "@Lrnbymaa / TELEGRAM"
+      - "@Vpn_Tehran ❤️‍🔥 تلگرام"
+      - "@AzadNet\ufeff`"
+      - 3|Telegram@unvisible_drops
+      - "@internet_azad2 2"
+      - "@meliproxyy 4"
+      - Telegram:@config_proxy
+      - ""
+      - "@vpnbaz 🚇"
+      - "@VMESSIR4N جهت خرید کانفیگ"
+      - "@free_netc 3"
+      - -turkey
+      - 🇩🇪 -germany
+      - 🇺🇸 -usa
+  - name: پشتیبان (در صورت قطعی) 🧯
+    type: fallback
+    url: https://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 50
+    proxies:
+      - 🇭🇰 香港家宽 194 -77
+      - 🇭🇰 香港家宽 288 -4
+      - 🇭🇰 香港家宽 270 -173
+      - 🇭🇰 香港家宽 308 -117
+      - 🇺🇸 美国 022 -5
+      - 🇯🇵 日本 69 -58
+      - 🇦🇺 悉尼1-anytls协议
+      - 🇦🇺 悉尼2-anytls协议
+      - 🇭🇰 香港1-anytls协议
+      - 🇮🇳 印度2-anytls协议
+      - 🇰🇷 韩国1-anytls协议
+      - 🇸🇬 新加坡3-anytls协议
+      - 🇬🇧 英国3-anytls协议
+      - 🇺🇸 美国1-anytls协议
+      - 🇻🇳 越南1-anytls协议
+      - 🇭🇰 香港顶级-anytls协议
+      - 🇭🇰 香港家宽 299 -119
+      - 🇭🇰 香港家宽 272 -158
+      - 🇺🇸 美国 023 -57
+      - 🇺🇸 美国 064 -126
+      - 🇺🇸 美国03
+      - 距离下次重置剩余：26 天
+      - free_netc `
+      - "C3 : @Xvpnplus_bot | WIFI ✅"
+      - "Channel id: @proxy_kafee 🇫🇷"
+      - Telegram @Ettehad_vpn اتحاد وی‌پی‌ان
+      - "@configraygan+mtn"
+      - "Channel id: @proxy_kafee 🇩🇪"
+      - 148.113.143.102:11201
+      - 🇨🇦 >>@FreakConfig::CA
+      - "Channel id: @proxy_kafee 🇩🇪 2"
+      - 141.95.106.127:11201
+      - "@Vpn_Tehran 🦋 تلگرام"
+      - ⚡Telegram
+      - BESTIIVPNBOT
+      - 🇭🇺
+      - " "
+      - 4Sarina-200
+      - 4Sarina-201
+      - برای اتصال دائمی جوین شو🦚 TelegramID ⌲Express_freevpn 🪩
+      - "Channel id: @proxy_kafee 🇩🇪 3"
+      - YsZ 2 @Outline_Vpn
+      - "Channel id: @proxy_kafee 🇩🇪 4"
+      - 62.133.63.169:37096
+      - "@Vpn_Tehran 💌 وصلیم"
+      - "Channel id: @proxy_kafee 🇩🇪 5"
+      - Telegram @Ettehad_vpn اتحاد وی‌پی‌ان 2
+      - 🇬🇧 >>@outline_vpn::GB
+      - "@configraygan"
+      - IR @Outline_Vpn
+      - QT
+      - ⚡Telegram 2
+      - "@Vpn_Tehran 🔥 تلگرام"
+      - 🇫🇷 >>@outline_vpn::FR
+      - "Channel id: @proxy_kafee 🇫🇷 2"
+      - 🇬🇧 >>@prrofile_purple::GB
+      - "Channel id: @proxy_kafee 🇬🇧"
+      - 163.171.137.76:47395
+      - "Channel id: @proxy_kafee 🇩🇪 6"
+      - 141.95.105.163:11201
+      - MCi-
+      - 82.38.31.176:8080
+      - "@free_netc"
+      - 02@shadowsockskeys
+      - 🇬🇧 GB-82.38.31.176-0423
+      - IR 4 @Outline_Vpn
+      - 82.38.31.184:8080
+      - "  2"
+      - FATHER_VPN
+      - 82.38.31.199:8080
+      - "@free_netc 2"
+      - NetAccount
+      - VayNora
+      - "@free_netc`"
+      - "Channel id: @proxy_kafee 🇳🇱"
+      - NetAccount 2
+      - 57.129.140.88:8388
+      - ⚡Telegram 3
+      - "@FreakConfig"
+      - 3.112.130.53:8313
+      - ⚡Telegram 4
+      - 3.112.130.53:8319
+      - ⚡Telegram 5
+      - 03@shadowsockskeys
+      - 𝒄𝒉𝒂𝒏𝒏𝒆𝒍
+      - 82.38.31.101:8080
+      - "@Vpn_Tehran 🌼 تلگرام"
+      - "@Vpn_Tehran 💌 وصلیم 2"
+      - "@Vpn_Tehran 🦋 تلگرام 2"
+      - "@vpnbaz 🌊"
+      - "  3"
+      - "@FreakConfig 2"
+      - 82.38.31.122:8080
+      - "@filembad"
+      - ⚡︎
+      - "🇬🇧 GB | SS | @v2rayopen #1"
+      - "Telegram:"
+      - 82.38.31.89:8080
+      - برای اتصال دائمی جوین شو💠 TelegramID ⌲Express_freevpn 🪩
+      - "Channel id: @proxy_kafee 🇳🇱 2"
+      - TikVPNir`
+      - برای اتصال دائمی جوین شو🍥 TelegramID ⌲Express_freevpn 🪩
+      - 54.36.174.140:443
+      - "@Vpn_Tehran 🔥 تلگرام 2"
+      - برای اتصال دائمی جوین شو🍥 TelegramID ⌲Express_freevpn 🪩 2
+      - جوین
+      - سرورهای
+      - ⚡Telegram 6
+      - "  4"
+      - FATHER_VPN 2
+      - 🇰🇷 KR-154.90.63.177-0373
+      - SI-192.71.244.150-0396
+      - HR-46.183.184.60-4651
+      - MK-46.183.185.37-0405
+      - 🇰🇷 KR-221.139.79.57-0406
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩
+      - 47@oneclickvpnkeys
+      - "@internet_azad2 جوین شو"
+      - 94.140.0.1:443
+      - IR-@V2rayAlpha-32`
+      - lrnbymaa
+      - t.me/vmessiraan
+      - "Telegram : @BugFreeNet Meli🇮🇷"
+      - برای اتصال دائمی جوین شو🦚 TelegramID ⌲Express_freevpn 🪩 2
+      - "@FarazV2ray"
+      - "@Vpn_Tehran 💛 ایرانسل"
+      - NetAccount 3
+      - 42@oneclickvpnkeys
+      - 42@proxy_kafee
+      - ‍🔥-@SPEEDS_VPN
+      - ‍🔥-@SPEEDS_VPN 2
+      - t.me/vmessiraan 2
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 2
+      - Emadt3ch
+      - "@Lrnbymaa 🪢"
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 3
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 4
+      - "@FarazV2ray 2"
+      - 60@oneclickvpnkeys
+      - "@FATHER_VPN ½"
+      - YMA 4 @Outline_Vpn
+      - برای اتصال دائمی جوین شو💠 TelegramID ⌲Express_freevpn 🪩 2
+      - free_netc
+      - برای اتصال دائمی جوین شو🦚 TelegramID ⌲Express_freevpn 🪩 3
+      - 64@oneclickvpnkeys
+      - 44@oneclickvpnkeys
+      - YsZ 6 @Outline_Vpn
+      - "Channel : @Mrsoulb 🏴🏳"
+      - "[openproxylist.com] vless-IL"
+      - https://t.me/v2rayNplus |🇮🇹
+      - "@meliproxyy"
+      - "@VpnMaan"
+      - "@vpnbaz 🧸"
+      - "@iphone02016vpn"
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 5
+      - 26@oneclickvpnkeys
+      - "@vpnbaz 🍉"
+      - "@SPEEDS_VPN1-🫆"
+      - "Channel : @Mrsoulb 🏴🏳 2"
+      - "اگه میخوای قطع نشی جوین شو : 🚏 TelegramID ⌲Express_freevpn 🪩"
+      - "  5"
+      - ⚫️ Telegram- @Canfing_VPN`
+      - telegram 🌺 dailyv2ry
+      - 46@proxy_kafee
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 6
+      - hamedp71::🇨🇦
+      - "@internet_azad2 3"
+      - "@internet_azad2 4"
+      - 2|Telegram@unvisible_drops
+      - 1|Telegram@unvisible_drops
+      - "@Vpn_Tehran 💘 تلگرام"
+      - 188.114.98.0:443
+      - "@AzadNet"
+      - "@AzadNet\ufeff"
+      - 5|Telegram@unvisible_drops
+      - • موقت`
+      - • موقت ۱
+      - • موقت
+      - "| @BugFreeNet ¹⁰"
+      - برای اتصال دائمی جوین شو💠 TelegramID ⌲Express_freevpn 🪩 3
+      - "  6"
+      - "  7"
+      - "@vpnbaz 🍭"
+      - NetAccount 4
+      - Join+Telegram:@Farah_VPN🟣
+      - "@internet_azad2 جوین شید"
+      - ✅🆔 @iphone02016vpn
+      - ‍🔥-@SPEEDS_VPN 3
+      - "@FarazV2ray 3"
+      - "  8"
+      - 60@oneclickvpnkeys 2
+      - "[openproxylist.com] vless-LV"
+      - برای اتصال دائمی جوین شو💠 TelegramID ⌲Express_freevpn 🪩 4
+      - "@TikVPNir"
+      - ⚫️ Telegram- @Canfing_VPN` 2
+      - "  9"
+      - hamedp71::🏴‍☠️
+      - "@TikVPNir 2"
+      - "@freenet_vt`"
+      - 33@proxy_kafee
+      - "@internet_azad2🚀"
+      - "@AzadNet 2"
+      - free_netc 2
+      - free_netc 3
+      - "@internet_azad2 جوین شید🌳"
+      - "@frreenet_vt`"
+      - "@v2freezone"
+      - "@internet_azad2 جوین شو 2"
+      - iran-optimized
+      - "@vpnbaz 🍇"
+      - "@iphone02016vpn 2"
+      - IR 3 Outline_Vpn
+      - YMA 6 @Outline_Vpn
+      - "@v2_mod_shop 🇺🇸"
+      - IR 5 @Outline_Vpn
+      - ‍🔥-@SPEEDS_VPN 4
+      - NetAccount 5
+      - "@vpnbaz 🫟"
+      - "@iphone02016vpn 3"
+      - IR 6 @Outline_Vpn
+      - "  10"
+      - IR 7 @Outline_Vpn
+      - "@FATHER_VPN ⅕"
+      - "@SPEEDS_VPN1-🫆 2"
+      - "@vpnbaz 🐍"
+      - "@iphone02016vpn 4"
+      - All² | @meliproxyy
+      - mmd | ما که وصلیم
+      - t.me/vmessiraan 3
+      - "@SPEEDS_VPN1-🫆 3"
+      - "Channel : @Mrsoulb 🏴🏳 3"
+      - 61@oneclickvpnkeys
+      - "[🇩🇪] [vl-tl-ws] hamedp71"
+      - 9
+      - "@FarazV2ray 4"
+      - "@Vpn_Tehran 🤍 تلگرام"
+      - ⚡Telegram - @prrofile_purple
+      - "@iphone02016vpn 5"
+      - "@freenet_vt` 2"
+      - "@internet_azad2 جوین شو 3"
+      - Duikjffgii-glhhinyg
+      - "@Vpn_Tehran 💘 تلگرام 2"
+      - ⚡Telegram - @prrofile_purple 2
+      - telegram 🌺 dailyv2ry 2
+      - ⚫️ Telegram- @Canfing_VPN` 3
+      - NetAccount 6
+      - 67@oneclickvpnkeys
+      - All³ | @meliproxyy
+      - "[openproxylist.com] vless-IT"
+      - "@meliproxyy 2"
+      - 4|Telegram@unvisible_drops
+      - روز🆔 @iphone02016vpn  سرطان
+      - "@free_netc` 2"
+      - Tel;@Father_vpn ³
+      - telegram 🌈 dailyv2ry
+      - YsZ 5 @Outline_Vpn
+      - "@Vpn_Tehran 💌 وصلیم 3"
+      - "@Vpn_Tehran 💜 وصلیم"
+      - t.me/vmessiraan 4
+      - "  11"
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 7
+      - "@Vpn_Tehran 💌 تلگرام"
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 8
+      - "اگه میخوای قطع نشی جوین شو : 🚏 TelegramID ⌲Express_freevpn 🪩 2"
+      - "@Vpn_Tehran 💘 تلگرام 3"
+      - "  12"
+      - "  13"
+      - "@Vpn_Tehran 🔥 تلگرام 3"
+      - All⁴ | @meliproxyy
+      - "@Vpn_Tehran 🤍 تلگرام 2"
+      - t.me/vmessiraan 5
+      - 32@oneclickvpnkeys
+      - uc7z7oqo موقت ۲
+      - "  14"
+      - 89@oneclickvpnkeys
+      - "@internet_azad2 جوین شید💯"
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 9
+      - "@meliproxyy 3"
+      - "  15"
+      - 104.18.32.47:443
+      - arashvpn-twist-80-188-0
+      - "@Vpn_Tehran 💘 تلگرام 4"
+      - "@Lrnbymaa / TELEGRAM"
+      - "@Vpn_Tehran ❤️‍🔥 تلگرام"
+      - "@AzadNet\ufeff`"
+      - 3|Telegram@unvisible_drops
+      - "@internet_azad2 2"
+      - "@meliproxyy 4"
+      - Telegram:@config_proxy
+      - ""
+      - "@vpnbaz 🚇"
+      - "@VMESSIR4N جهت خرید کانفیگ"
+      - "@free_netc 3"
+      - -turkey
+      - 🇩🇪 -germany
+      - 🇺🇸 -usa
+  - name: اتصال پایدار 🔗
+    type: url-test
+    url: https://cp.cloudflare.com/generate_204
+    interval: 30
+    tolerance: 50
+    proxies:
+      - خودکار (بهترین پینگ) 🤖
+      - پشتیبان (در صورت قطعی) 🧯
+      - دستی 🤏🏻
+  - name: توزیع بار (پایدار) 🧲
+    type: load-balance
+    strategy: consistent-hashing
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    proxies:
+      - 🇭🇰 香港家宽 194 -77
+      - 🇭🇰 香港家宽 288 -4
+      - 🇭🇰 香港家宽 270 -173
+      - 🇭🇰 香港家宽 308 -117
+      - 🇺🇸 美国 022 -5
+      - 🇯🇵 日本 69 -58
+      - 🇦🇺 悉尼1-anytls协议
+      - 🇦🇺 悉尼2-anytls协议
+      - 🇭🇰 香港1-anytls协议
+      - 🇮🇳 印度2-anytls协议
+      - 🇰🇷 韩国1-anytls协议
+      - 🇸🇬 新加坡3-anytls协议
+      - 🇬🇧 英国3-anytls协议
+      - 🇺🇸 美国1-anytls协议
+      - 🇻🇳 越南1-anytls协议
+      - 🇭🇰 香港顶级-anytls协议
+      - 🇭🇰 香港家宽 299 -119
+      - 🇭🇰 香港家宽 272 -158
+      - 🇺🇸 美国 023 -57
+      - 🇺🇸 美国 064 -126
+      - 🇺🇸 美国03
+      - 距离下次重置剩余：26 天
+      - free_netc `
+      - "C3 : @Xvpnplus_bot | WIFI ✅"
+      - "Channel id: @proxy_kafee 🇫🇷"
+      - Telegram @Ettehad_vpn اتحاد وی‌پی‌ان
+      - "@configraygan+mtn"
+      - "Channel id: @proxy_kafee 🇩🇪"
+      - 148.113.143.102:11201
+      - 🇨🇦 >>@FreakConfig::CA
+      - "Channel id: @proxy_kafee 🇩🇪 2"
+      - 141.95.106.127:11201
+      - "@Vpn_Tehran 🦋 تلگرام"
+      - ⚡Telegram
+      - BESTIIVPNBOT
+      - 🇭🇺
+      - " "
+      - 4Sarina-200
+      - 4Sarina-201
+      - برای اتصال دائمی جوین شو🦚 TelegramID ⌲Express_freevpn 🪩
+      - "Channel id: @proxy_kafee 🇩🇪 3"
+      - YsZ 2 @Outline_Vpn
+      - "Channel id: @proxy_kafee 🇩🇪 4"
+      - 62.133.63.169:37096
+      - "@Vpn_Tehran 💌 وصلیم"
+      - "Channel id: @proxy_kafee 🇩🇪 5"
+      - Telegram @Ettehad_vpn اتحاد وی‌پی‌ان 2
+      - 🇬🇧 >>@outline_vpn::GB
+      - "@configraygan"
+      - IR @Outline_Vpn
+      - QT
+      - ⚡Telegram 2
+      - "@Vpn_Tehran 🔥 تلگرام"
+      - 🇫🇷 >>@outline_vpn::FR
+      - "Channel id: @proxy_kafee 🇫🇷 2"
+      - 🇬🇧 >>@prrofile_purple::GB
+      - "Channel id: @proxy_kafee 🇬🇧"
+      - 163.171.137.76:47395
+      - "Channel id: @proxy_kafee 🇩🇪 6"
+      - 141.95.105.163:11201
+      - MCi-
+      - 82.38.31.176:8080
+      - "@free_netc"
+      - 02@shadowsockskeys
+      - 🇬🇧 GB-82.38.31.176-0423
+      - IR 4 @Outline_Vpn
+      - 82.38.31.184:8080
+      - "  2"
+      - FATHER_VPN
+      - 82.38.31.199:8080
+      - "@free_netc 2"
+      - NetAccount
+      - VayNora
+      - "@free_netc`"
+      - "Channel id: @proxy_kafee 🇳🇱"
+      - NetAccount 2
+      - 57.129.140.88:8388
+      - ⚡Telegram 3
+      - "@FreakConfig"
+      - 3.112.130.53:8313
+      - ⚡Telegram 4
+      - 3.112.130.53:8319
+      - ⚡Telegram 5
+      - 03@shadowsockskeys
+      - 𝒄𝒉𝒂𝒏𝒏𝒆𝒍
+      - 82.38.31.101:8080
+      - "@Vpn_Tehran 🌼 تلگرام"
+      - "@Vpn_Tehran 💌 وصلیم 2"
+      - "@Vpn_Tehran 🦋 تلگرام 2"
+      - "@vpnbaz 🌊"
+      - "  3"
+      - "@FreakConfig 2"
+      - 82.38.31.122:8080
+      - "@filembad"
+      - ⚡︎
+      - "🇬🇧 GB | SS | @v2rayopen #1"
+      - "Telegram:"
+      - 82.38.31.89:8080
+      - برای اتصال دائمی جوین شو💠 TelegramID ⌲Express_freevpn 🪩
+      - "Channel id: @proxy_kafee 🇳🇱 2"
+      - TikVPNir`
+      - برای اتصال دائمی جوین شو🍥 TelegramID ⌲Express_freevpn 🪩
+      - 54.36.174.140:443
+      - "@Vpn_Tehran 🔥 تلگرام 2"
+      - برای اتصال دائمی جوین شو🍥 TelegramID ⌲Express_freevpn 🪩 2
+      - جوین
+      - سرورهای
+      - ⚡Telegram 6
+      - "  4"
+      - FATHER_VPN 2
+      - 🇰🇷 KR-154.90.63.177-0373
+      - SI-192.71.244.150-0396
+      - HR-46.183.184.60-4651
+      - MK-46.183.185.37-0405
+      - 🇰🇷 KR-221.139.79.57-0406
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩
+      - 47@oneclickvpnkeys
+      - "@internet_azad2 جوین شو"
+      - 94.140.0.1:443
+      - IR-@V2rayAlpha-32`
+      - lrnbymaa
+      - t.me/vmessiraan
+      - "Telegram : @BugFreeNet Meli🇮🇷"
+      - برای اتصال دائمی جوین شو🦚 TelegramID ⌲Express_freevpn 🪩 2
+      - "@FarazV2ray"
+      - "@Vpn_Tehran 💛 ایرانسل"
+      - NetAccount 3
+      - 42@oneclickvpnkeys
+      - 42@proxy_kafee
+      - ‍🔥-@SPEEDS_VPN
+      - ‍🔥-@SPEEDS_VPN 2
+      - t.me/vmessiraan 2
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 2
+      - Emadt3ch
+      - "@Lrnbymaa 🪢"
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 3
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 4
+      - "@FarazV2ray 2"
+      - 60@oneclickvpnkeys
+      - "@FATHER_VPN ½"
+      - YMA 4 @Outline_Vpn
+      - برای اتصال دائمی جوین شو💠 TelegramID ⌲Express_freevpn 🪩 2
+      - free_netc
+      - برای اتصال دائمی جوین شو🦚 TelegramID ⌲Express_freevpn 🪩 3
+      - 64@oneclickvpnkeys
+      - 44@oneclickvpnkeys
+      - YsZ 6 @Outline_Vpn
+      - "Channel : @Mrsoulb 🏴🏳"
+      - "[openproxylist.com] vless-IL"
+      - https://t.me/v2rayNplus |🇮🇹
+      - "@meliproxyy"
+      - "@VpnMaan"
+      - "@vpnbaz 🧸"
+      - "@iphone02016vpn"
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 5
+      - 26@oneclickvpnkeys
+      - "@vpnbaz 🍉"
+      - "@SPEEDS_VPN1-🫆"
+      - "Channel : @Mrsoulb 🏴🏳 2"
+      - "اگه میخوای قطع نشی جوین شو : 🚏 TelegramID ⌲Express_freevpn 🪩"
+      - "  5"
+      - ⚫️ Telegram- @Canfing_VPN`
+      - telegram 🌺 dailyv2ry
+      - 46@proxy_kafee
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 6
+      - hamedp71::🇨🇦
+      - "@internet_azad2 3"
+      - "@internet_azad2 4"
+      - 2|Telegram@unvisible_drops
+      - 1|Telegram@unvisible_drops
+      - "@Vpn_Tehran 💘 تلگرام"
+      - 188.114.98.0:443
+      - "@AzadNet"
+      - "@AzadNet\ufeff"
+      - 5|Telegram@unvisible_drops
+      - • موقت`
+      - • موقت ۱
+      - • موقت
+      - "| @BugFreeNet ¹⁰"
+      - برای اتصال دائمی جوین شو💠 TelegramID ⌲Express_freevpn 🪩 3
+      - "  6"
+      - "  7"
+      - "@vpnbaz 🍭"
+      - NetAccount 4
+      - Join+Telegram:@Farah_VPN🟣
+      - "@internet_azad2 جوین شید"
+      - ✅🆔 @iphone02016vpn
+      - ‍🔥-@SPEEDS_VPN 3
+      - "@FarazV2ray 3"
+      - "  8"
+      - 60@oneclickvpnkeys 2
+      - "[openproxylist.com] vless-LV"
+      - برای اتصال دائمی جوین شو💠 TelegramID ⌲Express_freevpn 🪩 4
+      - "@TikVPNir"
+      - ⚫️ Telegram- @Canfing_VPN` 2
+      - "  9"
+      - hamedp71::🏴‍☠️
+      - "@TikVPNir 2"
+      - "@freenet_vt`"
+      - 33@proxy_kafee
+      - "@internet_azad2🚀"
+      - "@AzadNet 2"
+      - free_netc 2
+      - free_netc 3
+      - "@internet_azad2 جوین شید🌳"
+      - "@frreenet_vt`"
+      - "@v2freezone"
+      - "@internet_azad2 جوین شو 2"
+      - iran-optimized
+      - "@vpnbaz 🍇"
+      - "@iphone02016vpn 2"
+      - IR 3 Outline_Vpn
+      - YMA 6 @Outline_Vpn
+      - "@v2_mod_shop 🇺🇸"
+      - IR 5 @Outline_Vpn
+      - ‍🔥-@SPEEDS_VPN 4
+      - NetAccount 5
+      - "@vpnbaz 🫟"
+      - "@iphone02016vpn 3"
+      - IR 6 @Outline_Vpn
+      - "  10"
+      - IR 7 @Outline_Vpn
+      - "@FATHER_VPN ⅕"
+      - "@SPEEDS_VPN1-🫆 2"
+      - "@vpnbaz 🐍"
+      - "@iphone02016vpn 4"
+      - All² | @meliproxyy
+      - mmd | ما که وصلیم
+      - t.me/vmessiraan 3
+      - "@SPEEDS_VPN1-🫆 3"
+      - "Channel : @Mrsoulb 🏴🏳 3"
+      - 61@oneclickvpnkeys
+      - "[🇩🇪] [vl-tl-ws] hamedp71"
+      - 9
+      - "@FarazV2ray 4"
+      - "@Vpn_Tehran 🤍 تلگرام"
+      - ⚡Telegram - @prrofile_purple
+      - "@iphone02016vpn 5"
+      - "@freenet_vt` 2"
+      - "@internet_azad2 جوین شو 3"
+      - Duikjffgii-glhhinyg
+      - "@Vpn_Tehran 💘 تلگرام 2"
+      - ⚡Telegram - @prrofile_purple 2
+      - telegram 🌺 dailyv2ry 2
+      - ⚫️ Telegram- @Canfing_VPN` 3
+      - NetAccount 6
+      - 67@oneclickvpnkeys
+      - All³ | @meliproxyy
+      - "[openproxylist.com] vless-IT"
+      - "@meliproxyy 2"
+      - 4|Telegram@unvisible_drops
+      - روز🆔 @iphone02016vpn  سرطان
+      - "@free_netc` 2"
+      - Tel;@Father_vpn ³
+      - telegram 🌈 dailyv2ry
+      - YsZ 5 @Outline_Vpn
+      - "@Vpn_Tehran 💌 وصلیم 3"
+      - "@Vpn_Tehran 💜 وصلیم"
+      - t.me/vmessiraan 4
+      - "  11"
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 7
+      - "@Vpn_Tehran 💌 تلگرام"
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 8
+      - "اگه میخوای قطع نشی جوین شو : 🚏 TelegramID ⌲Express_freevpn 🪩 2"
+      - "@Vpn_Tehran 💘 تلگرام 3"
+      - "  12"
+      - "  13"
+      - "@Vpn_Tehran 🔥 تلگرام 3"
+      - All⁴ | @meliproxyy
+      - "@Vpn_Tehran 🤍 تلگرام 2"
+      - t.me/vmessiraan 5
+      - 32@oneclickvpnkeys
+      - uc7z7oqo موقت ۲
+      - "  14"
+      - 89@oneclickvpnkeys
+      - "@internet_azad2 جوین شید💯"
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 9
+      - "@meliproxyy 3"
+      - "  15"
+      - 104.18.32.47:443
+      - arashvpn-twist-80-188-0
+      - "@Vpn_Tehran 💘 تلگرام 4"
+      - "@Lrnbymaa / TELEGRAM"
+      - "@Vpn_Tehran ❤️‍🔥 تلگرام"
+      - "@AzadNet\ufeff`"
+      - 3|Telegram@unvisible_drops
+      - "@internet_azad2 2"
+      - "@meliproxyy 4"
+      - Telegram:@config_proxy
+      - ""
+      - "@vpnbaz 🚇"
+      - "@VMESSIR4N جهت خرید کانفیگ"
+      - "@free_netc 3"
+      - -turkey
+      - 🇩🇪 -germany
+      - 🇺🇸 -usa
+  - name: توزیع بار (گردشی) 🔁
+    type: load-balance
+    strategy: consistent-hashing
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    proxies:
+      - 🇭🇰 香港家宽 194 -77
+      - 🇭🇰 香港家宽 288 -4
+      - 🇭🇰 香港家宽 270 -173
+      - 🇭🇰 香港家宽 308 -117
+      - 🇺🇸 美国 022 -5
+      - 🇯🇵 日本 69 -58
+      - 🇦🇺 悉尼1-anytls协议
+      - 🇦🇺 悉尼2-anytls协议
+      - 🇭🇰 香港1-anytls协议
+      - 🇮🇳 印度2-anytls协议
+      - 🇰🇷 韩国1-anytls协议
+      - 🇸🇬 新加坡3-anytls协议
+      - 🇬🇧 英国3-anytls协议
+      - 🇺🇸 美国1-anytls协议
+      - 🇻🇳 越南1-anytls协议
+      - 🇭🇰 香港顶级-anytls协议
+      - 🇭🇰 香港家宽 299 -119
+      - 🇭🇰 香港家宽 272 -158
+      - 🇺🇸 美国 023 -57
+      - 🇺🇸 美国 064 -126
+      - 🇺🇸 美国03
+      - 距离下次重置剩余：26 天
+      - free_netc `
+      - "C3 : @Xvpnplus_bot | WIFI ✅"
+      - "Channel id: @proxy_kafee 🇫🇷"
+      - Telegram @Ettehad_vpn اتحاد وی‌پی‌ان
+      - "@configraygan+mtn"
+      - "Channel id: @proxy_kafee 🇩🇪"
+      - 148.113.143.102:11201
+      - 🇨🇦 >>@FreakConfig::CA
+      - "Channel id: @proxy_kafee 🇩🇪 2"
+      - 141.95.106.127:11201
+      - "@Vpn_Tehran 🦋 تلگرام"
+      - ⚡Telegram
+      - BESTIIVPNBOT
+      - 🇭🇺
+      - " "
+      - 4Sarina-200
+      - 4Sarina-201
+      - برای اتصال دائمی جوین شو🦚 TelegramID ⌲Express_freevpn 🪩
+      - "Channel id: @proxy_kafee 🇩🇪 3"
+      - YsZ 2 @Outline_Vpn
+      - "Channel id: @proxy_kafee 🇩🇪 4"
+      - 62.133.63.169:37096
+      - "@Vpn_Tehran 💌 وصلیم"
+      - "Channel id: @proxy_kafee 🇩🇪 5"
+      - Telegram @Ettehad_vpn اتحاد وی‌پی‌ان 2
+      - 🇬🇧 >>@outline_vpn::GB
+      - "@configraygan"
+      - IR @Outline_Vpn
+      - QT
+      - ⚡Telegram 2
+      - "@Vpn_Tehran 🔥 تلگرام"
+      - 🇫🇷 >>@outline_vpn::FR
+      - "Channel id: @proxy_kafee 🇫🇷 2"
+      - 🇬🇧 >>@prrofile_purple::GB
+      - "Channel id: @proxy_kafee 🇬🇧"
+      - 163.171.137.76:47395
+      - "Channel id: @proxy_kafee 🇩🇪 6"
+      - 141.95.105.163:11201
+      - MCi-
+      - 82.38.31.176:8080
+      - "@free_netc"
+      - 02@shadowsockskeys
+      - 🇬🇧 GB-82.38.31.176-0423
+      - IR 4 @Outline_Vpn
+      - 82.38.31.184:8080
+      - "  2"
+      - FATHER_VPN
+      - 82.38.31.199:8080
+      - "@free_netc 2"
+      - NetAccount
+      - VayNora
+      - "@free_netc`"
+      - "Channel id: @proxy_kafee 🇳🇱"
+      - NetAccount 2
+      - 57.129.140.88:8388
+      - ⚡Telegram 3
+      - "@FreakConfig"
+      - 3.112.130.53:8313
+      - ⚡Telegram 4
+      - 3.112.130.53:8319
+      - ⚡Telegram 5
+      - 03@shadowsockskeys
+      - 𝒄𝒉𝒂𝒏𝒏𝒆𝒍
+      - 82.38.31.101:8080
+      - "@Vpn_Tehran 🌼 تلگرام"
+      - "@Vpn_Tehran 💌 وصلیم 2"
+      - "@Vpn_Tehran 🦋 تلگرام 2"
+      - "@vpnbaz 🌊"
+      - "  3"
+      - "@FreakConfig 2"
+      - 82.38.31.122:8080
+      - "@filembad"
+      - ⚡︎
+      - "🇬🇧 GB | SS | @v2rayopen #1"
+      - "Telegram:"
+      - 82.38.31.89:8080
+      - برای اتصال دائمی جوین شو💠 TelegramID ⌲Express_freevpn 🪩
+      - "Channel id: @proxy_kafee 🇳🇱 2"
+      - TikVPNir`
+      - برای اتصال دائمی جوین شو🍥 TelegramID ⌲Express_freevpn 🪩
+      - 54.36.174.140:443
+      - "@Vpn_Tehran 🔥 تلگرام 2"
+      - برای اتصال دائمی جوین شو🍥 TelegramID ⌲Express_freevpn 🪩 2
+      - جوین
+      - سرورهای
+      - ⚡Telegram 6
+      - "  4"
+      - FATHER_VPN 2
+      - 🇰🇷 KR-154.90.63.177-0373
+      - SI-192.71.244.150-0396
+      - HR-46.183.184.60-4651
+      - MK-46.183.185.37-0405
+      - 🇰🇷 KR-221.139.79.57-0406
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩
+      - 47@oneclickvpnkeys
+      - "@internet_azad2 جوین شو"
+      - 94.140.0.1:443
+      - IR-@V2rayAlpha-32`
+      - lrnbymaa
+      - t.me/vmessiraan
+      - "Telegram : @BugFreeNet Meli🇮🇷"
+      - برای اتصال دائمی جوین شو🦚 TelegramID ⌲Express_freevpn 🪩 2
+      - "@FarazV2ray"
+      - "@Vpn_Tehran 💛 ایرانسل"
+      - NetAccount 3
+      - 42@oneclickvpnkeys
+      - 42@proxy_kafee
+      - ‍🔥-@SPEEDS_VPN
+      - ‍🔥-@SPEEDS_VPN 2
+      - t.me/vmessiraan 2
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 2
+      - Emadt3ch
+      - "@Lrnbymaa 🪢"
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 3
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 4
+      - "@FarazV2ray 2"
+      - 60@oneclickvpnkeys
+      - "@FATHER_VPN ½"
+      - YMA 4 @Outline_Vpn
+      - برای اتصال دائمی جوین شو💠 TelegramID ⌲Express_freevpn 🪩 2
+      - free_netc
+      - برای اتصال دائمی جوین شو🦚 TelegramID ⌲Express_freevpn 🪩 3
+      - 64@oneclickvpnkeys
+      - 44@oneclickvpnkeys
+      - YsZ 6 @Outline_Vpn
+      - "Channel : @Mrsoulb 🏴🏳"
+      - "[openproxylist.com] vless-IL"
+      - https://t.me/v2rayNplus |🇮🇹
+      - "@meliproxyy"
+      - "@VpnMaan"
+      - "@vpnbaz 🧸"
+      - "@iphone02016vpn"
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 5
+      - 26@oneclickvpnkeys
+      - "@vpnbaz 🍉"
+      - "@SPEEDS_VPN1-🫆"
+      - "Channel : @Mrsoulb 🏴🏳 2"
+      - "اگه میخوای قطع نشی جوین شو : 🚏 TelegramID ⌲Express_freevpn 🪩"
+      - "  5"
+      - ⚫️ Telegram- @Canfing_VPN`
+      - telegram 🌺 dailyv2ry
+      - 46@proxy_kafee
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 6
+      - hamedp71::🇨🇦
+      - "@internet_azad2 3"
+      - "@internet_azad2 4"
+      - 2|Telegram@unvisible_drops
+      - 1|Telegram@unvisible_drops
+      - "@Vpn_Tehran 💘 تلگرام"
+      - 188.114.98.0:443
+      - "@AzadNet"
+      - "@AzadNet\ufeff"
+      - 5|Telegram@unvisible_drops
+      - • موقت`
+      - • موقت ۱
+      - • موقت
+      - "| @BugFreeNet ¹⁰"
+      - برای اتصال دائمی جوین شو💠 TelegramID ⌲Express_freevpn 🪩 3
+      - "  6"
+      - "  7"
+      - "@vpnbaz 🍭"
+      - NetAccount 4
+      - Join+Telegram:@Farah_VPN🟣
+      - "@internet_azad2 جوین شید"
+      - ✅🆔 @iphone02016vpn
+      - ‍🔥-@SPEEDS_VPN 3
+      - "@FarazV2ray 3"
+      - "  8"
+      - 60@oneclickvpnkeys 2
+      - "[openproxylist.com] vless-LV"
+      - برای اتصال دائمی جوین شو💠 TelegramID ⌲Express_freevpn 🪩 4
+      - "@TikVPNir"
+      - ⚫️ Telegram- @Canfing_VPN` 2
+      - "  9"
+      - hamedp71::🏴‍☠️
+      - "@TikVPNir 2"
+      - "@freenet_vt`"
+      - 33@proxy_kafee
+      - "@internet_azad2🚀"
+      - "@AzadNet 2"
+      - free_netc 2
+      - free_netc 3
+      - "@internet_azad2 جوین شید🌳"
+      - "@frreenet_vt`"
+      - "@v2freezone"
+      - "@internet_azad2 جوین شو 2"
+      - iran-optimized
+      - "@vpnbaz 🍇"
+      - "@iphone02016vpn 2"
+      - IR 3 Outline_Vpn
+      - YMA 6 @Outline_Vpn
+      - "@v2_mod_shop 🇺🇸"
+      - IR 5 @Outline_Vpn
+      - ‍🔥-@SPEEDS_VPN 4
+      - NetAccount 5
+      - "@vpnbaz 🫟"
+      - "@iphone02016vpn 3"
+      - IR 6 @Outline_Vpn
+      - "  10"
+      - IR 7 @Outline_Vpn
+      - "@FATHER_VPN ⅕"
+      - "@SPEEDS_VPN1-🫆 2"
+      - "@vpnbaz 🐍"
+      - "@iphone02016vpn 4"
+      - All² | @meliproxyy
+      - mmd | ما که وصلیم
+      - t.me/vmessiraan 3
+      - "@SPEEDS_VPN1-🫆 3"
+      - "Channel : @Mrsoulb 🏴🏳 3"
+      - 61@oneclickvpnkeys
+      - "[🇩🇪] [vl-tl-ws] hamedp71"
+      - 9
+      - "@FarazV2ray 4"
+      - "@Vpn_Tehran 🤍 تلگرام"
+      - ⚡Telegram - @prrofile_purple
+      - "@iphone02016vpn 5"
+      - "@freenet_vt` 2"
+      - "@internet_azad2 جوین شو 3"
+      - Duikjffgii-glhhinyg
+      - "@Vpn_Tehran 💘 تلگرام 2"
+      - ⚡Telegram - @prrofile_purple 2
+      - telegram 🌺 dailyv2ry 2
+      - ⚫️ Telegram- @Canfing_VPN` 3
+      - NetAccount 6
+      - 67@oneclickvpnkeys
+      - All³ | @meliproxyy
+      - "[openproxylist.com] vless-IT"
+      - "@meliproxyy 2"
+      - 4|Telegram@unvisible_drops
+      - روز🆔 @iphone02016vpn  سرطان
+      - "@free_netc` 2"
+      - Tel;@Father_vpn ³
+      - telegram 🌈 dailyv2ry
+      - YsZ 5 @Outline_Vpn
+      - "@Vpn_Tehran 💌 وصلیم 3"
+      - "@Vpn_Tehran 💜 وصلیم"
+      - t.me/vmessiraan 4
+      - "  11"
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 7
+      - "@Vpn_Tehran 💌 تلگرام"
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 8
+      - "اگه میخوای قطع نشی جوین شو : 🚏 TelegramID ⌲Express_freevpn 🪩 2"
+      - "@Vpn_Tehran 💘 تلگرام 3"
+      - "  12"
+      - "  13"
+      - "@Vpn_Tehran 🔥 تلگرام 3"
+      - All⁴ | @meliproxyy
+      - "@Vpn_Tehran 🤍 تلگرام 2"
+      - t.me/vmessiraan 5
+      - 32@oneclickvpnkeys
+      - uc7z7oqo موقت ۲
+      - "  14"
+      - 89@oneclickvpnkeys
+      - "@internet_azad2 جوین شید💯"
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 9
+      - "@meliproxyy 3"
+      - "  15"
+      - 104.18.32.47:443
+      - arashvpn-twist-80-188-0
+      - "@Vpn_Tehran 💘 تلگرام 4"
+      - "@Lrnbymaa / TELEGRAM"
+      - "@Vpn_Tehran ❤️‍🔥 تلگرام"
+      - "@AzadNet\ufeff`"
+      - 3|Telegram@unvisible_drops
+      - "@internet_azad2 2"
+      - "@meliproxyy 4"
+      - Telegram:@config_proxy
+      - ""
+      - "@vpnbaz 🚇"
+      - "@VMESSIR4N جهت خرید کانفیگ"
+      - "@free_netc 3"
+      - -turkey
+      - 🇩🇪 -germany
+      - 🇺🇸 -usa
+  - name: توزیع بار (موقت) ⏳
+    type: load-balance
+    strategy: consistent-hashing
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    proxies:
+      - 🇭🇰 香港家宽 194 -77
+      - 🇭🇰 香港家宽 288 -4
+      - 🇭🇰 香港家宽 270 -173
+      - 🇭🇰 香港家宽 308 -117
+      - 🇺🇸 美国 022 -5
+      - 🇯🇵 日本 69 -58
+      - 🇦🇺 悉尼1-anytls协议
+      - 🇦🇺 悉尼2-anytls协议
+      - 🇭🇰 香港1-anytls协议
+      - 🇮🇳 印度2-anytls协议
+      - 🇰🇷 韩国1-anytls协议
+      - 🇸🇬 新加坡3-anytls协议
+      - 🇬🇧 英国3-anytls协议
+      - 🇺🇸 美国1-anytls协议
+      - 🇻🇳 越南1-anytls协议
+      - 🇭🇰 香港顶级-anytls协议
+      - 🇭🇰 香港家宽 299 -119
+      - 🇭🇰 香港家宽 272 -158
+      - 🇺🇸 美国 023 -57
+      - 🇺🇸 美国 064 -126
+      - 🇺🇸 美国03
+      - 距离下次重置剩余：26 天
+      - free_netc `
+      - "C3 : @Xvpnplus_bot | WIFI ✅"
+      - "Channel id: @proxy_kafee 🇫🇷"
+      - Telegram @Ettehad_vpn اتحاد وی‌پی‌ان
+      - "@configraygan+mtn"
+      - "Channel id: @proxy_kafee 🇩🇪"
+      - 148.113.143.102:11201
+      - 🇨🇦 >>@FreakConfig::CA
+      - "Channel id: @proxy_kafee 🇩🇪 2"
+      - 141.95.106.127:11201
+      - "@Vpn_Tehran 🦋 تلگرام"
+      - ⚡Telegram
+      - BESTIIVPNBOT
+      - 🇭🇺
+      - " "
+      - 4Sarina-200
+      - 4Sarina-201
+      - برای اتصال دائمی جوین شو🦚 TelegramID ⌲Express_freevpn 🪩
+      - "Channel id: @proxy_kafee 🇩🇪 3"
+      - YsZ 2 @Outline_Vpn
+      - "Channel id: @proxy_kafee 🇩🇪 4"
+      - 62.133.63.169:37096
+      - "@Vpn_Tehran 💌 وصلیم"
+      - "Channel id: @proxy_kafee 🇩🇪 5"
+      - Telegram @Ettehad_vpn اتحاد وی‌پی‌ان 2
+      - 🇬🇧 >>@outline_vpn::GB
+      - "@configraygan"
+      - IR @Outline_Vpn
+      - QT
+      - ⚡Telegram 2
+      - "@Vpn_Tehran 🔥 تلگرام"
+      - 🇫🇷 >>@outline_vpn::FR
+      - "Channel id: @proxy_kafee 🇫🇷 2"
+      - 🇬🇧 >>@prrofile_purple::GB
+      - "Channel id: @proxy_kafee 🇬🇧"
+      - 163.171.137.76:47395
+      - "Channel id: @proxy_kafee 🇩🇪 6"
+      - 141.95.105.163:11201
+      - MCi-
+      - 82.38.31.176:8080
+      - "@free_netc"
+      - 02@shadowsockskeys
+      - 🇬🇧 GB-82.38.31.176-0423
+      - IR 4 @Outline_Vpn
+      - 82.38.31.184:8080
+      - "  2"
+      - FATHER_VPN
+      - 82.38.31.199:8080
+      - "@free_netc 2"
+      - NetAccount
+      - VayNora
+      - "@free_netc`"
+      - "Channel id: @proxy_kafee 🇳🇱"
+      - NetAccount 2
+      - 57.129.140.88:8388
+      - ⚡Telegram 3
+      - "@FreakConfig"
+      - 3.112.130.53:8313
+      - ⚡Telegram 4
+      - 3.112.130.53:8319
+      - ⚡Telegram 5
+      - 03@shadowsockskeys
+      - 𝒄𝒉𝒂𝒏𝒏𝒆𝒍
+      - 82.38.31.101:8080
+      - "@Vpn_Tehran 🌼 تلگرام"
+      - "@Vpn_Tehran 💌 وصلیم 2"
+      - "@Vpn_Tehran 🦋 تلگرام 2"
+      - "@vpnbaz 🌊"
+      - "  3"
+      - "@FreakConfig 2"
+      - 82.38.31.122:8080
+      - "@filembad"
+      - ⚡︎
+      - "🇬🇧 GB | SS | @v2rayopen #1"
+      - "Telegram:"
+      - 82.38.31.89:8080
+      - برای اتصال دائمی جوین شو💠 TelegramID ⌲Express_freevpn 🪩
+      - "Channel id: @proxy_kafee 🇳🇱 2"
+      - TikVPNir`
+      - برای اتصال دائمی جوین شو🍥 TelegramID ⌲Express_freevpn 🪩
+      - 54.36.174.140:443
+      - "@Vpn_Tehran 🔥 تلگرام 2"
+      - برای اتصال دائمی جوین شو🍥 TelegramID ⌲Express_freevpn 🪩 2
+      - جوین
+      - سرورهای
+      - ⚡Telegram 6
+      - "  4"
+      - FATHER_VPN 2
+      - 🇰🇷 KR-154.90.63.177-0373
+      - SI-192.71.244.150-0396
+      - HR-46.183.184.60-4651
+      - MK-46.183.185.37-0405
+      - 🇰🇷 KR-221.139.79.57-0406
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩
+      - 47@oneclickvpnkeys
+      - "@internet_azad2 جوین شو"
+      - 94.140.0.1:443
+      - IR-@V2rayAlpha-32`
+      - lrnbymaa
+      - t.me/vmessiraan
+      - "Telegram : @BugFreeNet Meli🇮🇷"
+      - برای اتصال دائمی جوین شو🦚 TelegramID ⌲Express_freevpn 🪩 2
+      - "@FarazV2ray"
+      - "@Vpn_Tehran 💛 ایرانسل"
+      - NetAccount 3
+      - 42@oneclickvpnkeys
+      - 42@proxy_kafee
+      - ‍🔥-@SPEEDS_VPN
+      - ‍🔥-@SPEEDS_VPN 2
+      - t.me/vmessiraan 2
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 2
+      - Emadt3ch
+      - "@Lrnbymaa 🪢"
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 3
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 4
+      - "@FarazV2ray 2"
+      - 60@oneclickvpnkeys
+      - "@FATHER_VPN ½"
+      - YMA 4 @Outline_Vpn
+      - برای اتصال دائمی جوین شو💠 TelegramID ⌲Express_freevpn 🪩 2
+      - free_netc
+      - برای اتصال دائمی جوین شو🦚 TelegramID ⌲Express_freevpn 🪩 3
+      - 64@oneclickvpnkeys
+      - 44@oneclickvpnkeys
+      - YsZ 6 @Outline_Vpn
+      - "Channel : @Mrsoulb 🏴🏳"
+      - "[openproxylist.com] vless-IL"
+      - https://t.me/v2rayNplus |🇮🇹
+      - "@meliproxyy"
+      - "@VpnMaan"
+      - "@vpnbaz 🧸"
+      - "@iphone02016vpn"
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 5
+      - 26@oneclickvpnkeys
+      - "@vpnbaz 🍉"
+      - "@SPEEDS_VPN1-🫆"
+      - "Channel : @Mrsoulb 🏴🏳 2"
+      - "اگه میخوای قطع نشی جوین شو : 🚏 TelegramID ⌲Express_freevpn 🪩"
+      - "  5"
+      - ⚫️ Telegram- @Canfing_VPN`
+      - telegram 🌺 dailyv2ry
+      - 46@proxy_kafee
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 6
+      - hamedp71::🇨🇦
+      - "@internet_azad2 3"
+      - "@internet_azad2 4"
+      - 2|Telegram@unvisible_drops
+      - 1|Telegram@unvisible_drops
+      - "@Vpn_Tehran 💘 تلگرام"
+      - 188.114.98.0:443
+      - "@AzadNet"
+      - "@AzadNet\ufeff"
+      - 5|Telegram@unvisible_drops
+      - • موقت`
+      - • موقت ۱
+      - • موقت
+      - "| @BugFreeNet ¹⁰"
+      - برای اتصال دائمی جوین شو💠 TelegramID ⌲Express_freevpn 🪩 3
+      - "  6"
+      - "  7"
+      - "@vpnbaz 🍭"
+      - NetAccount 4
+      - Join+Telegram:@Farah_VPN🟣
+      - "@internet_azad2 جوین شید"
+      - ✅🆔 @iphone02016vpn
+      - ‍🔥-@SPEEDS_VPN 3
+      - "@FarazV2ray 3"
+      - "  8"
+      - 60@oneclickvpnkeys 2
+      - "[openproxylist.com] vless-LV"
+      - برای اتصال دائمی جوین شو💠 TelegramID ⌲Express_freevpn 🪩 4
+      - "@TikVPNir"
+      - ⚫️ Telegram- @Canfing_VPN` 2
+      - "  9"
+      - hamedp71::🏴‍☠️
+      - "@TikVPNir 2"
+      - "@freenet_vt`"
+      - 33@proxy_kafee
+      - "@internet_azad2🚀"
+      - "@AzadNet 2"
+      - free_netc 2
+      - free_netc 3
+      - "@internet_azad2 جوین شید🌳"
+      - "@frreenet_vt`"
+      - "@v2freezone"
+      - "@internet_azad2 جوین شو 2"
+      - iran-optimized
+      - "@vpnbaz 🍇"
+      - "@iphone02016vpn 2"
+      - IR 3 Outline_Vpn
+      - YMA 6 @Outline_Vpn
+      - "@v2_mod_shop 🇺🇸"
+      - IR 5 @Outline_Vpn
+      - ‍🔥-@SPEEDS_VPN 4
+      - NetAccount 5
+      - "@vpnbaz 🫟"
+      - "@iphone02016vpn 3"
+      - IR 6 @Outline_Vpn
+      - "  10"
+      - IR 7 @Outline_Vpn
+      - "@FATHER_VPN ⅕"
+      - "@SPEEDS_VPN1-🫆 2"
+      - "@vpnbaz 🐍"
+      - "@iphone02016vpn 4"
+      - All² | @meliproxyy
+      - mmd | ما که وصلیم
+      - t.me/vmessiraan 3
+      - "@SPEEDS_VPN1-🫆 3"
+      - "Channel : @Mrsoulb 🏴🏳 3"
+      - 61@oneclickvpnkeys
+      - "[🇩🇪] [vl-tl-ws] hamedp71"
+      - 9
+      - "@FarazV2ray 4"
+      - "@Vpn_Tehran 🤍 تلگرام"
+      - ⚡Telegram - @prrofile_purple
+      - "@iphone02016vpn 5"
+      - "@freenet_vt` 2"
+      - "@internet_azad2 جوین شو 3"
+      - Duikjffgii-glhhinyg
+      - "@Vpn_Tehran 💘 تلگرام 2"
+      - ⚡Telegram - @prrofile_purple 2
+      - telegram 🌺 dailyv2ry 2
+      - ⚫️ Telegram- @Canfing_VPN` 3
+      - NetAccount 6
+      - 67@oneclickvpnkeys
+      - All³ | @meliproxyy
+      - "[openproxylist.com] vless-IT"
+      - "@meliproxyy 2"
+      - 4|Telegram@unvisible_drops
+      - روز🆔 @iphone02016vpn  سرطان
+      - "@free_netc` 2"
+      - Tel;@Father_vpn ³
+      - telegram 🌈 dailyv2ry
+      - YsZ 5 @Outline_Vpn
+      - "@Vpn_Tehran 💌 وصلیم 3"
+      - "@Vpn_Tehran 💜 وصلیم"
+      - t.me/vmessiraan 4
+      - "  11"
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 7
+      - "@Vpn_Tehran 💌 تلگرام"
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 8
+      - "اگه میخوای قطع نشی جوین شو : 🚏 TelegramID ⌲Express_freevpn 🪩 2"
+      - "@Vpn_Tehran 💘 تلگرام 3"
+      - "  12"
+      - "  13"
+      - "@Vpn_Tehran 🔥 تلگرام 3"
+      - All⁴ | @meliproxyy
+      - "@Vpn_Tehran 🤍 تلگرام 2"
+      - t.me/vmessiraan 5
+      - 32@oneclickvpnkeys
+      - uc7z7oqo موقت ۲
+      - "  14"
+      - 89@oneclickvpnkeys
+      - "@internet_azad2 جوین شید💯"
+      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩 9
+      - "@meliproxyy 3"
+      - "  15"
+      - 104.18.32.47:443
+      - arashvpn-twist-80-188-0
+      - "@Vpn_Tehran 💘 تلگرام 4"
+      - "@Lrnbymaa / TELEGRAM"
+      - "@Vpn_Tehran ❤️‍🔥 تلگرام"
+      - "@AzadNet\ufeff`"
+      - 3|Telegram@unvisible_drops
+      - "@internet_azad2 2"
+      - "@meliproxyy 4"
+      - Telegram:@config_proxy
+      - ""
+      - "@vpnbaz 🚇"
+      - "@VMESSIR4N جهت خرید کانفیگ"
+      - "@free_netc 3"
+      - -turkey
+      - 🇩🇪 -germany
+      - 🇺🇸 -usa
+  - name: دانلود منیجر 📥
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+      - اجازه ندادن 🚫
+  - name: تلگرام 💬
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: یوتیوب ▶️
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: گوگل 🌍
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: واتس آپ 🟢
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: هوش مصنوعی 🤖
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: توییتر 🐦
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: اسپاتیفای 🎵
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: اینستاگرام 📸
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: تبلیغات 🆎
+    type: select
+    proxies:
+      - اجازه ندادن 🚫
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+  - name: تبلیغات اپ ها 🍃
+    type: select
+    proxies:
+      - اجازه ندادن 🚫
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+  - name: رهگیری جهانی 🛑
+    type: select
+    proxies:
+      - اجازه ندادن 🚫
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+  - name: سایتای مخرب ⚠️
+    type: select
+    proxies:
+      - اجازه ندادن 🚫
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+  - name: استیم 🖥️
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: گیم 🎮
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: توییچ 📡
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: سایتای ایرانی 🇮🇷
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: ویندوز 🧊
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: کلودفلر ☁️
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: گیتهاب 🐙
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: دیسکورد 🗣️
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: انی‌دسک 🔴
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+      - اجازه ندادن 🚫
+  - name: استریمیو 🎬
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+      - اجازه ندادن 🚫
+  - name: سایتای سانسوری 🤬
+    type: select
+    proxies:
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+  - name: بدون فیلترشکن 🛡️
+    type: select
+    proxies:
+      - DIRECT
+  - name: قطع اینترنت ⛔
+    type: select
+    proxies:
+      - REJECT
+  - name: اجازه ندادن 🚫
+    type: select
+    proxies:
+      - REJECT
+ntp:
+  enable: true
+  server: time.apple.com
+  port: 123
+  interval: 30
+rules:
+  - RULE-SET,DownloadManagers,دانلود منیجر 📥
+  - RULE-SET,Download,دانلود منیجر 📥
+  - RULE-SET,stremio,استریمیو 🎬
+  - RULE-SET,BanProgramAD,تبلیغات اپ ها 🍃
+  - RULE-SET,BanAD,رهگیری جهانی 🛑
+  - RULE-SET,PrivateTracker,رهگیری جهانی 🛑
+  - RULE-SET,category_public_tracker,رهگیری جهانی 🛑
+  - RULE-SET,malware,سایتای مخرب ⚠️
+  - RULE-SET,phishing,سایتای مخرب ⚠️
+  - RULE-SET,cryptominers,سایتای مخرب ⚠️
+  - RULE-SET,warninglist,سایتای مخرب ⚠️
+  - RULE-SET,Ponzi,سایتای مخرب ⚠️
+  - RULE-SET,LiteAds,تبلیغات 🆎
+  - RULE-SET,iran_ads,تبلیغات 🆎
+  - RULE-SET,PersianBlocker,تبلیغات 🆎
+  - RULE-SET,ads,تبلیغات 🆎
+  - RULE-SET,BanEasyList,تبلیغات 🆎
+  - RULE-SET,twitch,توییچ 📡
+  - PROCESS-NAME,Telegram.exe,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger.web,تلگرام 💬
+  - RULE-SET,telegram,تلگرام 💬
+  - RULE-SET,YouTube,یوتیوب ▶️
+  - RULE-SET,youtube,یوتیوب ▶️
+  - RULE-SET,YouTubeMusic,یوتیوب ▶️
+  - PROCESS-NAME,com.anydesk.anydeskandroid,انی‌دسک 🔴
+  - PROCESS-NAME,AnyDesk.exe,انی‌دسک 🔴
+  - DOMAIN-SUFFIX,anydesk.com,انی‌دسک 🔴
+  - PROCESS-NAME,Twitter.exe,توییتر 🐦
+  - PROCESS-NAME,com.twitter.android,توییتر 🐦
+  - RULE-SET,Chotwitter,توییتر 🐦
+  - RULE-SET,mihTwitter,توییتر 🐦
+  - RULE-SET,Domtwitter,توییتر 🐦
+  - PROCESS-NAME,com.spotify.music,اسپاتیفای 🎵
+  - PROCESS-NAME,Spotify.exe,اسپاتیفای 🎵
+  - RULE-SET,DomainSpotify,اسپاتیفای 🎵
+  - RULE-SET,mihspotify,اسپاتیفای 🎵
+  - PROCESS-NAME,com.instagram.android,اینستاگرام 📸
+  - RULE-SET,instagram,اینستاگرام 📸
+  - DOMAIN-SUFFIX,deepseek.com,هوش مصنوعی 🤖
+  - DOMAIN-SUFFIX,qwen.ai,هوش مصنوعی 🤖
+  - RULE-SET,category-ai,هوش مصنوعی 🤖
+  - RULE-SET,censor,سایتای سانسوری 🤬
+  - RULE-SET,apps,سایتای ایرانی 🇮🇷
+  - RULE-SET,iran,سایتای ایرانی 🇮🇷
+  - RULE-SET,arvancloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,derakcloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,iranserver,سایتای ایرانی 🇮🇷
+  - RULE-SET,parspack,سایتای ایرانی 🇮🇷
+  - RULE-SET,irasn,سایتای ایرانی 🇮🇷
+  - RULE-SET,ircidr,سایتای ایرانی 🇮🇷
+  - RULE-SET,ir,سایتای ایرانی 🇮🇷
+  - RULE-SET,category_ir,سایتای ایرانی 🇮🇷
+  - RULE-SET,whatsapp,واتس آپ 🟢
+  - RULE-SET,steam,استیم 🖥️
+  - RULE-SET,SteamRegionCheck,استیم 🖥️
+  - RULE-SET,game,گیم 🎮
+  - RULE-SET,GameDownload,گیم 🎮
+  - RULE-SET,category-games,گیم 🎮
+  - RULE-SET,Xbox,گیم 🎮
+  - RULE-SET,discord,دیسکورد 🗣️
+  - RULE-SET,xiaomi_white_list,نوع انتخاب پروکسی 🔀
+  - RULE-SET,xiaomi-ads,تبلیغات اپ ها 🍃
+  - RULE-SET,xiaomi_block_list,تبلیغات اپ ها 🍃
+  - RULE-SET,windows,ویندوز 🧊
+  - RULE-SET,cloudflare,کلودفلر ☁️
+  - RULE-SET,github,گیتهاب 🐙
+  - PROCESS-NAME,com.android.vending,نوع انتخاب پروکسی 🔀
+  - PROCESS-NAME,com.google.android.gms,نوع انتخاب پروکسی 🔀
+  - RULE-SET,google-play,نوع انتخاب پروکسی 🔀
+  - RULE-SET,google,گوگل 🌍
+  - IP-CIDR,10.10.34.0/24,نوع انتخاب پروکسی 🔀
+  - RULE-SET,local_ips,بدون فیلترشکن 🛡️
+  - RULE-SET,private,بدون فیلترشکن 🛡️
+  - MATCH,نوع انتخاب پروکسی 🔀

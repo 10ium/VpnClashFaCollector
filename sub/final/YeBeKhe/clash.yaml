@@ -1,0 +1,1270 @@
+global-client-fingerprint: chrome
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7894
+allow-lan: true
+tcp-concurrent: true
+enable-process: true
+find-process-mode: strict
+ipv6: true
+log-level: debug
+geo-auto-update: true
+geo-update-interval: 168
+secret: ""
+bind-address: "*"
+unified-delay: false
+disable-keep-alive: false
+keep-alive-idle: 30
+keep-alive-interval: 30
+profile:
+  store-selected: true
+  store-fake-ip: true
+dns:
+  enable: true
+  ipv6: true
+  respect-rules: false
+  prefer-h3: true
+  cache-algorithm: arc
+  use-system-hosts: true
+  use-host: true
+  listen: 0.0.0.0:53
+  enhanced-mode: fake-ip
+  fake-ip-filter-mode: blacklist
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - "*.localdomain"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "*.home.arpa"
+    - time.*.com
+    - ntp.*.com
+    - "*.ir"
+  default-nameserver:
+    - 8.8.8.8
+    - 8.8.4.4
+    - 1.0.0.1
+    - 1.1.1.1
+    - 9.9.9.9
+    - 9.9.9.11
+    - 9.9.9.10
+    - 94.140.14.15
+    - 94.140.15.15
+    - 223.5.5.5
+    - 77.88.8.8
+  nameserver:
+    - https://sky.rethinkdns.com/1:-J8AGH8C7_2-___f3_vZ3f_z-f9KagBI
+    - tls://1-7cpqagd7alx73px777p5766z3x77h6p7jjvaasa.max.rethinkdns.com
+  direct-nameserver:
+    - 78.157.42.100
+    - 78.157.42.101
+  proxy-server-nameserver:
+    - 2606:4700:4700::1111
+    - 2606:4700:4700::1001
+    - 2001:4860:4860::8888
+    - 2001:4860:4860::8844
+    - 1.1.1.1
+    - 8.8.8.8
+    - 8.8.4.4
+    - 9.9.9.9
+    - 223.5.5.5
+    - 77.88.8.8
+    - 2400:3200::1
+    - 2a02:6b8::feed:0ff
+    - 2620:fe::fe
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: false
+  sniff:
+    HTTP:
+      ports: [80, 8080, 8880, 2052, 2082, 2086, 2095]
+    TLS:
+      ports: [443, 8443, 2053, 2083, 2087, 2096]
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  auto-detect-interface: true
+  auto-redir: true
+  dns-hijack:
+    - any:53
+    - tcp://any:53
+rule-providers:
+  category_public_tracker:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-public-tracker.yaml
+    interval: 86400
+    path: ./ruleset/category_public_tracker.yaml
+  iran_ads:
+    type: http
+    behavior: domain
+    url: https://github.com/bootmortis/iran-hosted-domains/releases/latest/download/clash_rules_ads.yaml
+    interval: 86400
+    path: ./ruleset/iran_ads.yaml
+  PersianBlocker:
+    type: http
+    behavior: domain
+    url: https://github.com/MasterKia/iran-hosted-domains/releases/latest/download/clash_rules_ads.yaml
+    path: ./ruleset/PersianBlocker.yaml
+    interval: 86400
+  youtube:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/youtube.yaml
+    interval: 86400
+    path: ./ruleset/youtube.yaml
+  telegram:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/telegram.yaml
+    interval: 86400
+    path: ./ruleset/telegram.yaml
+  twitch:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/twitch.yaml
+    interval: 86400
+    path: ./ruleset/twitch.yaml
+  censor:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/main/censor.yaml
+    interval: 86400
+    path: ./ruleset/tahrim.yaml
+  local_ips:
+    type: http
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/local-ips.yaml
+    interval: 86400
+    path: ./ruleset/local_ips.yaml
+  private:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/private.yaml
+    interval: 86400
+    path: ./ruleset/private.yaml
+  category_ir:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-ir.yaml
+    interval: 86400
+    path: ./ruleset/category_ir.yaml
+  iran:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/main/iran.yaml
+    interval: 86400
+    path: ./ruleset/iran.yaml
+  steam:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/main/steam.yaml
+    interval: 86400
+    path: ./ruleset/steam.yaml
+  game:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/game.yaml
+    interval: 86400
+    path: ./ruleset/game.yaml
+  category-games:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/category-games.yaml
+    interval: 86400
+    path: ./ruleset/category-games.yaml
+  ir:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ir.yaml
+    path: ./ruleset/ir.yaml
+    interval: 86400
+  apps:
+    type: http
+    format: yaml
+    behavior: classical
+    url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/apps.yaml
+    path: ./ruleset/apps.yaml
+    interval: 86400
+  ircidr:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ircidr.yaml
+    path: ./ruleset/ircidr.yaml
+    interval: 86400
+  irasn:
+    type: http
+    format: yaml
+    behavior: classical
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/irasn.yaml
+    path: ./ruleset/irasn.yaml
+    interval: 86400
+  arvancloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/arvancloud.yaml
+    path: ./ruleset/arvancloud.yaml
+    interval: 86400
+  derakcloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/derakcloud.yaml
+    path: ./ruleset/derakcloud.yaml
+    interval: 86400
+  iranserver:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/iranserver.yaml
+    path: ./ruleset/iranserver.yaml
+    interval: 86400
+  parspack:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/parspack.yaml
+    path: ./ruleset/parspack.yaml
+    interval: 86400
+  malware:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/malware.yaml
+    path: ./ruleset/malware.yaml
+    interval: 86400
+  phishing:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/phishing.yaml
+    path: ./ruleset/phishing.yaml
+    interval: 86400
+  cryptominers:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/cryptominers.yaml
+    path: ./ruleset/cryptominers.yaml
+    interval: 86400
+  ads:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/category-ads-all.yaml
+    path: ./ruleset/ads.yaml
+    interval: 86400
+  DownloadManagers:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/DownloadManagers.yaml
+    interval: 86400
+    path: ./ruleset/DownloadManagers.yaml
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanProgramAD.yaml
+    interval: 86400
+    path: ./ruleset/BanProgramAD.yaml
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanAD.yaml
+    interval: 86400
+    path: ./ruleset/BanAD.yaml
+  PrivateTracker:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/PrivateTracker.yaml
+    interval: 86400
+    path: ./ruleset/PrivateTracker.yaml
+  BanEasyList:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanEasyList.yaml
+    interval: 86400
+    path: ./ruleset/BanEasyList.yaml
+  Download:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Download.yaml
+    interval: 86400
+    path: ./ruleset/Download.yaml
+  GameDownload:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/GameDownload.yaml
+    interval: 86400
+    path: ./ruleset/GameDownload.yaml
+  SteamRegionCheck:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/SteamRegionCheck.yaml
+    interval: 86400
+    path: ./ruleset/SteamRegionCheck.yaml
+  Xbox:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Xbox.yaml
+    interval: 86400
+    path: ./ruleset/Xbox.yaml
+  YouTubeMusic:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/YouTubeMusic.yaml
+    interval: 86400
+    path: ./ruleset/YouTubeMusic.yaml
+  YouTube:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/YouTube.yaml
+    interval: 86400
+    path: ./ruleset/YouTube.yaml
+  Ponzi:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/Ponzi.yaml
+    interval: 86400
+    path: ./ruleset/Ponzi.yaml
+  warninglist:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/warning-list.yaml
+    interval: 86400
+    path: ./ruleset/warninglist.yaml
+  google:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/google.yaml
+    interval: 86400
+    path: ./ruleset/google.yaml
+  google-play:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/google-play.yaml
+    interval: 86400
+    path: ./ruleset/google-play.yaml
+  xiaomi-ads:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/xiaomi-ads.yaml
+    interval: 86400
+    path: ./ruleset/xiaomi-ads.yaml
+  xiaomi_block_list:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/xiaomi_block_list.yaml
+    path: ./ruleset/xiaomi_block_list.yaml
+    interval: 86400
+  xiaomi_white_list:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/xiaomi_white_list.yaml
+    path: ./ruleset/xiaomi_white_list.yaml
+    interval: 86400
+  cloudflare:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/cloudflare.yaml
+    interval: 86400
+    path: ./ruleset/cloudflare.yaml
+  github:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/github.yaml
+    interval: 86400
+    path: ./ruleset/xgithub.yaml
+  whatsapp:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/whatsapp.yaml
+    interval: 86400
+    path: ./ruleset/whatsapp.yaml
+  LiteAds:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/LiteAds.yaml
+    path: ./ruleset/LiteAds.yaml
+    interval: 86400
+  discord:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/discord.yaml
+    path: ./ruleset/discord.yaml
+    interval: 86400
+  instagram:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/instagram.yaml
+    interval: 86400
+    path: ./ruleset/instagram.yaml
+  category-ai:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/category-ai-!cn.yaml
+    interval: 86400
+    path: ./ruleset/category-ai.yaml
+  stremio:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/stremio.yaml
+    path: ./ruleset/stremio.yaml
+    interval: 86400
+  windows:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/windows.yaml
+    path: ./ruleset/windows.yaml
+    interval: 86400
+  Chotwitter:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/twitter.yaml
+    path: ./ruleset/Chotwitter.yaml
+    interval: 86400
+  mihTwitter:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Twitter.yaml
+    path: ./ruleset/mihTwitter.yaml
+    interval: 86400
+  Domtwitter:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/twitter.yaml
+    interval: 86400
+    path: ./ruleset/Domtwitter.yaml
+  spotifyads:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/spotify-ads.yaml
+    interval: 86400
+    path: ./ruleset/spotifyads.yaml
+  DomainSpotify:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/spotify.yaml
+    interval: 86400
+    path: ./ruleset/DomainSpotify.yaml
+  mihspotify:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Spotify.yaml
+    interval: 86400
+    path: ./ruleset/mihSpotify.yaml
+proxies:
+  - {name: 57.129.95.140:11201, server: 57.129.95.140, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: 6d75de740e3d5197, udp: true, tfo: false}
+  - {name: 5.188.4.103:11201, server: 5.188.4.103, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: a7c205642b302c20, udp: true, tfo: false}
+  - {name: 5.188.4.103:11202, server: 5.188.4.103, port: 11202, type: ss, cipher: chacha20-ietf-poly1305, password: a7c205642b302c20, udp: true, tfo: false}
+  - {name: 5.188.4.103:11203, server: 5.188.4.103, port: 11203, type: ss, cipher: chacha20-ietf-poly1305, password: a7c205642b302c20, udp: true, tfo: false}
+  - {name: 5.188.4.103:11204, server: 5.188.4.103, port: 11204, type: ss, cipher: chacha20-ietf-poly1305, password: a7c205642b302c20, udp: true, tfo: false}
+  - {name: 5.188.4.103:11205, server: 5.188.4.103, port: 11205, type: ss, cipher: chacha20-ietf-poly1305, password: a7c205642b302c20, udp: true, tfo: false}
+  - {name: 82.38.31.176:8080, server: 82.38.31.176, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
+  - {name: 3.1.195.148:8319, server: 3.1.195.148, port: 8319, type: ss, cipher: chacha20-ietf-poly1305, password: ljqdalu13.., udp: true, tfo: false}
+  - {name: 172.64.152.23:443, server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.creationlong.org, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org}}, udp: true, tfo: false}
+  - {name: 172.64.152.23:443 2, server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.gossipglove.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.gossipglove.com}}, udp: true, tfo: false}
+  - {name: 172.64.152.23:443 3, server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.creationlong.org, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org}}, udp: true, tfo: false}
+  - {name: 172.64.152.23:443 4, server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.gossipglove.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.gossipglove.com}}, udp: true, tfo: false}
+  - {name: www.calmlunch.com:443, server: www.calmlunch.com, port: 443, type: trojan, password: humanity, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment}, udp: true, tfo: false}
+  - {name: 3.67.73.0:22223, server: 3.67.73.0, port: 22223, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 3.67.73.0:22222, server: 3.67.73.0, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@VpnMaan 5", server: cdnjs.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 00deb53e-b772-45f0-8cbe-d915b2f68ffd, servername: 639057258094400192.corolla-perma.info, network: ws, ws-opts: {path: "/jmslzhws?ed=2560", headers: {Host: 639057258094400192.corolla-perma.info}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇺🇸 usa26.clearorbitllc.com:443, server: usa26.clearorbitllc.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 022af852-49c7-4b5e-a13b-6877bcfe30a3, servername: usa26.clearorbitllc.com, host: usa26.clearorbitllc.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: uG51OJ4QHrSFthqOCL3Ctqxy4plPkeUyRGDmF4V7dFo, short-id: c6de8980`}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 3.67.73.0:22224, server: 3.67.73.0, port: 22224, type: vless, tls: true, packet-encoding: xudp, uuid: 05519058-d2ac-4f28-9e4a-2b2a1386749e, servername: trojan.burgerip.co.uk, network: ws, ws-opts: {path: /telegram-channel-vlessconfig, headers: {Host: trojan.burgerip.co.uk}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: jak.usertak.com:2053, server: jak.usertak.com, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: 07ee34e6-d847-458e-9cc1-b7a64f4c7600, host: speedtest.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇳🇱 nl.skfv-mirror.ru:443, server: nl.skfv-mirror.ru, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 0da89048-00d8-4c1f-b0ee-bdbd8f3f0b3b, servername: nl.skfv-mirror.ru, host: nl.skfv-mirror.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: qmfrMwVYth3lsYuv7qfr22YlTIlNtVjMl0v4Z5pX7hM, short-id: 4a3ad88ff867a295}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇳🇱 nl.skfv-mirror.ru:443 2, server: nl.skfv-mirror.ru, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 0da89048-00d8-4c1f-b0ee-bdbd8f3f0b3b, servername: nl.skfv-mirror.ru, host: nl.skfv-mirror.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: qmfrMwVYth3lsYuv7qfr22YlTIlNtVjMl0v4Z5pX7hM, short-id: 4a3ad88ff867a295`}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 86.110.243.171:25449, server: 86.110.243.171, port: 25449, type: vless, tls: true, packet-encoding: xudp, uuid: 0df23c07-b289-4d65-822a-228478ca73bd, servername: eh.vk.com, host: eh.vk.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: dach.cloudflare.com.snaap.irazzkiiranhob.pleasecheckout.blaackgame.ir:8081, server: dach.cloudflare.com.snaap.irazzkiiranhob.pleasecheckout.blaackgame.ir, port: 8081, type: vless, tls: true, packet-encoding: xudp, uuid: 0f523f7f-d795-446b-ad45-797c1700e28e, host: Fast.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@VpnMaan 1", server: cdnjs.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 118abefa-b585-49c5-a342-61d0e75402f5, servername: 639057258093033836.corolla-perma.info, network: ws, ws-opts: {path: "/bzxqrlws?ed=2560", headers: {Host: 639057258093033836.corolla-perma.info}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ipbaz.ping-box.com:443, server: ipbaz.ping-box.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 21f9985c-d363-4eee-957f-720e9e9f9b8d, servername: teams.live.com.afrcloud1.c01.kr, network: ws, ws-opts: {path: /, headers: {Host: teams.live.com.afrcloud1.c01.kr}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@VpnMaan 7", server: cdnjs.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 2e27ac27-c360-489a-86ea-8b9659de6763, servername: 639057258094935446.corolla-perma.info, network: ws, ws-opts: {path: "/jztpmbws?ed=2560", headers: {Host: 639057258094935446.corolla-perma.info}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 3.99.228.254:27775, server: 3.99.228.254, port: 27775, type: vless, tls: true, packet-encoding: xudp, uuid: 309c4bd0-7430-b8aa-2238-1075e9e29370, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 46.38.146.167:9092, server: 46.38.146.167, port: 9092, type: vless, tls: true, packet-encoding: xudp, uuid: 34dae96c-1a41-434f-94b6-5507c3a6d318, host: filmnet.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 46.38.146.167:9092 2, server: 46.38.146.167, port: 9092, type: vless, tls: true, packet-encoding: xudp, uuid: 34dae96c-1a41-434f-94b6-5507c3a6d318, host: filmnet.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 172.64.152.23:443 5, server: 172.64.152.23, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 396c904b-4b62-4334-b793-ee25fc0c61cc, servername: pages.dev, alpn: [http%2F1.1], network: ws, ws-opts: {path: "/eyJqdW5rIjoiTHczMWlhREZIb0ljUDhoaCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=?ed=2560", headers: {Host: pages.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 172.64.152.23:443 6, server: 172.64.152.23, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 396c904b-4b62-4334-b793-ee25fc0c61cc, servername: pages.dev, network: ws, ws-opts: {path: "/eyJqdW5rIjoiTHczMWlhREZIb0ljUDhoaCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=?ed=2560", headers: {Host: pages.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 137.74.119.18:8442, server: 137.74.119.18, port: 8442, type: vless, tls: true, packet-encoding: xudp, uuid: 3c47ed67-d4a7-4f2b-90b7-98f4b197bb0d, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@VpnMaan 9", server: cdnjs.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 3c7b7ec9-e49a-440f-aee7-1f611d0e8c85, servername: 639057258083986963.camry-perma.info, network: ws, ws-opts: {path: "/hsnoryws?ed=2560", headers: {Host: 639057258083986963.camry-perma.info}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 47.80.13.85:443, server: 47.80.13.85, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 3e7f67de-648e-4871-b51a-a225214d41ee, servername: api.company-target.com, host: api.company-target.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 57.129.49.1:23576, server: 57.129.49.1, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 57.129.53.181:23576, server: 57.129.53.181, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 57.129.53.181:23576 2, server: 57.129.53.181, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01`}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@VpnMaan 2", server: cdnjs.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 53f0bca8-f170-4ef7-8031-c7d441189dbf, servername: 639057258113762588.civic-perma.info, network: ws, ws-opts: {path: "/cahttingws?ed=2560", headers: {Host: 639057258113762588.civic-perma.info}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@VpnMaan 4", server: cdnjs.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 53f0bca8-f170-4ef7-8031-c7d441189dbf, servername: 639057258113961513.civic-perma.info, network: ws, ws-opts: {path: "/cahttingws?ed=2560", headers: {Host: 639057258113961513.civic-perma.info}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@VpnMaan 6", server: cdnjs.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 53f0bca8-f170-4ef7-8031-c7d441189dbf, servername: 639057258114114299.civic-perma.info, network: ws, ws-opts: {path: "/cahttingws?ed=2560", headers: {Host: 639057258114114299.civic-perma.info}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@VpnMaan 8", server: cdnjs.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 53f0bca8-f170-4ef7-8031-c7d441189dbf, servername: 639057258114432978.civic-perma.info, network: ws, ws-opts: {path: "/cahttingws?ed=2560", headers: {Host: 639057258114432978.civic-perma.info}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@VpnMaan 10`", server: cdnjs.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 53f0bca8-f170-4ef7-8031-c7d441189dbf, servername: 639057258114955879.civic-perma.info, network: ws, ws-opts: {path: "/cahttingws?ed=2560", headers: {Host: 639057258114955879.civic-perma.info}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 94.183.162.68:9828, server: 94.183.162.68, port: 9828, type: vless, tls: true, packet-encoding: xudp, uuid: 68a9cce7-2923-4ff4-832f-3c3d8800009e, host: pro30afzar.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 91.184.240.121:443, server: 91.184.240.121, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 745d8b0e-1bf2-4921-8058-4d67dd3dbc13, servername: secdn13.suio.me, host: secdn13.suio.me, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 185.126.6.131:3445, server: 185.126.6.131, port: 3445, type: vless, tls: true, packet-encoding: xudp, uuid: 79b03434-d2c6-4ab5-9474-acf450eb7ab9, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 185.126.6.131:3446, server: 185.126.6.131, port: 3446, type: vless, tls: true, packet-encoding: xudp, uuid: 79b03434-d2c6-4ab5-9474-acf450eb7ab9, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 94.131.113.228:443, server: 94.131.113.228, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 82bf8df9-300f-4d65-a8b9-b300ccaeb930, servername: fast.strelkavpn.ru, host: fast.strelkavpn.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: gUDEXo3UPF5WlJdIvpKMZbcLfKxMkiDyWgXjleD0aA4, short-id: aa5d376d9d56}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 198.41.199.83:443, server: 198.41.199.83, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8388434b-bbc8-4e00-b497-69a7f56f6e24, servername: rAyAn-cOnFiG-it-1.pAriSa.dPdNs.oRg, network: ws, ws-opts: {path: /ws, headers: {Host: rAyAn-cOnFiG-it-1.pAriSa.dPdNs.oRg}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: yesok42v2.ip4exordir.shop:8880, server: yesok42v2.ip4exordir.shop, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 46.38.146.167:9093, server: 46.38.146.167, port: 9093, type: vless, tls: true, packet-encoding: xudp, uuid: 8e4257a8-668c-40fc-9e53-612aec460652, host: filmnet.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 158.160.197.190:443, server: 158.160.197.190, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b3a0a76d-1794-4fd0-a283-bd4a0620bac9, servername: eh.vk.com, host: eh.vk.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 53np4dm7wFCgvoOfGCX2w6WHxq3590b62a2Yiq66N00, short-id: f1d8f4aa}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 44@proxy_kafee, server: 64.188.73.31, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: bbed94d9-1120-4b54-8a9c-72d81e411fb8, servername: google.com, host: google.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: cnY_-VQGJYosOMtWBxnq8ay71kO_dVB-IBBotP2AJn4, short-id: 243779c5c1c84b42}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: tawananet.panbehpanel.ir:80, server: tawananet.panbehpanel.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: c33275fd-a4fa-470d-90e4-55da39d849a8, network: ws, ws-opts: {path: /, headers: {Host: tawananet.panbehpanel.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 1.kkcweb.ir:2083, server: 1.kkcweb.ir, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: c805b05e-339d-40e0-8787-432d97a27345, servername: hajames.amirconfigpaanelllll.com, network: ws, ws-opts: {path: /, headers: {Host: hajames.amirconfigpaanelllll.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 172.64.152.23:2053, server: 172.64.152.23, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: cbc26294-7dd0-4fb9-a648-ad283236196c, servername: dxded2.viwo.online, network: ws, ws-opts: {path: /, headers: {Host: dxded2.viwo.online}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 172.64.152.23:2053 2, server: 172.64.152.23, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: cbc26294-7dd0-4fb9-a648-ad283236196c, servername: hswis.xtondi.ir, network: ws, ws-opts: {path: /, headers: {Host: hswis.xtondi.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 172.64.152.23:2053 3, server: 172.64.152.23, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: cbc26294-7dd0-4fb9-a648-ad283236196c, servername: husat.viwo.online`, network: ws, ws-opts: {path: /, headers: {Host: husat.viwo.online`}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ip-range.web3.name.ng:8443, server: ip-range.web3.name.ng, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: ccbe6b7c-9264-40c4-8bc1-ef8f6205d7a4, servername: hzr50.sepiol.name.ng, alpn: [h3%2Ch2], network: ws, ws-opts: {path: /, headers: {Host: hzr50.sepiol.name.ng}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: grdt.dtsantoor.com:40786, server: grdt.dtsantoor.com, port: 40786, type: vless, tls: true, packet-encoding: xudp, uuid: d027f2eb-3eea-4d84-8c67-73133136cacd, servername: grdt.dtsantoor.com, host: grdt.dtsantoor.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 158.160.105.121:51102, server: 158.160.105.121, port: 51102, type: vless, tls: true, packet-encoding: xudp, uuid: d4d031ec-0ba6-486a-aa0c-dce2b7cb8933, servername: yandex.ru, host: yandex.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: Qddpg8luihgzgx4g4uMJklXzlrMCd8L1igJSWrRUvSc, short-id: 8f222b3475800821}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 178.250.246.80:1488, server: 178.250.246.80, port: 1488, type: vless, tls: true, packet-encoding: xudp, uuid: d6b1327d-2bec-4366-a3a1-9b1284f95841, servername: ads.x5.ru, host: ads.x5.ru, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 140.248.159.164:80, server: 140.248.159.164, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: dd0cfef0-fda9-47ec-8a65-49d7bc004f82, network: ws, ws-opts: {path: /, headers: {Host: mitivpn3.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇳🇱 nl01-gmn02-vlr01.tcp-reset-club.net:443, server: nl01-gmn02-vlr01.tcp-reset-club.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e108f3eb-4d3a-4e20-a09b-7008e333bc23, servername: hls-svod.itunes.apple.com, host: hls-svod.itunes.apple.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg, short-id: 86e999a2cdc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇳🇱 ru-nl01-vlr01.tcp-reset-club.net:443, server: ru-nl01-vlr01.tcp-reset-club.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e108f3eb-4d3a-4e20-a09b-7008e333bc23, servername: hls-svod.itunes.apple.com, host: hls-svod.itunes.apple.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg, short-id: 8453e5fd9af927}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇷🇺 ru01-blh01.tcp-reset-club.net:443, server: ru01-blh01.tcp-reset-club.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e108f3eb-4d3a-4e20-a09b-7008e333bc23, servername: stats.vk-portal.net, host: stats.vk-portal.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg, short-id: 48720c}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: all.tellmethetrue.shop:443, server: all.tellmethetrue.shop, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e4824193-4f54-453b-d037-88368e85ef0e, servername: pqh30v3.carwashipdir.shop, alpn: [h2], network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 104.18.4.130:2087, server: 104.18.4.130, port: 2087, type: vless, tls: true, packet-encoding: xudp, uuid: e4c18050-3e61-42e3-9345-77d4179541c4, servername: fak.i-farm.ir, alpn: [h3%2Ch2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: fak.i-farm.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 35@oneclickvpnkeys, server: 85.235.149.184, port: 500, type: vless, tls: true, packet-encoding: xudp, uuid: e6af2417-0a79-4521-aa2a-de1c2f105188, servername: stackoverflow.com, host: stackoverflow.com, path: /, reality-opts: {public-key: NGrcCvAGrXu9QMiu2QNZy2HBqbvL7j-cFQuTFbE-AjM, short-id: bea5eb2fcf6b183c}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@VpnMaan 3", server: cdnjs.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e924b553-2abe-420f-bd3c-0fdeac792a35, servername: 639057258093873163.corolla-perma.info, network: ws, ws-opts: {path: "/tnkyjyws?ed=2560", headers: {Host: 639057258093873163.corolla-perma.info}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: mm.helg.ir:20874, server: mm.helg.ir, port: 20874, type: vless, tls: true, packet-encoding: xudp, uuid: f4075640-44c6-49cc-9d78-b84bb1cf300a, host: varzesh3.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 104.17.162.123:443, server: 104.17.162.123, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fef4a93d-eb4f-4657-b56b-32a0dc060045, servername: dev.twistsparrow.xyz, network: ws, ws-opts: {path: /, headers: {Host: dev.twistsparrow.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 57.129.64.102:443, server: 57.129.64.102, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: nasnet, servername: nasnet-5712964102-direct.sharghdaily.co, alpn: [h2%2Chttp%2F1.1], host: nasnet-5712964102-direct.sharghdaily.co, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan W2", server: 172.233.229.91, port: 14102, type: vmess, uuid: 27ba87fc-583f-4763-9060-83cf0b9264db, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+proxy-groups:
+  - name: نوع انتخاب پروکسی 🔀
+    type: select
+    proxies:
+      - اتصال پایدار 🔗
+      - خودکار (بهترین پینگ) 🤖
+      - دستی 🤏🏻
+      - پشتیبان (در صورت قطعی) 🧯
+      - توزیع بار (پایدار) 🧲
+      - توزیع بار (موقت) ⏳
+      - توزیع بار (گردشی) 🔁
+      - قطع اینترنت ⛔
+      - بدون فیلترشکن 🛡️
+  - name: دستی 🤏🏻
+    type: select
+    proxies:
+      - 57.129.95.140:11201
+      - 5.188.4.103:11201
+      - 5.188.4.103:11202
+      - 5.188.4.103:11203
+      - 5.188.4.103:11204
+      - 5.188.4.103:11205
+      - 82.38.31.176:8080
+      - 3.1.195.148:8319
+      - 172.64.152.23:443
+      - 172.64.152.23:443 2
+      - 172.64.152.23:443 3
+      - 172.64.152.23:443 4
+      - www.calmlunch.com:443
+      - 3.67.73.0:22223
+      - 3.67.73.0:22222
+      - "@VpnMaan 5"
+      - 🇺🇸 usa26.clearorbitllc.com:443
+      - 3.67.73.0:22224
+      - jak.usertak.com:2053
+      - 🇳🇱 nl.skfv-mirror.ru:443
+      - 🇳🇱 nl.skfv-mirror.ru:443 2
+      - 86.110.243.171:25449
+      - dach.cloudflare.com.snaap.irazzkiiranhob.pleasecheckout.blaackgame.ir:8081
+      - "@VpnMaan 1"
+      - ipbaz.ping-box.com:443
+      - "@VpnMaan 7"
+      - 3.99.228.254:27775
+      - 46.38.146.167:9092
+      - 46.38.146.167:9092 2
+      - 172.64.152.23:443 5
+      - 172.64.152.23:443 6
+      - 137.74.119.18:8442
+      - "@VpnMaan 9"
+      - 47.80.13.85:443
+      - 57.129.49.1:23576
+      - 57.129.53.181:23576
+      - 57.129.53.181:23576 2
+      - "@VpnMaan 2"
+      - "@VpnMaan 4"
+      - "@VpnMaan 6"
+      - "@VpnMaan 8"
+      - "@VpnMaan 10`"
+      - 94.183.162.68:9828
+      - 91.184.240.121:443
+      - 185.126.6.131:3445
+      - 185.126.6.131:3446
+      - 94.131.113.228:443
+      - 198.41.199.83:443
+      - yesok42v2.ip4exordir.shop:8880
+      - 46.38.146.167:9093
+      - 158.160.197.190:443
+      - 44@proxy_kafee
+      - tawananet.panbehpanel.ir:80
+      - 1.kkcweb.ir:2083
+      - 172.64.152.23:2053
+      - 172.64.152.23:2053 2
+      - 172.64.152.23:2053 3
+      - ip-range.web3.name.ng:8443
+      - grdt.dtsantoor.com:40786
+      - 158.160.105.121:51102
+      - 178.250.246.80:1488
+      - 140.248.159.164:80
+      - 🇳🇱 nl01-gmn02-vlr01.tcp-reset-club.net:443
+      - 🇳🇱 ru-nl01-vlr01.tcp-reset-club.net:443
+      - 🇷🇺 ru01-blh01.tcp-reset-club.net:443
+      - all.tellmethetrue.shop:443
+      - 104.18.4.130:2087
+      - 35@oneclickvpnkeys
+      - "@VpnMaan 3"
+      - mm.helg.ir:20874
+      - 104.17.162.123:443
+      - 57.129.64.102:443
+      - "@configraygan W2"
+  - name: خودکار (بهترین پینگ) 🤖
+    type: url-test
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    tolerance: 50
+    proxies:
+      - 57.129.95.140:11201
+      - 5.188.4.103:11201
+      - 5.188.4.103:11202
+      - 5.188.4.103:11203
+      - 5.188.4.103:11204
+      - 5.188.4.103:11205
+      - 82.38.31.176:8080
+      - 3.1.195.148:8319
+      - 172.64.152.23:443
+      - 172.64.152.23:443 2
+      - 172.64.152.23:443 3
+      - 172.64.152.23:443 4
+      - www.calmlunch.com:443
+      - 3.67.73.0:22223
+      - 3.67.73.0:22222
+      - "@VpnMaan 5"
+      - 🇺🇸 usa26.clearorbitllc.com:443
+      - 3.67.73.0:22224
+      - jak.usertak.com:2053
+      - 🇳🇱 nl.skfv-mirror.ru:443
+      - 🇳🇱 nl.skfv-mirror.ru:443 2
+      - 86.110.243.171:25449
+      - dach.cloudflare.com.snaap.irazzkiiranhob.pleasecheckout.blaackgame.ir:8081
+      - "@VpnMaan 1"
+      - ipbaz.ping-box.com:443
+      - "@VpnMaan 7"
+      - 3.99.228.254:27775
+      - 46.38.146.167:9092
+      - 46.38.146.167:9092 2
+      - 172.64.152.23:443 5
+      - 172.64.152.23:443 6
+      - 137.74.119.18:8442
+      - "@VpnMaan 9"
+      - 47.80.13.85:443
+      - 57.129.49.1:23576
+      - 57.129.53.181:23576
+      - 57.129.53.181:23576 2
+      - "@VpnMaan 2"
+      - "@VpnMaan 4"
+      - "@VpnMaan 6"
+      - "@VpnMaan 8"
+      - "@VpnMaan 10`"
+      - 94.183.162.68:9828
+      - 91.184.240.121:443
+      - 185.126.6.131:3445
+      - 185.126.6.131:3446
+      - 94.131.113.228:443
+      - 198.41.199.83:443
+      - yesok42v2.ip4exordir.shop:8880
+      - 46.38.146.167:9093
+      - 158.160.197.190:443
+      - 44@proxy_kafee
+      - tawananet.panbehpanel.ir:80
+      - 1.kkcweb.ir:2083
+      - 172.64.152.23:2053
+      - 172.64.152.23:2053 2
+      - 172.64.152.23:2053 3
+      - ip-range.web3.name.ng:8443
+      - grdt.dtsantoor.com:40786
+      - 158.160.105.121:51102
+      - 178.250.246.80:1488
+      - 140.248.159.164:80
+      - 🇳🇱 nl01-gmn02-vlr01.tcp-reset-club.net:443
+      - 🇳🇱 ru-nl01-vlr01.tcp-reset-club.net:443
+      - 🇷🇺 ru01-blh01.tcp-reset-club.net:443
+      - all.tellmethetrue.shop:443
+      - 104.18.4.130:2087
+      - 35@oneclickvpnkeys
+      - "@VpnMaan 3"
+      - mm.helg.ir:20874
+      - 104.17.162.123:443
+      - 57.129.64.102:443
+      - "@configraygan W2"
+  - name: پشتیبان (در صورت قطعی) 🧯
+    type: fallback
+    url: https://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 50
+    proxies:
+      - 57.129.95.140:11201
+      - 5.188.4.103:11201
+      - 5.188.4.103:11202
+      - 5.188.4.103:11203
+      - 5.188.4.103:11204
+      - 5.188.4.103:11205
+      - 82.38.31.176:8080
+      - 3.1.195.148:8319
+      - 172.64.152.23:443
+      - 172.64.152.23:443 2
+      - 172.64.152.23:443 3
+      - 172.64.152.23:443 4
+      - www.calmlunch.com:443
+      - 3.67.73.0:22223
+      - 3.67.73.0:22222
+      - "@VpnMaan 5"
+      - 🇺🇸 usa26.clearorbitllc.com:443
+      - 3.67.73.0:22224
+      - jak.usertak.com:2053
+      - 🇳🇱 nl.skfv-mirror.ru:443
+      - 🇳🇱 nl.skfv-mirror.ru:443 2
+      - 86.110.243.171:25449
+      - dach.cloudflare.com.snaap.irazzkiiranhob.pleasecheckout.blaackgame.ir:8081
+      - "@VpnMaan 1"
+      - ipbaz.ping-box.com:443
+      - "@VpnMaan 7"
+      - 3.99.228.254:27775
+      - 46.38.146.167:9092
+      - 46.38.146.167:9092 2
+      - 172.64.152.23:443 5
+      - 172.64.152.23:443 6
+      - 137.74.119.18:8442
+      - "@VpnMaan 9"
+      - 47.80.13.85:443
+      - 57.129.49.1:23576
+      - 57.129.53.181:23576
+      - 57.129.53.181:23576 2
+      - "@VpnMaan 2"
+      - "@VpnMaan 4"
+      - "@VpnMaan 6"
+      - "@VpnMaan 8"
+      - "@VpnMaan 10`"
+      - 94.183.162.68:9828
+      - 91.184.240.121:443
+      - 185.126.6.131:3445
+      - 185.126.6.131:3446
+      - 94.131.113.228:443
+      - 198.41.199.83:443
+      - yesok42v2.ip4exordir.shop:8880
+      - 46.38.146.167:9093
+      - 158.160.197.190:443
+      - 44@proxy_kafee
+      - tawananet.panbehpanel.ir:80
+      - 1.kkcweb.ir:2083
+      - 172.64.152.23:2053
+      - 172.64.152.23:2053 2
+      - 172.64.152.23:2053 3
+      - ip-range.web3.name.ng:8443
+      - grdt.dtsantoor.com:40786
+      - 158.160.105.121:51102
+      - 178.250.246.80:1488
+      - 140.248.159.164:80
+      - 🇳🇱 nl01-gmn02-vlr01.tcp-reset-club.net:443
+      - 🇳🇱 ru-nl01-vlr01.tcp-reset-club.net:443
+      - 🇷🇺 ru01-blh01.tcp-reset-club.net:443
+      - all.tellmethetrue.shop:443
+      - 104.18.4.130:2087
+      - 35@oneclickvpnkeys
+      - "@VpnMaan 3"
+      - mm.helg.ir:20874
+      - 104.17.162.123:443
+      - 57.129.64.102:443
+      - "@configraygan W2"
+  - name: اتصال پایدار 🔗
+    type: url-test
+    url: https://cp.cloudflare.com/generate_204
+    interval: 30
+    tolerance: 50
+    proxies:
+      - خودکار (بهترین پینگ) 🤖
+      - پشتیبان (در صورت قطعی) 🧯
+      - دستی 🤏🏻
+  - name: توزیع بار (پایدار) 🧲
+    type: load-balance
+    strategy: consistent-hashing
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    proxies:
+      - 57.129.95.140:11201
+      - 5.188.4.103:11201
+      - 5.188.4.103:11202
+      - 5.188.4.103:11203
+      - 5.188.4.103:11204
+      - 5.188.4.103:11205
+      - 82.38.31.176:8080
+      - 3.1.195.148:8319
+      - 172.64.152.23:443
+      - 172.64.152.23:443 2
+      - 172.64.152.23:443 3
+      - 172.64.152.23:443 4
+      - www.calmlunch.com:443
+      - 3.67.73.0:22223
+      - 3.67.73.0:22222
+      - "@VpnMaan 5"
+      - 🇺🇸 usa26.clearorbitllc.com:443
+      - 3.67.73.0:22224
+      - jak.usertak.com:2053
+      - 🇳🇱 nl.skfv-mirror.ru:443
+      - 🇳🇱 nl.skfv-mirror.ru:443 2
+      - 86.110.243.171:25449
+      - dach.cloudflare.com.snaap.irazzkiiranhob.pleasecheckout.blaackgame.ir:8081
+      - "@VpnMaan 1"
+      - ipbaz.ping-box.com:443
+      - "@VpnMaan 7"
+      - 3.99.228.254:27775
+      - 46.38.146.167:9092
+      - 46.38.146.167:9092 2
+      - 172.64.152.23:443 5
+      - 172.64.152.23:443 6
+      - 137.74.119.18:8442
+      - "@VpnMaan 9"
+      - 47.80.13.85:443
+      - 57.129.49.1:23576
+      - 57.129.53.181:23576
+      - 57.129.53.181:23576 2
+      - "@VpnMaan 2"
+      - "@VpnMaan 4"
+      - "@VpnMaan 6"
+      - "@VpnMaan 8"
+      - "@VpnMaan 10`"
+      - 94.183.162.68:9828
+      - 91.184.240.121:443
+      - 185.126.6.131:3445
+      - 185.126.6.131:3446
+      - 94.131.113.228:443
+      - 198.41.199.83:443
+      - yesok42v2.ip4exordir.shop:8880
+      - 46.38.146.167:9093
+      - 158.160.197.190:443
+      - 44@proxy_kafee
+      - tawananet.panbehpanel.ir:80
+      - 1.kkcweb.ir:2083
+      - 172.64.152.23:2053
+      - 172.64.152.23:2053 2
+      - 172.64.152.23:2053 3
+      - ip-range.web3.name.ng:8443
+      - grdt.dtsantoor.com:40786
+      - 158.160.105.121:51102
+      - 178.250.246.80:1488
+      - 140.248.159.164:80
+      - 🇳🇱 nl01-gmn02-vlr01.tcp-reset-club.net:443
+      - 🇳🇱 ru-nl01-vlr01.tcp-reset-club.net:443
+      - 🇷🇺 ru01-blh01.tcp-reset-club.net:443
+      - all.tellmethetrue.shop:443
+      - 104.18.4.130:2087
+      - 35@oneclickvpnkeys
+      - "@VpnMaan 3"
+      - mm.helg.ir:20874
+      - 104.17.162.123:443
+      - 57.129.64.102:443
+      - "@configraygan W2"
+  - name: توزیع بار (گردشی) 🔁
+    type: load-balance
+    strategy: consistent-hashing
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    proxies:
+      - 57.129.95.140:11201
+      - 5.188.4.103:11201
+      - 5.188.4.103:11202
+      - 5.188.4.103:11203
+      - 5.188.4.103:11204
+      - 5.188.4.103:11205
+      - 82.38.31.176:8080
+      - 3.1.195.148:8319
+      - 172.64.152.23:443
+      - 172.64.152.23:443 2
+      - 172.64.152.23:443 3
+      - 172.64.152.23:443 4
+      - www.calmlunch.com:443
+      - 3.67.73.0:22223
+      - 3.67.73.0:22222
+      - "@VpnMaan 5"
+      - 🇺🇸 usa26.clearorbitllc.com:443
+      - 3.67.73.0:22224
+      - jak.usertak.com:2053
+      - 🇳🇱 nl.skfv-mirror.ru:443
+      - 🇳🇱 nl.skfv-mirror.ru:443 2
+      - 86.110.243.171:25449
+      - dach.cloudflare.com.snaap.irazzkiiranhob.pleasecheckout.blaackgame.ir:8081
+      - "@VpnMaan 1"
+      - ipbaz.ping-box.com:443
+      - "@VpnMaan 7"
+      - 3.99.228.254:27775
+      - 46.38.146.167:9092
+      - 46.38.146.167:9092 2
+      - 172.64.152.23:443 5
+      - 172.64.152.23:443 6
+      - 137.74.119.18:8442
+      - "@VpnMaan 9"
+      - 47.80.13.85:443
+      - 57.129.49.1:23576
+      - 57.129.53.181:23576
+      - 57.129.53.181:23576 2
+      - "@VpnMaan 2"
+      - "@VpnMaan 4"
+      - "@VpnMaan 6"
+      - "@VpnMaan 8"
+      - "@VpnMaan 10`"
+      - 94.183.162.68:9828
+      - 91.184.240.121:443
+      - 185.126.6.131:3445
+      - 185.126.6.131:3446
+      - 94.131.113.228:443
+      - 198.41.199.83:443
+      - yesok42v2.ip4exordir.shop:8880
+      - 46.38.146.167:9093
+      - 158.160.197.190:443
+      - 44@proxy_kafee
+      - tawananet.panbehpanel.ir:80
+      - 1.kkcweb.ir:2083
+      - 172.64.152.23:2053
+      - 172.64.152.23:2053 2
+      - 172.64.152.23:2053 3
+      - ip-range.web3.name.ng:8443
+      - grdt.dtsantoor.com:40786
+      - 158.160.105.121:51102
+      - 178.250.246.80:1488
+      - 140.248.159.164:80
+      - 🇳🇱 nl01-gmn02-vlr01.tcp-reset-club.net:443
+      - 🇳🇱 ru-nl01-vlr01.tcp-reset-club.net:443
+      - 🇷🇺 ru01-blh01.tcp-reset-club.net:443
+      - all.tellmethetrue.shop:443
+      - 104.18.4.130:2087
+      - 35@oneclickvpnkeys
+      - "@VpnMaan 3"
+      - mm.helg.ir:20874
+      - 104.17.162.123:443
+      - 57.129.64.102:443
+      - "@configraygan W2"
+  - name: توزیع بار (موقت) ⏳
+    type: load-balance
+    strategy: consistent-hashing
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    proxies:
+      - 57.129.95.140:11201
+      - 5.188.4.103:11201
+      - 5.188.4.103:11202
+      - 5.188.4.103:11203
+      - 5.188.4.103:11204
+      - 5.188.4.103:11205
+      - 82.38.31.176:8080
+      - 3.1.195.148:8319
+      - 172.64.152.23:443
+      - 172.64.152.23:443 2
+      - 172.64.152.23:443 3
+      - 172.64.152.23:443 4
+      - www.calmlunch.com:443
+      - 3.67.73.0:22223
+      - 3.67.73.0:22222
+      - "@VpnMaan 5"
+      - 🇺🇸 usa26.clearorbitllc.com:443
+      - 3.67.73.0:22224
+      - jak.usertak.com:2053
+      - 🇳🇱 nl.skfv-mirror.ru:443
+      - 🇳🇱 nl.skfv-mirror.ru:443 2
+      - 86.110.243.171:25449
+      - dach.cloudflare.com.snaap.irazzkiiranhob.pleasecheckout.blaackgame.ir:8081
+      - "@VpnMaan 1"
+      - ipbaz.ping-box.com:443
+      - "@VpnMaan 7"
+      - 3.99.228.254:27775
+      - 46.38.146.167:9092
+      - 46.38.146.167:9092 2
+      - 172.64.152.23:443 5
+      - 172.64.152.23:443 6
+      - 137.74.119.18:8442
+      - "@VpnMaan 9"
+      - 47.80.13.85:443
+      - 57.129.49.1:23576
+      - 57.129.53.181:23576
+      - 57.129.53.181:23576 2
+      - "@VpnMaan 2"
+      - "@VpnMaan 4"
+      - "@VpnMaan 6"
+      - "@VpnMaan 8"
+      - "@VpnMaan 10`"
+      - 94.183.162.68:9828
+      - 91.184.240.121:443
+      - 185.126.6.131:3445
+      - 185.126.6.131:3446
+      - 94.131.113.228:443
+      - 198.41.199.83:443
+      - yesok42v2.ip4exordir.shop:8880
+      - 46.38.146.167:9093
+      - 158.160.197.190:443
+      - 44@proxy_kafee
+      - tawananet.panbehpanel.ir:80
+      - 1.kkcweb.ir:2083
+      - 172.64.152.23:2053
+      - 172.64.152.23:2053 2
+      - 172.64.152.23:2053 3
+      - ip-range.web3.name.ng:8443
+      - grdt.dtsantoor.com:40786
+      - 158.160.105.121:51102
+      - 178.250.246.80:1488
+      - 140.248.159.164:80
+      - 🇳🇱 nl01-gmn02-vlr01.tcp-reset-club.net:443
+      - 🇳🇱 ru-nl01-vlr01.tcp-reset-club.net:443
+      - 🇷🇺 ru01-blh01.tcp-reset-club.net:443
+      - all.tellmethetrue.shop:443
+      - 104.18.4.130:2087
+      - 35@oneclickvpnkeys
+      - "@VpnMaan 3"
+      - mm.helg.ir:20874
+      - 104.17.162.123:443
+      - 57.129.64.102:443
+      - "@configraygan W2"
+  - name: دانلود منیجر 📥
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+      - اجازه ندادن 🚫
+  - name: تلگرام 💬
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: یوتیوب ▶️
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: گوگل 🌍
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: واتس آپ 🟢
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: هوش مصنوعی 🤖
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: توییتر 🐦
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: اسپاتیفای 🎵
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: اینستاگرام 📸
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: تبلیغات 🆎
+    type: select
+    proxies:
+      - اجازه ندادن 🚫
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+  - name: تبلیغات اپ ها 🍃
+    type: select
+    proxies:
+      - اجازه ندادن 🚫
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+  - name: رهگیری جهانی 🛑
+    type: select
+    proxies:
+      - اجازه ندادن 🚫
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+  - name: سایتای مخرب ⚠️
+    type: select
+    proxies:
+      - اجازه ندادن 🚫
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+  - name: استیم 🖥️
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: گیم 🎮
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: توییچ 📡
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: سایتای ایرانی 🇮🇷
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: ویندوز 🧊
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: کلودفلر ☁️
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: گیتهاب 🐙
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: دیسکورد 🗣️
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: انی‌دسک 🔴
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+      - اجازه ندادن 🚫
+  - name: استریمیو 🎬
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+      - اجازه ندادن 🚫
+  - name: سایتای سانسوری 🤬
+    type: select
+    proxies:
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+  - name: بدون فیلترشکن 🛡️
+    type: select
+    proxies:
+      - DIRECT
+  - name: قطع اینترنت ⛔
+    type: select
+    proxies:
+      - REJECT
+  - name: اجازه ندادن 🚫
+    type: select
+    proxies:
+      - REJECT
+ntp:
+  enable: true
+  server: time.apple.com
+  port: 123
+  interval: 30
+rules:
+  - RULE-SET,DownloadManagers,دانلود منیجر 📥
+  - RULE-SET,Download,دانلود منیجر 📥
+  - RULE-SET,stremio,استریمیو 🎬
+  - RULE-SET,BanProgramAD,تبلیغات اپ ها 🍃
+  - RULE-SET,BanAD,رهگیری جهانی 🛑
+  - RULE-SET,PrivateTracker,رهگیری جهانی 🛑
+  - RULE-SET,category_public_tracker,رهگیری جهانی 🛑
+  - RULE-SET,malware,سایتای مخرب ⚠️
+  - RULE-SET,phishing,سایتای مخرب ⚠️
+  - RULE-SET,cryptominers,سایتای مخرب ⚠️
+  - RULE-SET,warninglist,سایتای مخرب ⚠️
+  - RULE-SET,Ponzi,سایتای مخرب ⚠️
+  - RULE-SET,LiteAds,تبلیغات 🆎
+  - RULE-SET,iran_ads,تبلیغات 🆎
+  - RULE-SET,PersianBlocker,تبلیغات 🆎
+  - RULE-SET,ads,تبلیغات 🆎
+  - RULE-SET,BanEasyList,تبلیغات 🆎
+  - RULE-SET,twitch,توییچ 📡
+  - PROCESS-NAME,Telegram.exe,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger.web,تلگرام 💬
+  - RULE-SET,telegram,تلگرام 💬
+  - RULE-SET,YouTube,یوتیوب ▶️
+  - RULE-SET,youtube,یوتیوب ▶️
+  - RULE-SET,YouTubeMusic,یوتیوب ▶️
+  - PROCESS-NAME,com.anydesk.anydeskandroid,انی‌دسک 🔴
+  - PROCESS-NAME,AnyDesk.exe,انی‌دسک 🔴
+  - DOMAIN-SUFFIX,anydesk.com,انی‌دسک 🔴
+  - PROCESS-NAME,Twitter.exe,توییتر 🐦
+  - PROCESS-NAME,com.twitter.android,توییتر 🐦
+  - RULE-SET,Chotwitter,توییتر 🐦
+  - RULE-SET,mihTwitter,توییتر 🐦
+  - RULE-SET,Domtwitter,توییتر 🐦
+  - PROCESS-NAME,com.spotify.music,اسپاتیفای 🎵
+  - PROCESS-NAME,Spotify.exe,اسپاتیفای 🎵
+  - RULE-SET,DomainSpotify,اسپاتیفای 🎵
+  - RULE-SET,mihspotify,اسپاتیفای 🎵
+  - PROCESS-NAME,com.instagram.android,اینستاگرام 📸
+  - RULE-SET,instagram,اینستاگرام 📸
+  - DOMAIN-SUFFIX,deepseek.com,هوش مصنوعی 🤖
+  - DOMAIN-SUFFIX,qwen.ai,هوش مصنوعی 🤖
+  - RULE-SET,category-ai,هوش مصنوعی 🤖
+  - RULE-SET,censor,سایتای سانسوری 🤬
+  - RULE-SET,apps,سایتای ایرانی 🇮🇷
+  - RULE-SET,iran,سایتای ایرانی 🇮🇷
+  - RULE-SET,arvancloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,derakcloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,iranserver,سایتای ایرانی 🇮🇷
+  - RULE-SET,parspack,سایتای ایرانی 🇮🇷
+  - RULE-SET,irasn,سایتای ایرانی 🇮🇷
+  - RULE-SET,ircidr,سایتای ایرانی 🇮🇷
+  - RULE-SET,ir,سایتای ایرانی 🇮🇷
+  - RULE-SET,category_ir,سایتای ایرانی 🇮🇷
+  - RULE-SET,whatsapp,واتس آپ 🟢
+  - RULE-SET,steam,استیم 🖥️
+  - RULE-SET,SteamRegionCheck,استیم 🖥️
+  - RULE-SET,game,گیم 🎮
+  - RULE-SET,GameDownload,گیم 🎮
+  - RULE-SET,category-games,گیم 🎮
+  - RULE-SET,Xbox,گیم 🎮
+  - RULE-SET,discord,دیسکورد 🗣️
+  - RULE-SET,xiaomi_white_list,نوع انتخاب پروکسی 🔀
+  - RULE-SET,xiaomi-ads,تبلیغات اپ ها 🍃
+  - RULE-SET,xiaomi_block_list,تبلیغات اپ ها 🍃
+  - RULE-SET,windows,ویندوز 🧊
+  - RULE-SET,cloudflare,کلودفلر ☁️
+  - RULE-SET,github,گیتهاب 🐙
+  - PROCESS-NAME,com.android.vending,نوع انتخاب پروکسی 🔀
+  - PROCESS-NAME,com.google.android.gms,نوع انتخاب پروکسی 🔀
+  - RULE-SET,google-play,نوع انتخاب پروکسی 🔀
+  - RULE-SET,google,گوگل 🌍
+  - IP-CIDR,10.10.34.0/24,نوع انتخاب پروکسی 🔀
+  - RULE-SET,local_ips,بدون فیلترشکن 🛡️
+  - RULE-SET,private,بدون فیلترشکن 🛡️
+  - MATCH,نوع انتخاب پروکسی 🔀

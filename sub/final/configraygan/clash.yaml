@@ -1,0 +1,1746 @@
+global-client-fingerprint: chrome
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7894
+allow-lan: true
+tcp-concurrent: true
+enable-process: true
+find-process-mode: strict
+ipv6: true
+log-level: debug
+geo-auto-update: true
+geo-update-interval: 168
+secret: ""
+bind-address: "*"
+unified-delay: false
+disable-keep-alive: false
+keep-alive-idle: 30
+keep-alive-interval: 30
+profile:
+  store-selected: true
+  store-fake-ip: true
+dns:
+  enable: true
+  ipv6: true
+  respect-rules: false
+  prefer-h3: true
+  cache-algorithm: arc
+  use-system-hosts: true
+  use-host: true
+  listen: 0.0.0.0:53
+  enhanced-mode: fake-ip
+  fake-ip-filter-mode: blacklist
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - "*.localdomain"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "*.home.arpa"
+    - time.*.com
+    - ntp.*.com
+    - "*.ir"
+  default-nameserver:
+    - 8.8.8.8
+    - 8.8.4.4
+    - 1.0.0.1
+    - 1.1.1.1
+    - 9.9.9.9
+    - 9.9.9.11
+    - 9.9.9.10
+    - 94.140.14.15
+    - 94.140.15.15
+    - 223.5.5.5
+    - 77.88.8.8
+  nameserver:
+    - https://sky.rethinkdns.com/1:-J8AGH8C7_2-___f3_vZ3f_z-f9KagBI
+    - tls://1-7cpqagd7alx73px777p5766z3x77h6p7jjvaasa.max.rethinkdns.com
+  direct-nameserver:
+    - 78.157.42.100
+    - 78.157.42.101
+  proxy-server-nameserver:
+    - 2606:4700:4700::1111
+    - 2606:4700:4700::1001
+    - 2001:4860:4860::8888
+    - 2001:4860:4860::8844
+    - 1.1.1.1
+    - 8.8.8.8
+    - 8.8.4.4
+    - 9.9.9.9
+    - 223.5.5.5
+    - 77.88.8.8
+    - 2400:3200::1
+    - 2a02:6b8::feed:0ff
+    - 2620:fe::fe
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: false
+  sniff:
+    HTTP:
+      ports: [80, 8080, 8880, 2052, 2082, 2086, 2095]
+    TLS:
+      ports: [443, 8443, 2053, 2083, 2087, 2096]
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  auto-detect-interface: true
+  auto-redir: true
+  dns-hijack:
+    - any:53
+    - tcp://any:53
+rule-providers:
+  category_public_tracker:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-public-tracker.yaml
+    interval: 86400
+    path: ./ruleset/category_public_tracker.yaml
+  iran_ads:
+    type: http
+    behavior: domain
+    url: https://github.com/bootmortis/iran-hosted-domains/releases/latest/download/clash_rules_ads.yaml
+    interval: 86400
+    path: ./ruleset/iran_ads.yaml
+  PersianBlocker:
+    type: http
+    behavior: domain
+    url: https://github.com/MasterKia/iran-hosted-domains/releases/latest/download/clash_rules_ads.yaml
+    path: ./ruleset/PersianBlocker.yaml
+    interval: 86400
+  youtube:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/youtube.yaml
+    interval: 86400
+    path: ./ruleset/youtube.yaml
+  telegram:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/telegram.yaml
+    interval: 86400
+    path: ./ruleset/telegram.yaml
+  twitch:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/twitch.yaml
+    interval: 86400
+    path: ./ruleset/twitch.yaml
+  censor:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/main/censor.yaml
+    interval: 86400
+    path: ./ruleset/tahrim.yaml
+  local_ips:
+    type: http
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/local-ips.yaml
+    interval: 86400
+    path: ./ruleset/local_ips.yaml
+  private:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/private.yaml
+    interval: 86400
+    path: ./ruleset/private.yaml
+  category_ir:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-ir.yaml
+    interval: 86400
+    path: ./ruleset/category_ir.yaml
+  iran:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/main/iran.yaml
+    interval: 86400
+    path: ./ruleset/iran.yaml
+  steam:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/main/steam.yaml
+    interval: 86400
+    path: ./ruleset/steam.yaml
+  game:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/game.yaml
+    interval: 86400
+    path: ./ruleset/game.yaml
+  category-games:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/category-games.yaml
+    interval: 86400
+    path: ./ruleset/category-games.yaml
+  ir:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ir.yaml
+    path: ./ruleset/ir.yaml
+    interval: 86400
+  apps:
+    type: http
+    format: yaml
+    behavior: classical
+    url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/apps.yaml
+    path: ./ruleset/apps.yaml
+    interval: 86400
+  ircidr:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ircidr.yaml
+    path: ./ruleset/ircidr.yaml
+    interval: 86400
+  irasn:
+    type: http
+    format: yaml
+    behavior: classical
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/irasn.yaml
+    path: ./ruleset/irasn.yaml
+    interval: 86400
+  arvancloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/arvancloud.yaml
+    path: ./ruleset/arvancloud.yaml
+    interval: 86400
+  derakcloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/derakcloud.yaml
+    path: ./ruleset/derakcloud.yaml
+    interval: 86400
+  iranserver:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/iranserver.yaml
+    path: ./ruleset/iranserver.yaml
+    interval: 86400
+  parspack:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/parspack.yaml
+    path: ./ruleset/parspack.yaml
+    interval: 86400
+  malware:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/malware.yaml
+    path: ./ruleset/malware.yaml
+    interval: 86400
+  phishing:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/phishing.yaml
+    path: ./ruleset/phishing.yaml
+    interval: 86400
+  cryptominers:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/cryptominers.yaml
+    path: ./ruleset/cryptominers.yaml
+    interval: 86400
+  ads:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/category-ads-all.yaml
+    path: ./ruleset/ads.yaml
+    interval: 86400
+  DownloadManagers:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/DownloadManagers.yaml
+    interval: 86400
+    path: ./ruleset/DownloadManagers.yaml
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanProgramAD.yaml
+    interval: 86400
+    path: ./ruleset/BanProgramAD.yaml
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanAD.yaml
+    interval: 86400
+    path: ./ruleset/BanAD.yaml
+  PrivateTracker:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/PrivateTracker.yaml
+    interval: 86400
+    path: ./ruleset/PrivateTracker.yaml
+  BanEasyList:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanEasyList.yaml
+    interval: 86400
+    path: ./ruleset/BanEasyList.yaml
+  Download:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Download.yaml
+    interval: 86400
+    path: ./ruleset/Download.yaml
+  GameDownload:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/GameDownload.yaml
+    interval: 86400
+    path: ./ruleset/GameDownload.yaml
+  SteamRegionCheck:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/SteamRegionCheck.yaml
+    interval: 86400
+    path: ./ruleset/SteamRegionCheck.yaml
+  Xbox:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Xbox.yaml
+    interval: 86400
+    path: ./ruleset/Xbox.yaml
+  YouTubeMusic:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/YouTubeMusic.yaml
+    interval: 86400
+    path: ./ruleset/YouTubeMusic.yaml
+  YouTube:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/YouTube.yaml
+    interval: 86400
+    path: ./ruleset/YouTube.yaml
+  Ponzi:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/Ponzi.yaml
+    interval: 86400
+    path: ./ruleset/Ponzi.yaml
+  warninglist:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/warning-list.yaml
+    interval: 86400
+    path: ./ruleset/warninglist.yaml
+  google:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/google.yaml
+    interval: 86400
+    path: ./ruleset/google.yaml
+  google-play:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/google-play.yaml
+    interval: 86400
+    path: ./ruleset/google-play.yaml
+  xiaomi-ads:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/xiaomi-ads.yaml
+    interval: 86400
+    path: ./ruleset/xiaomi-ads.yaml
+  xiaomi_block_list:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/xiaomi_block_list.yaml
+    path: ./ruleset/xiaomi_block_list.yaml
+    interval: 86400
+  xiaomi_white_list:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/xiaomi_white_list.yaml
+    path: ./ruleset/xiaomi_white_list.yaml
+    interval: 86400
+  cloudflare:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/cloudflare.yaml
+    interval: 86400
+    path: ./ruleset/cloudflare.yaml
+  github:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/github.yaml
+    interval: 86400
+    path: ./ruleset/xgithub.yaml
+  whatsapp:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/whatsapp.yaml
+    interval: 86400
+    path: ./ruleset/whatsapp.yaml
+  LiteAds:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/LiteAds.yaml
+    path: ./ruleset/LiteAds.yaml
+    interval: 86400
+  discord:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/discord.yaml
+    path: ./ruleset/discord.yaml
+    interval: 86400
+  instagram:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/instagram.yaml
+    interval: 86400
+    path: ./ruleset/instagram.yaml
+  category-ai:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/category-ai-!cn.yaml
+    interval: 86400
+    path: ./ruleset/category-ai.yaml
+  stremio:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/stremio.yaml
+    path: ./ruleset/stremio.yaml
+    interval: 86400
+  windows:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/windows.yaml
+    path: ./ruleset/windows.yaml
+    interval: 86400
+  Chotwitter:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/twitter.yaml
+    path: ./ruleset/Chotwitter.yaml
+    interval: 86400
+  mihTwitter:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Twitter.yaml
+    path: ./ruleset/mihTwitter.yaml
+    interval: 86400
+  Domtwitter:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/twitter.yaml
+    interval: 86400
+    path: ./ruleset/Domtwitter.yaml
+  spotifyads:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/spotify-ads.yaml
+    interval: 86400
+    path: ./ruleset/spotifyads.yaml
+  DomainSpotify:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/spotify.yaml
+    interval: 86400
+    path: ./ruleset/DomainSpotify.yaml
+  mihspotify:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Spotify.yaml
+    interval: 86400
+    path: ./ruleset/mihSpotify.yaml
+proxies:
+  - {name: 57.129.95.140:11201, server: 57.129.95.140, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: 6d75de740e3d5197, udp: true, tfo: false}
+  - {name: "@configraygan W9", server: 57.129.95.140, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: 6d75de740e3d5197, udp: true, tfo: false}
+  - {name: "@configraygan mtn", server: 51.75.89.203, port: 13021, type: ss, cipher: chacha20-ietf-poly1305, password: 7a57a403f1acaea1, udp: true, tfo: false}
+  - {name: "@configraygan", server: 57.129.94.79, port: 11208, type: ss, cipher: chacha20-ietf-poly1305, password: 0047036c45596605, udp: true, tfo: false}
+  - {name: "@configraygan`", server: 57.129.94.79, port: 11208, type: ss, cipher: chacha20-ietf-poly1305, password: 0047036c45596605, udp: true, tfo: false}
+  - {name: "@configraygan` 2", server: 62.133.63.21, port: 65262, type: ss, cipher: chacha20-ietf-poly1305, password: K7ddIM4QwYF8tQL3HCwFGL, udp: true, tfo: false}
+  - {name: "@configraygan` 3", server: 57.129.129.139, port: 29183, type: ss, cipher: chacha20-ietf-poly1305, password: ab0b81a5bff7ddea, udp: true, tfo: false}
+  - {name: 213.156.137.142:43660, server: 213.156.137.142, port: 43660, type: ss, cipher: chacha20-ietf-poly1305, password: cc27a3012d81a44c, udp: true, tfo: false}
+  - {name: "@configraygan` 4", server: 141.95.107.129, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: ebf915eda54bdfac, udp: true, tfo: false}
+  - {name: 141.95.105.163:11201, server: 141.95.105.163, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: edd359f594dea842, udp: true, tfo: false}
+  - {name: "@configraygan W11", server: 82.38.31.176, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
+  - {name: "@configraygan` 5", server: 82.38.31.184, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
+  - {name: "@configraygan 2", server: 57.129.140.88, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: k1v5g9FefdoO, udp: true, tfo: false}
+  - {name: "@configraygan` 6", server: 57.129.140.88, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: k1v5g9FefdoO, udp: true, tfo: false}
+  - {name: "@configraygan. 4", server: 3.1.195.148, port: 8316, type: ss, cipher: chacha20-ietf-poly1305, password: ljqdalu13.., udp: true, tfo: false}
+  - {name: 3.112.130.53:8313, server: 3.112.130.53, port: 8313, type: ss, cipher: chacha20-ietf-poly1305, password: ljqdalu13.., udp: true, tfo: false}
+  - {name: 3.112.130.53:8319, server: 3.112.130.53, port: 8319, type: ss, cipher: chacha20-ietf-poly1305, password: ljqdalu13.., udp: true, tfo: false}
+  - {name: configraygan, server: 3.1.195.148, port: 8319, type: ss, cipher: chacha20-ietf-poly1305, password: ljqdalu13.., udp: true, tfo: false}
+  - {name: dc3bg1.vpncamp.vip:4432, server: dc3bg1.vpncamp.vip, port: 4432, type: ss, cipher: chacha20-ietf-poly1305, password: oUKtSQ1yDoWY2SIC1AVSeO, udp: true, tfo: false}
+  - {name: 54.36.174.140:443, server: 54.36.174.140, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: pvgz9pq, udp: true, tfo: false}
+  - {name: configraygan mci9, server: 54.36.174.140, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: pvgz9pq, udp: true, tfo: false}
+  - {name: 82.180.146.173:35652, server: 82.180.146.173, port: 35652, type: ss, cipher: aes-128-gcm, password: 93498539-7838-4836-b9b3-8311ffc79bcf, udp: true, tfo: false}
+  - {name: 103.186.155.148:38388, server: 103.186.155.148, port: 38388, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, udp: true, tfo: false}
+  - {name: 103.186.155.39:38388, server: 103.186.155.39, port: 38388, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, udp: true, tfo: false}
+  - {name: 103.186.155.80:38388, server: 103.186.155.80, port: 38388, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, udp: true, tfo: false}
+  - {name: 154.90.62.168:989, server: 154.90.62.168, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
+  - {name: 154.90.63.177:989, server: 154.90.63.177, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
+  - {name: 38.180.216.114:7307, server: 38.180.216.114, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true, tfo: false}
+  - {name: 104.21.40.34:443, server: 104.21.40.34, port: 443, type: trojan, password: humanity, sni: www.gossipglove.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.gossipglove.com}}, udp: true, tfo: false}
+  - {name: 172.64.152.23:443, server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true, tfo: false}
+  - {name: "***⚡***Telegram", server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.creationlong.org, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org}}, udp: true, tfo: false}
+  - {name: "@configraygan` 7", server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.gossipglove.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.gossipglove.com}}, udp: true, tfo: false}
+  - {name: "@configraygan W6", server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.gossipglove.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.gossipglove.com}}, udp: true, tfo: false}
+  - {name: configraygan 2, server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.gossipglove.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.gossipglove.com}}, udp: true, tfo: false}
+  - {name: 208.103.161.110:443, server: 208.103.161.110, port: 443, type: trojan, password: humanity, sni: www.creationlong.org, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org}}, udp: true, tfo: false}
+  - {name: configraygan 1007, server: chatgpt.com, port: 443, type: trojan, password: humanity, sni: www.gossipglove.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.gossipglove.com}}, udp: true, tfo: false}
+  - {name: "@configraygan` 8", server: www.calmlunch.com, port: 443, type: trojan, password: humanity, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment}, udp: true, tfo: false}
+  - {name: "@configraygan` 9", server: www.creationlong.org, port: 443, type: trojan, password: humanity, sni: www.creationlong.org, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org}}, udp: true, tfo: false}
+  - {name: 18.196.168.199:22223, server: 18.196.168.199, port: 22223, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***⚡***Telegram 2", server: 3.67.73.0, port: 22223, type: trojan, password: telegram-id-directvpn, sni: trojan.burgerip.co.uk, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 18.196.168.199:22222, server: 18.196.168.199, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***⚡***Telegram 3", server: 3.67.73.0, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan 05", server: cdnjs.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 00deb53e-b772-45f0-8cbe-d915b2f68ffd, servername: 639057258094400192.corolla-perma.info, network: ws, ws-opts: {path: "/jmslzhws?ed=2560", headers: {Host: 639057258094400192.corolla-perma.info}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan W14", server: usa26.clearorbitllc.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 022af852-49c7-4b5e-a13b-6877bcfe30a3, servername: usa26.clearorbitllc.com, host: usa26.clearorbitllc.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: uG51OJ4QHrSFthqOCL3Ctqxy4plPkeUyRGDmF4V7dFo, short-id: c6de8980}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan 3, server: 13.38.161.110, port: 22224, type: vless, tls: true, packet-encoding: xudp, uuid: 05519058-d2ac-4f28-9e4a-2b2a1386749e, servername: trojan.burgerip.co.uk, network: ws, ws-opts: {path: /telegram-channel-vlessconfig, headers: {Host: trojan.burgerip.co.uk}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 18.196.168.199:22224, server: 18.196.168.199, port: 22224, type: vless, tls: true, packet-encoding: xudp, uuid: 05519058-d2ac-4f28-9e4a-2b2a1386749e, servername: trojan.burgerip.co.uk, network: ws, ws-opts: {path: /telegram-channel-vlessconfig, headers: {Host: trojan.burgerip.co.uk}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 3.67.73.0:22224, server: 3.67.73.0, port: 22224, type: vless, tls: true, packet-encoding: xudp, uuid: 05519058-d2ac-4f28-9e4a-2b2a1386749e, servername: trojan.burgerip.co.uk, network: ws, ws-opts: {path: /telegram-channel-vlessconfig, headers: {Host: trojan.burgerip.co.uk}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***⚡***Telegram 4", server: jak.usertak.com, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: 07ee34e6-d847-458e-9cc1-b7a64f4c7600, host: speedtest.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan 1", server: fa.faraz360.ir, port: 9829, type: vless, tls: true, packet-encoding: xudp, uuid: 0c0870b0-a253-4861-84b6-e6ce6777e97c, host: pro30afzar.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan W1", server: nl.skfv-mirror.ru, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 0da89048-00d8-4c1f-b0ee-bdbd8f3f0b3b, servername: nl.skfv-mirror.ru, host: nl.skfv-mirror.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: qmfrMwVYth3lsYuv7qfr22YlTIlNtVjMl0v4Z5pX7hM, short-id: 4a3ad88ff867a295}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan قطع شد بیا چنل جدید میزارم", server: ir2.webira.net, port: 19204, type: vless, tls: true, packet-encoding: xudp, uuid: 0fa2673b-4fc1-48d7-8761-4ab8931cb52e, host: divarcdn.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan 2 2", server: s30777.asancall.cloud, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 102b2850-5c6e-4ec8-a0db-e4165c3b572d, network: ws, ws-opts: {path: /ws/apps/emofid, headers: {Host: s30777.asancall.cloud}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan 01", server: cdnjs.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 118abefa-b585-49c5-a342-61d0e75402f5, servername: 639057258093033836.corolla-perma.info, network: ws, ws-opts: {path: "/bzxqrlws?ed=2560", headers: {Host: 639057258093033836.corolla-perma.info}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 159.89.87.21:28190, server: 159.89.87.21, port: 28190, type: vless, tls: true, packet-encoding: xudp, uuid: 14c80e0e-f7ce-4991-94fc-99a1db4a9b1e, servername: aws.amazon.com, host: aws.amazon.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan mci4, server: 159.89.87.21, port: 28190, type: vless, tls: true, packet-encoding: xudp, uuid: 14c80e0e-f7ce-4991-94fc-99a1db4a9b1e, servername: aws.amazon.com, host: aws.amazon.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan🤺🤺", server: pinterest.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 20df8c30-c07a-494e-b83d-4af21ee57788, network: ws, ws-opts: {path: /containers/fi, headers: {Host: dojman.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ipbaz.ping-box.com:443, server: ipbaz.ping-box.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 21f9985c-d363-4eee-957f-720e9e9f9b8d, servername: teams.live.com.afrcloud1.c01.kr, network: ws, ws-opts: {path: /, headers: {Host: teams.live.com.afrcloud1.c01.kr}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ipbaz.ping-box.com:443 2, server: ipbaz.ping-box.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 21f9985c-d363-4eee-957f-720e9e9f9b8d, servername: teams.live.com.afrcloud1.c01.kr, network: ws, ws-opts: {path: /, headers: {Host: teams.live.com.afrcloud1.c01.kr}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan mci10, server: ipbaz.ping-box.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 21f9985c-d363-4eee-957f-720e9e9f9b8d, servername: teams.live.com.afrcloud1.c01.kr, network: ws, ws-opts: {path: /, headers: {Host: teams.live.com.afrcloud1.c01.kr}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan W7", server: ipbaz.ping-box.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 21f9985c-d363-4eee-957f-720e9e9f9b8d, servername: teams.live.com.afrcloud1.c01.kr, network: ws, ws-opts: {path: /, headers: {Host: teams.live.com.afrcloud1.c01.kr}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan 4, server: c.brimliski.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 227532ac-65f5-4b56-a7d6-b475b0e08834, servername: subtitle.migamet.sbs, alpn: [http%2F1.1], network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: subtitle.migamet.sbs}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ip1.neoservers.ir:8443, server: ip1.neoservers.ir, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 28ab6669-7beb-4378-bcce-7d91bc558513, servername: 4mgCAd69VuNq7KzjNVDrkpVzvugByFBdg08tYcrY.ViPClUbIrAn.Ir., alpn: [h3%2Ch2], network: ws, ws-opts: {path: /, headers: {Host: 4mgCAd69VuNq7KzjNVDrkpVzvugByFBdg08tYcrY.ViPClUbIrAn.Ir.}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ip2.neoservers.ir:8443, server: ip2.neoservers.ir, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 28ab6669-7beb-4378-bcce-7d91bc558513, servername: zRIsysUgfbQuJhTKHNgms4L0o9ZzzSYmKw1zKgPP.ViPClUbIrAn.Ir., alpn: [h3%2Ch2], network: ws, ws-opts: {path: /, headers: {Host: zRIsysUgfbQuJhTKHNgms4L0o9ZzzSYmKw1zKgPP.ViPClUbIrAn.Ir.}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ip4.neoservers.ir:8443, server: ip4.neoservers.ir, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 28ab6669-7beb-4378-bcce-7d91bc558513, servername: WQLn6jpEZ9ZUkE6ShnzvkBazVVo74J4Bar267N5O.ViPClUbIrAn.Ir., alpn: [h3%2Ch2], network: ws, ws-opts: {path: /, headers: {Host: WQLn6jpEZ9ZUkE6ShnzvkBazVVo74J4Bar267N5O.ViPClUbIrAn.Ir.}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ip5.neoservers.ir:8443, server: ip5.neoservers.ir, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 28ab6669-7beb-4378-bcce-7d91bc558513, servername: RxqBfwg0pg6WcwWlfMg5XceISZtoKwomIpxo5LSZ.ViPClUbIrAn.Ir., alpn: [h3%2Ch2], network: ws, ws-opts: {path: /, headers: {Host: RxqBfwg0pg6WcwWlfMg5XceISZtoKwomIpxo5LSZ.ViPClUbIrAn.Ir.}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan🍄🍄", server: vip-80.f-sub.cfd, port: 1517, type: vless, tls: true, packet-encoding: xudp, uuid: 292f3ea4-c29c-4906-acf3-e2384e2006ae, host: speedtest.net, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan 5, server: 185.215.231.118, port: 11565, type: vless, tls: true, packet-encoding: xudp, uuid: 296f8276-ebcc-4bb8-863d-777a6e6adada, host: speedtest.net, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan 07", server: cdnjs.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 2e27ac27-c360-489a-86ea-8b9659de6763, servername: 639057258094935446.corolla-perma.info, network: ws, ws-opts: {path: "/jztpmbws?ed=2560", headers: {Host: 639057258094935446.corolla-perma.info}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan 6, server: dd.openaccessnode.com, port: 504, type: vless, tls: true, packet-encoding: xudp, uuid: 31701b5d-ca95-92f9-d684-dae3706161ea, servername: nobitex.ir, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: JNIR}, reality-opts: {public-key: aNLPNNyjIC7QYLe7MpF4nxxHhO421dBSZaQgsDd1szs, short-id: 1d64e9805b4f9ae3}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***⚡***Telegram 5", server: 46.38.146.167, port: 9092, type: vless, tls: true, packet-encoding: xudp, uuid: 34dae96c-1a41-434f-94b6-5507c3a6d318, host: filmnet.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 137.74.119.18:8442, server: 137.74.119.18, port: 8442, type: vless, tls: true, packet-encoding: xudp, uuid: 3c47ed67-d4a7-4f2b-90b7-98f4b197bb0d, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan mci3, server: 137.74.119.18, port: 8442, type: vless, tls: true, packet-encoding: xudp, uuid: 3c47ed67-d4a7-4f2b-90b7-98f4b197bb0d, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan mci8, server: 137.74.119.18, port: 8442, type: vless, tls: true, packet-encoding: xudp, uuid: 3c47ed67-d4a7-4f2b-90b7-98f4b197bb0d, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan 09", server: cdnjs.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 3c7b7ec9-e49a-440f-aee7-1f611d0e8c85, servername: 639057258083986963.camry-perma.info, network: ws, ws-opts: {path: "/hsnoryws?ed=2560", headers: {Host: 639057258083986963.camry-perma.info}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan W8", server: 47.80.13.85, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 3e7f67de-648e-4871-b51a-a225214d41ee, servername: api.company-target.com, host: api.company-target.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan 1001, server: 51.158.206.80, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan W12", server: 57.129.49.1, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan W4", server: 57.129.53.181, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan` 10", server: 172.67.175.120, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4b81acdf-9f0e-4a75-9f30-2f0207599d66, servername: x2.tele-shop-too.studio, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: x2.tele-shop-too.studio}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan` 11", server: 172.67.175.120, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4b81acdf-9f0e-4a75-9f30-2f0207599d66, servername: x2.tele-shop-too.studio, alpn: ["h2,http/1.1"], network: ws, ws-opts: {path: /, headers: {Host: x2.tele-shop-too.studio}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan 02", server: cdnjs.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 53f0bca8-f170-4ef7-8031-c7d441189dbf, servername: 639057258113762588.civic-perma.info, network: ws, ws-opts: {path: "/cahttingws?ed=2560", headers: {Host: 639057258113762588.civic-perma.info}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan 04", server: cdnjs.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 53f0bca8-f170-4ef7-8031-c7d441189dbf, servername: 639057258113961513.civic-perma.info, network: ws, ws-opts: {path: "/cahttingws?ed=2560", headers: {Host: 639057258113961513.civic-perma.info}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan 06", server: cdnjs.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 53f0bca8-f170-4ef7-8031-c7d441189dbf, servername: 639057258114114299.civic-perma.info, network: ws, ws-opts: {path: "/cahttingws?ed=2560", headers: {Host: 639057258114114299.civic-perma.info}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan 08", server: cdnjs.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 53f0bca8-f170-4ef7-8031-c7d441189dbf, servername: 639057258114955879.civic-perma.info, network: ws, ws-opts: {path: "/cahttingws?ed=2560", headers: {Host: 639057258114955879.civic-perma.info}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 78.159.122.223:443, server: 78.159.122.223, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 666250e3-362e-440a-b9e3-2b7794c02af8, servername: de-two.asbndx.com, host: de-two.asbndx.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: NLARt-womsWqopLrSLNpfp3bHXy3Pg08_LbFUQPhpjU, short-id: 0f4dacf82203e11f}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan` 12", server: 78.159.122.223, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 666250e3-362e-440a-b9e3-2b7794c02af8, servername: de-two.asbndx.com, host: de-two.asbndx.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: NLARt-womsWqopLrSLNpfp3bHXy3Pg08_LbFUQPhpjU, short-id: 0f4dacf82203e11f}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan` 13", server: 91.184.240.121, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 745d8b0e-1bf2-4921-8058-4d67dd3dbc13, servername: secdn13.suio.me, host: secdn13.suio.me, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan 1003, server: p.beshkon.top, port: 2087, type: vless, tls: true, packet-encoding: xudp, uuid: 82a47691-157b-46b7-aa3c-312f744b5f9a, host: speedtest.net, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan 3", server: 81.12.33.170, port: 1003, type: vless, tls: true, packet-encoding: xudp, uuid: 8736dfd0-2020-4dde-956c-6a3e8f1b3c39, host: myket.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan 7, server: zone.dea.fx2hub.ir, port: 31665, type: vless, tls: true, packet-encoding: xudp, uuid: 89b95a36-b2cb-4fd2-b386-02703adb78e8, host: skyroom.online, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***⚡***Telegram 6", server: 46.38.146.167, port: 9093, type: vless, tls: true, packet-encoding: xudp, uuid: 8e4257a8-668c-40fc-9e53-612aec460652, host: filmnet.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan🏵️🏵️", server: cf.gafe-marz.ir, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: 955df0a4-b340-4172-af3e-d6eaf8f9c403, servername: Shifo.digishopcenter.ir, network: grpc, grpc-opts: {grpc-mode: multi, grpc-service-name: Love}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ⚡Telegram - @configraygan, server: www.speedtest.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 98d677be-b14b-4c14-a96b-4a39a3be645a, servername: t86y6leiyaph7tsvb170x7vfx0-3dvh3.vrezht08.workers.dev, alpn: [http%2F1.1], network: ws, ws-opts: {path: "/eyJqdW5rIjoiZHJmTGlJSmciLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119?ed=2560", headers: {Host: t86y6leiyaph7tsvb170x7vfx0-3dvh3.vrezht08.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 87.248.156.94:42020, server: 87.248.156.94, port: 42020, type: vless, tls: true, packet-encoding: xudp, uuid: 9b984ff2-2e5e-4e42-8557-fdf453f5ac9a, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ip.hamrahto.com:8443, server: ip.hamrahto.com, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 9e35a3d0-1309-4697-a61c-e898e6312c35, servername: hm2.mutee.com.tr, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: hm2.mutee.com.tr}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan 8, server: ip.hamrahto.com, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 9e35a3d0-1309-4697-a61c-e898e6312c35, servername: hm2.mutee.com.tr, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: hm2.mutee.com.tr}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 172.67.111.84:443, server: 172.67.111.84, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a0aa3b69-59fa-46ca-91f1-47b974accb64, servername: 71UpnQ27KhoVEjlN14vHSAeUTXG6mzL2.tEleGarSH.woRkeRS.dEV, network: ws, ws-opts: {path: "/eyJqdW5rIjoiN1ZVYWpyeXFlUDVGOHciLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19?ed=2560", headers: {Host: 71UpnQ27KhoVEjlN14vHSAeUTXG6mzL2.tEleGarSH.woRkeRS.dEV}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan mci6, server: 172.67.111.84, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a0aa3b69-59fa-46ca-91f1-47b974accb64, servername: 71UpnQ27KhoVEjlN14vHSAeUTXG6mzL2.tEleGarSH.woRkeRS.dEV, network: ws, ws-opts: {path: "/eyJqdW5rIjoiN1ZVYWpyeXFlUDVGOHciLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19?ed=2560", headers: {Host: 71UpnQ27KhoVEjlN14vHSAeUTXG6mzL2.tEleGarSH.woRkeRS.dEV}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan 1002, server: 198.41.196.183, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a0aa3b69-59fa-46ca-91f1-47b974accb64, servername: 71UpnQ27KhoVEjlN14vHSAeUTXG6mzL2.tEleGarSH.woRkeRS.dEV, network: ws, ws-opts: {path: "/eyJqdW5rIjoiN1ZVYWpyeXFlUDVGOHciLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJicGIueW91c2VmLmlzZWdhcm8uY29tIl19?ed=2560", headers: {Host: 71UpnQ27KhoVEjlN14vHSAeUTXG6mzL2.tEleGarSH.woRkeRS.dEV}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: convera.com:2053, server: convera.com, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: a2a396c3-f40e-4dee-bdbb-b1201f12dc1c, servername: snippet.danfeng.de5.net, network: ws, ws-opts: {path: /danfeng, headers: {Host: snippet.danfeng.de5.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan 9, server: convera.com, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: a2a396c3-f40e-4dee-bdbb-b1201f12dc1c, servername: snippet.danfeng.de5.net, network: ws, ws-opts: {path: /danfeng, headers: {Host: snippet.danfeng.de5.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan 10, server: 85.9.122.100, port: 23525, type: vless, tls: true, packet-encoding: xudp, uuid: a3c6763e-9bd3-4749-b5bc-8cd791b3ec84, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan` 14", server: 188.114.96.3, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a44e0875-210f-4941-9062-89b6361a14c6, servername: teams.live.com.afrcloud1.c01.kr, network: ws, ws-opts: {path: /, headers: {Host: teams.live.com.afrcloud1.c01.kr}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan 11, server: kurd-fr.tawana.online, port: 46248, type: vless, tls: true, packet-encoding: xudp, uuid: a571b94c-a9f3-407a-a8ef-da608dab5472, host: kurd-fr.tawana.online, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan 12, server: cf.gafe-marz.ir, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: ad4b916f-7c50-4e46-8e5a-e5dd4a5f7c53, servername: austrish.digishopcenter.ir, network: grpc, grpc-opts: {grpc-mode: multi, grpc-service-name: Love}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan 13, server: cf.gafe-marz.ir, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: ad4b916f-7c50-4e46-8e5a-e5dd4a5f7c53, servername: neth.digishopcenter.ir, network: grpc, grpc-opts: {grpc-mode: multi, grpc-service-name: Love}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: tawananet.panbehpanel.ir:80, server: tawananet.panbehpanel.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: c33275fd-a4fa-470d-90e4-55da39d849a8, network: ws, ws-opts: {path: /, headers: {Host: tawananet.panbehpanel.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan W10", server: tawananet.panbehpanel.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: c33275fd-a4fa-470d-90e4-55da39d849a8, network: ws, ws-opts: {path: /, headers: {Host: tawananet.panbehpanel.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan 14, server: tawananet.panbehpanel.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: c33275fd-a4fa-470d-90e4-55da39d849a8, network: ws, ws-opts: {path: /, headers: {Host: tawananet.panbehpanel.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 1.kkcweb.ir:2083, server: 1.kkcweb.ir, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: c805b05e-339d-40e0-8787-432d97a27345, servername: hajames.amirconfigpaanelllll.com, network: ws, ws-opts: {path: /, headers: {Host: hajames.amirconfigpaanelllll.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan W5", server: 1.kkcweb.ir, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: c805b05e-339d-40e0-8787-432d97a27345, servername: hajames.amirconfigpaanelllll.com, network: ws, ws-opts: {path: /, headers: {Host: hajames.amirconfigpaanelllll.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan mci5, server: 1.kkcweb.ir, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: c805b05e-339d-40e0-8787-432d97a27345, servername: hajames.amirconfigpaanelllll.com, network: ws, ws-opts: {path: /, headers: {Host: hajames.amirconfigpaanelllll.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan 15, server: grdt.dtsantoor.com, port: 40786, type: vless, tls: true, packet-encoding: xudp, uuid: d027f2eb-3eea-4d84-8c67-73133136cacd, servername: grdt.dtsantoor.com, host: grdt.dtsantoor.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan W3", server: 158.160.105.121, port: 51102, type: vless, tls: true, packet-encoding: xudp, uuid: d4d031ec-0ba6-486a-aa0c-dce2b7cb8933, servername: yandex.ru, host: yandex.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: Qddpg8luihgzgx4g4uMJklXzlrMCd8L1igJSWrRUvSc, short-id: 8f222b3475800821}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 108.162.198.154:443, server: 108.162.198.154, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d89d6641-3b1a-4f51-a194-9c9109fd21b6, servername: DiprOX.pages.DEV, network: ws, ws-opts: {path: /Tel-@V2rayAlpha, headers: {Host: DiprOX.pages.DEV}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan 16, server: creativecommons.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d89d6641-3b1a-4f51-a194-9c9109fd21b6, servername: DiprOX.pages.DEV, network: ws, ws-opts: {path: /assets, headers: {Host: DiprOX.pages.DEV}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan 17, server: v1.dabache.top, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d89d6641-3b1a-4f51-a194-9c9109fd21b6, servername: DiprOX.pages.DEV, network: ws, ws-opts: {path: /assets, headers: {Host: DiprOX.pages.DEV}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan` 15", server: cff.digishopcenter.ir, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: d8ade4cc-c672-4195-964b-473f21584100, servername: neth.mehrsazi.ir, network: ws, ws-opts: {path: /love, headers: {Host: neth.mehrsazi.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 2app.star-direct.ir:443, server: 2app.star-direct.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: daa3174b-9de5-4f93-a7d7-c03fbf4c553d, servername: Dd2hetznjdpsjsbspdnspwnxmapqhsiwpwur6jdod738200.mrpixanos.ir, alpn: ["h3,h2,http/1.1"], network: ws, ws-opts: {path: /, headers: {Host: Dd2hetznjdpsjsbspdnspwnxmapqhsiwpwur6jdod738200.mrpixanos.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 2app.star-direct.ir:443 2, server: 2app.star-direct.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: daa3174b-9de5-4f93-a7d7-c03fbf4c553d, servername: ghhyteagfinljtrssj3gjiydcbkppoyreq34678072.mrpixanos.ir, alpn: ["h3,h2,http/1.1"], network: ws, ws-opts: {path: /, headers: {Host: ghhyteagfinljtrssj3gjiydcbkppoyreq34678072.mrpixanos.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***⚡***Telegram 7", server: 140.248.159.164, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: dd0cfef0-fda9-47ec-8a65-49d7bc004f82, network: ws, ws-opts: {path: /--Telegram---MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN, headers: {Host: mitivpn3.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan mci7, server: 188.114.97.4, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: dd0cfef0-fda9-47ec-8a65-49d7bc004f82, servername: kos.mitivpn--1--0-1-0--1-1-0--1-0-1-0-1--0-1--0---1--0.workers.dev, network: ws, ws-opts: {path: /--Telegram---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN, headers: {Host: kos.mitivpn--1--0-1-0--1-1-0--1-0-1-0-1--0-1--0---1--0.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan G1", server: www.fastly.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: dd0cfef0-fda9-47ec-8a65-49d7bc004f82, network: ws, ws-opts: {path: /--Telegram---MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN, headers: {Host: mitivpn3.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan` 16", server: nl01-gmn02-vlr01.tcp-reset-club.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e108f3eb-4d3a-4e20-a09b-7008e333bc23, servername: hls-svod.itunes.apple.com, host: hls-svod.itunes.apple.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg, short-id: 86e999a2cdc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan` 17", server: GR.erush.ir, port: 1155, type: vless, tls: true, packet-encoding: xudp, uuid: e285684a-1e5d-4293-9cd3-3861131288f8, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: vgdl.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 172.67.249.36:443, server: 172.67.249.36, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e4824193-4f54-453b-d037-88368e85ef0e, servername: pqh30v5.carwashipdir.shop, alpn: [h2], network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan 03", server: cdnjs.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e924b553-2abe-420f-bd3c-0fdeac792a35, servername: 639057258093873163.corolla-perma.info, network: ws, ws-opts: {path: "/tnkyjyws?ed=2560", headers: {Host: 639057258093873163.corolla-perma.info}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan 1005, server: 188.253.26.39, port: 442, type: vless, tls: true, packet-encoding: xudp, uuid: e929f51d-5a95-5432-b66f-cfe725ea1f61, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: T_gyZwngrYUe24q6-mieGT9WJfzja0PQad_y_SnhBk0, short-id: 6ac998b514}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan` 18", server: 104.19.140.106, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ecd01b9c-8172-41a4-be72-6167fd7d932d, servername: afrcloud1.c01.kr, network: ws, ws-opts: {path: /194.127.193.124=24467, headers: {Host: afrcloud1.c01.kr}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 2sudo.winapp3.ir:443, server: 2sudo.winapp3.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f09dd92e-d441-4139-b1e4-a291463d9935, servername: ghhyteagfinljtrssj3gjiydcbkppoyreq34678072.mrpixanos.ir, alpn: [h3%2Ch2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: ghhyteagfinljtrssj3gjiydcbkppoyreq34678072.mrpixanos.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan` 19", server: 81.12.33.7, port: 710, type: vless, tls: true, packet-encoding: xudp, uuid: fafc26d9-7fd9-48e0-8375-5bac0fdb5f55, host: igap.net, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 57.129.64.102:443, server: 57.129.64.102, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: nasnet, servername: nasnet-5712964102-direct.sharghdaily.co, alpn: [h2%2Chttp%2F1.1], host: nasnet-5712964102-direct.sharghdaily.co, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan 1006, server: 81.208.170.142, port: 1500, type: vless, tls: true, packet-encoding: xudp, uuid: sGLzG6kUwBpZd73sW0nq, servername: www.ebay.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, reality-opts: {public-key: VQxVgczORkbSNdDrkNOYs6zMBINpViztTKDuWCeQsVE, short-id: 775eb6408888248e}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ⚡️Telegram - @configraygan, server: 68.167.181.220, port: 10010, type: vmess, uuid: b4f7c326-5c4f-4e19-83d5-bfa43b461002, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan 4", server: 81.12.33.166, port: 1000, type: vmess, uuid: 5b20d5e8-3adf-4a2d-8384-8562963e8066, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan W2", server: 172.233.229.91, port: 14102, type: vmess, uuid: 27ba87fc-583f-4763-9060-83cf0b9264db, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan mci2, server: 172.233.229.91, port: 14102, type: vmess, uuid: 27ba87fc-583f-4763-9060-83cf0b9264db, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan 1004, server: 172.67.204.84, port: 8080, type: vmess, uuid: nasnet, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /nasnet/cdn, headers: {Host: nasnet-511952424.mcitel.co}}, udp: true, tfo: false}
+  - {name: configraygan mci1, server: tgju.org, port: 8080, type: vmess, uuid: nasnet, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/nasnet/cdn?ed=2560", headers: {Host: nasnet-162191099.sharghdaily.co}}, udp: true, tfo: false}
+  - {name: "@configraygan  جوین بزنین کانفیگ جدید میزارم", server: digitalocean.com, port: 8080, type: vmess, uuid: nasnet, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/NASNET/cdn?ed=2560", headers: {Host: nasnet-571299667.rahavard365.co}}, udp: true, tfo: false}
+  - {name: ⚡️Telegram - configraygan, server: gold6.goldspeed.org, port: 40973, type: vmess, uuid: a7918501-9245-42f5-9393-f6e84bda9497, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+proxy-groups:
+  - name: نوع انتخاب پروکسی 🔀
+    type: select
+    proxies:
+      - اتصال پایدار 🔗
+      - خودکار (بهترین پینگ) 🤖
+      - دستی 🤏🏻
+      - پشتیبان (در صورت قطعی) 🧯
+      - توزیع بار (پایدار) 🧲
+      - توزیع بار (موقت) ⏳
+      - توزیع بار (گردشی) 🔁
+      - قطع اینترنت ⛔
+      - بدون فیلترشکن 🛡️
+  - name: دستی 🤏🏻
+    type: select
+    proxies:
+      - 57.129.95.140:11201
+      - "@configraygan W9"
+      - "@configraygan mtn"
+      - "@configraygan"
+      - "@configraygan`"
+      - "@configraygan` 2"
+      - "@configraygan` 3"
+      - 213.156.137.142:43660
+      - "@configraygan` 4"
+      - 141.95.105.163:11201
+      - "@configraygan W11"
+      - "@configraygan` 5"
+      - "@configraygan 2"
+      - "@configraygan` 6"
+      - "@configraygan. 4"
+      - 3.112.130.53:8313
+      - 3.112.130.53:8319
+      - configraygan
+      - dc3bg1.vpncamp.vip:4432
+      - 54.36.174.140:443
+      - configraygan mci9
+      - 82.180.146.173:35652
+      - 103.186.155.148:38388
+      - 103.186.155.39:38388
+      - 103.186.155.80:38388
+      - 154.90.62.168:989
+      - 154.90.63.177:989
+      - 38.180.216.114:7307
+      - 104.21.40.34:443
+      - 172.64.152.23:443
+      - "***⚡***Telegram"
+      - "@configraygan` 7"
+      - "@configraygan W6"
+      - configraygan 2
+      - 208.103.161.110:443
+      - configraygan 1007
+      - "@configraygan` 8"
+      - "@configraygan` 9"
+      - 18.196.168.199:22223
+      - "***⚡***Telegram 2"
+      - 18.196.168.199:22222
+      - "***⚡***Telegram 3"
+      - "@configraygan 05"
+      - "@configraygan W14"
+      - configraygan 3
+      - 18.196.168.199:22224
+      - 3.67.73.0:22224
+      - "***⚡***Telegram 4"
+      - "@configraygan 1"
+      - "@configraygan W1"
+      - "@configraygan قطع شد بیا چنل جدید میزارم"
+      - "@configraygan 2 2"
+      - "@configraygan 01"
+      - 159.89.87.21:28190
+      - configraygan mci4
+      - "@configraygan🤺🤺"
+      - ipbaz.ping-box.com:443
+      - ipbaz.ping-box.com:443 2
+      - configraygan mci10
+      - "@configraygan W7"
+      - configraygan 4
+      - ip1.neoservers.ir:8443
+      - ip2.neoservers.ir:8443
+      - ip4.neoservers.ir:8443
+      - ip5.neoservers.ir:8443
+      - "@configraygan🍄🍄"
+      - configraygan 5
+      - "@configraygan 07"
+      - configraygan 6
+      - "***⚡***Telegram 5"
+      - 137.74.119.18:8442
+      - configraygan mci3
+      - configraygan mci8
+      - "@configraygan 09"
+      - "@configraygan W8"
+      - configraygan 1001
+      - "@configraygan W12"
+      - "@configraygan W4"
+      - "@configraygan` 10"
+      - "@configraygan` 11"
+      - "@configraygan 02"
+      - "@configraygan 04"
+      - "@configraygan 06"
+      - "@configraygan 08"
+      - 78.159.122.223:443
+      - "@configraygan` 12"
+      - "@configraygan` 13"
+      - configraygan 1003
+      - "@configraygan 3"
+      - configraygan 7
+      - "***⚡***Telegram 6"
+      - "@configraygan🏵️🏵️"
+      - ⚡Telegram - @configraygan
+      - 87.248.156.94:42020
+      - ip.hamrahto.com:8443
+      - configraygan 8
+      - 172.67.111.84:443
+      - configraygan mci6
+      - configraygan 1002
+      - convera.com:2053
+      - configraygan 9
+      - configraygan 10
+      - "@configraygan` 14"
+      - configraygan 11
+      - configraygan 12
+      - configraygan 13
+      - tawananet.panbehpanel.ir:80
+      - "@configraygan W10"
+      - configraygan 14
+      - 1.kkcweb.ir:2083
+      - "@configraygan W5"
+      - configraygan mci5
+      - configraygan 15
+      - "@configraygan W3"
+      - 108.162.198.154:443
+      - configraygan 16
+      - configraygan 17
+      - "@configraygan` 15"
+      - 2app.star-direct.ir:443
+      - 2app.star-direct.ir:443 2
+      - "***⚡***Telegram 7"
+      - configraygan mci7
+      - "@configraygan G1"
+      - "@configraygan` 16"
+      - "@configraygan` 17"
+      - 172.67.249.36:443
+      - "@configraygan 03"
+      - configraygan 1005
+      - "@configraygan` 18"
+      - 2sudo.winapp3.ir:443
+      - "@configraygan` 19"
+      - 57.129.64.102:443
+      - configraygan 1006
+      - ⚡️Telegram - @configraygan
+      - "@configraygan 4"
+      - "@configraygan W2"
+      - configraygan mci2
+      - configraygan 1004
+      - configraygan mci1
+      - "@configraygan  جوین بزنین کانفیگ جدید میزارم"
+      - ⚡️Telegram - configraygan
+  - name: خودکار (بهترین پینگ) 🤖
+    type: url-test
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    tolerance: 50
+    proxies:
+      - 57.129.95.140:11201
+      - "@configraygan W9"
+      - "@configraygan mtn"
+      - "@configraygan"
+      - "@configraygan`"
+      - "@configraygan` 2"
+      - "@configraygan` 3"
+      - 213.156.137.142:43660
+      - "@configraygan` 4"
+      - 141.95.105.163:11201
+      - "@configraygan W11"
+      - "@configraygan` 5"
+      - "@configraygan 2"
+      - "@configraygan` 6"
+      - "@configraygan. 4"
+      - 3.112.130.53:8313
+      - 3.112.130.53:8319
+      - configraygan
+      - dc3bg1.vpncamp.vip:4432
+      - 54.36.174.140:443
+      - configraygan mci9
+      - 82.180.146.173:35652
+      - 103.186.155.148:38388
+      - 103.186.155.39:38388
+      - 103.186.155.80:38388
+      - 154.90.62.168:989
+      - 154.90.63.177:989
+      - 38.180.216.114:7307
+      - 104.21.40.34:443
+      - 172.64.152.23:443
+      - "***⚡***Telegram"
+      - "@configraygan` 7"
+      - "@configraygan W6"
+      - configraygan 2
+      - 208.103.161.110:443
+      - configraygan 1007
+      - "@configraygan` 8"
+      - "@configraygan` 9"
+      - 18.196.168.199:22223
+      - "***⚡***Telegram 2"
+      - 18.196.168.199:22222
+      - "***⚡***Telegram 3"
+      - "@configraygan 05"
+      - "@configraygan W14"
+      - configraygan 3
+      - 18.196.168.199:22224
+      - 3.67.73.0:22224
+      - "***⚡***Telegram 4"
+      - "@configraygan 1"
+      - "@configraygan W1"
+      - "@configraygan قطع شد بیا چنل جدید میزارم"
+      - "@configraygan 2 2"
+      - "@configraygan 01"
+      - 159.89.87.21:28190
+      - configraygan mci4
+      - "@configraygan🤺🤺"
+      - ipbaz.ping-box.com:443
+      - ipbaz.ping-box.com:443 2
+      - configraygan mci10
+      - "@configraygan W7"
+      - configraygan 4
+      - ip1.neoservers.ir:8443
+      - ip2.neoservers.ir:8443
+      - ip4.neoservers.ir:8443
+      - ip5.neoservers.ir:8443
+      - "@configraygan🍄🍄"
+      - configraygan 5
+      - "@configraygan 07"
+      - configraygan 6
+      - "***⚡***Telegram 5"
+      - 137.74.119.18:8442
+      - configraygan mci3
+      - configraygan mci8
+      - "@configraygan 09"
+      - "@configraygan W8"
+      - configraygan 1001
+      - "@configraygan W12"
+      - "@configraygan W4"
+      - "@configraygan` 10"
+      - "@configraygan` 11"
+      - "@configraygan 02"
+      - "@configraygan 04"
+      - "@configraygan 06"
+      - "@configraygan 08"
+      - 78.159.122.223:443
+      - "@configraygan` 12"
+      - "@configraygan` 13"
+      - configraygan 1003
+      - "@configraygan 3"
+      - configraygan 7
+      - "***⚡***Telegram 6"
+      - "@configraygan🏵️🏵️"
+      - ⚡Telegram - @configraygan
+      - 87.248.156.94:42020
+      - ip.hamrahto.com:8443
+      - configraygan 8
+      - 172.67.111.84:443
+      - configraygan mci6
+      - configraygan 1002
+      - convera.com:2053
+      - configraygan 9
+      - configraygan 10
+      - "@configraygan` 14"
+      - configraygan 11
+      - configraygan 12
+      - configraygan 13
+      - tawananet.panbehpanel.ir:80
+      - "@configraygan W10"
+      - configraygan 14
+      - 1.kkcweb.ir:2083
+      - "@configraygan W5"
+      - configraygan mci5
+      - configraygan 15
+      - "@configraygan W3"
+      - 108.162.198.154:443
+      - configraygan 16
+      - configraygan 17
+      - "@configraygan` 15"
+      - 2app.star-direct.ir:443
+      - 2app.star-direct.ir:443 2
+      - "***⚡***Telegram 7"
+      - configraygan mci7
+      - "@configraygan G1"
+      - "@configraygan` 16"
+      - "@configraygan` 17"
+      - 172.67.249.36:443
+      - "@configraygan 03"
+      - configraygan 1005
+      - "@configraygan` 18"
+      - 2sudo.winapp3.ir:443
+      - "@configraygan` 19"
+      - 57.129.64.102:443
+      - configraygan 1006
+      - ⚡️Telegram - @configraygan
+      - "@configraygan 4"
+      - "@configraygan W2"
+      - configraygan mci2
+      - configraygan 1004
+      - configraygan mci1
+      - "@configraygan  جوین بزنین کانفیگ جدید میزارم"
+      - ⚡️Telegram - configraygan
+  - name: پشتیبان (در صورت قطعی) 🧯
+    type: fallback
+    url: https://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 50
+    proxies:
+      - 57.129.95.140:11201
+      - "@configraygan W9"
+      - "@configraygan mtn"
+      - "@configraygan"
+      - "@configraygan`"
+      - "@configraygan` 2"
+      - "@configraygan` 3"
+      - 213.156.137.142:43660
+      - "@configraygan` 4"
+      - 141.95.105.163:11201
+      - "@configraygan W11"
+      - "@configraygan` 5"
+      - "@configraygan 2"
+      - "@configraygan` 6"
+      - "@configraygan. 4"
+      - 3.112.130.53:8313
+      - 3.112.130.53:8319
+      - configraygan
+      - dc3bg1.vpncamp.vip:4432
+      - 54.36.174.140:443
+      - configraygan mci9
+      - 82.180.146.173:35652
+      - 103.186.155.148:38388
+      - 103.186.155.39:38388
+      - 103.186.155.80:38388
+      - 154.90.62.168:989
+      - 154.90.63.177:989
+      - 38.180.216.114:7307
+      - 104.21.40.34:443
+      - 172.64.152.23:443
+      - "***⚡***Telegram"
+      - "@configraygan` 7"
+      - "@configraygan W6"
+      - configraygan 2
+      - 208.103.161.110:443
+      - configraygan 1007
+      - "@configraygan` 8"
+      - "@configraygan` 9"
+      - 18.196.168.199:22223
+      - "***⚡***Telegram 2"
+      - 18.196.168.199:22222
+      - "***⚡***Telegram 3"
+      - "@configraygan 05"
+      - "@configraygan W14"
+      - configraygan 3
+      - 18.196.168.199:22224
+      - 3.67.73.0:22224
+      - "***⚡***Telegram 4"
+      - "@configraygan 1"
+      - "@configraygan W1"
+      - "@configraygan قطع شد بیا چنل جدید میزارم"
+      - "@configraygan 2 2"
+      - "@configraygan 01"
+      - 159.89.87.21:28190
+      - configraygan mci4
+      - "@configraygan🤺🤺"
+      - ipbaz.ping-box.com:443
+      - ipbaz.ping-box.com:443 2
+      - configraygan mci10
+      - "@configraygan W7"
+      - configraygan 4
+      - ip1.neoservers.ir:8443
+      - ip2.neoservers.ir:8443
+      - ip4.neoservers.ir:8443
+      - ip5.neoservers.ir:8443
+      - "@configraygan🍄🍄"
+      - configraygan 5
+      - "@configraygan 07"
+      - configraygan 6
+      - "***⚡***Telegram 5"
+      - 137.74.119.18:8442
+      - configraygan mci3
+      - configraygan mci8
+      - "@configraygan 09"
+      - "@configraygan W8"
+      - configraygan 1001
+      - "@configraygan W12"
+      - "@configraygan W4"
+      - "@configraygan` 10"
+      - "@configraygan` 11"
+      - "@configraygan 02"
+      - "@configraygan 04"
+      - "@configraygan 06"
+      - "@configraygan 08"
+      - 78.159.122.223:443
+      - "@configraygan` 12"
+      - "@configraygan` 13"
+      - configraygan 1003
+      - "@configraygan 3"
+      - configraygan 7
+      - "***⚡***Telegram 6"
+      - "@configraygan🏵️🏵️"
+      - ⚡Telegram - @configraygan
+      - 87.248.156.94:42020
+      - ip.hamrahto.com:8443
+      - configraygan 8
+      - 172.67.111.84:443
+      - configraygan mci6
+      - configraygan 1002
+      - convera.com:2053
+      - configraygan 9
+      - configraygan 10
+      - "@configraygan` 14"
+      - configraygan 11
+      - configraygan 12
+      - configraygan 13
+      - tawananet.panbehpanel.ir:80
+      - "@configraygan W10"
+      - configraygan 14
+      - 1.kkcweb.ir:2083
+      - "@configraygan W5"
+      - configraygan mci5
+      - configraygan 15
+      - "@configraygan W3"
+      - 108.162.198.154:443
+      - configraygan 16
+      - configraygan 17
+      - "@configraygan` 15"
+      - 2app.star-direct.ir:443
+      - 2app.star-direct.ir:443 2
+      - "***⚡***Telegram 7"
+      - configraygan mci7
+      - "@configraygan G1"
+      - "@configraygan` 16"
+      - "@configraygan` 17"
+      - 172.67.249.36:443
+      - "@configraygan 03"
+      - configraygan 1005
+      - "@configraygan` 18"
+      - 2sudo.winapp3.ir:443
+      - "@configraygan` 19"
+      - 57.129.64.102:443
+      - configraygan 1006
+      - ⚡️Telegram - @configraygan
+      - "@configraygan 4"
+      - "@configraygan W2"
+      - configraygan mci2
+      - configraygan 1004
+      - configraygan mci1
+      - "@configraygan  جوین بزنین کانفیگ جدید میزارم"
+      - ⚡️Telegram - configraygan
+  - name: اتصال پایدار 🔗
+    type: url-test
+    url: https://cp.cloudflare.com/generate_204
+    interval: 30
+    tolerance: 50
+    proxies:
+      - خودکار (بهترین پینگ) 🤖
+      - پشتیبان (در صورت قطعی) 🧯
+      - دستی 🤏🏻
+  - name: توزیع بار (پایدار) 🧲
+    type: load-balance
+    strategy: consistent-hashing
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    proxies:
+      - 57.129.95.140:11201
+      - "@configraygan W9"
+      - "@configraygan mtn"
+      - "@configraygan"
+      - "@configraygan`"
+      - "@configraygan` 2"
+      - "@configraygan` 3"
+      - 213.156.137.142:43660
+      - "@configraygan` 4"
+      - 141.95.105.163:11201
+      - "@configraygan W11"
+      - "@configraygan` 5"
+      - "@configraygan 2"
+      - "@configraygan` 6"
+      - "@configraygan. 4"
+      - 3.112.130.53:8313
+      - 3.112.130.53:8319
+      - configraygan
+      - dc3bg1.vpncamp.vip:4432
+      - 54.36.174.140:443
+      - configraygan mci9
+      - 82.180.146.173:35652
+      - 103.186.155.148:38388
+      - 103.186.155.39:38388
+      - 103.186.155.80:38388
+      - 154.90.62.168:989
+      - 154.90.63.177:989
+      - 38.180.216.114:7307
+      - 104.21.40.34:443
+      - 172.64.152.23:443
+      - "***⚡***Telegram"
+      - "@configraygan` 7"
+      - "@configraygan W6"
+      - configraygan 2
+      - 208.103.161.110:443
+      - configraygan 1007
+      - "@configraygan` 8"
+      - "@configraygan` 9"
+      - 18.196.168.199:22223
+      - "***⚡***Telegram 2"
+      - 18.196.168.199:22222
+      - "***⚡***Telegram 3"
+      - "@configraygan 05"
+      - "@configraygan W14"
+      - configraygan 3
+      - 18.196.168.199:22224
+      - 3.67.73.0:22224
+      - "***⚡***Telegram 4"
+      - "@configraygan 1"
+      - "@configraygan W1"
+      - "@configraygan قطع شد بیا چنل جدید میزارم"
+      - "@configraygan 2 2"
+      - "@configraygan 01"
+      - 159.89.87.21:28190
+      - configraygan mci4
+      - "@configraygan🤺🤺"
+      - ipbaz.ping-box.com:443
+      - ipbaz.ping-box.com:443 2
+      - configraygan mci10
+      - "@configraygan W7"
+      - configraygan 4
+      - ip1.neoservers.ir:8443
+      - ip2.neoservers.ir:8443
+      - ip4.neoservers.ir:8443
+      - ip5.neoservers.ir:8443
+      - "@configraygan🍄🍄"
+      - configraygan 5
+      - "@configraygan 07"
+      - configraygan 6
+      - "***⚡***Telegram 5"
+      - 137.74.119.18:8442
+      - configraygan mci3
+      - configraygan mci8
+      - "@configraygan 09"
+      - "@configraygan W8"
+      - configraygan 1001
+      - "@configraygan W12"
+      - "@configraygan W4"
+      - "@configraygan` 10"
+      - "@configraygan` 11"
+      - "@configraygan 02"
+      - "@configraygan 04"
+      - "@configraygan 06"
+      - "@configraygan 08"
+      - 78.159.122.223:443
+      - "@configraygan` 12"
+      - "@configraygan` 13"
+      - configraygan 1003
+      - "@configraygan 3"
+      - configraygan 7
+      - "***⚡***Telegram 6"
+      - "@configraygan🏵️🏵️"
+      - ⚡Telegram - @configraygan
+      - 87.248.156.94:42020
+      - ip.hamrahto.com:8443
+      - configraygan 8
+      - 172.67.111.84:443
+      - configraygan mci6
+      - configraygan 1002
+      - convera.com:2053
+      - configraygan 9
+      - configraygan 10
+      - "@configraygan` 14"
+      - configraygan 11
+      - configraygan 12
+      - configraygan 13
+      - tawananet.panbehpanel.ir:80
+      - "@configraygan W10"
+      - configraygan 14
+      - 1.kkcweb.ir:2083
+      - "@configraygan W5"
+      - configraygan mci5
+      - configraygan 15
+      - "@configraygan W3"
+      - 108.162.198.154:443
+      - configraygan 16
+      - configraygan 17
+      - "@configraygan` 15"
+      - 2app.star-direct.ir:443
+      - 2app.star-direct.ir:443 2
+      - "***⚡***Telegram 7"
+      - configraygan mci7
+      - "@configraygan G1"
+      - "@configraygan` 16"
+      - "@configraygan` 17"
+      - 172.67.249.36:443
+      - "@configraygan 03"
+      - configraygan 1005
+      - "@configraygan` 18"
+      - 2sudo.winapp3.ir:443
+      - "@configraygan` 19"
+      - 57.129.64.102:443
+      - configraygan 1006
+      - ⚡️Telegram - @configraygan
+      - "@configraygan 4"
+      - "@configraygan W2"
+      - configraygan mci2
+      - configraygan 1004
+      - configraygan mci1
+      - "@configraygan  جوین بزنین کانفیگ جدید میزارم"
+      - ⚡️Telegram - configraygan
+  - name: توزیع بار (گردشی) 🔁
+    type: load-balance
+    strategy: consistent-hashing
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    proxies:
+      - 57.129.95.140:11201
+      - "@configraygan W9"
+      - "@configraygan mtn"
+      - "@configraygan"
+      - "@configraygan`"
+      - "@configraygan` 2"
+      - "@configraygan` 3"
+      - 213.156.137.142:43660
+      - "@configraygan` 4"
+      - 141.95.105.163:11201
+      - "@configraygan W11"
+      - "@configraygan` 5"
+      - "@configraygan 2"
+      - "@configraygan` 6"
+      - "@configraygan. 4"
+      - 3.112.130.53:8313
+      - 3.112.130.53:8319
+      - configraygan
+      - dc3bg1.vpncamp.vip:4432
+      - 54.36.174.140:443
+      - configraygan mci9
+      - 82.180.146.173:35652
+      - 103.186.155.148:38388
+      - 103.186.155.39:38388
+      - 103.186.155.80:38388
+      - 154.90.62.168:989
+      - 154.90.63.177:989
+      - 38.180.216.114:7307
+      - 104.21.40.34:443
+      - 172.64.152.23:443
+      - "***⚡***Telegram"
+      - "@configraygan` 7"
+      - "@configraygan W6"
+      - configraygan 2
+      - 208.103.161.110:443
+      - configraygan 1007
+      - "@configraygan` 8"
+      - "@configraygan` 9"
+      - 18.196.168.199:22223
+      - "***⚡***Telegram 2"
+      - 18.196.168.199:22222
+      - "***⚡***Telegram 3"
+      - "@configraygan 05"
+      - "@configraygan W14"
+      - configraygan 3
+      - 18.196.168.199:22224
+      - 3.67.73.0:22224
+      - "***⚡***Telegram 4"
+      - "@configraygan 1"
+      - "@configraygan W1"
+      - "@configraygan قطع شد بیا چنل جدید میزارم"
+      - "@configraygan 2 2"
+      - "@configraygan 01"
+      - 159.89.87.21:28190
+      - configraygan mci4
+      - "@configraygan🤺🤺"
+      - ipbaz.ping-box.com:443
+      - ipbaz.ping-box.com:443 2
+      - configraygan mci10
+      - "@configraygan W7"
+      - configraygan 4
+      - ip1.neoservers.ir:8443
+      - ip2.neoservers.ir:8443
+      - ip4.neoservers.ir:8443
+      - ip5.neoservers.ir:8443
+      - "@configraygan🍄🍄"
+      - configraygan 5
+      - "@configraygan 07"
+      - configraygan 6
+      - "***⚡***Telegram 5"
+      - 137.74.119.18:8442
+      - configraygan mci3
+      - configraygan mci8
+      - "@configraygan 09"
+      - "@configraygan W8"
+      - configraygan 1001
+      - "@configraygan W12"
+      - "@configraygan W4"
+      - "@configraygan` 10"
+      - "@configraygan` 11"
+      - "@configraygan 02"
+      - "@configraygan 04"
+      - "@configraygan 06"
+      - "@configraygan 08"
+      - 78.159.122.223:443
+      - "@configraygan` 12"
+      - "@configraygan` 13"
+      - configraygan 1003
+      - "@configraygan 3"
+      - configraygan 7
+      - "***⚡***Telegram 6"
+      - "@configraygan🏵️🏵️"
+      - ⚡Telegram - @configraygan
+      - 87.248.156.94:42020
+      - ip.hamrahto.com:8443
+      - configraygan 8
+      - 172.67.111.84:443
+      - configraygan mci6
+      - configraygan 1002
+      - convera.com:2053
+      - configraygan 9
+      - configraygan 10
+      - "@configraygan` 14"
+      - configraygan 11
+      - configraygan 12
+      - configraygan 13
+      - tawananet.panbehpanel.ir:80
+      - "@configraygan W10"
+      - configraygan 14
+      - 1.kkcweb.ir:2083
+      - "@configraygan W5"
+      - configraygan mci5
+      - configraygan 15
+      - "@configraygan W3"
+      - 108.162.198.154:443
+      - configraygan 16
+      - configraygan 17
+      - "@configraygan` 15"
+      - 2app.star-direct.ir:443
+      - 2app.star-direct.ir:443 2
+      - "***⚡***Telegram 7"
+      - configraygan mci7
+      - "@configraygan G1"
+      - "@configraygan` 16"
+      - "@configraygan` 17"
+      - 172.67.249.36:443
+      - "@configraygan 03"
+      - configraygan 1005
+      - "@configraygan` 18"
+      - 2sudo.winapp3.ir:443
+      - "@configraygan` 19"
+      - 57.129.64.102:443
+      - configraygan 1006
+      - ⚡️Telegram - @configraygan
+      - "@configraygan 4"
+      - "@configraygan W2"
+      - configraygan mci2
+      - configraygan 1004
+      - configraygan mci1
+      - "@configraygan  جوین بزنین کانفیگ جدید میزارم"
+      - ⚡️Telegram - configraygan
+  - name: توزیع بار (موقت) ⏳
+    type: load-balance
+    strategy: consistent-hashing
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    proxies:
+      - 57.129.95.140:11201
+      - "@configraygan W9"
+      - "@configraygan mtn"
+      - "@configraygan"
+      - "@configraygan`"
+      - "@configraygan` 2"
+      - "@configraygan` 3"
+      - 213.156.137.142:43660
+      - "@configraygan` 4"
+      - 141.95.105.163:11201
+      - "@configraygan W11"
+      - "@configraygan` 5"
+      - "@configraygan 2"
+      - "@configraygan` 6"
+      - "@configraygan. 4"
+      - 3.112.130.53:8313
+      - 3.112.130.53:8319
+      - configraygan
+      - dc3bg1.vpncamp.vip:4432
+      - 54.36.174.140:443
+      - configraygan mci9
+      - 82.180.146.173:35652
+      - 103.186.155.148:38388
+      - 103.186.155.39:38388
+      - 103.186.155.80:38388
+      - 154.90.62.168:989
+      - 154.90.63.177:989
+      - 38.180.216.114:7307
+      - 104.21.40.34:443
+      - 172.64.152.23:443
+      - "***⚡***Telegram"
+      - "@configraygan` 7"
+      - "@configraygan W6"
+      - configraygan 2
+      - 208.103.161.110:443
+      - configraygan 1007
+      - "@configraygan` 8"
+      - "@configraygan` 9"
+      - 18.196.168.199:22223
+      - "***⚡***Telegram 2"
+      - 18.196.168.199:22222
+      - "***⚡***Telegram 3"
+      - "@configraygan 05"
+      - "@configraygan W14"
+      - configraygan 3
+      - 18.196.168.199:22224
+      - 3.67.73.0:22224
+      - "***⚡***Telegram 4"
+      - "@configraygan 1"
+      - "@configraygan W1"
+      - "@configraygan قطع شد بیا چنل جدید میزارم"
+      - "@configraygan 2 2"
+      - "@configraygan 01"
+      - 159.89.87.21:28190
+      - configraygan mci4
+      - "@configraygan🤺🤺"
+      - ipbaz.ping-box.com:443
+      - ipbaz.ping-box.com:443 2
+      - configraygan mci10
+      - "@configraygan W7"
+      - configraygan 4
+      - ip1.neoservers.ir:8443
+      - ip2.neoservers.ir:8443
+      - ip4.neoservers.ir:8443
+      - ip5.neoservers.ir:8443
+      - "@configraygan🍄🍄"
+      - configraygan 5
+      - "@configraygan 07"
+      - configraygan 6
+      - "***⚡***Telegram 5"
+      - 137.74.119.18:8442
+      - configraygan mci3
+      - configraygan mci8
+      - "@configraygan 09"
+      - "@configraygan W8"
+      - configraygan 1001
+      - "@configraygan W12"
+      - "@configraygan W4"
+      - "@configraygan` 10"
+      - "@configraygan` 11"
+      - "@configraygan 02"
+      - "@configraygan 04"
+      - "@configraygan 06"
+      - "@configraygan 08"
+      - 78.159.122.223:443
+      - "@configraygan` 12"
+      - "@configraygan` 13"
+      - configraygan 1003
+      - "@configraygan 3"
+      - configraygan 7
+      - "***⚡***Telegram 6"
+      - "@configraygan🏵️🏵️"
+      - ⚡Telegram - @configraygan
+      - 87.248.156.94:42020
+      - ip.hamrahto.com:8443
+      - configraygan 8
+      - 172.67.111.84:443
+      - configraygan mci6
+      - configraygan 1002
+      - convera.com:2053
+      - configraygan 9
+      - configraygan 10
+      - "@configraygan` 14"
+      - configraygan 11
+      - configraygan 12
+      - configraygan 13
+      - tawananet.panbehpanel.ir:80
+      - "@configraygan W10"
+      - configraygan 14
+      - 1.kkcweb.ir:2083
+      - "@configraygan W5"
+      - configraygan mci5
+      - configraygan 15
+      - "@configraygan W3"
+      - 108.162.198.154:443
+      - configraygan 16
+      - configraygan 17
+      - "@configraygan` 15"
+      - 2app.star-direct.ir:443
+      - 2app.star-direct.ir:443 2
+      - "***⚡***Telegram 7"
+      - configraygan mci7
+      - "@configraygan G1"
+      - "@configraygan` 16"
+      - "@configraygan` 17"
+      - 172.67.249.36:443
+      - "@configraygan 03"
+      - configraygan 1005
+      - "@configraygan` 18"
+      - 2sudo.winapp3.ir:443
+      - "@configraygan` 19"
+      - 57.129.64.102:443
+      - configraygan 1006
+      - ⚡️Telegram - @configraygan
+      - "@configraygan 4"
+      - "@configraygan W2"
+      - configraygan mci2
+      - configraygan 1004
+      - configraygan mci1
+      - "@configraygan  جوین بزنین کانفیگ جدید میزارم"
+      - ⚡️Telegram - configraygan
+  - name: دانلود منیجر 📥
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+      - اجازه ندادن 🚫
+  - name: تلگرام 💬
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: یوتیوب ▶️
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: گوگل 🌍
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: واتس آپ 🟢
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: هوش مصنوعی 🤖
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: توییتر 🐦
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: اسپاتیفای 🎵
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: اینستاگرام 📸
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: تبلیغات 🆎
+    type: select
+    proxies:
+      - اجازه ندادن 🚫
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+  - name: تبلیغات اپ ها 🍃
+    type: select
+    proxies:
+      - اجازه ندادن 🚫
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+  - name: رهگیری جهانی 🛑
+    type: select
+    proxies:
+      - اجازه ندادن 🚫
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+  - name: سایتای مخرب ⚠️
+    type: select
+    proxies:
+      - اجازه ندادن 🚫
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+  - name: استیم 🖥️
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: گیم 🎮
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: توییچ 📡
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: سایتای ایرانی 🇮🇷
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: ویندوز 🧊
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: کلودفلر ☁️
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: گیتهاب 🐙
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: دیسکورد 🗣️
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: انی‌دسک 🔴
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+      - اجازه ندادن 🚫
+  - name: استریمیو 🎬
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+      - اجازه ندادن 🚫
+  - name: سایتای سانسوری 🤬
+    type: select
+    proxies:
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+  - name: بدون فیلترشکن 🛡️
+    type: select
+    proxies:
+      - DIRECT
+  - name: قطع اینترنت ⛔
+    type: select
+    proxies:
+      - REJECT
+  - name: اجازه ندادن 🚫
+    type: select
+    proxies:
+      - REJECT
+ntp:
+  enable: true
+  server: time.apple.com
+  port: 123
+  interval: 30
+rules:
+  - RULE-SET,DownloadManagers,دانلود منیجر 📥
+  - RULE-SET,Download,دانلود منیجر 📥
+  - RULE-SET,stremio,استریمیو 🎬
+  - RULE-SET,BanProgramAD,تبلیغات اپ ها 🍃
+  - RULE-SET,BanAD,رهگیری جهانی 🛑
+  - RULE-SET,PrivateTracker,رهگیری جهانی 🛑
+  - RULE-SET,category_public_tracker,رهگیری جهانی 🛑
+  - RULE-SET,malware,سایتای مخرب ⚠️
+  - RULE-SET,phishing,سایتای مخرب ⚠️
+  - RULE-SET,cryptominers,سایتای مخرب ⚠️
+  - RULE-SET,warninglist,سایتای مخرب ⚠️
+  - RULE-SET,Ponzi,سایتای مخرب ⚠️
+  - RULE-SET,LiteAds,تبلیغات 🆎
+  - RULE-SET,iran_ads,تبلیغات 🆎
+  - RULE-SET,PersianBlocker,تبلیغات 🆎
+  - RULE-SET,ads,تبلیغات 🆎
+  - RULE-SET,BanEasyList,تبلیغات 🆎
+  - RULE-SET,twitch,توییچ 📡
+  - PROCESS-NAME,Telegram.exe,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger.web,تلگرام 💬
+  - RULE-SET,telegram,تلگرام 💬
+  - RULE-SET,YouTube,یوتیوب ▶️
+  - RULE-SET,youtube,یوتیوب ▶️
+  - RULE-SET,YouTubeMusic,یوتیوب ▶️
+  - PROCESS-NAME,com.anydesk.anydeskandroid,انی‌دسک 🔴
+  - PROCESS-NAME,AnyDesk.exe,انی‌دسک 🔴
+  - DOMAIN-SUFFIX,anydesk.com,انی‌دسک 🔴
+  - PROCESS-NAME,Twitter.exe,توییتر 🐦
+  - PROCESS-NAME,com.twitter.android,توییتر 🐦
+  - RULE-SET,Chotwitter,توییتر 🐦
+  - RULE-SET,mihTwitter,توییتر 🐦
+  - RULE-SET,Domtwitter,توییتر 🐦
+  - PROCESS-NAME,com.spotify.music,اسپاتیفای 🎵
+  - PROCESS-NAME,Spotify.exe,اسپاتیفای 🎵
+  - RULE-SET,DomainSpotify,اسپاتیفای 🎵
+  - RULE-SET,mihspotify,اسپاتیفای 🎵
+  - PROCESS-NAME,com.instagram.android,اینستاگرام 📸
+  - RULE-SET,instagram,اینستاگرام 📸
+  - DOMAIN-SUFFIX,deepseek.com,هوش مصنوعی 🤖
+  - DOMAIN-SUFFIX,qwen.ai,هوش مصنوعی 🤖
+  - RULE-SET,category-ai,هوش مصنوعی 🤖
+  - RULE-SET,censor,سایتای سانسوری 🤬
+  - RULE-SET,apps,سایتای ایرانی 🇮🇷
+  - RULE-SET,iran,سایتای ایرانی 🇮🇷
+  - RULE-SET,arvancloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,derakcloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,iranserver,سایتای ایرانی 🇮🇷
+  - RULE-SET,parspack,سایتای ایرانی 🇮🇷
+  - RULE-SET,irasn,سایتای ایرانی 🇮🇷
+  - RULE-SET,ircidr,سایتای ایرانی 🇮🇷
+  - RULE-SET,ir,سایتای ایرانی 🇮🇷
+  - RULE-SET,category_ir,سایتای ایرانی 🇮🇷
+  - RULE-SET,whatsapp,واتس آپ 🟢
+  - RULE-SET,steam,استیم 🖥️
+  - RULE-SET,SteamRegionCheck,استیم 🖥️
+  - RULE-SET,game,گیم 🎮
+  - RULE-SET,GameDownload,گیم 🎮
+  - RULE-SET,category-games,گیم 🎮
+  - RULE-SET,Xbox,گیم 🎮
+  - RULE-SET,discord,دیسکورد 🗣️
+  - RULE-SET,xiaomi_white_list,نوع انتخاب پروکسی 🔀
+  - RULE-SET,xiaomi-ads,تبلیغات اپ ها 🍃
+  - RULE-SET,xiaomi_block_list,تبلیغات اپ ها 🍃
+  - RULE-SET,windows,ویندوز 🧊
+  - RULE-SET,cloudflare,کلودفلر ☁️
+  - RULE-SET,github,گیتهاب 🐙
+  - PROCESS-NAME,com.android.vending,نوع انتخاب پروکسی 🔀
+  - PROCESS-NAME,com.google.android.gms,نوع انتخاب پروکسی 🔀
+  - RULE-SET,google-play,نوع انتخاب پروکسی 🔀
+  - RULE-SET,google,گوگل 🌍
+  - IP-CIDR,10.10.34.0/24,نوع انتخاب پروکسی 🔀
+  - RULE-SET,local_ips,بدون فیلترشکن 🛡️
+  - RULE-SET,private,بدون فیلترشکن 🛡️
+  - MATCH,نوع انتخاب پروکسی 🔀
