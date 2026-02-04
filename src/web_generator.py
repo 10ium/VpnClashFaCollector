@@ -148,7 +148,7 @@ def generate_web_page():
     for folder in sorted_folders:
         is_all = folder.lower() == 'all'
         is_tested = folder.lower() == 'tested'
-        display_name = "تست شده (سرعت بالا)" if is_tested else ("میکس همه کانفیگا" if is_all else folder)
+        display_name = "تست شده در گیتهاب" if is_tested else ("میکس همه کانفیگا" if is_all else folder)
         border_class = "border-emerald-500" if is_tested else ("border-blue-600" if is_all else "border-slate-700")
         
         html_content += f"""
