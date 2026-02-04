@@ -10,7 +10,7 @@ def generate_web_page():
     
     # فایل‌هایی که نباید نمایش داده شوند
     exclude_files = [
-        "README.md", "LICENSE", ".gitignore", "web_gen.py", "index.html", "ssr.txt", "ssr_base64.txt", "tg_android_base64.txt", "tg_base64.txt", "tg_windows_base64.txt", "raw_results"
+        "README.md", "LICENSE", ".gitignore", "web_gen.py", "index.html", "ssr.txt", "ssr_base64.txt", "tg_android_base64.txt", "tg_base64.txt", "tg_windows_base64.txt", "cloudflare_clean_ip.txt", "cloudflare_clean_ip_base64.txt", "raw_results"
     ]
 
     # ترتیب اولویت نمایش (فایل‌هایی که در این لیست باشند اول نمایش داده می‌شوند)
