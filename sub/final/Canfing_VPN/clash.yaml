@@ -465,7 +465,10 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: ⚫️ Telegram- @Canfing_VPN`, server: faqatchai.global.ssl.fastly.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a9bac46a-2037-4ad1-a192-08c70927f4ad, servername: faqatchai.global.ssl.fastly.net, alpn: [http%2F1.1], network: ws, ws-opts: {path: /containers/fi, headers: {Host: faqatchai.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ⚫️ Telegram- @Canfing_VPN`, server: 46.38.150.248, port: 9091, type: vless, tls: true, packet-encoding: xudp, uuid: 34dae96c-1a41-434f-94b6-5507c3a6d318, host: myket.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 188.114.98.0:443, server: 188.114.98.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4525c260-df3c-4f62-b8f1-f4f5f305694b, network: ws, ws-opts: {path: "/?ed=2560"}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ⚫️ Telegram- @Canfing_VPN` 2, server: 81.12.33.6, port: 711, type: vless, tls: true, packet-encoding: xudp, uuid: 69144c55-e1a2-4a13-8cc4-d0f984bebe70, host: igap.net, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ⚫️ Telegram- @Canfing_VPN` 3, server: faqatchai.global.ssl.fastly.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a9bac46a-2037-4ad1-a192-08c70927f4ad, servername: faqatchai.global.ssl.fastly.net, alpn: [http%2F1.1], network: ws, ws-opts: {path: /containers/fi, headers: {Host: faqatchai.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,6 +486,9 @@ proxy-groups:
     type: select
     proxies:
       - ⚫️ Telegram- @Canfing_VPN`
+      - 188.114.98.0:443
+      - ⚫️ Telegram- @Canfing_VPN` 2
+      - ⚫️ Telegram- @Canfing_VPN` 3
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -490,6 +496,9 @@ proxy-groups:
     tolerance: 50
     proxies:
       - ⚫️ Telegram- @Canfing_VPN`
+      - 188.114.98.0:443
+      - ⚫️ Telegram- @Canfing_VPN` 2
+      - ⚫️ Telegram- @Canfing_VPN` 3
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -497,6 +506,9 @@ proxy-groups:
     tolerance: 50
     proxies:
       - ⚫️ Telegram- @Canfing_VPN`
+      - 188.114.98.0:443
+      - ⚫️ Telegram- @Canfing_VPN` 2
+      - ⚫️ Telegram- @Canfing_VPN` 3
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -513,6 +525,9 @@ proxy-groups:
     interval: 600
     proxies:
       - ⚫️ Telegram- @Canfing_VPN`
+      - 188.114.98.0:443
+      - ⚫️ Telegram- @Canfing_VPN` 2
+      - ⚫️ Telegram- @Canfing_VPN` 3
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -520,6 +535,9 @@ proxy-groups:
     interval: 600
     proxies:
       - ⚫️ Telegram- @Canfing_VPN`
+      - 188.114.98.0:443
+      - ⚫️ Telegram- @Canfing_VPN` 2
+      - ⚫️ Telegram- @Canfing_VPN` 3
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -527,6 +545,9 @@ proxy-groups:
     interval: 600
     proxies:
       - ⚫️ Telegram- @Canfing_VPN`
+      - 188.114.98.0:443
+      - ⚫️ Telegram- @Canfing_VPN` 2
+      - ⚫️ Telegram- @Canfing_VPN` 3
   - name: دانلود منیجر 📥
     type: select
     proxies:
