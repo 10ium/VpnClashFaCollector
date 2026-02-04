@@ -105,7 +105,6 @@ def generate_web_page():
     <body class="p-4 md:p-10 relative">
         <div id="toast"><i class="fa-solid fa-check-circle ml-2"></i>کپی شد!</div>
 
-        <!-- دکمه‌های ناوبری -->
         <button onclick="window.scrollTo(0,0)" class="nav-btn bottom-20 bg-blue-600" title="برو به بالا">
             <i class="fa-solid fa-arrow-up"></i>
         </button>
@@ -119,7 +118,6 @@ def generate_web_page():
                 <p class="text-slate-500 text-sm italic">بروزرسانی: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M')}</p>
             </header>
 
-            <!-- بخش پروکسی تلگرام -->
             <section class="mb-12 glass p-6 rounded-3xl border-t-4 border-sky-500 shadow-2xl">
                 <h2 class="text-2xl font-black mb-6 flex items-center text-sky-400"><i class="fa-brands fa-telegram ml-3 text-3xl"></i> پروکسی‌های تلگرام</h2>
                 <div class="flex gap-6 mb-6 border-b border-white/10 text-lg">
@@ -150,7 +148,7 @@ def generate_web_page():
     for folder in sorted_folders:
         is_all = folder.lower() == 'all'
         is_tested = folder.lower() == 'tested'
-        display_name = "تست شده (Ping & Speed)" if is_tested else ("میکس همه کانفیگا" if is_all else folder)
+        display_name = "تست شده (سرعت بالا)" if is_tested else ("میکس همه کانفیگا" if is_all else folder)
         border_class = "border-emerald-500" if is_tested else ("border-blue-600" if is_all else "border-slate-700")
         
         html_content += f"""
@@ -167,18 +165,29 @@ def generate_web_page():
 
         available_files = {}
         
+        # گام اول: خواندن از پوشه مستقیم در sub
         p1 = os.path.join(sub_root, folder)
         if os.path.exists(p1):
             for f in os.listdir(p1):
                 if f not in exclude_files and os.path.isfile(os.path.join(p1, f)):
                     available_files[f] = f"{repo_raw_url}/sub/{folder}/{f}"
         
-        final_folder_name = "tested_ping_passed" if is_tested else folder
-        p2 = os.path.join(final_root, final_folder_name)
-        if os.path.exists(p2):
-            for f in os.listdir(p2):
-                if f not in exclude_files and os.path.isfile(os.path.join(p2, f)):
-                    available_files[f] = f"{repo_raw_url}/sub/final/{final_folder_name}/{f}"
+        # گام دوم: ترکیب با پوشه final (با منطق اختصاصی شما برای tested)
+        if is_tested:
+            # فقط سرعت بالا را میخواهیم و پینگ را رد میکنیم
+            final_folder_name = "tested_speed_passed"
+            p2 = os.path.join(final_root, final_folder_name)
+            if os.path.exists(p2):
+                for f in os.listdir(p2):
+                    if f not in exclude_files and os.path.isfile(os.path.join(p2, f)):
+                        available_files[f] = f"{repo_raw_url}/sub/final/{final_folder_name}/{f}"
+        else:
+            final_folder_name = folder
+            p2 = os.path.join(final_root, final_folder_name)
+            if os.path.exists(p2):
+                for f in os.listdir(p2):
+                    if f not in exclude_files and os.path.isfile(os.path.join(p2, f)):
+                        available_files[f] = f"{repo_raw_url}/sub/final/{final_folder_name}/{f}"
 
         current_priority_list = tested_file_order if is_tested else source_file_order
         
