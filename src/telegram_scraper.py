@@ -18,12 +18,18 @@ def load_settings():
     try:
         if not os.path.exists('config/settings.yaml'):
             logger.warning("فایل تنظیمات یافت نشد، از مقادیر پیش‌فرض استفاده می‌شود.")
-            return {'scraping': {'lookback_days': 7}, 'storage': {'base_path': 'src/telegram'}}
+            return {
+                'scraping': {'lookback_days': 2, 'max_pages': 30}, 
+                'storage': {'base_path': 'src/telegram'}
+            }
         with open('config/settings.yaml', 'r', encoding='utf-8') as f:
             return yaml.safe_load(f)
     except Exception as e:
         logger.error(f"خطا در بارگذاری تنظیمات: {e}")
-        return {'scraping': {'lookback_days': 7}, 'storage': {'base_path': 'src/telegram'}}
+        return {
+            'scraping': {'lookback_days': 2, 'max_pages': 30}, 
+            'storage': {'base_path': 'src/telegram'}
+        }
 
 def load_channels():
     if not os.path.exists('config/channels.txt'):
@@ -55,7 +61,7 @@ def html_to_md(element):
     except Exception:
         return element.get_text().strip()
 
-def scrape_channel(username, lookback_days, base_path, current_idx, total_channels):
+def scrape_channel(username, lookback_days, max_pages, base_path, current_idx, total_channels):
     logger.info(f"[{current_idx}/{total_channels}] شروع پردازش کانال: @{username}")
     
     channel_dir = os.path.join(base_path, username)
@@ -71,29 +77,31 @@ def scrape_channel(username, lookback_days, base_path, current_idx, total_channe
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
     }
 
-    while not reached_end:
+    # حلقه اسکرپینگ با محدودیت زمانی و محدودیت تعداد صفحات
+    while not reached_end and pages_fetched < max_pages:
         url = f"https://t.me/s/{username}"
         if last_msg_id:
             url += f"?before={last_msg_id}"
         
         try:
             pages_fetched += 1
-            logger.info(f"   در حال دریافت صفحه {pages_fetched} برای @{username}...")
+            logger.info(f"    در حال دریافت صفحه {pages_fetched} از حداکثر {max_pages} برای @{username}...")
             
             response = requests.get(url, headers=headers, timeout=15)
             if response.status_code == 429:
-                logger.warning(f"   محدودیت نرخ (Rate Limit) توسط تلگرام! ۵ ثانیه صبر می‌کنیم...")
+                logger.warning(f"    محدودیت نرخ (Rate Limit) توسط تلگرام! ۵ ثانیه صبر می‌کنیم...")
                 time.sleep(5)
+                pages_fetched -= 1 # کسر کردن صفحه چون با موفقیت دریافت نشد
                 continue
             elif response.status_code != 200:
-                logger.error(f"   خطا در اتصال به @{username}: کد وضعیت {response.status_code}")
+                logger.error(f"    خطا در اتصال به @{username}: کد وضعیت {response.status_code}")
                 break
 
             soup = BeautifulSoup(response.text, 'lxml')
             messages = soup.find_all('div', class_='tgme_widget_message')
             
             if not messages:
-                logger.info(f"   پیامی در این بخش از تاریخچه @{username} یافت نشد.")
+                logger.info(f"    پیامی در این بخش از تاریخچه @{username} یافت نشد.")
                 break
 
             for msg in reversed(messages):
@@ -107,7 +115,7 @@ def scrape_channel(username, lookback_days, base_path, current_idx, total_channe
                 msg_date = datetime.fromisoformat(time_element.get('datetime').replace('Z', '+00:00'))
                 
                 if msg_date < time_threshold:
-                    logger.info(f"   به حد زمانی تعیین شده ({lookback_days} روز) رسیدیم.")
+                    logger.info(f"    به حد زمانی تعیین شده ({lookback_days} روز) رسیدیم.")
                     reached_end = True
                     break
                 
@@ -122,11 +130,16 @@ def scrape_channel(username, lookback_days, base_path, current_idx, total_channe
                         'forwarded': is_forwarded is not None
                     })
             
+            # چک کردن اینکه آیا به سقف تعداد صفحات رسیده‌ایم یا خیر
+            if pages_fetched >= max_pages and not reached_end:
+                logger.warning(f"    به سقف مجاز صفحات ({max_pages} صفحه) رسیدیم. توقف اسکرپینگ برای @{username}.")
+                break
+
             if not reached_end:
                 time.sleep(1.5) # وقفه ایمن برای جلوگیری از بلاک
 
         except Exception as e:
-            logger.error(f"   خطای غیرمنتظره در پردازش صفحه: {e}")
+            logger.error(f"    خطای غیرمنتظره در پردازش صفحه: {e}")
             break
 
     if all_messages:
@@ -151,7 +164,7 @@ def scrape_channel(username, lookback_days, base_path, current_idx, total_channe
         except Exception as e:
             logger.error(f"❌ خطا در نوشتن فایل برای @{username}: {e}")
     else:
-        logger.warning(f"⚠️ هیچ پیامی در بازه زمانی مورد نظر برای @{username} پیدا نشد.")
+        logger.warning(f"⚠️ هیچ پیامی پیدا نشد.")
 
 def main():
     start_time = time.time()
@@ -164,12 +177,14 @@ def main():
         logger.error("لیست کانال‌ها خالی است. عملیات متوقف شد.")
         return
 
-    lookback_days = settings['scraping'].get('lookback_days', 7)
-    base_path = settings['storage'].get('base_path', 'src/telegram')
+    scraping_cfg = settings.get('scraping', {})
+    lookback_days = scraping_cfg.get('lookback_days', 2)
+    max_pages = scraping_cfg.get('max_pages', 30)
+    base_path = settings.get('storage', {}).get('base_path', 'src/telegram')
     
     total = len(usernames)
     for idx, username in enumerate(usernames, 1):
-        scrape_channel(username, lookback_days, base_path, idx, total)
+        scrape_channel(username, lookback_days, max_pages, base_path, idx, total)
         if idx < total:
             logger.info(f"استراحت کوتاه قبل از کانال بعدی...")
             time.sleep(3)
