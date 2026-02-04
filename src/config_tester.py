@@ -14,13 +14,16 @@ def get_flag(cc):
 def download_engine():
     if os.path.exists("xray-knife"): return
     url = "https://github.com/lilendian0x00/xray-knife/releases/latest/download/Xray-knife-linux-64.zip"
-    r = requests.get(url, timeout=30)
-    with open("engine.zip", "wb") as f: f.write(r.content)
-    with zipfile.ZipFile("engine.zip", 'r') as z: z.extractall("dir")
-    for root, _, files in os.walk("dir"):
-        for file in files:
-            if file == "xray-knife": os.rename(os.path.join(root, file), "xray-knife")
-    os.chmod("xray-knife", 0o755)
+    try:
+        r = requests.get(url, timeout=30)
+        with open("engine.zip", "wb") as f: f.write(r.content)
+        with zipfile.ZipFile("engine.zip", 'r') as z: z.extractall("dir")
+        for root, _, files in os.walk("dir"):
+            for file in files:
+                if file == "xray-knife": os.rename(os.path.join(root, file), "xray-knife")
+        os.chmod("xray-knife", 0o755)
+    except Exception as e:
+        logger.error(f"Failed to download engine: {e}")
 
 def rename_config(link, info, rank=None):
     try:
@@ -28,12 +31,10 @@ def rename_config(link, info, rank=None):
         ping = info.get('ping', '?')
         speed = info.get('speed')
         
-        # ساخت تگ مشخصات
         tag_parts = [get_flag(cc), cc, f"{ping}ms"]
         if speed and "Low" not in str(speed):
             tag_parts.append(speed)
         
-        # اضافه کردن رتبه عددی در صورت وجود
         prefix = f"[{rank}] " if rank else ""
         tag = prefix + " | ".join(tag_parts) + " | "
         
@@ -43,7 +44,6 @@ def rename_config(link, info, rank=None):
             return "vmess://" + base64.b64encode(json.dumps(data).encode('utf-8')).decode('utf-8')
         elif "#" in link:
             base, remark = link.split("#", 1)
-            # استفاده از unquote برای حفظ اسم اصلی و سپس کوت کردن مجدد کل نام جدید
             return f"{base}#{quote(tag + unquote(remark))}"
         return f"{link}#{quote(tag + 'Server')}"
     except: return link
@@ -55,10 +55,14 @@ def test_process():
     os.makedirs(raw_dir, exist_ok=True)
     download_engine()
 
-    # --- فاز ۱: پینگ ---
-    logger.info("--- Phase 1: Latency Test ---")
+    if not os.path.exists(input_file):
+        logger.error(f"Input file {input_file} not found!")
+        return
+
+    # --- Phase 1: Latency Test ---
+    logger.info("--- Phase 1: Latency Test (Threads: 50) ---")
     p_csv = os.path.join(raw_dir, "ping_raw.csv")
-    subprocess.run(["./xray-knife", "http", "-f", input_file, "-t", "100", "-o", p_csv, "-x", "csv"], stdout=subprocess.DEVNULL)
+    subprocess.run(["./xray-knife", "http", "-f", input_file, "-t", "50", "-o", p_csv, "-x", "csv"], stdout=subprocess.DEVNULL)
 
     top_candidates = []
     if os.path.exists(p_csv):
@@ -67,22 +71,25 @@ def test_process():
             valid_rows = [r for r in reader if r.get('delay') and str(r['delay']).isdigit() and int(r['delay']) > 0]
             valid_rows.sort(key=lambda x: int(x['delay']))
             
-            # ذخیره نتایج پینگ (مرتب شده بر اساس تاخیر)
             ping_passed = [rename_config(r.get('link') or r.get('Config'), {'cc': r.get('location', 'UN'), 'ping': r.get('delay')}) for r in valid_rows]
-            with open(os.path.join(base_dir, "ping_passed.txt"), "w", encoding="utf-8") as f: f.write("\n".join(filter(None, ping_passed)))
+            with open(os.path.join(base_dir, "ping_passed.txt"), "w", encoding="utf-8") as f: 
+                f.write("\n".join(filter(None, ping_passed)))
             
-            top_candidates = [r.get('link') or r.get('Config') for r in valid_rows[:400]]
+            # انتخاب ۳۰۰ تای برتر برای تست سرعت
+            top_candidates = [r.get('link') or r.get('Config') for r in valid_rows[:300]]
 
-    # --- فاز ۲: تست سرعت واقعی ---
+    # --- Phase 2: Speed Test (Sequential/Low Threads) ---
     if top_candidates:
-        tmp_txt = "top400_tmp.txt"
+        tmp_txt = "top_candidates_tmp.txt"
         with open(tmp_txt, "w") as f: f.write("\n".join(filter(None, top_candidates)))
         
-        logger.info("--- Phase 2: Speed Test & Ranking (Top 400) ---")
+        logger.info("--- Phase 2: Speed Test (5MB - Low Concurrent) ---")
         s_csv = os.path.join(raw_dir, "speed_raw.csv")
-        speed_url = "https://speed.cloudflare.com/__down?bytes=5000000"
+        speed_url = "https://speed.cloudflare.com/__down?bytes=5000000" # 5MB
         
-        subprocess.run(["./xray-knife", "http", "-f", tmp_txt, "-t", "5", "-o", s_csv, "-x", "csv", "-p", "-u", speed_url, "-a", "5000"], stdout=subprocess.DEVNULL)
+        # استفاده از t=1 برای تست غیر همزمان (تک‌تک) جهت جلوگیری از ارور too_many_pings
+        # پارامتر a=10000 زمان انتظار برای هر تست را افزایش می‌دهد
+        subprocess.run(["./xray-knife", "http", "-f", tmp_txt, "-t", "1", "-o", s_csv, "-x", "csv", "-p", "-u", speed_url, "-a", "10000"], stdout=subprocess.DEVNULL)
 
         speed_results = []
         if os.path.exists(s_csv):
@@ -96,7 +103,6 @@ def test_process():
                         'cc': row.get('location') or "UN"
                     })
             
-            # مرتب‌سازی بر اساس سرعت (نزولی - بیشترین اول)
             speed_results.sort(key=lambda x: x['speed_val'], reverse=True)
 
             final_list = []
@@ -107,9 +113,8 @@ def test_process():
                 elif spd > 0:
                     f_speed = f"{int(spd)}KB"
                 else:
-                    f_speed = "LowSpeed"
+                    f_speed = "Low"
                 
-                # فراخوانی تابع تغییر نام با رتبه (i)
                 final_list.append(rename_config(res['link'], {'cc': res['cc'], 'ping': res['delay'], 'speed': f_speed}, rank=i))
 
             s_text = "\n".join(filter(None, final_list))
@@ -117,7 +122,7 @@ def test_process():
             with open(os.path.join(base_dir, "speed_passed_base64.txt"), "w", encoding="utf-8") as f: f.write(to_base64(s_text))
 
     if os.path.exists(tmp_txt): os.remove(tmp_txt)
-    logger.info("Process complete. Speed sorted and ranked.")
+    logger.info("Process complete. Ranked by Speed (Sequential Test).")
 
 if __name__ == "__main__":
     test_process()
