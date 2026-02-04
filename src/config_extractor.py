@@ -20,9 +20,6 @@ PROTOCOLS = [
 # دامنه‌هایی که نشان‌دهنده استفاده از سرویس‌های کلادفلر هستند
 CLOUDFLARE_DOMAINS = ('.workers.dev', '.pages.dev', '.trycloudflare.com', 'chatgpt.com')
 
-# دامین‌های وایت و تمیز کلادفلر برای جایگزینی (در این نسخه استفاده نمی‌شود اما جهت حفظ ساختار باقی مانده)
-CLEAN_IP_DOMAINS = ['FUCK.TAWANAPROXY.ONLINE', 'FUCK1.TAWANAPROXY.ONLINE']
-
 NEXT_CONFIG_LOOKAHEAD = r'(?=' + '|'.join([rf'{p}:\/\/' for p in PROTOCOLS if p != 'tg']) + r'|https:\/\/t\.me\/proxy\?|tg:\/\/proxy\?|[()\[\]"\'\s])'
 
 def clean_telegram_link(link):
@@ -82,33 +79,38 @@ def is_behind_cloudflare(link):
     except: return False
     return False
 
-def generate_clean_ip_configs(link):
-    """
-    این تابع فعلاً غیرفعال شده است تا از تولید خروجی کلین ایپی جلوگیری شود.
-    فقط لیست خالی برمی‌گرداند.
-    """
-    return []
-
 def save_content(directory, filename, content_list):
+    """ذخیره محتوا به صورت فایل متنی و Base64"""
     if not content_list: return
     content_sorted = sorted(list(set(content_list)))
     content_str = "\n".join(content_sorted)
+    
     with open(os.path.join(directory, f"{filename}.txt"), "w", encoding="utf-8") as f:
         f.write(content_str)
+    
     b64_str = base64.b64encode(content_str.encode("utf-8")).decode("utf-8")
     with open(os.path.join(directory, f"{filename}_base64.txt"), "w", encoding="utf-8") as f:
         f.write(b64_str)
 
 def write_files(data_map, output_dir):
+    """مدیریت نوشتن فایل‌های تفکیک شده و میکس کردن هیستریا"""
     if not any(data_map.values()): return
     os.makedirs(output_dir, exist_ok=True)
     
     mixed_content = set()
     cloudflare_content = set()
-    # لیست مربوط به کلین ایپی خالی می‌ماند
-    cloudflare_clean_ip_content = set()
     
-    for proto, lines in data_map.items():
+    # میکس کردن hysteria2 و hy2 در یک لیست واحد
+    hy2_combined = set()
+    if 'hysteria2' in data_map: hy2_combined.update(data_map['hysteria2'])
+    if 'hy2' in data_map: hy2_combined.update(data_map['hy2'])
+    
+    # حذف hy2 تکی از نقشه داده‌ها برای جلوگیری از تکرار و جایگزینی با لیست ترکیبی
+    processed_map = copy.deepcopy(data_map)
+    if 'hy2' in processed_map: del processed_map['hy2']
+    processed_map['hysteria2'] = hy2_combined
+
+    for proto, lines in processed_map.items():
         if not lines: continue
         
         if proto != 'tg':
@@ -116,9 +118,6 @@ def write_files(data_map, output_dir):
             for line in lines:
                 if is_behind_cloudflare(line):
                     cloudflare_content.add(line)
-                    # فراخوانی تابع تولید کلین ایپی که فعلاً غیرفعال است
-                    clean_versions = generate_clean_ip_configs(line)
-                    cloudflare_clean_ip_content.update(clean_versions)
             
         if proto == 'tg':
             windows_tg = {l for l in lines if is_windows_compatible(l)}
@@ -132,9 +131,26 @@ def write_files(data_map, output_dir):
         save_content(output_dir, "mixed", mixed_content)
     if cloudflare_content:
         save_content(output_dir, "cloudflare", cloudflare_content)
-    # فایل کلین ایپی فقط در صورتی ساخته می‌شود که محتوایی داشته باشد (که در این نسخه ندارد)
-    if cloudflare_clean_ip_content:
-        save_content(output_dir, "cloudflare_clean_ip", cloudflare_clean_ip_content)
+
+def auto_base64_all(directory):
+    """تولید نسخه Base64 برای تمامی فایل‌های متنی فاقد آن (مانند خروجی تستر)"""
+    if not os.path.exists(directory): return
+    for root, dirs, files in os.walk(directory):
+        for file in files:
+            if file.endswith(".txt") and not file.endswith("_base64.txt"):
+                name_without_ext = file[:-4]
+                base64_name = f"{name_without_ext}_base64.txt"
+                if base64_name not in files:
+                    try:
+                        file_path = os.path.join(root, file)
+                        with open(file_path, "r", encoding="utf-8") as f:
+                            content = f.read()
+                        if content.strip():
+                            b64_data = base64.b64encode(content.encode("utf-8")).decode("utf-8")
+                            with open(os.path.join(root, base64_name), "w", encoding="utf-8") as f:
+                                f.write(b64_data)
+                    except Exception as e:
+                        logger.error(f"Auto-base64 error for {file}: {e}")
 
 def main():
     src_dir = "src/telegram"
@@ -161,10 +177,13 @@ def main():
                         global_collection[proto].add(clean_link)
             write_files(channel_collection, os.path.join(out_dir, channel_name))
         except Exception as e:
-            logger.error(f"Error: {e}")
+            logger.error(f"Error processing {channel_name}: {e}")
             
     if sum(len(v) for v in global_collection.values()) > 0:
         write_files(global_collection, os.path.join(out_dir, "all"))
+
+    # نهایی‌سازی: تولید خودکار فایل‌های Base64 برای خروجی‌های تستر یا فایل‌های دستی
+    auto_base64_all(out_dir)
 
 def get_flexible_pattern(protocol_prefix):
     if protocol_prefix == 'tg':
