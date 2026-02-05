@@ -52,7 +52,7 @@ def generate_web_page():
         "base64": "fa-code", "txt": "fa-file-lines", "yaml": "fa-file-code", "conf": "fa-gear"
     }
 
-    # شروع HTML
+    # شروع HTML (استفاده از {{ و }} برای جلوگیری از تداخل با f-string)
     html_content = f"""
     <!DOCTYPE html>
     <html lang="fa" dir="rtl" class="scroll-smooth">
@@ -119,7 +119,7 @@ def generate_web_page():
 
         <div class="max-w-6xl mx-auto">
             <header class="text-center mb-12">
-                <h1 class="text-4xl font-black text-blue-500 mb-2">VpnClashFa Collector</h1>
+                <h1 class="text-4xl font-black text-blue-500 mb-2">VpnClashFa Manager</h1>
                 <p class="text-slate-500 text-sm italic">بروزرسانی: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M')}</p>
             </header>
 
@@ -224,9 +224,9 @@ def generate_web_page():
         
         html_content += "</div></div></div>"
 
-    html_content += "</div>" # بستن تگ لینک‌های اشتراک کامل
+    html_content += "</div>"
 
-    # --- بخش جدید: اشتراک سبک (Split) - انتقال به پایین ---
+    # --- بخش اشتراک سبک ---
     split_data = {}
     if os.path.exists(split_normal_root):
         for folder_name in os.listdir(split_normal_root):
@@ -336,7 +336,6 @@ def generate_web_page():
                 return s.replace(/[۰-۹]/g, d => '۰۱۲۳۴۵۶۷۸۹'.indexOf(d));
             }}
 
-            // تابع جدید برای مدیریت عملیات‌های مختلف در بخش اشتراک سبک
             function generateSplitAction(name, max, type, action) {{
                 const inputId = 'split-input-' + name;
                 const rawVal = document.getElementById(inputId).value;
@@ -345,17 +344,16 @@ def generate_web_page():
                 if (!val || isNaN(val)) {{
                     showToast('لطفا یک عدد وارد کنید');
                     return;
-                }
+                }}
                 
                 const num = parseInt(val);
                 if (num < 1 || num > max) {{
                     showToast('عدد باید بین ۱ تا ' + max + ' باشد');
                     return;
-                }
+                }}
                 
-                // ساخت آدرس بر اساس نوع
                 const finalUrl = `${{REPO_URL}}/sub/split/${{type}}/${{name}}/${{num}}`;
-                const fileName = `${{name}}_part_${{num}}_${{type}}.yaml`;
+                const fileName = `${{name}}_part_${{num}}_${{type}}`;
 
                 if (action === 'copy') {{
                     copyText(finalUrl);
@@ -363,7 +361,7 @@ def generate_web_page():
                     copyContent(finalUrl);
                 }} else if (action === 'file') {{
                     downloadFile(finalUrl, fileName);
-                }
+                }}
             }}
 
             async function loadTGData() {{
