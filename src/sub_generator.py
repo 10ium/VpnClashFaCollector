@@ -7,7 +7,7 @@ import logging
 from urllib.parse import quote
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-logger = logging.getLogger("Source_Specific_Generator")
+logger = logging.getLogger("Split_Converter")
 
 def run_subconverter():
     if not os.path.exists("subconverter/subconverter"):
@@ -24,57 +24,95 @@ def run_subconverter():
 def generate_subs():
     base_sub_dir = "sub"
     base_output_dir = "sub/final"
+    split_base_dir = "sub/split/base64"
     config_path = "config/sub_params.json"
     base_api = "http://127.0.0.1:25500/sub"
 
+    # پارامترهای اختصاصی شما فقط برای بخش Split Clash
+    split_clash_params = {
+        "target": "clash",
+        "config": "https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/ACL4SSR/vpnclashfa.ini",
+        "fdn": "true",
+        "list": "false",
+        "udp": "true",
+        "tfo": "false",
+        "emoji": "true",
+        "scv": "false",
+        "sort": "false",
+        "append_type": "false",
+        "rename": "",
+        "new_name": "true",
+        "tls13": "false",
+        "classic": "false",
+        "expand": "true"
+    }
+
+    # لود کردن تنظیمات برای بخش‌های دیگر (Special Folders & Mixed)
     with open(config_path, "r", encoding="utf-8") as f:
         client_configs = json.load(f)
 
+    # --- بخش 1: پردازش استاندارد (بدون تغییر، از فایل JSON استفاده می‌کند) ---
+    logger.info("--- Starting Standard Processing (from JSON) ---")
     for root, dirs, files in os.walk(base_sub_dir):
-        if "final" in root: continue
+        if "final" in root or "split" in root: continue
 
         parent_folder = os.path.basename(root)
-        
-        # تشخیص پوشه‌های ویژه (که همه فایل‌هایشان باید تبدیل شود)
         is_special_folder = parent_folder in ["tested", "all"]
 
         for file in files:
             if not file.endswith("base64.txt"): continue
-            
-            # منطق فیلتر:
-            # اگر در پوشه ویژه نیستیم، فقط فایل 'mixed_base64.txt' را پردازش کن
-            if not is_special_folder and "mixed" not in file:
-                continue
+            if not is_special_folder and "mixed" not in file: continue
 
             source_path = os.path.abspath(os.path.join(root, file))
             file_clean_name = file.replace(".txt", "").replace("_base64", "")
-
-            # نام‌گذاری پوشه مقصد
-            if is_special_folder:
-                dest_folder_name = f"{parent_folder}_{file_clean_name}"
-            else:
-                dest_folder_name = parent_folder
-
+            dest_folder_name = f"{parent_folder}_{file_clean_name}" if is_special_folder else parent_folder
             dest_dir = os.path.join(base_output_dir, dest_folder_name)
             os.makedirs(dest_dir, exist_ok=True)
 
-            logger.info(f"✨ Processing {'[SPECIAL]' if is_special_folder else '[MIXED-ONLY]'}: {parent_folder}/{file}")
-
+            # استفاده از پارامترهای فایل JSON
             for client_name, params in client_configs.items():
-                current_params = params.copy()
-                target_filename = current_params.pop("filename", f"{client_name}.txt")
-                current_params["url"] = source_path
+                p = params.copy()
+                fname = p.pop("filename", f"{client_name}.txt")
+                p["url"] = source_path
+                query = "&".join([f"{k}={quote(str(v), safe='')}" for k, v in p.items() if v])
                 
-                query = "&".join([f"{k}={quote(str(v), safe='')}" for k, v in current_params.items() if v])
-                final_url = f"{base_api}?{query}"
-
                 try:
-                    response = requests.get(final_url, timeout=60)
-                    if response.status_code == 200:
-                        with open(os.path.join(dest_dir, target_filename), "w", encoding="utf-8") as f:
-                            f.write(response.text)
+                    res = requests.get(f"{base_api}?{query}", timeout=60)
+                    if res.status_code == 200:
+                        with open(os.path.join(dest_dir, fname), "w", encoding="utf-8") as f:
+                            f.write(res.text)
                 except Exception as e:
-                    logger.error(f"  ❌ Error {client_name}: {e}")
+                    logger.error(f"Error {client_name}: {e}")
+
+    # --- بخش 2: پردازش اختصاصی Split (فقط برای کلش و در مسیر درخواستی) ---
+    if os.path.exists(split_base_dir):
+        logger.info("--- Starting Split Clash Processing (Custom Rules) ---")
+        for root, dirs, files in os.walk(split_base_dir):
+            collection_name = os.path.basename(root)
+            if collection_name == "base64": continue
+
+            for file in files: # file همان شماره بخش است (1, 2, 3...)
+                source_path = os.path.abspath(os.path.join(root, file))
+                
+                # مسیر خروجی دقیق: sub/split/clash/name/1
+                dest_dir = os.path.join("sub/split/clash", collection_name)
+                os.makedirs(dest_dir, exist_ok=True)
+                target_path = os.path.join(dest_dir, file)
+
+                # استفاده از پارامترهای دستی که بالا تعریف کردیم
+                payload = split_clash_params.copy()
+                payload["url"] = source_path
+                
+                query = "&".join([f"{k}={quote(str(v), safe='')}" for k, v in payload.items() if v])
+                
+                try:
+                    res = requests.get(f"{base_api}?{query}", timeout=60)
+                    if res.status_code == 200:
+                        with open(target_path, "w", encoding="utf-8") as f_out:
+                            f_out.write(res.text)
+                        logger.info(f"✅ Split Clash Created: {target_path}")
+                except Exception as e:
+                    logger.error(f"❌ Error in Split Clash {collection_name}/{file}: {e}")
 
 if __name__ == "__main__":
     sub_proc = None
