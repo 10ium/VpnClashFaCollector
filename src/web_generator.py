@@ -4,16 +4,19 @@ import datetime
 def generate_web_page():
     sub_root = "sub"
     final_root = "sub/final"
+    split_normal_root = "sub/split/normal" # مسیر فایل‌های اسپلیت شده
     output_html = "index.html"
     repo_raw_url = "https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main"
     favicon_url = "https://raw.githubusercontent.com/10ium/VpnClashFaCollector/refs/heads/main/config/favicon.ico"
     
     # فایل‌هایی که نباید نمایش داده شوند
     exclude_files = [
-        "README.md", "LICENSE", ".gitignore", "web_gen.py", "index.html", "ssr.txt", "ssr_base64.txt", "tg_android_base64.txt", "tg_base64.txt", "tg_windows_base64.txt", "cloudflare_clean_ip.txt", "cloudflare_clean_ip_base64.txt", "raw_results"
+        "README.md", "LICENSE", ".gitignore", "web_gen.py", "index.html", 
+        "ssr.txt", "ssr_base64.txt", "tg_android_base64.txt", "tg_base64.txt", 
+        "tg_windows_base64.txt", "cloudflare_clean_ip.txt", "cloudflare_clean_ip_base64.txt", "raw_results"
     ]
 
-    # ترتیب اولویت نمایش (فایل‌هایی که در این لیست باشند اول نمایش داده می‌شوند)
+    # ترتیب اولویت نمایش
     tested_file_order = [
         "speed_passed.txt", "speed_passed_base64.txt",
         "ping_passed.txt", "ping_passed_base64.txt",
@@ -73,7 +76,6 @@ def generate_web_page():
             .social-card {{ transition: all 0.3s; border: 1px solid rgba(255,255,255,0.05); }}
             .social-card:hover {{ background: rgba(59, 130, 246, 0.1); border-color: rgba(59, 130, 246, 0.4); transform: translateY(-2px); }}
             
-            /* استایل پیام کپی (Toast) */
             #toast {{ 
                 visibility: hidden; 
                 min-width: 200px; 
@@ -100,6 +102,10 @@ def generate_web_page():
             
             .nav-btn {{ position: fixed; right: 20px; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 50; box-shadow: 0 4px 10px rgba(0,0,0,0.5); transition: 0.3s; color: white; cursor: pointer; }}
             .nav-btn:hover {{ transform: scale(1.1); }}
+            
+            /* استایل‌های اختصاصی بخش اسپلیت */
+            .split-input {{ background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); color: white; text-align: center; border-radius: 8px; padding: 8px; width: 100%; transition: 0.3s; }}
+            .split-input:focus {{ outline: none; border-color: #3b82f6; background: rgba(0,0,0,0.5); }}
         </style>
     </head>
     <body class="p-4 md:p-10 relative">
@@ -130,18 +136,62 @@ def generate_web_page():
                     <i class="fa-solid fa-copy ml-2 text-xl"></i> کپی تمام پروکسی‌ها
                 </button>
             </section>
+    """
 
-            <h2 class="text-2xl font-black mb-8 flex items-center text-blue-400"><i class="fa-solid fa-server ml-3"></i> لینک‌های اشتراک</h2>
+    # --- بخش جدید: پردازش فایل‌های Split ---
+    split_data = {}
+    if os.path.exists(split_normal_root):
+        for folder_name in os.listdir(split_normal_root):
+            folder_path = os.path.join(split_normal_root, folder_name)
+            if os.path.isdir(folder_path):
+                # شمارش تعداد فایل‌ها (فرض بر این است که فایل‌ها نام‌گذاری عددی دارند یا تمام فایل‌ها باید شمرده شوند)
+                files_count = len([name for name in os.listdir(folder_path) if os.path.isfile(os.path.join(folder_path, name))])
+                if files_count > 0:
+                    split_data[folder_name] = files_count
+
+    if split_data:
+        html_content += f"""
+            <section class="mb-12 glass p-6 rounded-3xl border-t-4 border-amber-500 shadow-2xl">
+                <h2 class="text-2xl font-black mb-6 flex items-center text-amber-400">
+                    <i class="fa-solid fa-feather ml-3"></i> اشتراک سبک
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        """
+        
+        for name, count in split_data.items():
+            html_content += f"""
+                    <div class="file-card flex flex-col gap-3 border-amber-500/30">
+                        <div class="flex justify-between items-center border-b border-white/10 pb-2">
+                            <span class="font-bold text-lg text-amber-100">{name}</span>
+                            <span class="text-xs bg-amber-500/20 text-amber-300 px-2 py-1 rounded">1 تا {count}</span>
+                        </div>
+                        <p class="text-xs text-slate-400">شماره بخش را وارد کنید:</p>
+                        <input type="text" id="split-input-{name}" class="split-input" placeholder="مثلاً: 1" inputmode="numeric">
+                        <div class="flex gap-2 mt-2">
+                            <button onclick="generateSplitLink('{name}', {count}, 'normal')" class="flex-1 bg-amber-600/20 text-amber-400 py-2 rounded-lg btn-action hover:bg-amber-600 hover:text-white transition-all">لینک عادی</button>
+                            <button onclick="generateSplitLink('{name}', {count}, 'base64')" class="flex-1 bg-slate-700 text-slate-300 py-2 rounded-lg btn-action hover:bg-slate-600 hover:text-white transition-all">Base64</button>
+                        </div>
+                    </div>
+            """
+        
+        html_content += """
+                </div>
+            </section>
+        """
+    # ---------------------------------------
+
+    html_content += """
+            <h2 class="text-2xl font-black mb-8 flex items-center text-blue-400"><i class="fa-solid fa-server ml-3"></i> لینک‌های اشتراک کامل</h2>
             <div class="space-y-6">
     """
 
-    folders = [d for d in os.listdir(sub_root) if os.path.isdir(os.path.join(sub_root, d)) and d != "final"]
+    folders = [d for d in os.listdir(sub_root) if os.path.isdir(os.path.join(sub_root, d)) and d != "final" and d != "split"]
     
     def get_priority(name):
         n = name.lower()
         if n == 'tested': return 1 
         if n == 'all': return 2    
-        return 3                   
+        return 3                    
 
     sorted_folders = sorted(folders, key=lambda x: (get_priority(x), x.lower()))
 
@@ -172,9 +222,8 @@ def generate_web_page():
                 if f not in exclude_files and os.path.isfile(os.path.join(p1, f)):
                     available_files[f] = f"{repo_raw_url}/sub/{folder}/{f}"
         
-        # گام دوم: ترکیب با پوشه final (با منطق اختصاصی شما برای tested)
+        # گام دوم: ترکیب با پوشه final
         if is_tested:
-            # فقط سرعت بالا را میخواهیم و پینگ را رد میکنیم
             final_folder_name = "tested_speed_passed"
             p2 = os.path.join(final_root, final_folder_name)
             if os.path.exists(p2):
@@ -223,7 +272,6 @@ def generate_web_page():
         
         html_content += "</div></div></div>"
 
-    # اضافه کردن f قبل از string نهایی
     html_content += f"""
             </div>
 
@@ -261,6 +309,7 @@ def generate_web_page():
 
         <script>
             let tgData = {{ android: '', windows: '', mixed: '' }};
+            const REPO_URL = "{repo_raw_url}";
             
             function showToast(msg = 'کپی شد!') {{
                 const t = document.getElementById("toast");
@@ -268,13 +317,40 @@ def generate_web_page():
                 t.className = "show";
                 setTimeout(() => {{ t.className = t.className.replace("show", ""); }}, 2500);
             }}
+            
+            // تبدیل اعداد فارسی به انگلیسی
+            function toEnDigit(s) {{
+                return s.replace(/[۰-۹]/g, d => '۰۱۲۳۴۵۶۷۸۹'.indexOf(d));
+            }}
+
+            // تولید لینک اشتراک اسپلیت
+            function generateSplitLink(name, max, type) {{
+                const inputId = 'split-input-' + name;
+                const rawVal = document.getElementById(inputId).value;
+                const val = toEnDigit(rawVal).trim();
+                
+                if (!val || isNaN(val)) {{
+                    showToast('لطفا یک عدد وارد کنید');
+                    return;
+                }}
+                
+                const num = parseInt(val);
+                if (num < 1 || num > max) {{
+                    showToast('عدد باید بین ۱ تا ' + max + ' باشد');
+                    return;
+                }}
+                
+                // ساخت لینک: sub/split/normal/Name/1
+                const finalUrl = `${{REPO_URL}}/sub/split/${{type}}/${{name}}/${{num}}`;
+                copyText(finalUrl);
+            }}
 
             async function loadTGData() {{
                 try {{
                     const [a, w, m] = await Promise.all([
-                        fetch('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/tg_android.txt').then(r => r.text()),
-                        fetch('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/tg_windows.txt').then(r => r.text()),
-                        fetch('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/all/tg.txt').then(r => r.text())
+                        fetch(REPO_URL + '/sub/all/tg_android.txt').then(r => r.text()),
+                        fetch(REPO_URL + '/sub/all/tg_windows.txt').then(r => r.text()),
+                        fetch(REPO_URL + '/sub/all/tg.txt').then(r => r.text())
                     ]);
                     tgData.android = a.trim(); 
                     tgData.windows = w.trim(); 
