@@ -17,7 +17,7 @@
             .proxy-box { font-family: monospace; background: #000; padding: 20px; border-radius: 15px; height: 300px; overflow-y: auto; direction: ltr; text-align: left; font-size: 14px; border: 1px solid #1e293b; }
             .tab-active { border-bottom: 4px solid #3b82f6; color: #3b82f6; font-weight: 900; }
             .file-card { background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; padding: 12px; }
-            .btn-action { transition: all 0.2s; font-size: 14px; font-weight: 700; }
+            .btn-action { transition: all 0.2s; font-size: 13px; font-weight: 700; }
             .social-card { transition: all 0.3s; border: 1px solid rgba(255,255,255,0.05); }
             .social-card:hover { background: rgba(59, 130, 246, 0.1); border-color: rgba(59, 130, 246, 0.4); transform: translateY(-2px); }
             
@@ -48,7 +48,6 @@
             .nav-btn { position: fixed; right: 20px; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 50; box-shadow: 0 4px 10px rgba(0,0,0,0.5); transition: 0.3s; color: white; cursor: pointer; }
             .nav-btn:hover { transform: scale(1.1); }
             
-            /* استایل‌های اختصاصی بخش اسپلیت */
             .split-input { background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); color: white; text-align: center; border-radius: 8px; padding: 8px; width: 100%; transition: 0.3s; }
             .split-input:focus { outline: none; border-color: #3b82f6; background: rgba(0,0,0,0.5); }
         </style>
@@ -65,8 +64,8 @@
 
         <div class="max-w-6xl mx-auto">
             <header class="text-center mb-12">
-                <h1 class="text-4xl font-black text-blue-500 mb-2">VpnClashFa Collector</h1>
-                <p class="text-slate-500 text-sm italic">بروزرسانی: 2026-02-05 16:54</p>
+                <h1 class="text-4xl font-black text-blue-500 mb-2">VpnClashFa Manager</h1>
+                <p class="text-slate-500 text-sm italic">بروزرسانی: 2026-02-05 18:20</p>
             </header>
 
             <section class="mb-12 glass p-6 rounded-3xl border-t-4 border-sky-500 shadow-2xl">
@@ -81,96 +80,9 @@
                     <i class="fa-solid fa-copy ml-2 text-xl"></i> کپی تمام پروکسی‌ها
                 </button>
             </section>
-    
-            <section class="mb-12 glass p-6 rounded-3xl border-t-4 border-amber-500 shadow-2xl">
-                <h2 class="text-2xl font-black mb-6 flex items-center text-amber-400">
-                    <i class="fa-solid fa-feather ml-3"></i> اشتراک سبک
-                </h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        
-                    <div class="file-card flex flex-col gap-3 border-amber-500/30">
-                        <div class="flex justify-between items-center border-b border-white/10 pb-2">
-                            <span class="font-bold text-lg text-amber-100">trojan</span>
-                            <span class="text-xs bg-amber-500/20 text-amber-300 px-2 py-1 rounded">1 تا 1</span>
-                        </div>
-                        <p class="text-xs text-slate-400">شماره بخش را وارد کنید:</p>
-                        <input type="text" id="split-input-trojan" class="split-input" placeholder="مثلاً: 1" inputmode="numeric">
-                        <div class="flex gap-2 mt-2">
-                            <button onclick="generateSplitLink('trojan', 1, 'normal')" class="flex-1 bg-amber-600/20 text-amber-400 py-2 rounded-lg btn-action hover:bg-amber-600 hover:text-white transition-all">لینک عادی</button>
-                            <button onclick="generateSplitLink('trojan', 1, 'base64')" class="flex-1 bg-slate-700 text-slate-300 py-2 rounded-lg btn-action hover:bg-slate-600 hover:text-white transition-all">Base64</button>
-                        </div>
-                    </div>
-            
-                    <div class="file-card flex flex-col gap-3 border-amber-500/30">
-                        <div class="flex justify-between items-center border-b border-white/10 pb-2">
-                            <span class="font-bold text-lg text-amber-100">vless</span>
-                            <span class="text-xs bg-amber-500/20 text-amber-300 px-2 py-1 rounded">1 تا 12</span>
-                        </div>
-                        <p class="text-xs text-slate-400">شماره بخش را وارد کنید:</p>
-                        <input type="text" id="split-input-vless" class="split-input" placeholder="مثلاً: 1" inputmode="numeric">
-                        <div class="flex gap-2 mt-2">
-                            <button onclick="generateSplitLink('vless', 12, 'normal')" class="flex-1 bg-amber-600/20 text-amber-400 py-2 rounded-lg btn-action hover:bg-amber-600 hover:text-white transition-all">لینک عادی</button>
-                            <button onclick="generateSplitLink('vless', 12, 'base64')" class="flex-1 bg-slate-700 text-slate-300 py-2 rounded-lg btn-action hover:bg-slate-600 hover:text-white transition-all">Base64</button>
-                        </div>
-                    </div>
-            
-                    <div class="file-card flex flex-col gap-3 border-amber-500/30">
-                        <div class="flex justify-between items-center border-b border-white/10 pb-2">
-                            <span class="font-bold text-lg text-amber-100">mixed</span>
-                            <span class="text-xs bg-amber-500/20 text-amber-300 px-2 py-1 rounded">1 تا 15</span>
-                        </div>
-                        <p class="text-xs text-slate-400">شماره بخش را وارد کنید:</p>
-                        <input type="text" id="split-input-mixed" class="split-input" placeholder="مثلاً: 1" inputmode="numeric">
-                        <div class="flex gap-2 mt-2">
-                            <button onclick="generateSplitLink('mixed', 15, 'normal')" class="flex-1 bg-amber-600/20 text-amber-400 py-2 rounded-lg btn-action hover:bg-amber-600 hover:text-white transition-all">لینک عادی</button>
-                            <button onclick="generateSplitLink('mixed', 15, 'base64')" class="flex-1 bg-slate-700 text-slate-300 py-2 rounded-lg btn-action hover:bg-slate-600 hover:text-white transition-all">Base64</button>
-                        </div>
-                    </div>
-            
-                    <div class="file-card flex flex-col gap-3 border-amber-500/30">
-                        <div class="flex justify-between items-center border-b border-white/10 pb-2">
-                            <span class="font-bold text-lg text-amber-100">vmess</span>
-                            <span class="text-xs bg-amber-500/20 text-amber-300 px-2 py-1 rounded">1 تا 1</span>
-                        </div>
-                        <p class="text-xs text-slate-400">شماره بخش را وارد کنید:</p>
-                        <input type="text" id="split-input-vmess" class="split-input" placeholder="مثلاً: 1" inputmode="numeric">
-                        <div class="flex gap-2 mt-2">
-                            <button onclick="generateSplitLink('vmess', 1, 'normal')" class="flex-1 bg-amber-600/20 text-amber-400 py-2 rounded-lg btn-action hover:bg-amber-600 hover:text-white transition-all">لینک عادی</button>
-                            <button onclick="generateSplitLink('vmess', 1, 'base64')" class="flex-1 bg-slate-700 text-slate-300 py-2 rounded-lg btn-action hover:bg-slate-600 hover:text-white transition-all">Base64</button>
-                        </div>
-                    </div>
-            
-                    <div class="file-card flex flex-col gap-3 border-amber-500/30">
-                        <div class="flex justify-between items-center border-b border-white/10 pb-2">
-                            <span class="font-bold text-lg text-amber-100">ss</span>
-                            <span class="text-xs bg-amber-500/20 text-amber-300 px-2 py-1 rounded">1 تا 8</span>
-                        </div>
-                        <p class="text-xs text-slate-400">شماره بخش را وارد کنید:</p>
-                        <input type="text" id="split-input-ss" class="split-input" placeholder="مثلاً: 1" inputmode="numeric">
-                        <div class="flex gap-2 mt-2">
-                            <button onclick="generateSplitLink('ss', 8, 'normal')" class="flex-1 bg-amber-600/20 text-amber-400 py-2 rounded-lg btn-action hover:bg-amber-600 hover:text-white transition-all">لینک عادی</button>
-                            <button onclick="generateSplitLink('ss', 8, 'base64')" class="flex-1 bg-slate-700 text-slate-300 py-2 rounded-lg btn-action hover:bg-slate-600 hover:text-white transition-all">Base64</button>
-                        </div>
-                    </div>
-            
-                    <div class="file-card flex flex-col gap-3 border-amber-500/30">
-                        <div class="flex justify-between items-center border-b border-white/10 pb-2">
-                            <span class="font-bold text-lg text-amber-100">ping_passed</span>
-                            <span class="text-xs bg-amber-500/20 text-amber-300 px-2 py-1 rounded">1 تا 17</span>
-                        </div>
-                        <p class="text-xs text-slate-400">شماره بخش را وارد کنید:</p>
-                        <input type="text" id="split-input-ping_passed" class="split-input" placeholder="مثلاً: 1" inputmode="numeric">
-                        <div class="flex gap-2 mt-2">
-                            <button onclick="generateSplitLink('ping_passed', 17, 'normal')" class="flex-1 bg-amber-600/20 text-amber-400 py-2 rounded-lg btn-action hover:bg-amber-600 hover:text-white transition-all">لینک عادی</button>
-                            <button onclick="generateSplitLink('ping_passed', 17, 'base64')" class="flex-1 bg-slate-700 text-slate-300 py-2 rounded-lg btn-action hover:bg-slate-600 hover:text-white transition-all">Base64</button>
-                        </div>
-                    </div>
-            
-                </div>
-            </section>
-        
+
             <h2 class="text-2xl font-black mb-8 flex items-center text-blue-400"><i class="fa-solid fa-server ml-3"></i> لینک‌های اشتراک کامل</h2>
-            <div class="space-y-6">
+            <div class="space-y-6 mb-12">
     
         <div class="glass rounded-3xl overflow-hidden accordion-item border-r-8 border-emerald-500 shadow-lg">
             <button onclick="toggleAccordion(this)" class="w-full p-6 text-right flex justify-between items-center hover:bg-white/5 transition">
@@ -10806,9 +10718,226 @@
                     <button onclick="copyContent('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/YeBeKhe/v2ray_base64.txt')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
                     <button onclick="downloadFile('https://raw.githubusercontent.com/10ium/VpnClashFaCollector/main/sub/final/YeBeKhe/v2ray_base64.txt', 'v2ray_base64.txt')" class="bg-slate-700 text-white px-4 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
                 </div>
-            </div></div></div></div>
-            </div>
+            </div></div></div></div></div>
+            <section class="mb-12 glass p-6 rounded-3xl border-t-4 border-amber-500 shadow-2xl">
+                <h2 class="text-2xl font-black mb-6 flex items-center text-amber-400">
+                    <i class="fa-solid fa-feather ml-3"></i> اشتراک سبک (بخش‌بندی شده)
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+                    <div class="file-card flex flex-col gap-3 border-amber-500/30">
+                        <div class="flex justify-between items-center border-b border-white/10 pb-2">
+                            <span class="font-bold text-lg text-amber-100">trojan</span>
+                            <span class="text-xs bg-amber-500/20 text-amber-300 px-2 py-1 rounded">1 تا 1</span>
+                        </div>
+                        <input type="text" id="split-input-trojan" class="split-input mt-2" placeholder="شماره بخش (مثلاً: 1)" inputmode="numeric">
+                        
+                        <div class="flex flex-col gap-1 mt-2">
+                            <div class="flex items-center gap-2 text-xs text-slate-400 mb-1"><i class="fa-solid fa-link"></i> لینک عادی:</div>
+                            <div class="flex gap-1">
+                                <button onclick="generateSplitAction('trojan', 1, 'normal', 'copy')" class="flex-1 bg-amber-600/20 text-amber-400 py-2 rounded-lg btn-action hover:bg-amber-600 hover:text-white transition-all">کپی لینک</button>
+                                <button onclick="generateSplitAction('trojan', 1, 'normal', 'text')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                                <button onclick="generateSplitAction('trojan', 1, 'normal', 'file')" class="bg-slate-700 text-white px-3 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                            </div>
+                        </div>
 
+                        <div class="flex flex-col gap-1 mt-2">
+                            <div class="flex items-center gap-2 text-xs text-slate-400 mb-1"><i class="fa-solid fa-code"></i> اشتراک Base64:</div>
+                            <div class="flex gap-1">
+                                <button onclick="generateSplitAction('trojan', 1, 'base64', 'copy')" class="flex-1 bg-amber-600/20 text-amber-400 py-2 rounded-lg btn-action hover:bg-amber-600 hover:text-white transition-all">کپی لینک</button>
+                                <button onclick="generateSplitAction('trojan', 1, 'base64', 'text')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                                <button onclick="generateSplitAction('trojan', 1, 'base64', 'file')" class="bg-slate-700 text-white px-3 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-1 mt-2">
+                            <div class="flex items-center gap-2 text-xs text-sky-400 mb-1"><i class="fa-solid fa-circle-nodes"></i> اشتراک Clash:</div>
+                            <div class="flex gap-1">
+                                <button onclick="generateSplitAction('trojan', 1, 'clash', 'copy')" class="flex-1 bg-sky-600/20 text-sky-400 py-2 rounded-lg btn-action hover:bg-sky-600 hover:text-white transition-all">کپی لینک</button>
+                                <button onclick="generateSplitAction('trojan', 1, 'clash', 'text')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                                <button onclick="generateSplitAction('trojan', 1, 'clash', 'file')" class="bg-slate-700 text-white px-3 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="file-card flex flex-col gap-3 border-amber-500/30">
+                        <div class="flex justify-between items-center border-b border-white/10 pb-2">
+                            <span class="font-bold text-lg text-amber-100">vless</span>
+                            <span class="text-xs bg-amber-500/20 text-amber-300 px-2 py-1 rounded">1 تا 12</span>
+                        </div>
+                        <input type="text" id="split-input-vless" class="split-input mt-2" placeholder="شماره بخش (مثلاً: 1)" inputmode="numeric">
+                        
+                        <div class="flex flex-col gap-1 mt-2">
+                            <div class="flex items-center gap-2 text-xs text-slate-400 mb-1"><i class="fa-solid fa-link"></i> لینک عادی:</div>
+                            <div class="flex gap-1">
+                                <button onclick="generateSplitAction('vless', 12, 'normal', 'copy')" class="flex-1 bg-amber-600/20 text-amber-400 py-2 rounded-lg btn-action hover:bg-amber-600 hover:text-white transition-all">کپی لینک</button>
+                                <button onclick="generateSplitAction('vless', 12, 'normal', 'text')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                                <button onclick="generateSplitAction('vless', 12, 'normal', 'file')" class="bg-slate-700 text-white px-3 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-1 mt-2">
+                            <div class="flex items-center gap-2 text-xs text-slate-400 mb-1"><i class="fa-solid fa-code"></i> اشتراک Base64:</div>
+                            <div class="flex gap-1">
+                                <button onclick="generateSplitAction('vless', 12, 'base64', 'copy')" class="flex-1 bg-amber-600/20 text-amber-400 py-2 rounded-lg btn-action hover:bg-amber-600 hover:text-white transition-all">کپی لینک</button>
+                                <button onclick="generateSplitAction('vless', 12, 'base64', 'text')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                                <button onclick="generateSplitAction('vless', 12, 'base64', 'file')" class="bg-slate-700 text-white px-3 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-1 mt-2">
+                            <div class="flex items-center gap-2 text-xs text-sky-400 mb-1"><i class="fa-solid fa-circle-nodes"></i> اشتراک Clash:</div>
+                            <div class="flex gap-1">
+                                <button onclick="generateSplitAction('vless', 12, 'clash', 'copy')" class="flex-1 bg-sky-600/20 text-sky-400 py-2 rounded-lg btn-action hover:bg-sky-600 hover:text-white transition-all">کپی لینک</button>
+                                <button onclick="generateSplitAction('vless', 12, 'clash', 'text')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                                <button onclick="generateSplitAction('vless', 12, 'clash', 'file')" class="bg-slate-700 text-white px-3 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="file-card flex flex-col gap-3 border-amber-500/30">
+                        <div class="flex justify-between items-center border-b border-white/10 pb-2">
+                            <span class="font-bold text-lg text-amber-100">mixed</span>
+                            <span class="text-xs bg-amber-500/20 text-amber-300 px-2 py-1 rounded">1 تا 15</span>
+                        </div>
+                        <input type="text" id="split-input-mixed" class="split-input mt-2" placeholder="شماره بخش (مثلاً: 1)" inputmode="numeric">
+                        
+                        <div class="flex flex-col gap-1 mt-2">
+                            <div class="flex items-center gap-2 text-xs text-slate-400 mb-1"><i class="fa-solid fa-link"></i> لینک عادی:</div>
+                            <div class="flex gap-1">
+                                <button onclick="generateSplitAction('mixed', 15, 'normal', 'copy')" class="flex-1 bg-amber-600/20 text-amber-400 py-2 rounded-lg btn-action hover:bg-amber-600 hover:text-white transition-all">کپی لینک</button>
+                                <button onclick="generateSplitAction('mixed', 15, 'normal', 'text')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                                <button onclick="generateSplitAction('mixed', 15, 'normal', 'file')" class="bg-slate-700 text-white px-3 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-1 mt-2">
+                            <div class="flex items-center gap-2 text-xs text-slate-400 mb-1"><i class="fa-solid fa-code"></i> اشتراک Base64:</div>
+                            <div class="flex gap-1">
+                                <button onclick="generateSplitAction('mixed', 15, 'base64', 'copy')" class="flex-1 bg-amber-600/20 text-amber-400 py-2 rounded-lg btn-action hover:bg-amber-600 hover:text-white transition-all">کپی لینک</button>
+                                <button onclick="generateSplitAction('mixed', 15, 'base64', 'text')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                                <button onclick="generateSplitAction('mixed', 15, 'base64', 'file')" class="bg-slate-700 text-white px-3 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-1 mt-2">
+                            <div class="flex items-center gap-2 text-xs text-sky-400 mb-1"><i class="fa-solid fa-circle-nodes"></i> اشتراک Clash:</div>
+                            <div class="flex gap-1">
+                                <button onclick="generateSplitAction('mixed', 15, 'clash', 'copy')" class="flex-1 bg-sky-600/20 text-sky-400 py-2 rounded-lg btn-action hover:bg-sky-600 hover:text-white transition-all">کپی لینک</button>
+                                <button onclick="generateSplitAction('mixed', 15, 'clash', 'text')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                                <button onclick="generateSplitAction('mixed', 15, 'clash', 'file')" class="bg-slate-700 text-white px-3 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="file-card flex flex-col gap-3 border-amber-500/30">
+                        <div class="flex justify-between items-center border-b border-white/10 pb-2">
+                            <span class="font-bold text-lg text-amber-100">vmess</span>
+                            <span class="text-xs bg-amber-500/20 text-amber-300 px-2 py-1 rounded">1 تا 1</span>
+                        </div>
+                        <input type="text" id="split-input-vmess" class="split-input mt-2" placeholder="شماره بخش (مثلاً: 1)" inputmode="numeric">
+                        
+                        <div class="flex flex-col gap-1 mt-2">
+                            <div class="flex items-center gap-2 text-xs text-slate-400 mb-1"><i class="fa-solid fa-link"></i> لینک عادی:</div>
+                            <div class="flex gap-1">
+                                <button onclick="generateSplitAction('vmess', 1, 'normal', 'copy')" class="flex-1 bg-amber-600/20 text-amber-400 py-2 rounded-lg btn-action hover:bg-amber-600 hover:text-white transition-all">کپی لینک</button>
+                                <button onclick="generateSplitAction('vmess', 1, 'normal', 'text')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                                <button onclick="generateSplitAction('vmess', 1, 'normal', 'file')" class="bg-slate-700 text-white px-3 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-1 mt-2">
+                            <div class="flex items-center gap-2 text-xs text-slate-400 mb-1"><i class="fa-solid fa-code"></i> اشتراک Base64:</div>
+                            <div class="flex gap-1">
+                                <button onclick="generateSplitAction('vmess', 1, 'base64', 'copy')" class="flex-1 bg-amber-600/20 text-amber-400 py-2 rounded-lg btn-action hover:bg-amber-600 hover:text-white transition-all">کپی لینک</button>
+                                <button onclick="generateSplitAction('vmess', 1, 'base64', 'text')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                                <button onclick="generateSplitAction('vmess', 1, 'base64', 'file')" class="bg-slate-700 text-white px-3 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-1 mt-2">
+                            <div class="flex items-center gap-2 text-xs text-sky-400 mb-1"><i class="fa-solid fa-circle-nodes"></i> اشتراک Clash:</div>
+                            <div class="flex gap-1">
+                                <button onclick="generateSplitAction('vmess', 1, 'clash', 'copy')" class="flex-1 bg-sky-600/20 text-sky-400 py-2 rounded-lg btn-action hover:bg-sky-600 hover:text-white transition-all">کپی لینک</button>
+                                <button onclick="generateSplitAction('vmess', 1, 'clash', 'text')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                                <button onclick="generateSplitAction('vmess', 1, 'clash', 'file')" class="bg-slate-700 text-white px-3 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="file-card flex flex-col gap-3 border-amber-500/30">
+                        <div class="flex justify-between items-center border-b border-white/10 pb-2">
+                            <span class="font-bold text-lg text-amber-100">ss</span>
+                            <span class="text-xs bg-amber-500/20 text-amber-300 px-2 py-1 rounded">1 تا 8</span>
+                        </div>
+                        <input type="text" id="split-input-ss" class="split-input mt-2" placeholder="شماره بخش (مثلاً: 1)" inputmode="numeric">
+                        
+                        <div class="flex flex-col gap-1 mt-2">
+                            <div class="flex items-center gap-2 text-xs text-slate-400 mb-1"><i class="fa-solid fa-link"></i> لینک عادی:</div>
+                            <div class="flex gap-1">
+                                <button onclick="generateSplitAction('ss', 8, 'normal', 'copy')" class="flex-1 bg-amber-600/20 text-amber-400 py-2 rounded-lg btn-action hover:bg-amber-600 hover:text-white transition-all">کپی لینک</button>
+                                <button onclick="generateSplitAction('ss', 8, 'normal', 'text')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                                <button onclick="generateSplitAction('ss', 8, 'normal', 'file')" class="bg-slate-700 text-white px-3 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-1 mt-2">
+                            <div class="flex items-center gap-2 text-xs text-slate-400 mb-1"><i class="fa-solid fa-code"></i> اشتراک Base64:</div>
+                            <div class="flex gap-1">
+                                <button onclick="generateSplitAction('ss', 8, 'base64', 'copy')" class="flex-1 bg-amber-600/20 text-amber-400 py-2 rounded-lg btn-action hover:bg-amber-600 hover:text-white transition-all">کپی لینک</button>
+                                <button onclick="generateSplitAction('ss', 8, 'base64', 'text')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                                <button onclick="generateSplitAction('ss', 8, 'base64', 'file')" class="bg-slate-700 text-white px-3 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-1 mt-2">
+                            <div class="flex items-center gap-2 text-xs text-sky-400 mb-1"><i class="fa-solid fa-circle-nodes"></i> اشتراک Clash:</div>
+                            <div class="flex gap-1">
+                                <button onclick="generateSplitAction('ss', 8, 'clash', 'copy')" class="flex-1 bg-sky-600/20 text-sky-400 py-2 rounded-lg btn-action hover:bg-sky-600 hover:text-white transition-all">کپی لینک</button>
+                                <button onclick="generateSplitAction('ss', 8, 'clash', 'text')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                                <button onclick="generateSplitAction('ss', 8, 'clash', 'file')" class="bg-slate-700 text-white px-3 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="file-card flex flex-col gap-3 border-amber-500/30">
+                        <div class="flex justify-between items-center border-b border-white/10 pb-2">
+                            <span class="font-bold text-lg text-amber-100">ping_passed</span>
+                            <span class="text-xs bg-amber-500/20 text-amber-300 px-2 py-1 rounded">1 تا 17</span>
+                        </div>
+                        <input type="text" id="split-input-ping_passed" class="split-input mt-2" placeholder="شماره بخش (مثلاً: 1)" inputmode="numeric">
+                        
+                        <div class="flex flex-col gap-1 mt-2">
+                            <div class="flex items-center gap-2 text-xs text-slate-400 mb-1"><i class="fa-solid fa-link"></i> لینک عادی:</div>
+                            <div class="flex gap-1">
+                                <button onclick="generateSplitAction('ping_passed', 17, 'normal', 'copy')" class="flex-1 bg-amber-600/20 text-amber-400 py-2 rounded-lg btn-action hover:bg-amber-600 hover:text-white transition-all">کپی لینک</button>
+                                <button onclick="generateSplitAction('ping_passed', 17, 'normal', 'text')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                                <button onclick="generateSplitAction('ping_passed', 17, 'normal', 'file')" class="bg-slate-700 text-white px-3 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-1 mt-2">
+                            <div class="flex items-center gap-2 text-xs text-slate-400 mb-1"><i class="fa-solid fa-code"></i> اشتراک Base64:</div>
+                            <div class="flex gap-1">
+                                <button onclick="generateSplitAction('ping_passed', 17, 'base64', 'copy')" class="flex-1 bg-amber-600/20 text-amber-400 py-2 rounded-lg btn-action hover:bg-amber-600 hover:text-white transition-all">کپی لینک</button>
+                                <button onclick="generateSplitAction('ping_passed', 17, 'base64', 'text')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                                <button onclick="generateSplitAction('ping_passed', 17, 'base64', 'file')" class="bg-slate-700 text-white px-3 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col gap-1 mt-2">
+                            <div class="flex items-center gap-2 text-xs text-sky-400 mb-1"><i class="fa-solid fa-circle-nodes"></i> اشتراک Clash:</div>
+                            <div class="flex gap-1">
+                                <button onclick="generateSplitAction('ping_passed', 17, 'clash', 'copy')" class="flex-1 bg-sky-600/20 text-sky-400 py-2 rounded-lg btn-action hover:bg-sky-600 hover:text-white transition-all">کپی لینک</button>
+                                <button onclick="generateSplitAction('ping_passed', 17, 'clash', 'text')" class="flex-1 bg-purple-600/20 text-purple-400 py-2 rounded-lg btn-action hover:bg-purple-600 hover:text-white transition-all">متن</button>
+                                <button onclick="generateSplitAction('ping_passed', 17, 'clash', 'file')" class="bg-slate-700 text-white px-3 py-2 rounded-lg btn-action hover:bg-emerald-600"><i class="fa-solid fa-download"></i></button>
+                            </div>
+                        </div>
+                    </div>
+            
+                </div>
+            </section>
+        
             <footer class="mt-16 mb-8">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <a href="https://t.me/vpnclashfa" target="_blank" class="social-card glass rounded-2xl p-6 flex items-center justify-between group">
@@ -10852,13 +10981,11 @@
                 setTimeout(() => { t.className = t.className.replace("show", ""); }, 2500);
             }
             
-            // تبدیل اعداد فارسی به انگلیسی
             function toEnDigit(s) {
                 return s.replace(/[۰-۹]/g, d => '۰۱۲۳۴۵۶۷۸۹'.indexOf(d));
             }
 
-            // تولید لینک اشتراک اسپلیت
-            function generateSplitLink(name, max, type) {
+            function generateSplitAction(name, max, type, action) {
                 const inputId = 'split-input-' + name;
                 const rawVal = document.getElementById(inputId).value;
                 const val = toEnDigit(rawVal).trim();
@@ -10874,9 +11001,16 @@
                     return;
                 }
                 
-                // ساخت لینک: sub/split/normal/Name/1
                 const finalUrl = `${REPO_URL}/sub/split/${type}/${name}/${num}`;
-                copyText(finalUrl);
+                const fileName = `${name}_part_${num}_${type}`;
+
+                if (action === 'copy') {
+                    copyText(finalUrl);
+                } else if (action === 'text') {
+                    copyContent(finalUrl);
+                } else if (action === 'file') {
+                    downloadFile(finalUrl, fileName);
+                }
             }
 
             async function loadTGData() {
@@ -10931,7 +11065,10 @@
                     const t = await r.text();
                     navigator.clipboard.writeText(t); 
                     showToast('متن کپی شد');
-                } catch(e) { console.error("Copy error:", e); }
+                } catch(e) { 
+                    console.error("Copy error:", e);
+                    showToast('خطا در دریافت متن');
+                }
             }
 
             async function downloadFile(url, name) {
@@ -10942,7 +11079,10 @@
                     a.href = URL.createObjectURL(b);
                     a.download = name; 
                     a.click();
-                } catch(e) { console.error("Download error:", e); }
+                } catch(e) { 
+                    console.error("Download error:", e);
+                    showToast('خطا در دانلود فایل');
+                }
             }
 
             window.onload = loadTGData;
