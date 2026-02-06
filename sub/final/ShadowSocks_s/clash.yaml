@@ -465,15 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: NetAccount, server: 82.38.31.199, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
   - {name: "@Config_magazine", server: 104.20.1.252, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 1a94fbd9-79d2-4aa7-bf1d-074f678d27ab, network: ws, ws-opts: {path: "/?ed", headers: {Host: EqUiPPed-phOToZkoA7K5e6P.eCoTOuRiss.Co.uk.}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@Config_magazine`", server: OV-France1.09vpn.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 25f86cb1-2140-4085-abcb-c3a0ea7a4be0, network: ws, ws-opts: {path: /vless/, headers: {Host: OV-France1.09vpn.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: NetAccount 2, server: de4.socialup.live, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8492cdf1-e008-4555-b3b0-5d812c588151, servername: web.max.ru, host: web.max.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: pTHa-c6K1yr__V0oqRqSinhNJeX3DXtruIstphk31Do, short-id: 1b}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@kalafge xxx2 جوین تلگرام`", server: cfcdn.zopli.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 98d677be-b14b-4c14-a96b-4a39a3be645a, servername: t86y6leiyaph7tsvb170x7vfx0-3dvh3.vrezht08.workers.dev, alpn: [http%2F1.1], network: ws, ws-opts: {path: "/eyJqdW5rIjoiZHJmTGlJSmciLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119?ed=2560", headers: {Host: t86y6leiyaph7tsvb170x7vfx0-3dvh3.vrezht08.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@kalafge 2xxx جوین تلگرام`", server: we.configfast.site, port: 1142, type: vless, tls: true, packet-encoding: xudp, uuid: 9ebd4638-8e3e-460b-8555-75cd4af63a23, host: skyroom.online%2Cgharar.ir%2Cigap.net, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@kalafge xxx1 جوین تلگرام", server: we.configfast.site, port: 1142, type: vless, tls: true, packet-encoding: xudp, uuid: 9ebd4638-8e3e-460b-8555-75cd4af63a23, host: skyroom.online%2Cgharar.ir%2Cigap.net, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: NetAccount`, server: 150.241.230.85, port: 52554, type: vless, tls: true, packet-encoding: xudp, uuid: ad39e228-35a9-4629-a16a-d66a97654225, servername: yahoo.com, host: yahoo.com, path: /, reality-opts: {public-key: DCnaVqwxfGF3d7LDHqFKYtlyGw2l6LsbxPvphK776Gc, short-id: 6b4bdb32}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: NetAccount 3, server: 188.114.98.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fef4a93d-eb4f-4657-b56b-32a0dc060045, servername: dev.twistsparrow.xyz, network: ws, ws-opts: {path: /, headers: {Host: dev.twistsparrow.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -490,45 +486,33 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - NetAccount
       - "@Config_magazine"
       - "@Config_magazine`"
-      - NetAccount 2
       - "@kalafge xxx2 جوین تلگرام`"
       - "@kalafge 2xxx جوین تلگرام`"
       - "@kalafge xxx1 جوین تلگرام"
-      - NetAccount`
-      - NetAccount 3
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - NetAccount
       - "@Config_magazine"
       - "@Config_magazine`"
-      - NetAccount 2
       - "@kalafge xxx2 جوین تلگرام`"
       - "@kalafge 2xxx جوین تلگرام`"
       - "@kalafge xxx1 جوین تلگرام"
-      - NetAccount`
-      - NetAccount 3
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - NetAccount
       - "@Config_magazine"
       - "@Config_magazine`"
-      - NetAccount 2
       - "@kalafge xxx2 جوین تلگرام`"
       - "@kalafge 2xxx جوین تلگرام`"
       - "@kalafge xxx1 جوین تلگرام"
-      - NetAccount`
-      - NetAccount 3
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -544,45 +528,33 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - NetAccount
       - "@Config_magazine"
       - "@Config_magazine`"
-      - NetAccount 2
       - "@kalafge xxx2 جوین تلگرام`"
       - "@kalafge 2xxx جوین تلگرام`"
       - "@kalafge xxx1 جوین تلگرام"
-      - NetAccount`
-      - NetAccount 3
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - NetAccount
       - "@Config_magazine"
       - "@Config_magazine`"
-      - NetAccount 2
       - "@kalafge xxx2 جوین تلگرام`"
       - "@kalafge 2xxx جوین تلگرام`"
       - "@kalafge xxx1 جوین تلگرام"
-      - NetAccount`
-      - NetAccount 3
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - NetAccount
       - "@Config_magazine"
       - "@Config_magazine`"
-      - NetAccount 2
       - "@kalafge xxx2 جوین تلگرام`"
       - "@kalafge 2xxx جوین تلگرام`"
       - "@kalafge xxx1 جوین تلگرام"
-      - NetAccount`
-      - NetAccount 3
   - name: دانلود منیجر 📥
     type: select
     proxies:

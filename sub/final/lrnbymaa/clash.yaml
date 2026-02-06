@@ -467,7 +467,10 @@ rule-providers:
 proxies:
   - {name: lrnbymaa`, server: 93.185.165.50, port: 55211, type: vless, tls: true, packet-encoding: xudp, uuid: 333c9768-1ce8-4008-990e-ad1a22c6ee27, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 5D6U_DRxkNF9I6Sa87j6jvHD_HvhZ9j53rAbZE8Y7lQ, short-id: 1885}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: lrnbymaa` 2, server: hesam.xv98.ir, port: 608, type: vless, tls: true, packet-encoding: xudp, uuid: 546590e9-96bf-4bc7-9909-58d352196f05, network: ws, ws-opts: {path: "/ws?ed=2048", headers: {Host: telewebion.com%2Cuser.telewebion.com%2Cplus.telewebion.com%2Capi.telewebion.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: lrnbymaa` 3, server: 188.114.98.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fef4a93d-eb4f-4657-b56b-32a0dc060045, servername: dev.twistsparrow.xyz, network: ws, ws-opts: {path: /, headers: {Host: dev.twistsparrow.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: lrnbymaa` 3, server: 217.26.222.46, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 7bf33271-8846-4189-badf-4f246e44fc5b, servername: google.com, alpn: [http%2F1.1], host: google.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: axJHL-4uQA5ZR2-hvZ46di7OMGcFHuFFXGmKaoG5B1A, short-id: 82b21d}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: lrnbymaa` 4, server: g2liliadasosjjds.nationalldt.com, port: 19667, type: vless, tls: true, packet-encoding: xudp, uuid: b4929c42-85d0-4134-9612-06d439afdfb3, host: igap.net, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: lrnbymaa` 5, server: 109.122.251.152, port: 2020, type: vless, tls: true, packet-encoding: xudp, uuid: dd936ba9-81bc-445b-89d3-6d993745d56c, host: zula.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: lrnbymaa` 6, server: 188.114.98.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fef4a93d-eb4f-4657-b56b-32a0dc060045, servername: dev.twistsparrow.xyz, network: ws, ws-opts: {path: /, headers: {Host: dev.twistsparrow.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,6 +490,9 @@ proxy-groups:
       - lrnbymaa`
       - lrnbymaa` 2
       - lrnbymaa` 3
+      - lrnbymaa` 4
+      - lrnbymaa` 5
+      - lrnbymaa` 6
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -496,6 +502,9 @@ proxy-groups:
       - lrnbymaa`
       - lrnbymaa` 2
       - lrnbymaa` 3
+      - lrnbymaa` 4
+      - lrnbymaa` 5
+      - lrnbymaa` 6
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -505,6 +514,9 @@ proxy-groups:
       - lrnbymaa`
       - lrnbymaa` 2
       - lrnbymaa` 3
+      - lrnbymaa` 4
+      - lrnbymaa` 5
+      - lrnbymaa` 6
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -523,6 +535,9 @@ proxy-groups:
       - lrnbymaa`
       - lrnbymaa` 2
       - lrnbymaa` 3
+      - lrnbymaa` 4
+      - lrnbymaa` 5
+      - lrnbymaa` 6
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -532,6 +547,9 @@ proxy-groups:
       - lrnbymaa`
       - lrnbymaa` 2
       - lrnbymaa` 3
+      - lrnbymaa` 4
+      - lrnbymaa` 5
+      - lrnbymaa` 6
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -541,6 +559,9 @@ proxy-groups:
       - lrnbymaa`
       - lrnbymaa` 2
       - lrnbymaa` 3
+      - lrnbymaa` 4
+      - lrnbymaa` 5
+      - lrnbymaa` 6
   - name: دانلود منیجر 📥
     type: select
     proxies:
