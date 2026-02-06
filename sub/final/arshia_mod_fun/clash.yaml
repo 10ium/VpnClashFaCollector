@@ -465,13 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 🇳🇱 @Arshiacomplus NL, server: 172.64.152.23, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: b658a9a6-f8f5-4a86-a438-f912a8509db2, servername: native.loveplus.de5.net, alpn: [http%2F1.1], network: ws, ws-opts: {path: /ehueueuejs, headers: {Host: native.loveplus.de5.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Arshiacomplus", server: 172.64.152.23, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: b658a9a6-f8f5-4a86-a438-f912a8509db2, servername: native.loveplus.de5.net, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /ehueueuejs, headers: {Host: native.loveplus.de5.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 172.64.152.23:2083, server: 172.64.152.23, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: b658a9a6-f8f5-4a86-a438-f912a8509db2, network: ws, ws-opts: {path: /ehueueuejs, headers: {Host: native.loveplus.de5.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇳🇱 @Arshiacomplus NL 2, server: 188.114.96.0, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: b658a9a6-f8f5-4a86-a438-f912a8509db2, servername: native.loveplus.de5.net, alpn: [http%2F1.1], network: ws, ws-opts: {path: /ehueueuejs, headers: {Host: native.loveplus.de5.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Arshiacomplus 2", server: 188.114.96.0, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: b658a9a6-f8f5-4a86-a438-f912a8509db2, servername: native.loveplus.de5.net, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /ehueueuejs, headers: {Host: native.loveplus.de5.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇳🇱 @Arshiacomplus NL`, server: 5.255.114.61, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: b658a9a6-f8f5-4a86-a438-f912a8509db2, servername: native.loveplus.de5.net, alpn: [http%2F1.1], network: ws, ws-opts: {path: /ehueueuejs, headers: {Host: native.loveplus.de5.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Arshiacomplus 3", server: 5.255.114.61, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: b658a9a6-f8f5-4a86-a438-f912a8509db2, servername: native.loveplus.de5.net, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /ehueueuejs, headers: {Host: native.loveplus.de5.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "Arshiacomplus&Mahdi", server: 24ypab6gb60fih01wpfwot7txtj7e6z1wlqx.s8m0shff5czxchkga8v2gs2ubhef494eu3jh.dpdns.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 9d6e53f2-cb43-47f6-982e-760ab0002063, servername: jjckobcb6m772obzh78rvup2spotd16p2xfs.s8m0shff5czxchkga8v2gs2ubhef494eu3jh.dpdns.org, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /@arshia_mod_fun, headers: {Host: jjckobcb6m772obzh78rvup2spotd16p2xfs.s8m0shff5czxchkga8v2gs2ubhef494eu3jh.dpdns.org}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -488,39 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 🇳🇱 @Arshiacomplus NL
-      - "@Arshiacomplus"
-      - 172.64.152.23:2083
-      - 🇳🇱 @Arshiacomplus NL 2
-      - "@Arshiacomplus 2"
-      - 🇳🇱 @Arshiacomplus NL`
-      - "@Arshiacomplus 3"
+      - "Arshiacomplus&Mahdi"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 🇳🇱 @Arshiacomplus NL
-      - "@Arshiacomplus"
-      - 172.64.152.23:2083
-      - 🇳🇱 @Arshiacomplus NL 2
-      - "@Arshiacomplus 2"
-      - 🇳🇱 @Arshiacomplus NL`
-      - "@Arshiacomplus 3"
+      - "Arshiacomplus&Mahdi"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 🇳🇱 @Arshiacomplus NL
-      - "@Arshiacomplus"
-      - 172.64.152.23:2083
-      - 🇳🇱 @Arshiacomplus NL 2
-      - "@Arshiacomplus 2"
-      - 🇳🇱 @Arshiacomplus NL`
-      - "@Arshiacomplus 3"
+      - "Arshiacomplus&Mahdi"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -536,39 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇳🇱 @Arshiacomplus NL
-      - "@Arshiacomplus"
-      - 172.64.152.23:2083
-      - 🇳🇱 @Arshiacomplus NL 2
-      - "@Arshiacomplus 2"
-      - 🇳🇱 @Arshiacomplus NL`
-      - "@Arshiacomplus 3"
+      - "Arshiacomplus&Mahdi"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇳🇱 @Arshiacomplus NL
-      - "@Arshiacomplus"
-      - 172.64.152.23:2083
-      - 🇳🇱 @Arshiacomplus NL 2
-      - "@Arshiacomplus 2"
-      - 🇳🇱 @Arshiacomplus NL`
-      - "@Arshiacomplus 3"
+      - "Arshiacomplus&Mahdi"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇳🇱 @Arshiacomplus NL
-      - "@Arshiacomplus"
-      - 172.64.152.23:2083
-      - 🇳🇱 @Arshiacomplus NL 2
-      - "@Arshiacomplus 2"
-      - 🇳🇱 @Arshiacomplus NL`
-      - "@Arshiacomplus 3"
+      - "Arshiacomplus&Mahdi"
   - name: دانلود منیجر 📥
     type: select
     proxies:

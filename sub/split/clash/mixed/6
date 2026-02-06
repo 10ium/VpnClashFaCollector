@@ -1,0 +1,1291 @@
+global-client-fingerprint: chrome
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7894
+allow-lan: true
+tcp-concurrent: true
+enable-process: true
+find-process-mode: strict
+ipv6: true
+log-level: debug
+geo-auto-update: true
+geo-update-interval: 168
+secret: ""
+bind-address: "*"
+unified-delay: false
+disable-keep-alive: false
+keep-alive-idle: 30
+keep-alive-interval: 30
+profile:
+  store-selected: true
+  store-fake-ip: true
+dns:
+  enable: true
+  ipv6: true
+  respect-rules: false
+  prefer-h3: true
+  cache-algorithm: arc
+  use-system-hosts: true
+  use-host: true
+  listen: 0.0.0.0:53
+  enhanced-mode: fake-ip
+  fake-ip-filter-mode: blacklist
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - "*.localdomain"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "*.home.arpa"
+    - time.*.com
+    - ntp.*.com
+    - "*.ir"
+  default-nameserver:
+    - 8.8.8.8
+    - 8.8.4.4
+    - 1.0.0.1
+    - 1.1.1.1
+    - 9.9.9.9
+    - 9.9.9.11
+    - 9.9.9.10
+    - 94.140.14.15
+    - 94.140.15.15
+    - 223.5.5.5
+    - 77.88.8.8
+  nameserver:
+    - https://sky.rethinkdns.com/1:-J8AGH8C7_2-___f3_vZ3f_z-f9KagBI
+    - tls://1-7cpqagd7alx73px777p5766z3x77h6p7jjvaasa.max.rethinkdns.com
+  direct-nameserver:
+    - 78.157.42.100
+    - 78.157.42.101
+  proxy-server-nameserver:
+    - 2606:4700:4700::1111
+    - 2606:4700:4700::1001
+    - 2001:4860:4860::8888
+    - 2001:4860:4860::8844
+    - 1.1.1.1
+    - 8.8.8.8
+    - 8.8.4.4
+    - 9.9.9.9
+    - 223.5.5.5
+    - 77.88.8.8
+    - 2400:3200::1
+    - 2a02:6b8::feed:0ff
+    - 2620:fe::fe
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: false
+  sniff:
+    HTTP:
+      ports: [80, 8080, 8880, 2052, 2082, 2086, 2095]
+    TLS:
+      ports: [443, 8443, 2053, 2083, 2087, 2096]
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  auto-detect-interface: true
+  auto-redir: true
+  dns-hijack:
+    - any:53
+    - tcp://any:53
+rule-providers:
+  category_public_tracker:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-public-tracker.yaml
+    interval: 86400
+    path: ./ruleset/category_public_tracker.yaml
+  iran_ads:
+    type: http
+    behavior: domain
+    url: https://github.com/bootmortis/iran-hosted-domains/releases/latest/download/clash_rules_ads.yaml
+    interval: 86400
+    path: ./ruleset/iran_ads.yaml
+  PersianBlocker:
+    type: http
+    behavior: domain
+    url: https://github.com/MasterKia/iran-hosted-domains/releases/latest/download/clash_rules_ads.yaml
+    path: ./ruleset/PersianBlocker.yaml
+    interval: 86400
+  youtube:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/youtube.yaml
+    interval: 86400
+    path: ./ruleset/youtube.yaml
+  telegram:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/telegram.yaml
+    interval: 86400
+    path: ./ruleset/telegram.yaml
+  twitch:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/twitch.yaml
+    interval: 86400
+    path: ./ruleset/twitch.yaml
+  censor:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/main/censor.yaml
+    interval: 86400
+    path: ./ruleset/tahrim.yaml
+  local_ips:
+    type: http
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/local-ips.yaml
+    interval: 86400
+    path: ./ruleset/local_ips.yaml
+  private:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/private.yaml
+    interval: 86400
+    path: ./ruleset/private.yaml
+  category_ir:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-ir.yaml
+    interval: 86400
+    path: ./ruleset/category_ir.yaml
+  iran:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/main/iran.yaml
+    interval: 86400
+    path: ./ruleset/iran.yaml
+  steam:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/main/steam.yaml
+    interval: 86400
+    path: ./ruleset/steam.yaml
+  game:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/game.yaml
+    interval: 86400
+    path: ./ruleset/game.yaml
+  category-games:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/category-games.yaml
+    interval: 86400
+    path: ./ruleset/category-games.yaml
+  ir:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ir.yaml
+    path: ./ruleset/ir.yaml
+    interval: 86400
+  apps:
+    type: http
+    format: yaml
+    behavior: classical
+    url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/apps.yaml
+    path: ./ruleset/apps.yaml
+    interval: 86400
+  ircidr:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ircidr.yaml
+    path: ./ruleset/ircidr.yaml
+    interval: 86400
+  irasn:
+    type: http
+    format: yaml
+    behavior: classical
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/irasn.yaml
+    path: ./ruleset/irasn.yaml
+    interval: 86400
+  arvancloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/arvancloud.yaml
+    path: ./ruleset/arvancloud.yaml
+    interval: 86400
+  derakcloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/derakcloud.yaml
+    path: ./ruleset/derakcloud.yaml
+    interval: 86400
+  iranserver:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/iranserver.yaml
+    path: ./ruleset/iranserver.yaml
+    interval: 86400
+  parspack:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/parspack.yaml
+    path: ./ruleset/parspack.yaml
+    interval: 86400
+  malware:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/malware.yaml
+    path: ./ruleset/malware.yaml
+    interval: 86400
+  phishing:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/phishing.yaml
+    path: ./ruleset/phishing.yaml
+    interval: 86400
+  cryptominers:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/cryptominers.yaml
+    path: ./ruleset/cryptominers.yaml
+    interval: 86400
+  ads:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/category-ads-all.yaml
+    path: ./ruleset/ads.yaml
+    interval: 86400
+  DownloadManagers:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/DownloadManagers.yaml
+    interval: 86400
+    path: ./ruleset/DownloadManagers.yaml
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanProgramAD.yaml
+    interval: 86400
+    path: ./ruleset/BanProgramAD.yaml
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanAD.yaml
+    interval: 86400
+    path: ./ruleset/BanAD.yaml
+  PrivateTracker:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/PrivateTracker.yaml
+    interval: 86400
+    path: ./ruleset/PrivateTracker.yaml
+  BanEasyList:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanEasyList.yaml
+    interval: 86400
+    path: ./ruleset/BanEasyList.yaml
+  Download:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Download.yaml
+    interval: 86400
+    path: ./ruleset/Download.yaml
+  GameDownload:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/GameDownload.yaml
+    interval: 86400
+    path: ./ruleset/GameDownload.yaml
+  SteamRegionCheck:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/SteamRegionCheck.yaml
+    interval: 86400
+    path: ./ruleset/SteamRegionCheck.yaml
+  Xbox:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Xbox.yaml
+    interval: 86400
+    path: ./ruleset/Xbox.yaml
+  YouTubeMusic:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/YouTubeMusic.yaml
+    interval: 86400
+    path: ./ruleset/YouTubeMusic.yaml
+  YouTube:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/YouTube.yaml
+    interval: 86400
+    path: ./ruleset/YouTube.yaml
+  Ponzi:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/Ponzi.yaml
+    interval: 86400
+    path: ./ruleset/Ponzi.yaml
+  warninglist:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/warning-list.yaml
+    interval: 86400
+    path: ./ruleset/warninglist.yaml
+  google:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/google.yaml
+    interval: 86400
+    path: ./ruleset/google.yaml
+  google-play:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/google-play.yaml
+    interval: 86400
+    path: ./ruleset/google-play.yaml
+  xiaomi-ads:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/xiaomi-ads.yaml
+    interval: 86400
+    path: ./ruleset/xiaomi-ads.yaml
+  xiaomi_block_list:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/xiaomi_block_list.yaml
+    path: ./ruleset/xiaomi_block_list.yaml
+    interval: 86400
+  xiaomi_white_list:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/xiaomi_white_list.yaml
+    path: ./ruleset/xiaomi_white_list.yaml
+    interval: 86400
+  cloudflare:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/cloudflare.yaml
+    interval: 86400
+    path: ./ruleset/cloudflare.yaml
+  github:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/github.yaml
+    interval: 86400
+    path: ./ruleset/xgithub.yaml
+  whatsapp:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/whatsapp.yaml
+    interval: 86400
+    path: ./ruleset/whatsapp.yaml
+  LiteAds:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/LiteAds.yaml
+    path: ./ruleset/LiteAds.yaml
+    interval: 86400
+  discord:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/discord.yaml
+    path: ./ruleset/discord.yaml
+    interval: 86400
+  instagram:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/instagram.yaml
+    interval: 86400
+    path: ./ruleset/instagram.yaml
+  category-ai:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/category-ai-!cn.yaml
+    interval: 86400
+    path: ./ruleset/category-ai.yaml
+  stremio:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/stremio.yaml
+    path: ./ruleset/stremio.yaml
+    interval: 86400
+  windows:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/windows.yaml
+    path: ./ruleset/windows.yaml
+    interval: 86400
+  Chotwitter:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/twitter.yaml
+    path: ./ruleset/Chotwitter.yaml
+    interval: 86400
+  mihTwitter:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Twitter.yaml
+    path: ./ruleset/mihTwitter.yaml
+    interval: 86400
+  Domtwitter:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/twitter.yaml
+    interval: 86400
+    path: ./ruleset/Domtwitter.yaml
+  spotifyads:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/spotify-ads.yaml
+    interval: 86400
+    path: ./ruleset/spotifyads.yaml
+  DomainSpotify:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/spotify.yaml
+    interval: 86400
+    path: ./ruleset/DomainSpotify.yaml
+  mihspotify:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Spotify.yaml
+    interval: 86400
+    path: ./ruleset/mihSpotify.yaml
+proxies:
+  - {name: "***✅***@AR14N24b", server: 103.186.155.9, port: 38388, type: ss, cipher: aes-256-cfb, password: Xn8jKdmDM00IeO%#$#fJAMtsEAEUOpH/YWYtYqDFnT0SV, udp: true, tfo: false}
+  - {name: 217.30.10.18:9000, server: 217.30.10.18, port: 9000, type: ss, cipher: aes-256-cfb, password: a3GFYt36Sm82Vys9, udp: true, tfo: false}
+  - {name: 217.30.10.18:9098, server: 217.30.10.18, port: 9098, type: ss, cipher: aes-256-cfb, password: aLpQtfEZe445QyHk, udp: true, tfo: false}
+  - {name: 217.30.10.70:9098, server: 217.30.10.70, port: 9098, type: ss, cipher: aes-256-cfb, password: aLpQtfEZe445QyHk, udp: true, tfo: false}
+  - {name: "***✅***@AR14N24b 2", server: 217.30.10.70, port: 9098, type: ss, cipher: aes-256-cfb, password: aLpQtfEZe445QyHk, udp: true, tfo: false}
+  - {name: 13.217.198.211:443, server: 13.217.198.211, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true, tfo: false}
+  - {name: 13.38.75.96:443, server: 13.38.75.96, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true, tfo: false}
+  - {name: "***✅***@AR14N24b 3", server: 13.38.75.96, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true, tfo: false}
+  - {name: 34.242.133.144:443, server: 34.242.133.144, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true, tfo: false}
+  - {name: "***✅***@AR14N24b 4", server: 34.242.133.144, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true, tfo: false}
+  - {name: 34.245.190.123:443, server: 34.245.190.123, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true, tfo: false}
+  - {name: "***✅***@AR14N24b 5", server: 34.245.190.123, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true, tfo: false}
+  - {name: 217.30.10.70:9070, server: 217.30.10.70, port: 9070, type: ss, cipher: aes-256-cfb, password: bf7v334KKDV3YDhH, udp: true, tfo: false}
+  - {name: "***✅***@AR14N24b 6", server: 217.30.10.70, port: 9070, type: ss, cipher: aes-256-cfb, password: bf7v334KKDV3YDhH, udp: true, tfo: false}
+  - {name: 217.30.10.70:9010, server: 217.30.10.70, port: 9010, type: ss, cipher: aes-256-cfb, password: f63gg8EruDnUrmz4, udp: true, tfo: false}
+  - {name: 104.192.226.106:989, server: 104.192.226.106, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
+  - {name: 154.223.20.79:989, server: 154.223.20.79, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
+  - {name: "***✅***@AR14N24b 7", server: 154.223.20.79, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
+  - {name: 154.90.62.168:989, server: 154.90.62.168, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
+  - {name: 154.90.63.177:989, server: 154.90.63.177, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
+  - {name: 185.153.197.5:989, server: 185.153.197.5, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
+  - {name: 185.193.49.88:989, server: 185.193.49.88, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
+  - {name: 190.103.176.32:989, server: 190.103.176.32, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
+  - {name: 192.71.166.100:989, server: 192.71.166.100, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
+  - {name: 192.71.244.150:989, server: 192.71.244.150, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
+  - {name: 195.154.119.77:989, server: 195.154.119.77, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
+  - {name: "***✅***@AR14N24b 8", server: 195.154.119.77, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
+  - {name: 223.165.4.173:989, server: 223.165.4.173, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
+  - {name: "***✅***@AR14N24b 9", server: 223.165.4.173, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
+  - {name: 38.165.233.93:989, server: 38.165.233.93, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
+  - {name: 38.60.223.8:989, server: 38.60.223.8, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
+  - {name: 46.183.184.60:989, server: 46.183.184.60, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
+  - {name: 51.15.17.169:989, server: 51.15.17.169, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
+  - {name: "***✅***@AR14N24b 10", server: 51.15.17.169, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
+  - {name: 51.15.23.63:989, server: 51.15.23.63, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
+  - {name: "***✅***@AR14N24b 11", server: 51.15.23.63, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
+  - {name: 51.159.106.175:989, server: 51.159.106.175, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
+  - {name: "***✅***@AR14N24b 12", server: 51.159.106.175, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
+  - {name: 79.127.227.53:989, server: 79.127.227.53, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
+  - {name: 79.127.233.170:989, server: 79.127.233.170, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
+  - {name: "***✅***@AR14N24b 13", server: 79.127.233.170, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
+  - {name: 🇰🇷 KR-154.90.63.177-0373, server: 154.90.63.177, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
+  - {name: SI-192.71.244.150-0396, server: 192.71.244.150, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
+  - {name: HR-46.183.184.60-4651, server: 46.183.184.60, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
+  - {name: MK-46.183.185.37-0405, server: 46.183.185.37, port: 989, type: ss, cipher: aes-256-cfb, password: f8f7aCzcPKbsF8p3, udp: true, tfo: false}
+  - {name: 217.30.10.18:9088, server: 217.30.10.18, port: 9088, type: ss, cipher: aes-256-cfb, password: f8npKgNzdkss2ytn, udp: true, tfo: false}
+  - {name: 217.30.10.70:9088, server: 217.30.10.70, port: 9088, type: ss, cipher: aes-256-cfb, password: f8npKgNzdkss2ytn, udp: true, tfo: false}
+  - {name: "***✅***@AR14N24b 14", server: 217.30.10.70, port: 9088, type: ss, cipher: aes-256-cfb, password: f8npKgNzdkss2ytn, udp: true, tfo: false}
+  - {name: 217.30.10.70:9018, server: 217.30.10.70, port: 9018, type: ss, cipher: aes-256-cfb, password: fG2artUmHfNT2cX7, udp: true, tfo: false}
+  - {name: "***✅***@AR14N24b 15", server: 217.30.10.70, port: 9018, type: ss, cipher: aes-256-cfb, password: fG2artUmHfNT2cX7, udp: true, tfo: false}
+  - {name: 217.30.10.70:9007, server: 217.30.10.70, port: 9007, type: ss, cipher: aes-256-cfb, password: kSPmvwdFzGMMW5pY, udp: true, tfo: false}
+  - {name: "***✅***@AR14N24b 16", server: 217.30.10.70, port: 9007, type: ss, cipher: aes-256-cfb, password: kSPmvwdFzGMMW5pY, udp: true, tfo: false}
+  - {name: 217.30.10.70:9040, server: 217.30.10.70, port: 9040, type: ss, cipher: aes-256-cfb, password: p9z5BVADH2YFs3MN, udp: true, tfo: false}
+  - {name: 🇰🇷 KR-221.139.79.57-0406, server: 221.139.79.57, port: 13979, type: ss, cipher: aes-256-cfb, password: qwerREWQ@@, udp: true, tfo: false}
+  - {name: 217.30.10.70:9056, server: 217.30.10.70, port: 9056, type: ss, cipher: aes-256-cfb, password: rNBfNuuANFCAk7KB, udp: true, tfo: false}
+  - {name: "***✅***@AR14N24b 17", server: 217.30.10.70, port: 9056, type: ss, cipher: aes-256-cfb, password: rNBfNuuANFCAk7KB, udp: true, tfo: false}
+  - {name: 217.30.10.18:9094, server: 217.30.10.18, port: 9094, type: ss, cipher: aes-256-cfb, password: rpgbNnU9rDDU4aWZ, udp: true, tfo: false}
+  - {name: 217.30.10.18:9093, server: 217.30.10.18, port: 9093, type: ss, cipher: aes-256-cfb, password: wfLC2y7rzZyCmuyt, udp: true, tfo: false}
+  - {name: 217.30.10.70:9093, server: 217.30.10.70, port: 9093, type: ss, cipher: aes-256-cfb, password: wfLC2y7rzZyCmuyt, udp: true, tfo: false}
+  - {name: "***✅***@AR14N24b 18", server: 217.30.10.70, port: 9093, type: ss, cipher: aes-256-cfb, password: wfLC2y7rzZyCmuyt, udp: true, tfo: false}
+  - {name: 217.30.10.70:9057, server: 217.30.10.70, port: 9057, type: ss, cipher: aes-256-cfb, password: wjTugX3ZtHMB9c3Z, udp: true, tfo: false}
+  - {name: "***✅***@AR14N24b 19", server: 217.30.10.70, port: 9057, type: ss, cipher: aes-256-cfb, password: wjTugX3ZtHMB9c3Z, udp: true, tfo: false}
+  - {name: 217.30.10.70:9060, server: 217.30.10.70, port: 9060, type: ss, cipher: aes-256-cfb, password: ueLXVkvh4hckhErQ, udp: true, tfo: false}
+  - {name: "***✅***@AR14N24b 20", server: 217.30.10.70, port: 9060, type: ss, cipher: aes-256-cfb, password: ueLXVkvh4hckhErQ, udp: true, tfo: false}
+  - {name: 217.30.10.18:9008, server: 217.30.10.18, port: 9008, type: ss, cipher: aes-256-cfb, password: y9VURyNzJWNRYEGQ, udp: true, tfo: false}
+  - {name: "@v2FreeHub 🇿🇦`", server: 192.142.18.127, port: 443, type: ss, cipher: aes-256-gcm, password: 007e0825-3ce3-45ba-8501-d6681645a395, udp: true, tfo: false}
+  - {name: 144.217.164.29:12000, server: 144.217.164.29, port: 12000, type: ss, cipher: aes-256-gcm, password: 8JCsPssfgS8tiRwiMlhARg==, udp: true, tfo: false}
+  - {name: "***✅***@AR14N24b 21", server: 144.217.164.29, port: 12000, type: ss, cipher: aes-256-gcm, password: 8JCsPssfgS8tiRwiMlhARg==, udp: true, tfo: false}
+  - {name: 15.204.247.49:12000, server: 15.204.247.49, port: 12000, type: ss, cipher: aes-256-gcm, password: 8JCsPssfgS8tiRwiMlhARg==, udp: true, tfo: false}
+  - {name: 57.128.214.100:12000, server: 57.128.214.100, port: 12000, type: ss, cipher: aes-256-gcm, password: 8JCsPssfgS8tiRwiMlhARg==, udp: true, tfo: false}
+  - {name: 38.180.216.114:7307, server: 38.180.216.114, port: 7307, type: ss, cipher: aes-256-gcm, password: FoOiGlkAA9yPEGP, udp: true, tfo: false}
+  - {name: 141.164.45.187:7001, server: 141.164.45.187, port: 7001, type: ss, cipher: aes-256-gcm, password: RexnBgU7EV5ADxG, udp: true, tfo: false}
+  - {name: "***✅***@AR14N24b 22", server: 141.164.45.187, port: 7001, type: ss, cipher: aes-256-gcm, password: RexnBgU7EV5ADxG, udp: true, tfo: false}
+  - {name: 156.244.8.155:5004, server: 156.244.8.155, port: 5004, type: ss, cipher: aes-256-gcm, password: g5MeD6Ft3CWlJId, udp: true, tfo: false}
+  - {name: 54.36.174.140:443, server: 54.36.174.140, port: 443, type: ss, cipher: aes-256-gcm, password: pvgz9pq, udp: true, tfo: false}
+  - {name: "***✅***@AR14N24b 23", server: 54.36.174.140, port: 443, type: ss, cipher: aes-256-gcm, password: pvgz9pq, udp: true, tfo: false}
+proxy-groups:
+  - name: نوع انتخاب پروکسی 🔀
+    type: select
+    proxies:
+      - اتصال پایدار 🔗
+      - خودکار (بهترین پینگ) 🤖
+      - دستی 🤏🏻
+      - پشتیبان (در صورت قطعی) 🧯
+      - توزیع بار (پایدار) 🧲
+      - توزیع بار (موقت) ⏳
+      - توزیع بار (گردشی) 🔁
+      - قطع اینترنت ⛔
+      - بدون فیلترشکن 🛡️
+  - name: دستی 🤏🏻
+    type: select
+    proxies:
+      - "***✅***@AR14N24b"
+      - 217.30.10.18:9000
+      - 217.30.10.18:9098
+      - 217.30.10.70:9098
+      - "***✅***@AR14N24b 2"
+      - 13.217.198.211:443
+      - 13.38.75.96:443
+      - "***✅***@AR14N24b 3"
+      - 34.242.133.144:443
+      - "***✅***@AR14N24b 4"
+      - 34.245.190.123:443
+      - "***✅***@AR14N24b 5"
+      - 217.30.10.70:9070
+      - "***✅***@AR14N24b 6"
+      - 217.30.10.70:9010
+      - 104.192.226.106:989
+      - 154.223.20.79:989
+      - "***✅***@AR14N24b 7"
+      - 154.90.62.168:989
+      - 154.90.63.177:989
+      - 185.153.197.5:989
+      - 185.193.49.88:989
+      - 190.103.176.32:989
+      - 192.71.166.100:989
+      - 192.71.244.150:989
+      - 195.154.119.77:989
+      - "***✅***@AR14N24b 8"
+      - 223.165.4.173:989
+      - "***✅***@AR14N24b 9"
+      - 38.165.233.93:989
+      - 38.60.223.8:989
+      - 46.183.184.60:989
+      - 51.15.17.169:989
+      - "***✅***@AR14N24b 10"
+      - 51.15.23.63:989
+      - "***✅***@AR14N24b 11"
+      - 51.159.106.175:989
+      - "***✅***@AR14N24b 12"
+      - 79.127.227.53:989
+      - 79.127.233.170:989
+      - "***✅***@AR14N24b 13"
+      - 🇰🇷 KR-154.90.63.177-0373
+      - SI-192.71.244.150-0396
+      - HR-46.183.184.60-4651
+      - MK-46.183.185.37-0405
+      - 217.30.10.18:9088
+      - 217.30.10.70:9088
+      - "***✅***@AR14N24b 14"
+      - 217.30.10.70:9018
+      - "***✅***@AR14N24b 15"
+      - 217.30.10.70:9007
+      - "***✅***@AR14N24b 16"
+      - 217.30.10.70:9040
+      - 🇰🇷 KR-221.139.79.57-0406
+      - 217.30.10.70:9056
+      - "***✅***@AR14N24b 17"
+      - 217.30.10.18:9094
+      - 217.30.10.18:9093
+      - 217.30.10.70:9093
+      - "***✅***@AR14N24b 18"
+      - 217.30.10.70:9057
+      - "***✅***@AR14N24b 19"
+      - 217.30.10.70:9060
+      - "***✅***@AR14N24b 20"
+      - 217.30.10.18:9008
+      - "@v2FreeHub 🇿🇦`"
+      - 144.217.164.29:12000
+      - "***✅***@AR14N24b 21"
+      - 15.204.247.49:12000
+      - 57.128.214.100:12000
+      - 38.180.216.114:7307
+      - 141.164.45.187:7001
+      - "***✅***@AR14N24b 22"
+      - 156.244.8.155:5004
+      - 54.36.174.140:443
+      - "***✅***@AR14N24b 23"
+  - name: خودکار (بهترین پینگ) 🤖
+    type: url-test
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    tolerance: 50
+    proxies:
+      - "***✅***@AR14N24b"
+      - 217.30.10.18:9000
+      - 217.30.10.18:9098
+      - 217.30.10.70:9098
+      - "***✅***@AR14N24b 2"
+      - 13.217.198.211:443
+      - 13.38.75.96:443
+      - "***✅***@AR14N24b 3"
+      - 34.242.133.144:443
+      - "***✅***@AR14N24b 4"
+      - 34.245.190.123:443
+      - "***✅***@AR14N24b 5"
+      - 217.30.10.70:9070
+      - "***✅***@AR14N24b 6"
+      - 217.30.10.70:9010
+      - 104.192.226.106:989
+      - 154.223.20.79:989
+      - "***✅***@AR14N24b 7"
+      - 154.90.62.168:989
+      - 154.90.63.177:989
+      - 185.153.197.5:989
+      - 185.193.49.88:989
+      - 190.103.176.32:989
+      - 192.71.166.100:989
+      - 192.71.244.150:989
+      - 195.154.119.77:989
+      - "***✅***@AR14N24b 8"
+      - 223.165.4.173:989
+      - "***✅***@AR14N24b 9"
+      - 38.165.233.93:989
+      - 38.60.223.8:989
+      - 46.183.184.60:989
+      - 51.15.17.169:989
+      - "***✅***@AR14N24b 10"
+      - 51.15.23.63:989
+      - "***✅***@AR14N24b 11"
+      - 51.159.106.175:989
+      - "***✅***@AR14N24b 12"
+      - 79.127.227.53:989
+      - 79.127.233.170:989
+      - "***✅***@AR14N24b 13"
+      - 🇰🇷 KR-154.90.63.177-0373
+      - SI-192.71.244.150-0396
+      - HR-46.183.184.60-4651
+      - MK-46.183.185.37-0405
+      - 217.30.10.18:9088
+      - 217.30.10.70:9088
+      - "***✅***@AR14N24b 14"
+      - 217.30.10.70:9018
+      - "***✅***@AR14N24b 15"
+      - 217.30.10.70:9007
+      - "***✅***@AR14N24b 16"
+      - 217.30.10.70:9040
+      - 🇰🇷 KR-221.139.79.57-0406
+      - 217.30.10.70:9056
+      - "***✅***@AR14N24b 17"
+      - 217.30.10.18:9094
+      - 217.30.10.18:9093
+      - 217.30.10.70:9093
+      - "***✅***@AR14N24b 18"
+      - 217.30.10.70:9057
+      - "***✅***@AR14N24b 19"
+      - 217.30.10.70:9060
+      - "***✅***@AR14N24b 20"
+      - 217.30.10.18:9008
+      - "@v2FreeHub 🇿🇦`"
+      - 144.217.164.29:12000
+      - "***✅***@AR14N24b 21"
+      - 15.204.247.49:12000
+      - 57.128.214.100:12000
+      - 38.180.216.114:7307
+      - 141.164.45.187:7001
+      - "***✅***@AR14N24b 22"
+      - 156.244.8.155:5004
+      - 54.36.174.140:443
+      - "***✅***@AR14N24b 23"
+  - name: پشتیبان (در صورت قطعی) 🧯
+    type: fallback
+    url: https://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 50
+    proxies:
+      - "***✅***@AR14N24b"
+      - 217.30.10.18:9000
+      - 217.30.10.18:9098
+      - 217.30.10.70:9098
+      - "***✅***@AR14N24b 2"
+      - 13.217.198.211:443
+      - 13.38.75.96:443
+      - "***✅***@AR14N24b 3"
+      - 34.242.133.144:443
+      - "***✅***@AR14N24b 4"
+      - 34.245.190.123:443
+      - "***✅***@AR14N24b 5"
+      - 217.30.10.70:9070
+      - "***✅***@AR14N24b 6"
+      - 217.30.10.70:9010
+      - 104.192.226.106:989
+      - 154.223.20.79:989
+      - "***✅***@AR14N24b 7"
+      - 154.90.62.168:989
+      - 154.90.63.177:989
+      - 185.153.197.5:989
+      - 185.193.49.88:989
+      - 190.103.176.32:989
+      - 192.71.166.100:989
+      - 192.71.244.150:989
+      - 195.154.119.77:989
+      - "***✅***@AR14N24b 8"
+      - 223.165.4.173:989
+      - "***✅***@AR14N24b 9"
+      - 38.165.233.93:989
+      - 38.60.223.8:989
+      - 46.183.184.60:989
+      - 51.15.17.169:989
+      - "***✅***@AR14N24b 10"
+      - 51.15.23.63:989
+      - "***✅***@AR14N24b 11"
+      - 51.159.106.175:989
+      - "***✅***@AR14N24b 12"
+      - 79.127.227.53:989
+      - 79.127.233.170:989
+      - "***✅***@AR14N24b 13"
+      - 🇰🇷 KR-154.90.63.177-0373
+      - SI-192.71.244.150-0396
+      - HR-46.183.184.60-4651
+      - MK-46.183.185.37-0405
+      - 217.30.10.18:9088
+      - 217.30.10.70:9088
+      - "***✅***@AR14N24b 14"
+      - 217.30.10.70:9018
+      - "***✅***@AR14N24b 15"
+      - 217.30.10.70:9007
+      - "***✅***@AR14N24b 16"
+      - 217.30.10.70:9040
+      - 🇰🇷 KR-221.139.79.57-0406
+      - 217.30.10.70:9056
+      - "***✅***@AR14N24b 17"
+      - 217.30.10.18:9094
+      - 217.30.10.18:9093
+      - 217.30.10.70:9093
+      - "***✅***@AR14N24b 18"
+      - 217.30.10.70:9057
+      - "***✅***@AR14N24b 19"
+      - 217.30.10.70:9060
+      - "***✅***@AR14N24b 20"
+      - 217.30.10.18:9008
+      - "@v2FreeHub 🇿🇦`"
+      - 144.217.164.29:12000
+      - "***✅***@AR14N24b 21"
+      - 15.204.247.49:12000
+      - 57.128.214.100:12000
+      - 38.180.216.114:7307
+      - 141.164.45.187:7001
+      - "***✅***@AR14N24b 22"
+      - 156.244.8.155:5004
+      - 54.36.174.140:443
+      - "***✅***@AR14N24b 23"
+  - name: اتصال پایدار 🔗
+    type: url-test
+    url: https://cp.cloudflare.com/generate_204
+    interval: 30
+    tolerance: 50
+    proxies:
+      - خودکار (بهترین پینگ) 🤖
+      - پشتیبان (در صورت قطعی) 🧯
+      - دستی 🤏🏻
+  - name: توزیع بار (پایدار) 🧲
+    type: load-balance
+    strategy: consistent-hashing
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    proxies:
+      - "***✅***@AR14N24b"
+      - 217.30.10.18:9000
+      - 217.30.10.18:9098
+      - 217.30.10.70:9098
+      - "***✅***@AR14N24b 2"
+      - 13.217.198.211:443
+      - 13.38.75.96:443
+      - "***✅***@AR14N24b 3"
+      - 34.242.133.144:443
+      - "***✅***@AR14N24b 4"
+      - 34.245.190.123:443
+      - "***✅***@AR14N24b 5"
+      - 217.30.10.70:9070
+      - "***✅***@AR14N24b 6"
+      - 217.30.10.70:9010
+      - 104.192.226.106:989
+      - 154.223.20.79:989
+      - "***✅***@AR14N24b 7"
+      - 154.90.62.168:989
+      - 154.90.63.177:989
+      - 185.153.197.5:989
+      - 185.193.49.88:989
+      - 190.103.176.32:989
+      - 192.71.166.100:989
+      - 192.71.244.150:989
+      - 195.154.119.77:989
+      - "***✅***@AR14N24b 8"
+      - 223.165.4.173:989
+      - "***✅***@AR14N24b 9"
+      - 38.165.233.93:989
+      - 38.60.223.8:989
+      - 46.183.184.60:989
+      - 51.15.17.169:989
+      - "***✅***@AR14N24b 10"
+      - 51.15.23.63:989
+      - "***✅***@AR14N24b 11"
+      - 51.159.106.175:989
+      - "***✅***@AR14N24b 12"
+      - 79.127.227.53:989
+      - 79.127.233.170:989
+      - "***✅***@AR14N24b 13"
+      - 🇰🇷 KR-154.90.63.177-0373
+      - SI-192.71.244.150-0396
+      - HR-46.183.184.60-4651
+      - MK-46.183.185.37-0405
+      - 217.30.10.18:9088
+      - 217.30.10.70:9088
+      - "***✅***@AR14N24b 14"
+      - 217.30.10.70:9018
+      - "***✅***@AR14N24b 15"
+      - 217.30.10.70:9007
+      - "***✅***@AR14N24b 16"
+      - 217.30.10.70:9040
+      - 🇰🇷 KR-221.139.79.57-0406
+      - 217.30.10.70:9056
+      - "***✅***@AR14N24b 17"
+      - 217.30.10.18:9094
+      - 217.30.10.18:9093
+      - 217.30.10.70:9093
+      - "***✅***@AR14N24b 18"
+      - 217.30.10.70:9057
+      - "***✅***@AR14N24b 19"
+      - 217.30.10.70:9060
+      - "***✅***@AR14N24b 20"
+      - 217.30.10.18:9008
+      - "@v2FreeHub 🇿🇦`"
+      - 144.217.164.29:12000
+      - "***✅***@AR14N24b 21"
+      - 15.204.247.49:12000
+      - 57.128.214.100:12000
+      - 38.180.216.114:7307
+      - 141.164.45.187:7001
+      - "***✅***@AR14N24b 22"
+      - 156.244.8.155:5004
+      - 54.36.174.140:443
+      - "***✅***@AR14N24b 23"
+  - name: توزیع بار (گردشی) 🔁
+    type: load-balance
+    strategy: consistent-hashing
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    proxies:
+      - "***✅***@AR14N24b"
+      - 217.30.10.18:9000
+      - 217.30.10.18:9098
+      - 217.30.10.70:9098
+      - "***✅***@AR14N24b 2"
+      - 13.217.198.211:443
+      - 13.38.75.96:443
+      - "***✅***@AR14N24b 3"
+      - 34.242.133.144:443
+      - "***✅***@AR14N24b 4"
+      - 34.245.190.123:443
+      - "***✅***@AR14N24b 5"
+      - 217.30.10.70:9070
+      - "***✅***@AR14N24b 6"
+      - 217.30.10.70:9010
+      - 104.192.226.106:989
+      - 154.223.20.79:989
+      - "***✅***@AR14N24b 7"
+      - 154.90.62.168:989
+      - 154.90.63.177:989
+      - 185.153.197.5:989
+      - 185.193.49.88:989
+      - 190.103.176.32:989
+      - 192.71.166.100:989
+      - 192.71.244.150:989
+      - 195.154.119.77:989
+      - "***✅***@AR14N24b 8"
+      - 223.165.4.173:989
+      - "***✅***@AR14N24b 9"
+      - 38.165.233.93:989
+      - 38.60.223.8:989
+      - 46.183.184.60:989
+      - 51.15.17.169:989
+      - "***✅***@AR14N24b 10"
+      - 51.15.23.63:989
+      - "***✅***@AR14N24b 11"
+      - 51.159.106.175:989
+      - "***✅***@AR14N24b 12"
+      - 79.127.227.53:989
+      - 79.127.233.170:989
+      - "***✅***@AR14N24b 13"
+      - 🇰🇷 KR-154.90.63.177-0373
+      - SI-192.71.244.150-0396
+      - HR-46.183.184.60-4651
+      - MK-46.183.185.37-0405
+      - 217.30.10.18:9088
+      - 217.30.10.70:9088
+      - "***✅***@AR14N24b 14"
+      - 217.30.10.70:9018
+      - "***✅***@AR14N24b 15"
+      - 217.30.10.70:9007
+      - "***✅***@AR14N24b 16"
+      - 217.30.10.70:9040
+      - 🇰🇷 KR-221.139.79.57-0406
+      - 217.30.10.70:9056
+      - "***✅***@AR14N24b 17"
+      - 217.30.10.18:9094
+      - 217.30.10.18:9093
+      - 217.30.10.70:9093
+      - "***✅***@AR14N24b 18"
+      - 217.30.10.70:9057
+      - "***✅***@AR14N24b 19"
+      - 217.30.10.70:9060
+      - "***✅***@AR14N24b 20"
+      - 217.30.10.18:9008
+      - "@v2FreeHub 🇿🇦`"
+      - 144.217.164.29:12000
+      - "***✅***@AR14N24b 21"
+      - 15.204.247.49:12000
+      - 57.128.214.100:12000
+      - 38.180.216.114:7307
+      - 141.164.45.187:7001
+      - "***✅***@AR14N24b 22"
+      - 156.244.8.155:5004
+      - 54.36.174.140:443
+      - "***✅***@AR14N24b 23"
+  - name: توزیع بار (موقت) ⏳
+    type: load-balance
+    strategy: consistent-hashing
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    proxies:
+      - "***✅***@AR14N24b"
+      - 217.30.10.18:9000
+      - 217.30.10.18:9098
+      - 217.30.10.70:9098
+      - "***✅***@AR14N24b 2"
+      - 13.217.198.211:443
+      - 13.38.75.96:443
+      - "***✅***@AR14N24b 3"
+      - 34.242.133.144:443
+      - "***✅***@AR14N24b 4"
+      - 34.245.190.123:443
+      - "***✅***@AR14N24b 5"
+      - 217.30.10.70:9070
+      - "***✅***@AR14N24b 6"
+      - 217.30.10.70:9010
+      - 104.192.226.106:989
+      - 154.223.20.79:989
+      - "***✅***@AR14N24b 7"
+      - 154.90.62.168:989
+      - 154.90.63.177:989
+      - 185.153.197.5:989
+      - 185.193.49.88:989
+      - 190.103.176.32:989
+      - 192.71.166.100:989
+      - 192.71.244.150:989
+      - 195.154.119.77:989
+      - "***✅***@AR14N24b 8"
+      - 223.165.4.173:989
+      - "***✅***@AR14N24b 9"
+      - 38.165.233.93:989
+      - 38.60.223.8:989
+      - 46.183.184.60:989
+      - 51.15.17.169:989
+      - "***✅***@AR14N24b 10"
+      - 51.15.23.63:989
+      - "***✅***@AR14N24b 11"
+      - 51.159.106.175:989
+      - "***✅***@AR14N24b 12"
+      - 79.127.227.53:989
+      - 79.127.233.170:989
+      - "***✅***@AR14N24b 13"
+      - 🇰🇷 KR-154.90.63.177-0373
+      - SI-192.71.244.150-0396
+      - HR-46.183.184.60-4651
+      - MK-46.183.185.37-0405
+      - 217.30.10.18:9088
+      - 217.30.10.70:9088
+      - "***✅***@AR14N24b 14"
+      - 217.30.10.70:9018
+      - "***✅***@AR14N24b 15"
+      - 217.30.10.70:9007
+      - "***✅***@AR14N24b 16"
+      - 217.30.10.70:9040
+      - 🇰🇷 KR-221.139.79.57-0406
+      - 217.30.10.70:9056
+      - "***✅***@AR14N24b 17"
+      - 217.30.10.18:9094
+      - 217.30.10.18:9093
+      - 217.30.10.70:9093
+      - "***✅***@AR14N24b 18"
+      - 217.30.10.70:9057
+      - "***✅***@AR14N24b 19"
+      - 217.30.10.70:9060
+      - "***✅***@AR14N24b 20"
+      - 217.30.10.18:9008
+      - "@v2FreeHub 🇿🇦`"
+      - 144.217.164.29:12000
+      - "***✅***@AR14N24b 21"
+      - 15.204.247.49:12000
+      - 57.128.214.100:12000
+      - 38.180.216.114:7307
+      - 141.164.45.187:7001
+      - "***✅***@AR14N24b 22"
+      - 156.244.8.155:5004
+      - 54.36.174.140:443
+      - "***✅***@AR14N24b 23"
+  - name: دانلود منیجر 📥
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+      - اجازه ندادن 🚫
+  - name: تلگرام 💬
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: یوتیوب ▶️
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: گوگل 🌍
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: واتس آپ 🟢
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: هوش مصنوعی 🤖
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: توییتر 🐦
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: اسپاتیفای 🎵
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: اینستاگرام 📸
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: تبلیغات 🆎
+    type: select
+    proxies:
+      - اجازه ندادن 🚫
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+  - name: تبلیغات اپ ها 🍃
+    type: select
+    proxies:
+      - اجازه ندادن 🚫
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+  - name: رهگیری جهانی 🛑
+    type: select
+    proxies:
+      - اجازه ندادن 🚫
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+  - name: سایتای مخرب ⚠️
+    type: select
+    proxies:
+      - اجازه ندادن 🚫
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+  - name: استیم 🖥️
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: گیم 🎮
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: توییچ 📡
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: سایتای ایرانی 🇮🇷
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: ویندوز 🧊
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: کلودفلر ☁️
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: گیتهاب 🐙
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: دیسکورد 🗣️
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: انی‌دسک 🔴
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+      - اجازه ندادن 🚫
+  - name: استریمیو 🎬
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+      - اجازه ندادن 🚫
+  - name: سایتای سانسوری 🤬
+    type: select
+    proxies:
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+  - name: بدون فیلترشکن 🛡️
+    type: select
+    proxies:
+      - DIRECT
+  - name: قطع اینترنت ⛔
+    type: select
+    proxies:
+      - REJECT
+  - name: اجازه ندادن 🚫
+    type: select
+    proxies:
+      - REJECT
+ntp:
+  enable: true
+  server: time.apple.com
+  port: 123
+  interval: 30
+rules:
+  - RULE-SET,DownloadManagers,دانلود منیجر 📥
+  - RULE-SET,Download,دانلود منیجر 📥
+  - RULE-SET,stremio,استریمیو 🎬
+  - RULE-SET,BanProgramAD,تبلیغات اپ ها 🍃
+  - RULE-SET,BanAD,رهگیری جهانی 🛑
+  - RULE-SET,PrivateTracker,رهگیری جهانی 🛑
+  - RULE-SET,category_public_tracker,رهگیری جهانی 🛑
+  - RULE-SET,malware,سایتای مخرب ⚠️
+  - RULE-SET,phishing,سایتای مخرب ⚠️
+  - RULE-SET,cryptominers,سایتای مخرب ⚠️
+  - RULE-SET,warninglist,سایتای مخرب ⚠️
+  - RULE-SET,Ponzi,سایتای مخرب ⚠️
+  - RULE-SET,LiteAds,تبلیغات 🆎
+  - RULE-SET,iran_ads,تبلیغات 🆎
+  - RULE-SET,PersianBlocker,تبلیغات 🆎
+  - RULE-SET,ads,تبلیغات 🆎
+  - RULE-SET,BanEasyList,تبلیغات 🆎
+  - RULE-SET,twitch,توییچ 📡
+  - PROCESS-NAME,Telegram.exe,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger.web,تلگرام 💬
+  - RULE-SET,telegram,تلگرام 💬
+  - RULE-SET,YouTube,یوتیوب ▶️
+  - RULE-SET,youtube,یوتیوب ▶️
+  - RULE-SET,YouTubeMusic,یوتیوب ▶️
+  - PROCESS-NAME,com.anydesk.anydeskandroid,انی‌دسک 🔴
+  - PROCESS-NAME,AnyDesk.exe,انی‌دسک 🔴
+  - DOMAIN-SUFFIX,anydesk.com,انی‌دسک 🔴
+  - PROCESS-NAME,Twitter.exe,توییتر 🐦
+  - PROCESS-NAME,com.twitter.android,توییتر 🐦
+  - RULE-SET,Chotwitter,توییتر 🐦
+  - RULE-SET,mihTwitter,توییتر 🐦
+  - RULE-SET,Domtwitter,توییتر 🐦
+  - PROCESS-NAME,com.spotify.music,اسپاتیفای 🎵
+  - PROCESS-NAME,Spotify.exe,اسپاتیفای 🎵
+  - RULE-SET,DomainSpotify,اسپاتیفای 🎵
+  - RULE-SET,mihspotify,اسپاتیفای 🎵
+  - PROCESS-NAME,com.instagram.android,اینستاگرام 📸
+  - RULE-SET,instagram,اینستاگرام 📸
+  - DOMAIN-SUFFIX,deepseek.com,هوش مصنوعی 🤖
+  - DOMAIN-SUFFIX,qwen.ai,هوش مصنوعی 🤖
+  - RULE-SET,category-ai,هوش مصنوعی 🤖
+  - RULE-SET,censor,سایتای سانسوری 🤬
+  - RULE-SET,apps,سایتای ایرانی 🇮🇷
+  - RULE-SET,iran,سایتای ایرانی 🇮🇷
+  - RULE-SET,arvancloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,derakcloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,iranserver,سایتای ایرانی 🇮🇷
+  - RULE-SET,parspack,سایتای ایرانی 🇮🇷
+  - RULE-SET,irasn,سایتای ایرانی 🇮🇷
+  - RULE-SET,ircidr,سایتای ایرانی 🇮🇷
+  - RULE-SET,ir,سایتای ایرانی 🇮🇷
+  - RULE-SET,category_ir,سایتای ایرانی 🇮🇷
+  - RULE-SET,whatsapp,واتس آپ 🟢
+  - RULE-SET,steam,استیم 🖥️
+  - RULE-SET,SteamRegionCheck,استیم 🖥️
+  - RULE-SET,game,گیم 🎮
+  - RULE-SET,GameDownload,گیم 🎮
+  - RULE-SET,category-games,گیم 🎮
+  - RULE-SET,Xbox,گیم 🎮
+  - RULE-SET,discord,دیسکورد 🗣️
+  - RULE-SET,xiaomi_white_list,نوع انتخاب پروکسی 🔀
+  - RULE-SET,xiaomi-ads,تبلیغات اپ ها 🍃
+  - RULE-SET,xiaomi_block_list,تبلیغات اپ ها 🍃
+  - RULE-SET,windows,ویندوز 🧊
+  - RULE-SET,cloudflare,کلودفلر ☁️
+  - RULE-SET,github,گیتهاب 🐙
+  - PROCESS-NAME,com.android.vending,نوع انتخاب پروکسی 🔀
+  - PROCESS-NAME,com.google.android.gms,نوع انتخاب پروکسی 🔀
+  - RULE-SET,google-play,نوع انتخاب پروکسی 🔀
+  - RULE-SET,google,گوگل 🌍
+  - IP-CIDR,10.10.34.0/24,نوع انتخاب پروکسی 🔀
+  - RULE-SET,local_ips,بدون فیلترشکن 🛡️
+  - RULE-SET,private,بدون فیلترشکن 🛡️
+  - MATCH,نوع انتخاب پروکسی 🔀
