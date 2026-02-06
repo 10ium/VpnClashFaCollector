@@ -465,6 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: 46.226.167.138:40485, server: 46.226.167.138, port: 40485, type: ss, cipher: 2022-blake3-aes-256-gcm, password: cDbs4TCyxnU3rdHzM0Od4hqGM1VCoi25crxoSU1AJuY=:Rtz0xnsK9tgBQbBsa8H1uOzVGhTjU4Ht1mEwRBY7l2I=, udp: true, tfo: false}
   - {name: 51.75.89.203:13021, server: 51.75.89.203, port: 13021, type: ss, cipher: chacha20-ietf-poly1305, password: 7a57a403f1acaea1, udp: true, tfo: false}
   - {name: 5.78.51.123:1080, server: 5.78.51.123, port: 1080, type: ss, cipher: chacha20-ietf-poly1305, password: 8tmnvX5zYuWGVIDP2jglZw, udp: true, tfo: false}
   - {name: 57.129.94.79:11205, server: 57.129.94.79, port: 11205, type: ss, cipher: chacha20-ietf-poly1305, password: 2ac1be36286986e4, udp: true, tfo: false}
@@ -473,33 +474,47 @@ proxies:
   - {name: 82.38.31.199:8080, server: 82.38.31.199, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
   - {name: 3.112.130.53:8313, server: 3.112.130.53, port: 8313, type: ss, cipher: chacha20-ietf-poly1305, password: ljqdalu13.., udp: true, tfo: false}
   - {name: 3.112.130.53:8316, server: 3.112.130.53, port: 8316, type: ss, cipher: chacha20-ietf-poly1305, password: ljqdalu13.., udp: true, tfo: false}
+  - {name: 3.112.130.53:8319, server: 3.112.130.53, port: 8319, type: ss, cipher: chacha20-ietf-poly1305, password: ljqdalu13.., udp: true, tfo: false}
+  - {name: 82.38.31.101:8080, server: 82.38.31.101, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
   - {name: 82.38.31.122:8080, server: 82.38.31.122, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
   - {name: 82.38.31.122:8080 2, server: 82.38.31.122, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
+  - {name: 82.38.31.124:8080, server: 82.38.31.124, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
   - {name: 82.38.31.61:8080, server: 82.38.31.61, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
+  - {name: 82.38.31.89:8080, server: 82.38.31.89, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
+  - {name: 54.36.174.140:443, server: 54.36.174.140, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: pvgz9pq, udp: true, tfo: false}
+  - {name: 54.36.174.140:443 2, server: 54.36.174.140, port: 443, type: ss, cipher: chacha20-poly1305, password: pvgz9pq, udp: true, tfo: false}
   - {name: 104.21.40.34:443, server: 104.21.40.34, port: 443, type: trojan, password: humanity, sni: www.gossipglove.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.gossipglove.com}}, udp: true, tfo: false}
-  - {name: 172.64.152.23:443, server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.gossipglove.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.gossipglove.com}}, udp: true, tfo: false}
-  - {name: 172.64.152.23:443 2, server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.creationlong.org`, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org`}}, udp: true, tfo: false}
-  - {name: www.calmlunch.com:443, server: www.calmlunch.com, port: 443, type: trojan, password: humanity, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment}, udp: true, tfo: false}
+  - {name: 172.64.152.23:443, server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.creationlong.org`, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org`}}, udp: true, tfo: false}
+  - {name: 104.21.13.210:443, server: 104.21.13.210, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 0b3ad86e-1818-49bb-949d-4e85d137a16d, servername: mianfeijiedianscp.buzz, network: ws, ws-opts: {path: /, headers: {Host: mianfeijiedianscp.buzz}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 85.133.197.237:9829, server: 85.133.197.237, port: 9829, type: vless, tls: true, packet-encoding: xudp, uuid: 0c0870b0-a253-4861-84b6-e6ce6777e97c, host: pro30afzar.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 86.110.243.171:25449, server: 86.110.243.171, port: 25449, type: vless, tls: true, packet-encoding: xudp, uuid: 0df23c07-b289-4d65-822a-228478ca73bd, servername: eh.vk.com, host: eh.vk.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇫🇷 OV-France1.09vpn.com:80, server: OV-France1.09vpn.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 25f86cb1-2140-4085-abcb-c3a0ea7a4be0, network: ws, ws-opts: {path: /vless/, headers: {Host: OV-France1.09vpn.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 51.158.206.98:23576, server: 51.158.206.98, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 45.130.125.160:8443, server: 45.130.125.160, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 5203102c-be94-4a73-b165-f19ce3cc2474, servername: cloud.vip-morteza.xyz, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: cloud.vip-morteza.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: africa.visa.com:8880, server: africa.visa.com, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 623d675e-8748-4881-ac0f-dc1a10b595b1, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: vahidasd1988-se08ot-3.vahidasd1988.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 40.160.14.104:8880, server: 40.160.14.104, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 6251f84e-9c02-4140-921c-6b47d394fb96, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 40.160.4.20:8880, server: 40.160.4.20, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 6251f84e-9c02-4140-921c-6b47d394fb96, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 40.160.6.133:8880, server: 40.160.6.133, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 6251f84e-9c02-4140-921c-6b47d394fb96, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 172.64.144.74:443, server: 172.64.144.74, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 68c89f56-3a15-46f2-9901-8c00a2546b97, servername: rukawa.pages.dev, network: ws, ws-opts: {path: /Tel-@V2rayAlpha, headers: {Host: rukawa.pages.dev}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 91.184.240.121:443, server: 91.184.240.121, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 745d8b0e-1bf2-4921-8058-4d67dd3dbc13, servername: secdn13.suio.me, host: secdn13.suio.me, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 94.131.113.228:443, server: 94.131.113.228, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 82bf8df9-300f-4d65-a8b9-b300ccaeb930, servername: fast.strelkavpn.ru, host: fast.strelkavpn.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: gUDEXo3UPF5WlJdIvpKMZbcLfKxMkiDyWgXjleD0aA4, short-id: aa5d376d9d56}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 198.41.199.83:443, server: 198.41.199.83, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8388434b-bbc8-4e00-b497-69a7f56f6e24, servername: rAyAn-cOnFiG-it-1.pAriSa.dPdNs.oRg, network: ws, ws-opts: {path: /ws, headers: {Host: rAyAn-cOnFiG-it-1.pAriSa.dPdNs.oRg}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 188.114.98.0:8880, server: 188.114.98.0, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 77a54d55-6622-4992-8c9d-bb02692954fd, network: ws, ws-opts: {path: /, headers: {Host: fuckthisRezhim.decoreland.ir.}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 217.26.222.46:443, server: 217.26.222.46, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 7bf33271-8846-4189-badf-4f246e44fc5b, servername: google.com, alpn: [http%2F1.1], host: google.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: axJHL-4uQA5ZR2-hvZ46di7OMGcFHuFFXGmKaoG5B1A, short-id: 82b21d}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 45.82.251.116:8880, server: 45.82.251.116, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 45.82.251.116:8880 2, server: 45.82.251.116, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 45.82.251.208:8880, server: 45.82.251.208, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 45.82.251.208:8880 2, server: 45.82.251.208, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 45.82.251.208:8880 3, server: 45.82.251.208, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, servername: "%2F%3F---%40Azarbayjab1_Net---%40Azarbayjab1_Net---%40azarbayjab1_Net---%40azarbayjab1_Net---%40Azarbayjab1_Net", network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 45.82.251.208:8880 4, server: 45.82.251.208, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: pqh29v4.globalfymain.com:8880, server: pqh29v4.globalfymain.com, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, servername: pqh29v4.globalfymain.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: yesok42v2.ip4exordir.shop:8880, server: yesok42v2.ip4exordir.shop, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: yesok42v2.ip4exordir.shop:8880 2, server: yesok42v2.ip4exordir.shop, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: rz.leoshop.pw:2086, server: rz.leoshop.pw, port: 2086, type: vless, tls: true, packet-encoding: xudp, uuid: 907d141f-28dd-41af-914d-8daed7905a06, host: "%40%2C%2C%40turbov2box", path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: cfcdn.zopli.ir:443, server: cfcdn.zopli.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 98d677be-b14b-4c14-a96b-4a39a3be645a, servername: t86y6leiyaph7tsvb170x7vfx0-3dvh3.vrezht08.workers.dev, alpn: [http%2F1.1], network: ws, ws-opts: {path: "/eyJqdW5rIjoiZHJmTGlJSmciLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119?ed=2560", headers: {Host: t86y6leiyaph7tsvb170x7vfx0-3dvh3.vrezht08.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: www.speedtest.net:443, server: www.speedtest.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 98d677be-b14b-4c14-a96b-4a39a3be645a, servername: t86y6leiyaph7tsvb170x7vfx0-3dvh3.vrezht08.workers.dev, alpn: [http%2F1.1], network: ws, ws-opts: {path: "/eyJqdW5rIjoiZHJmTGlJSmciLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119?ed=2560", headers: {Host: t86y6leiyaph7tsvb170x7vfx0-3dvh3.vrezht08.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: faqatchai.global.ssl.fastly.net:443, server: faqatchai.global.ssl.fastly.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a9bac46a-2037-4ad1-a192-08c70927f4ad, servername: faqatchai.global.ssl.fastly.net, alpn: [http%2F1.1], network: ws, ws-opts: {path: /containers/fi, headers: {Host: faqatchai.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 158.160.197.190:443, server: 158.160.197.190, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b3a0a76d-1794-4fd0-a283-bd4a0620bac9, servername: eh.vk.com, host: eh.vk.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 53np4dm7wFCgvoOfGCX2w6WHxq3590b62a2Yiq66N00, short-id: f1d8f4aa}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 44@proxy_kafee, server: 64.188.73.31, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: bbed94d9-1120-4b54-8a9c-72d81e411fb8, servername: google.com, host: google.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: cnY_-VQGJYosOMtWBxnq8ay71kO_dVB-IBBotP2AJn4, short-id: 243779c5c1c84b42}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: S2.FASTSPEEDS.IR:2083, server: S2.FASTSPEEDS.IR, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: b3c4cdc3-7999-4e8f-a6a3-0151a64b1f4e, servername: bsun-ukv1.ip-venzo.com, network: ws, ws-opts: {path: /ws, headers: {Host: bsun-ukv1.ip-venzo.com}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: cdn.halazzon.ir:2053, server: cdn.halazzon.ir, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: c659ce22-0a02-4d75-8c89-58d99916b846, servername: ir6.hnbyme.online, network: ws, ws-opts: {path: /, headers: {Host: ir6.hnbyme.online}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 178.250.246.80:1488, server: 178.250.246.80, port: 1488, type: vless, tls: true, packet-encoding: xudp, uuid: d6b1327d-2bec-4366-a3a1-9b1284f95841, servername: ads.x5.ru, host: ads.x5.ru, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
   - {name: creativecommons.org:443, server: creativecommons.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d89d6641-3b1a-4f51-a194-9c9109fd21b6, servername: DiprOX.pages.DEV, network: ws, ws-opts: {path: /assets, headers: {Host: DiprOX.pages.DEV}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇳🇱 nl01-gmn02-vlr01.tcp-reset-club.net:443, server: nl01-gmn02-vlr01.tcp-reset-club.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e108f3eb-4d3a-4e20-a09b-7008e333bc23, servername: hls-svod.itunes.apple.com, host: hls-svod.itunes.apple.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg, short-id: 86e999a2cdc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇳🇱 ru-nl01-vlr01.tcp-reset-club.net:443, server: ru-nl01-vlr01.tcp-reset-club.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e108f3eb-4d3a-4e20-a09b-7008e333bc23, servername: hls-svod.itunes.apple.com, host: hls-svod.itunes.apple.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg, short-id: 8453e5fd9af927}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇷🇺 ru01-blh01.tcp-reset-club.net:443, server: ru01-blh01.tcp-reset-club.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e108f3eb-4d3a-4e20-a09b-7008e333bc23, servername: stats.vk-portal.net, host: stats.vk-portal.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: mLmBhbVFfNuo2eUgBh6r9-5Koz9mUCn3aSzlR6IejUg, short-id: 48720c}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 35@oneclickvpnkeys, server: 85.235.149.184, port: 500, type: vless, tls: true, packet-encoding: xudp, uuid: e6af2417-0a79-4521-aa2a-de1c2f105188, servername: stackoverflow.com, host: stackoverflow.com, path: /, reality-opts: {public-key: NGrcCvAGrXu9QMiu2QNZy2HBqbvL7j-cFQuTFbE-AjM, short-id: bea5eb2fcf6b183c}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: at.asbndx.com:443, server: at.asbndx.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e804e80a-e413-436e-8e3c-8cce9ef657b9, servername: at.asbndx.com, host: at.asbndx.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: hfJagZHzXLZaHqiyy59ZwnPFytw9WUMu1RGh29o3aVE, short-id: 2f4dacf62222e15f}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 57.129.64.102:443, server: 57.129.64.102, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: nasnet, servername: nasnet-5712964102-direct.sharghdaily.co, alpn: [h2%2Chttp%2F1.1], host: nasnet-5712964102-direct.sharghdaily.co, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -516,6 +531,7 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - 46.226.167.138:40485
       - 51.75.89.203:13021
       - 5.78.51.123:1080
       - 57.129.94.79:11205
@@ -524,39 +540,54 @@ proxy-groups:
       - 82.38.31.199:8080
       - 3.112.130.53:8313
       - 3.112.130.53:8316
+      - 3.112.130.53:8319
+      - 82.38.31.101:8080
       - 82.38.31.122:8080
       - 82.38.31.122:8080 2
+      - 82.38.31.124:8080
       - 82.38.31.61:8080
+      - 82.38.31.89:8080
+      - 54.36.174.140:443
+      - 54.36.174.140:443 2
       - 104.21.40.34:443
       - 172.64.152.23:443
-      - 172.64.152.23:443 2
-      - www.calmlunch.com:443
+      - 104.21.13.210:443
       - 85.133.197.237:9829
-      - 86.110.243.171:25449
+      - 🇫🇷 OV-France1.09vpn.com:80
+      - 51.158.206.98:23576
+      - 45.130.125.160:8443
+      - africa.visa.com:8880
+      - 40.160.14.104:8880
+      - 40.160.4.20:8880
+      - 40.160.6.133:8880
       - 172.64.144.74:443
-      - 91.184.240.121:443
-      - 94.131.113.228:443
-      - 198.41.199.83:443
+      - 188.114.98.0:8880
+      - 217.26.222.46:443
+      - 45.82.251.116:8880
+      - 45.82.251.116:8880 2
       - 45.82.251.208:8880
+      - 45.82.251.208:8880 2
+      - 45.82.251.208:8880 3
+      - 45.82.251.208:8880 4
+      - pqh29v4.globalfymain.com:8880
       - yesok42v2.ip4exordir.shop:8880
+      - yesok42v2.ip4exordir.shop:8880 2
+      - rz.leoshop.pw:2086
       - cfcdn.zopli.ir:443
       - www.speedtest.net:443
       - faqatchai.global.ssl.fastly.net:443
-      - 158.160.197.190:443
-      - 44@proxy_kafee
+      - S2.FASTSPEEDS.IR:2083
       - cdn.halazzon.ir:2053
-      - 178.250.246.80:1488
       - creativecommons.org:443
-      - 🇳🇱 nl01-gmn02-vlr01.tcp-reset-club.net:443
-      - 🇳🇱 ru-nl01-vlr01.tcp-reset-club.net:443
-      - 🇷🇺 ru01-blh01.tcp-reset-club.net:443
-      - 35@oneclickvpnkeys
+      - at.asbndx.com:443
+      - 57.129.64.102:443
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
+      - 46.226.167.138:40485
       - 51.75.89.203:13021
       - 5.78.51.123:1080
       - 57.129.94.79:11205
@@ -565,39 +596,54 @@ proxy-groups:
       - 82.38.31.199:8080
       - 3.112.130.53:8313
       - 3.112.130.53:8316
+      - 3.112.130.53:8319
+      - 82.38.31.101:8080
       - 82.38.31.122:8080
       - 82.38.31.122:8080 2
+      - 82.38.31.124:8080
       - 82.38.31.61:8080
+      - 82.38.31.89:8080
+      - 54.36.174.140:443
+      - 54.36.174.140:443 2
       - 104.21.40.34:443
       - 172.64.152.23:443
-      - 172.64.152.23:443 2
-      - www.calmlunch.com:443
+      - 104.21.13.210:443
       - 85.133.197.237:9829
-      - 86.110.243.171:25449
+      - 🇫🇷 OV-France1.09vpn.com:80
+      - 51.158.206.98:23576
+      - 45.130.125.160:8443
+      - africa.visa.com:8880
+      - 40.160.14.104:8880
+      - 40.160.4.20:8880
+      - 40.160.6.133:8880
       - 172.64.144.74:443
-      - 91.184.240.121:443
-      - 94.131.113.228:443
-      - 198.41.199.83:443
+      - 188.114.98.0:8880
+      - 217.26.222.46:443
+      - 45.82.251.116:8880
+      - 45.82.251.116:8880 2
       - 45.82.251.208:8880
+      - 45.82.251.208:8880 2
+      - 45.82.251.208:8880 3
+      - 45.82.251.208:8880 4
+      - pqh29v4.globalfymain.com:8880
       - yesok42v2.ip4exordir.shop:8880
+      - yesok42v2.ip4exordir.shop:8880 2
+      - rz.leoshop.pw:2086
       - cfcdn.zopli.ir:443
       - www.speedtest.net:443
       - faqatchai.global.ssl.fastly.net:443
-      - 158.160.197.190:443
-      - 44@proxy_kafee
+      - S2.FASTSPEEDS.IR:2083
       - cdn.halazzon.ir:2053
-      - 178.250.246.80:1488
       - creativecommons.org:443
-      - 🇳🇱 nl01-gmn02-vlr01.tcp-reset-club.net:443
-      - 🇳🇱 ru-nl01-vlr01.tcp-reset-club.net:443
-      - 🇷🇺 ru01-blh01.tcp-reset-club.net:443
-      - 35@oneclickvpnkeys
+      - at.asbndx.com:443
+      - 57.129.64.102:443
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
+      - 46.226.167.138:40485
       - 51.75.89.203:13021
       - 5.78.51.123:1080
       - 57.129.94.79:11205
@@ -606,33 +652,47 @@ proxy-groups:
       - 82.38.31.199:8080
       - 3.112.130.53:8313
       - 3.112.130.53:8316
+      - 3.112.130.53:8319
+      - 82.38.31.101:8080
       - 82.38.31.122:8080
       - 82.38.31.122:8080 2
+      - 82.38.31.124:8080
       - 82.38.31.61:8080
+      - 82.38.31.89:8080
+      - 54.36.174.140:443
+      - 54.36.174.140:443 2
       - 104.21.40.34:443
       - 172.64.152.23:443
-      - 172.64.152.23:443 2
-      - www.calmlunch.com:443
+      - 104.21.13.210:443
       - 85.133.197.237:9829
-      - 86.110.243.171:25449
+      - 🇫🇷 OV-France1.09vpn.com:80
+      - 51.158.206.98:23576
+      - 45.130.125.160:8443
+      - africa.visa.com:8880
+      - 40.160.14.104:8880
+      - 40.160.4.20:8880
+      - 40.160.6.133:8880
       - 172.64.144.74:443
-      - 91.184.240.121:443
-      - 94.131.113.228:443
-      - 198.41.199.83:443
+      - 188.114.98.0:8880
+      - 217.26.222.46:443
+      - 45.82.251.116:8880
+      - 45.82.251.116:8880 2
       - 45.82.251.208:8880
+      - 45.82.251.208:8880 2
+      - 45.82.251.208:8880 3
+      - 45.82.251.208:8880 4
+      - pqh29v4.globalfymain.com:8880
       - yesok42v2.ip4exordir.shop:8880
+      - yesok42v2.ip4exordir.shop:8880 2
+      - rz.leoshop.pw:2086
       - cfcdn.zopli.ir:443
       - www.speedtest.net:443
       - faqatchai.global.ssl.fastly.net:443
-      - 158.160.197.190:443
-      - 44@proxy_kafee
+      - S2.FASTSPEEDS.IR:2083
       - cdn.halazzon.ir:2053
-      - 178.250.246.80:1488
       - creativecommons.org:443
-      - 🇳🇱 nl01-gmn02-vlr01.tcp-reset-club.net:443
-      - 🇳🇱 ru-nl01-vlr01.tcp-reset-club.net:443
-      - 🇷🇺 ru01-blh01.tcp-reset-club.net:443
-      - 35@oneclickvpnkeys
+      - at.asbndx.com:443
+      - 57.129.64.102:443
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -648,6 +708,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 46.226.167.138:40485
       - 51.75.89.203:13021
       - 5.78.51.123:1080
       - 57.129.94.79:11205
@@ -656,39 +717,54 @@ proxy-groups:
       - 82.38.31.199:8080
       - 3.112.130.53:8313
       - 3.112.130.53:8316
+      - 3.112.130.53:8319
+      - 82.38.31.101:8080
       - 82.38.31.122:8080
       - 82.38.31.122:8080 2
+      - 82.38.31.124:8080
       - 82.38.31.61:8080
+      - 82.38.31.89:8080
+      - 54.36.174.140:443
+      - 54.36.174.140:443 2
       - 104.21.40.34:443
       - 172.64.152.23:443
-      - 172.64.152.23:443 2
-      - www.calmlunch.com:443
+      - 104.21.13.210:443
       - 85.133.197.237:9829
-      - 86.110.243.171:25449
+      - 🇫🇷 OV-France1.09vpn.com:80
+      - 51.158.206.98:23576
+      - 45.130.125.160:8443
+      - africa.visa.com:8880
+      - 40.160.14.104:8880
+      - 40.160.4.20:8880
+      - 40.160.6.133:8880
       - 172.64.144.74:443
-      - 91.184.240.121:443
-      - 94.131.113.228:443
-      - 198.41.199.83:443
+      - 188.114.98.0:8880
+      - 217.26.222.46:443
+      - 45.82.251.116:8880
+      - 45.82.251.116:8880 2
       - 45.82.251.208:8880
+      - 45.82.251.208:8880 2
+      - 45.82.251.208:8880 3
+      - 45.82.251.208:8880 4
+      - pqh29v4.globalfymain.com:8880
       - yesok42v2.ip4exordir.shop:8880
+      - yesok42v2.ip4exordir.shop:8880 2
+      - rz.leoshop.pw:2086
       - cfcdn.zopli.ir:443
       - www.speedtest.net:443
       - faqatchai.global.ssl.fastly.net:443
-      - 158.160.197.190:443
-      - 44@proxy_kafee
+      - S2.FASTSPEEDS.IR:2083
       - cdn.halazzon.ir:2053
-      - 178.250.246.80:1488
       - creativecommons.org:443
-      - 🇳🇱 nl01-gmn02-vlr01.tcp-reset-club.net:443
-      - 🇳🇱 ru-nl01-vlr01.tcp-reset-club.net:443
-      - 🇷🇺 ru01-blh01.tcp-reset-club.net:443
-      - 35@oneclickvpnkeys
+      - at.asbndx.com:443
+      - 57.129.64.102:443
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 46.226.167.138:40485
       - 51.75.89.203:13021
       - 5.78.51.123:1080
       - 57.129.94.79:11205
@@ -697,39 +773,54 @@ proxy-groups:
       - 82.38.31.199:8080
       - 3.112.130.53:8313
       - 3.112.130.53:8316
+      - 3.112.130.53:8319
+      - 82.38.31.101:8080
       - 82.38.31.122:8080
       - 82.38.31.122:8080 2
+      - 82.38.31.124:8080
       - 82.38.31.61:8080
+      - 82.38.31.89:8080
+      - 54.36.174.140:443
+      - 54.36.174.140:443 2
       - 104.21.40.34:443
       - 172.64.152.23:443
-      - 172.64.152.23:443 2
-      - www.calmlunch.com:443
+      - 104.21.13.210:443
       - 85.133.197.237:9829
-      - 86.110.243.171:25449
+      - 🇫🇷 OV-France1.09vpn.com:80
+      - 51.158.206.98:23576
+      - 45.130.125.160:8443
+      - africa.visa.com:8880
+      - 40.160.14.104:8880
+      - 40.160.4.20:8880
+      - 40.160.6.133:8880
       - 172.64.144.74:443
-      - 91.184.240.121:443
-      - 94.131.113.228:443
-      - 198.41.199.83:443
+      - 188.114.98.0:8880
+      - 217.26.222.46:443
+      - 45.82.251.116:8880
+      - 45.82.251.116:8880 2
       - 45.82.251.208:8880
+      - 45.82.251.208:8880 2
+      - 45.82.251.208:8880 3
+      - 45.82.251.208:8880 4
+      - pqh29v4.globalfymain.com:8880
       - yesok42v2.ip4exordir.shop:8880
+      - yesok42v2.ip4exordir.shop:8880 2
+      - rz.leoshop.pw:2086
       - cfcdn.zopli.ir:443
       - www.speedtest.net:443
       - faqatchai.global.ssl.fastly.net:443
-      - 158.160.197.190:443
-      - 44@proxy_kafee
+      - S2.FASTSPEEDS.IR:2083
       - cdn.halazzon.ir:2053
-      - 178.250.246.80:1488
       - creativecommons.org:443
-      - 🇳🇱 nl01-gmn02-vlr01.tcp-reset-club.net:443
-      - 🇳🇱 ru-nl01-vlr01.tcp-reset-club.net:443
-      - 🇷🇺 ru01-blh01.tcp-reset-club.net:443
-      - 35@oneclickvpnkeys
+      - at.asbndx.com:443
+      - 57.129.64.102:443
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 46.226.167.138:40485
       - 51.75.89.203:13021
       - 5.78.51.123:1080
       - 57.129.94.79:11205
@@ -738,33 +829,47 @@ proxy-groups:
       - 82.38.31.199:8080
       - 3.112.130.53:8313
       - 3.112.130.53:8316
+      - 3.112.130.53:8319
+      - 82.38.31.101:8080
       - 82.38.31.122:8080
       - 82.38.31.122:8080 2
+      - 82.38.31.124:8080
       - 82.38.31.61:8080
+      - 82.38.31.89:8080
+      - 54.36.174.140:443
+      - 54.36.174.140:443 2
       - 104.21.40.34:443
       - 172.64.152.23:443
-      - 172.64.152.23:443 2
-      - www.calmlunch.com:443
+      - 104.21.13.210:443
       - 85.133.197.237:9829
-      - 86.110.243.171:25449
+      - 🇫🇷 OV-France1.09vpn.com:80
+      - 51.158.206.98:23576
+      - 45.130.125.160:8443
+      - africa.visa.com:8880
+      - 40.160.14.104:8880
+      - 40.160.4.20:8880
+      - 40.160.6.133:8880
       - 172.64.144.74:443
-      - 91.184.240.121:443
-      - 94.131.113.228:443
-      - 198.41.199.83:443
+      - 188.114.98.0:8880
+      - 217.26.222.46:443
+      - 45.82.251.116:8880
+      - 45.82.251.116:8880 2
       - 45.82.251.208:8880
+      - 45.82.251.208:8880 2
+      - 45.82.251.208:8880 3
+      - 45.82.251.208:8880 4
+      - pqh29v4.globalfymain.com:8880
       - yesok42v2.ip4exordir.shop:8880
+      - yesok42v2.ip4exordir.shop:8880 2
+      - rz.leoshop.pw:2086
       - cfcdn.zopli.ir:443
       - www.speedtest.net:443
       - faqatchai.global.ssl.fastly.net:443
-      - 158.160.197.190:443
-      - 44@proxy_kafee
+      - S2.FASTSPEEDS.IR:2083
       - cdn.halazzon.ir:2053
-      - 178.250.246.80:1488
       - creativecommons.org:443
-      - 🇳🇱 nl01-gmn02-vlr01.tcp-reset-club.net:443
-      - 🇳🇱 ru-nl01-vlr01.tcp-reset-club.net:443
-      - 🇷🇺 ru01-blh01.tcp-reset-club.net:443
-      - 35@oneclickvpnkeys
+      - at.asbndx.com:443
+      - 57.129.64.102:443
   - name: دانلود منیجر 📥
     type: select
     proxies:
