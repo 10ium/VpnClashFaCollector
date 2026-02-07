@@ -1,0 +1,1060 @@
+global-client-fingerprint: chrome
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7894
+allow-lan: true
+tcp-concurrent: true
+enable-process: true
+find-process-mode: strict
+ipv6: true
+log-level: debug
+geo-auto-update: true
+geo-update-interval: 168
+secret: ""
+bind-address: "*"
+unified-delay: false
+disable-keep-alive: false
+keep-alive-idle: 30
+keep-alive-interval: 30
+profile:
+  store-selected: true
+  store-fake-ip: true
+dns:
+  enable: true
+  ipv6: true
+  respect-rules: false
+  prefer-h3: true
+  cache-algorithm: arc
+  use-system-hosts: true
+  use-host: true
+  listen: 0.0.0.0:53
+  enhanced-mode: fake-ip
+  fake-ip-filter-mode: blacklist
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - "*.localdomain"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "*.home.arpa"
+    - time.*.com
+    - ntp.*.com
+    - "*.ir"
+  default-nameserver:
+    - 8.8.8.8
+    - 8.8.4.4
+    - 1.0.0.1
+    - 1.1.1.1
+    - 9.9.9.9
+    - 9.9.9.11
+    - 9.9.9.10
+    - 94.140.14.15
+    - 94.140.15.15
+    - 223.5.5.5
+    - 77.88.8.8
+  nameserver:
+    - https://sky.rethinkdns.com/1:-J8AGH8C7_2-___f3_vZ3f_z-f9KagBI
+    - tls://1-7cpqagd7alx73px777p5766z3x77h6p7jjvaasa.max.rethinkdns.com
+  direct-nameserver:
+    - 78.157.42.100
+    - 78.157.42.101
+  proxy-server-nameserver:
+    - 2606:4700:4700::1111
+    - 2606:4700:4700::1001
+    - 2001:4860:4860::8888
+    - 2001:4860:4860::8844
+    - 1.1.1.1
+    - 8.8.8.8
+    - 8.8.4.4
+    - 9.9.9.9
+    - 223.5.5.5
+    - 77.88.8.8
+    - 2400:3200::1
+    - 2a02:6b8::feed:0ff
+    - 2620:fe::fe
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: false
+  sniff:
+    HTTP:
+      ports: [80, 8080, 8880, 2052, 2082, 2086, 2095]
+    TLS:
+      ports: [443, 8443, 2053, 2083, 2087, 2096]
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  auto-detect-interface: true
+  auto-redir: true
+  dns-hijack:
+    - any:53
+    - tcp://any:53
+rule-providers:
+  category_public_tracker:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-public-tracker.yaml
+    interval: 86400
+    path: ./ruleset/category_public_tracker.yaml
+  iran_ads:
+    type: http
+    behavior: domain
+    url: https://github.com/bootmortis/iran-hosted-domains/releases/latest/download/clash_rules_ads.yaml
+    interval: 86400
+    path: ./ruleset/iran_ads.yaml
+  PersianBlocker:
+    type: http
+    behavior: domain
+    url: https://github.com/MasterKia/iran-hosted-domains/releases/latest/download/clash_rules_ads.yaml
+    path: ./ruleset/PersianBlocker.yaml
+    interval: 86400
+  youtube:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/youtube.yaml
+    interval: 86400
+    path: ./ruleset/youtube.yaml
+  telegram:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/telegram.yaml
+    interval: 86400
+    path: ./ruleset/telegram.yaml
+  twitch:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/twitch.yaml
+    interval: 86400
+    path: ./ruleset/twitch.yaml
+  censor:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/main/censor.yaml
+    interval: 86400
+    path: ./ruleset/tahrim.yaml
+  local_ips:
+    type: http
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/local-ips.yaml
+    interval: 86400
+    path: ./ruleset/local_ips.yaml
+  private:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/private.yaml
+    interval: 86400
+    path: ./ruleset/private.yaml
+  category_ir:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-ir.yaml
+    interval: 86400
+    path: ./ruleset/category_ir.yaml
+  iran:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/main/iran.yaml
+    interval: 86400
+    path: ./ruleset/iran.yaml
+  steam:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/main/steam.yaml
+    interval: 86400
+    path: ./ruleset/steam.yaml
+  game:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/game.yaml
+    interval: 86400
+    path: ./ruleset/game.yaml
+  category-games:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/category-games.yaml
+    interval: 86400
+    path: ./ruleset/category-games.yaml
+  ir:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ir.yaml
+    path: ./ruleset/ir.yaml
+    interval: 86400
+  apps:
+    type: http
+    format: yaml
+    behavior: classical
+    url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/apps.yaml
+    path: ./ruleset/apps.yaml
+    interval: 86400
+  ircidr:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ircidr.yaml
+    path: ./ruleset/ircidr.yaml
+    interval: 86400
+  irasn:
+    type: http
+    format: yaml
+    behavior: classical
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/irasn.yaml
+    path: ./ruleset/irasn.yaml
+    interval: 86400
+  arvancloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/arvancloud.yaml
+    path: ./ruleset/arvancloud.yaml
+    interval: 86400
+  derakcloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/derakcloud.yaml
+    path: ./ruleset/derakcloud.yaml
+    interval: 86400
+  iranserver:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/iranserver.yaml
+    path: ./ruleset/iranserver.yaml
+    interval: 86400
+  parspack:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/parspack.yaml
+    path: ./ruleset/parspack.yaml
+    interval: 86400
+  malware:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/malware.yaml
+    path: ./ruleset/malware.yaml
+    interval: 86400
+  phishing:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/phishing.yaml
+    path: ./ruleset/phishing.yaml
+    interval: 86400
+  cryptominers:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/cryptominers.yaml
+    path: ./ruleset/cryptominers.yaml
+    interval: 86400
+  ads:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/category-ads-all.yaml
+    path: ./ruleset/ads.yaml
+    interval: 86400
+  DownloadManagers:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/DownloadManagers.yaml
+    interval: 86400
+    path: ./ruleset/DownloadManagers.yaml
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanProgramAD.yaml
+    interval: 86400
+    path: ./ruleset/BanProgramAD.yaml
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanAD.yaml
+    interval: 86400
+    path: ./ruleset/BanAD.yaml
+  PrivateTracker:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/PrivateTracker.yaml
+    interval: 86400
+    path: ./ruleset/PrivateTracker.yaml
+  BanEasyList:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanEasyList.yaml
+    interval: 86400
+    path: ./ruleset/BanEasyList.yaml
+  Download:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Download.yaml
+    interval: 86400
+    path: ./ruleset/Download.yaml
+  GameDownload:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/GameDownload.yaml
+    interval: 86400
+    path: ./ruleset/GameDownload.yaml
+  SteamRegionCheck:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/SteamRegionCheck.yaml
+    interval: 86400
+    path: ./ruleset/SteamRegionCheck.yaml
+  Xbox:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Xbox.yaml
+    interval: 86400
+    path: ./ruleset/Xbox.yaml
+  YouTubeMusic:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/YouTubeMusic.yaml
+    interval: 86400
+    path: ./ruleset/YouTubeMusic.yaml
+  YouTube:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/YouTube.yaml
+    interval: 86400
+    path: ./ruleset/YouTube.yaml
+  Ponzi:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/Ponzi.yaml
+    interval: 86400
+    path: ./ruleset/Ponzi.yaml
+  warninglist:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/warning-list.yaml
+    interval: 86400
+    path: ./ruleset/warninglist.yaml
+  google:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/google.yaml
+    interval: 86400
+    path: ./ruleset/google.yaml
+  google-play:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/google-play.yaml
+    interval: 86400
+    path: ./ruleset/google-play.yaml
+  xiaomi-ads:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/xiaomi-ads.yaml
+    interval: 86400
+    path: ./ruleset/xiaomi-ads.yaml
+  xiaomi_block_list:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/xiaomi_block_list.yaml
+    path: ./ruleset/xiaomi_block_list.yaml
+    interval: 86400
+  xiaomi_white_list:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/xiaomi_white_list.yaml
+    path: ./ruleset/xiaomi_white_list.yaml
+    interval: 86400
+  cloudflare:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/cloudflare.yaml
+    interval: 86400
+    path: ./ruleset/cloudflare.yaml
+  github:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/github.yaml
+    interval: 86400
+    path: ./ruleset/xgithub.yaml
+  whatsapp:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/whatsapp.yaml
+    interval: 86400
+    path: ./ruleset/whatsapp.yaml
+  LiteAds:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/LiteAds.yaml
+    path: ./ruleset/LiteAds.yaml
+    interval: 86400
+  discord:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/discord.yaml
+    path: ./ruleset/discord.yaml
+    interval: 86400
+  instagram:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/instagram.yaml
+    interval: 86400
+    path: ./ruleset/instagram.yaml
+  category-ai:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/category-ai-!cn.yaml
+    interval: 86400
+    path: ./ruleset/category-ai.yaml
+  stremio:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/stremio.yaml
+    path: ./ruleset/stremio.yaml
+    interval: 86400
+  windows:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/windows.yaml
+    path: ./ruleset/windows.yaml
+    interval: 86400
+  Chotwitter:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/twitter.yaml
+    path: ./ruleset/Chotwitter.yaml
+    interval: 86400
+  mihTwitter:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Twitter.yaml
+    path: ./ruleset/mihTwitter.yaml
+    interval: 86400
+  Domtwitter:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/twitter.yaml
+    interval: 86400
+    path: ./ruleset/Domtwitter.yaml
+  spotifyads:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/spotify-ads.yaml
+    interval: 86400
+    path: ./ruleset/spotifyads.yaml
+  DomainSpotify:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/spotify.yaml
+    interval: 86400
+    path: ./ruleset/DomainSpotify.yaml
+  mihspotify:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Spotify.yaml
+    interval: 86400
+    path: ./ruleset/mihSpotify.yaml
+proxies:
+  - {name: 🇬🇧 | null | 99999ms | ⏳0 B / 150.0 GB | 29 روز, server: 0.0.0.0, port: 666, type: vmess, uuid: 3e8658ec-f033-4860-a419-eca74713b035, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇩🇪 | DE | 687ms | @Vpn_Tehran 💛 تلگرام, server: 104.21.69.44, port: 8080, type: vmess, uuid: nasnet, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /nasnet/cdn, headers: {Host: nasnet-511952424.mcitel.co}}, udp: true, tfo: false}
+  - {name: "| null | 99999ms | vpnsal", server: 104.21.69.44, port: 8080, type: vmess, uuid: nasnet, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /nasnet/cdn, headers: {Host: nasnet-511952424.mcitel.co}}, udp: true, tfo: false}
+  - {name: "| null | 99999ms | 🇮🇷 IR 20 @Outline_Vpn", server: 172.64.149.182, port: 8080, type: vmess, uuid: nasnet, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /nasnet/cdn, headers: {Host: nasnet-5712964102.sharghdaily.co}}, udp: true, tfo: false}
+  - {name: "🇩🇪 | DE | 517ms | 🇩🇪[hamedp71] vmess-DE", server: 172.64.149.182, port: 8080, type: vmess, uuid: nasnet, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/nasnet/cdn?ed=2560", headers: {Host: nasnet-5712964102.sharghdaily.co}}, udp: true, tfo: false}
+  - {name: 🇩🇪 | DE | 696ms | @vpnbaz 🎩, server: 172.67.204.84, port: 8080, type: vmess, uuid: nasnet, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /nasnet/cdn, headers: {Host: nasnet-511952424.mcitel.co}}, udp: true, tfo: false}
+  - {name: "| null | 99999ms | @AzadNet", server: 172.67.204.84, port: 8080, type: vmess, uuid: nasnet, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /nasnet/cdn, headers: {Host: nasnet-511952424.mcitel.co}}, udp: true, tfo: false}
+  - {name: "| null | 99999ms | @configraygan ❤81", server: 185.18.214.147, port: 8080, type: vmess, uuid: af419dc6-ae53-471c-85d9-a770e7f6af15, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "| null | 99999ms | ♥configraygan 10", server: 18.168.124.58, port: 80, type: vmess, uuid: ff7be42d-7d09-445e-b89f-96d7712eb4bf, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /graphql}, udp: true, tfo: false}
+  - {name: "| null | 99999ms | 🔥 Telegram: @wiki_tajrobe", server: 18.168.124.58, port: 80, type: vmess, uuid: ff7be42d-7d09-445e-b89f-96d7712eb4bf, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /graphql}, udp: true, tfo: false}
+  - {name: "| null | 99999ms | 🇮🇷 IR 30 @Outline_Vpn", server: 20.193.153.19, port: 15834, type: vmess, uuid: 39a8c374-76b1-4e90-ab85-85cd9a42ded2, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "| null | 99999ms | @configraygan ❤63", server: 23.162.152.6, port: 22324, type: vmess, uuid: 04621bae-ab36-11ec-b909-0242ac120002, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "| TR | 1313ms | 🇹🇷[openproxylist.com] vmess-TR", server: 45.141.148.143, port: 5059, type: vmess, uuid: e720d2b6-80dd-4664-b64e-6cc784bce329, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: bmi.ir}}, udp: true, tfo: false}
+  - {name: 🇫🇷 | FR | 615ms | 🫧68@oneclickvpnkeys, server: 5.196.29.123, port: 2082, type: vmess, uuid: 112ac36f-3f53-4e26-8371-d25c028e1b9a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: google.com}}, udp: true, tfo: false}
+  - {name: "| null | 99999ms | @configraygan ❤73", server: 57.129.64.199, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: pelang.org, network: ws, ws-opts: {path: linkvws, headers: {Host: pelang.org}}, udp: true, tfo: false}
+  - {name: "| null | 99999ms | 🫧33@oneclickvpnkeys", server: 57.129.64.199, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: pelang.org, network: ws, ws-opts: {path: linkvws, headers: {Host: pelang.org}}, udp: true, tfo: false}
+  - {name: "| null | 99999ms | @configraygan ❤76", server: 68.167.181.220, port: 10010, type: vmess, uuid: b4f7c326-5c4f-4e19-83d5-bfa43b461002, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇭🇰 | HK | 597ms | 🇭🇰[openproxylist.com] vmess-HK", server: 8.210.79.212, port: 55185, type: vmess, uuid: aa3c3018-288b-46f3-af1c-9044e18d6e5b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /Notif_Chat}, udp: true, tfo: false}
+  - {name: 🇭🇰 | HK | 620ms | @configraygan 💙40, server: 8.210.79.212, port: 55185, type: vmess, uuid: aa3c3018-288b-46f3-af1c-9044e18d6e5b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /Notif_Chat}, udp: true, tfo: false}
+  - {name: "| null | 99999ms | @configraygan FH22", server: 81.12.33.180, port: 2021, type: vmess, uuid: 5b947df3-5e73-47e4-a2d3-fdbb2a3ed1ac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "| null | 99999ms | @configraygan FH29", server: 81.12.33.180, port: 2028, type: vmess, uuid: 5b947df3-5e73-47e4-a2d3-fdbb2a3ed1ac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "| null | 99999ms | @configraygan FH13", server: 81.12.33.180, port: 8595, type: vmess, uuid: 5b947df3-5e73-47e4-a2d3-fdbb2a3ed1ac, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇩🇪 | null | 99999ms | ◖🇩🇪◗ DE🍺 | یک سوم بها, server: 81.12.33.180, port: 2022, type: vmess, uuid: f993b24a-015f-4127-9bb1-ad5272f81961, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇩🇪 | null | 99999ms | ◖🇩🇪◗ DE🍺 | یک سوم بها 2, server: 81.12.33.180, port: 2028, type: vmess, uuid: f993b24a-015f-4127-9bb1-ad5272f81961, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇳🇱 | null | 99999ms | ◖🇳🇱◗ NL🌹 | یک سوم بها, server: 81.12.33.180, port: 8595, type: vmess, uuid: f993b24a-015f-4127-9bb1-ad5272f81961, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "| null | 99999ms | @configraygan FH61", server: ::ffff:ac40:9bd1, port: 443, type: vmess, uuid: ffece2a9-0296-46a9-8db8-742d29d240ff, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: bedrid.denizhosting.me, network: ws, ws-opts: {path: ISwpYVR8SjxXcUZEUzVfNURTUC8lV29DXSgsKH1SN0g1JVpDHU1cWigKAC8QRltMCi86ABw4JV14HVMn, headers: {Host: bedrid.denizhosting.me}}, udp: true, tfo: false}
+  - {name: "| null | 99999ms | 🔥 Telegram: @wiki_tajrobe 2", server: ::ffff:ac40:9bd1, port: 443, type: vmess, uuid: ffece2a9-0296-46a9-8db8-742d29d240ff, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: bedrid.denizhosting.me, network: ws, ws-opts: {path: ISwpYVR8SjxXcUZEUzVfNURTUC8lV29DXSgsKH1SN0g1JVpDHU1cWigKAC8QRltMCi86ABw4JV14HVMn, headers: {Host: bedrid.denizhosting.me}}, udp: true, tfo: false}
+  - {name: "| null | 99999ms | 🇦🇪[openproxylist.com] vmess-AE", server: ::ffff:ac40:9bd1, port: 443, type: vmess, uuid: ffece2a9-0296-46a9-8db8-742d29d240ff, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: bedrid.denizhosting.me, network: ws, ws-opts: {path: ISwpYVR8SjxXcUZEUzVfNURTUC8lV29DXSgsKH1SN0g1JVpDHU1cWigKAC8QRltMCi86ABw4JV14HVMn, headers: {Host: bedrid.denizhosting.me}}, udp: true, tfo: false}
+  - {name: 🇺🇸 | US | 523ms | @vpnbaz 🎯, server: ccddfvgb.un2027.indevs.in, port: 80, type: vmess, uuid: 827beb2a-f97a-4b23-b733-adef30c98e17, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /HISLfofvqzd3a3izxYyZXOF, headers: {Host: ccddfvgb.un2027.indevs.in}}, udp: true, tfo: false}
+  - {name: 🇺🇸 | US | 614ms | @vpnbaz 🎨, server: bbnmjk.un2026.indevs.in, port: 80, type: vmess, uuid: 827beb2a-f97a-4b23-b733-adef30c98e17, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /HISLfofvqzd3a3izxYyZXOF, headers: {Host: bbnmjk.un2026.indevs.in}}, udp: true, tfo: false}
+  - {name: "🇳🇱 | NL | 1045ms | 🇳🇱[openproxylist.com] vmess-NL", server: nextmi.hajmyab.ir, port: 2053, type: vmess, uuid: 9585636a-54bc-419a-90a1-76c5c6ec74df, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: yakxvtfbyk.hajmyab.ir, network: ws, ws-opts: {path: /, headers: {Host: app.hajmyab.ir}}, udp: true, tfo: false}
+  - {name: 🇰🇷 | KR | 712ms | @configraygan FH63, server: seoul03.zgjok.com, port: 443, type: vmess, uuid: 72a0dac4-9689-4a57-b164-5c65bfa94772, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: seoul03.zgjok.com, network: ws, ws-opts: {path: /, headers: {Host: seoul03.zgjok.com}}, udp: true, tfo: false}
+  - {name: "| HU | 671ms | @vpnbaz 🎀", server: pq-Hungary1.09vpn.com, port: 80, type: vmess, uuid: 703f722a-4bdf-4e9d-9afd-a681fdf87c74, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /vmess/, headers: {Host: pq-Hungary1.09vpn.com}}, udp: true, tfo: false}
+  - {name: "| HU | 1012ms | @configraygan FH40", server: pq-Hungary1.09vpn.com, port: 80, type: vmess, uuid: 703f722a-4bdf-4e9d-9afd-a681fdf87c74, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /vmess/, headers: {Host: pq-Hungary1.09vpn.com}}, udp: true, tfo: false}
+  - {name: "| HU | 668ms | @configraygan FH57", server: pq-Hungary1.09vpn.com, port: 80, type: vmess, uuid: 703f722a-4bdf-4e9d-9afd-a681fdf87c74, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /vmess/, headers: {Host: pq-Hungary1.09vpn.com}}, udp: true, tfo: false}
+  - {name: "| null | 99999ms | @configraygan ❤75", server: s2.abtinphone.com, port: 57392, type: vmess, uuid: 47e09a9f-4909-4e2b-8c5c-a37e5b3d26e3, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "| null | 99999ms | @MARAMBASHI 🇫🇷", server: s3.fastly4wards.com, port: 2089, type: vmess, uuid: 014c4671-b0f9-4419-0ff5-5e01647ce34f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "| null | 99999ms | @configraygan 💙22", server: www.speedtest.net, port: 80, type: vmess, uuid: 0242912c-8a27-4029-b647-5da93857e697, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /RACEVPN, headers: {Host: ovhv2.isvphp.ir.}}, udp: true, tfo: false}
+  - {name: 🇫🇷 | FR | 513ms | برای اتصال دائمی جوین شو🪙 TelegramID ⌲Express_freevpn 🪩, server: tgju.org, port: 8080, type: vmess, uuid: nasnet, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/nasnet/cdn?ed=2560", headers: {Host: nasnet-162191099.sharghdaily.co}}, udp: true, tfo: false}
+  - {name: "| TR | 945ms | @configraygan FH5", server: tr1-smart.adelping.com, port: 80, type: vmess, uuid: 43dcdce1-3cea-4193-bc8d-90b92071d779, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: tr1-smart.adelping.com}}, udp: true, tfo: false}
+  - {name: "| TR | 967ms | ☢️62@oneclickvpnkeys", server: tr1-smart.adelping.com, port: 80, type: vmess, uuid: 43dcdce1-3cea-4193-bc8d-90b92071d779, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: tr1-smart.adelping.com}}, udp: true, tfo: false}
+  - {name: "| TR | 950ms | 🇹🇷TM (@AZARBAYJAB1) vmess-ws", server: tr1-smart.adelping.com, port: 80, type: vmess, uuid: 43dcdce1-3cea-4193-bc8d-90b92071d779, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, servername: TM_AZARBAYJAB1.new.99.workers.dev, network: ws, ws-opts: {path: "/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1/?de=2560", headers: {Host: TM_AZARBAYJAB1.new.99.workers.dev}}, udp: true, tfo: false}
+  - {name: "| null | 99999ms | @meliproxyy", server: z33.mobato-mobile.com, port: 80, type: vmess, uuid: a81596f9-680f-4fd7-928e-767fbd6a45c5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, servername: excoino.com, udp: true, tfo: false}
+proxy-groups:
+  - name: نوع انتخاب پروکسی 🔀
+    type: select
+    proxies:
+      - اتصال پایدار 🔗
+      - خودکار (بهترین پینگ) 🤖
+      - دستی 🤏🏻
+      - پشتیبان (در صورت قطعی) 🧯
+      - توزیع بار (پایدار) 🧲
+      - توزیع بار (موقت) ⏳
+      - توزیع بار (گردشی) 🔁
+      - قطع اینترنت ⛔
+      - بدون فیلترشکن 🛡️
+  - name: دستی 🤏🏻
+    type: select
+    proxies:
+      - 🇬🇧 | null | 99999ms | ⏳0 B / 150.0 GB | 29 روز
+      - 🇩🇪 | DE | 687ms | @Vpn_Tehran 💛 تلگرام
+      - "| null | 99999ms | vpnsal"
+      - "| null | 99999ms | 🇮🇷 IR 20 @Outline_Vpn"
+      - 🇩🇪 | DE | 517ms | 🇩🇪[hamedp71] vmess-DE
+      - 🇩🇪 | DE | 696ms | @vpnbaz 🎩
+      - "| null | 99999ms | @AzadNet"
+      - "| null | 99999ms | @configraygan ❤81"
+      - "| null | 99999ms | ♥configraygan 10"
+      - "| null | 99999ms | 🔥 Telegram: @wiki_tajrobe"
+      - "| null | 99999ms | 🇮🇷 IR 30 @Outline_Vpn"
+      - "| null | 99999ms | @configraygan ❤63"
+      - "| TR | 1313ms | 🇹🇷[openproxylist.com] vmess-TR"
+      - 🇫🇷 | FR | 615ms | 🫧68@oneclickvpnkeys
+      - "| null | 99999ms | @configraygan ❤73"
+      - "| null | 99999ms | 🫧33@oneclickvpnkeys"
+      - "| null | 99999ms | @configraygan ❤76"
+      - 🇭🇰 | HK | 597ms | 🇭🇰[openproxylist.com] vmess-HK
+      - 🇭🇰 | HK | 620ms | @configraygan 💙40
+      - "| null | 99999ms | @configraygan FH22"
+      - "| null | 99999ms | @configraygan FH29"
+      - "| null | 99999ms | @configraygan FH13"
+      - 🇩🇪 | null | 99999ms | ◖🇩🇪◗ DE🍺 | یک سوم بها
+      - 🇩🇪 | null | 99999ms | ◖🇩🇪◗ DE🍺 | یک سوم بها 2
+      - 🇳🇱 | null | 99999ms | ◖🇳🇱◗ NL🌹 | یک سوم بها
+      - "| null | 99999ms | @configraygan FH61"
+      - "| null | 99999ms | 🔥 Telegram: @wiki_tajrobe 2"
+      - "| null | 99999ms | 🇦🇪[openproxylist.com] vmess-AE"
+      - 🇺🇸 | US | 523ms | @vpnbaz 🎯
+      - 🇺🇸 | US | 614ms | @vpnbaz 🎨
+      - 🇳🇱 | NL | 1045ms | 🇳🇱[openproxylist.com] vmess-NL
+      - 🇰🇷 | KR | 712ms | @configraygan FH63
+      - "| HU | 671ms | @vpnbaz 🎀"
+      - "| HU | 1012ms | @configraygan FH40"
+      - "| HU | 668ms | @configraygan FH57"
+      - "| null | 99999ms | @configraygan ❤75"
+      - "| null | 99999ms | @MARAMBASHI 🇫🇷"
+      - "| null | 99999ms | @configraygan 💙22"
+      - 🇫🇷 | FR | 513ms | برای اتصال دائمی جوین شو🪙 TelegramID ⌲Express_freevpn 🪩
+      - "| TR | 945ms | @configraygan FH5"
+      - "| TR | 967ms | ☢️62@oneclickvpnkeys"
+      - "| TR | 950ms | 🇹🇷TM (@AZARBAYJAB1) vmess-ws"
+      - "| null | 99999ms | @meliproxyy"
+  - name: خودکار (بهترین پینگ) 🤖
+    type: url-test
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    tolerance: 50
+    proxies:
+      - 🇬🇧 | null | 99999ms | ⏳0 B / 150.0 GB | 29 روز
+      - 🇩🇪 | DE | 687ms | @Vpn_Tehran 💛 تلگرام
+      - "| null | 99999ms | vpnsal"
+      - "| null | 99999ms | 🇮🇷 IR 20 @Outline_Vpn"
+      - 🇩🇪 | DE | 517ms | 🇩🇪[hamedp71] vmess-DE
+      - 🇩🇪 | DE | 696ms | @vpnbaz 🎩
+      - "| null | 99999ms | @AzadNet"
+      - "| null | 99999ms | @configraygan ❤81"
+      - "| null | 99999ms | ♥configraygan 10"
+      - "| null | 99999ms | 🔥 Telegram: @wiki_tajrobe"
+      - "| null | 99999ms | 🇮🇷 IR 30 @Outline_Vpn"
+      - "| null | 99999ms | @configraygan ❤63"
+      - "| TR | 1313ms | 🇹🇷[openproxylist.com] vmess-TR"
+      - 🇫🇷 | FR | 615ms | 🫧68@oneclickvpnkeys
+      - "| null | 99999ms | @configraygan ❤73"
+      - "| null | 99999ms | 🫧33@oneclickvpnkeys"
+      - "| null | 99999ms | @configraygan ❤76"
+      - 🇭🇰 | HK | 597ms | 🇭🇰[openproxylist.com] vmess-HK
+      - 🇭🇰 | HK | 620ms | @configraygan 💙40
+      - "| null | 99999ms | @configraygan FH22"
+      - "| null | 99999ms | @configraygan FH29"
+      - "| null | 99999ms | @configraygan FH13"
+      - 🇩🇪 | null | 99999ms | ◖🇩🇪◗ DE🍺 | یک سوم بها
+      - 🇩🇪 | null | 99999ms | ◖🇩🇪◗ DE🍺 | یک سوم بها 2
+      - 🇳🇱 | null | 99999ms | ◖🇳🇱◗ NL🌹 | یک سوم بها
+      - "| null | 99999ms | @configraygan FH61"
+      - "| null | 99999ms | 🔥 Telegram: @wiki_tajrobe 2"
+      - "| null | 99999ms | 🇦🇪[openproxylist.com] vmess-AE"
+      - 🇺🇸 | US | 523ms | @vpnbaz 🎯
+      - 🇺🇸 | US | 614ms | @vpnbaz 🎨
+      - 🇳🇱 | NL | 1045ms | 🇳🇱[openproxylist.com] vmess-NL
+      - 🇰🇷 | KR | 712ms | @configraygan FH63
+      - "| HU | 671ms | @vpnbaz 🎀"
+      - "| HU | 1012ms | @configraygan FH40"
+      - "| HU | 668ms | @configraygan FH57"
+      - "| null | 99999ms | @configraygan ❤75"
+      - "| null | 99999ms | @MARAMBASHI 🇫🇷"
+      - "| null | 99999ms | @configraygan 💙22"
+      - 🇫🇷 | FR | 513ms | برای اتصال دائمی جوین شو🪙 TelegramID ⌲Express_freevpn 🪩
+      - "| TR | 945ms | @configraygan FH5"
+      - "| TR | 967ms | ☢️62@oneclickvpnkeys"
+      - "| TR | 950ms | 🇹🇷TM (@AZARBAYJAB1) vmess-ws"
+      - "| null | 99999ms | @meliproxyy"
+  - name: پشتیبان (در صورت قطعی) 🧯
+    type: fallback
+    url: https://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 50
+    proxies:
+      - 🇬🇧 | null | 99999ms | ⏳0 B / 150.0 GB | 29 روز
+      - 🇩🇪 | DE | 687ms | @Vpn_Tehran 💛 تلگرام
+      - "| null | 99999ms | vpnsal"
+      - "| null | 99999ms | 🇮🇷 IR 20 @Outline_Vpn"
+      - 🇩🇪 | DE | 517ms | 🇩🇪[hamedp71] vmess-DE
+      - 🇩🇪 | DE | 696ms | @vpnbaz 🎩
+      - "| null | 99999ms | @AzadNet"
+      - "| null | 99999ms | @configraygan ❤81"
+      - "| null | 99999ms | ♥configraygan 10"
+      - "| null | 99999ms | 🔥 Telegram: @wiki_tajrobe"
+      - "| null | 99999ms | 🇮🇷 IR 30 @Outline_Vpn"
+      - "| null | 99999ms | @configraygan ❤63"
+      - "| TR | 1313ms | 🇹🇷[openproxylist.com] vmess-TR"
+      - 🇫🇷 | FR | 615ms | 🫧68@oneclickvpnkeys
+      - "| null | 99999ms | @configraygan ❤73"
+      - "| null | 99999ms | 🫧33@oneclickvpnkeys"
+      - "| null | 99999ms | @configraygan ❤76"
+      - 🇭🇰 | HK | 597ms | 🇭🇰[openproxylist.com] vmess-HK
+      - 🇭🇰 | HK | 620ms | @configraygan 💙40
+      - "| null | 99999ms | @configraygan FH22"
+      - "| null | 99999ms | @configraygan FH29"
+      - "| null | 99999ms | @configraygan FH13"
+      - 🇩🇪 | null | 99999ms | ◖🇩🇪◗ DE🍺 | یک سوم بها
+      - 🇩🇪 | null | 99999ms | ◖🇩🇪◗ DE🍺 | یک سوم بها 2
+      - 🇳🇱 | null | 99999ms | ◖🇳🇱◗ NL🌹 | یک سوم بها
+      - "| null | 99999ms | @configraygan FH61"
+      - "| null | 99999ms | 🔥 Telegram: @wiki_tajrobe 2"
+      - "| null | 99999ms | 🇦🇪[openproxylist.com] vmess-AE"
+      - 🇺🇸 | US | 523ms | @vpnbaz 🎯
+      - 🇺🇸 | US | 614ms | @vpnbaz 🎨
+      - 🇳🇱 | NL | 1045ms | 🇳🇱[openproxylist.com] vmess-NL
+      - 🇰🇷 | KR | 712ms | @configraygan FH63
+      - "| HU | 671ms | @vpnbaz 🎀"
+      - "| HU | 1012ms | @configraygan FH40"
+      - "| HU | 668ms | @configraygan FH57"
+      - "| null | 99999ms | @configraygan ❤75"
+      - "| null | 99999ms | @MARAMBASHI 🇫🇷"
+      - "| null | 99999ms | @configraygan 💙22"
+      - 🇫🇷 | FR | 513ms | برای اتصال دائمی جوین شو🪙 TelegramID ⌲Express_freevpn 🪩
+      - "| TR | 945ms | @configraygan FH5"
+      - "| TR | 967ms | ☢️62@oneclickvpnkeys"
+      - "| TR | 950ms | 🇹🇷TM (@AZARBAYJAB1) vmess-ws"
+      - "| null | 99999ms | @meliproxyy"
+  - name: اتصال پایدار 🔗
+    type: url-test
+    url: https://cp.cloudflare.com/generate_204
+    interval: 30
+    tolerance: 50
+    proxies:
+      - خودکار (بهترین پینگ) 🤖
+      - پشتیبان (در صورت قطعی) 🧯
+      - دستی 🤏🏻
+  - name: توزیع بار (پایدار) 🧲
+    type: load-balance
+    strategy: consistent-hashing
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    proxies:
+      - 🇬🇧 | null | 99999ms | ⏳0 B / 150.0 GB | 29 روز
+      - 🇩🇪 | DE | 687ms | @Vpn_Tehran 💛 تلگرام
+      - "| null | 99999ms | vpnsal"
+      - "| null | 99999ms | 🇮🇷 IR 20 @Outline_Vpn"
+      - 🇩🇪 | DE | 517ms | 🇩🇪[hamedp71] vmess-DE
+      - 🇩🇪 | DE | 696ms | @vpnbaz 🎩
+      - "| null | 99999ms | @AzadNet"
+      - "| null | 99999ms | @configraygan ❤81"
+      - "| null | 99999ms | ♥configraygan 10"
+      - "| null | 99999ms | 🔥 Telegram: @wiki_tajrobe"
+      - "| null | 99999ms | 🇮🇷 IR 30 @Outline_Vpn"
+      - "| null | 99999ms | @configraygan ❤63"
+      - "| TR | 1313ms | 🇹🇷[openproxylist.com] vmess-TR"
+      - 🇫🇷 | FR | 615ms | 🫧68@oneclickvpnkeys
+      - "| null | 99999ms | @configraygan ❤73"
+      - "| null | 99999ms | 🫧33@oneclickvpnkeys"
+      - "| null | 99999ms | @configraygan ❤76"
+      - 🇭🇰 | HK | 597ms | 🇭🇰[openproxylist.com] vmess-HK
+      - 🇭🇰 | HK | 620ms | @configraygan 💙40
+      - "| null | 99999ms | @configraygan FH22"
+      - "| null | 99999ms | @configraygan FH29"
+      - "| null | 99999ms | @configraygan FH13"
+      - 🇩🇪 | null | 99999ms | ◖🇩🇪◗ DE🍺 | یک سوم بها
+      - 🇩🇪 | null | 99999ms | ◖🇩🇪◗ DE🍺 | یک سوم بها 2
+      - 🇳🇱 | null | 99999ms | ◖🇳🇱◗ NL🌹 | یک سوم بها
+      - "| null | 99999ms | @configraygan FH61"
+      - "| null | 99999ms | 🔥 Telegram: @wiki_tajrobe 2"
+      - "| null | 99999ms | 🇦🇪[openproxylist.com] vmess-AE"
+      - 🇺🇸 | US | 523ms | @vpnbaz 🎯
+      - 🇺🇸 | US | 614ms | @vpnbaz 🎨
+      - 🇳🇱 | NL | 1045ms | 🇳🇱[openproxylist.com] vmess-NL
+      - 🇰🇷 | KR | 712ms | @configraygan FH63
+      - "| HU | 671ms | @vpnbaz 🎀"
+      - "| HU | 1012ms | @configraygan FH40"
+      - "| HU | 668ms | @configraygan FH57"
+      - "| null | 99999ms | @configraygan ❤75"
+      - "| null | 99999ms | @MARAMBASHI 🇫🇷"
+      - "| null | 99999ms | @configraygan 💙22"
+      - 🇫🇷 | FR | 513ms | برای اتصال دائمی جوین شو🪙 TelegramID ⌲Express_freevpn 🪩
+      - "| TR | 945ms | @configraygan FH5"
+      - "| TR | 967ms | ☢️62@oneclickvpnkeys"
+      - "| TR | 950ms | 🇹🇷TM (@AZARBAYJAB1) vmess-ws"
+      - "| null | 99999ms | @meliproxyy"
+  - name: توزیع بار (گردشی) 🔁
+    type: load-balance
+    strategy: consistent-hashing
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    proxies:
+      - 🇬🇧 | null | 99999ms | ⏳0 B / 150.0 GB | 29 روز
+      - 🇩🇪 | DE | 687ms | @Vpn_Tehran 💛 تلگرام
+      - "| null | 99999ms | vpnsal"
+      - "| null | 99999ms | 🇮🇷 IR 20 @Outline_Vpn"
+      - 🇩🇪 | DE | 517ms | 🇩🇪[hamedp71] vmess-DE
+      - 🇩🇪 | DE | 696ms | @vpnbaz 🎩
+      - "| null | 99999ms | @AzadNet"
+      - "| null | 99999ms | @configraygan ❤81"
+      - "| null | 99999ms | ♥configraygan 10"
+      - "| null | 99999ms | 🔥 Telegram: @wiki_tajrobe"
+      - "| null | 99999ms | 🇮🇷 IR 30 @Outline_Vpn"
+      - "| null | 99999ms | @configraygan ❤63"
+      - "| TR | 1313ms | 🇹🇷[openproxylist.com] vmess-TR"
+      - 🇫🇷 | FR | 615ms | 🫧68@oneclickvpnkeys
+      - "| null | 99999ms | @configraygan ❤73"
+      - "| null | 99999ms | 🫧33@oneclickvpnkeys"
+      - "| null | 99999ms | @configraygan ❤76"
+      - 🇭🇰 | HK | 597ms | 🇭🇰[openproxylist.com] vmess-HK
+      - 🇭🇰 | HK | 620ms | @configraygan 💙40
+      - "| null | 99999ms | @configraygan FH22"
+      - "| null | 99999ms | @configraygan FH29"
+      - "| null | 99999ms | @configraygan FH13"
+      - 🇩🇪 | null | 99999ms | ◖🇩🇪◗ DE🍺 | یک سوم بها
+      - 🇩🇪 | null | 99999ms | ◖🇩🇪◗ DE🍺 | یک سوم بها 2
+      - 🇳🇱 | null | 99999ms | ◖🇳🇱◗ NL🌹 | یک سوم بها
+      - "| null | 99999ms | @configraygan FH61"
+      - "| null | 99999ms | 🔥 Telegram: @wiki_tajrobe 2"
+      - "| null | 99999ms | 🇦🇪[openproxylist.com] vmess-AE"
+      - 🇺🇸 | US | 523ms | @vpnbaz 🎯
+      - 🇺🇸 | US | 614ms | @vpnbaz 🎨
+      - 🇳🇱 | NL | 1045ms | 🇳🇱[openproxylist.com] vmess-NL
+      - 🇰🇷 | KR | 712ms | @configraygan FH63
+      - "| HU | 671ms | @vpnbaz 🎀"
+      - "| HU | 1012ms | @configraygan FH40"
+      - "| HU | 668ms | @configraygan FH57"
+      - "| null | 99999ms | @configraygan ❤75"
+      - "| null | 99999ms | @MARAMBASHI 🇫🇷"
+      - "| null | 99999ms | @configraygan 💙22"
+      - 🇫🇷 | FR | 513ms | برای اتصال دائمی جوین شو🪙 TelegramID ⌲Express_freevpn 🪩
+      - "| TR | 945ms | @configraygan FH5"
+      - "| TR | 967ms | ☢️62@oneclickvpnkeys"
+      - "| TR | 950ms | 🇹🇷TM (@AZARBAYJAB1) vmess-ws"
+      - "| null | 99999ms | @meliproxyy"
+  - name: توزیع بار (موقت) ⏳
+    type: load-balance
+    strategy: consistent-hashing
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    proxies:
+      - 🇬🇧 | null | 99999ms | ⏳0 B / 150.0 GB | 29 روز
+      - 🇩🇪 | DE | 687ms | @Vpn_Tehran 💛 تلگرام
+      - "| null | 99999ms | vpnsal"
+      - "| null | 99999ms | 🇮🇷 IR 20 @Outline_Vpn"
+      - 🇩🇪 | DE | 517ms | 🇩🇪[hamedp71] vmess-DE
+      - 🇩🇪 | DE | 696ms | @vpnbaz 🎩
+      - "| null | 99999ms | @AzadNet"
+      - "| null | 99999ms | @configraygan ❤81"
+      - "| null | 99999ms | ♥configraygan 10"
+      - "| null | 99999ms | 🔥 Telegram: @wiki_tajrobe"
+      - "| null | 99999ms | 🇮🇷 IR 30 @Outline_Vpn"
+      - "| null | 99999ms | @configraygan ❤63"
+      - "| TR | 1313ms | 🇹🇷[openproxylist.com] vmess-TR"
+      - 🇫🇷 | FR | 615ms | 🫧68@oneclickvpnkeys
+      - "| null | 99999ms | @configraygan ❤73"
+      - "| null | 99999ms | 🫧33@oneclickvpnkeys"
+      - "| null | 99999ms | @configraygan ❤76"
+      - 🇭🇰 | HK | 597ms | 🇭🇰[openproxylist.com] vmess-HK
+      - 🇭🇰 | HK | 620ms | @configraygan 💙40
+      - "| null | 99999ms | @configraygan FH22"
+      - "| null | 99999ms | @configraygan FH29"
+      - "| null | 99999ms | @configraygan FH13"
+      - 🇩🇪 | null | 99999ms | ◖🇩🇪◗ DE🍺 | یک سوم بها
+      - 🇩🇪 | null | 99999ms | ◖🇩🇪◗ DE🍺 | یک سوم بها 2
+      - 🇳🇱 | null | 99999ms | ◖🇳🇱◗ NL🌹 | یک سوم بها
+      - "| null | 99999ms | @configraygan FH61"
+      - "| null | 99999ms | 🔥 Telegram: @wiki_tajrobe 2"
+      - "| null | 99999ms | 🇦🇪[openproxylist.com] vmess-AE"
+      - 🇺🇸 | US | 523ms | @vpnbaz 🎯
+      - 🇺🇸 | US | 614ms | @vpnbaz 🎨
+      - 🇳🇱 | NL | 1045ms | 🇳🇱[openproxylist.com] vmess-NL
+      - 🇰🇷 | KR | 712ms | @configraygan FH63
+      - "| HU | 671ms | @vpnbaz 🎀"
+      - "| HU | 1012ms | @configraygan FH40"
+      - "| HU | 668ms | @configraygan FH57"
+      - "| null | 99999ms | @configraygan ❤75"
+      - "| null | 99999ms | @MARAMBASHI 🇫🇷"
+      - "| null | 99999ms | @configraygan 💙22"
+      - 🇫🇷 | FR | 513ms | برای اتصال دائمی جوین شو🪙 TelegramID ⌲Express_freevpn 🪩
+      - "| TR | 945ms | @configraygan FH5"
+      - "| TR | 967ms | ☢️62@oneclickvpnkeys"
+      - "| TR | 950ms | 🇹🇷TM (@AZARBAYJAB1) vmess-ws"
+      - "| null | 99999ms | @meliproxyy"
+  - name: دانلود منیجر 📥
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+      - اجازه ندادن 🚫
+  - name: تلگرام 💬
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: یوتیوب ▶️
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: گوگل 🌍
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: واتس آپ 🟢
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: هوش مصنوعی 🤖
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: توییتر 🐦
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: اسپاتیفای 🎵
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: اینستاگرام 📸
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: تبلیغات 🆎
+    type: select
+    proxies:
+      - اجازه ندادن 🚫
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+  - name: تبلیغات اپ ها 🍃
+    type: select
+    proxies:
+      - اجازه ندادن 🚫
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+  - name: رهگیری جهانی 🛑
+    type: select
+    proxies:
+      - اجازه ندادن 🚫
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+  - name: سایتای مخرب ⚠️
+    type: select
+    proxies:
+      - اجازه ندادن 🚫
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+  - name: استیم 🖥️
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: گیم 🎮
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: توییچ 📡
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: سایتای ایرانی 🇮🇷
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: ویندوز 🧊
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: کلودفلر ☁️
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: گیتهاب 🐙
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: دیسکورد 🗣️
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: انی‌دسک 🔴
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+      - اجازه ندادن 🚫
+  - name: استریمیو 🎬
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+      - اجازه ندادن 🚫
+  - name: سایتای سانسوری 🤬
+    type: select
+    proxies:
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+  - name: بدون فیلترشکن 🛡️
+    type: select
+    proxies:
+      - DIRECT
+  - name: قطع اینترنت ⛔
+    type: select
+    proxies:
+      - REJECT
+  - name: اجازه ندادن 🚫
+    type: select
+    proxies:
+      - REJECT
+ntp:
+  enable: true
+  server: time.apple.com
+  port: 123
+  interval: 30
+rules:
+  - RULE-SET,DownloadManagers,دانلود منیجر 📥
+  - RULE-SET,Download,دانلود منیجر 📥
+  - RULE-SET,stremio,استریمیو 🎬
+  - RULE-SET,BanProgramAD,تبلیغات اپ ها 🍃
+  - RULE-SET,BanAD,رهگیری جهانی 🛑
+  - RULE-SET,PrivateTracker,رهگیری جهانی 🛑
+  - RULE-SET,category_public_tracker,رهگیری جهانی 🛑
+  - RULE-SET,malware,سایتای مخرب ⚠️
+  - RULE-SET,phishing,سایتای مخرب ⚠️
+  - RULE-SET,cryptominers,سایتای مخرب ⚠️
+  - RULE-SET,warninglist,سایتای مخرب ⚠️
+  - RULE-SET,Ponzi,سایتای مخرب ⚠️
+  - RULE-SET,LiteAds,تبلیغات 🆎
+  - RULE-SET,iran_ads,تبلیغات 🆎
+  - RULE-SET,PersianBlocker,تبلیغات 🆎
+  - RULE-SET,ads,تبلیغات 🆎
+  - RULE-SET,BanEasyList,تبلیغات 🆎
+  - RULE-SET,twitch,توییچ 📡
+  - PROCESS-NAME,Telegram.exe,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger.web,تلگرام 💬
+  - RULE-SET,telegram,تلگرام 💬
+  - RULE-SET,YouTube,یوتیوب ▶️
+  - RULE-SET,youtube,یوتیوب ▶️
+  - RULE-SET,YouTubeMusic,یوتیوب ▶️
+  - PROCESS-NAME,com.anydesk.anydeskandroid,انی‌دسک 🔴
+  - PROCESS-NAME,AnyDesk.exe,انی‌دسک 🔴
+  - DOMAIN-SUFFIX,anydesk.com,انی‌دسک 🔴
+  - PROCESS-NAME,Twitter.exe,توییتر 🐦
+  - PROCESS-NAME,com.twitter.android,توییتر 🐦
+  - RULE-SET,Chotwitter,توییتر 🐦
+  - RULE-SET,mihTwitter,توییتر 🐦
+  - RULE-SET,Domtwitter,توییتر 🐦
+  - PROCESS-NAME,com.spotify.music,اسپاتیفای 🎵
+  - PROCESS-NAME,Spotify.exe,اسپاتیفای 🎵
+  - RULE-SET,DomainSpotify,اسپاتیفای 🎵
+  - RULE-SET,mihspotify,اسپاتیفای 🎵
+  - PROCESS-NAME,com.instagram.android,اینستاگرام 📸
+  - RULE-SET,instagram,اینستاگرام 📸
+  - DOMAIN-SUFFIX,deepseek.com,هوش مصنوعی 🤖
+  - DOMAIN-SUFFIX,qwen.ai,هوش مصنوعی 🤖
+  - RULE-SET,category-ai,هوش مصنوعی 🤖
+  - RULE-SET,censor,سایتای سانسوری 🤬
+  - RULE-SET,apps,سایتای ایرانی 🇮🇷
+  - RULE-SET,iran,سایتای ایرانی 🇮🇷
+  - RULE-SET,arvancloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,derakcloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,iranserver,سایتای ایرانی 🇮🇷
+  - RULE-SET,parspack,سایتای ایرانی 🇮🇷
+  - RULE-SET,irasn,سایتای ایرانی 🇮🇷
+  - RULE-SET,ircidr,سایتای ایرانی 🇮🇷
+  - RULE-SET,ir,سایتای ایرانی 🇮🇷
+  - RULE-SET,category_ir,سایتای ایرانی 🇮🇷
+  - RULE-SET,whatsapp,واتس آپ 🟢
+  - RULE-SET,steam,استیم 🖥️
+  - RULE-SET,SteamRegionCheck,استیم 🖥️
+  - RULE-SET,game,گیم 🎮
+  - RULE-SET,GameDownload,گیم 🎮
+  - RULE-SET,category-games,گیم 🎮
+  - RULE-SET,Xbox,گیم 🎮
+  - RULE-SET,discord,دیسکورد 🗣️
+  - RULE-SET,xiaomi_white_list,نوع انتخاب پروکسی 🔀
+  - RULE-SET,xiaomi-ads,تبلیغات اپ ها 🍃
+  - RULE-SET,xiaomi_block_list,تبلیغات اپ ها 🍃
+  - RULE-SET,windows,ویندوز 🧊
+  - RULE-SET,cloudflare,کلودفلر ☁️
+  - RULE-SET,github,گیتهاب 🐙
+  - PROCESS-NAME,com.android.vending,نوع انتخاب پروکسی 🔀
+  - PROCESS-NAME,com.google.android.gms,نوع انتخاب پروکسی 🔀
+  - RULE-SET,google-play,نوع انتخاب پروکسی 🔀
+  - RULE-SET,google,گوگل 🌍
+  - IP-CIDR,10.10.34.0/24,نوع انتخاب پروکسی 🔀
+  - RULE-SET,local_ips,بدون فیلترشکن 🛡️
+  - RULE-SET,private,بدون فیلترشکن 🛡️
+  - MATCH,نوع انتخاب پروکسی 🔀
