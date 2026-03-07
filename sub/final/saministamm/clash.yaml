@@ -1,0 +1,1039 @@
+global-client-fingerprint: chrome
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+tproxy-port: 7894
+allow-lan: true
+tcp-concurrent: true
+enable-process: true
+find-process-mode: strict
+ipv6: true
+log-level: debug
+geo-auto-update: true
+geo-update-interval: 168
+secret: ""
+bind-address: "*"
+unified-delay: false
+disable-keep-alive: false
+keep-alive-idle: 30
+keep-alive-interval: 30
+profile:
+  store-selected: true
+  store-fake-ip: true
+dns:
+  enable: true
+  ipv6: true
+  respect-rules: false
+  prefer-h3: true
+  cache-algorithm: arc
+  use-system-hosts: true
+  use-host: true
+  listen: 0.0.0.0:53
+  enhanced-mode: fake-ip
+  fake-ip-filter-mode: blacklist
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - "*.localdomain"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "*.home.arpa"
+    - time.*.com
+    - ntp.*.com
+    - "*.ir"
+  default-nameserver:
+    - 8.8.8.8
+    - 8.8.4.4
+    - 1.0.0.1
+    - 1.1.1.1
+    - 9.9.9.9
+    - 9.9.9.11
+    - 9.9.9.10
+    - 94.140.14.15
+    - 94.140.15.15
+    - 223.5.5.5
+    - 77.88.8.8
+  nameserver:
+    - https://sky.rethinkdns.com/1:-J8AGH8C7_2-___f3_vZ3f_z-f9KagBI
+    - tls://1-7cpqagd7alx73px777p5766z3x77h6p7jjvaasa.max.rethinkdns.com
+  direct-nameserver:
+    - 78.157.42.100
+    - 78.157.42.101
+  proxy-server-nameserver:
+    - 2606:4700:4700::1111
+    - 2606:4700:4700::1001
+    - 2001:4860:4860::8888
+    - 2001:4860:4860::8844
+    - 1.1.1.1
+    - 8.8.8.8
+    - 8.8.4.4
+    - 9.9.9.9
+    - 223.5.5.5
+    - 77.88.8.8
+    - 2400:3200::1
+    - 2a02:6b8::feed:0ff
+    - 2620:fe::fe
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: false
+  sniff:
+    HTTP:
+      ports: [80, 8080, 8880, 2052, 2082, 2086, 2095]
+    TLS:
+      ports: [443, 8443, 2053, 2083, 2087, 2096]
+tun:
+  enable: true
+  stack: mixed
+  auto-route: true
+  auto-detect-interface: true
+  auto-redir: true
+  dns-hijack:
+    - any:53
+    - tcp://any:53
+rule-providers:
+  category_public_tracker:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-public-tracker.yaml
+    interval: 86400
+    path: ./ruleset/category_public_tracker.yaml
+  iran_ads:
+    type: http
+    behavior: domain
+    url: https://github.com/bootmortis/iran-hosted-domains/releases/latest/download/clash_rules_ads.yaml
+    interval: 86400
+    path: ./ruleset/iran_ads.yaml
+  PersianBlocker:
+    type: http
+    behavior: domain
+    url: https://github.com/MasterKia/iran-hosted-domains/releases/latest/download/clash_rules_ads.yaml
+    path: ./ruleset/PersianBlocker.yaml
+    interval: 86400
+  youtube:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/youtube.yaml
+    interval: 86400
+    path: ./ruleset/youtube.yaml
+  telegram:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/telegram.yaml
+    interval: 86400
+    path: ./ruleset/telegram.yaml
+  twitch:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/twitch.yaml
+    interval: 86400
+    path: ./ruleset/twitch.yaml
+  censor:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/main/censor.yaml
+    interval: 86400
+    path: ./ruleset/tahrim.yaml
+  local_ips:
+    type: http
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/local-ips.yaml
+    interval: 86400
+    path: ./ruleset/local_ips.yaml
+  private:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/private.yaml
+    interval: 86400
+    path: ./ruleset/private.yaml
+  category_ir:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/category-ir.yaml
+    interval: 86400
+    path: ./ruleset/category_ir.yaml
+  iran:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/main/iran.yaml
+    interval: 86400
+    path: ./ruleset/iran.yaml
+  steam:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/main/steam.yaml
+    interval: 86400
+    path: ./ruleset/steam.yaml
+  game:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/game.yaml
+    interval: 86400
+    path: ./ruleset/game.yaml
+  category-games:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/category-games.yaml
+    interval: 86400
+    path: ./ruleset/category-games.yaml
+  ir:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ir.yaml
+    path: ./ruleset/ir.yaml
+    interval: 86400
+  apps:
+    type: http
+    format: yaml
+    behavior: classical
+    url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/apps.yaml
+    path: ./ruleset/apps.yaml
+    interval: 86400
+  ircidr:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://github.com/chocolate4u/Iran-clash-rules/releases/latest/download/ircidr.yaml
+    path: ./ruleset/ircidr.yaml
+    interval: 86400
+  irasn:
+    type: http
+    format: yaml
+    behavior: classical
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/irasn.yaml
+    path: ./ruleset/irasn.yaml
+    interval: 86400
+  arvancloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/arvancloud.yaml
+    path: ./ruleset/arvancloud.yaml
+    interval: 86400
+  derakcloud:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/derakcloud.yaml
+    path: ./ruleset/derakcloud.yaml
+    interval: 86400
+  iranserver:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/iranserver.yaml
+    path: ./ruleset/iranserver.yaml
+    interval: 86400
+  parspack:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/parspack.yaml
+    path: ./ruleset/parspack.yaml
+    interval: 86400
+  malware:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/malware.yaml
+    path: ./ruleset/malware.yaml
+    interval: 86400
+  phishing:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/phishing.yaml
+    path: ./ruleset/phishing.yaml
+    interval: 86400
+  cryptominers:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/cryptominers.yaml
+    path: ./ruleset/cryptominers.yaml
+    interval: 86400
+  ads:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/category-ads-all.yaml
+    path: ./ruleset/ads.yaml
+    interval: 86400
+  DownloadManagers:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/DownloadManagers.yaml
+    interval: 86400
+    path: ./ruleset/DownloadManagers.yaml
+  BanProgramAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanProgramAD.yaml
+    interval: 86400
+    path: ./ruleset/BanProgramAD.yaml
+  BanAD:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanAD.yaml
+    interval: 86400
+    path: ./ruleset/BanAD.yaml
+  PrivateTracker:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/PrivateTracker.yaml
+    interval: 86400
+    path: ./ruleset/PrivateTracker.yaml
+  BanEasyList:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/BanEasyList.yaml
+    interval: 86400
+    path: ./ruleset/BanEasyList.yaml
+  Download:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Download.yaml
+    interval: 86400
+    path: ./ruleset/Download.yaml
+  GameDownload:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/GameDownload.yaml
+    interval: 86400
+    path: ./ruleset/GameDownload.yaml
+  SteamRegionCheck:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/SteamRegionCheck.yaml
+    interval: 86400
+    path: ./ruleset/SteamRegionCheck.yaml
+  Xbox:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Xbox.yaml
+    interval: 86400
+    path: ./ruleset/Xbox.yaml
+  YouTubeMusic:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/YouTubeMusic.yaml
+    interval: 86400
+    path: ./ruleset/YouTubeMusic.yaml
+  YouTube:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/YouTube.yaml
+    interval: 86400
+    path: ./ruleset/YouTube.yaml
+  Ponzi:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/Ponzi.yaml
+    interval: 86400
+    path: ./ruleset/Ponzi.yaml
+  warninglist:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/warning-list.yaml
+    interval: 86400
+    path: ./ruleset/warninglist.yaml
+  google:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/google.yaml
+    interval: 86400
+    path: ./ruleset/google.yaml
+  google-play:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/google-play.yaml
+    interval: 86400
+    path: ./ruleset/google-play.yaml
+  xiaomi-ads:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/xiaomi-ads.yaml
+    interval: 86400
+    path: ./ruleset/xiaomi-ads.yaml
+  xiaomi_block_list:
+    type: http
+    format: yaml
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/xiaomi_block_list.yaml
+    path: ./ruleset/xiaomi_block_list.yaml
+    interval: 86400
+  xiaomi_white_list:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/xiaomi_white_list.yaml
+    path: ./ruleset/xiaomi_white_list.yaml
+    interval: 86400
+  cloudflare:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/cloudflare.yaml
+    interval: 86400
+    path: ./ruleset/cloudflare.yaml
+  github:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/github.yaml
+    interval: 86400
+    path: ./ruleset/xgithub.yaml
+  whatsapp:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/generated/whatsapp.yaml
+    interval: 86400
+    path: ./ruleset/whatsapp.yaml
+  LiteAds:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/LiteAds.yaml
+    path: ./ruleset/LiteAds.yaml
+    interval: 86400
+  discord:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/discord.yaml
+    path: ./ruleset/discord.yaml
+    interval: 86400
+  instagram:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/instagram.yaml
+    interval: 86400
+    path: ./ruleset/instagram.yaml
+  category-ai:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/category-ai-!cn.yaml
+    interval: 86400
+    path: ./ruleset/category-ai.yaml
+  stremio:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/stremio.yaml
+    path: ./ruleset/stremio.yaml
+    interval: 86400
+  windows:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/clash_rules/refs/heads/main/windows.yaml
+    path: ./ruleset/windows.yaml
+    interval: 86400
+  Chotwitter:
+    type: http
+    format: yaml
+    behavior: ipcidr
+    url: https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/twitter.yaml
+    path: ./ruleset/Chotwitter.yaml
+    interval: 86400
+  mihTwitter:
+    type: http
+    behavior: classical
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Twitter.yaml
+    path: ./ruleset/mihTwitter.yaml
+    interval: 86400
+  Domtwitter:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/twitter.yaml
+    interval: 86400
+    path: ./ruleset/Domtwitter.yaml
+  spotifyads:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/spotify-ads.yaml
+    interval: 86400
+    path: ./ruleset/spotifyads.yaml
+  DomainSpotify:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/V2rayDomains2Clash/refs/heads/generated/spotify.yaml
+    interval: 86400
+    path: ./ruleset/DomainSpotify.yaml
+  mihspotify:
+    type: http
+    behavior: domain
+    url: https://raw.githubusercontent.com/10ium/mihomo_rule/refs/heads/main/list/Spotify.yaml
+    interval: 86400
+    path: ./ruleset/mihSpotify.yaml
+proxies:
+  - {name: "𝐆𝐞𝐫𝐦𝐚𝐧𝐲 - [ 43388046 ]", server: 1kdksjskskwkwodk.lskwposkrjgso.ncniwlqnxbdje.wizardxray.ir, port: 700, type: vless, tls: true, packet-encoding: xudp, uuid: 06792207-b128-447b-b257-a0df0f5c899b, host: rubika.ir%2Cigap.net%2Csplus.ir%2Cskyroom.online, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ملی شکن 4 🇮🇷@saministamm, server: ml4.sardarr.top, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 189ea39d-52cb-4ff7-8664-7e1e108a14be, host: speedtest.net, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢`", server: entekhabat.iran.asiatech.numtwo.iranvatanam.com, port: 440, type: vless, tls: true, packet-encoding: xudp, uuid: 19542a29-e734-41c9-b372-b30286a61048, host: rubika.ir%2Cigap.net%2Csplus.ir%2Cskyroom.online, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: mh52M5fSx0.zTZS0jb1r6G4z9mN9o2c.realytag.com:883, server: mh52M5fSx0.zTZS0jb1r6G4z9mN9o2c.realytag.com, port: 883, type: vless, tls: true, packet-encoding: xudp, uuid: 1bb38106-17fd-46e2-8559-a0cdf52b5243, host: "skyroom.online,gharar.ir,igap.net", path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 94.183.169.8:882, server: 94.183.169.8, port: 882, type: vless, tls: true, packet-encoding: xudp, uuid: 1fa45133-4c47-45d4-badb-cd7c4b5c0bda, host: "skyroom.online,gharar.ir,igap.net", path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 185.136.135.172:41002, server: 185.136.135.172, port: 41002, type: vless, tls: true, packet-encoding: xudp, uuid: 22d8e907-a875-43fc-9e3e-903ed801bb34, host: fast.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 94.183.180.51:7777, server: 94.183.180.51, port: 7777, type: vless, tls: true, packet-encoding: xudp, uuid: 2bb5074b-8cd6-4783-b213-87078f22baaf, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢` 2", server: sss12.Digianti.ir, port: 8032, type: vless, tls: true, packet-encoding: xudp, uuid: 2f6475b1-dbaf-4834-823c-a0a7e358ad44, host: soft98.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@saministamm | چنل تلگرام`", server: 93.126.19.117, port: 37449, type: vless, tls: true, packet-encoding: xudp, uuid: 3574a6d1-ad41-47ab-ba3e-1ecc425fa6f6, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@saministamm", server: 185.136.135.172, port: 41000, type: vless, tls: true, packet-encoding: xudp, uuid: 38bf7faf-8751-45a0-9a1c-e8e75a31e64a, host: fast.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: کانال تلگرام ما | @saministamm, server: titan.socialxxmedia.pro, port: 1937, type: vless, tls: true, packet-encoding: xudp, uuid: 3d9eba8f-868a-7196-dd3a-5847d3536807, servername: titan.socialxxmedia.pro, host: titan.socialxxmedia.pro, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل‌تلگرام`", server: titan.socialxxmedia.pro, port: 1937, type: vless, tls: true, packet-encoding: xudp, uuid: 59a1aebc-1f47-eb72-7321-7eef03c7095a, servername: titan.socialxxmedia.pro, host: titan.socialxxmedia.pro, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@saministamm | تلگرام جوین باش`", server: drop3.iransport90.ir, port: 3478, type: vless, tls: true, packet-encoding: xudp, uuid: 5cdc9b95-1563-4cde-92e7-d31a2eea0f70, host: drop3.iransport90.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: چنل, server: mail.tomandjery.eu, port: 1001, type: vless, tls: true, packet-encoding: xudp, uuid: 6a3ad064-be7c-40be-9a48-171885a359b7, servername: play.google.com, host: play.google.com, path: /, reality-opts: {public-key: xrZlXeuTYmAC97-RbRi-aM7U67TOBMGCHVu3DovZihw, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل‌تلگرام` 2", server: AE.DarinaService-IR.XYZ, port: 2222, type: vless, tls: true, packet-encoding: xudp, uuid: 6ad1f3ee-53f5-43a5-beea-eab20b5ecaf5, host: varzesh3.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل تلگرام`", server: link.mizbanertebatfarda.site, port: 3010, type: vless, tls: true, packet-encoding: xudp, uuid: 7061a7ca-787e-4dd2-8876-51b0ff01964c, network: ws, ws-opts: {path: "/ws?ed=2048", headers: {Host: myket.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | جوین باش تلگرام`", server: lord.socialxxmedia.pro, port: 440, type: vless, tls: true, packet-encoding: xudp, uuid: 7de6208b-01fd-f02d-4a38-5b7541c4e14e, host: fast.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@saministamm 2", server: fn22.finuxmaster.shop, port: 2095, type: vless, tls: true, packet-encoding: xudp, uuid: 7e01bdb1-07b2-415d-abe4-e94e75f15dfc, host: soft98.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل تلگرام` 2", server: 87.248.142.123, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 8716b6a0-b6af-476b-b684-838aec5d59c9, host: telewebion.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢` 3", server: 6kdksjskskwkwodk.lskwposkrjgso.ncniwlqnxbdje.wizardxray.ir, port: 705, type: vless, tls: true, packet-encoding: xudp, uuid: 958f6b9f-1628-4816-b3b6-7cdf4dc8cf03, host: rubika.ir%2Cigap.net%2Csplus.ir%2Cskyroom.online, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | جوین شو تلگرام`", server: 79.175.167.147, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 9f366a3e-348c-492c-be54-4a0a6db94cc7, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @saministamm | 🟢`", server: 2.144.22.84, port: 8008, type: vless, tls: true, packet-encoding: xudp, uuid: becd8a5a-775e-4613-beae-4c537721bc60, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 109.95.65.242:8032, server: 109.95.65.242, port: 8032, type: vless, tls: true, packet-encoding: xudp, uuid: c049b9e1-3b34-4b3c-9e10-4978f11dec75, host: soft98.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: saministamm, server: dragon.socialxxmedia.pro, port: 350, type: vless, tls: true, packet-encoding: xudp, uuid: c0ac5114-b6e9-216a-4c11-9ac0c515b8ff, host: fast.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: saministamm 2, server: 6t8q56c58d.0g97vcf0bhjg6sa4n1xx.realytag.com, port: 882, type: vless, tls: true, packet-encoding: xudp, uuid: c3f30d4c-2ba7-4cb8-aee1-a1ce9652d5aa, host: skyroom.online%2Cgharar.ir%2Cigap.net, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 94.182.91.213:8443, server: 94.182.91.213, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: c4b0b136-5345-4c43-89e4-2b77753acaca, network: ws, ws-opts: {path: /mnRThvbnmNbtghj, headers: {Host: shst218.hivehost.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ایران ۳@saministamm, server: tcp-abr-tr.connect-2.org, port: 8081, type: vless, tls: true, packet-encoding: xudp, uuid: c5cd439e-c689-47c3-990b-f365514498ec, host: web.bale.ai, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 20Gig(saministamm)👽, server: 89.44.240.5, port: 45947, type: vless, tls: true, packet-encoding: xudp, uuid: c68405e8-6931-4048-943d-7cb137362ceb, host: cbi.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | جوین باش تلگرام` 2", server: titan.socialxxmedia.pro, port: 1937, type: vless, tls: true, packet-encoding: xudp, uuid: c9f7b50d-0f3c-a1f1-a36e-015ce0112a28, servername: titan.socialxxmedia.pro, host: titan.socialxxmedia.pro, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل تلگرام` 3", server: 81.12.54.107, port: 4440, type: vless, tls: true, packet-encoding: xudp, uuid: cd1744cd-677e-4e77-a70f-4eea2c44aa81, host: varzesh3.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: saministamm 3, server: 109.95.65.242, port: 8032, type: vless, tls: true, packet-encoding: xudp, uuid: d10bf921-9b53-434f-9fc7-2af7a3dad17b, host: soft98.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل تلگرام` 4", server: nt5.vhuma.com, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: d2504171-abe9-4eea-8364-0dbbff4a54b1, host: bama.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | تلگرام جوین باش`", server: mh52M5fSx0.zTZS0jb1r6G4z9mN9o2c.realytag.com, port: 883, type: vless, tls: true, packet-encoding: xudp, uuid: d463f08d-10ee-449a-82fe-437795d95ae4, host: skyroom.online%2Cgharar.ir%2Cigap.net, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | تلگرام جوین باش` 2", server: beta.tomandjery.eu, port: 1002, type: vless, tls: true, packet-encoding: xudp, uuid: d480179e-77ee-44f7-9fde-c66ad72e04ac, servername: play.google.com, host: play.google.com, path: /, reality-opts: {public-key: 8kF3OSt4WYVsMqvbgoq2wGzRXk05az1AeVE2v9596V8, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: s4.laptopstock7.com:9976, server: s4.laptopstock7.com, port: 9976, type: vless, tls: true, packet-encoding: xudp, uuid: e83e714e-d2ca-486b-ae88-1e40b2c2d0a8, host: telewebion.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: s1.fastsnap.info:29253, server: s1.fastsnap.info, port: 29253, type: vless, tls: true, packet-encoding: xudp, uuid: ec9ad2c4-0a26-4233-be07-b1d2176386ae, host: s1.fastsnap.info, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 185.136.135.172:41002 2, server: 185.136.135.172, port: 41002, type: vless, tls: true, packet-encoding: xudp, uuid: f5630288-5254-42b5-b098-d7d5737e831a, host: fast.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | جوین شو تلگرام", server: link7.mizbanertebatfarda.site, port: 6007, type: vmess, uuid: 5afbc58d-759b-4a43-ae33-5a2b4ceee606, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: saministamm 4, server: gr1.iranishops.com, port: 443, type: vmess, uuid: 6997ed48-2733-40f8-ba87-566e3efdc5d0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: چنل تلگراممون @saministamm, server: klotop.officialvpn.shop, port: 12048, type: vmess, uuid: e35870d9-a079-41e9-942c-804f853b3fa2, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+proxy-groups:
+  - name: نوع انتخاب پروکسی 🔀
+    type: select
+    proxies:
+      - اتصال پایدار 🔗
+      - خودکار (بهترین پینگ) 🤖
+      - دستی 🤏🏻
+      - پشتیبان (در صورت قطعی) 🧯
+      - توزیع بار (پایدار) 🧲
+      - توزیع بار (موقت) ⏳
+      - توزیع بار (گردشی) 🔁
+      - قطع اینترنت ⛔
+      - بدون فیلترشکن 🛡️
+  - name: دستی 🤏🏻
+    type: select
+    proxies:
+      - 𝐆𝐞𝐫𝐦𝐚𝐧𝐲 - [ 43388046 ]
+      - ملی شکن 4 🇮🇷@saministamm
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢`"
+      - mh52M5fSx0.zTZS0jb1r6G4z9mN9o2c.realytag.com:883
+      - 94.183.169.8:882
+      - 185.136.135.172:41002
+      - 94.183.180.51:7777
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢` 2"
+      - "@saministamm | چنل تلگرام`"
+      - "@saministamm"
+      - کانال تلگرام ما | @saministamm
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل‌تلگرام`"
+      - "@saministamm | تلگرام جوین باش`"
+      - چنل
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل‌تلگرام` 2"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل تلگرام`"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | جوین باش تلگرام`"
+      - "@saministamm 2"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل تلگرام` 2"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢` 3"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | جوین شو تلگرام`"
+      - "- @saministamm | 🟢`"
+      - 109.95.65.242:8032
+      - saministamm
+      - saministamm 2
+      - 94.182.91.213:8443
+      - ایران ۳@saministamm
+      - 20Gig(saministamm)👽
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | جوین باش تلگرام` 2"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل تلگرام` 3"
+      - saministamm 3
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل تلگرام` 4"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | تلگرام جوین باش`"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | تلگرام جوین باش` 2"
+      - s4.laptopstock7.com:9976
+      - s1.fastsnap.info:29253
+      - 185.136.135.172:41002 2
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | جوین شو تلگرام"
+      - saministamm 4
+      - چنل تلگراممون @saministamm
+  - name: خودکار (بهترین پینگ) 🤖
+    type: url-test
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    tolerance: 50
+    proxies:
+      - 𝐆𝐞𝐫𝐦𝐚𝐧𝐲 - [ 43388046 ]
+      - ملی شکن 4 🇮🇷@saministamm
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢`"
+      - mh52M5fSx0.zTZS0jb1r6G4z9mN9o2c.realytag.com:883
+      - 94.183.169.8:882
+      - 185.136.135.172:41002
+      - 94.183.180.51:7777
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢` 2"
+      - "@saministamm | چنل تلگرام`"
+      - "@saministamm"
+      - کانال تلگرام ما | @saministamm
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل‌تلگرام`"
+      - "@saministamm | تلگرام جوین باش`"
+      - چنل
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل‌تلگرام` 2"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل تلگرام`"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | جوین باش تلگرام`"
+      - "@saministamm 2"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل تلگرام` 2"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢` 3"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | جوین شو تلگرام`"
+      - "- @saministamm | 🟢`"
+      - 109.95.65.242:8032
+      - saministamm
+      - saministamm 2
+      - 94.182.91.213:8443
+      - ایران ۳@saministamm
+      - 20Gig(saministamm)👽
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | جوین باش تلگرام` 2"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل تلگرام` 3"
+      - saministamm 3
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل تلگرام` 4"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | تلگرام جوین باش`"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | تلگرام جوین باش` 2"
+      - s4.laptopstock7.com:9976
+      - s1.fastsnap.info:29253
+      - 185.136.135.172:41002 2
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | جوین شو تلگرام"
+      - saministamm 4
+      - چنل تلگراممون @saministamm
+  - name: پشتیبان (در صورت قطعی) 🧯
+    type: fallback
+    url: https://www.gstatic.com/generate_204
+    interval: 600
+    tolerance: 50
+    proxies:
+      - 𝐆𝐞𝐫𝐦𝐚𝐧𝐲 - [ 43388046 ]
+      - ملی شکن 4 🇮🇷@saministamm
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢`"
+      - mh52M5fSx0.zTZS0jb1r6G4z9mN9o2c.realytag.com:883
+      - 94.183.169.8:882
+      - 185.136.135.172:41002
+      - 94.183.180.51:7777
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢` 2"
+      - "@saministamm | چنل تلگرام`"
+      - "@saministamm"
+      - کانال تلگرام ما | @saministamm
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل‌تلگرام`"
+      - "@saministamm | تلگرام جوین باش`"
+      - چنل
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل‌تلگرام` 2"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل تلگرام`"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | جوین باش تلگرام`"
+      - "@saministamm 2"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل تلگرام` 2"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢` 3"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | جوین شو تلگرام`"
+      - "- @saministamm | 🟢`"
+      - 109.95.65.242:8032
+      - saministamm
+      - saministamm 2
+      - 94.182.91.213:8443
+      - ایران ۳@saministamm
+      - 20Gig(saministamm)👽
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | جوین باش تلگرام` 2"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل تلگرام` 3"
+      - saministamm 3
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل تلگرام` 4"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | تلگرام جوین باش`"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | تلگرام جوین باش` 2"
+      - s4.laptopstock7.com:9976
+      - s1.fastsnap.info:29253
+      - 185.136.135.172:41002 2
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | جوین شو تلگرام"
+      - saministamm 4
+      - چنل تلگراممون @saministamm
+  - name: اتصال پایدار 🔗
+    type: url-test
+    url: https://cp.cloudflare.com/generate_204
+    interval: 30
+    tolerance: 50
+    proxies:
+      - خودکار (بهترین پینگ) 🤖
+      - پشتیبان (در صورت قطعی) 🧯
+      - دستی 🤏🏻
+  - name: توزیع بار (پایدار) 🧲
+    type: load-balance
+    strategy: consistent-hashing
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    proxies:
+      - 𝐆𝐞𝐫𝐦𝐚𝐧𝐲 - [ 43388046 ]
+      - ملی شکن 4 🇮🇷@saministamm
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢`"
+      - mh52M5fSx0.zTZS0jb1r6G4z9mN9o2c.realytag.com:883
+      - 94.183.169.8:882
+      - 185.136.135.172:41002
+      - 94.183.180.51:7777
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢` 2"
+      - "@saministamm | چنل تلگرام`"
+      - "@saministamm"
+      - کانال تلگرام ما | @saministamm
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل‌تلگرام`"
+      - "@saministamm | تلگرام جوین باش`"
+      - چنل
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل‌تلگرام` 2"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل تلگرام`"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | جوین باش تلگرام`"
+      - "@saministamm 2"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل تلگرام` 2"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢` 3"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | جوین شو تلگرام`"
+      - "- @saministamm | 🟢`"
+      - 109.95.65.242:8032
+      - saministamm
+      - saministamm 2
+      - 94.182.91.213:8443
+      - ایران ۳@saministamm
+      - 20Gig(saministamm)👽
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | جوین باش تلگرام` 2"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل تلگرام` 3"
+      - saministamm 3
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل تلگرام` 4"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | تلگرام جوین باش`"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | تلگرام جوین باش` 2"
+      - s4.laptopstock7.com:9976
+      - s1.fastsnap.info:29253
+      - 185.136.135.172:41002 2
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | جوین شو تلگرام"
+      - saministamm 4
+      - چنل تلگراممون @saministamm
+  - name: توزیع بار (گردشی) 🔁
+    type: load-balance
+    strategy: consistent-hashing
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    proxies:
+      - 𝐆𝐞𝐫𝐦𝐚𝐧𝐲 - [ 43388046 ]
+      - ملی شکن 4 🇮🇷@saministamm
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢`"
+      - mh52M5fSx0.zTZS0jb1r6G4z9mN9o2c.realytag.com:883
+      - 94.183.169.8:882
+      - 185.136.135.172:41002
+      - 94.183.180.51:7777
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢` 2"
+      - "@saministamm | چنل تلگرام`"
+      - "@saministamm"
+      - کانال تلگرام ما | @saministamm
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل‌تلگرام`"
+      - "@saministamm | تلگرام جوین باش`"
+      - چنل
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل‌تلگرام` 2"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل تلگرام`"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | جوین باش تلگرام`"
+      - "@saministamm 2"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل تلگرام` 2"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢` 3"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | جوین شو تلگرام`"
+      - "- @saministamm | 🟢`"
+      - 109.95.65.242:8032
+      - saministamm
+      - saministamm 2
+      - 94.182.91.213:8443
+      - ایران ۳@saministamm
+      - 20Gig(saministamm)👽
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | جوین باش تلگرام` 2"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل تلگرام` 3"
+      - saministamm 3
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل تلگرام` 4"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | تلگرام جوین باش`"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | تلگرام جوین باش` 2"
+      - s4.laptopstock7.com:9976
+      - s1.fastsnap.info:29253
+      - 185.136.135.172:41002 2
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | جوین شو تلگرام"
+      - saministamm 4
+      - چنل تلگراممون @saministamm
+  - name: توزیع بار (موقت) ⏳
+    type: load-balance
+    strategy: consistent-hashing
+    url: https://api.v2fly.org/checkConnection.svgz
+    interval: 600
+    proxies:
+      - 𝐆𝐞𝐫𝐦𝐚𝐧𝐲 - [ 43388046 ]
+      - ملی شکن 4 🇮🇷@saministamm
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢`"
+      - mh52M5fSx0.zTZS0jb1r6G4z9mN9o2c.realytag.com:883
+      - 94.183.169.8:882
+      - 185.136.135.172:41002
+      - 94.183.180.51:7777
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢` 2"
+      - "@saministamm | چنل تلگرام`"
+      - "@saministamm"
+      - کانال تلگرام ما | @saministamm
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل‌تلگرام`"
+      - "@saministamm | تلگرام جوین باش`"
+      - چنل
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل‌تلگرام` 2"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل تلگرام`"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | جوین باش تلگرام`"
+      - "@saministamm 2"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل تلگرام` 2"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢` 3"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | جوین شو تلگرام`"
+      - "- @saministamm | 🟢`"
+      - 109.95.65.242:8032
+      - saministamm
+      - saministamm 2
+      - 94.182.91.213:8443
+      - ایران ۳@saministamm
+      - 20Gig(saministamm)👽
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | جوین باش تلگرام` 2"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل تلگرام` 3"
+      - saministamm 3
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | چنل تلگرام` 4"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | تلگرام جوین باش`"
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | تلگرام جوین باش` 2"
+      - s4.laptopstock7.com:9976
+      - s1.fastsnap.info:29253
+      - 185.136.135.172:41002 2
+      - "@𝙨𝙖𝙢𝙞𝙣𝙞𝙨𝙩𝙖𝙢𝙢 | جوین شو تلگرام"
+      - saministamm 4
+      - چنل تلگراممون @saministamm
+  - name: دانلود منیجر 📥
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+      - اجازه ندادن 🚫
+  - name: تلگرام 💬
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: یوتیوب ▶️
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: گوگل 🌍
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: واتس آپ 🟢
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: هوش مصنوعی 🤖
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: توییتر 🐦
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: اسپاتیفای 🎵
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: اینستاگرام 📸
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: تبلیغات 🆎
+    type: select
+    proxies:
+      - اجازه ندادن 🚫
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+  - name: تبلیغات اپ ها 🍃
+    type: select
+    proxies:
+      - اجازه ندادن 🚫
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+  - name: رهگیری جهانی 🛑
+    type: select
+    proxies:
+      - اجازه ندادن 🚫
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+  - name: سایتای مخرب ⚠️
+    type: select
+    proxies:
+      - اجازه ندادن 🚫
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+  - name: استیم 🖥️
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: گیم 🎮
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: توییچ 📡
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: سایتای ایرانی 🇮🇷
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: ویندوز 🧊
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: کلودفلر ☁️
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: گیتهاب 🐙
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+  - name: دیسکورد 🗣️
+    type: select
+    proxies:
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+      - اجازه ندادن 🚫
+  - name: انی‌دسک 🔴
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+      - اجازه ندادن 🚫
+  - name: استریمیو 🎬
+    type: select
+    proxies:
+      - بدون فیلترشکن 🛡️
+      - نوع انتخاب پروکسی 🔀
+      - اجازه ندادن 🚫
+  - name: سایتای سانسوری 🤬
+    type: select
+    proxies:
+      - اجازه ندادن 🚫
+      - نوع انتخاب پروکسی 🔀
+      - بدون فیلترشکن 🛡️
+  - name: بدون فیلترشکن 🛡️
+    type: select
+    proxies:
+      - DIRECT
+  - name: قطع اینترنت ⛔
+    type: select
+    proxies:
+      - REJECT
+  - name: اجازه ندادن 🚫
+    type: select
+    proxies:
+      - REJECT
+ntp:
+  enable: true
+  server: time.apple.com
+  port: 123
+  interval: 30
+rules:
+  - RULE-SET,DownloadManagers,دانلود منیجر 📥
+  - RULE-SET,Download,دانلود منیجر 📥
+  - RULE-SET,stremio,استریمیو 🎬
+  - RULE-SET,BanProgramAD,تبلیغات اپ ها 🍃
+  - RULE-SET,BanAD,رهگیری جهانی 🛑
+  - RULE-SET,PrivateTracker,رهگیری جهانی 🛑
+  - RULE-SET,category_public_tracker,رهگیری جهانی 🛑
+  - RULE-SET,malware,سایتای مخرب ⚠️
+  - RULE-SET,phishing,سایتای مخرب ⚠️
+  - RULE-SET,cryptominers,سایتای مخرب ⚠️
+  - RULE-SET,warninglist,سایتای مخرب ⚠️
+  - RULE-SET,Ponzi,سایتای مخرب ⚠️
+  - RULE-SET,LiteAds,تبلیغات 🆎
+  - RULE-SET,iran_ads,تبلیغات 🆎
+  - RULE-SET,PersianBlocker,تبلیغات 🆎
+  - RULE-SET,ads,تبلیغات 🆎
+  - RULE-SET,BanEasyList,تبلیغات 🆎
+  - RULE-SET,twitch,توییچ 📡
+  - PROCESS-NAME,Telegram.exe,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger,تلگرام 💬
+  - PROCESS-NAME,org.telegram.messenger.web,تلگرام 💬
+  - RULE-SET,telegram,تلگرام 💬
+  - RULE-SET,YouTube,یوتیوب ▶️
+  - RULE-SET,youtube,یوتیوب ▶️
+  - RULE-SET,YouTubeMusic,یوتیوب ▶️
+  - PROCESS-NAME,com.anydesk.anydeskandroid,انی‌دسک 🔴
+  - PROCESS-NAME,AnyDesk.exe,انی‌دسک 🔴
+  - DOMAIN-SUFFIX,anydesk.com,انی‌دسک 🔴
+  - PROCESS-NAME,Twitter.exe,توییتر 🐦
+  - PROCESS-NAME,com.twitter.android,توییتر 🐦
+  - RULE-SET,Chotwitter,توییتر 🐦
+  - RULE-SET,mihTwitter,توییتر 🐦
+  - RULE-SET,Domtwitter,توییتر 🐦
+  - PROCESS-NAME,com.spotify.music,اسپاتیفای 🎵
+  - PROCESS-NAME,Spotify.exe,اسپاتیفای 🎵
+  - RULE-SET,DomainSpotify,اسپاتیفای 🎵
+  - RULE-SET,mihspotify,اسپاتیفای 🎵
+  - PROCESS-NAME,com.instagram.android,اینستاگرام 📸
+  - RULE-SET,instagram,اینستاگرام 📸
+  - DOMAIN-SUFFIX,deepseek.com,هوش مصنوعی 🤖
+  - DOMAIN-SUFFIX,qwen.ai,هوش مصنوعی 🤖
+  - RULE-SET,category-ai,هوش مصنوعی 🤖
+  - RULE-SET,censor,سایتای سانسوری 🤬
+  - RULE-SET,apps,سایتای ایرانی 🇮🇷
+  - RULE-SET,iran,سایتای ایرانی 🇮🇷
+  - RULE-SET,arvancloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,derakcloud,سایتای ایرانی 🇮🇷
+  - RULE-SET,iranserver,سایتای ایرانی 🇮🇷
+  - RULE-SET,parspack,سایتای ایرانی 🇮🇷
+  - RULE-SET,irasn,سایتای ایرانی 🇮🇷
+  - RULE-SET,ircidr,سایتای ایرانی 🇮🇷
+  - RULE-SET,ir,سایتای ایرانی 🇮🇷
+  - RULE-SET,category_ir,سایتای ایرانی 🇮🇷
+  - RULE-SET,whatsapp,واتس آپ 🟢
+  - RULE-SET,steam,استیم 🖥️
+  - RULE-SET,SteamRegionCheck,استیم 🖥️
+  - RULE-SET,game,گیم 🎮
+  - RULE-SET,GameDownload,گیم 🎮
+  - RULE-SET,category-games,گیم 🎮
+  - RULE-SET,Xbox,گیم 🎮
+  - RULE-SET,discord,دیسکورد 🗣️
+  - RULE-SET,xiaomi_white_list,نوع انتخاب پروکسی 🔀
+  - RULE-SET,xiaomi-ads,تبلیغات اپ ها 🍃
+  - RULE-SET,xiaomi_block_list,تبلیغات اپ ها 🍃
+  - RULE-SET,windows,ویندوز 🧊
+  - RULE-SET,cloudflare,کلودفلر ☁️
+  - RULE-SET,github,گیتهاب 🐙
+  - PROCESS-NAME,com.android.vending,نوع انتخاب پروکسی 🔀
+  - PROCESS-NAME,com.google.android.gms,نوع انتخاب پروکسی 🔀
+  - RULE-SET,google-play,نوع انتخاب پروکسی 🔀
+  - RULE-SET,google,گوگل 🌍
+  - IP-CIDR,10.10.34.0/24,نوع انتخاب پروکسی 🔀
+  - RULE-SET,local_ips,بدون فیلترشکن 🛡️
+  - RULE-SET,private,بدون فیلترشکن 🛡️
+  - MATCH,نوع انتخاب پروکسی 🔀
