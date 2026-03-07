@@ -5,12 +5,7 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@meliproxyy`", server: ja1.diiginet.ir, port: 2000, type: vless, tls: true, packet-encoding: xudp, uuid: 8b3eb5a9-2f8d-435f-865d-3437b02444b6, host: reata.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@meliproxyy` 2", server: gerfan.rjwarehousing.ir, port: 9987, type: vless, tls: true, packet-encoding: xudp, uuid: ee33fe22-aae6-4f52-8ce4-b5373c9af35f, host: refersion.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@meliproxyy", server: Dc-2.CeNtRaLnEt.cV, port: 3003, type: vmess, uuid: fc65868c-97fd-4a8b-bf3c-b30fe06b38a9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@meliproxyy 2", server: dC-1.cEnTrAlNeT.Cv, port: 3003, type: vmess, uuid: 05941c9a-8820-4181-bb28-8f535f56a381, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@meliproxyy 3", server: dC-1.cEnTrAlNeT.Cv, port: 3003, type: vmess, uuid: 62d8245f-8bc6-42ee-8e56-c77cdfc2e1c6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@meliproxyy 4", server: dC-2.cENtRaLnEt.ClIcK, port: 3003, type: vmess, uuid: 040bf359-f6ad-4553-9e69-05bb65288d0c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@meliproxyy`", server: rk4no3.cdnhoo.top, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: ccac781d-1f3e-4e5b-99c2-d07d653b81e8, network: ws, ws-opts: {path: /get, headers: {Host: rk4no3.cdnhoo.top}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -18,11 +13,6 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - "@meliproxyy`"
-      - "@meliproxyy` 2"
-      - "@meliproxyy"
-      - "@meliproxyy 2"
-      - "@meliproxyy 3"
-      - "@meliproxyy 4"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -30,11 +20,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@meliproxyy`"
-      - "@meliproxyy` 2"
-      - "@meliproxyy"
-      - "@meliproxyy 2"
-      - "@meliproxyy 3"
-      - "@meliproxyy 4"
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -42,44 +27,24 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - "@meliproxyy`"
-      - "@meliproxyy` 2"
-      - "@meliproxyy"
-      - "@meliproxyy 2"
-      - "@meliproxyy 3"
-      - "@meliproxyy 4"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@meliproxyy`"
-      - "@meliproxyy` 2"
-      - "@meliproxyy"
-      - "@meliproxyy 2"
-      - "@meliproxyy 3"
-      - "@meliproxyy 4"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - "@meliproxyy`"
-      - "@meliproxyy` 2"
-      - "@meliproxyy"
-      - "@meliproxyy 2"
-      - "@meliproxyy 3"
-      - "@meliproxyy 4"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@meliproxyy`"
-      - "@meliproxyy` 2"
-      - "@meliproxyy"
-      - "@meliproxyy 2"
-      - "@meliproxyy 3"
-      - "@meliproxyy 4"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -108,11 +73,6 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - "@meliproxyy`"
-      - "@meliproxyy` 2"
-      - "@meliproxyy"
-      - "@meliproxyy 2"
-      - "@meliproxyy 3"
-      - "@meliproxyy 4"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
