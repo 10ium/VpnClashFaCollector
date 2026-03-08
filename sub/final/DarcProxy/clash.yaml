@@ -465,9 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@ay", server: de-2-tun-single.starping1.fun, port: 8083, type: vless, tls: true, packet-encoding: xudp, uuid: 02f8ee0f-499a-4a9a-a150-f4dc8e4c85b2, host: www.speedtest.net, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: VIP @DarcProxy, server: lord.socialxxmedia.pro, port: 440, type: vless, tls: true, packet-encoding: xudp, uuid: 7c607c15-6c0c-60e6-602e-08936fca83c3, host: fast.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@ay 2", server: airman-defense.oblivionspark.com, port: 5874, type: vless, tls: true, packet-encoding: xudp, uuid: b31c46fe-25db-4109-ab46-3f1343bd752b, host: airman-defense.oblivionspark.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ViP, server: 89.45.56.83, port: 50156, type: vless, tls: true, packet-encoding: xudp, uuid: ee5ac6bd-3709-45d4-83e3-086cb10827ad, network: ws, ws-opts: {path: /, headers: {Host: 89.45.56.83}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,27 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@ay"
-      - VIP @DarcProxy
-      - "@ay 2"
+      - ViP
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@ay"
-      - VIP @DarcProxy
-      - "@ay 2"
+      - ViP
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@ay"
-      - VIP @DarcProxy
-      - "@ay 2"
+      - ViP
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -520,27 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@ay"
-      - VIP @DarcProxy
-      - "@ay 2"
+      - ViP
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@ay"
-      - VIP @DarcProxy
-      - "@ay 2"
+      - ViP
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@ay"
-      - VIP @DarcProxy
-      - "@ay 2"
+      - ViP
   - name: دانلود منیجر 📥
     type: select
     proxies:

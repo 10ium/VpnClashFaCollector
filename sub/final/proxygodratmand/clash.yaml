@@ -472,8 +472,9 @@ proxies:
   - {name: "@proxygodratmand قطع شدی بیا چنل فقط 4", server: 2.144.7.223, port: 1981, type: vless, tls: true, packet-encoding: xudp, uuid: 408563da-f597-4e07-8cfd-92bffd821543, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxygodratmand قطع شدی بیا چنل فقط 5", server: 85.133.240.160, port: 35812, type: vless, tls: true, packet-encoding: xudp, uuid: 5ee4a55f-5f6b-4a97-8670-8631238e4c6f, servername: www.microsoft.com, host: www.microsoft.com, path: /, reality-opts: {public-key: LOS87LofEJA0paPzrS2mIFhmTaqkOZC-AUFgNvE1UEs, short-id: 82cada35130f1ef2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxygodratmand ق�…", server: 85.133.240.160, port: 35812, type: vless, tls: true, packet-encoding: xudp, uuid: 5ee4a55f-5f6b-4a97-8670-8631238e4c6f, servername: www.microsoft.com, host: www.microsoft.com, path: /, reality-opts: {public-key: LOS87LofEJA0paPzrS2mIFhmTaqkOZC-AUFgNvE1UEs, short-id: 82cada35130f1ef2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxygodratmand قطع شدی بیا چنل فقط 6", server: tun.p2p1.sbs, port: 2020, type: vmess, uuid: 497868e2-0b12-4244-a044-3ad0a94cb46b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxygodratmand قطع شدی بیا چنل فقط 7", server: stars.ad, port: 80, type: vmess, uuid: 20f57edd-bbcb-44a9-8a93-7d944df91a84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxygodratmand قطع شدی بیا چنل فقط 6", server: rk4no3.cdnhoo.top, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 9f00e109-36ba-47a6-8dd5-4487fb93a6ff, network: ws, ws-opts: {path: /get, headers: {Host: rk4no3.cdnhoo.top}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxygodratmand قطع شدی بیا چنل فقط 7", server: tun.p2p1.sbs, port: 2020, type: vmess, uuid: 497868e2-0b12-4244-a044-3ad0a94cb46b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxygodratmand قطع شدی بیا چنل فقط 8", server: stars.ad, port: 80, type: vmess, uuid: 20f57edd-bbcb-44a9-8a93-7d944df91a84, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -498,6 +499,7 @@ proxy-groups:
       - "@proxygodratmand قطع شدی بیا چنل فقط 5"
       - "@proxygodratmand قطع شدی بیا چنل فقط 6"
       - "@proxygodratmand قطع شدی بیا چنل فقط 7"
+      - "@proxygodratmand قطع شدی بیا چنل فقط 8"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -512,6 +514,7 @@ proxy-groups:
       - "@proxygodratmand قطع شدی بیا چنل فقط 5"
       - "@proxygodratmand قطع شدی بیا چنل فقط 6"
       - "@proxygodratmand قطع شدی بیا چنل فقط 7"
+      - "@proxygodratmand قطع شدی بیا چنل فقط 8"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -526,6 +529,7 @@ proxy-groups:
       - "@proxygodratmand قطع شدی بیا چنل فقط 5"
       - "@proxygodratmand قطع شدی بیا چنل فقط 6"
       - "@proxygodratmand قطع شدی بیا چنل فقط 7"
+      - "@proxygodratmand قطع شدی بیا چنل فقط 8"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -549,6 +553,7 @@ proxy-groups:
       - "@proxygodratmand قطع شدی بیا چنل فقط 5"
       - "@proxygodratmand قطع شدی بیا چنل فقط 6"
       - "@proxygodratmand قطع شدی بیا چنل فقط 7"
+      - "@proxygodratmand قطع شدی بیا چنل فقط 8"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -563,6 +568,7 @@ proxy-groups:
       - "@proxygodratmand قطع شدی بیا چنل فقط 5"
       - "@proxygodratmand قطع شدی بیا چنل فقط 6"
       - "@proxygodratmand قطع شدی بیا چنل فقط 7"
+      - "@proxygodratmand قطع شدی بیا چنل فقط 8"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -577,6 +583,7 @@ proxy-groups:
       - "@proxygodratmand قطع شدی بیا چنل فقط 5"
       - "@proxygodratmand قطع شدی بیا چنل فقط 6"
       - "@proxygodratmand قطع شدی بیا چنل فقط 7"
+      - "@proxygodratmand قطع شدی بیا چنل فقط 8"
   - name: دانلود منیجر 📥
     type: select
     proxies:

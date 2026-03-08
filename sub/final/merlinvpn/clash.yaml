@@ -465,14 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: CH, server: h8.always-update.com, port: 29008, type: vmess, uuid: 5b85ae50-1267-5a1a-98f5-8d30df480c23, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇩🇪 DE, server: h1.always-update.com, port: 29001, type: vmess, uuid: 5b85ae50-1267-5a1a-98f5-8d30df480c23, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇪🇸 ES, server: h5.always-update.com, port: 29005, type: vmess, uuid: 5b85ae50-1267-5a1a-98f5-8d30df480c23, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: FI, server: h2.always-update.com, port: 29002, type: vmess, uuid: 5b85ae50-1267-5a1a-98f5-8d30df480c23, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: TR, server: h6.always-update.com, port: 29006, type: vmess, uuid: 5b85ae50-1267-5a1a-98f5-8d30df480c23, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇳🇱 NL, server: h4.always-update.com, port: 29004, type: vmess, uuid: 5b85ae50-1267-5a1a-98f5-8d30df480c23, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇺🇦 UA, server: h7.always-update.com, port: 29007, type: vmess, uuid: 5b85ae50-1267-5a1a-98f5-8d30df480c23, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇺🇸 US, server: h3.always-update.com, port: 29003, type: vmess, uuid: 5b85ae50-1267-5a1a-98f5-8d30df480c23, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MerlinVPN", server: 85.133.227.39, port: 35812, type: vless, tls: true, packet-encoding: xudp, uuid: 0773112d-c3fc-4a9f-aea0-d9be521452ce, servername: learn.microsoft.com, host: learn.microsoft.com, path: /, reality-opts: {public-key: LOS87LofEJA0paPzrS2mIFhmTaqkOZC-AUFgNvE1UEs, short-id: 82cada35130f1ef2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MerlinVPN 2", server: 94.183.172.28, port: 27836, type: vless, tls: true, packet-encoding: xudp, uuid: 1eb55289-62f1-4e79-90a8-5412e0f33a93, host: fast.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MerlinVPN 3", server: 57.129.53.181, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MerlinVPN 4", server: 57.129.53.181, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprxvision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MerlinVPN 5", server: 51.250.3.29, port: 7445, type: vless, tls: true, packet-encoding: xudp, uuid: e96096d9-74c7-4a64-904a-cab4a4428cce, servername: api-maps.yandex.ru, host: api-maps.yandex.ru, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -489,42 +486,33 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - CH
-      - 🇩🇪 DE
-      - 🇪🇸 ES
-      - FI
-      - TR
-      - 🇳🇱 NL
-      - 🇺🇦 UA
-      - 🇺🇸 US
+      - "@MerlinVPN"
+      - "@MerlinVPN 2"
+      - "@MerlinVPN 3"
+      - "@MerlinVPN 4"
+      - "@MerlinVPN 5"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - CH
-      - 🇩🇪 DE
-      - 🇪🇸 ES
-      - FI
-      - TR
-      - 🇳🇱 NL
-      - 🇺🇦 UA
-      - 🇺🇸 US
+      - "@MerlinVPN"
+      - "@MerlinVPN 2"
+      - "@MerlinVPN 3"
+      - "@MerlinVPN 4"
+      - "@MerlinVPN 5"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - CH
-      - 🇩🇪 DE
-      - 🇪🇸 ES
-      - FI
-      - TR
-      - 🇳🇱 NL
-      - 🇺🇦 UA
-      - 🇺🇸 US
+      - "@MerlinVPN"
+      - "@MerlinVPN 2"
+      - "@MerlinVPN 3"
+      - "@MerlinVPN 4"
+      - "@MerlinVPN 5"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -540,42 +528,33 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - CH
-      - 🇩🇪 DE
-      - 🇪🇸 ES
-      - FI
-      - TR
-      - 🇳🇱 NL
-      - 🇺🇦 UA
-      - 🇺🇸 US
+      - "@MerlinVPN"
+      - "@MerlinVPN 2"
+      - "@MerlinVPN 3"
+      - "@MerlinVPN 4"
+      - "@MerlinVPN 5"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - CH
-      - 🇩🇪 DE
-      - 🇪🇸 ES
-      - FI
-      - TR
-      - 🇳🇱 NL
-      - 🇺🇦 UA
-      - 🇺🇸 US
+      - "@MerlinVPN"
+      - "@MerlinVPN 2"
+      - "@MerlinVPN 3"
+      - "@MerlinVPN 4"
+      - "@MerlinVPN 5"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - CH
-      - 🇩🇪 DE
-      - 🇪🇸 ES
-      - FI
-      - TR
-      - 🇳🇱 NL
-      - 🇺🇦 UA
-      - 🇺🇸 US
+      - "@MerlinVPN"
+      - "@MerlinVPN 2"
+      - "@MerlinVPN 3"
+      - "@MerlinVPN 4"
+      - "@MerlinVPN 5"
   - name: دانلود منیجر 📥
     type: select
     proxies:

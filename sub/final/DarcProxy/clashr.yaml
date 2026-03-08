@@ -5,60 +5,46 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@ay", server: de-2-tun-single.starping1.fun, port: 8083, type: vless, tls: true, packet-encoding: xudp, uuid: 02f8ee0f-499a-4a9a-a150-f4dc8e4c85b2, host: www.speedtest.net, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: VIP @DarcProxy, server: lord.socialxxmedia.pro, port: 440, type: vless, tls: true, packet-encoding: xudp, uuid: 7c607c15-6c0c-60e6-602e-08936fca83c3, host: fast.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@ay 2", server: airman-defense.oblivionspark.com, port: 5874, type: vless, tls: true, packet-encoding: xudp, uuid: b31c46fe-25db-4109-ab46-3f1343bd752b, host: airman-defense.oblivionspark.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ViP, server: 89.45.56.83, port: 50156, type: vless, tls: true, packet-encoding: xudp, uuid: ee5ac6bd-3709-45d4-83e3-086cb10827ad, network: ws, ws-opts: {path: /, headers: {Host: 89.45.56.83}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@ay"
-      - VIP @DarcProxy
-      - "@ay 2"
+      - ViP
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@ay"
-      - VIP @DarcProxy
-      - "@ay 2"
+      - ViP
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@ay"
-      - VIP @DarcProxy
-      - "@ay 2"
+      - ViP
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@ay"
-      - VIP @DarcProxy
-      - "@ay 2"
+      - ViP
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@ay"
-      - VIP @DarcProxy
-      - "@ay 2"
+      - ViP
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@ay"
-      - VIP @DarcProxy
-      - "@ay 2"
+      - ViP
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -86,9 +72,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@ay"
-      - VIP @DarcProxy
-      - "@ay 2"
+      - ViP
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
