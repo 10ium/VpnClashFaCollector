@@ -465,6 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: 67@oneclickvpnkeys, server: 150.241.78.128, port: 1935, type: hysteria2, ports: 1935, password: hysteria2_fastlane_81uqqeagr%3ALepBwrE84qJQqGYctplZF35Z8cSmFDn6, sni: de3.h.fastlanehosting.ru, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 66@oneclickvpnkeys, server: 144.31.63.58, port: 1935, type: hysteria2, ports: 1935, password: hysteria2_fastlane_e4139zxuu%3Av98M16cL2SxCumFUxZ6gwTRuniuT54lC, sni: de4.h.fastlanehosting.ru, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 13@oneclickvpnkeys, server: 150.241.79.106, port: 1935, type: hysteria2, ports: 1935, password: hysteria2_fastlane_qdx4o19um%3Ae6RGEpPpn2oiHxqlbReEFpJZr09OiVlb, sni: de2.h.fastlanehosting.ru, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -482,6 +484,8 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - 67@oneclickvpnkeys
+      - 66@oneclickvpnkeys
       - 13@oneclickvpnkeys
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -489,6 +493,8 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - 67@oneclickvpnkeys
+      - 66@oneclickvpnkeys
       - 13@oneclickvpnkeys
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -496,6 +502,8 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - 67@oneclickvpnkeys
+      - 66@oneclickvpnkeys
       - 13@oneclickvpnkeys
   - name: اتصال پایدار 🔗
     type: url-test
@@ -512,6 +520,8 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 67@oneclickvpnkeys
+      - 66@oneclickvpnkeys
       - 13@oneclickvpnkeys
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -519,6 +529,8 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 67@oneclickvpnkeys
+      - 66@oneclickvpnkeys
       - 13@oneclickvpnkeys
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -526,6 +538,8 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 67@oneclickvpnkeys
+      - 66@oneclickvpnkeys
       - 13@oneclickvpnkeys
   - name: دانلود منیجر 📥
     type: select

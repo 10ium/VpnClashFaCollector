@@ -465,10 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@PewezaVPN (تلگرام)`", server: 146.70.106.79, port: 21252, type: vless, tls: true, packet-encoding: xudp, uuid: 3361a952-096a-4ea5-965b-556e2f870bba, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@PewezaVPN (تلگرام)` 2", server: 109.95.65.242, port: 900, type: vless, tls: true, packet-encoding: xudp, uuid: 4dd14167-ddce-49d1-8322-133e82c0cbfb, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@PewezaVPN (تلگرام)` 3", server: Platform.snapp.ir.green-gaming-company.ir, port: 1011, type: vless, tls: true, packet-encoding: xudp, uuid: c72511d7-1729-403d-92c5-7448533a369a, host: s.cafebazaar.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@PewezaVPN (تلگرام)` 4", server: 185.126.203.167, port: 16957, type: vless, tls: true, packet-encoding: xudp, uuid: c967de89-af86-4eba-be64-34e5656ca994, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@PewezaVPN (تلگرام)`", server: g2-tun-nl.a1mshop2.xyz, port: 22560, type: vless, tls: true, packet-encoding: xudp, uuid: 4a250ab6-d97f-4a6c-93d2-d9b2d6807b6d, host: aparat.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@PewezaVPN (تلگرام)` 2", server: vipde2.persianpinggame.com, port: 9091, type: vless, tls: true, packet-encoding: xudp, uuid: 4f5def46-1a54-11f1-9053-92000723b4ab, host: filmnet.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@PewezaVPN (تلگرام)` 3", server: farzandeiran.iransalar.top, port: 21531, type: vless, tls: true, packet-encoding: xudp, uuid: 5cc82fdd-847a-4b11-9f91-3d8f35ff9e09, host: farzandeiran.iransalar.top, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@PewezaVPN (تلگرام)` 4", server: 213.177.176.182, port: 26401, type: vless, tls: true, packet-encoding: xudp, uuid: 8620a004-648c-43ab-9efe-4d3d82b12dc4, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@PewezaVPN (تلگرام)` 5", server: v2.royalway.shop, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: c3a8f526-6f41-4884-adb8-f33b4ec30fa6, host: v2.royalway.shop, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -489,6 +490,7 @@ proxy-groups:
       - "@PewezaVPN (تلگرام)` 2"
       - "@PewezaVPN (تلگرام)` 3"
       - "@PewezaVPN (تلگرام)` 4"
+      - "@PewezaVPN (تلگرام)` 5"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -499,6 +501,7 @@ proxy-groups:
       - "@PewezaVPN (تلگرام)` 2"
       - "@PewezaVPN (تلگرام)` 3"
       - "@PewezaVPN (تلگرام)` 4"
+      - "@PewezaVPN (تلگرام)` 5"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -509,6 +512,7 @@ proxy-groups:
       - "@PewezaVPN (تلگرام)` 2"
       - "@PewezaVPN (تلگرام)` 3"
       - "@PewezaVPN (تلگرام)` 4"
+      - "@PewezaVPN (تلگرام)` 5"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -528,6 +532,7 @@ proxy-groups:
       - "@PewezaVPN (تلگرام)` 2"
       - "@PewezaVPN (تلگرام)` 3"
       - "@PewezaVPN (تلگرام)` 4"
+      - "@PewezaVPN (تلگرام)` 5"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -538,6 +543,7 @@ proxy-groups:
       - "@PewezaVPN (تلگرام)` 2"
       - "@PewezaVPN (تلگرام)` 3"
       - "@PewezaVPN (تلگرام)` 4"
+      - "@PewezaVPN (تلگرام)` 5"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -548,6 +554,7 @@ proxy-groups:
       - "@PewezaVPN (تلگرام)` 2"
       - "@PewezaVPN (تلگرام)` 3"
       - "@PewezaVPN (تلگرام)` 4"
+      - "@PewezaVPN (تلگرام)` 5"
   - name: دانلود منیجر 📥
     type: select
     proxies:

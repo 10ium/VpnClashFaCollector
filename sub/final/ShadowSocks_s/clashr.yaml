@@ -5,60 +5,74 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: جوین شو تلگرام | @ServalVpn`, server: finland.dehnavy.ir, port: 39461, type: vless, tls: true, packet-encoding: xudp, uuid: 0195d3b8-8bfa-4c6e-9988-56396952a50a, network: ws, ws-opts: {path: /, headers: {Host: finland.dehnavy.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: تلگراممون |V2rayWT_config@`, server: 79.127.40.197, port: 30118, type: vless, tls: true, packet-encoding: xudp, uuid: 2d210fde-7afa-47e0-bfd1-954bd5abd41b, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@Nftvici`", server: sdl15.shahramv1.site, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 3899ada4-de68-4ed9-9fae-8745410e4149, host: sdl15.shahramv1.site, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@Nftvici | تلگزام`", server: s1.choosename.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: cfba2ce4-a114-49e0-8d11-0738dcc26afb, host: skyroom.online, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: جوین شو تلگرام | @ServalVpn` 2, server: emg3.saipasamandemg3.sbs, port: 2003, type: vless, tls: true, packet-encoding: xudp, uuid: f75305e2-de53-4add-acc8-f9308394f5a4, host: anten.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - جوین شو تلگرام | @ServalVpn`
       - تلگراممون |V2rayWT_config@`
       - "@Nftvici`"
       - "@Nftvici | تلگزام`"
+      - جوین شو تلگرام | @ServalVpn` 2
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - جوین شو تلگرام | @ServalVpn`
       - تلگراممون |V2rayWT_config@`
       - "@Nftvici`"
       - "@Nftvici | تلگزام`"
+      - جوین شو تلگرام | @ServalVpn` 2
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - جوین شو تلگرام | @ServalVpn`
       - تلگراممون |V2rayWT_config@`
       - "@Nftvici`"
       - "@Nftvici | تلگزام`"
+      - جوین شو تلگرام | @ServalVpn` 2
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - جوین شو تلگرام | @ServalVpn`
       - تلگراممون |V2rayWT_config@`
       - "@Nftvici`"
       - "@Nftvici | تلگزام`"
+      - جوین شو تلگرام | @ServalVpn` 2
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - جوین شو تلگرام | @ServalVpn`
       - تلگراممون |V2rayWT_config@`
       - "@Nftvici`"
       - "@Nftvici | تلگزام`"
+      - جوین شو تلگرام | @ServalVpn` 2
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - جوین شو تلگرام | @ServalVpn`
       - تلگراممون |V2rayWT_config@`
       - "@Nftvici`"
       - "@Nftvici | تلگزام`"
+      - جوین شو تلگرام | @ServalVpn` 2
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -86,9 +100,11 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - جوین شو تلگرام | @ServalVpn`
       - تلگراممون |V2rayWT_config@`
       - "@Nftvici`"
       - "@Nftvici | تلگزام`"
+      - جوین شو تلگرام | @ServalVpn` 2
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
