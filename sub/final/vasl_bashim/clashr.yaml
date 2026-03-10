@@ -5,7 +5,9 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@vasl_bashim`", server: 94.101.184.65, port: 51302, type: vless, tls: true, packet-encoding: xudp, uuid: bb893070-c9c0-42ec-9741-3c42c2acbd5e, servername: pz1.shahramv1.site, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: pz1.shahramv1.site}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim`", server: 95.216.238.249, port: 37337, type: ss, cipher: 2022-blake3-aes-256-gcm, password: //LyDYm8vjAErg1pMRZWWquR87izJSDlhhcmEKcLzYo=:wxa2PKbF0/1UrRiBoeWNzaLVFq366HG75IYS+FjU7Oc=, udp: true, tfo: false}
+  - {name: "@vasl_bashim", server: finland.dehnavy.ir, port: 39461, type: vless, tls: true, packet-encoding: xudp, uuid: 0195d3b8-8bfa-4c6e-9988-56396952a50a, network: ws, ws-opts: {path: /, headers: {Host: finland.dehnavy.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim 2", server: 2.188.241.144, port: 29332, type: vless, tls: true, packet-encoding: xudp, uuid: a78d795d-ab77-49dd-8962-f630115f617c, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -13,6 +15,8 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - "@vasl_bashim`"
+      - "@vasl_bashim"
+      - "@vasl_bashim 2"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -20,6 +24,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@vasl_bashim`"
+      - "@vasl_bashim"
+      - "@vasl_bashim 2"
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -27,24 +33,32 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - "@vasl_bashim`"
+      - "@vasl_bashim"
+      - "@vasl_bashim 2"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@vasl_bashim`"
+      - "@vasl_bashim"
+      - "@vasl_bashim 2"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - "@vasl_bashim`"
+      - "@vasl_bashim"
+      - "@vasl_bashim 2"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@vasl_bashim`"
+      - "@vasl_bashim"
+      - "@vasl_bashim 2"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -73,6 +87,8 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - "@vasl_bashim`"
+      - "@vasl_bashim"
+      - "@vasl_bashim 2"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
