@@ -466,6 +466,8 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: 78.157.58.197:35776, server: 78.157.58.197, port: 35776, type: vless, tls: true, packet-encoding: xudp, uuid: 276a40e3-4a5c-4238-bdda-40374af9e318, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@meliproxyy`", server: connected3.starpo3.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 3445138a-d30d-4b7b-ba80-0875c3b60d41, host: connected3.starpo3.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@meliproxyy", server: cip.1iii1.de, port: 443, type: vmess, uuid: 83df5028-1637-4760-858e-bbacaab4b9b1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,6 +485,8 @@ proxy-groups:
     type: select
     proxies:
       - 78.157.58.197:35776
+      - "@meliproxyy`"
+      - "@meliproxyy"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -490,6 +494,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 78.157.58.197:35776
+      - "@meliproxyy`"
+      - "@meliproxyy"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -497,6 +503,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 78.157.58.197:35776
+      - "@meliproxyy`"
+      - "@meliproxyy"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -513,6 +521,8 @@ proxy-groups:
     interval: 600
     proxies:
       - 78.157.58.197:35776
+      - "@meliproxyy`"
+      - "@meliproxyy"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -520,6 +530,8 @@ proxy-groups:
     interval: 600
     proxies:
       - 78.157.58.197:35776
+      - "@meliproxyy`"
+      - "@meliproxyy"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -527,6 +539,8 @@ proxy-groups:
     interval: 600
     proxies:
       - 78.157.58.197:35776
+      - "@meliproxyy`"
+      - "@meliproxyy"
   - name: دانلود منیجر 📥
     type: select
     proxies:
