@@ -465,15 +465,16 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: "@proxy_kafee`", server: 102.37.156.224, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: aduB9HGxQHjA2SBMRjkHX6, udp: true, tfo: false}
+  - {name: proxy_kafee`, server: 102.37.156.224, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: aduB9HGxQHjA2SBMRjkHX6, udp: true, tfo: false}
   - {name: "@proxy_kafee", server: 143.204.111.65, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 1c281f55-761f-4448-8fc9-e1958e49e1fa, network: ws, ws-opts: {path: /wss, headers: {Host: d2a5lr44zte3rb.cloudfront.net}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee 2", server: 85.133.227.118, port: 35812, type: vless, tls: true, packet-encoding: xudp, uuid: 87a1f775-f129-4aff-a141-660741dfdb61, servername: www.microsoft.com, host: www.microsoft.com, path: /, reality-opts: {public-key: LOS87LofEJA0paPzrS2mIFhmTaqkOZC-AUFgNvE1UEs, short-id: 82cada35130f1ef2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@WedBaZTel", server: 85.133.227.119, port: 35812, type: vless, tls: true, packet-encoding: xudp, uuid: 87a1f775-f129-4aff-a141-660741dfdb61, servername: learn.microsoft.com, host: learn.microsoft.com, path: /, reality-opts: {public-key: LOS87LofEJA0paPzrS2mIFhmTaqkOZC-AUFgNvE1UEs, short-id: 82cada35130f1ef2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee 3", server: 85.133.227.13, port: 35812, type: vless, tls: true, packet-encoding: xudp, uuid: 87a1f775-f129-4aff-a141-660741dfdb61, servername: www.microsoft.com, host: www.microsoft.com, path: /, reality-opts: {public-key: LOS87LofEJA0paPzrS2mIFhmTaqkOZC-AUFgNvE1UEs, short-id: 82cada35130f1ef2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee`", server: 85.133.240.107, port: 35812, type: vless, tls: true, packet-encoding: xudp, uuid: 87a1f775-f129-4aff-a141-660741dfdb61, servername: www.microsoft.com, host: www.microsoft.com, path: /, reality-opts: {public-key: LOS87LofEJA0paPzrS2mIFhmTaqkOZC-AUFgNvE1UEs, short-id: 82cada35130f1ef2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee` 2", server: 85.133.240.107, port: 35812, type: vless, tls: true, packet-encoding: xudp, uuid: 87a1f775-f129-4aff-a141-660741dfdb61, servername: www.microsoft.com, host: www.microsoft.com, path: /, reality-opts: {public-key: LOS87LofEJA0paPzrS2mIFhmTaqkOZC-AUFgNvE1UEs, short-id: 82cada35130f1ef2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee 4", server: 85.133.240.82, port: 35812, type: vless, tls: true, packet-encoding: xudp, uuid: 87a1f775-f129-4aff-a141-660741dfdb61, servername: www.microsoft.com, host: www.microsoft.com, path: /, reality-opts: {public-key: LOS87LofEJA0paPzrS2mIFhmTaqkOZC-AUFgNvE1UEs, short-id: 82cada35130f1ef2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee |فقط تلگرام داشته باشید`", server: ezterar.popol.cfd, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: af841f76-1d41-4d1d-9752-f5351bbd5e38, network: ws, ws-opts: {path: /, headers: {Host: ezterar.popol.cfd}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee` 3", server: d1.msjia8844.site, port: 2099, type: vless, tls: true, packet-encoding: xudp, uuid: c61c8adb-c674-4e0c-9ccf-d0e674434efe, host: cafeariel.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee Tel`", server: 192.168.1.1, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: df1dd9fd-7899-4ad0-a294-6b1e4af6fb05, network: ws, ws-opts: {path: /, headers: {Host: nic.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee | برای کانفیگای بیشتر جوین باشید تلگرام", server: snapp.ir.bmi.ir.mobato-mobile.com, port: 80, type: vmess, uuid: 820a9e42-e18d-43e4-859f-d1c2f6b8600a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -490,45 +491,48 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - "@proxy_kafee`"
+      - proxy_kafee`
       - "@proxy_kafee"
       - "@proxy_kafee 2"
       - "@WedBaZTel"
       - "@proxy_kafee 3"
-      - "@proxy_kafee`"
+      - "@proxy_kafee` 2"
       - "@proxy_kafee 4"
-      - "@proxy_kafee |فقط تلگرام داشته باشید`"
+      - "@proxy_kafee` 3"
       - "@proxy_kafee Tel`"
-      - "@proxy_kafee | برای کانفیگای بیشتر جوین باشید تلگرام"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
+      - "@proxy_kafee`"
+      - proxy_kafee`
       - "@proxy_kafee"
       - "@proxy_kafee 2"
       - "@WedBaZTel"
       - "@proxy_kafee 3"
-      - "@proxy_kafee`"
+      - "@proxy_kafee` 2"
       - "@proxy_kafee 4"
-      - "@proxy_kafee |فقط تلگرام داشته باشید`"
+      - "@proxy_kafee` 3"
       - "@proxy_kafee Tel`"
-      - "@proxy_kafee | برای کانفیگای بیشتر جوین باشید تلگرام"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
+      - "@proxy_kafee`"
+      - proxy_kafee`
       - "@proxy_kafee"
       - "@proxy_kafee 2"
       - "@WedBaZTel"
       - "@proxy_kafee 3"
-      - "@proxy_kafee`"
+      - "@proxy_kafee` 2"
       - "@proxy_kafee 4"
-      - "@proxy_kafee |فقط تلگرام داشته باشید`"
+      - "@proxy_kafee` 3"
       - "@proxy_kafee Tel`"
-      - "@proxy_kafee | برای کانفیگای بیشتر جوین باشید تلگرام"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -544,45 +548,48 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@proxy_kafee`"
+      - proxy_kafee`
       - "@proxy_kafee"
       - "@proxy_kafee 2"
       - "@WedBaZTel"
       - "@proxy_kafee 3"
-      - "@proxy_kafee`"
+      - "@proxy_kafee` 2"
       - "@proxy_kafee 4"
-      - "@proxy_kafee |فقط تلگرام داشته باشید`"
+      - "@proxy_kafee` 3"
       - "@proxy_kafee Tel`"
-      - "@proxy_kafee | برای کانفیگای بیشتر جوین باشید تلگرام"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@proxy_kafee`"
+      - proxy_kafee`
       - "@proxy_kafee"
       - "@proxy_kafee 2"
       - "@WedBaZTel"
       - "@proxy_kafee 3"
-      - "@proxy_kafee`"
+      - "@proxy_kafee` 2"
       - "@proxy_kafee 4"
-      - "@proxy_kafee |فقط تلگرام داشته باشید`"
+      - "@proxy_kafee` 3"
       - "@proxy_kafee Tel`"
-      - "@proxy_kafee | برای کانفیگای بیشتر جوین باشید تلگرام"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@proxy_kafee`"
+      - proxy_kafee`
       - "@proxy_kafee"
       - "@proxy_kafee 2"
       - "@WedBaZTel"
       - "@proxy_kafee 3"
-      - "@proxy_kafee`"
+      - "@proxy_kafee` 2"
       - "@proxy_kafee 4"
-      - "@proxy_kafee |فقط تلگرام داشته باشید`"
+      - "@proxy_kafee` 3"
       - "@proxy_kafee Tel`"
-      - "@proxy_kafee | برای کانفیگای بیشتر جوین باشید تلگرام"
   - name: دانلود منیجر 📥
     type: select
     proxies:

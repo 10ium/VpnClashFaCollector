@@ -465,8 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 181.214.99.162:35000, server: 181.214.99.162, port: 35000, type: hysteria2, ports: 35000, password: b4bd0613-ff7c-4f2f-954d-185915e6ddad, obfs: salamander, obfs-password: "%40JavidnamanIran-Javid-SHAH-KingRezaPahlavi", sni: api.kermanshahi.org, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 13@oneclickvpnkeys, server: 150.241.79.106, port: 1935, type: hysteria2, ports: 1935, password: hysteria2_fastlane_qdx4o19um%3Ae6RGEpPpn2oiHxqlbReEFpJZr09OiVlb, sni: de2.h.fastlanehosting.ru, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 167.86.100.40:11801, server: 167.86.100.40, port: 11801, type: hysteria2, ports: 11801, password: 00a40f88-0900-4c29-9555-cf053a23071b, obfs: salamander, obfs-password: pGBT2RES32Gr7S8DQx, sni: 167.86.100.40, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad`", server: 167.86.100.40, port: 11801, type: hysteria2, ports: 11801, password: 00a40f88-0900-4c29-9555-cf053a23071b, obfs: salamander, obfs-password: pGBT2RES32Gr7S8DQx, sni: 167.86.100.40, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim", server: 167.86.100.40, port: 11801, type: hysteria2, ports: 11801, password: 00a40f88-0900-4c29-9555-cf053a23071b, obfs: salamander, obfs-password: pGBT2RES32Gr7S8DQx, sni: 167.86.100.40, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +484,27 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 181.214.99.162:35000
-      - 13@oneclickvpnkeys
+      - 167.86.100.40:11801
+      - "@filembad`"
+      - "@vasl_bashim"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 181.214.99.162:35000
-      - 13@oneclickvpnkeys
+      - 167.86.100.40:11801
+      - "@filembad`"
+      - "@vasl_bashim"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 181.214.99.162:35000
-      - 13@oneclickvpnkeys
+      - 167.86.100.40:11801
+      - "@filembad`"
+      - "@vasl_bashim"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +520,27 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 181.214.99.162:35000
-      - 13@oneclickvpnkeys
+      - 167.86.100.40:11801
+      - "@filembad`"
+      - "@vasl_bashim"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 181.214.99.162:35000
-      - 13@oneclickvpnkeys
+      - 167.86.100.40:11801
+      - "@filembad`"
+      - "@vasl_bashim"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 181.214.99.162:35000
-      - 13@oneclickvpnkeys
+      - 167.86.100.40:11801
+      - "@filembad`"
+      - "@vasl_bashim"
   - name: دانلود منیجر 📥
     type: select
     proxies:
