@@ -465,12 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: hp-4, server: h43.gettips.ir, port: 56304, type: vless, tls: true, packet-encoding: xudp, uuid: 537e107f-dde5-41d4-b629-bcefa9f3cabd, host: speedtest.net, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: hp-1, server: mail.tomandjery.eu, port: 1001, type: vless, tls: true, packet-encoding: xudp, uuid: 6a3ad064-be7c-40be-9a48-171885a359b7, servername: play.google.com, host: play.google.com, path: /, reality-opts: {public-key: xrZlXeuTYmAC97-RbRi-aM7U67TOBMGCHVu3DovZihw, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: hp-2, server: mail.tomandjery.eu, port: 1001, type: vless, tls: true, packet-encoding: xudp, uuid: 6a3ad064-be7c-40be-9a48-171885a359b7, servername: play.google.com, host: play.google.com, path: /, reality-opts: {public-key: xrZlXeuTYmAC97-RbRi-aM7U67TOBMGCHVu3DovZihw, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 134.255.204.17:443, server: 134.255.204.17, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8058fd1c-28ca-4e6c-9828-ce7cf4433b5c, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: hhp, server: ja3.diiginet.ir, port: 1500, type: vless, tls: true, packet-encoding: xudp, uuid: c8c75018-26ab-4501-be3e-f7bb33ed8c57, host: reata.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: hp-3, server: emergency5380.carpet-carpet-carped.ir, port: 5380, type: vless, tls: true, packet-encoding: xudp, uuid: ef2588ed-6162-4ee3-a002-39ef1c09e848, host: anten.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "`", server: 102.37.156.224, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: aduB9HGxQHjA2SBMRjkHX6, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,36 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - hp-4
-      - hp-1
-      - hp-2
-      - 134.255.204.17:443
-      - hhp
-      - hp-3
+      - "`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - hp-4
-      - hp-1
-      - hp-2
-      - 134.255.204.17:443
-      - hhp
-      - hp-3
+      - "`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - hp-4
-      - hp-1
-      - hp-2
-      - 134.255.204.17:443
-      - hhp
-      - hp-3
+      - "`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -532,36 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - hp-4
-      - hp-1
-      - hp-2
-      - 134.255.204.17:443
-      - hhp
-      - hp-3
+      - "`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - hp-4
-      - hp-1
-      - hp-2
-      - 134.255.204.17:443
-      - hhp
-      - hp-3
+      - "`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - hp-4
-      - hp-1
-      - hp-2
-      - 134.255.204.17:443
-      - hhp
-      - hp-3
+      - "`"
   - name: دانلود منیجر 📥
     type: select
     proxies:

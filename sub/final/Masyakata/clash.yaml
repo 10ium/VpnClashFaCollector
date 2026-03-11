@@ -466,9 +466,14 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: Ae_proxy 146`, server: finland.dehnavy.ir, port: 39461, type: vless, tls: true, packet-encoding: xudp, uuid: 0195d3b8-8bfa-4c6e-9988-56396952a50a, network: ws, ws-opts: {path: /, headers: {Host: finland.dehnavy.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad`", server: 143.204.111.65, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 1c281f55-761f-4448-8fc9-e1958e49e1fa, network: ws, ws-opts: {path: /wss, headers: {Host: d2a5lr44zte3rb.cloudfront.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembadl`", server: 85.133.227.118, port: 35812, type: vless, tls: true, packet-encoding: xudp, uuid: 87a1f775-f129-4aff-a141-660741dfdb61, servername: www.microsoft.com, host: www.microsoft.com, path: /, reality-opts: {public-key: LOS87LofEJA0paPzrS2mIFhmTaqkOZC-AUFgNvE1UEs, short-id: 82cada35130f1ef2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad", server: 85.133.227.119, port: 35812, type: vless, tls: true, packet-encoding: xudp, uuid: 87a1f775-f129-4aff-a141-660741dfdb61, servername: learn.microsoft.com, host: learn.microsoft.com, path: /, reality-opts: {public-key: LOS87LofEJA0paPzrS2mIFhmTaqkOZC-AUFgNvE1UEs, short-id: 82cada35130f1ef2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad` 2", server: 85.133.227.13, port: 35812, type: vless, tls: true, packet-encoding: xudp, uuid: 87a1f775-f129-4aff-a141-660741dfdb61, servername: www.microsoft.com, host: www.microsoft.com, path: /, reality-opts: {public-key: LOS87LofEJA0paPzrS2mIFhmTaqkOZC-AUFgNvE1UEs, short-id: 82cada35130f1ef2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad` 3", server: 85.133.240.107, port: 35812, type: vless, tls: true, packet-encoding: xudp, uuid: 87a1f775-f129-4aff-a141-660741dfdb61, servername: www.microsoft.com, host: www.microsoft.com, path: /, reality-opts: {public-key: LOS87LofEJA0paPzrS2mIFhmTaqkOZC-AUFgNvE1UEs, short-id: 82cada35130f1ef2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad` 4", server: 85.133.240.82, port: 35812, type: vless, tls: true, packet-encoding: xudp, uuid: 87a1f775-f129-4aff-a141-660741dfdb61, servername: www.microsoft.com, host: www.microsoft.com, path: /, reality-opts: {public-key: LOS87LofEJA0paPzrS2mIFhmTaqkOZC-AUFgNvE1UEs, short-id: 82cada35130f1ef2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: Ae_proxy 278`, server: 2.188.241.144, port: 29332, type: vless, tls: true, packet-encoding: xudp, uuid: a78d795d-ab77-49dd-8962-f630115f617c, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@", server: 94.101.177.169, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: b6c07d52-0288-4005-9634-b5d4bd661535, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "channel : sobhanaryaa 🦁☀️", server: us.zarasite.ir, port: 6531, type: vmess, uuid: 3f2d60fc-512d-4811-b50c-18013e32c162, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@saministamm", server: ip3.taravat.net, port: 102, type: vmess, uuid: ceb9b687-772b-4569-b5fa-1be84345d6c7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,9 +491,14 @@ proxy-groups:
     type: select
     proxies:
       - Ae_proxy 146`
+      - "@filembad`"
+      - "@filembadl`"
+      - "@filembad"
+      - "@filembad` 2"
+      - "@filembad` 3"
+      - "@filembad` 4"
       - Ae_proxy 278`
-      - "@"
-      - "channel : sobhanaryaa 🦁☀️"
+      - "@saministamm"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -496,9 +506,14 @@ proxy-groups:
     tolerance: 50
     proxies:
       - Ae_proxy 146`
+      - "@filembad`"
+      - "@filembadl`"
+      - "@filembad"
+      - "@filembad` 2"
+      - "@filembad` 3"
+      - "@filembad` 4"
       - Ae_proxy 278`
-      - "@"
-      - "channel : sobhanaryaa 🦁☀️"
+      - "@saministamm"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -506,9 +521,14 @@ proxy-groups:
     tolerance: 50
     proxies:
       - Ae_proxy 146`
+      - "@filembad`"
+      - "@filembadl`"
+      - "@filembad"
+      - "@filembad` 2"
+      - "@filembad` 3"
+      - "@filembad` 4"
       - Ae_proxy 278`
-      - "@"
-      - "channel : sobhanaryaa 🦁☀️"
+      - "@saministamm"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -525,9 +545,14 @@ proxy-groups:
     interval: 600
     proxies:
       - Ae_proxy 146`
+      - "@filembad`"
+      - "@filembadl`"
+      - "@filembad"
+      - "@filembad` 2"
+      - "@filembad` 3"
+      - "@filembad` 4"
       - Ae_proxy 278`
-      - "@"
-      - "channel : sobhanaryaa 🦁☀️"
+      - "@saministamm"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -535,9 +560,14 @@ proxy-groups:
     interval: 600
     proxies:
       - Ae_proxy 146`
+      - "@filembad`"
+      - "@filembadl`"
+      - "@filembad"
+      - "@filembad` 2"
+      - "@filembad` 3"
+      - "@filembad` 4"
       - Ae_proxy 278`
-      - "@"
-      - "channel : sobhanaryaa 🦁☀️"
+      - "@saministamm"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -545,9 +575,14 @@ proxy-groups:
     interval: 600
     proxies:
       - Ae_proxy 146`
+      - "@filembad`"
+      - "@filembadl`"
+      - "@filembad"
+      - "@filembad` 2"
+      - "@filembad` 3"
+      - "@filembad` 4"
       - Ae_proxy 278`
-      - "@"
-      - "channel : sobhanaryaa 🦁☀️"
+      - "@saministamm"
   - name: دانلود منیجر 📥
     type: select
     proxies:
