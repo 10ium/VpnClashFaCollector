@@ -465,9 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@meliproxyy`", server: connected3.starpo3.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 3445138a-d30d-4b7b-ba80-0875c3b60d41, host: connected3.starpo3.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 143.204.111.65:443, server: 143.204.111.65, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 0c0f6c6f-d035-4cd1-97b9-fff39287ce04, servername: d1bezfxa40zhk8.cloudfront.net, alpn: [http/1.1], network: ws, ws-opts: {path: /, headers: {Host: d1bezfxa40zhk8.cloudfront.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@meliproxyy`", server: 31.216.62.198, port: 20391, type: vless, tls: true, packet-encoding: xudp, uuid: 420349f3-6024-4457-bde6-b3d11183d728, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@meliproxyy", server: 188.121.119.172, port: 2020, type: vmess, uuid: 3fa06c55-df4b-47de-8ff2-409470338a3b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@meliproxyy 2", server: cip.1iii1.de, port: 443, type: vmess, uuid: 83df5028-1637-4760-858e-bbacaab4b9b1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,27 +484,27 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - 143.204.111.65:443
       - "@meliproxyy`"
       - "@meliproxyy"
-      - "@meliproxyy 2"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
+      - 143.204.111.65:443
       - "@meliproxyy`"
       - "@meliproxyy"
-      - "@meliproxyy 2"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
+      - 143.204.111.65:443
       - "@meliproxyy`"
       - "@meliproxyy"
-      - "@meliproxyy 2"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -520,27 +520,27 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 143.204.111.65:443
       - "@meliproxyy`"
       - "@meliproxyy"
-      - "@meliproxyy 2"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 143.204.111.65:443
       - "@meliproxyy`"
       - "@meliproxyy"
-      - "@meliproxyy 2"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 143.204.111.65:443
       - "@meliproxyy`"
       - "@meliproxyy"
-      - "@meliproxyy 2"
   - name: دانلود منیجر 📥
     type: select
     proxies:

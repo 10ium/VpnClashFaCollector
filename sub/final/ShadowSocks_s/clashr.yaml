@@ -5,53 +5,74 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: جوین شو تلگرام | @ServalVpn`, server: finland.dehnavy.ir, port: 39461, type: vless, tls: true, packet-encoding: xudp, uuid: 0195d3b8-8bfa-4c6e-9988-56396952a50a, network: ws, ws-opts: {path: /, headers: {Host: finland.dehnavy.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: جوین شو تلگرام | @ServalVpn` 2, server: emg3.saipasamandemg3.sbs, port: 2003, type: vless, tls: true, packet-encoding: xudp, uuid: f75305e2-de53-4add-acc8-f9308394f5a4, host: anten.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@SryLove", server: b1.msjia8844.site, port: 2020, type: vless, tls: true, packet-encoding: xudp, uuid: 2603ae77-ed37-4c7a-af8f-c6b878748c4e, host: b1.msjia8844.site, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: saministamm`, server: 85.9.125.31, port: 50856, type: vless, tls: true, packet-encoding: xudp, uuid: 5314cf70-802c-4dc7-91cb-b50a597a44b3, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: پنل اختصاصی TM 🚀, server: sdl9.shahramv1.site, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 93afe2a7-84b5-49a7-89d6-61d42067e32f, host: sdl9.shahramv1.site, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: c1.msjia8844.site:31532, server: c1.msjia8844.site, port: 31532, type: vless, tls: true, packet-encoding: xudp, uuid: dab667ce-f06a-4533-a369-ee2925ca6ec6, host: c1.msjia8844.site, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: test-test, server: 217.218.52.1, port: 10410, type: vmess, uuid: f93f134f-7adb-48c3-bcd1-2532edb0b478, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - جوین شو تلگرام | @ServalVpn`
-      - جوین شو تلگرام | @ServalVpn` 2
+      - "@SryLove"
+      - saministamm`
+      - پنل اختصاصی TM 🚀
+      - c1.msjia8844.site:31532
+      - test-test
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - جوین شو تلگرام | @ServalVpn`
-      - جوین شو تلگرام | @ServalVpn` 2
+      - "@SryLove"
+      - saministamm`
+      - پنل اختصاصی TM 🚀
+      - c1.msjia8844.site:31532
+      - test-test
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - جوین شو تلگرام | @ServalVpn`
-      - جوین شو تلگرام | @ServalVpn` 2
+      - "@SryLove"
+      - saministamm`
+      - پنل اختصاصی TM 🚀
+      - c1.msjia8844.site:31532
+      - test-test
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - جوین شو تلگرام | @ServalVpn`
-      - جوین شو تلگرام | @ServalVpn` 2
+      - "@SryLove"
+      - saministamm`
+      - پنل اختصاصی TM 🚀
+      - c1.msjia8844.site:31532
+      - test-test
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - جوین شو تلگرام | @ServalVpn`
-      - جوین شو تلگرام | @ServalVpn` 2
+      - "@SryLove"
+      - saministamm`
+      - پنل اختصاصی TM 🚀
+      - c1.msjia8844.site:31532
+      - test-test
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - جوین شو تلگرام | @ServalVpn`
-      - جوین شو تلگرام | @ServalVpn` 2
+      - "@SryLove"
+      - saministamm`
+      - پنل اختصاصی TM 🚀
+      - c1.msjia8844.site:31532
+      - test-test
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -79,8 +100,11 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - جوین شو تلگرام | @ServalVpn`
-      - جوین شو تلگرام | @ServalVpn` 2
+      - "@SryLove"
+      - saministamm`
+      - پنل اختصاصی TM 🚀
+      - c1.msjia8844.site:31532
+      - test-test
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
