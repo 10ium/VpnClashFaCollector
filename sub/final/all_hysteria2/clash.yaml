@@ -466,7 +466,6 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: 167.86.100.40:11801, server: 167.86.100.40, port: 11801, type: hysteria2, ports: 11801, password: 00a40f88-0900-4c29-9555-cf053a23071b, obfs: salamander, obfs-password: pGBT2RES32Gr7S8DQx, sni: 167.86.100.40, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad`", server: 167.86.100.40, port: 11801, type: hysteria2, ports: 11801, password: 00a40f88-0900-4c29-9555-cf053a23071b, obfs: salamander, obfs-password: pGBT2RES32Gr7S8DQx, sni: 167.86.100.40, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@vasl_bashim", server: 167.86.100.40, port: 11801, type: hysteria2, ports: 11801, password: 00a40f88-0900-4c29-9555-cf053a23071b, obfs: salamander, obfs-password: pGBT2RES32Gr7S8DQx, sni: 167.86.100.40, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -485,7 +484,6 @@ proxy-groups:
     type: select
     proxies:
       - 167.86.100.40:11801
-      - "@filembad`"
       - "@vasl_bashim"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -494,7 +492,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 167.86.100.40:11801
-      - "@filembad`"
       - "@vasl_bashim"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -503,7 +500,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 167.86.100.40:11801
-      - "@filembad`"
       - "@vasl_bashim"
   - name: اتصال پایدار 🔗
     type: url-test
@@ -521,7 +517,6 @@ proxy-groups:
     interval: 600
     proxies:
       - 167.86.100.40:11801
-      - "@filembad`"
       - "@vasl_bashim"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -530,7 +525,6 @@ proxy-groups:
     interval: 600
     proxies:
       - 167.86.100.40:11801
-      - "@filembad`"
       - "@vasl_bashim"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -539,7 +533,6 @@ proxy-groups:
     interval: 600
     proxies:
       - 167.86.100.40:11801
-      - "@filembad`"
       - "@vasl_bashim"
   - name: دانلود منیجر 📥
     type: select

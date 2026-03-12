@@ -6,7 +6,6 @@ log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
   - {name: 167.86.100.40:11801, server: 167.86.100.40, port: 11801, type: hysteria2, ports: 11801, password: 00a40f88-0900-4c29-9555-cf053a23071b, obfs: salamander, obfs-password: pGBT2RES32Gr7S8DQx, sni: 167.86.100.40, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad`", server: 167.86.100.40, port: 11801, type: hysteria2, ports: 11801, password: 00a40f88-0900-4c29-9555-cf053a23071b, obfs: salamander, obfs-password: pGBT2RES32Gr7S8DQx, sni: 167.86.100.40, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@vasl_bashim", server: 167.86.100.40, port: 11801, type: hysteria2, ports: 11801, password: 00a40f88-0900-4c29-9555-cf053a23071b, obfs: salamander, obfs-password: pGBT2RES32Gr7S8DQx, sni: 167.86.100.40, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
@@ -15,7 +14,6 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - 167.86.100.40:11801
-      - "@filembad`"
       - "@vasl_bashim"
   - name: ♻️ 自动选择
     type: url-test
@@ -24,7 +22,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 167.86.100.40:11801
-      - "@filembad`"
       - "@vasl_bashim"
   - name: 🌍 国外媒体
     type: select
@@ -33,7 +30,6 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - 167.86.100.40:11801
-      - "@filembad`"
       - "@vasl_bashim"
   - name: 📲 电报信息
     type: select
@@ -41,7 +37,6 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - 167.86.100.40:11801
-      - "@filembad`"
       - "@vasl_bashim"
   - name: Ⓜ️ 微软服务
     type: select
@@ -49,7 +44,6 @@ proxy-groups:
       - 🎯 全球直连
       - 🚀 节点选择
       - 167.86.100.40:11801
-      - "@filembad`"
       - "@vasl_bashim"
   - name: 🍎 苹果服务
     type: select
@@ -57,7 +51,6 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - 167.86.100.40:11801
-      - "@filembad`"
       - "@vasl_bashim"
   - name: 🎯 全球直连
     type: select
@@ -87,7 +80,6 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - 167.86.100.40:11801
-      - "@filembad`"
       - "@vasl_bashim"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
