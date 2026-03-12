@@ -5,67 +5,60 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@`", server: 102.37.156.224, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: aduB9HGxQHjA2SBMRjkHX6, udp: true, tfo: false}
   - {name: NetAccount, server: 94.131.123.86, port: 35361, type: ss, cipher: chacha20-ietf-poly1305, password: g0UgfsdXOhn8McpdHpWcmo, udp: true, tfo: false}
   - {name: NetAccount 2, server: 85.208.108.20, port: 6379, type: ss, cipher: aes-256-gcm, password: zDNVedRFPQexG9v, udp: true, tfo: false}
-  - {name: "@SizVpn", server: 3.elabela.top, port: 909, type: vmess, uuid: 0e664d0c-2c8e-481c-8718-da019e553e2c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 3.elabela.top}}, udp: true, tfo: false}
+  - {name: Telegram:@XtVpnVip, server: 188.114.98.0, port: 2087, type: vless, tls: true, packet-encoding: xudp, uuid: 3f58cc47-94f6-40d3-8797-1ce66cb0555e, servername: nl13.maxriser.ir, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: nl13.maxriser.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@`"
       - NetAccount
       - NetAccount 2
-      - "@SizVpn"
+      - Telegram:@XtVpnVip
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@`"
       - NetAccount
       - NetAccount 2
-      - "@SizVpn"
+      - Telegram:@XtVpnVip
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@`"
       - NetAccount
       - NetAccount 2
-      - "@SizVpn"
+      - Telegram:@XtVpnVip
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@`"
       - NetAccount
       - NetAccount 2
-      - "@SizVpn"
+      - Telegram:@XtVpnVip
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@`"
       - NetAccount
       - NetAccount 2
-      - "@SizVpn"
+      - Telegram:@XtVpnVip
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@`"
       - NetAccount
       - NetAccount 2
-      - "@SizVpn"
+      - Telegram:@XtVpnVip
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -93,10 +86,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@`"
       - NetAccount
       - NetAccount 2
-      - "@SizVpn"
+      - Telegram:@XtVpnVip
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

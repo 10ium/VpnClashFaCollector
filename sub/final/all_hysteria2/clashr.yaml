@@ -5,53 +5,53 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 167.86.100.40:11801, server: 167.86.100.40, port: 11801, type: hysteria2, ports: 11801, password: 00a40f88-0900-4c29-9555-cf053a23071b, obfs: salamander, obfs-password: pGBT2RES32Gr7S8DQx, sni: 167.86.100.40, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim", server: 167.86.100.40, port: 11801, type: hysteria2, ports: 11801, password: 00a40f88-0900-4c29-9555-cf053a23071b, obfs: salamander, obfs-password: pGBT2RES32Gr7S8DQx, sni: 167.86.100.40, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 93@oneclickvpnkeys, server: tr.xn--ehqa22b.site, port: 21150, type: hysteria2, ports: 21150, password: bd470fb8-73fd-455b-b8ae-e0fc9f44258b, sni: tr.xn--ehqa22b.site, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 87@oneclickvpnkeys, server: 138.124.183.9, port: 1935, type: hysteria2, ports: 1935, password: usa_hysteria2_fastlane_8f058mdni%3AMnvG1G7uEPzQXKinBIOyWPAwICrVq9x4, sni: us1.h.smartaisupport.ru, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 167.86.100.40:11801
-      - "@vasl_bashim"
+      - 93@oneclickvpnkeys
+      - 87@oneclickvpnkeys
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 167.86.100.40:11801
-      - "@vasl_bashim"
+      - 93@oneclickvpnkeys
+      - 87@oneclickvpnkeys
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 167.86.100.40:11801
-      - "@vasl_bashim"
+      - 93@oneclickvpnkeys
+      - 87@oneclickvpnkeys
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 167.86.100.40:11801
-      - "@vasl_bashim"
+      - 93@oneclickvpnkeys
+      - 87@oneclickvpnkeys
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 167.86.100.40:11801
-      - "@vasl_bashim"
+      - 93@oneclickvpnkeys
+      - 87@oneclickvpnkeys
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 167.86.100.40:11801
-      - "@vasl_bashim"
+      - 93@oneclickvpnkeys
+      - 87@oneclickvpnkeys
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -79,8 +79,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 167.86.100.40:11801
-      - "@vasl_bashim"
+      - 93@oneclickvpnkeys
+      - 87@oneclickvpnkeys
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
