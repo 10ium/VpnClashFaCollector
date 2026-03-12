@@ -465,6 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: "@mohammad_h201 - @MatinSenPaii-pi4yqhi8", server: 144.76.188.139, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4e6b23f2-932b-4a80-a280-44cdf8a86452, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@mohammad_h201 - @MatinSenPaii-fnq8fl7x", server: 144.76.188.130, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 75e13bcc-139b-4fe7-8525-548c8cfca08d, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@mohammad_h201 - @MatinSenPaii-0bj0sl01", server: 144.76.188.140, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ba849385-a780-43a0-b4e7-6ab8a08d3824, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 🇹🇷 @MatinSenPaii - Turkey 212-mmm, server: 212.87.198.108, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f91c1cc2-05fe-4efd-ba09-86cb6bec19e3, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -482,6 +485,9 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - "@mohammad_h201 - @MatinSenPaii-pi4yqhi8"
+      - "@mohammad_h201 - @MatinSenPaii-fnq8fl7x"
+      - "@mohammad_h201 - @MatinSenPaii-0bj0sl01"
       - 🇹🇷 @MatinSenPaii - Turkey 212-mmm
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -489,6 +495,9 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - "@mohammad_h201 - @MatinSenPaii-pi4yqhi8"
+      - "@mohammad_h201 - @MatinSenPaii-fnq8fl7x"
+      - "@mohammad_h201 - @MatinSenPaii-0bj0sl01"
       - 🇹🇷 @MatinSenPaii - Turkey 212-mmm
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -496,6 +505,9 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - "@mohammad_h201 - @MatinSenPaii-pi4yqhi8"
+      - "@mohammad_h201 - @MatinSenPaii-fnq8fl7x"
+      - "@mohammad_h201 - @MatinSenPaii-0bj0sl01"
       - 🇹🇷 @MatinSenPaii - Turkey 212-mmm
   - name: اتصال پایدار 🔗
     type: url-test
@@ -512,6 +524,9 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@mohammad_h201 - @MatinSenPaii-pi4yqhi8"
+      - "@mohammad_h201 - @MatinSenPaii-fnq8fl7x"
+      - "@mohammad_h201 - @MatinSenPaii-0bj0sl01"
       - 🇹🇷 @MatinSenPaii - Turkey 212-mmm
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -519,6 +534,9 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@mohammad_h201 - @MatinSenPaii-pi4yqhi8"
+      - "@mohammad_h201 - @MatinSenPaii-fnq8fl7x"
+      - "@mohammad_h201 - @MatinSenPaii-0bj0sl01"
       - 🇹🇷 @MatinSenPaii - Turkey 212-mmm
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -526,6 +544,9 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@mohammad_h201 - @MatinSenPaii-pi4yqhi8"
+      - "@mohammad_h201 - @MatinSenPaii-fnq8fl7x"
+      - "@mohammad_h201 - @MatinSenPaii-0bj0sl01"
       - 🇹🇷 @MatinSenPaii - Turkey 212-mmm
   - name: دانلود منیجر 📥
     type: select

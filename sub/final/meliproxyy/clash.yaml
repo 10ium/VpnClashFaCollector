@@ -465,10 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 143.204.111.65:443, server: 143.204.111.65, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 0c0f6c6f-d035-4cd1-97b9-fff39287ce04, servername: d1bezfxa40zhk8.cloudfront.net, alpn: [http/1.1], network: ws, ws-opts: {path: /, headers: {Host: d1bezfxa40zhk8.cloudfront.net}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@meliproxyy`", server: emg5.saipasamandemg5.sbs, port: 2005, type: vless, tls: true, packet-encoding: xudp, uuid: 231403ff-8615-43d5-ae2d-1935a1900709, host: anten.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@meliproxyy` 2", server: 31.216.62.198, port: 20391, type: vless, tls: true, packet-encoding: xudp, uuid: 420349f3-6024-4457-bde6-b3d11183d728, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@meliproxyy` 3", server: nothome.noeq12.site, port: 5050, type: vless, tls: true, packet-encoding: xudp, uuid: 523cece2-1be9-47e4-bcad-60def7d726d9, host: nothome.noeq12.site, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@meliproxyy` 2", server: nothome.noeq12.site, port: 5050, type: vless, tls: true, packet-encoding: xudp, uuid: 523cece2-1be9-47e4-bcad-60def7d726d9, host: nothome.noeq12.site, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,30 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 143.204.111.65:443
       - "@meliproxyy`"
       - "@meliproxyy` 2"
-      - "@meliproxyy` 3"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 143.204.111.65:443
       - "@meliproxyy`"
       - "@meliproxyy` 2"
-      - "@meliproxyy` 3"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 143.204.111.65:443
       - "@meliproxyy`"
       - "@meliproxyy` 2"
-      - "@meliproxyy` 3"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -524,30 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 143.204.111.65:443
       - "@meliproxyy`"
       - "@meliproxyy` 2"
-      - "@meliproxyy` 3"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 143.204.111.65:443
       - "@meliproxyy`"
       - "@meliproxyy` 2"
-      - "@meliproxyy` 3"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 143.204.111.65:443
       - "@meliproxyy`"
       - "@meliproxyy` 2"
-      - "@meliproxyy` 3"
   - name: دانلود منیجر 📥
     type: select
     proxies:

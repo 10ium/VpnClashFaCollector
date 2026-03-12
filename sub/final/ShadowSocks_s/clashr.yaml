@@ -6,11 +6,8 @@ log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
   - {name: "@`", server: 102.37.156.224, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: aduB9HGxQHjA2SBMRjkHX6, udp: true, tfo: false}
-  - {name: "@SryLove", server: b1.msjia8844.site, port: 2020, type: vless, tls: true, packet-encoding: xudp, uuid: 2603ae77-ed37-4c7a-af8f-c6b878748c4e, host: b1.msjia8844.site, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: saministamm`, server: 85.9.125.31, port: 50856, type: vless, tls: true, packet-encoding: xudp, uuid: 5314cf70-802c-4dc7-91cb-b50a597a44b3, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: پنل اختصاصی TM 🚀, server: sdl9.shahramv1.site, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 93afe2a7-84b5-49a7-89d6-61d42067e32f, host: sdl9.shahramv1.site, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: c1.msjia8844.site:31532, server: c1.msjia8844.site, port: 31532, type: vless, tls: true, packet-encoding: xudp, uuid: dab667ce-f06a-4533-a369-ee2925ca6ec6, host: c1.msjia8844.site, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: test-test, server: 217.218.52.1, port: 10410, type: vmess, uuid: f93f134f-7adb-48c3-bcd1-2532edb0b478, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: NetAccount, server: 94.131.123.86, port: 35361, type: ss, cipher: chacha20-ietf-poly1305, password: g0UgfsdXOhn8McpdHpWcmo, udp: true, tfo: false}
+  - {name: NetAccount 2, server: 85.208.108.20, port: 6379, type: ss, cipher: aes-256-gcm, password: zDNVedRFPQexG9v, udp: true, tfo: false}
   - {name: "@SizVpn", server: 3.elabela.top, port: 909, type: vmess, uuid: 0e664d0c-2c8e-481c-8718-da019e553e2c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 3.elabela.top}}, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
@@ -19,11 +16,8 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - "@`"
-      - "@SryLove"
-      - saministamm`
-      - پنل اختصاصی TM 🚀
-      - c1.msjia8844.site:31532
-      - test-test
+      - NetAccount
+      - NetAccount 2
       - "@SizVpn"
   - name: ♻️ 自动选择
     type: url-test
@@ -32,11 +26,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@`"
-      - "@SryLove"
-      - saministamm`
-      - پنل اختصاصی TM 🚀
-      - c1.msjia8844.site:31532
-      - test-test
+      - NetAccount
+      - NetAccount 2
       - "@SizVpn"
   - name: 🌍 国外媒体
     type: select
@@ -45,11 +36,8 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - "@`"
-      - "@SryLove"
-      - saministamm`
-      - پنل اختصاصی TM 🚀
-      - c1.msjia8844.site:31532
-      - test-test
+      - NetAccount
+      - NetAccount 2
       - "@SizVpn"
   - name: 📲 电报信息
     type: select
@@ -57,11 +45,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@`"
-      - "@SryLove"
-      - saministamm`
-      - پنل اختصاصی TM 🚀
-      - c1.msjia8844.site:31532
-      - test-test
+      - NetAccount
+      - NetAccount 2
       - "@SizVpn"
   - name: Ⓜ️ 微软服务
     type: select
@@ -69,11 +54,8 @@ proxy-groups:
       - 🎯 全球直连
       - 🚀 节点选择
       - "@`"
-      - "@SryLove"
-      - saministamm`
-      - پنل اختصاصی TM 🚀
-      - c1.msjia8844.site:31532
-      - test-test
+      - NetAccount
+      - NetAccount 2
       - "@SizVpn"
   - name: 🍎 苹果服务
     type: select
@@ -81,11 +63,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@`"
-      - "@SryLove"
-      - saministamm`
-      - پنل اختصاصی TM 🚀
-      - c1.msjia8844.site:31532
-      - test-test
+      - NetAccount
+      - NetAccount 2
       - "@SizVpn"
   - name: 🎯 全球直连
     type: select
@@ -115,11 +94,8 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - "@`"
-      - "@SryLove"
-      - saministamm`
-      - پنل اختصاصی TM 🚀
-      - c1.msjia8844.site:31532
-      - test-test
+      - NetAccount
+      - NetAccount 2
       - "@SizVpn"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连

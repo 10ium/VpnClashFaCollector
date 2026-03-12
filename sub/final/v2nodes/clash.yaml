@@ -465,6 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: 102.37.237.190:443, server: 102.37.237.190, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: RoHaFyD4IpW8W2LC, udp: true, tfo: false}
   - {name: series-a2.samanehha.co:443, server: series-a2.samanehha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: W74XFALLLuw6m5IA, udp: true, tfo: false}
   - {name: 144.217.164.29:12000, server: 144.217.164.29, port: 12000, type: ss, cipher: aes-256-gcm, password: 8JCsPssfgS8tiRwiMlhARg==, udp: true, tfo: false}
   - {name: 144.217.7.33:12000, server: 144.217.7.33, port: 12000, type: ss, cipher: aes-256-gcm, password: 8JCsPssfgS8tiRwiMlhARg==, udp: true, tfo: false}
@@ -486,6 +487,7 @@ proxies:
   - {name: 5.182.38.168:81, server: 5.182.38.168, port: 81, type: vless, tls: true, packet-encoding: xudp, uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d, servername: snippet.sh21.eu.org, network: ws, ws-opts: {path: /danfeng, headers: {Host: snippet.sh21.eu.org}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 66.63.168.172:39738, server: 66.63.168.172, port: 39738, type: vless, tls: true, packet-encoding: xudp, uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d, servername: snippet.gfw.nn.kg, alpn: [http/1.1], network: ws, ws-opts: {path: /danfeng, headers: {Host: snippet.gfw.nn.kg}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 51.250.106.242:443, server: 51.250.106.242, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a01881a8-3d9b-48bb-9a9c-e96e8b40b2c6, servername: eh.vk.com, host: eh.vk.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 7IOtSp0-n2_uNS5nMO9ywZbn2HibMRGy0KbLad3szXc, short-id: 5e6f7a8b}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 144.31.2.248:443, server: 144.31.2.248, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a16bd0e2-ff2e-4e4c-a955-0c684255a065, servername: pl.fasti.win, host: pl.fasti.win, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: -YTGWg5DjsLDyaDfr1D83kiUK22LVcrK3yC53lqqigs, short-id: feedbacc}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: hb-by1.cdns.su:443, server: hb-by1.cdns.su, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c67f81df-34e8-4cb3-ab43-599585775fa9, servername: hb-by1.cdns.su, host: hb-by1.cdns.su, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 0L6FE1vTechnKhN9LxFgmcDzqGVIfEQz8ZBGfvzKGzg, short-id: b0cf517d6f2d7b98}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 144.31.178.11:443, server: 144.31.178.11, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ca789367-2d28-4a94-90ed-e34dc11288a0, servername: neb1.stream-room.com, host: neb1.stream-room.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: XBePIY00JetBf0pbmcx-Dvu8XsZ-l079GiHf93HhS0Y, short-id: 6d6f13013d3e1d0c}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 87.229.97.231:443, server: 87.229.97.231, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d65cc14c-f53f-4fe2-b262-97856601319c, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg, short-id: c39cc7310a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
@@ -507,6 +509,7 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - 102.37.237.190:443
       - series-a2.samanehha.co:443
       - 144.217.164.29:12000
       - 144.217.7.33:12000
@@ -528,6 +531,7 @@ proxy-groups:
       - 5.182.38.168:81
       - 66.63.168.172:39738
       - 51.250.106.242:443
+      - 144.31.2.248:443
       - hb-by1.cdns.su:443
       - 144.31.178.11:443
       - 87.229.97.231:443
@@ -539,6 +543,7 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - 102.37.237.190:443
       - series-a2.samanehha.co:443
       - 144.217.164.29:12000
       - 144.217.7.33:12000
@@ -560,6 +565,7 @@ proxy-groups:
       - 5.182.38.168:81
       - 66.63.168.172:39738
       - 51.250.106.242:443
+      - 144.31.2.248:443
       - hb-by1.cdns.su:443
       - 144.31.178.11:443
       - 87.229.97.231:443
@@ -571,6 +577,7 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - 102.37.237.190:443
       - series-a2.samanehha.co:443
       - 144.217.164.29:12000
       - 144.217.7.33:12000
@@ -592,6 +599,7 @@ proxy-groups:
       - 5.182.38.168:81
       - 66.63.168.172:39738
       - 51.250.106.242:443
+      - 144.31.2.248:443
       - hb-by1.cdns.su:443
       - 144.31.178.11:443
       - 87.229.97.231:443
@@ -612,6 +620,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 102.37.237.190:443
       - series-a2.samanehha.co:443
       - 144.217.164.29:12000
       - 144.217.7.33:12000
@@ -633,6 +642,7 @@ proxy-groups:
       - 5.182.38.168:81
       - 66.63.168.172:39738
       - 51.250.106.242:443
+      - 144.31.2.248:443
       - hb-by1.cdns.su:443
       - 144.31.178.11:443
       - 87.229.97.231:443
@@ -644,6 +654,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 102.37.237.190:443
       - series-a2.samanehha.co:443
       - 144.217.164.29:12000
       - 144.217.7.33:12000
@@ -665,6 +676,7 @@ proxy-groups:
       - 5.182.38.168:81
       - 66.63.168.172:39738
       - 51.250.106.242:443
+      - 144.31.2.248:443
       - hb-by1.cdns.su:443
       - 144.31.178.11:443
       - 87.229.97.231:443
@@ -676,6 +688,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 102.37.237.190:443
       - series-a2.samanehha.co:443
       - 144.217.164.29:12000
       - 144.217.7.33:12000
@@ -697,6 +710,7 @@ proxy-groups:
       - 5.182.38.168:81
       - 66.63.168.172:39738
       - 51.250.106.242:443
+      - 144.31.2.248:443
       - hb-by1.cdns.su:443
       - 144.31.178.11:443
       - 87.229.97.231:443
