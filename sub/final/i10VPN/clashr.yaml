@@ -5,13 +5,8 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@i10VPN-Psiphon`", server: 142.171.65.106, port: 8388, type: ss, cipher: 2022-blake3-aes-128-gcm, password: ASMkCw/SMA8MzZK8tv5vNw==:ASMkCw/SMA8MzZK8tv5vNw==, udp: true, tfo: false}
-  - {name: "@i10VPN-Psiphon", server: 23.95.113.104, port: 8388, type: ss, cipher: 2022-blake3-aes-128-gcm, password: ghVQI4n9i1DV825oWdwbTg==:ghVQI4n9i1DV825oWdwbTg==, udp: true, tfo: false}
-  - {name: "@i10VPN-Psiphon 2", server: 102.37.156.224, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: aduB9HGxQHjA2SBMRjkHX6, udp: true, tfo: false}
-  - {name: "@i10VPN-Psiphon` 2", server: 65.109.208.248, port: 21235, type: vless, tls: true, packet-encoding: xudp, uuid: 7e6b66dc-6dbc-4d01-a13e-13d0be4f38ef, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@i10VPN-Psiphon` 3", server: ge3.irib4.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 9925fea3-a74e-4ccc-8771-23df6f5ea4d9, servername: skyroom.online%2Cgharar.ir%2Cigap.net, host: skyroom.online%2Cgharar.ir%2Cigap.net, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@i10VPN-Psiphon 3", server: 23.95.113.104, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f91c1cc2-05fe-4efd-ba09-86cb6bec19e3, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@i10VPN-Psiphon 4", server: 217.218.52.1, port: 10410, type: vmess, uuid: f93f134f-7adb-48c3-bcd1-2532edb0b478, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@i10VPN-Psiphon`", server: 65.109.208.248, port: 21235, type: vless, tls: true, packet-encoding: xudp, uuid: 7e6b66dc-6dbc-4d01-a13e-13d0be4f38ef, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@i10VPN-Psiphon` 2", server: ge3.irib4.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 9925fea3-a74e-4ccc-8771-23df6f5ea4d9, servername: skyroom.online%2Cgharar.ir%2Cigap.net, host: skyroom.online%2Cgharar.ir%2Cigap.net, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -19,12 +14,7 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - "@i10VPN-Psiphon`"
-      - "@i10VPN-Psiphon"
-      - "@i10VPN-Psiphon 2"
       - "@i10VPN-Psiphon` 2"
-      - "@i10VPN-Psiphon` 3"
-      - "@i10VPN-Psiphon 3"
-      - "@i10VPN-Psiphon 4"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -32,12 +22,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@i10VPN-Psiphon`"
-      - "@i10VPN-Psiphon"
-      - "@i10VPN-Psiphon 2"
       - "@i10VPN-Psiphon` 2"
-      - "@i10VPN-Psiphon` 3"
-      - "@i10VPN-Psiphon 3"
-      - "@i10VPN-Psiphon 4"
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -45,48 +30,28 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - "@i10VPN-Psiphon`"
-      - "@i10VPN-Psiphon"
-      - "@i10VPN-Psiphon 2"
       - "@i10VPN-Psiphon` 2"
-      - "@i10VPN-Psiphon` 3"
-      - "@i10VPN-Psiphon 3"
-      - "@i10VPN-Psiphon 4"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@i10VPN-Psiphon`"
-      - "@i10VPN-Psiphon"
-      - "@i10VPN-Psiphon 2"
       - "@i10VPN-Psiphon` 2"
-      - "@i10VPN-Psiphon` 3"
-      - "@i10VPN-Psiphon 3"
-      - "@i10VPN-Psiphon 4"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - "@i10VPN-Psiphon`"
-      - "@i10VPN-Psiphon"
-      - "@i10VPN-Psiphon 2"
       - "@i10VPN-Psiphon` 2"
-      - "@i10VPN-Psiphon` 3"
-      - "@i10VPN-Psiphon 3"
-      - "@i10VPN-Psiphon 4"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@i10VPN-Psiphon`"
-      - "@i10VPN-Psiphon"
-      - "@i10VPN-Psiphon 2"
       - "@i10VPN-Psiphon` 2"
-      - "@i10VPN-Psiphon` 3"
-      - "@i10VPN-Psiphon 3"
-      - "@i10VPN-Psiphon 4"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -115,12 +80,7 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - "@i10VPN-Psiphon`"
-      - "@i10VPN-Psiphon"
-      - "@i10VPN-Psiphon 2"
       - "@i10VPN-Psiphon` 2"
-      - "@i10VPN-Psiphon` 3"
-      - "@i10VPN-Psiphon 3"
-      - "@i10VPN-Psiphon 4"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

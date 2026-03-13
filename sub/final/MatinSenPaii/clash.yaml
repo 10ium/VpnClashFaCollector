@@ -465,7 +465,16 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@mohammad_h201 - @MatinSenPaii-pi4yqhi8", server: 144.76.188.139, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4e6b23f2-932b-4a80-a280-44cdf8a86452, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MatinSenPaii - S4-1", server: 212.87.198.101, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 61873e11-536e-45e9-ae5c-a375542bc05b, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MatinSenPaii - S2-1", server: 212.87.198.102, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 61873e11-536e-45e9-ae5c-a375542bc05b, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MatinSenPaii - S3-1", server: 212.87.198.109, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 61873e11-536e-45e9-ae5c-a375542bc05b, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MatinSenPaii - S5-1", server: 212.87.198.113, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 61873e11-536e-45e9-ae5c-a375542bc05b, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MatinSenPaii - S1-1", server: 212.87.198.108, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f91c1cc2-05fe-4efd-ba09-86cb6bec19e3, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MatinSenPaii - S1-2", server: 212.87.198.108, port: 51384, type: vmess, uuid: 7e1ebb0d-68c0-4d26-94fd-04d14ca55351, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MatinSenPaii - S2-2", server: 212.87.198.102, port: 51384, type: vmess, uuid: 7e1ebb0d-68c0-4d26-94fd-04d14ca55351, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MatinSenPaii - S3-2", server: 212.87.198.109, port: 51384, type: vmess, uuid: 7e1ebb0d-68c0-4d26-94fd-04d14ca55351, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MatinSenPaii - S4-2", server: 212.87.198.101, port: 51384, type: vmess, uuid: 7e1ebb0d-68c0-4d26-94fd-04d14ca55351, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MatinSenPaii - S5-2", server: 212.87.198.113, port: 51384, type: vmess, uuid: 7e1ebb0d-68c0-4d26-94fd-04d14ca55351, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +491,48 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@mohammad_h201 - @MatinSenPaii-pi4yqhi8"
+      - "@MatinSenPaii - S4-1"
+      - "@MatinSenPaii - S2-1"
+      - "@MatinSenPaii - S3-1"
+      - "@MatinSenPaii - S5-1"
+      - "@MatinSenPaii - S1-1"
+      - "@MatinSenPaii - S1-2"
+      - "@MatinSenPaii - S2-2"
+      - "@MatinSenPaii - S3-2"
+      - "@MatinSenPaii - S4-2"
+      - "@MatinSenPaii - S5-2"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@mohammad_h201 - @MatinSenPaii-pi4yqhi8"
+      - "@MatinSenPaii - S4-1"
+      - "@MatinSenPaii - S2-1"
+      - "@MatinSenPaii - S3-1"
+      - "@MatinSenPaii - S5-1"
+      - "@MatinSenPaii - S1-1"
+      - "@MatinSenPaii - S1-2"
+      - "@MatinSenPaii - S2-2"
+      - "@MatinSenPaii - S3-2"
+      - "@MatinSenPaii - S4-2"
+      - "@MatinSenPaii - S5-2"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@mohammad_h201 - @MatinSenPaii-pi4yqhi8"
+      - "@MatinSenPaii - S4-1"
+      - "@MatinSenPaii - S2-1"
+      - "@MatinSenPaii - S3-1"
+      - "@MatinSenPaii - S5-1"
+      - "@MatinSenPaii - S1-1"
+      - "@MatinSenPaii - S1-2"
+      - "@MatinSenPaii - S2-2"
+      - "@MatinSenPaii - S3-2"
+      - "@MatinSenPaii - S4-2"
+      - "@MatinSenPaii - S5-2"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +548,48 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@mohammad_h201 - @MatinSenPaii-pi4yqhi8"
+      - "@MatinSenPaii - S4-1"
+      - "@MatinSenPaii - S2-1"
+      - "@MatinSenPaii - S3-1"
+      - "@MatinSenPaii - S5-1"
+      - "@MatinSenPaii - S1-1"
+      - "@MatinSenPaii - S1-2"
+      - "@MatinSenPaii - S2-2"
+      - "@MatinSenPaii - S3-2"
+      - "@MatinSenPaii - S4-2"
+      - "@MatinSenPaii - S5-2"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@mohammad_h201 - @MatinSenPaii-pi4yqhi8"
+      - "@MatinSenPaii - S4-1"
+      - "@MatinSenPaii - S2-1"
+      - "@MatinSenPaii - S3-1"
+      - "@MatinSenPaii - S5-1"
+      - "@MatinSenPaii - S1-1"
+      - "@MatinSenPaii - S1-2"
+      - "@MatinSenPaii - S2-2"
+      - "@MatinSenPaii - S3-2"
+      - "@MatinSenPaii - S4-2"
+      - "@MatinSenPaii - S5-2"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@mohammad_h201 - @MatinSenPaii-pi4yqhi8"
+      - "@MatinSenPaii - S4-1"
+      - "@MatinSenPaii - S2-1"
+      - "@MatinSenPaii - S3-1"
+      - "@MatinSenPaii - S5-1"
+      - "@MatinSenPaii - S1-1"
+      - "@MatinSenPaii - S1-2"
+      - "@MatinSenPaii - S2-2"
+      - "@MatinSenPaii - S3-2"
+      - "@MatinSenPaii - S4-2"
+      - "@MatinSenPaii - S5-2"
   - name: دانلود منیجر 📥
     type: select
     proxies:

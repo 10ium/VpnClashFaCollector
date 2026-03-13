@@ -5,102 +5,95 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@meliproxyy", server: 102.37.156.224, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: aduB9HGxQHjA2SBMRjkHX6, udp: true, tfo: false}
   - {name: "@meliproxyy`", server: 188.114.98.0, port: 2087, type: vless, tls: true, packet-encoding: xudp, uuid: 20d983ca-d7fa-4fc6-a3db-c6f7e56c4629, servername: a4.maxriser.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: a4.maxriser.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@meliproxyy 2", server: 188.114.98.0, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 478cc26d-16b3-4fdd-be64-60d5a58c1622, network: ws, ws-opts: {path: /, headers: {Host: tt.andishehparenting.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@meliproxyy", server: 188.114.98.0, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 478cc26d-16b3-4fdd-be64-60d5a58c1622, network: ws, ws-opts: {path: /, headers: {Host: tt.andishehparenting.com}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@meliproxyy` 2", server: 188.114.98.0, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 478cc26d-16b3-4fdd-be64-60d5a58c1622, network: ws, ws-opts: {path: /, headers: {Host: tt.andishehparenting.com}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@meliproxyy` 3", server: f2.hamrahconf.ir, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 5558156d-3a2c-4843-9eb9-06e69ac3a2bf, servername: uiuyoyw.secoxi.site, network: ws, ws-opts: {path: /, headers: {Host: uiuyoyw.secoxi.site}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@meliproxyy` 4", server: F3.HaMrAhCoNf.Ir, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 5fdc186d-f881-4fc4-9346-1f3d8fae9339, servername: uktkq.secoxi.site, network: ws, ws-opts: {path: /, headers: {Host: uktkq.secoxi.site}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@meliproxyy` 5", server: wsss.beepn.info, port: 2087, type: vless, tls: true, packet-encoding: xudp, uuid: 9298fb7d-d257-4b52-b9ac-d1fb279e3032, servername: Ws2.beepn.info, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /path, headers: {Host: Ws2.beepn.info}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@meliproxyy 3", server: 188.114.98.0, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: e44c9ff3-5a05-4ee9-b050-b8fbc7c1af04, network: ws, ws-opts: {path: /ed=2560, headers: {Host: turbooserver-roeg-fastly.flinkywoo.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@meliproxyy 4", server: chatgpt.com, port: 8443, type: vmess, uuid: 35312035-3420-4535-a031-303220353420, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /ws, headers: {Host: tr-1.stunnel.cc}}, udp: true, tfo: false}
+  - {name: "@meliproxyy 2", server: 188.114.98.0, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: e44c9ff3-5a05-4ee9-b050-b8fbc7c1af04, network: ws, ws-opts: {path: /ed=2560, headers: {Host: turbooserver-roeg-fastly.flinkywoo.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@meliproxyy 3", server: chatgpt.com, port: 8443, type: vmess, uuid: 35312035-3420-4535-a031-303220353420, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /ws, headers: {Host: tr-1.stunnel.cc}}, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@meliproxyy"
       - "@meliproxyy`"
-      - "@meliproxyy 2"
+      - "@meliproxyy"
       - "@meliproxyy` 2"
       - "@meliproxyy` 3"
       - "@meliproxyy` 4"
       - "@meliproxyy` 5"
+      - "@meliproxyy 2"
       - "@meliproxyy 3"
-      - "@meliproxyy 4"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@meliproxyy"
       - "@meliproxyy`"
-      - "@meliproxyy 2"
+      - "@meliproxyy"
       - "@meliproxyy` 2"
       - "@meliproxyy` 3"
       - "@meliproxyy` 4"
       - "@meliproxyy` 5"
+      - "@meliproxyy 2"
       - "@meliproxyy 3"
-      - "@meliproxyy 4"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@meliproxyy"
       - "@meliproxyy`"
-      - "@meliproxyy 2"
+      - "@meliproxyy"
       - "@meliproxyy` 2"
       - "@meliproxyy` 3"
       - "@meliproxyy` 4"
       - "@meliproxyy` 5"
+      - "@meliproxyy 2"
       - "@meliproxyy 3"
-      - "@meliproxyy 4"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@meliproxyy"
       - "@meliproxyy`"
-      - "@meliproxyy 2"
+      - "@meliproxyy"
       - "@meliproxyy` 2"
       - "@meliproxyy` 3"
       - "@meliproxyy` 4"
       - "@meliproxyy` 5"
+      - "@meliproxyy 2"
       - "@meliproxyy 3"
-      - "@meliproxyy 4"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@meliproxyy"
       - "@meliproxyy`"
-      - "@meliproxyy 2"
+      - "@meliproxyy"
       - "@meliproxyy` 2"
       - "@meliproxyy` 3"
       - "@meliproxyy` 4"
       - "@meliproxyy` 5"
+      - "@meliproxyy 2"
       - "@meliproxyy 3"
-      - "@meliproxyy 4"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@meliproxyy"
       - "@meliproxyy`"
-      - "@meliproxyy 2"
+      - "@meliproxyy"
       - "@meliproxyy` 2"
       - "@meliproxyy` 3"
       - "@meliproxyy` 4"
       - "@meliproxyy` 5"
+      - "@meliproxyy 2"
       - "@meliproxyy 3"
-      - "@meliproxyy 4"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -128,15 +121,14 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@meliproxyy"
       - "@meliproxyy`"
-      - "@meliproxyy 2"
+      - "@meliproxyy"
       - "@meliproxyy` 2"
       - "@meliproxyy` 3"
       - "@meliproxyy` 4"
       - "@meliproxyy` 5"
+      - "@meliproxyy 2"
       - "@meliproxyy 3"
-      - "@meliproxyy 4"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
