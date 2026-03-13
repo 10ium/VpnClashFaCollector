@@ -467,12 +467,9 @@ rule-providers:
 proxies:
   - {name: "@Capoit`", server: 107.175.134.127, port: 8388, type: ss, cipher: 2022-blake3-aes-128-gcm, password: OMJJIS9F5ivrt7s5sb5Nqg==:OMJJIS9F5ivrt7s5sb5Nqg==, udp: true, tfo: false}
   - {name: "@Capoit` 2", server: 23.95.113.104, port: 8388, type: ss, cipher: 2022-blake3-aes-128-gcm, password: ghVQI4n9i1DV825oWdwbTg==:ghVQI4n9i1DV825oWdwbTg==, udp: true, tfo: false}
-  - {name: "@Capoit` 3", server: 85.133.227.160, port: 9090, type: vless, tls: true, packet-encoding: xudp, uuid: 10e9b430-f616-4106-a364-d7e14bf47efe, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 4", server: 85.133.214.66, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 1f39fef1-7887-fe10-78f7-faa773794f24, host: myket.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 5", server: 188.114.98.0, port: 2087, type: vless, tls: true, packet-encoding: xudp, uuid: 20d983ca-d7fa-4fc6-a3db-c6f7e56c4629, servername: a4.maxriser.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: a4.maxriser.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit", server: str.gamepuzzlecenter.com, port: 21760, type: vless, tls: true, packet-encoding: xudp, uuid: 670d830d-5540-40e8-9cc8-0ef78b091cf5, host: str.gamepuzzlecenter.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 6", server: n-g-f-1.m2v2.site, port: 2101, type: vless, tls: true, packet-encoding: xudp, uuid: d429bc6f-570b-457e-88b9-4697e849ae1d, alpn: [h2%2Chttp%2F1.1], host: n-g-f-1.m2v2.site, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 7", server: 212.87.198.108, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f91c1cc2-05fe-4efd-ba09-86cb6bec19e3, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 3", server: 85.133.214.66, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 1f39fef1-7887-fe10-78f7-faa773794f24, host: myket.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 4", server: 188.114.98.0, port: 2087, type: vless, tls: true, packet-encoding: xudp, uuid: 20d983ca-d7fa-4fc6-a3db-c6f7e56c4629, servername: a4.maxriser.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: a4.maxriser.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 5", server: n-g-f-1.m2v2.site, port: 2101, type: vless, tls: true, packet-encoding: xudp, uuid: d429bc6f-570b-457e-88b9-4697e849ae1d, alpn: [h2%2Chttp%2F1.1], host: n-g-f-1.m2v2.site, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -494,9 +491,6 @@ proxy-groups:
       - "@Capoit` 3"
       - "@Capoit` 4"
       - "@Capoit` 5"
-      - "@Capoit"
-      - "@Capoit` 6"
-      - "@Capoit` 7"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -508,9 +502,6 @@ proxy-groups:
       - "@Capoit` 3"
       - "@Capoit` 4"
       - "@Capoit` 5"
-      - "@Capoit"
-      - "@Capoit` 6"
-      - "@Capoit` 7"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -522,9 +513,6 @@ proxy-groups:
       - "@Capoit` 3"
       - "@Capoit` 4"
       - "@Capoit` 5"
-      - "@Capoit"
-      - "@Capoit` 6"
-      - "@Capoit` 7"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -545,9 +533,6 @@ proxy-groups:
       - "@Capoit` 3"
       - "@Capoit` 4"
       - "@Capoit` 5"
-      - "@Capoit"
-      - "@Capoit` 6"
-      - "@Capoit` 7"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -559,9 +544,6 @@ proxy-groups:
       - "@Capoit` 3"
       - "@Capoit` 4"
       - "@Capoit` 5"
-      - "@Capoit"
-      - "@Capoit` 6"
-      - "@Capoit` 7"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -573,9 +555,6 @@ proxy-groups:
       - "@Capoit` 3"
       - "@Capoit` 4"
       - "@Capoit` 5"
-      - "@Capoit"
-      - "@Capoit` 6"
-      - "@Capoit` 7"
   - name: دانلود منیجر 📥
     type: select
     proxies:
