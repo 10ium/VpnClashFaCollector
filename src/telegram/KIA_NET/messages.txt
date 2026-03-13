@@ -1,5 +1,614 @@
 # آرشیو کانال: @KIA_NET
-بروزرسانی: 2026-03-13 10:30:48 UTC
+بروزرسانی: 2026-03-13 20:24:14 UTC
+
+### 🕒 2026-03-13 18:46:06 UTC
+من رفتم فعلا شب بخیر
+***♥️***
+
+---
+
+### 🕒 2026-03-13 18:40:23 UTC
+این 
+[#پروکسی](?q=%23%D9%BE%D8%B1%D9%88%DA%A9%D8%B3%DB%8C)
+ رو کلا سیو داشته باشید 
+[https://t.me/proxy?server=212.80.18.74&port=39090&secret=767cf6f14f461cdd166b54eddb53e1b0](https://t.me/proxy?server=212.80.18.74&port=39090&secret=767cf6f14f461cdd166b54eddb53e1b0)
+[https://t.me/socks?server=176.65.242.179&port=1080](https://t.me/socks?server=176.65.242.179&port=1080)
+توی این چند روزه وصل بوده فقط سرعتش خیلی خیلی کمه . بعضی موقع ها سرعتش بهتر میشه داشته باشیدش بد نیست واسه مواقع ضروری 
+***❤️***
+[@KIA_NET](https://t.me/KIA_NET)
+ چنل‌تلگرم
+
+---
+
+### 🕒 2026-03-13 18:37:48 UTC
+***💠***
+ راه‌حل برنده 
+***💠***
+  قبل از هر چیزی این راه‌حل برای افرادی که زیاد آشنا نیستن می‌تونه کمی پیچیده به‌نظر برسه در نتیجه، اگه براتون کیفیت و پایداری اتصال مهم نیست، می‌تونید از این صرف نظر کنید. از طرفی همین ابتدا بگم، گاهی هم این راه‌حل خوب جواب نمی‌ده، و به‌تره…
+
+---
+
+### 🕒 2026-03-13 18:37:33 UTC
+***💠***
+ راه‌حل برنده 
+***💠***
+قبل از هر چیزی این راه‌حل برای افرادی که زیاد آشنا نیستن می‌تونه کمی پیچیده به‌نظر برسه در نتیجه، اگه براتون کیفیت و پایداری اتصال مهم نیست، می‌تونید از این صرف نظر کنید.
+از طرفی همین ابتدا بگم، گاهی هم این راه‌حل خوب جواب نمی‌ده، و به‌تره مستقیم استفاده کنید، اما به هر حال توضیحش رو می‌نویسم. (دقت کنید که برای گوشی استفاده از باطری رو بالا می‌بره).
+به طور خلاصه سه نوع این راه‌حل رو پیاده‌سازی می‌کنیم:
+‏
+***🅰️***
+ به صورت الهام گرفته از یک DNS Multiplexing ساده‌سازی شده روی گوشی شما
+‏
+***🅱️***
+ به صورت الهام گرفته از Parallel Tunneling ساده‌سازی شده روی گوشی شما
+‏
+***🅾️***
+ به صورت ترکیبی از یک Parallel Tunelling که سر راهش یه Multiplexer قرار گرفته و با یه Balancer Strategy موثر اون رو تقسیم می‌کنه به کانال‌های موازی.
+این راه‌حل هم به درد کاربران حرفه‌ای‌تر می‌خوره و هم دلیل دیگش اینه که توسعه‌دهنده‌های عزیز اپلیکیشن‌ها ازش ایده بگیرن، و تونن اون رو به طور داخلی ب پیاده‌سازی و به قابلیت‌های مربوطه‌اش رو به اپلیکیشن‌هاشون اضافه کنن. بدین صورت حتمن نیاز به معماری‌های پیچیده‌ی خارجی در سمت سرور نخواهد بود. (درسته ممکنه اون کارایی رو نداشته باشه، اما کارگشا خواهد بود)
+بخش مشترک هر دو روش (ینی 
+***🅰️***
+ و 
+***🅱️***
+):
+ به عنوان نمونه روی اندروید توضیح داده می‌شه، اما روی سیستم‌عامل‌های دیگه هم قابل انجام هست. دحالت‌ها، شما حداقل 3 برنامه برای نمونه نیاز دارید که ما این‌جا 4 تا رو مثال می‌زنیم برای اندروید:
+1- برنامه‌ی SlipNet
+2- برنامه‌ی NetMod
+3- برنامه‌ی Hiddify
+4- برنامه‌ی V2rayNG (جایگزین)
+(ترجیحا همه‌ی برنامه‌ها آخرین نسخه در زمان انتشار این پست)
+در دو برنامه‌ی SlipNet و NetMod دو تا کانفیگ درست و متصل اضافه کنید (دیگه از بخش یافتن dns تمیز می‌گذرم که همه می‌دونید) و ترجیحا در SlipNet یه کانفیگ NoizDNS و در NetMod یه کانفیگ DNStt+SSH اضافه کنید.
+بعد از این در همه‌ی برنامه‌ها نحوه‌ی اتصال رو از حالت Tun Mode خارج کنید و بر روی حالت Proxy Mode بگذارید، و پورت‌ proxyهای داخلیشون رو طوری تنظیم کنید که با هم تلاقی نداشته باشن، به عنوان مثال:
+1- SlipNet: 1070
+2- NetMode: 1090
+3- Hiddify: 12334
+4- V2rayNG: 10808
+ادامه در کامنت‌های اولِ این پست
+*(در صورت استقبال، و نیاز PDF به‌زودی قرار می‌گیره)*
+[@KIA_NET](https://t.me/KIA_NET)
+ چنل‌تلگرم
+
+---
+
+### 🕒 2026-03-13 18:23:32 UTC
+{"remarks":"@KIA_NET چنل‌تلگرم","log":{"loglevel":"warning"},"inbounds":[{"tag":"socks","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true,"userLevel":8},"sniffing":{"enabled":true,"destOverride":["http","tls"],"routeOnly":false}}],"ou…
+
+---
+
+### 🕒 2026-03-13 18:22:24 UTC
+{"remarks":"@KIA_NET چنل‌تلگرم","log":{"loglevel":"warning"},"inbounds":[{"tag":"socks","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true,"userLevel":8},"sniffing":{"enabled":true,"destOverride":["http","tls"],"routeOnly":false}}],"outbounds":[{"tag":"proxy","protocol":"vless","settings":{"vnext":[{"address":"g2-de2-hz.a1mshop2.xyz","port":22560,"users":[{"id":"1f4b32ed-ce4c-4c85-b4a0-87dfb549d9dc","level":8,"encryption":"none"}]}]},"streamSettings":{"network":"tcp","tcpSettings":{"header":{"type":"http","request":{"path":["/"],"headers":{"Host":["aparat.com"],"User-Agent":["Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.6478.122 Mobile Safari/537.36"],"Accept-Encoding":["gzip, deflate"],"Connection":["keep-alive"],"Pragma":"no-cache"},"version":"1.1","method":"GET"}}}},"mux":{"enabled":false,"concurrency":-1,"xudpConcurrency":8,"xudpProxyUDP443":""}},{"tag":"direct","protocol":"freedom","settings":{"domainStrategy":"UseIP"},"mux":{"enabled":false,"concurrency":8,"xudpConcurrency":8,"xudpProxyUDP443":""}},{"tag":"block","protocol":"blackhole","settings":{"response":{"type":"http"}},"mux":{"enabled":false,"concurrency":8,"xudpConcurrency":8,"xudpProxyUDP443":""}}],"dns":{"servers":["1.1.1.1"],"hosts":{"domain:googleapis.cn":"googleapis.com","dns.alidns.com":["223.5.5.5","223.6.6.6","2400:3200::1","2400:3200:baba::1"],"one.one.one.one":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"dot.pub":["1.12.12.12","120.53.53.53"],"dns.google":["8.8.8.8","8.8.4.4","2001:4860:4860::8888","2001:4860:4860::8844"],"dns.quad9.net":["9.9.9.9","149.112.112.112","2620:fe::fe","2620:fe::9"],"common.dot.dns.yandex.net":["77.88.8.8","77.88.8.1","2a02:6b8::feed:0ff","2a02:6b8:0:1::feed:0ff"]}},"routing":{"domainStrategy":"IPIfNonMatch","rules":[{"type":"field","ip":["1.1.1.1"],"outboundTag":"proxy","port":"53"},{"type":"field","ip":["223.5.5.5"],"outboundTag":"direct","port":"53"}]}}
+
+---
+
+### 🕒 2026-03-13 18:21:30 UTC
+دی ان اس جدید 
+***🚀***
+مخصوص AM tunnel : 
+`udp://95.38.102.86`
+فرکانس 10-6 ترجیحا - عالی برای استفاده طولانی مدت بدون قطعی !!
+مخصوص slip net : 
+`95.38.102.86:53`
+[@KIA_NET](https://t.me/KIA_NET)
+ چنل‌تلگرم
+
+---
+
+### 🕒 2026-03-13 18:19:23 UTC
+{"remarks":"@KIA_NET چنل‌تلگرم","log":{"loglevel":"warning"},"inbounds":[{"tag":"socks","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true,"userLevel":8},"sniffing":{"enabled":true,"destOverride":["http","tls"],"routeOnly":false}}],"ou…
+
+---
+
+### 🕒 2026-03-13 18:09:06 UTC
+{"remarks":"@KIA_NET چنل‌تلگرم","log":{"loglevel":"warning"},"inbounds":[{"tag":"socks","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true,"userLevel":8},"sniffing":{"enabled":true,"destOverride":["http","tls"],"routeOnly":false}}],"ou…
+
+---
+
+### 🕒 2026-03-13 18:06:31 UTC
+{"remarks":"@KIA_NET چنل‌تلگرم","log":{"loglevel":"warning"},"inbounds":[{"tag":"socks","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true,"userLevel":8},"sniffing":{"enabled":true,"destOverride":["http","tls"],"routeOnly":false}}],"ou…
+
+---
+
+### 🕒 2026-03-13 18:06:26 UTC
+`{"remarks":"@KIA_NET چنل‌تلگرم","log":{"loglevel":"warning"},"inbounds":[{"tag":"socks","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true,"userLevel":8},"sniffing":{"enabled":true,"destOverride":["http","tls"],"routeOnly":false}}],"outbounds":[{"tag":"proxy","protocol":"vless","settings":{"vnext":[{"address":"vnet.vnet500.xyz","port":1002,"users":[{"id":"c67cca71-0f90-41ac-a3ef-e326fe1d18b9","level":8,"encryption":"none"}]}]},"streamSettings":{"network":"tcp","tcpSettings":{"header":{"type":"none"}}},"mux":{"enabled":false,"concurrency":-1,"xudpConcurrency":8,"xudpProxyUDP443":""}},{"tag":"direct","protocol":"freedom","settings":{"domainStrategy":"UseIP"},"mux":{"enabled":false,"concurrency":8,"xudpConcurrency":8,"xudpProxyUDP443":""}},{"tag":"block","protocol":"blackhole","settings":{"response":{"type":"http"}},"mux":{"enabled":false,"concurrency":8,"xudpConcurrency":8,"xudpProxyUDP443":""}}],"dns":{"servers":["1.1.1.1"],"hosts":{"domain:googleapis.cn":"googleapis.com","dns.alidns.com":["223.5.5.5","223.6.6.6","2400:3200::1","2400:3200:baba::1"],"one.one.one.one":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"dot.pub":["1.12.12.12","120.53.53.53"],"dns.google":["8.8.8.8","8.8.4.4","2001:4860:4860::8888","2001:4860:4860::8844"],"dns.quad9.net":["9.9.9.9","149.112.112.112","2620:fe::fe","2620:fe::9"],"common.dot.dns.yandex.net":["77.88.8.8","77.88.8.1","2a02:6b8::feed:0ff","2a02:6b8:0:1::feed:0ff"]}},"routing":{"domainStrategy":"IPIfNonMatch","rules":[{"type":"field","ip":["1.1.1.1"],"outboundTag":"proxy","port":"53"},{"type":"field","ip":["223.5.5.5"],"outboundTag":"direct","port":"53"}]}}`
+
+---
+
+### 🕒 2026-03-13 17:44:49 UTC
+این DNS رو داخل slipnet تست کنید ( مخابرات )
+`93.118.114.23:53`
+[@KIA_NET](https://t.me/KIA_NET)
+ چنل‌تلگرم
+
+---
+
+### 🕒 2026-03-13 17:44:39 UTC
+Slipstream ssh
+`slipnet://MTd8c2xpcHN0cmVhbV9zc2h8aXJhbm1lZGkgc2VydmVyIDIgLSBzbGlwIHNzaHxzMi5pcmFubWVkaTI2Lndvcmt8OC44LjguODo1MzowfDB8NTAwMHxiYnJ8MTA4MHwxMjcuMC4wLjF8MHx8fHwxfG15dXNlcnppfG15cGQxMjMxMjN8MjJ8MHwxMjcuMC4wLjF8MHx8dWRwfHBhc3N3b3JkfHx8fDB8NDQzfHx8MHx8MHwwfHwwfA==`
+Slipstream 
+`slipnet://MTd8c3N8aXJhbm1lZGkgc2VydmVyIDIgc2xpcHx0Mi5pcmFubWVkaTI2Lndvcmt8OC44LjguODo1MzowfDB8NTAwMHxiYnJ8MTA4MHwxMjcuMC4wLjF8MHx8fHwwfHx8MjJ8MHwxMjcuMC4wLjF8MHx8dWRwfHBhc3N3b3JkfHx8fDB8NDQzfHx8MHx8MHwwfHwwfA==`
+Dnstt
+`slipnet://MTd8ZG5zdHR8aXJhbm1lZGlhIHNlcnZlcjMgZG5zdHR8ZDIuaXJhbm1lZGlhMjYubGl2ZXwyMTIuMTYxLjE2OC4xNTo1MzowfDB8NTAwMHxiYnJ8MTA4MHwxMjcuMC4wLjF8MHwwOTE0NGNmOTI0N2E5MWM0MWVhNGExNGE5NDYyODVkZjU4YjliMjBhNWJiMTBkYmQwOTI0OGUxZGIyOWRhNTQ5fHx8MHx8fDIyfDB8MTI3LjAuMC4xfDB8fHVkcHxwYXNzd29yZHx8fHwwfDQ0M3x8fDB8fDB8MHx8MHw=`
+
+---
+
+### 🕒 2026-03-13 17:44:39 UTC
+Slipstream 
+`slipnet://MTd8c3N8c2VydmVyIDEgLSBzbGlwc3RyZWFtfHQyLmRuc2FyY21lZG8ueHl6fDguOC44Ljg6NTM6MHwwfDIwMHxiYnJ8MTA4MHwxMjcuMC4wLjF8MHx8fHwwfHx8MjJ8MHwxMjcuMC4wLjF8MHx8dWRwfHBhc3N3b3JkfHx8fDB8NDQzfHx8MHx8MHwwfHwwfA==`
+Slipstream+ ssh
+`slipnet://MTd8c2xpcHN0cmVhbV9zc2h8c2VydmVyIDEgLSBzbGlwc3RyZWFtIHNzaHxzMi5kbnNhcmNtZWRvLnh5enw4LjguOC44OjUzOjB8MHwyMDB8YmJyfDEwODB8MTI3LjAuMC4xfDB8fHx8MXxteXVzZXJ6aXxteXBkMTIzMTIzfDIyfDB8MTI3LjAuMC4xfDB8fHVkcHxwYXNzd29yZHx8fHwwfDQ0M3x8fDB8fDB8MHx8MHw=`
+
+---
+
+### 🕒 2026-03-13 17:44:39 UTC
+Slipstream
+`slipnet://MTd8c3N8aXJhbm1lZGlhIHNlcnZlciAzICwgc2xpcHN0cmVhbXx0Mi5pcmFubWVkaWEyNi5saXZlfDIxMi4xNjEuMTY4LjE1OjUzOjB8MHw1MDAwfGJicnwxMDgwfDEyNy4wLjAuMXwwfHx8fDB8fHwyMnwwfDEyNy4wLjAuMXwwfHx1ZHB8cGFzc3dvcmR8fHx8MHw0NDN8fHwwfHwwfDB8fDB8`
+Slipstream + ssh:
+`slipnet://MTd8c2xpcHN0cmVhbV9zc2h8aXJhbm1lZGlhIHNlcnZlcjMgLCBzbGlwIHNzaHxzMi5pcmFubWVkaWEyNi5saXZlfDIxMi4xNjEuMTY4LjE1OjUzOjB8MHw1MDAwfGJicnwxMDgwfDEyNy4wLjAuMXwwfHx8fDF8bXl1c2Vyeml8bXlwZDEyMzEyM3wyMnwwfDEyNy4wLjAuMXwwfHx1ZHB8cGFzc3dvcmR8fHx8MHw0NDN8fHwwfHwwfDB8fDB8`
+
+---
+
+### 🕒 2026-03-13 17:30:49 UTC
+این DNS رو داخل slipnet تست کنید ( مخابرات )
+`93.118.114.23:53`
+[@KIA_NET](https://t.me/KIA_NET)
+ چنل‌تلگرم
+
+---
+
+### 🕒 2026-03-13 17:05:48 UTC
+vless://a4b53348-294d-43be-8549-93055291de3f@46.225.61.97:8080?path=%2Fws&security=none&encryption=none&host=v.iampedi7.live&type=ws#%F0%9F%87%A9%F0%9F%87%AA%20Germany%20%7C%20%40KIA_NET%20%DA%86%D9%86%D9%84%E2%80%8C%D8%AA%D9%84%DA%AF%D8%B1%D9%85
+vless://1218c022-dca8-49e5-b7d4-a04f3023db81@89.185.81.169:443?security=reality&encryption=none&pbk=2ryk_zFs_pzxv-bL9FkOk0Jb5oQw1jAbyXjp6oh96R0&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=stats.vk-portal.net&sid=4e249e62#%F0%9F%87%B3%F0%9F%87%B4%20Norway%20%7C%20%40KIA_NET%20%DA%86%D9%86%D9%84%E2%80%8C%D8%AA%D9%84%DA%AF%D8%B1%D9%85
+vless://256c5f48-4908-4255-83d1-c86cb58f22b4@fr.denditop.site:443?security=reality&encryption=none&pbk=wgoLhL4pRP0y6fu6He4qW_ElohCM_ANWJF3HEoUhNz4&headerType=none&fp=chrome&spx=%2F&type=tcp&flow=xtls-rprx-vision&sni=fr.denditop.site&sid=9c2378562188c3cb#%F0%9F%87%AB%F0%9F%87%B7%20France%20%7C%20%40KIA_NET%20%DA%86%D9%86%D9%84%E2%80%8C%D8%AA%D9%84%DA%AF%D8%B1%D9%85
+vless://2c564cf2-2291-4c8a-ad02-d8db601c41f9@5.180.47.159:8443?security=reality&encryption=none&pbk=Bg1P8Pv18fdeezfJWpqfUScMYHUUInCgdXsXEWBNBFo&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=google.com&sid=9edc548e1e284d84#%F0%9F%87%B3%F0%9F%87%B4%20Norway%20%7C%20%40KIA_NET%20%DA%86%D9%86%D9%84%E2%80%8C%D8%AA%D9%84%DA%AF%D8%B1%D9%85
+vless://62ad5a48-f452-4868-b7eb-d27df9b3d723@nlcdn7.suio.me:443?security=tls&encryption=none&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=nlcdn7.suio.me#%F0%9F%87%B3%F0%9F%87%B1%20Netherlands%20%7C%20%40KIA_NET%20%DA%86%D9%86%D9%84%E2%80%8C%D8%AA%D9%84%DA%AF%D8%B1%D9%85
+برای ترکیب سایفون
+***👆***
+ممکنه بعضیا شادوکس جواب نباشن از اینا استفاده کنید
+[@KIA_NET](https://t.me/KIA_NET)
+ چنل‌تلگرم
+
+---
+
+### 🕒 2026-03-13 16:42:16 UTC
+`ss://MjAyMi1ibGFrZTMtYWVzLTEyOC1nY206QVNNa0N3L1NNQThNelpLOHR2NXZOdz09OkFTTWtDdy9TTUE4TXpaSzh0djV2Tnc9PQ@142.171.65.106:8388#%F0%9F%87%BA%F0%9F%87%B8%20USA%20%7C%20%40KIA_NET%20%DA%86%D9%86%D9%84%E2%80%8C%D8%AA%D9%84%DA%AF%D8%B1%D9%85ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpoYkdycGZ2TnJKc1VtS21QYlIzaVky@tinkered-pennies-puppies.freesocks.work:443#%F0%9F%87%BA%F0%9F%87%B8%20USA%20%7C%20%40KIA_NET%20%DA%86%D9%86%D9%84%E2%80%8C%D8%AA%D9%84%DA%AF%D8%B1%D9%85ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpvWklvQTY5UTh5aGNRVjhrYTNQYTNB@82.38.31.62:8080#%F0%9F%87%AC%F0%9F%87%A7%20UK%20%7C%20%40KIA_NET%20%DA%86%D9%86%D9%84%E2%80%8C%D8%AA%D9%84%DA%AF%D8%B1%D9%85ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNToxNWIwNTczODMwMDgxZDAx@51.89.119.213:11201#%F0%9F%87%AC%F0%9F%87%A7%20UK%20%7C%20%40KIA_NET%20%DA%86%D9%86%D9%84%E2%80%8C%D8%AA%D9%84%DA%AF%D8%B1%D9%85`
+برا تکیب سایفون
+[@KIA_NET](https://t.me/KIA_NET)
+ چنل‌تلگرم
+
+---
+
+### 🕒 2026-03-13 15:58:17 UTC
+***😐***
+***💔***
+تف 
+شما  چیزی دارید راحل دارید  بگین بزارم چنل وصل بشن بچها
+هرجی ک دارید وصل میشه جز اشتراک شخصی تون  پی پشتیبانی بدین  یا کامنت بفرستید
+
+---
+
+### 🕒 2026-03-13 15:07:15 UTC
+[https://t.me/proxy?server=37.152.176.185&port=5443&secret=8c67374964dbc40e2bcd39ab7eca586f](https://t.me/proxy?server=37.152.176.185&port=5443&secret=8c67374964dbc40e2bcd39ab7eca586f)
+برای دوستانتون هم بفرستید 
+متصل
+***✅***
+ری اکشن یادت نره
+***❤️***
+[@KIA_NET](https://t.me/KIA_NET)
+ چنل‌تلگرم
+
+---
+
+### 🕒 2026-03-13 15:03:52 UTC
+Am tunnel
+`udp://94.183.126.46`
+`udp://94.101.130.239`
+فرکانس ۶.۱۰ 
+رایتل تست شده 
+***✅***
+***❗️***
+باید حتما اخرین نسخش باشه 
+[@KIA_NET](https://t.me/KIA_NET)
+ چنل‌تلگرم
+
+---
+
+### 🕒 2026-03-13 14:50:24 UTC
+اگر اینترنت دارید(داخلی) و اندروید باکستون ارور عدم دسترسی به اینترنت میده و اپ های ایرانی نظیر فیلیمو رو باز نمیکنه به بخش ساعت برید و STP رو بر روی
+[ntp.meetbsd.ir](http://ntp.meetbsd.ir/)
+بزارید.
+یکبار اندروید باکس رو خاموش و روشن کنید درست میشه.
+
+---
+
+### 🕒 2026-03-13 14:17:53 UTC
+vless://c1e658cc-07d4-47d5-afc6-1fb78a725a75@STAR-17.starz-net.com:2075?security=none&encryption=none&headerType=none&type=tcp#kia_net%20%20%F0%9F%91%88%20%D8%B3%D8%B1%D9%88%D8%B1%20%D8%A8%DB%8C%D8%B4%D8%AA%D8%B1%20%D8%AF%D8%B1
+
+---
+
+### 🕒 2026-03-13 14:12:18 UTC
+{   "dns": {     "hosts": {       "domain:googleapis.cn": "googleapis.com",       "dns.alidns.com": [         "223.5.5.5",         "223.6.6.6",         "2400:3200::1",         "2400:3200:baba::1"       ],       "one.one.one.one": [         "1.1.1.1",     …
+
+---
+
+### 🕒 2026-03-13 14:09:36 UTC
+{   "dns": {     "hosts": {       "domain:googleapis.cn": "googleapis.com",       "dns.alidns.com": [         "223.5.5.5",         "223.6.6.6",         "2400:3200::1",         "2400:3200:baba::1"       ],       "one.one.one.one": [         "1.1.1.1",     …
+
+---
+
+### 🕒 2026-03-13 14:09:25 UTC
+{
+  "dns": {
+    "hosts": {
+      "domain:googleapis.cn": "googleapis.com",
+      "dns.alidns.com": [
+        "223.5.5.5",
+        "223.6.6.6",
+        "2400:3200::1",
+        "2400:3200:baba::1"
+      ],
+      "one.one.one.one": [
+        "1.1.1.1",
+        "1.0.0.1",
+        "2606:4700:4700::1111",
+        "2606:4700:4700::1001"
+      ],
+      "dns.cloudflare.com": [
+        "104.16.132.229",
+        "104.16.133.229",
+        "2606:4700::6810:84e5",
+        "2606:4700::6810:85e5"
+      ],
+      "cloudflare-dns.com": [
+        "104.16.248.249",
+        "104.16.249.249",
+        "2606:4700::6810:f8f9",
+        "2606:4700::6810:f9f9"
+      ],
+      "dot.pub": [
+        "1.12.12.12",
+        "120.53.53.53"
+      ],
+      "dns.google": [
+        "8.8.8.8",
+        "8.8.4.4",
+        "2001:4860:4860::8888",
+        "2001:4860:4860::8844"
+      ],
+      "dns.quad9.net": [
+        "9.9.9.9",
+        "149.112.112.112",
+        "2620:fe::fe",
+        "2620:fe::9"
+      ],
+      "common.dot.dns.yandex.net": [
+        "77.88.8.8",
+        "77.88.8.1",
+        "2a02:6b8::feed:0ff",
+        "2a02:6b8:0:1::feed:0ff"
+      ]
+    },
+    "servers": [
+      "1.1.1.1"
+    ]
+  },
+  "inbounds": [
+    {
+      "listen": "127.0.0.1",
+      "port": 10808,
+      "protocol": "socks",
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "userLevel": 8
+      },
+      "sniffing": {
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "enabled": true,
+        "routeOnly": false
+      },
+      "tag": "socks"
+    }
+  ],
+  "log": {
+    "loglevel": "warning"
+  },
+  "outbounds": [
+    {
+      "mux": {
+        "concurrency": -1,
+        "enabled": false
+      },
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "185.232.152.24",
+            "port": 443,
+            "users": [
+              {
+                "encryption": "none",
+                "flow": "",
+                "id": "5b9fb71e-963c-4274-98ed-ca47963e003b",
+                "level": 8
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "tcp",
+        "security": "tls",
+        "tcpSettings": {
+          "header": {
+            "type": "none"
+          }
+        },
+        "tlsSettings": {
+          "allowInsecure": false,
+          "serverName": "S3Bucket.4cdn.lat",
+          "show": false
+        }
+      },
+      "tag": "proxy"
+    },
+    {
+      "protocol": "freedom",
+      "settings": {
+        "domainStrategy": "UseIP"
+      },
+      "tag": "direct"
+    },
+    {
+      "protocol": "blackhole",
+      "settings": {
+        "response": {
+          "type": "http"
+        }
+      },
+      "tag": "block"
+    }
+  ],
+  "policy": {
+    "levels": {
+      "8": {
+        "connIdle": 300,
+        "downlinkOnly": 1,
+        "handshake": 4,
+        "uplinkOnly": 1
+      }
+    },
+    "system": {
+      "statsOutboundUplink": true,
+      "statsOutboundDownlink": true
+    }
+  },
+  "remarks": "@KIA_NET چنل‌تلگرم",
+  "routing": {
+    "domainStrategy": "AsIs",
+    "rules": [
+      {
+        "ip": [
+          "8.8.8.8"
+        ],
+        "outboundTag": "direct",
+        "port": "53",
+        "type": "field"
+      },
+      {
+        "ip": [
+          "1.1.1.1"
+        ],
+        "outboundTag": "proxy",
+        "port": "53",
+        "type": "field"
+      },
+      {
+        "ip": [
+          "223.5.5.5"
+        ],
+        "outboundTag": "direct",
+        "port": "53",
+        "type": "field"
+      }
+    ]
+  },
+  "stats": {}
+}
+
+---
+
+### 🕒 2026-03-13 13:59:47 UTC
+**پروکسی های متصل**
+ 
+***🔥***
+****
+[**Proxy1**](https://t.me/socks?server=109.122.246.116&amp;port=21491&amp;user=%40rastin0x&amp;pass=%40aeronode0)
+** **
+[**Proxy5**](https://t.me/proxy?server=212.80.18.74&amp;port=39090&amp;secret=767cf6f14f461cdd166b54eddb53e1b0)
+** **
+[**Proxy9**](https://t.me/proxy?server=146.185.208.135&amp;port=443&amp;secret=dd6b3fb02424dbac55fef2da67c8c949)
+** **
+[**Proxy2**](https://t.me/socks?server=94.182.195.60&amp;port=9090&amp;user=devops&amp;pass=Xz6Txmacjnb2wJBs9Wkp7x209v7Y9maINCtBDApM)
+** **
+[**Proxy6**](https://t.me/proxy?server=185.143.233.121&amp;port=2087&amp;secret=e9e437c2-1ee5-4f0d-ae09-4bfafc835e48)
+** **
+[**Proxy10**](https://t.me/proxy?server=146.185.208.135&amp;port=443&amp;secret=dd6b3fb02424dbac55fef2da67c8c949)
+** **
+[**Proxy14**](https://t.me/proxy?server=94.183.123.128&amp;port=8070&amp;secret=fe6e86f60dd18dfe85c7bb1106c53005)
+****
+[**Proxy3**](https://t.me/socks?server=2.144.23.246&amp;port=8080&amp;user=%40prOxy_vvpn&amp;pass=%40prOxy_vvpn)
+** **
+[**Proxy7**](https://t.me/proxy?server=195.254.165.151&amp;Telegram-ICV2RAY-Telegram-ICV2RAY-Telegram-ICV2RAY-Telegram-ICV2RAY-Telegram-ICV2RAY-Telegram-ICV2RAY-Telegram-ICV2RAY-Telegram-ICV2RAY&amp;port=9443&amp;secret=EERighJJvXrFGRMCIMJdCQhttps://t.me/proxy?server=195.254.165.151&amp;Telegram-ICV2RAY-Telegram-ICV2RAY-Telegram-ICV2RAY-Telegram-ICV2RAY-Telegram-ICV2RAY-Telegram-ICV2RAY-Telegram-ICV2RAY-Telegram-ICV2RAY&amp;port=9443&amp;secret=EERighJJvXrFGRMCIMJdCQ)
+** **
+[**Proxy11**](https://t.me/proxy?server=5.161.30.70&amp;port=42341&amp;secret=ee79e7010200010007f0030386e24c3add)
+** **
+[**Proxy15**](https://t.me/efixvpn)
+****
+[**Proxy4**](https://t.me/proxy?server=195.254.165.252&amp;port=25565&amp;secret=dd79e344818749bd7ac519130220c25d09)
+** **
+[Proxy8](https://t.me/Kia_Net)
+** **
+[**Proxy12**](https://t.me/proxy?server=195.254.165.249&amp;port=25565&amp;secret=dd79e344818749bd7ac519130220c25d09)
+** **
+[**Proxy16**](tg://proxy?server=77.239.112.86&amp;port=30534&amp;secret=ddbee03206cb1a464769f666fc1820b03f)
+**channel : **
+[@KIA_NET](https://t.me/KIA_NET)
+ چنل‌تلگرم
+
+---
+
+### 🕒 2026-03-13 13:58:36 UTC
+vless://6a70fe11-4dcd-4727-8621-bb8e7a5df4e1@185.88.178.178:57924?security=none&encryption=none&headerType=none&type=tcp#%40KIA_NET%20%DA%86%D9%86%D9%84%E2%80%8C%D8%AA%D9%84%DA%AF%D8%B1%D9%85
+
+---
+
+### 🕒 2026-03-13 13:49:20 UTC
+**Super dns**
+`udp://95.38.102.86`
+فرکانس ۶ تا ۱۰ وصله 
+**NEW DNS**
+`78.157.56.101`
+`94.101.130.239`
+`94.183.126.46`
+`194.62.17.171`
+`212.86.76.69`
+`217.170`
+
+---
+
+### 🕒 2026-03-13 13:48:09 UTC
+`vless://90404b8f-5259-b5a3-fef5-c22025a50de3@pro.vpsino.com:20493?security=none&encryption=none&headerType=none&type=tcp#%40KIA_NET%20%DA%86%D9%86%D9%84%E2%80%8C%D8%AA%D9%84%DA%AF%D8%B1%D9%85vless://90404b8f-5259-b5a3-fef5-c22025a50de3@pro.vpsino.com:20960?security=none&encryption=none&host=nobitex.ir&headerType=none&type=tcp#%40KIA_NET%20%DA%86%D9%86%D9%84%E2%80%8C%D8%AA%D9%84%DA%AF%D8%B1%D9%85vless://90404b8f-5259-b5a3-fef5-c22025a50de3@pro.vpsino.com:20920?security=none&encryption=none&headerType=none&type=tcp#%40KIA_NET%20%DA%86%D9%86%D9%84%E2%80%8C%D8%AA%D9%84%DA%AF%D8%B1%D9%85`
+وصل
+[@KIA_NET](https://t.me/KIA_NET)
+ چنل‌تلگرم
+
+---
+
+### 🕒 2026-03-13 13:25:15 UTC
+[tg://proxy?server=77.239.112.86&port=30534&secret=ddbee03206cb1a464769f666fc1820b03f](tg://proxy?server=77.239.112.86&port=30534&secret=ddbee03206cb1a464769f666fc1820b03f)
+[https://t.me/proxy?server=94.183.123.128&port=8070&secret=fe6e86f60dd18dfe85c7bb1106c53005](https://t.me/proxy?server=94.183.123.128&port=8070&secret=fe6e86f60dd18dfe85c7bb1106c53005)
+[https://t.me/proxy?server=146.185.208.135&port=443&secret=dd6b3fb02424dbac55fef2da67c8c949](https://t.me/proxy?server=146.185.208.135&port=443&secret=dd6b3fb02424dbac55fef2da67c8c949)
+[https://t.me/proxy?server=5.161.30.70&port=42341&secret=ee79e7010200010007f0030386e24c3add](https://t.me/proxy?server=5.161.30.70&port=42341&secret=ee79e7010200010007f0030386e24c3add)
+[https://t.me/proxy?server=195.254.165.249&port=25565&secret=dd79e344818749bd7ac519130220c25d09](https://t.me/proxy?server=195.254.165.249&port=25565&secret=dd79e344818749bd7ac519130220c25d09)
+[https://t.me/proxy?server=195.254.165.151&port=9443&secret=EERighJJvXrFGRMCIMJdCQhttps%3A%2F%2Ft.me%2Fproxy%3Fserver%3D195.254.165.151](https://t.me/proxy?server=195.254.165.151&port=9443&secret=EERighJJvXrFGRMCIMJdCQhttps%3A%2F%2Ft.me%2Fproxy%3Fserver%3D195.254.165.151)
+[https://t.me/proxy?server=185.143.233.121&port=2087&secret=e9e437c2-1ee5-4f0d-ae09-4bfafc835e48](https://t.me/proxy?server=185.143.233.121&port=2087&secret=e9e437c2-1ee5-4f0d-ae09-4bfafc835e48)
+[https://t.me/proxy?server=212.80.18.74&port=39090&secret=767cf6f14f461cdd166b54eddb53e1b0](https://t.me/proxy?server=212.80.18.74&port=39090&secret=767cf6f14f461cdd166b54eddb53e1b0)
+[https://t.me/socks?server=109.122.246.116&port=21491&user=%40rastin0x&pass=%40aeronode0](https://t.me/socks?server=109.122.246.116&port=21491&user=%40rastin0x&pass=%40aeronode0)
+[https://t.me/socks?server=2.144.23.246&port=8080&user=%40prOxy_vvpn&pass=%40prOxy_vvpn](https://t.me/socks?server=2.144.23.246&port=8080&user=%40prOxy_vvpn&pass=%40prOxy_vvpn)
+[https://t.me/proxy?server=195.254.165.252&port=25565&secret=dd79e344818749bd7ac519130220c25d09](https://t.me/proxy?server=195.254.165.252&port=25565&secret=dd79e344818749bd7ac519130220c25d09)
+
+---
+
+### 🕒 2026-03-13 13:15:04 UTC
+[https://t.me/proxy?server=37.152.176.185&port=5443&secret=8c67374964dbc40e2bcd39ab7eca586f](https://t.me/proxy?server=37.152.176.185&port=5443&secret=8c67374964dbc40e2bcd39ab7eca586f)
+
+---
+
+### 🕒 2026-03-13 12:43:10 UTC
+vless://d1bfad0e-e1d5-4cbf-b068-d078a5d6634c@iranispowerdontclicknowarnomiddleeast.qwedsavnm.fun:27627?security=none&encryption=none&headerType=none&type=tcp#%40KIA_NET%20%DA%86%D9%86%D9%84%E2%80%8C%D8%AA%D9%84%DA%AF%D8%B1%D9%85
+
+---
+
+### 🕒 2026-03-13 12:41:11 UTC
+{"remarks":"@KIA_NET چنل‌تلگرم","log":{"loglevel":"warning"},"inbounds":[{"tag":"socks","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true,"userLevel":8},"sniffing":{"enabled":true,"destOverride":["http","tls"],"routeOnly":false}}],"ou…
+
+---
+
+### 🕒 2026-03-13 12:41:06 UTC
+{"remarks":"@KIA_NET چنل‌تلگرم","log":{"loglevel":"warning"},"inbounds":[{"tag":"socks","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true,"userLevel":8},"sniffing":{"enabled":true,"destOverride":["http","tls"],"routeOnly":false}}],"outbounds":[{"tag":"proxy","protocol":"vless","settings":{"vnext":[{"address":"185.235.196.90","port":1818,"users":[{"id":"8cb1833d-346d-49c7-921d-c64657eda145","level":8,"encryption":"none"}]}]},"streamSettings":{"network":"tcp","tcpSettings":{"header":{"type":"none"}}},"mux":{"enabled":false,"concurrency":-1,"xudpConcurrency":8,"xudpProxyUDP443":""}},{"tag":"direct","protocol":"freedom","settings":{"domainStrategy":"UseIP"},"mux":{"enabled":false,"concurrency":8,"xudpConcurrency":8,"xudpProxyUDP443":""}},{"tag":"block","protocol":"blackhole","settings":{"response":{"type":"http"}},"mux":{"enabled":false,"concurrency":8,"xudpConcurrency":8,"xudpProxyUDP443":""}}],"dns":{"servers":["1.1.1.1"],"hosts":{"domain:googleapis.cn":"googleapis.com","dns.alidns.com":["223.5.5.5","223.6.6.6","2400:3200::1","2400:3200:baba::1"],"one.one.one.one":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"dot.pub":["1.12.12.12","120.53.53.53"],"dns.google":["8.8.8.8","8.8.4.4","2001:4860:4860::8888","2001:4860:4860::8844"],"dns.quad9.net":["9.9.9.9","149.112.112.112","2620:fe::fe","2620:fe::9"],"common.dot.dns.yandex.net":["77.88.8.8","77.88.8.1","2a02:6b8::feed:0ff","2a02:6b8:0:1::feed:0ff"]}},"routing":{"domainStrategy":"IPIfNonMatch","rules":[{"type":"field","ip":["1.1.1.1"],"outboundTag":"proxy","port":"53"},{"type":"field","ip":["223.5.5.5"],"outboundTag":"direct","port":"53"},{"type":"field","ip":["1.1.1.1"],"outboundTag":"proxy","port":"53"},{"type":"field","ip":["223.5.5.5"],"outboundTag":"direct","port":"53"}]}}
+
+---
+
+### 🕒 2026-03-13 12:20:49 UTC
+کانفیگهای 
+[dnstt.xyz](http://dnstt.xyz/)
+کپی و ایمورت.
+{
+  "version": "1.1",
+  "configs": [
+    {
+      "name": "DNSTT.XYZ Germany",
+      "publicKey": "023678bec148aaaae5e03d450a1d05917129b632ca24ce1bbbd1b42bf377c36e",
+      "tunnelDomain": "tunnel.dnstt.xyz",
+      "tunnelType": "socks5"
+    },
+    {
+      "name": "DNSTT.XYZ Finland",
+      "publicKey": "a5da2ba2da39ab7dd9dca5f639b4bf02acdf8f8da2ab2d4a373dbf5ff3e0563a",
+      "tunnelDomain": "rent.snapp.autos",
+      "tunnelType": "socks5"
+    },
+    {
+      "name": "DNSTT Donated by CappyT",
+      "publicKey": "5aedf20362805d266233b94200ef8e531f6181480ad36ca6781a7ca2154ddc7a",
+      "tunnelDomain": "a.ppyt.it",
+      "tunnelType": "socks5"
+    }
+  ]
+}
+توی اپهای دیگه مثل v2box مقادیر بالا هست دستی بسازیدش  
+***✌️***
+
+---
+
+### 🕒 2026-03-13 12:10:45 UTC
+***🟢***
+ Am tnnnle - SuperDNS
+udp://2.144.22.135
+فرکانس 10
+• حداقل 30 ثانیه برای وصل شدن توی برنامه صبر کنید
++بعد از اینکه وصل شدید بیاید تلگرام و صبر کنید -میتونید به این پروکسی ها هم وصل بشید همزمان 
+*
+[https://t.me/proxy?server=98.84.109.35&port=80&secret=dd104462821249bd7ac519130220c25d09](https://t.me/proxy?server=98.84.109.35&port=80&secret=dd104462821249bd7ac519130220c25d09)
+─────────── ● ──
+[@KIA_NET](https://t.me/KIA_NET)
+ چنل‌تلگرم 
+─────────── ● ──
+
+---
+
+### 🕒 2026-03-13 11:59:55 UTC
+[https://t.me/proxy?server=142.54.189.109&port=443&secret=ee09db815a6d82a31fda76f872230c69d7706b676275696c642e6f7267](https://t.me/proxy?server=142.54.189.109&port=443&secret=ee09db815a6d82a31fda76f872230c69d7706b676275696c642e6f7267)
+پروکسی فعال
+
+---
+
+### 🕒 2026-03-13 11:41:36 UTC
+slipnet-enc://AQG99j/tc2ZkTnf9cisj4O1AroGqgUb50COLHTBFGfHykg+7YylLh8ZzUErkq7XoXXSyJrRD4egwyLVF1uyT/KRaE2j9z/AaFUVeZnSoLXW0u7TGwyNYBtv68LfNLS7h7FOZvrLdHceBi3I6xw9vmqPd+jmlsKDHAFKEF0qyfSCUwf/6+B0o72N0cYQxTFACx1UAasFy9PBkf/hDqlpnuCZMII94iQs+ozcUoYpM8oDzOCMFjNY+TWjtPrVPrtSMb8Y1aCvjvCEsZVmmvMSdGoWBPIB9wywnI6rg0nBmkwRu7DAB8I0Ndz000taqiGvJf9Zv50WeyFZpX3IvnyXHxZo7VaxXeLVYoTlvygw6FZNvzYEekKTOb4JeBxKqfRT3Kzdxz3/Wnnu6cuG33MM8PVGDP8u871IcTEXHZR0L+EB/+EpqHDel/jkAHMagCoG+XzorERpia5rdsKAPODKGTEBkFIP1DheSKw==
+رمز نداره دی ان اس مختلف تست کنید
+اعتبار ۵ روز
+[@KIA_NET](https://t.me/KIA_NET)
+ چنل‌تلگرم
+
+---
+
+### 🕒 2026-03-13 11:20:27 UTC
+{"remarks":" 
+***🔥***
+","log":{"loglevel":"warning"},"inbounds":[{"tag":"socks","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true,"userLevel":8},"sniffing":{"enabled":true,"destOverride":["http","tls"],"routeOnly":false}}],"outbounds":[{"tag":"proxy","protocol":"vless","settings":{"vnext":[{"address":"download.jonoub.com","port":443,"users":[{"id":"bbe2f89f-8462-44a3-aef5-72f657a9710d","level":8,"encryption":"none"}]}]},"streamSettings":{"network":"tcp","tcpSettings":{"header":{"type":"none"}}},"mux":{"enabled":false,"concurrency":-1,"xudpConcurrency":8,"xudpProxyUDP443":""}},{"tag":"direct","protocol":"freedom","settings":{"domainStrategy":"UseIP"},"mux":{"enabled":false,"concurrency":8,"xudpConcurrency":8,"xudpProxyUDP443":""}},{"tag":"block","protocol":"blackhole","settings":{"response":{"type":"http"}},"mux":{"enabled":false,"concurrency":8,"xudpConcurrency":8,"xudpProxyUDP443":""}}],"dns":{"servers":["1.1.1.1"],"hosts":{"domain:googleapis.cn":"googleapis.com","dns.alidns.com":["223.5.5.5","223.6.6.6","2400:3200::1","2400:3200:baba::1"],"one.one.one.one":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"dot.pub":["1.12.12.12","120.53.53.53"],"dns.google":["8.8.8.8","8.8.4.4","2001:4860:4860::8888","2001:4860:4860::8844"],"dns.quad9.net":["9.9.9.9","149.112.112.112","2620:fe::fe","2620:fe::9"],"common.dot.dns.yandex.net":["77.88.8.8","77.88.8.1","2a02:6b8::feed:0ff","2a02:6b8:0:1::feed:0ff"]}},"routing":{"domainStrategy":"IPIfNonMatch","rules":[{"type":"field","ip":["1.1.1.1"],"outboundTag":"proxy","port":"53"},{"type":"field","ip":["223.5.5.5"],"outboundTag":"direct","port":"53"}]}}
+برااستفاده ترکیب  سایفون
+
+---
+
+### 🕒 2026-03-13 11:19:16 UTC
+{"remarks":"
+***⚡***
+ @KIA_NET چنل‌تلگرم","log":{"loglevel":"warning"},"inbounds":[{"tag":"socks","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true,"userLevel":8},"sniffing":{"enabled":true,"destOverride":["http","tls"],"routeOnly":false}}],"outbounds":[{"tag":"proxy","protocol":"vless","settings":{"vnext":[{"address":"185.116.161.167","port":443,"users":[{"id":"7b3e76e2-66f7-47f5-bd78-a9324a5254b2","level":8,"encryption":"none"}]}]},"streamSettings":{"network":"tcp","security":"tls","tcpSettings":{"header":{"type":"none"}},"tlsSettings":{"allowInsecure":true,"show":false}},"mux":{"enabled":false,"concurrency":-1,"xudpConcurrency":8,"xudpProxyUDP443":""}},{"tag":"direct","protocol":"freedom","settings":{"domainStrategy":"UseIP"},"mux":{"enabled":false,"concurrency":8,"xudpConcurrency":8,"xudpProxyUDP443":""}},{"tag":"block","protocol":"blackhole","settings":{"response":{"type":"http"}},"mux":{"enabled":false,"concurrency":8,"xudpConcurrency":8,"xudpProxyUDP443":""}}],"dns":{"servers":["1.1.1.1"],"hosts":{"domain:googleapis.cn":"googleapis.com","dns.alidns.com":["223.5.5.5","223.6.6.6","2400:3200::1","2400:3200:baba::1"],"one.one.one.one":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"dot.pub":["1.12.12.12","120.53.53.53"],"dns.google":["8.8.8.8","8.8.4.4","2001:4860:4860::8888","2001:4860:4860::8844"],"dns.quad9.net":["9.9.9.9","149.112.112.112","2620:fe::fe","2620:fe::9"],"common.dot.dns.yandex.net":["77.88.8.8","77.88.8.1","2a02:6b8::feed:0ff","2a02:6b8:0:1::feed:0ff"]}},"routing":{"domainStrategy":"IPIfNonMatch","rules":[{"type":"field","ip":["1.1.1.1"],"outboundTag":"proxy","port":"53"},{"type":"field","ip":["223.5.5.5"],"outboundTag":"direct","port":"53"}]}}
+برای نپ تانل
+***👆***
+
+---
+
+### 🕒 2026-03-13 11:18:26 UTC
+{"remarks":"hamed 
+***🔥***
+","log":{"loglevel":"warning"},"inbounds":[{"tag":"socks","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true,"userLevel":8},"sniffing":{"enabled":true,"destOverride":["http","tls"],"routeOnly":false}}],"outbounds":[{"tag":"proxy","protocol":"vless","settings":{"vnext":[{"address":"download.jonoub.com","port":443,"users":[{"id":"bbe2f89f-8462-44a3-aef5-72f657a9710d","level":8,"encryption":"none"}]}]},"streamSettings":{"network":"tcp","tcpSettings":{"header":{"type":"none"}}},"mux":{"enabled":false,"concurrency":-1,"xudpConcurrency":8,"xudpProxyUDP443":""}},{"tag":"direct","protocol":"freedom","settings":{"domainStrategy":"UseIP"},"mux":{"enabled":false,"concurrency":8,"xudpConcurrency":8,"xudpProxyUDP443":""}},{"tag":"block","protocol":"blackhole","settings":{"response":{"type":"http"}},"mux":{"enabled":false,"concurrency":8,"xudpConcurrency":8,"xudpProxyUDP443":""}}],"dns":{"servers":["1.1.1.1"],"hosts":{"domain:googleapis.cn":"googleapis.com","dns.alidns.com":["223.5.5.5","223.6.6.6","2400:3200::1","2400:3200:baba::1"],"one.one.one.one":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"dot.pub":["1.12.12.12","120.53.53.53"],"dns.google":["8.8.8.8","8.8.4.4","2001:4860:4860::8888","2001:4860:4860::8844"],"dns.quad9.net":["9.9.9.9","149.112.112.112","2620:fe::fe","2620:fe::9"],"common.dot.dns.yandex.net":["77.88.8.8","77.88.8.1","2a02:6b8::feed:0ff","2a02:6b8:0:1::feed:0ff"]}},"routing":{"domainStrategy":"IPIfNonMatch","rules":[{"type":"field","ip":["1.1.1.1"],"outboundTag":"proxy","port":"53"},{"type":"field","ip":["223.5.5.5"],"outboundTag":"direct","port":"53"}]}}
+برا ترکیب سایفون
+***👆***
+
+---
 
 ### 🕒 2026-03-13 10:21:22 UTC
 [https://t.me/proxy?server=195.254.165.245&port=25565&secret=dd79e344818749bd7ac519130220c25d09](https://t.me/proxy?server=195.254.165.245&port=25565&secret=dd79e344818749bd7ac519130220c25d09)
@@ -319,259 +928,6 @@ vless://1a3a406a-3099-4d76-8122-cb8c28755df0@st16.iranian-technology.com:45193?s
 
 ### 🕒 2026-03-12 20:25:02 UTC
 برای دقایقی ChatGPT رفت تو وایت لیست و متاسفانه دوباره قطع شد...
-
----
-
-### 🕒 2026-03-12 20:23:19 UTC
-برای دقایقی ChatGPT رفت تو وایت لیست و متاسفانه دوباره قطع شد...
-
----
-
-### 🕒 2026-03-12 20:22:38 UTC
-`vless://cff6f361-828a-43c8-a8b5-8d10b32e57fb@188.114.98.0:443?path=%2F&security=tls&alpn=http%2F1.1&encryption=none&insecure=0&host=zh.hollowspot.ir&type=ws&allowInsecure=0&sni=zh.hollowspot.ir#%40KIA_NET%20%DA%86%D9%86%D9%84%E2%80%8C%D8%AA%D9%84%DA%AF%D8%B1%D9%85%40KIA_NET%20%DA%86%D9%86%D9%84%E2%80%8C%D8%AA%D9%84%DA%AF%D8%B1%D9%85%40KIA_NET%20%DA%86%D9%86%D9%84%E2%80%8C%D8%AA%D9%84%DA%AF%D8%B1%D9%85%40KIA_NET%20%DA%86%D9%86%D9%84%E2%80%8C%D8%AA%D9%84%DA%AF%D8%B1%D9%85%40KIA_NET%20%DA%86%D9%86%D9%84%E2%80%8C%D8%AA%D9%84%DA%AF%D8%B1%D9%85%40KIA_NET%20%DA%86%D9%86%D9%84%E2%80%8C%D8%AA%D9%84%DA%AF%D8%B1%D9%85%40KIA_NET%20%DA%86%D9%86%D9%84%E2%80%8C%D8%AA%D9%84%DA%AF%D8%B1%D9%85`
-بزنید نپ تانل
-وصل شدی  ی قلب بزار
-[@KIA_NET](https://t.me/KIA_NET)
- چنل‌تلگرم
-
----
-
-### 🕒 2026-03-12 20:21:50 UTC
-`vless://191f912f-7afa-496a-af23-f48eebe7f3bb@top.imlast2.com:2053?mode=auto&path=%2F&security=tls&alpn=h2%2Chttp%2F1.1&encryption=none&insecure=0&host=platform.darkspacex.ir&fp=chrome&type=xhttp&allowInsecure=0&sni=platform.darkspacex.ir#%40KIA_NET%20%DA%86%D9%86%D9%84%E2%80%8C%D8%AA%D9%84%DA%AF%D8%B1%D9%85%40KIA_NET%20%DA%86%D9%86%D9%84%E2%80%8C%D8%AA%D9%84%DA%AF%D8%B1%D9%85%40KIA_NET%20%DA%86%D9%86%D9%84%E2%80%8C%D8%AA%D9%84%DA%AF%D8%B1%D9%85%40KIA_NET%20%DA%86%D9%86%D9%84%E2%80%8C%D8%AA%D9%84%DA%AF%D8%B1%D9%85%40KIA_NET%20%DA%86%D9%86%D9%84%E2%80%8C%D8%AA%D9%84%DA%AF%D8%B1%D9%85%40KIA_NET%20%DA%86%D9%86%D9%84%E2%80%8C%D8%AA%D9%84%DA%AF%D8%B1%D9%85%40KIA_NET%20%DA%86%D9%86%D9%84%E2%80%8C%D8%AA%D9%84%DA%AF%D8%B1%D9%85%40KIA_NET%20%DA%86%D9%86%D9%84%E2%80%8C%D8%AA%D9%84%DA%AF%D8%B1%D9%85%40KIA_NET%20%DA%86%D9%86%D9%84%E2%80%8C%D8%AA%D9%84%DA%AF%D8%B1%D9%85`
-وصل شدی   ی قلب بزار
-[@KIA_NET](https://t.me/KIA_NET)
- چنل‌تلگرم
-
----
-
-### 🕒 2026-03-12 20:11:20 UTC
-`vless://677dcce6-58d5-4a3f-a174-d10bb07e01b7@wsss.beepn.info:80?mode=auto&path=%2F%40vip_fragment_v2ray&security=none&encryption=none&host=bestcdn.imsoon.io.&type=xhttp#%40KIA_NET%20%DA%86%D9%86%D9%84%E2%80%8C%D8%AA%D9%84%DA%AF%D8%B1%D9%85%20%40KIA_NET%20%DA%86%D9%86%D9%84%E2%80%8C%D8%AA%D9%84%DA%AF%D8%B1%D9%85%40KIA_NET%20%DA%86%D9%86%D9%84%E2%80%8C%D8%AA%D9%84%DA%AF%D8%B1%D9%85%40KIA_NET%20%DA%86%D9%86%D9%84%E2%80%8C%D8%AA%D9%84%DA%AF%D8%B1%D9%85%40KIA_NET%20%DA%86%D9%86%D9%84%E2%80%8C%D8%AA%D9%84%DA%AF%D8%B1%D9%85%40KIA_NET%20%DA%86%D9%86%D9%84%E2%80%8C%D8%AA%D9%84%DA%AF%D8%B1%D9%85%40KIA_NET%20%DA%86%D9%86%D9%84%E2%80%8C%D8%AA%D9%84%DA%AF%D8%B1%D9%85%40KIA_NET%20%DA%86%D9%86%D9%84%E2%80%8C%D8%AA%D9%84%DA%AF%D8%B1%D9%85`
-وصل شدی  ی قلب بزار
-[@KIA_NET](https://t.me/KIA_NET)
-
----
-
-### 🕒 2026-03-12 18:27:46 UTC
-`vmess://eyJhZGQiOiIyMTcuMjE4LjUyLjEiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6IiIsImlkIjoiZjkzZjEzNGYtN2FkYi00OGMzLWJjZDEtMjUzMmVkYjBiNDc4IiwiaW5zZWN1cmUiOiIwIiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBvcnQiOiIxMDQxMCIsInBzIjoi2qnbjNin2YbYqiIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=`
-سایفون
-
----
-
-### 🕒 2026-03-12 18:09:23 UTC
-[chat.deepseek.com](http://chat.deepseek.com/)
-دیپ سیک هوش مصنوعی چینی بدون فیلتر بالا میاد و میتونین موقتا با نت ملی سرچاتونو توش کنید. 
-البته برای ورود بهش باید به ایمیلتون دسترسی داشته باشین که فیلترشکن می خواد.
-[@Kia_Net](https://t.me/Kia_Net)
-
----
-
-### 🕒 2026-03-12 18:08:50 UTC
-[tg://proxy?server=98.84.109.35&port=80&secret=dd104462821249bd7ac519130220c25d09](tg://proxy?server=98.84.109.35&port=80&secret=dd104462821249bd7ac519130220c25d09)
-همه نتا
-
----
-
-### 🕒 2026-03-12 18:08:26 UTC
-[https://t.me/proxy?server=185.60.137.156&port=8443&secret=75f9a8da21406c0db5e92c015368345c](https://t.me/proxy?server=185.60.137.156&port=8443&secret=75f9a8da21406c0db5e92c015368345c)
-[https://t.me/proxy?server=proxymtproto.telwbion.com.&port=25565&secret=fgScoaLSXQYtLCM8VHoNngfgScoaLSXQYtLCM8VHoNngfgScoaLSXQYtLCM8VHoNngfgScoaLSXQYtLCM8VHoNngfgScoaLSXQYtLCM8VHoNngfgScoaLSXQYtLCM8VHoNngfgScoaLSXQYtLCM8VHoNng%3D%3D](https://t.me/proxy?server=proxymtproto.telwbion.com.&port=25565&secret=fgScoaLSXQYtLCM8VHoNngfgScoaLSXQYtLCM8VHoNngfgScoaLSXQYtLCM8VHoNngfgScoaLSXQYtLCM8VHoNngfgScoaLSXQYtLCM8VHoNngfgScoaLSXQYtLCM8VHoNngfgScoaLSXQYtLCM8VHoNng%3D%3D)
-
----
-
-### 🕒 2026-03-12 18:05:58 UTC
-[https://t.me/proxy?server=sn3.multiproxy.info&port=23510&secret=c2e26763c06f9fae680356a010607302](https://t.me/proxy?server=sn3.multiproxy.info&port=23510&secret=c2e26763c06f9fae680356a010607302)
-[tg://proxy?server=98.84.109.35&port=80&secret=dd104462821249bd7ac519130220c25d09](tg://proxy?server=98.84.109.35&port=80&secret=dd104462821249bd7ac519130220c25d09)
-[https://t.me/proxy?server=www.x9q.pw&port=8443&secret=3XnnAQIAAQAH8AMDhuJMOt0%3D](https://t.me/proxy?server=www.x9q.pw&port=8443&secret=3XnnAQIAAQAH8AMDhuJMOt0%3D)
-پروکسی وصل
-***✅***
-[@KIA_NET](https://t.me/KIA_NET)
-
----
-
-### 🕒 2026-03-12 17:58:20 UTC
-vless://5ac2d3b6-33cc-4442-9c0b-ae3909cabaae@31.42.190.76:443?path=%2F&security=none&encryption=none&type=ws#%F0%9F%94%B0%20%40Kia_Net%20%28%D8%AA%D9%84%DA%AF%D8%B1%D8%A7%D9%85%29
-
----
-
-### 🕒 2026-03-12 17:50:07 UTC
-slipnet-enc://AUmjd4XhhFotsMwhRmGp2EDp2ucWyTNwpiFeqpUh8JFNHkCSEYw2SI4KNjM+BSqDdEY+cKrGvCxTpdhWI3KfJFzDBDWMlOmX5My0KvyrIftgpOucIVm08fmIzkUMj10TAWEe6N9lu3KmiOyii9yg9iCrU6InP2EkE3QZRZc3ik5fxqjhXqoJRoslpUYyhWBu9wxpt5s0ptA3MrmZ47MCvkCnIocXb0lab8ai2Di8F2yDxG1Ko4N7Czf4n0oAQOSF6JeZOeLgKYok3Xmvr91Nk5mFg0AJZptI/ABFNLsmqwF8J1/0t2AJVBQlBMCInZv9WvqTPJOZZ0XF4cUht7KaxUKK//2OyZWeSIq1oSda/6ZfVVlDbrKMf35pOtZE3PMt1XELkTCAoZP0h9CnaZUoXVhmI4miJDcYOtHza2w/pEXl3szZlyzEAOaA4j6sD9W8m2gVOTZP
-slipnet-enc://AXnNSbzhJAsKAKLE4EAc4eHm1yQez/TSPDnBjJZ6A9oDjRi8I/O15a/lxrsJQOvGtjp9CnGCO4RKVyfmYlqXOZJTQN6cpw8fQuz87kmg5W0VxHEzXDg9/w419xL50NuU07Wujjkato7lSwQa1D/MIz2tLYoKiM8HOh2xTu3uhSGr7+fwzvMVAZKqnhTm8wbauHrhhrp23nc8XkrcaT2v7VDR+mi6KNmeGTNLj8cUlfyn6nuWcEX7Ov1tBdvL1bQXBSWog8IJrgb9nNPGlSJ3ch9SPCAdPJDGAZ7VnZfT+ZSEdkons5hgxoxungp1RsZbLiFVYgksXBorxh/NQxOZC3ShDxxGyk+gJ1ITGcxzv5m13Vxo2Qs8QVMxTKBwzTWUMNK+ZaDKNbw0Hh+bWYztGTHSSI6csZId2iOEglAumyw9WklPtBtJ8POkpJhRZXgPriiJ8mr9/Iw=
-سلیپ نت 
-[@KIA_NET](https://t.me/KIA_NET)
-
----
-
-### 🕒 2026-03-12 17:37:48 UTC
-udp://37.148.57.40
-udp://102.22.195.106
-udp://185.49.84.2
-udp://102.22.83.12
-udp://102.23.231.66
-udp://91.92.208.43
-udp://102.22.254.232
-udp://102.22.81.183
-udp://102.23.225.127
-udp://102.22.254.116
-فرکانس مختلف تست کنید
-
----
-
-### 🕒 2026-03-12 17:08:16 UTC
-۱- وارد برنامه سایفون شده و در سربرگ Options وارد بخش Proxy settings کلیک کنید.  ۲- تیک قسمت پروکسی رو فعال و گزینه ی  Use the following settings رو انتخاب کنید.  ۳- آی پی رو 178.252.177.39 وارد کنید. پورت رو 3128 بذارید.  ۴- به صفحه اصلی برگشته و اتصال رو…
-
----
-
-### 🕒 2026-03-12 17:07:32 UTC
-۱- وارد برنامه سایفون شده و در سربرگ Options وارد بخش Proxy settings کلیک کنید.
-۲- تیک قسمت پروکسی رو فعال و گزینه ی 
-Use the following settings
-رو انتخاب کنید.
-۳- آی پی رو 
-[178.252.177.39](http://178.252.177.39/)
- وارد کنید.
-پورت رو 3128 بذارید.
-۴- به صفحه اصلی برگشته و اتصال رو بزنید و چند دقیقه صبر کنید تا اتصال برقرار شود.
-لینک داخلی برنامه سایفون اندروید:
-[https://my.files.ir/drive/s/QlXFqfV9uLVjiChM2vfQLUvFzUlynS](https://my.files.ir/drive/s/QlXFqfV9uLVjiChM2vfQLUvFzUlynS)
-
----
-
-### 🕒 2026-03-12 14:39:44 UTC
-[https://t.me/proxy?server=zerotier1.saba-e.com&port=7336&secret=eead33390c48192788f0a5fe46e7efff3d676f6f676c652e636f6d](https://t.me/proxy?server=zerotier1.saba-e.com&port=7336&secret=eead33390c48192788f0a5fe46e7efff3d676f6f676c652e636f6d)
-
----
-
-### 🕒 2026-03-12 13:57:12 UTC
-نرم افزار  v2rayng یه باگی داره 
-وقتی به یه کانفیگ وصل میشین و از حالت پروکسیش روی یه دیوایس دیگه استفاده میکنید حتی اگر کانفیگ رو عوض کنید ، دیوایسی که به پروکسی لوکال متصل شده کماکان داره از همون کانفیگ قبلی استفاده میکنه .
-اینو گفتم یه موقع همینو به عنوان «روش بی نظیر اتصال به کانفیگ های قدیمی» تو پاچه ملت نکنن
-
----
-
-### 🕒 2026-03-12 11:08:04 UTC
-vless://9d15d7ab-5867-4857-b813-bf1924510bca@ez.pubgping.com:8080?security=none&encryption=none&headerType=none&type=tcp#%40Kia_net
-
----
-
-### 🕒 2026-03-12 10:58:13 UTC
-***😂***
-هروقت اینترنت ایران
-***🇮🇷***
- قطع میشه،
-آیفونی‌ها قدر اندروید رو می‌فهمن
-***😂***
-***😂***
-***😂***
-
----
-
-### 🕒 2026-03-12 10:46:41 UTC
-[https://t.me/proxy?server=195.254.165.251&port=25565&secret=dd79e344818749bd7ac519130220c25d09](https://t.me/proxy?server=195.254.165.251&port=25565&secret=dd79e344818749bd7ac519130220c25d09)
-[https://t.me/proxy?server=zerotier1.saba-e.com&port=7336&secret=eead33390c48192788f0a5fe46e7efff3d676f6f676c652e636f6d](https://t.me/proxy?server=zerotier1.saba-e.com&port=7336&secret=eead33390c48192788f0a5fe46e7efff3d676f6f676c652e636f6d)
-[https://t.me/proxy?server=2.144.4.145&port=49443&secret=ee09db815a6d82a31fda76f872230c69d7706b676275696c642e6f7267](https://t.me/proxy?server=2.144.4.145&port=49443&secret=ee09db815a6d82a31fda76f872230c69d7706b676275696c642e6f7267)
-[https://t.me/proxy?server=185.60.137.156&port=8443&secret=75f9a8da21406c0db5e92c015368345c](https://t.me/proxy?server=185.60.137.156&port=8443&secret=75f9a8da21406c0db5e92c015368345c)
-[https://t.me/proxy?server=195.254.165.206&port=9443&secret=eeNEgYdJvXrFGRMCIMJdCQ](https://t.me/proxy?server=195.254.165.206&port=9443&secret=eeNEgYdJvXrFGRMCIMJdCQ)
-[https://t.me/proxy?server=185.60.137.156&port=8443&secret=75f9a8da21406c0db5e92c015368345c](https://t.me/proxy?server=185.60.137.156&port=8443&secret=75f9a8da21406c0db5e92c015368345c)
-[https://t.me/proxy?server=185.60.137.156&port=8443&secret=75f9a8da21406c0db5e92c015368345c](https://t.me/proxy?server=185.60.137.156&port=8443&secret=75f9a8da21406c0db5e92c015368345c)
-[https://t.me/proxy?server=185.60.137.156&port=8443&secret=75f9a8da21406c0db5e92c015368345c](https://t.me/proxy?server=185.60.137.156&port=8443&secret=75f9a8da21406c0db5e92c015368345c)
-[https://t.me/proxy?server=45.92.93.159&port=3443&secret=767cf6f14f461cdd166b54eddb53e1b0&@Zed_NetMeli](https://t.me/proxy?server=45.92.93.159&port=3443&secret=767cf6f14f461cdd166b54eddb53e1b0&@Zed_NetMeli)
-[https://t.me/proxy?server=185.60.137.156&port=8443&secret=75f9a8da21406c0db5e92c015368345c](https://t.me/proxy?server=185.60.137.156&port=8443&secret=75f9a8da21406c0db5e92c015368345c)
-[https://t.me/proxy?server=185.60.137.156&port=8443&secret=75f9a8da21406c0db5e92c015368345c](https://t.me/proxy?server=185.60.137.156&port=8443&secret=75f9a8da21406c0db5e92c015368345c)
-[https://t.me/proxy?server=195.254.165.185&port=34&secret=10446282fffffffffff80000fff80000](https://t.me/proxy?server=195.254.165.185&port=34&secret=10446282fffffffffff80000fff80000)
-[https://t.me/proxy?server=2.144.4.145&port=49443&secret=ee09db815a6d82a31fda76f872230c69d7706b676275696c642e6f7267](https://t.me/proxy?server=2.144.4.145&port=49443&secret=ee09db815a6d82a31fda76f872230c69d7706b676275696c642e6f7267)
-[https://t.me/proxy?server=185.60.137.156&port=8443&secret=75f9a8da21406c0db5e92c015368345c](https://t.me/proxy?server=185.60.137.156&port=8443&secret=75f9a8da21406c0db5e92c015368345c)
-[https://t.me/proxy?server=185.60.137.156&port=8443&secret=75f9a8da21406c0db5e92c015368345c](https://t.me/proxy?server=185.60.137.156&port=8443&secret=75f9a8da21406c0db5e92c015368345c)
-[https://t.me/proxy?server=185.60.137.156&port=8443&secret=75f9a8da21406c0db5e92c015368345c](https://t.me/proxy?server=185.60.137.156&port=8443&secret=75f9a8da21406c0db5e92c015368345c)
-[https://t.me/proxy?server=195.254.165.253&port=25565&secret=dd79e344818749bd7ac519130220c25d09](https://t.me/proxy?server=195.254.165.253&port=25565&secret=dd79e344818749bd7ac519130220c25d09)
-[https://t.me/proxy?server=195.254.165.252&port=25565&secret=dd79e344818749bd7ac519130220c25d09](https://t.me/proxy?server=195.254.165.252&port=25565&secret=dd79e344818749bd7ac519130220c25d09)
-[https://t.me/proxy?server=195.254.165.247&port=25565&secret=dd79e344818749bd7ac519130220c25d09](https://t.me/proxy?server=195.254.165.247&port=25565&secret=dd79e344818749bd7ac519130220c25d09)
-[https://t.me/proxy?server=195.254.165.250&port=25565&secret=dd79e344818749bd7ac519130220c25d09](https://t.me/proxy?server=195.254.165.250&port=25565&secret=dd79e344818749bd7ac519130220c25d09)
-﻿
-[@KIA_NET](https://t.me/KIA_NET)
-
----
-
-### 🕒 2026-03-12 10:41:21 UTC
-کانفیگ های زیر رو امتحان کنید.
-لطفا اجازه بدید وصل بشه و با dns های مختلف امتحان کنید.
-Noizyshifu-116
-slipnet-enc://AWiMPNgqxr4M82qnsGuLD+T46MxBvGEuYz5BxD+MaXEOso/8tCpHoVyxpdHq/awalby3pzKFy04Fdt2B0rg5Az70N+HR3MDi83L99YesXywco+1P3q46fGKAHckCB+LOG6b5m4kUkLQjUarsTRu15zgUhzRwcjd6CpLn5ZXq18gDV0hY6Nb/43MGN3/1oux0/y8g2lsF2smClAODqcnRs9XHzVcx2oWcBYhE0/QuR/GUuPML7nGtT1EOe8ySmXjXS/BmSjVglDgrlTNzlYSw/EmS7ryNgdVO7Yzq8MuhIV+R2xVbrR+b+rmYfstdvQm1e48Ue0QfNDvsRiHXtY1/wFdTLQXzYEgAIKqmyBA38agPCLTmwb0ZAYdX0ecXFZOoCTFJ4FEQqHs/Ss520grzshu105R+s5pYJubasY7DIOZJZUin9R8qD4RCSdQL7SUkI2Vjbi+1gAZGo8GoqpRTUp+/hxeuKVID4vO2Gs/+JlA=
-Noizyshifu-114
-slipnet-enc://AeMtWvxk/aA/H7OxWURt+dqWtwfhB0GqdkDlPzPX0Sme+aUYzUZiEXte2C3H9KxCdUusXWQvfBc/x7PslTkqaZ+KBaz73XMmBytzu8xN8p3ZOLEQC0OOFqMu+Ykgie/0ehW+xbemINguZ3mr2rSa5dKw0DsrXJ9p67ZW2D82Pta68EukOsBL5X3ikAZGp1wF8rJOGuKIc+WiLRemSoh4V3FJhhvegNn7q78uVt5cOf5H82h7O5toHnBULIDg8iliz19xj+Uj6lZutx6oXQYXr/UfqEZJg8wdAhGoBFaOH15Q9Ck2DiwHk9ZDvKuF6yxkWL6wsg1cH5psfPwW5hciCo4j+WzW8VbdS4UdwzJ/2xMDTmMqHQKKfUplWyiaH22zrX5/jYZMz05tf/Y8r10DQzv5Wr9Oy71CK3UmnrbTD2ZAUfubkRC9MmuOj6sBH9UUX3yaPjp3tfqfuKXsaCPuyu2Vmhcp4F1bq9noUP3tdh0=
-Noizyshifu-71
-slipnet-enc://ATW0w/wTPYM+3yjClAI1ymFeuIhaoIm5/7lfFh19+RTXQCSqgFks96ikYjk0azF1ZP5i8J83mkXvHdFNsaKQ3I9gXmqLPKjqQ6bVQbWjoV8P91jvV6EQOLzbSlQIDRMxJ/bOyWGDnaWPotKECpAnHniWzE8TJEG9g/TjPrsoPfZS7GC2FCwGAQiCXjeL6z+iM5IEYV2fjKQfGIi6Av1NBwdODkCjJTTwt11elcr2Vd4AUOa/mGDpWXjgf3+0SVSMohuMTU0xnjT0PJWL0SR6qRnvEdCkmW4nmU0JbHKmFX0oWl+l7gnU0oqYstsJXmlAgJeZb/2NnSljKvUe9fawsVOdK8zP1qWBT1EWIbKyMFJtOrolqygLiql2giMoD5aV/OIUVlVC2zrzOQ65Q4xcDOynI776k7ycBxcsoF5UZhkjUxRi9e6eWd6t3cmqbRiNSJY8VlAwqS0mROdbHLPlBrzj/oTy68KY1WuegHuywQ==
-Noizyshifu-71S
-slipnet-enc://AZdyNGMFBg5CrlPZ7hnpDSC9W1RUlyauNLOoI6Gv4vRA1rfaZAsWi2SlBBnrnU8+ZiQiNf70Y+Cd8oGOKcgh4n6JvaAfXzpim+6tfTMFrzp7mFaVTIXY79uDG08y7L/uv6Xrh9ii8prOFxrVlMwwC5S7mo5wn9OuHv8VPV47SyL+NkCz+tGdjDXAOu1h3oqxLKGtTIcvn0Fd0bIKurd6ojREKKnUvT3NOIkZzD77EeQoiblbizt5cLRyYeqVdQFCI0xxaXW9JaMYhxI3TY0SiYdPuwXXgzLcmHxJKnH7ERAHyB3Z4QfvXsCed/gT7EILqkCLGhvfS1SWzmIlgbgPF1cREU2h7pNDSyjLufQ+GWIMdUey/PFKhuUu1FcWjVxKO+gySIu9SM/3FcLQtAhTz23FXq1C0k5L+y0G+KqCt1KeVY3erKMSzpEmoLKYQSsfZdhhCBTlt73wa975T4Ht57ByBr8EuAl6EYtY+i7bBx4=
-Noizyshifu-116S
-slipnet-enc://AUFBU/1IlYEGf/xa/69bAtL3H0lbto/CEnfl9dxebv0WyBfO9t+0VeGqBpmBMZRIcBbVb35qMJIEXScjQlJ7pzYyupA+MZ+u4cOhiy885TpCV63Ab9SOLjP+ApaCDdYJxvxrOcM8fddYWOqLl6HMwlEpA5X9TIQyrbl2DK1LzrFkP1LVyt7EBjUc26IZtns5Bh/PUwSdOZjFEXGvyqLMsbYerC01fUxJRUV0QRNs4MYV2pN16O1sXCwRlNjjIWl/B+AfQtDlmL1NbhxgGCnX7SzQvIZ85+htTDmZ/qvZp8CRBgHsOrrVmIQBkq4Szf+MiySgtKYJaomOC5ys+TWjNo51oZ14zV9SRMTXD+v6F7acB5s11lgJ/yd15nxhNB7k5Uy4R0vOeBw+vtBfZuok7vXNrYOBe0yC50E8RwnV8GPsSQWzuw7N4MeO1fkQhf9fpcagnMwk4PdpfzNqXKtAmcDZipXG6ANKgt++hXh/BrCC
-
----
-
-### 🕒 2026-03-12 10:38:03 UTC
-جهت دور زدن محدودیت‌های اینترنت هم‌راه و خانگی روی ترافیک DNS، می‌تونید با داشتن یک سرور ایران و iptables ترافیک رو از طریق تانل دیتاسنتر بفرستید.
-این مجموعه دستورات به شما اجازه می‌ده تا ترافیک ورودی به سرور شخصی روی یک پورت خاص رو به یک DNS Resolver هدایت کنید و هم‌چنین آدرس IP سرور رو برای حفظ حریم خصوصی در ترافیک DNS مخفی کنید.
-این ساده‌ترین روش برای دور زدن محدودیت‌هاست، ازش ایده بگیرید و خودتون توسعه بدید برای بهتر شدن.
-دستورات زیر رو برای خودتون کپی کنید، مقادیر زیر رو با مقادیر واقعی جایگزین کنید:
-PORT: پورت دلخواهی که می‌خواید ترافیک رو روش بفرستید
-DNS-RESOLVER-IP: آدرس آی‌پی ریزالور سالم
-در ابتدا تمام قوانین iptables رو حذف کنید:
-`iptables -Fiptables -X`
-***⚠️***
- دقت داشته باشید که اگر از قبل قوانین خاصی دارید، این دستور رو نزنید و مستقیم برید سراغ دستورات بعدی.
-`sudo iptables -A FORWARD -p tcp --dport PORT -j ACCEPTsudo iptables -A FORWARD -p udp --dport PORT -j ACCEPTsudo iptables -t nat -A PREROUTING -p tcp --dport PORT -j DNAT --to-destination DNS-RESOLVER-IP:53sudo iptables -t nat -A PREROUTING -p udp --dport PORT -j DNAT --to-destination DNS-RESOLVER-IP:53sudo iptables -t nat -A POSTROUTING -p tcp -d DNS-RESOLVER-IP --dport 53 -j MASQUERADEsudo iptables -t nat -A POSTROUTING -p udp -d DNS-RESOLVER-IP --dport 53 -j MASQUERADE`
-برای ذخیره شدن قوانین، این دستور رو بزنید:
-`sudo iptables-save > /etc/iptables/rules.v4`
-[#DNSTT](?q=%23DNSTT)
-[#slipstream](?q=%23slipstream)
-[@Kia_Net](https://t.me/Kia_Net)
-
----
-
-### 🕒 2026-03-12 10:33:51 UTC
-تازه اسکن شده
-[217.144.107.239:53](http://217.144.107.239:53/)
-[94.184.225.25:53](http://94.184.225.25:53/)
-[178.173.143.150:53](http://178.173.143.150:53/)
-[194.225.62.66:53](http://194.225.62.66:53/)
-[178.173.143.161:53](http://178.173.143.161:53/)
-[89.45.89.8:53](http://89.45.89.8:53/)
-[178.173.143.29:53](http://178.173.143.29:53/)
-[178.173.134.237:53](http://178.173.134.237:53/)
-برای SlipNet همین فرمتی که هست.مثال:
-[8.8.8.8:53](http://8.8.8.8:53/)
-برای Am tunnel به اولش udp:// اضافه کنید و 53: رو پاک کنید مثال:
-udp://8.8.8.8
-برای ویتوباکس (udp:// و 53: ) رو پاک کنید. مثال:
-[8.8.8.8](http://8.8.8.8/)
-***➖***
-***➖***
-***➖***
-***➖***
- 
-***➖***
-***➖***
-***➖***
-***➖***
-  
-[@KIA_NET](https://t.me/KIA_NET)
-
----
-
-### 🕒 2026-03-12 10:33:16 UTC
-[https://t.me/proxy?server=185.60.137.156&port=8443&secret=75f9a8da21406c0db5e92c015368345c](https://t.me/proxy?server=185.60.137.156&port=8443&secret=75f9a8da21406c0db5e92c015368345c)
-[https://t.me/proxy?server=195.254.165.250&port=25565&secret=dd79e344818749bd7ac519130220c25d09](https://t.me/proxy?server=195.254.165.250&port=25565&secret=dd79e344818749bd7ac519130220c25d09)
-[@KIA_NET](https://t.me/KIA_NET)
-
----
-
-### 🕒 2026-03-12 10:31:32 UTC
-slipnet://MTd8c3N8aXJhbm1lZGlhIHNlcnZlciAzICwgc2xpcHN0cmVhbXx0Mi5pcmFubWVkaWEyNi5saXZlfDIxMi4xNjEuMTY4LjE1OjUzOjB8MHw1MDAwfGJicnwxMDgwfDEyNy4wLjAuMXwwfHx8fDB8fHwyMnwwfDEyNy4wLjAuMXwwfHx1ZHB8cGFzc3dvcmR8fHx8MHw0NDN8fHwwfHwwfDB8fDB8
-اسلیپ نت
-[@Kia_net](https://t.me/Kia_net)
-
----
-
-### 🕒 2026-03-12 10:30:56 UTC
-vless://36d43050-a3bf-49e3-ae62-1c17fd902dca@81.12.33.100:7710?mode=gun&security=none&encryption=none&type=grpc&serviceName=qwemmqwoedmqwoemdoqwmedpmqwedmpm#%40Kia_net
 
 ---
 

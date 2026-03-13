@@ -467,8 +467,6 @@ rule-providers:
 proxies:
   - {name: "@v2rayconfigamir 7638`", server: 45.85.118.88, port: 2053, type: trojan, password: ZJU29smXwp, sni: omid.teama.tk, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: omid.teama.tk}}, udp: true, tfo: false}
   - {name: 63.183.120.121:22222, server: 63.183.120.121, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Danial, server: F2.HaMrAhCoNf.Ir, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 5fdc186d-f881-4fc4-9346-1f3d8fae9339, servername: uktkq.secoxi.site, network: ws, ws-opts: {path: /, headers: {Host: uktkq.secoxi.site}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_nps بیا تلگراممون", server: 217.218.52.1, port: 10410, type: vmess, uuid: f93f134f-7adb-48c3-bcd1-2532edb0b478, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,8 +485,6 @@ proxy-groups:
     proxies:
       - "@v2rayconfigamir 7638`"
       - 63.183.120.121:22222
-      - Danial
-      - "@proxy_nps بیا تلگراممون"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -497,8 +493,6 @@ proxy-groups:
     proxies:
       - "@v2rayconfigamir 7638`"
       - 63.183.120.121:22222
-      - Danial
-      - "@proxy_nps بیا تلگراممون"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -507,8 +501,6 @@ proxy-groups:
     proxies:
       - "@v2rayconfigamir 7638`"
       - 63.183.120.121:22222
-      - Danial
-      - "@proxy_nps بیا تلگراممون"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -526,8 +518,6 @@ proxy-groups:
     proxies:
       - "@v2rayconfigamir 7638`"
       - 63.183.120.121:22222
-      - Danial
-      - "@proxy_nps بیا تلگراممون"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -536,8 +526,6 @@ proxy-groups:
     proxies:
       - "@v2rayconfigamir 7638`"
       - 63.183.120.121:22222
-      - Danial
-      - "@proxy_nps بیا تلگراممون"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -546,8 +534,6 @@ proxy-groups:
     proxies:
       - "@v2rayconfigamir 7638`"
       - 63.183.120.121:22222
-      - Danial
-      - "@proxy_nps بیا تلگراممون"
   - name: دانلود منیجر 📥
     type: select
     proxies:

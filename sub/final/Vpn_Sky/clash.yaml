@@ -465,8 +465,10 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Vpn_Sky`", server: 85.192.41.103, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 21915536-afb5-4a0c-b047-fcf549d3a173, servername: wikihow.com, host: wikihow.com, path: /, reality-opts: {public-key: 1HeKf_8KDjfzXfUi9P7WBaGStMvr96TKdUbofpkwBzQ, short-id: 8bd29483ded126b4}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@𝗩𝗣𝗡_𝗦𝗞𝗬`", server: 31.42.190.76, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5ac2d3b6-33cc-4442-9c0b-ae3909cabaae, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@𝗩𝗣𝗡_𝗦𝗞𝗬", server: pro.vpsino.com, port: 20493, type: vless, tls: true, packet-encoding: xudp, uuid: 4442f537-1f88-4be3-179b-4bb9fdb1af4a, host: pro.vpsino.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@𝗩𝗣𝗡_𝗦𝗞𝗬`", server: pro.vpsino.com, port: 20960, type: vless, tls: true, packet-encoding: xudp, uuid: 4442f537-1f88-4be3-179b-4bb9fdb1af4a, host: nobitex.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: https://t.me/Vpn_Sky`, server: chatgpt.com, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 686c62d9-17a7-43c9-a40a-f6747df60a9f, servername: ca.adobe-connect.top, alpn: [http%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: ca.adobe-connect.top}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@𝗩𝗣𝗡_𝗦𝗞𝗬 2", server: pro.vpsino.com, port: 20960, type: vless, tls: true, packet-encoding: xudp, uuid: ea80926a-69fa-c6f5-994c-bcd5ed2ef211, host: nobitex.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +485,30 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@Vpn_Sky`"
+      - "@𝗩𝗣𝗡_𝗦𝗞𝗬"
       - "@𝗩𝗣𝗡_𝗦𝗞𝗬`"
+      - https://t.me/Vpn_Sky`
+      - "@𝗩𝗣𝗡_𝗦𝗞𝗬 2"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@Vpn_Sky`"
+      - "@𝗩𝗣𝗡_𝗦𝗞𝗬"
       - "@𝗩𝗣𝗡_𝗦𝗞𝗬`"
+      - https://t.me/Vpn_Sky`
+      - "@𝗩𝗣𝗡_𝗦𝗞𝗬 2"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@Vpn_Sky`"
+      - "@𝗩𝗣𝗡_𝗦𝗞𝗬"
       - "@𝗩𝗣𝗡_𝗦𝗞𝗬`"
+      - https://t.me/Vpn_Sky`
+      - "@𝗩𝗣𝗡_𝗦𝗞𝗬 2"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +524,30 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Vpn_Sky`"
+      - "@𝗩𝗣𝗡_𝗦𝗞𝗬"
       - "@𝗩𝗣𝗡_𝗦𝗞𝗬`"
+      - https://t.me/Vpn_Sky`
+      - "@𝗩𝗣𝗡_𝗦𝗞𝗬 2"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Vpn_Sky`"
+      - "@𝗩𝗣𝗡_𝗦𝗞𝗬"
       - "@𝗩𝗣𝗡_𝗦𝗞𝗬`"
+      - https://t.me/Vpn_Sky`
+      - "@𝗩𝗣𝗡_𝗦𝗞𝗬 2"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Vpn_Sky`"
+      - "@𝗩𝗣𝗡_𝗦𝗞𝗬"
       - "@𝗩𝗣𝗡_𝗦𝗞𝗬`"
+      - https://t.me/Vpn_Sky`
+      - "@𝗩𝗣𝗡_𝗦𝗞𝗬 2"
   - name: دانلود منیجر 📥
     type: select
     proxies:
