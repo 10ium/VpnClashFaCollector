@@ -467,6 +467,10 @@ rule-providers:
 proxies:
   - {name: "@v2rayconfigamir 7638`", server: 45.85.118.88, port: 2053, type: trojan, password: ZJU29smXwp, sni: omid.teama.tk, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: omid.teama.tk}}, udp: true, tfo: false}
   - {name: 63.183.120.121:22222, server: 63.183.120.121, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2rayconfigamir 8558`", server: 85.159.229.164, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 2dd1a15d-1426-413a-a3b8-a645788bc844, servername: irl.speedload.online, host: irl.speedload.online, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: J5ITJbg5FQFembAfkogKHHQB6DigsFXQxK7xu-QMWUs, short-id: a20d3ed244c76426}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2rayconfigamir 8785`", server: 45.141.234.159, port: 30724, type: vless, tls: true, packet-encoding: xudp, uuid: 54e5a989-5938-43ce-ba58-026ddbfd4d7b, servername: yandex.ru, host: yandex.ru, path: /, reality-opts: {public-key: KcWxOI6Y2kqFd_cg4bu-hWBZDlsJhT6TyRHhwFAHa0A, short-id: eab8ab08e4d6faa0}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2rayconfigamir 7484`", server: 23.95.225.214, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d, servername: snippet.sheilabelinda.ndjp.net, alpn: [http/1.1], network: ws, ws-opts: {path: /danfeng, headers: {Host: snippet.sheilabelinda.ndjp.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2rayconfigamir 7352`", server: 95.164.44.237, port: 49790, type: vless, tls: true, packet-encoding: xudp, uuid: 99210efd-1a49-4085-add3-d1d2e4fdd6c2, servername: yahoo.com, host: yahoo.com, path: /, reality-opts: {public-key: Xj6-HabAfXfu2dIz1orkRH5rAlbGMs0YMc7Zo4aARlU, short-id: 9d90d7ada8}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,6 +489,10 @@ proxy-groups:
     proxies:
       - "@v2rayconfigamir 7638`"
       - 63.183.120.121:22222
+      - "@v2rayconfigamir 8558`"
+      - "@v2rayconfigamir 8785`"
+      - "@v2rayconfigamir 7484`"
+      - "@v2rayconfigamir 7352`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -493,6 +501,10 @@ proxy-groups:
     proxies:
       - "@v2rayconfigamir 7638`"
       - 63.183.120.121:22222
+      - "@v2rayconfigamir 8558`"
+      - "@v2rayconfigamir 8785`"
+      - "@v2rayconfigamir 7484`"
+      - "@v2rayconfigamir 7352`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -501,6 +513,10 @@ proxy-groups:
     proxies:
       - "@v2rayconfigamir 7638`"
       - 63.183.120.121:22222
+      - "@v2rayconfigamir 8558`"
+      - "@v2rayconfigamir 8785`"
+      - "@v2rayconfigamir 7484`"
+      - "@v2rayconfigamir 7352`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -518,6 +534,10 @@ proxy-groups:
     proxies:
       - "@v2rayconfigamir 7638`"
       - 63.183.120.121:22222
+      - "@v2rayconfigamir 8558`"
+      - "@v2rayconfigamir 8785`"
+      - "@v2rayconfigamir 7484`"
+      - "@v2rayconfigamir 7352`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -526,6 +546,10 @@ proxy-groups:
     proxies:
       - "@v2rayconfigamir 7638`"
       - 63.183.120.121:22222
+      - "@v2rayconfigamir 8558`"
+      - "@v2rayconfigamir 8785`"
+      - "@v2rayconfigamir 7484`"
+      - "@v2rayconfigamir 7352`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -534,6 +558,10 @@ proxy-groups:
     proxies:
       - "@v2rayconfigamir 7638`"
       - 63.183.120.121:22222
+      - "@v2rayconfigamir 8558`"
+      - "@v2rayconfigamir 8785`"
+      - "@v2rayconfigamir 7484`"
+      - "@v2rayconfigamir 7352`"
   - name: دانلود منیجر 📥
     type: select
     proxies:
