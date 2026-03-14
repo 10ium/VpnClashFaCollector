@@ -466,6 +466,7 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: tunnel230017_97153 🇮🇷 ⅓ ², server: promax.vpsino.com, port: 20920, type: vless, tls: true, packet-encoding: xudp, uuid: 50179469-efee-b5c3-28f6-acdeb0842bcd, host: promax.vpsino.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: saministamm, server: fi.shoppizii.ir, port: 769, type: vless, tls: true, packet-encoding: xudp, uuid: 5b78de3c-c0e2-4077-8f0a-cb9669099074, host: myket.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,6 +484,7 @@ proxy-groups:
     type: select
     proxies:
       - tunnel230017_97153 🇮🇷 ⅓ ²
+      - saministamm
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -490,6 +492,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - tunnel230017_97153 🇮🇷 ⅓ ²
+      - saministamm
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -497,6 +500,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - tunnel230017_97153 🇮🇷 ⅓ ²
+      - saministamm
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -513,6 +517,7 @@ proxy-groups:
     interval: 600
     proxies:
       - tunnel230017_97153 🇮🇷 ⅓ ²
+      - saministamm
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -520,6 +525,7 @@ proxy-groups:
     interval: 600
     proxies:
       - tunnel230017_97153 🇮🇷 ⅓ ²
+      - saministamm
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -527,6 +533,7 @@ proxy-groups:
     interval: 600
     proxies:
       - tunnel230017_97153 🇮🇷 ⅓ ²
+      - saministamm
   - name: دانلود منیجر 📥
     type: select
     proxies:
