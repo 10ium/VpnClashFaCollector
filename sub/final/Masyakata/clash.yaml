@@ -469,6 +469,7 @@ proxies:
   - {name: "@v2rayconfigamir 8785`", server: 45.141.234.159, port: 30724, type: vless, tls: true, packet-encoding: xudp, uuid: 54e5a989-5938-43ce-ba58-026ddbfd4d7b, servername: yandex.ru, host: yandex.ru, path: /, reality-opts: {public-key: KcWxOI6Y2kqFd_cg4bu-hWBZDlsJhT6TyRHhwFAHa0A, short-id: eab8ab08e4d6faa0}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@v2rayconfigamir 7484`", server: 23.95.225.214, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d, servername: snippet.sheilabelinda.ndjp.net, alpn: [http/1.1], network: ws, ws-opts: {path: /danfeng, headers: {Host: snippet.sheilabelinda.ndjp.net}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@v2rayconfigamir 7352`", server: 95.164.44.237, port: 49790, type: vless, tls: true, packet-encoding: xudp, uuid: 99210efd-1a49-4085-add3-d1d2e4fdd6c2, servername: yahoo.com, host: yahoo.com, path: /, reality-opts: {public-key: Xj6-HabAfXfu2dIz1orkRH5rAlbGMs0YMc7Zo4aARlU, short-id: 9d90d7ada8}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim", server: 84.201.133.58, port: 8449, type: vless, tls: true, packet-encoding: xudp, uuid: 9a5dd949-d8e2-43bd-823e-2ba463035807, servername: travel.yandex.ru, host: travel.yandex.ru, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -489,6 +490,7 @@ proxy-groups:
       - "@v2rayconfigamir 8785`"
       - "@v2rayconfigamir 7484`"
       - "@v2rayconfigamir 7352`"
+      - "@vasl_bashim"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -499,6 +501,7 @@ proxy-groups:
       - "@v2rayconfigamir 8785`"
       - "@v2rayconfigamir 7484`"
       - "@v2rayconfigamir 7352`"
+      - "@vasl_bashim"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -509,6 +512,7 @@ proxy-groups:
       - "@v2rayconfigamir 8785`"
       - "@v2rayconfigamir 7484`"
       - "@v2rayconfigamir 7352`"
+      - "@vasl_bashim"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -528,6 +532,7 @@ proxy-groups:
       - "@v2rayconfigamir 8785`"
       - "@v2rayconfigamir 7484`"
       - "@v2rayconfigamir 7352`"
+      - "@vasl_bashim"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -538,6 +543,7 @@ proxy-groups:
       - "@v2rayconfigamir 8785`"
       - "@v2rayconfigamir 7484`"
       - "@v2rayconfigamir 7352`"
+      - "@vasl_bashim"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -548,6 +554,7 @@ proxy-groups:
       - "@v2rayconfigamir 8785`"
       - "@v2rayconfigamir 7484`"
       - "@v2rayconfigamir 7352`"
+      - "@vasl_bashim"
   - name: دانلود منیجر 📥
     type: select
     proxies:
