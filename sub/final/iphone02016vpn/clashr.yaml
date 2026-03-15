@@ -5,88 +5,53 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: NetAccount`, server: 163.171.181.49, port: 48852, type: ss, cipher: chacha20-ietf-poly1305, password: abc484edcf1be43c, udp: true, tfo: false}
-  - {name: NetAccount` 2, server: 82.38.31.61, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
-  - {name: f, server: 89.42.138.226, port: 8088, type: vless, tls: true, packet-encoding: xudp, uuid: 426acd7d-8cbd-4d23-dd9c-2e97b3c9f8a4, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: NetAccount` 3, server: norbert-2.conf-tun.site, port: 11112, type: vless, tls: true, packet-encoding: xudp, uuid: 5ee40272-88da-455f-84f2-afe1e7bf6a99, host: uptvs.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@yellow1v", server: 185.209.42.140, port: 50886, type: vless, tls: true, packet-encoding: xudp, uuid: 775b06cd-9cd1-480d-8f53-7af2eb5de32a, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: NetAccount` 4, server: 104.18.7.36, port: 2086, type: vless, tls: true, packet-encoding: xudp, uuid: a0af2643-a236-463c-8056-3f71d05eed53, network: ws, ws-opts: {path: /, headers: {Host: shomal-g74f3znf-v2.shomal-321.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: f 2, server: 89.42.138.226, port: 8088, type: vless, tls: true, packet-encoding: xudp, uuid: c4500966-78f0-4c69-c9c1-1e79ee240079, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2rayconfigamir 2573`", server: 45.148.102.189, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 2dd1a15d-1426-413a-a3b8-a645788bc844, servername: shve.speedload.online, host: shve.speedload.online, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: J5ITJbg5FQFembAfkogKHHQB6DigsFXQxK7xu-QMWUs, short-id: a20d3ed244c76426}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2rayconfigamir 1462`", server: 91.192.102.43, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: a68c90a4-a560-489a-ab4b-d918e78e9dee, servername: github.com, host: github.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - NetAccount`
-      - NetAccount` 2
-      - f
-      - NetAccount` 3
-      - "@yellow1v"
-      - NetAccount` 4
-      - f 2
+      - "@v2rayconfigamir 2573`"
+      - "@v2rayconfigamir 1462`"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - NetAccount`
-      - NetAccount` 2
-      - f
-      - NetAccount` 3
-      - "@yellow1v"
-      - NetAccount` 4
-      - f 2
+      - "@v2rayconfigamir 2573`"
+      - "@v2rayconfigamir 1462`"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - NetAccount`
-      - NetAccount` 2
-      - f
-      - NetAccount` 3
-      - "@yellow1v"
-      - NetAccount` 4
-      - f 2
+      - "@v2rayconfigamir 2573`"
+      - "@v2rayconfigamir 1462`"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - NetAccount`
-      - NetAccount` 2
-      - f
-      - NetAccount` 3
-      - "@yellow1v"
-      - NetAccount` 4
-      - f 2
+      - "@v2rayconfigamir 2573`"
+      - "@v2rayconfigamir 1462`"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - NetAccount`
-      - NetAccount` 2
-      - f
-      - NetAccount` 3
-      - "@yellow1v"
-      - NetAccount` 4
-      - f 2
+      - "@v2rayconfigamir 2573`"
+      - "@v2rayconfigamir 1462`"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - NetAccount`
-      - NetAccount` 2
-      - f
-      - NetAccount` 3
-      - "@yellow1v"
-      - NetAccount` 4
-      - f 2
+      - "@v2rayconfigamir 2573`"
+      - "@v2rayconfigamir 1462`"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -114,13 +79,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - NetAccount`
-      - NetAccount` 2
-      - f
-      - NetAccount` 3
-      - "@yellow1v"
-      - NetAccount` 4
-      - f 2
+      - "@v2rayconfigamir 2573`"
+      - "@v2rayconfigamir 1462`"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
