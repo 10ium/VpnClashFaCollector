@@ -465,13 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@saministamm | تلگرام جوین باشید`", server: outbounde.iran-mehrbu.ir, port: 16446, type: vless, tls: true, packet-encoding: xudp, uuid: 49bc99e9-305a-4045-a609-a258e8b2b76d, host: outbounde.iran-mehrbu.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@saministamm`", server: g1-de2-user.a1mshop.ir, port: 14300, type: vless, tls: true, packet-encoding: xudp, uuid: 8164cdb1-5b9b-49e1-83ef-b24a5c4c3ba8, host: aparat.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@saministamm 100GB`", server: emg4.saipasamandemg4.sbs, port: 2004, type: vless, tls: true, packet-encoding: xudp, uuid: 6b79d1b5-6b19-4948-a012-f5bd29746511, host: anten.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: saministamm, server: 193.151.151.211, port: 42595, type: vless, tls: true, packet-encoding: xudp, uuid: c227aacf-30e7-48d1-9e98-99d78b8347e8, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@saministamm` 2", server: master.hecad.ir, port: 440, type: vless, tls: true, packet-encoding: xudp, uuid: d5444762-dfd5-46f3-a2de-df271a1a16d1, host: master.hecad.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@saministamm` 3", server: 94.101.180.154, port: 555, type: vless, tls: true, packet-encoding: xudp, uuid: f0b49383-0623-44e5-a75c-09974e9b7a20, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@EsTunnel - Psiphon+V2rayNG", server: gsmvpn.gsmvx.com, port: 5006, type: vmess, uuid: b17345b9-6266-47f2-a473-8c57cbfe9ef9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@saministamm", server: gsmvpn.gsmvx.com, port: 5006, type: vmess, uuid: b17345b9-6266-47f2-a473-8c57cbfe9ef9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -488,39 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@saministamm | تلگرام جوین باشید`"
-      - "@saministamm`"
+      - "@saministamm 100GB`"
       - saministamm
-      - "@saministamm` 2"
-      - "@saministamm` 3"
-      - "@EsTunnel - Psiphon+V2rayNG"
-      - "@saministamm"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@saministamm | تلگرام جوین باشید`"
-      - "@saministamm`"
+      - "@saministamm 100GB`"
       - saministamm
-      - "@saministamm` 2"
-      - "@saministamm` 3"
-      - "@EsTunnel - Psiphon+V2rayNG"
-      - "@saministamm"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@saministamm | تلگرام جوین باشید`"
-      - "@saministamm`"
+      - "@saministamm 100GB`"
       - saministamm
-      - "@saministamm` 2"
-      - "@saministamm` 3"
-      - "@EsTunnel - Psiphon+V2rayNG"
-      - "@saministamm"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -536,39 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@saministamm | تلگرام جوین باشید`"
-      - "@saministamm`"
+      - "@saministamm 100GB`"
       - saministamm
-      - "@saministamm` 2"
-      - "@saministamm` 3"
-      - "@EsTunnel - Psiphon+V2rayNG"
-      - "@saministamm"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@saministamm | تلگرام جوین باشید`"
-      - "@saministamm`"
+      - "@saministamm 100GB`"
       - saministamm
-      - "@saministamm` 2"
-      - "@saministamm` 3"
-      - "@EsTunnel - Psiphon+V2rayNG"
-      - "@saministamm"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@saministamm | تلگرام جوین باشید`"
-      - "@saministamm`"
+      - "@saministamm 100GB`"
       - saministamm
-      - "@saministamm` 2"
-      - "@saministamm` 3"
-      - "@EsTunnel - Psiphon+V2rayNG"
-      - "@saministamm"
   - name: دانلود منیجر 📥
     type: select
     proxies:

@@ -5,46 +5,74 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@vasl_bashim", server: 84.201.133.58, port: 8449, type: vless, tls: true, packet-encoding: xudp, uuid: 9a5dd949-d8e2-43bd-823e-2ba463035807, servername: travel.yandex.ru, host: travel.yandex.ru, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@NETAZADI`", server: 193.47.60.186, port: 28687, type: ss, cipher: chacha20-ietf-poly1305, password: yKVMoB3AwiTEznpnoq2FYR, udp: true, tfo: false}
+  - {name: "@NETAZADI` 2", server: 5.188.141.239, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 65259548-1d98-0bb8-a7f9-1937927c68e9, servername: max.ru, host: max.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 4CH3o5zOMcFNMbnwXnkAg0FFepmsc0QzhahXkUzb1ik, short-id: d8c6b58bcbb0c323}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@NETAZADI` 3", server: 66.103.198.70, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 948fac3c-42bf-41a6-a5f9-704d36ff0d8d, servername: snippet.danfeng.gleeze.com, alpn: [http/1.1], network: ws, ws-opts: {path: /danfeng, headers: {Host: snippet.danfeng.gleeze.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@NETAZADI` 4", server: 178.154.216.177, port: 8083, type: vless, tls: true, packet-encoding: xudp, uuid: ea143789-bec4-4fdd-b879-e817d2935334, servername: max.ru, host: max.ru, path: /, reality-opts: {public-key: Z84J2IelR9ch3k8VtlVhhs5ycBUlXA7wHBWcBrjqnAw, short-id: 7dbf7d3233971d5c}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@icv2ray", server: 5.34.216.149, port: 6003, type: vmess, uuid: 9f1ecfca-13a9-488d-ac84-aaeb73a8d574, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@vasl_bashim"
+      - "@NETAZADI`"
+      - "@NETAZADI` 2"
+      - "@NETAZADI` 3"
+      - "@NETAZADI` 4"
+      - "@icv2ray"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@vasl_bashim"
+      - "@NETAZADI`"
+      - "@NETAZADI` 2"
+      - "@NETAZADI` 3"
+      - "@NETAZADI` 4"
+      - "@icv2ray"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@vasl_bashim"
+      - "@NETAZADI`"
+      - "@NETAZADI` 2"
+      - "@NETAZADI` 3"
+      - "@NETAZADI` 4"
+      - "@icv2ray"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@vasl_bashim"
+      - "@NETAZADI`"
+      - "@NETAZADI` 2"
+      - "@NETAZADI` 3"
+      - "@NETAZADI` 4"
+      - "@icv2ray"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@vasl_bashim"
+      - "@NETAZADI`"
+      - "@NETAZADI` 2"
+      - "@NETAZADI` 3"
+      - "@NETAZADI` 4"
+      - "@icv2ray"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@vasl_bashim"
+      - "@NETAZADI`"
+      - "@NETAZADI` 2"
+      - "@NETAZADI` 3"
+      - "@NETAZADI` 4"
+      - "@icv2ray"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +100,11 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@vasl_bashim"
+      - "@NETAZADI`"
+      - "@NETAZADI` 2"
+      - "@NETAZADI` 3"
+      - "@NETAZADI` 4"
+      - "@icv2ray"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
