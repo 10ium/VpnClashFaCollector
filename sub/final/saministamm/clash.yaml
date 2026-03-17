@@ -465,6 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: "@saministamm", server: srv7.fastservers.cc, port: 23828, type: trojan, password: bAzbcu87YN, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@saministamm`", server: srv7.fastservers.cc, port: 23828, type: trojan, password: bAzbcu87YN, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@saministamm` 2", server: 147.45.68.252, port: 8082, type: vless, tls: true, packet-encoding: xudp, uuid: 00000000-0000-4000-8000-000000000000, servername: jmc9f8ao6n5xq.saghv.filegear-sg.me, network: ws, ws-opts: {path: /@Marisa_kristi, headers: {Host: jmc9f8ao6n5xq.saghv.filegear-sg.me}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: خرید کانفیگ @saministamm, server: trailers.sv1.cdn.yoozmovie.com, port: 16771, type: vless, tls: true, packet-encoding: xudp, uuid: 682f13ec-421f-4a71-b116-60c45d6dc1ed, host: google.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -482,6 +485,9 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - "@saministamm"
+      - "@saministamm`"
+      - "@saministamm` 2"
       - خرید کانفیگ @saministamm
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -489,6 +495,9 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - "@saministamm"
+      - "@saministamm`"
+      - "@saministamm` 2"
       - خرید کانفیگ @saministamm
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -496,6 +505,9 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - "@saministamm"
+      - "@saministamm`"
+      - "@saministamm` 2"
       - خرید کانفیگ @saministamm
   - name: اتصال پایدار 🔗
     type: url-test
@@ -512,6 +524,9 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@saministamm"
+      - "@saministamm`"
+      - "@saministamm` 2"
       - خرید کانفیگ @saministamm
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -519,6 +534,9 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@saministamm"
+      - "@saministamm`"
+      - "@saministamm` 2"
       - خرید کانفیگ @saministamm
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -526,6 +544,9 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@saministamm"
+      - "@saministamm`"
+      - "@saministamm` 2"
       - خرید کانفیگ @saministamm
   - name: دانلود منیجر 📥
     type: select
