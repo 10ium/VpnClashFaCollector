@@ -5,102 +5,53 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: ⚡Telegram - @vasl_bashim, server: 94.182.145.78, port: 60001, type: vless, tls: true, packet-encoding: xudp, uuid: 1ad2695a-4bd9-4c88-8b19-ed60ff3c2192, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ⚡Telegram - @vasl_bashim`, server: my.protag.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 3075155b-439e-4f60-9041-e92ff75136fc, network: ws, ws-opts: {path: /, headers: {Host: hubi.top-plus.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim`", server: outbounde.iran-mehrbu.ir, port: 16446, type: vless, tls: true, packet-encoding: xudp, uuid: 49bc99e9-305a-4045-a609-a258e8b2b76d, host: outbounde.iran-mehrbu.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ⚡Telegram - @vasl_bashim 2, server: f2.hamrahconf.ir, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 5558156d-3a2c-4843-9eb9-06e69ac3a2bf, servername: uiuyoyw.secoxi.site, network: ws, ws-opts: {path: /, headers: {Host: uiuyoyw.secoxi.site}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim", server: po.jijibiji.online, port: 1010, type: vless, tls: true, packet-encoding: xudp, uuid: f69fb3fd-fec4-8b01-301b-787c7edad2f9, servername: 57.128.255.3, host: 57.128.255.3, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim` 2", server: po.jijibiji.online, port: 1010, type: vless, tls: true, packet-encoding: xudp, uuid: f69fb3fd-fec4-8b01-301b-787c7edad2f9, servername: 57.128.255.3, host: 57.128.255.3, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim 2", server: po.jijibiji.online, port: 1010, type: vless, tls: true, packet-encoding: xudp, uuid: f69fb3fd-fec4-8b01-301b-787c7edad2f9, servername: 57.128.255.3, host: 57.128.255.3, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim` 3", server: po.jijibiji.online, port: 1010, type: vless, tls: true, packet-encoding: xudp, uuid: f69fb3fd-fec4-8b01-301b-787c7edad2f9, servername: 57.128.255.3, host: 57.128.255.3, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim - Psiphon+V2rayNG", server: gsmvpn.gsmvx.com, port: 5006, type: vmess, uuid: b17345b9-6266-47f2-a473-8c57cbfe9ef9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim", server: 94.183.172.46, port: 29297, type: vless, tls: true, packet-encoding: xudp, uuid: 0c5f4380-272d-46dc-94c4-77f3b05046f7, host: fast.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim`", server: 82.22.174.61, port: 1574, type: vless, tls: true, packet-encoding: xudp, uuid: a77aa668-8201-452a-82fa-72126fe05594, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - ⚡Telegram - @vasl_bashim
-      - ⚡Telegram - @vasl_bashim`
-      - "@vasl_bashim`"
-      - ⚡Telegram - @vasl_bashim 2
       - "@vasl_bashim"
-      - "@vasl_bashim` 2"
-      - "@vasl_bashim 2"
-      - "@vasl_bashim` 3"
-      - "@vasl_bashim - Psiphon+V2rayNG"
+      - "@vasl_bashim`"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - ⚡Telegram - @vasl_bashim
-      - ⚡Telegram - @vasl_bashim`
-      - "@vasl_bashim`"
-      - ⚡Telegram - @vasl_bashim 2
       - "@vasl_bashim"
-      - "@vasl_bashim` 2"
-      - "@vasl_bashim 2"
-      - "@vasl_bashim` 3"
-      - "@vasl_bashim - Psiphon+V2rayNG"
+      - "@vasl_bashim`"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - ⚡Telegram - @vasl_bashim
-      - ⚡Telegram - @vasl_bashim`
-      - "@vasl_bashim`"
-      - ⚡Telegram - @vasl_bashim 2
       - "@vasl_bashim"
-      - "@vasl_bashim` 2"
-      - "@vasl_bashim 2"
-      - "@vasl_bashim` 3"
-      - "@vasl_bashim - Psiphon+V2rayNG"
+      - "@vasl_bashim`"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - ⚡Telegram - @vasl_bashim
-      - ⚡Telegram - @vasl_bashim`
-      - "@vasl_bashim`"
-      - ⚡Telegram - @vasl_bashim 2
       - "@vasl_bashim"
-      - "@vasl_bashim` 2"
-      - "@vasl_bashim 2"
-      - "@vasl_bashim` 3"
-      - "@vasl_bashim - Psiphon+V2rayNG"
+      - "@vasl_bashim`"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - ⚡Telegram - @vasl_bashim
-      - ⚡Telegram - @vasl_bashim`
-      - "@vasl_bashim`"
-      - ⚡Telegram - @vasl_bashim 2
       - "@vasl_bashim"
-      - "@vasl_bashim` 2"
-      - "@vasl_bashim 2"
-      - "@vasl_bashim` 3"
-      - "@vasl_bashim - Psiphon+V2rayNG"
+      - "@vasl_bashim`"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - ⚡Telegram - @vasl_bashim
-      - ⚡Telegram - @vasl_bashim`
-      - "@vasl_bashim`"
-      - ⚡Telegram - @vasl_bashim 2
       - "@vasl_bashim"
-      - "@vasl_bashim` 2"
-      - "@vasl_bashim 2"
-      - "@vasl_bashim` 3"
-      - "@vasl_bashim - Psiphon+V2rayNG"
+      - "@vasl_bashim`"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -128,15 +79,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - ⚡Telegram - @vasl_bashim
-      - ⚡Telegram - @vasl_bashim`
-      - "@vasl_bashim`"
-      - ⚡Telegram - @vasl_bashim 2
       - "@vasl_bashim"
-      - "@vasl_bashim` 2"
-      - "@vasl_bashim 2"
-      - "@vasl_bashim` 3"
-      - "@vasl_bashim - Psiphon+V2rayNG"
+      - "@vasl_bashim`"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
