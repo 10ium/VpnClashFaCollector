@@ -465,11 +465,12 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@v2rayconfigamir 7061", server: 38.107.234.57, port: 80, type: vmess, uuid: 567f4be5-12ab-42e1-b8d9-db6fd1fdd31c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /vmess/, headers: {Host: wrmelmwxlf.gktevlrqznwqqozy.fabpfs66gizmnojhcvqxwl.kytrcfzqla87gvgvs6c7kjnrubuh.cc}}, udp: true, tfo: false}
-  - {name: "@v2rayconfigamir 2622", server: 38.107.234.57, port: 80, type: vmess, uuid: 567f4be5-12ab-42e1-b8d9-db6fd1fdd31c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /vmess/, headers: {Host: 38.107.234.57}}, udp: true, tfo: false}
   - {name: "🇭🇰 [openproxylist.com] vmess-HK", server: cn01.365cloud8754.com, port: 6001, type: vmess, uuid: db75bc92-4e32-48dd-b792-d7a8b707626c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "🇯🇵 [openproxylist.com] vmess-JP", server: abm96f00fby3.jkhkgj.xyz, port: 80, type: vmess, uuid: 0f868002-5230-45fb-be23-0fd0ed9bbdc4, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /market/jp1, headers: {Host: tms.dingtalk.com}}, udp: true, tfo: false}
   - {name: "@filembad", server: 65.21.145.122, port: 27134, type: vmess, uuid: cd957f3c-a480-4279-9d26-4b4870c3cb72, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 2", server: gsmvpn.gsmvx.com, port: 5006, type: vmess, uuid: ef6e8954-20af-4266-a393-cccffa9db7c4, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@PewezaVPN (تلگرام)", server: gsmvpn.gsmvx.com, port: 5006, type: vmess, uuid: ef6e8954-20af-4266-a393-cccffa9db7c4, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 3", server: gsmvpn.gsmvx.com, port: 5006, type: vmess, uuid: ef6e8954-20af-4266-a393-cccffa9db7c4, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,33 +487,36 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@v2rayconfigamir 7061"
-      - "@v2rayconfigamir 2622"
       - 🇭🇰 [openproxylist.com] vmess-HK
       - 🇯🇵 [openproxylist.com] vmess-JP
       - "@filembad"
+      - "@filembad 2"
+      - "@PewezaVPN (تلگرام)"
+      - "@filembad 3"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@v2rayconfigamir 7061"
-      - "@v2rayconfigamir 2622"
       - 🇭🇰 [openproxylist.com] vmess-HK
       - 🇯🇵 [openproxylist.com] vmess-JP
       - "@filembad"
+      - "@filembad 2"
+      - "@PewezaVPN (تلگرام)"
+      - "@filembad 3"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@v2rayconfigamir 7061"
-      - "@v2rayconfigamir 2622"
       - 🇭🇰 [openproxylist.com] vmess-HK
       - 🇯🇵 [openproxylist.com] vmess-JP
       - "@filembad"
+      - "@filembad 2"
+      - "@PewezaVPN (تلگرام)"
+      - "@filembad 3"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -528,33 +532,36 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2rayconfigamir 7061"
-      - "@v2rayconfigamir 2622"
       - 🇭🇰 [openproxylist.com] vmess-HK
       - 🇯🇵 [openproxylist.com] vmess-JP
       - "@filembad"
+      - "@filembad 2"
+      - "@PewezaVPN (تلگرام)"
+      - "@filembad 3"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2rayconfigamir 7061"
-      - "@v2rayconfigamir 2622"
       - 🇭🇰 [openproxylist.com] vmess-HK
       - 🇯🇵 [openproxylist.com] vmess-JP
       - "@filembad"
+      - "@filembad 2"
+      - "@PewezaVPN (تلگرام)"
+      - "@filembad 3"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2rayconfigamir 7061"
-      - "@v2rayconfigamir 2622"
       - 🇭🇰 [openproxylist.com] vmess-HK
       - 🇯🇵 [openproxylist.com] vmess-JP
       - "@filembad"
+      - "@filembad 2"
+      - "@PewezaVPN (تلگرام)"
+      - "@filembad 3"
   - name: دانلود منیجر 📥
     type: select
     proxies:
