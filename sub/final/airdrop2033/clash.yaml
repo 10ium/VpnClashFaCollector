@@ -465,7 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: saministamm, server: fi.shoppizii.ir, port: 769, type: vless, tls: true, packet-encoding: xudp, uuid: 5b78de3c-c0e2-4077-8f0a-cb9669099074, host: myket.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@airdrop2033`", server: 3.fr.vles.space, port: 23151, type: vless, tls: true, packet-encoding: xudp, uuid: 7f37b28b-cfcb-4c2a-ae41-8f2ddc9325dd, servername: cms-res-web.online.sberbank.ru, host: cms-res-web.online.sberbank.ru, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@airdrop2033` 2", server: pl.sky-vault.top, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ab1ddafb-9514-40ab-9e4b-a3878f70931d, servername: pl.sky-vault.top, host: pl.sky-vault.top, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: _KTsOFhGnC0W28ZqO8_FApozMp7tJ9cVBTLKLAA_OR0, short-id: ae64c9b46bff174a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - saministamm
+      - "@airdrop2033`"
+      - "@airdrop2033` 2"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - saministamm
+      - "@airdrop2033`"
+      - "@airdrop2033` 2"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - saministamm
+      - "@airdrop2033`"
+      - "@airdrop2033` 2"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - saministamm
+      - "@airdrop2033`"
+      - "@airdrop2033` 2"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - saministamm
+      - "@airdrop2033`"
+      - "@airdrop2033` 2"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - saministamm
+      - "@airdrop2033`"
+      - "@airdrop2033` 2"
   - name: دانلود منیجر 📥
     type: select
     proxies:

@@ -5,34 +5,48 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: admin.c1.webramz.co:443, server: admin.c1.webramz.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: W74XFALLLuw6m5IA, udp: true, tfo: false}
   - {name: series-a1.samanehha.co:443, server: series-a1.samanehha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: W74XFALLLuw6m5IA, udp: true, tfo: false}
   - {name: 144.217.164.29:12000, server: 144.217.164.29, port: 12000, type: ss, cipher: aes-256-gcm, password: 8JCsPssfgS8tiRwiMlhARg==, udp: true, tfo: false}
   - {name: 144.217.7.33:12000, server: 144.217.7.33, port: 12000, type: ss, cipher: aes-256-gcm, password: 8JCsPssfgS8tiRwiMlhARg==, udp: true, tfo: false}
   - {name: 57.128.214.100:12000, server: 57.128.214.100, port: 12000, type: ss, cipher: aes-256-gcm, password: 8JCsPssfgS8tiRwiMlhARg==, udp: true, tfo: false}
-  - {name: apt-magpie.rooster465.autos:443, server: apt-magpie.rooster465.autos, port: 443, type: trojan, password: IL37892054, sni: apt-magpie.rooster465.autos, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: upright-rhino.rooster465.autos:443, server: upright-rhino.rooster465.autos, port: 443, type: trojan, password: IL37892054, sni: upright-rhino.rooster465.autos, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: engaged-ram.rooster465.autos:443, server: engaged-ram.rooster465.autos, port: 443, type: trojan, password: IL37892054, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: outgoing-ladybird.rooster465.autos:443, server: outgoing-ladybird.rooster465.autos, port: 443, type: trojan, password: IL37892054, sni: outgoing-ladybird.rooster465.autos, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 3.124.155.41:22222, server: 3.124.155.41, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 35.181.123.75:22222, server: 35.181.123.75, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 144.31.2.176:57172, server: 144.31.2.176, port: 57172, type: vless, tls: true, packet-encoding: xudp, uuid: 0c56d165-7005-4655-8b9e-4f6888b50318, servername: max.ru, host: max.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: W5ygFi8wqavEaP1uiK9ZYJXEtMT_Kc_OfcYbfj-c2Uw, short-id: d5b702262431}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 87.120.216.107:465, server: 87.120.216.107, port: 465, type: vless, tls: true, packet-encoding: xudp, uuid: 0f7ee331-3a78-4341-acbb-39b9b7bd7f47, servername: download.docker.com, host: download.docker.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: EJKcPSl0dv7mtU26gg6tUmKPw_aDvO2AHraRgNn6B14, short-id: 425ba80cd1a821a8}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 77.110.119.35:2053, server: 77.110.119.35, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: 14b02e2a-8930-4afb-8412-ea4a4954ca5b, network: ws, ws-opts: {path: /, headers: {Host: zgtwylnhh.cc.cd}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 77.110.119.35:2053 2, server: 77.110.119.35, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: 14b02e2a-8930-4afb-8412-ea4a4954ca5b, servername: zgtwylnhh.cc.cd, network: ws, ws-opts: {path: Telegram, headers: {Host: zgtwylnhh.cc.cd}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 144.31.234.125:443, server: 144.31.234.125, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 1501076a-e6de-4b28-aa17-524e7ac747fb, servername: ads.x5.ru, host: ads.x5.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: IF1iDd3XqdfMBlwSpBBS-GREC-pti_C8Hs4wWcFYUkw, short-id: 3fe43f2880aa68fa}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 148.135.195.143:443, server: 148.135.195.143, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 19cb2ba5-d074-42d6-8400-6d9183514f48, servername: www.google.com, host: www.google.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: nPcUKydxoRI66O3tT9O4QCZpLjOBvkGsiXG7pDX1BBw, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 151.243.101.25:443, server: 151.243.101.25, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 19cb2ba5-d074-42d6-8400-6d9183514f48, servername: www.google.com, host: www.google.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: nPcUKydxoRI66O3tT9O4QCZpLjOBvkGsiXG7pDX1BBw, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 151.245.195.159:443, server: 151.245.195.159, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 19cb2ba5-d074-42d6-8400-6d9183514f48, servername: www.google.com, host: www.google.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: nPcUKydxoRI66O3tT9O4QCZpLjOBvkGsiXG7pDX1BBw, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: srv13.ezcon24.online:11444, server: srv13.ezcon24.online, port: 11444, type: vless, tls: true, packet-encoding: xudp, uuid: 217e8d75-528f-4198-8217-ae2885ac9dba, servername: www.sun6-21.userapi.com, host: www.sun6-21.userapi.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 45.89.111.63:443, server: 45.89.111.63, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 35b9becb-2488-447c-ad69-e839f2fc13c1, servername: google.com, host: google.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 5vKf_Ni653huMNUl6V34EJxEGPCC0hZ6rFCPwu2Z300, short-id: 3ef8cdbc}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 92.118.234.151:443, server: 92.118.234.151, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 35b9becb-2488-447c-ad69-e839f2fc13c1, servername: google.com, host: google.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 5vKf_Ni653huMNUl6V34EJxEGPCC0hZ6rFCPwu2Z300, short-id: 3ef8cdbc}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇫🇷 fr1.cyphervpn.pro:443, server: fr1.cyphervpn.pro, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 3cc7c3a4-03a7-11f1-9bc0-0242ac110002, servername: fr1.cyphervpn.pro, host: fr1.cyphervpn.pro, path: /, reality-opts: {public-key: FfpoYFgT2DmVE8wpXv0ncw9YTdVduwH3qetnke0LMDU, short-id: 5bfa0c}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 45.136.59.44:13344, server: 45.136.59.44, port: 13344, type: vless, tls: true, packet-encoding: xudp, uuid: 3fce3b0d-0b92-4e92-9a78-18051dd648b4, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: DC71RjKr16drr8gqK8QhEuCVLpkbBfUfPb9Far8Jkzo, short-id: e2bd9802e29deb}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 45.149.114.8:443, server: 45.149.114.8, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4f1e3b6d-1631-44bf-9a33-b298b30e1ce0, servername: in-blr-2.blook.network, host: in-blr-2.blook.network, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 4hgbGo2EFMD_G-67IL4UrPtBri0Dh-l_SFafynnVHm8, short-id: dd0d7f6b}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 89.149.243.204:443, server: 89.149.243.204, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 64ae277f-4089-41ae-8856-87ceff67edb3, servername: www.apple.com, host: www.apple.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 144.31.1.60:443, server: 144.31.1.60, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 7478ff88-1354-4143-96ce-6c8059273ef0, servername: www.amd.com, host: www.amd.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 193.233.48.173:443, server: 193.233.48.173, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 932130c7-197b-4b37-af26-d550c47ba8f4, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: g-api1.maps-yandex.net:10120, server: g-api1.maps-yandex.net, port: 10120, type: vless, tls: true, packet-encoding: xudp, uuid: 9b73c904-e704-4537-ab1a-6aadfc5c535e, servername: apple.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: api}, reality-opts: {public-key: TWTC9ME2USNv_Vug-fJ-jeh0NxiLJ7IN9jjJN_3UylY, short-id: 0d6151ea50972a17}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇺🇸 us-2.124515.xyz:443, server: us-2.124515.xyz, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a55a1cb4-cdb3-43db-9095-a8321ca1e9ad, servername: us-2.124515.xyz, host: us-2.124515.xyz, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: Htrrk8RBLK56TQwymPi3IJ9s3gHna8C7NOajUn-pUCg, short-id: 1eeaedbc2f137a62}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: whitelist2.124515.xyz:8443, server: whitelist2.124515.xyz, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: a55a1cb4-cdb3-43db-9095-a8321ca1e9ad, servername: whitelist2.124515.xyz, host: whitelist2.124515.xyz, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: p6rBxt_9BHHS3ODfWh3gE3nnzsbVqidNUisM5rRk-n0, short-id: c10b9c49979ca3ad}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 89.149.243.213:443, server: 89.149.243.213, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b10aaf79-0721-454b-9d82-6418413561b8, servername: www.apple.com, host: www.apple.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: usadt01.jumperservice.com:19001, server: usadt01.jumperservice.com, port: 19001, type: vless, tls: true, packet-encoding: xudp, uuid: b5be8e3f-a17d-479c-ebdb-9c3265c2cab7, servername: www.speedtest.org, host: www.speedtest.org, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 144.31.3.55:1488, server: 144.31.3.55, port: 1488, type: vless, tls: true, packet-encoding: xudp, uuid: bea7a5db-bb02-4bcd-bece-62832eb1bc94, servername: www.vk.com, host: www.vk.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: vpn3.rnmcnm.com:443, server: vpn3.rnmcnm.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c3d4e5f6-7890-1234-5678-90abcdef1234, network: ws, ws-opts: {path: /ray, headers: {Host: vpn3.rnmcnm.com}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: vps.zakir.web.id:80, server: vps.zakir.web.id, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: ca73d911-29f4-42d8-ada5-81dee679e96a, network: ws, ws-opts: {path: vless, headers: {Host: vps.zakir.web.id}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: s392.ccgfw.top:443, server: s392.ccgfw.top, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ccd85f23-9105-37fd-96b9-9dcbc89ff3eb, servername: u710948u635fs392.ccgfw.top, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: ssp}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 144.31.217.25:10965, server: 144.31.217.25, port: 10965, type: vless, tls: true, packet-encoding: xudp, uuid: d1209ffb-c159-48d5-b40d-542ce11fc768, servername: deepl.com, host: deepl.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: lHxeD2nYtDb1V7JseV-sUTEuqH6_jie7U_iOARX7cT0, short-id: 9f3a7c6d2e8b41af}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 104.167.197.59:23335, server: 104.167.197.59, port: 23335, type: vless, tls: true, packet-encoding: xudp, uuid: e384913f-8863-47b4-8858-a84b68abb4a6, servername: icloud.com, host: icloud.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 7Gi8eiUU9TIVbGuvSU16gl5-Aqt7tcCSB9x6CSxyvik, short-id: 67b1e94e4dd1ef90}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇩🇪 de-5.vpnd.io:43881, server: de-5.vpnd.io, port: 43881, type: vless, tls: true, packet-encoding: xudp, uuid: f6eb5903-35ae-42d0-b60a-9e01e51e6d99, servername: amazon.com, host: amazon.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 0OjbaFdJ3LVEpRBR4dfX2dnZK5ZdBGK58lKbvPaABg8, short-id: 6b7294d7b5ec}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: fi1.cyphervpn.pro:443, server: fi1.cyphervpn.pro, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f7bae22e-20ab-11f1-835c-0242ac110002, servername: fi1.cyphervpn.pro, host: fi1.cyphervpn.pro, path: /, reality-opts: {public-key: z_mZq7riCGYKcTsXGCFX3KyhLL5PYgG3ydZ8_wM_ZkU, short-id: 5bfa0c}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "🇭🇰 [openproxylist.com] vmess-HK", server: cn01.365cloud8754.com, port: 6001, type: vmess, uuid: db75bc92-4e32-48dd-b792-d7a8b707626c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "🇯🇵 [openproxylist.com] vmess-JP", server: abm96f00fby3.jkhkgj.xyz, port: 80, type: vmess, uuid: 0f868002-5230-45fb-be23-0fd0ed9bbdc4, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /market/jp1, headers: {Host: tms.dingtalk.com}}, udp: true, tfo: false}
+  - {name: 193.109.120.119:443, server: 193.109.120.119, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fd37be2f-f8d1-47de-97e8-13c28107d31e, servername: est15.frostbot.ru, host: est15.frostbot.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 3u-RoUuzGFtfVwCbUJ4GxAhNUyR6DcyAzeyaSdNXG0A, short-id: 8c}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "[openproxylist.com] vmess-AE", server: cg1c15.waimaojd.com, port: 443, type: vmess, uuid: 4378a67e-d277-44b5-a99b-a947fff1ee21, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /api/v1/graphql, headers: {Host: cg1c15.waimaojd.com}}, udp: true, tfo: false}
+  - {name: "🇯🇵 [openproxylist.com] vmess-JP", server: m.cnmjin.net, port: 16617, type: vmess, uuid: 42355be2-af61-4b3b-866c-d3c5ea8748c5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: febce1d29a8a4c68e016e0bec83fa245.mobgslb.tbcache.com}}, udp: true, tfo: false}
+  - {name: "🇸🇬 [openproxylist.com] vmess-SG", server: planb.mojcn.com, port: 16618, type: vmess, uuid: 42355be2-af61-4b3b-866c-d3c5ea8748c5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: febce1d29a8a4c68e016e0bec83fa245.mobgslb.tbcache.com}}, udp: true, tfo: false}
+  - {name: "🇸🇬 [openproxylist.com] vmess-SG 2", server: t.cnmjcn.cyou, port: 16618, type: vmess, uuid: 42355be2-af61-4b3b-866c-d3c5ea8748c5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: febce1d29a8a4c68e016e0bec83fa245.mobgslb.tbcache.com}}, udp: true, tfo: false}
+  - {name: "🇸🇬 [openproxylist.com] vmess-SG 3", server: v12.hdacd.com, port: 30812, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "[openproxylist.com] vmess-IT", server: 45.92.70.236, port: 22324, type: vmess, uuid: 04621bae-ab36-11ec-b909-0242ac120002, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
@@ -40,34 +54,48 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - admin.c1.webramz.co:443
       - series-a1.samanehha.co:443
       - 144.217.164.29:12000
       - 144.217.7.33:12000
       - 57.128.214.100:12000
-      - apt-magpie.rooster465.autos:443
-      - upright-rhino.rooster465.autos:443
+      - engaged-ram.rooster465.autos:443
+      - outgoing-ladybird.rooster465.autos:443
       - 3.124.155.41:22222
       - 35.181.123.75:22222
       - 144.31.2.176:57172
       - 87.120.216.107:465
       - 77.110.119.35:2053
       - 77.110.119.35:2053 2
+      - 144.31.234.125:443
+      - 148.135.195.143:443
+      - 151.243.101.25:443
+      - 151.245.195.159:443
+      - srv13.ezcon24.online:11444
+      - 45.89.111.63:443
       - 92.118.234.151:443
-      - 🇫🇷 fr1.cyphervpn.pro:443
       - 45.136.59.44:13344
+      - 45.149.114.8:443
       - 89.149.243.204:443
       - 144.31.1.60:443
       - 193.233.48.173:443
       - g-api1.maps-yandex.net:10120
+      - 🇺🇸 us-2.124515.xyz:443
+      - whitelist2.124515.xyz:8443
       - 89.149.243.213:443
-      - usadt01.jumperservice.com:19001
       - 144.31.3.55:1488
-      - vpn3.rnmcnm.com:443
       - vps.zakir.web.id:80
+      - s392.ccgfw.top:443
       - 144.31.217.25:10965
+      - 104.167.197.59:23335
+      - 🇩🇪 de-5.vpnd.io:43881
       - fi1.cyphervpn.pro:443
-      - 🇭🇰 [openproxylist.com] vmess-HK
+      - 193.109.120.119:443
+      - "[openproxylist.com] vmess-AE"
       - 🇯🇵 [openproxylist.com] vmess-JP
+      - 🇸🇬 [openproxylist.com] vmess-SG
+      - 🇸🇬 [openproxylist.com] vmess-SG 2
+      - 🇸🇬 [openproxylist.com] vmess-SG 3
       - "[openproxylist.com] vmess-IT"
   - name: ♻️ 自动选择
     type: url-test
@@ -75,34 +103,48 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - admin.c1.webramz.co:443
       - series-a1.samanehha.co:443
       - 144.217.164.29:12000
       - 144.217.7.33:12000
       - 57.128.214.100:12000
-      - apt-magpie.rooster465.autos:443
-      - upright-rhino.rooster465.autos:443
+      - engaged-ram.rooster465.autos:443
+      - outgoing-ladybird.rooster465.autos:443
       - 3.124.155.41:22222
       - 35.181.123.75:22222
       - 144.31.2.176:57172
       - 87.120.216.107:465
       - 77.110.119.35:2053
       - 77.110.119.35:2053 2
+      - 144.31.234.125:443
+      - 148.135.195.143:443
+      - 151.243.101.25:443
+      - 151.245.195.159:443
+      - srv13.ezcon24.online:11444
+      - 45.89.111.63:443
       - 92.118.234.151:443
-      - 🇫🇷 fr1.cyphervpn.pro:443
       - 45.136.59.44:13344
+      - 45.149.114.8:443
       - 89.149.243.204:443
       - 144.31.1.60:443
       - 193.233.48.173:443
       - g-api1.maps-yandex.net:10120
+      - 🇺🇸 us-2.124515.xyz:443
+      - whitelist2.124515.xyz:8443
       - 89.149.243.213:443
-      - usadt01.jumperservice.com:19001
       - 144.31.3.55:1488
-      - vpn3.rnmcnm.com:443
       - vps.zakir.web.id:80
+      - s392.ccgfw.top:443
       - 144.31.217.25:10965
+      - 104.167.197.59:23335
+      - 🇩🇪 de-5.vpnd.io:43881
       - fi1.cyphervpn.pro:443
-      - 🇭🇰 [openproxylist.com] vmess-HK
+      - 193.109.120.119:443
+      - "[openproxylist.com] vmess-AE"
       - 🇯🇵 [openproxylist.com] vmess-JP
+      - 🇸🇬 [openproxylist.com] vmess-SG
+      - 🇸🇬 [openproxylist.com] vmess-SG 2
+      - 🇸🇬 [openproxylist.com] vmess-SG 3
       - "[openproxylist.com] vmess-IT"
   - name: 🌍 国外媒体
     type: select
@@ -110,136 +152,192 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - admin.c1.webramz.co:443
       - series-a1.samanehha.co:443
       - 144.217.164.29:12000
       - 144.217.7.33:12000
       - 57.128.214.100:12000
-      - apt-magpie.rooster465.autos:443
-      - upright-rhino.rooster465.autos:443
+      - engaged-ram.rooster465.autos:443
+      - outgoing-ladybird.rooster465.autos:443
       - 3.124.155.41:22222
       - 35.181.123.75:22222
       - 144.31.2.176:57172
       - 87.120.216.107:465
       - 77.110.119.35:2053
       - 77.110.119.35:2053 2
+      - 144.31.234.125:443
+      - 148.135.195.143:443
+      - 151.243.101.25:443
+      - 151.245.195.159:443
+      - srv13.ezcon24.online:11444
+      - 45.89.111.63:443
       - 92.118.234.151:443
-      - 🇫🇷 fr1.cyphervpn.pro:443
       - 45.136.59.44:13344
+      - 45.149.114.8:443
       - 89.149.243.204:443
       - 144.31.1.60:443
       - 193.233.48.173:443
       - g-api1.maps-yandex.net:10120
+      - 🇺🇸 us-2.124515.xyz:443
+      - whitelist2.124515.xyz:8443
       - 89.149.243.213:443
-      - usadt01.jumperservice.com:19001
       - 144.31.3.55:1488
-      - vpn3.rnmcnm.com:443
       - vps.zakir.web.id:80
+      - s392.ccgfw.top:443
       - 144.31.217.25:10965
+      - 104.167.197.59:23335
+      - 🇩🇪 de-5.vpnd.io:43881
       - fi1.cyphervpn.pro:443
-      - 🇭🇰 [openproxylist.com] vmess-HK
+      - 193.109.120.119:443
+      - "[openproxylist.com] vmess-AE"
       - 🇯🇵 [openproxylist.com] vmess-JP
+      - 🇸🇬 [openproxylist.com] vmess-SG
+      - 🇸🇬 [openproxylist.com] vmess-SG 2
+      - 🇸🇬 [openproxylist.com] vmess-SG 3
       - "[openproxylist.com] vmess-IT"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - admin.c1.webramz.co:443
       - series-a1.samanehha.co:443
       - 144.217.164.29:12000
       - 144.217.7.33:12000
       - 57.128.214.100:12000
-      - apt-magpie.rooster465.autos:443
-      - upright-rhino.rooster465.autos:443
+      - engaged-ram.rooster465.autos:443
+      - outgoing-ladybird.rooster465.autos:443
       - 3.124.155.41:22222
       - 35.181.123.75:22222
       - 144.31.2.176:57172
       - 87.120.216.107:465
       - 77.110.119.35:2053
       - 77.110.119.35:2053 2
+      - 144.31.234.125:443
+      - 148.135.195.143:443
+      - 151.243.101.25:443
+      - 151.245.195.159:443
+      - srv13.ezcon24.online:11444
+      - 45.89.111.63:443
       - 92.118.234.151:443
-      - 🇫🇷 fr1.cyphervpn.pro:443
       - 45.136.59.44:13344
+      - 45.149.114.8:443
       - 89.149.243.204:443
       - 144.31.1.60:443
       - 193.233.48.173:443
       - g-api1.maps-yandex.net:10120
+      - 🇺🇸 us-2.124515.xyz:443
+      - whitelist2.124515.xyz:8443
       - 89.149.243.213:443
-      - usadt01.jumperservice.com:19001
       - 144.31.3.55:1488
-      - vpn3.rnmcnm.com:443
       - vps.zakir.web.id:80
+      - s392.ccgfw.top:443
       - 144.31.217.25:10965
+      - 104.167.197.59:23335
+      - 🇩🇪 de-5.vpnd.io:43881
       - fi1.cyphervpn.pro:443
-      - 🇭🇰 [openproxylist.com] vmess-HK
+      - 193.109.120.119:443
+      - "[openproxylist.com] vmess-AE"
       - 🇯🇵 [openproxylist.com] vmess-JP
+      - 🇸🇬 [openproxylist.com] vmess-SG
+      - 🇸🇬 [openproxylist.com] vmess-SG 2
+      - 🇸🇬 [openproxylist.com] vmess-SG 3
       - "[openproxylist.com] vmess-IT"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - admin.c1.webramz.co:443
       - series-a1.samanehha.co:443
       - 144.217.164.29:12000
       - 144.217.7.33:12000
       - 57.128.214.100:12000
-      - apt-magpie.rooster465.autos:443
-      - upright-rhino.rooster465.autos:443
+      - engaged-ram.rooster465.autos:443
+      - outgoing-ladybird.rooster465.autos:443
       - 3.124.155.41:22222
       - 35.181.123.75:22222
       - 144.31.2.176:57172
       - 87.120.216.107:465
       - 77.110.119.35:2053
       - 77.110.119.35:2053 2
+      - 144.31.234.125:443
+      - 148.135.195.143:443
+      - 151.243.101.25:443
+      - 151.245.195.159:443
+      - srv13.ezcon24.online:11444
+      - 45.89.111.63:443
       - 92.118.234.151:443
-      - 🇫🇷 fr1.cyphervpn.pro:443
       - 45.136.59.44:13344
+      - 45.149.114.8:443
       - 89.149.243.204:443
       - 144.31.1.60:443
       - 193.233.48.173:443
       - g-api1.maps-yandex.net:10120
+      - 🇺🇸 us-2.124515.xyz:443
+      - whitelist2.124515.xyz:8443
       - 89.149.243.213:443
-      - usadt01.jumperservice.com:19001
       - 144.31.3.55:1488
-      - vpn3.rnmcnm.com:443
       - vps.zakir.web.id:80
+      - s392.ccgfw.top:443
       - 144.31.217.25:10965
+      - 104.167.197.59:23335
+      - 🇩🇪 de-5.vpnd.io:43881
       - fi1.cyphervpn.pro:443
-      - 🇭🇰 [openproxylist.com] vmess-HK
+      - 193.109.120.119:443
+      - "[openproxylist.com] vmess-AE"
       - 🇯🇵 [openproxylist.com] vmess-JP
+      - 🇸🇬 [openproxylist.com] vmess-SG
+      - 🇸🇬 [openproxylist.com] vmess-SG 2
+      - 🇸🇬 [openproxylist.com] vmess-SG 3
       - "[openproxylist.com] vmess-IT"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - admin.c1.webramz.co:443
       - series-a1.samanehha.co:443
       - 144.217.164.29:12000
       - 144.217.7.33:12000
       - 57.128.214.100:12000
-      - apt-magpie.rooster465.autos:443
-      - upright-rhino.rooster465.autos:443
+      - engaged-ram.rooster465.autos:443
+      - outgoing-ladybird.rooster465.autos:443
       - 3.124.155.41:22222
       - 35.181.123.75:22222
       - 144.31.2.176:57172
       - 87.120.216.107:465
       - 77.110.119.35:2053
       - 77.110.119.35:2053 2
+      - 144.31.234.125:443
+      - 148.135.195.143:443
+      - 151.243.101.25:443
+      - 151.245.195.159:443
+      - srv13.ezcon24.online:11444
+      - 45.89.111.63:443
       - 92.118.234.151:443
-      - 🇫🇷 fr1.cyphervpn.pro:443
       - 45.136.59.44:13344
+      - 45.149.114.8:443
       - 89.149.243.204:443
       - 144.31.1.60:443
       - 193.233.48.173:443
       - g-api1.maps-yandex.net:10120
+      - 🇺🇸 us-2.124515.xyz:443
+      - whitelist2.124515.xyz:8443
       - 89.149.243.213:443
-      - usadt01.jumperservice.com:19001
       - 144.31.3.55:1488
-      - vpn3.rnmcnm.com:443
       - vps.zakir.web.id:80
+      - s392.ccgfw.top:443
       - 144.31.217.25:10965
+      - 104.167.197.59:23335
+      - 🇩🇪 de-5.vpnd.io:43881
       - fi1.cyphervpn.pro:443
-      - 🇭🇰 [openproxylist.com] vmess-HK
+      - 193.109.120.119:443
+      - "[openproxylist.com] vmess-AE"
       - 🇯🇵 [openproxylist.com] vmess-JP
+      - 🇸🇬 [openproxylist.com] vmess-SG
+      - 🇸🇬 [openproxylist.com] vmess-SG 2
+      - 🇸🇬 [openproxylist.com] vmess-SG 3
       - "[openproxylist.com] vmess-IT"
   - name: 🎯 全球直连
     type: select
@@ -268,34 +366,48 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - admin.c1.webramz.co:443
       - series-a1.samanehha.co:443
       - 144.217.164.29:12000
       - 144.217.7.33:12000
       - 57.128.214.100:12000
-      - apt-magpie.rooster465.autos:443
-      - upright-rhino.rooster465.autos:443
+      - engaged-ram.rooster465.autos:443
+      - outgoing-ladybird.rooster465.autos:443
       - 3.124.155.41:22222
       - 35.181.123.75:22222
       - 144.31.2.176:57172
       - 87.120.216.107:465
       - 77.110.119.35:2053
       - 77.110.119.35:2053 2
+      - 144.31.234.125:443
+      - 148.135.195.143:443
+      - 151.243.101.25:443
+      - 151.245.195.159:443
+      - srv13.ezcon24.online:11444
+      - 45.89.111.63:443
       - 92.118.234.151:443
-      - 🇫🇷 fr1.cyphervpn.pro:443
       - 45.136.59.44:13344
+      - 45.149.114.8:443
       - 89.149.243.204:443
       - 144.31.1.60:443
       - 193.233.48.173:443
       - g-api1.maps-yandex.net:10120
+      - 🇺🇸 us-2.124515.xyz:443
+      - whitelist2.124515.xyz:8443
       - 89.149.243.213:443
-      - usadt01.jumperservice.com:19001
       - 144.31.3.55:1488
-      - vpn3.rnmcnm.com:443
       - vps.zakir.web.id:80
+      - s392.ccgfw.top:443
       - 144.31.217.25:10965
+      - 104.167.197.59:23335
+      - 🇩🇪 de-5.vpnd.io:43881
       - fi1.cyphervpn.pro:443
-      - 🇭🇰 [openproxylist.com] vmess-HK
+      - 193.109.120.119:443
+      - "[openproxylist.com] vmess-AE"
       - 🇯🇵 [openproxylist.com] vmess-JP
+      - 🇸🇬 [openproxylist.com] vmess-SG
+      - 🇸🇬 [openproxylist.com] vmess-SG 2
+      - 🇸🇬 [openproxylist.com] vmess-SG 3
       - "[openproxylist.com] vmess-IT"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连

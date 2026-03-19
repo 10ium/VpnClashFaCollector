@@ -5,46 +5,53 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: saministamm, server: fi.shoppizii.ir, port: 769, type: vless, tls: true, packet-encoding: xudp, uuid: 5b78de3c-c0e2-4077-8f0a-cb9669099074, host: myket.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@airdrop2033`", server: 3.fr.vles.space, port: 23151, type: vless, tls: true, packet-encoding: xudp, uuid: 7f37b28b-cfcb-4c2a-ae41-8f2ddc9325dd, servername: cms-res-web.online.sberbank.ru, host: cms-res-web.online.sberbank.ru, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@airdrop2033` 2", server: pl.sky-vault.top, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ab1ddafb-9514-40ab-9e4b-a3878f70931d, servername: pl.sky-vault.top, host: pl.sky-vault.top, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: _KTsOFhGnC0W28ZqO8_FApozMp7tJ9cVBTLKLAA_OR0, short-id: ae64c9b46bff174a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - saministamm
+      - "@airdrop2033`"
+      - "@airdrop2033` 2"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - saministamm
+      - "@airdrop2033`"
+      - "@airdrop2033` 2"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - saministamm
+      - "@airdrop2033`"
+      - "@airdrop2033` 2"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - saministamm
+      - "@airdrop2033`"
+      - "@airdrop2033` 2"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - saministamm
+      - "@airdrop2033`"
+      - "@airdrop2033` 2"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - saministamm
+      - "@airdrop2033`"
+      - "@airdrop2033` 2"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +79,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - saministamm
+      - "@airdrop2033`"
+      - "@airdrop2033` 2"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
