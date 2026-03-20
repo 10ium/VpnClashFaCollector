@@ -5,10 +5,8 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@Hiddify_Nexttt", server: 142.171.65.106, port: 8388, type: ss, cipher: 2022-blake3-aes-128-gcm, password: ASMkCw/SMA8MzZK8tv5vNw==:ASMkCw/SMA8MzZK8tv5vNw==, udp: true, tfo: false}
-  - {name: "@Hiddify_Nexttt 2", server: tinkered-pennies-puppies.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: hbGrpfvNrJsUmKmPbR3iY2, udp: true, tfo: false}
-  - {name: "@Hiddify_Nexttt 3", server: 82.38.31.62, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
-  - {name: "@Hiddify_Nexttt + Psiphon", server: gsmvpn.gsmvx.com, port: 5006, type: vmess, uuid: b17345b9-6266-47f2-a473-8c57cbfe9ef9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Hiddify_Nexttt", server: 102.37.156.224, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: aduB9HGxQHjA2SBMRjkHX6, udp: true, tfo: false}
+  - {name: "@Hiddify_Nexttt 2", server: meow.panbe.mom, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 431b5aea-099c-4f86-9302-698166870680, host: meow.panbe.mom, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -17,8 +15,6 @@ proxy-groups:
       - DIRECT
       - "@Hiddify_Nexttt"
       - "@Hiddify_Nexttt 2"
-      - "@Hiddify_Nexttt 3"
-      - "@Hiddify_Nexttt + Psiphon"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -27,8 +23,6 @@ proxy-groups:
     proxies:
       - "@Hiddify_Nexttt"
       - "@Hiddify_Nexttt 2"
-      - "@Hiddify_Nexttt 3"
-      - "@Hiddify_Nexttt + Psiphon"
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -37,8 +31,6 @@ proxy-groups:
       - 🎯 全球直连
       - "@Hiddify_Nexttt"
       - "@Hiddify_Nexttt 2"
-      - "@Hiddify_Nexttt 3"
-      - "@Hiddify_Nexttt + Psiphon"
   - name: 📲 电报信息
     type: select
     proxies:
@@ -46,8 +38,6 @@ proxy-groups:
       - 🎯 全球直连
       - "@Hiddify_Nexttt"
       - "@Hiddify_Nexttt 2"
-      - "@Hiddify_Nexttt 3"
-      - "@Hiddify_Nexttt + Psiphon"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -55,8 +45,6 @@ proxy-groups:
       - 🚀 节点选择
       - "@Hiddify_Nexttt"
       - "@Hiddify_Nexttt 2"
-      - "@Hiddify_Nexttt 3"
-      - "@Hiddify_Nexttt + Psiphon"
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -64,8 +52,6 @@ proxy-groups:
       - 🎯 全球直连
       - "@Hiddify_Nexttt"
       - "@Hiddify_Nexttt 2"
-      - "@Hiddify_Nexttt 3"
-      - "@Hiddify_Nexttt + Psiphon"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -95,8 +81,6 @@ proxy-groups:
       - ♻️ 自动选择
       - "@Hiddify_Nexttt"
       - "@Hiddify_Nexttt 2"
-      - "@Hiddify_Nexttt 3"
-      - "@Hiddify_Nexttt + Psiphon"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
