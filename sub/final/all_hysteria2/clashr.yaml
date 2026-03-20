@@ -5,67 +5,95 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 8@oneclickvpnkeys, server: de.xn--ehqa22b.site, port: 21927, type: hysteria2, ports: 21927, password: 46a64503-b76f-45b4-9948-6bac86e8d29e, sni: de.xn--ehqa22b.site, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 7@oneclickvpnkeys, server: 132.145.28.17, port: 65535, type: hysteria2, ports: 65535, password: da231013-aef8-4c83-abfd-8d844545fe3a, sni: www.microsoft.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 15@oneclickvpnkeys`, server: 132.145.52.10, port: 65535, type: hysteria2, ports: 65535, password: da231013-aef8-4c83-abfd-8d844545fe3a, sni: www.microsoft.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 2@oneclickvpnkeys, server: 152.70.176.68, port: 1, type: hysteria2, ports: 1, password: da231013-aef8-4c83-abfd-8d844545fe3a, sni: www.bing.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: g@oneclickvpnkeys, server: 144.31.224.14, port: 443, type: hysteria2, ports: 443, password: 123456789StrongPass, sni: www.cloudflare.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: k@oneclickvpnkeys`, server: 130.162.146.2, port: 23001, type: hysteria2, ports: 23001, password: 1fe714a1-d35e-4fb4-b3c7-6037eeef2cfc, sni: kr3.xn--mesx36n.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: j@oneclickvpnkeys, server: 138.2.61.63, port: 23001, type: hysteria2, ports: 23001, password: 1fe714a1-d35e-4fb4-b3c7-6037eeef2cfc, sni: jp1.xn--mesx36n.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: h@oneclickvpnkeys, server: 156.226.173.8, port: 8443, type: hysteria2, ports: 8443, password: 9c23940e-efd8-4763-bfb5-54739b50893d, sni: hy5.hy2yydsapi.top, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: e@oneclickvpnkeys, server: 206.71.158.23, port: 45000, type: hysteria2, ports: 45000, password: Telegram--%3E%40Ln2Ray, obfs: salamander, obfs-password: Telegram--%3E%40Ln2Ray, sni: gavazn.55994421.xyz, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: d@oneclickvpnkeys, server: 206.71.158.40, port: 35000, type: hysteria2, ports: 35000, password: b4bd0613-ff7c-4f2f-954d-185915e6ddad, obfs: salamander, obfs-password: "%40JavidnamanIran-Javid-SHAH-KingRezaPahlavi", sni: api.kermanshahi.org, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: c@oneclickvpnkeys, server: 206.71.158.41, port: 35000, type: hysteria2, ports: 35000, password: b4bd0613-ff7c-4f2f-954d-185915e6ddad, obfs: salamander, obfs-password: "%40JavidnamanIran-Javid-SHAH-KingRezaPahlavi", sni: api.kermanshahi.org, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@oneclickvpnkeys`", server: 181.214.99.162, port: 35000, type: hysteria2, ports: 35000, password: b4bd0613-ff7c-4f2f-954d-185915e6ddad, obfs: salamander, obfs-password: "%40JavidnamanIran-Javid-SHAH-KingRezaPahlavi", sni: api.kermanshahi.org, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 8@oneclickvpnkeys
-      - 7@oneclickvpnkeys
-      - 15@oneclickvpnkeys`
-      - 2@oneclickvpnkeys
+      - g@oneclickvpnkeys
+      - k@oneclickvpnkeys`
+      - j@oneclickvpnkeys
+      - h@oneclickvpnkeys
+      - e@oneclickvpnkeys
+      - d@oneclickvpnkeys
+      - c@oneclickvpnkeys
+      - "@oneclickvpnkeys`"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 8@oneclickvpnkeys
-      - 7@oneclickvpnkeys
-      - 15@oneclickvpnkeys`
-      - 2@oneclickvpnkeys
+      - g@oneclickvpnkeys
+      - k@oneclickvpnkeys`
+      - j@oneclickvpnkeys
+      - h@oneclickvpnkeys
+      - e@oneclickvpnkeys
+      - d@oneclickvpnkeys
+      - c@oneclickvpnkeys
+      - "@oneclickvpnkeys`"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 8@oneclickvpnkeys
-      - 7@oneclickvpnkeys
-      - 15@oneclickvpnkeys`
-      - 2@oneclickvpnkeys
+      - g@oneclickvpnkeys
+      - k@oneclickvpnkeys`
+      - j@oneclickvpnkeys
+      - h@oneclickvpnkeys
+      - e@oneclickvpnkeys
+      - d@oneclickvpnkeys
+      - c@oneclickvpnkeys
+      - "@oneclickvpnkeys`"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 8@oneclickvpnkeys
-      - 7@oneclickvpnkeys
-      - 15@oneclickvpnkeys`
-      - 2@oneclickvpnkeys
+      - g@oneclickvpnkeys
+      - k@oneclickvpnkeys`
+      - j@oneclickvpnkeys
+      - h@oneclickvpnkeys
+      - e@oneclickvpnkeys
+      - d@oneclickvpnkeys
+      - c@oneclickvpnkeys
+      - "@oneclickvpnkeys`"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 8@oneclickvpnkeys
-      - 7@oneclickvpnkeys
-      - 15@oneclickvpnkeys`
-      - 2@oneclickvpnkeys
+      - g@oneclickvpnkeys
+      - k@oneclickvpnkeys`
+      - j@oneclickvpnkeys
+      - h@oneclickvpnkeys
+      - e@oneclickvpnkeys
+      - d@oneclickvpnkeys
+      - c@oneclickvpnkeys
+      - "@oneclickvpnkeys`"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 8@oneclickvpnkeys
-      - 7@oneclickvpnkeys
-      - 15@oneclickvpnkeys`
-      - 2@oneclickvpnkeys
+      - g@oneclickvpnkeys
+      - k@oneclickvpnkeys`
+      - j@oneclickvpnkeys
+      - h@oneclickvpnkeys
+      - e@oneclickvpnkeys
+      - d@oneclickvpnkeys
+      - c@oneclickvpnkeys
+      - "@oneclickvpnkeys`"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -93,10 +121,14 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 8@oneclickvpnkeys
-      - 7@oneclickvpnkeys
-      - 15@oneclickvpnkeys`
-      - 2@oneclickvpnkeys
+      - g@oneclickvpnkeys
+      - k@oneclickvpnkeys`
+      - j@oneclickvpnkeys
+      - h@oneclickvpnkeys
+      - e@oneclickvpnkeys
+      - d@oneclickvpnkeys
+      - c@oneclickvpnkeys
+      - "@oneclickvpnkeys`"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

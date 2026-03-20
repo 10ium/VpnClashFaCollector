@@ -5,60 +5,116 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@saministamm", server: srv7.fastservers.cc, port: 23828, type: trojan, password: bAzbcu87YN, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@saministamm`", server: srv7.fastservers.cc, port: 23828, type: trojan, password: bAzbcu87YN, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@saministamm` 2", server: 147.45.68.252, port: 8082, type: vless, tls: true, packet-encoding: xudp, uuid: 00000000-0000-4000-8000-000000000000, servername: jmc9f8ao6n5xq.saghv.filegear-sg.me, network: ws, ws-opts: {path: /@Marisa_kristi, headers: {Host: jmc9f8ao6n5xq.saghv.filegear-sg.me}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@saministamm عضو شو قطع نشی", server: 102.37.156.224, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: aduB9HGxQHjA2SBMRjkHX6, udp: true, tfo: false}
+  - {name: "@saministamm", server: 15.224.0.245, port: 22224, type: vless, tls: true, packet-encoding: xudp, uuid: 05519058-d2ac-4f28-9e4a-2b2a1386749e, servername: trojan.burgerip.co.uk, network: ws, ws-opts: {path: /telegram-channel-vlessconfig, headers: {Host: trojan.burgerip.co.uk}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Saministamm|", server: 45.144.51.164, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 2292ece4-fccf-42af-9673-61e60eb79c51, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Saministamm", server: mail.tomandjery.eu, port: 1001, type: vless, tls: true, packet-encoding: xudp, uuid: 6a3ad064-be7c-40be-9a48-171885a359b7, servername: play.google.com, host: play.google.com, path: /, reality-opts: {public-key: xrZlXeuTYmAC97-RbRi-aM7U67TOBMGCHVu3DovZihw, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@saministamm 2", server: tunn.vpsino.com, port: 2087, type: vless, tls: true, packet-encoding: xudp, uuid: 705f96ea-9a3f-9d89-4ed9-c1b8b6e802da, host: tunn.vpsino.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@saministamm 3", server: tunn.vpsino.com, port: 2092, type: vless, tls: true, packet-encoding: xudp, uuid: 705f96ea-9a3f-9d89-4ed9-c1b8b6e802da, host: nobitex.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@saministamm|", server: tunn.vpsino.com, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 705f96ea-9a3f-9d89-4ed9-c1b8b6e802da, host: nobitex.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Saministamm| 2", server: vip.younetwork.ir, port: 20900, type: vless, tls: true, packet-encoding: xudp, uuid: 8dcb7893-9191-4c71-b92a-4c3e52142030, host: vip.younetwork.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: broad-sky-9360.k7uztejf9ief.workers.dev:443, server: broad-sky-9360.k7uztejf9ief.workers.dev, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: bf710ad2-4a43-4379-aa73-e684f00b6240, servername: broad-sky-9360.k7uztejf9ief.workers.dev, network: ws, ws-opts: {path: /, headers: {Host: broad-sky-9360.k7uztejf9ief.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@saministamm عضو شو قطع نشی 2", server: n4.zeneco.ir, port: 4090, type: vless, tls: true, packet-encoding: xudp, uuid: c1e4b6e9-71ac-4e41-992a-c1bdb0d0654a, host: n4.zeneco.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Saministamm 2", server: tunn.vpsino.com, port: 2087, type: vless, tls: true, packet-encoding: xudp, uuid: e4e3cf77-6545-57ce-7d7d-31128c5c2b4b, host: tunn.vpsino.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - "@saministamm عضو شو قطع نشی"
       - "@saministamm"
-      - "@saministamm`"
-      - "@saministamm` 2"
+      - "@Saministamm|"
+      - "@Saministamm"
+      - "@saministamm 2"
+      - "@saministamm 3"
+      - "@saministamm|"
+      - "@Saministamm| 2"
+      - broad-sky-9360.k7uztejf9ief.workers.dev:443
+      - "@saministamm عضو شو قطع نشی 2"
+      - "@Saministamm 2"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - "@saministamm عضو شو قطع نشی"
       - "@saministamm"
-      - "@saministamm`"
-      - "@saministamm` 2"
+      - "@Saministamm|"
+      - "@Saministamm"
+      - "@saministamm 2"
+      - "@saministamm 3"
+      - "@saministamm|"
+      - "@Saministamm| 2"
+      - broad-sky-9360.k7uztejf9ief.workers.dev:443
+      - "@saministamm عضو شو قطع نشی 2"
+      - "@Saministamm 2"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - "@saministamm عضو شو قطع نشی"
       - "@saministamm"
-      - "@saministamm`"
-      - "@saministamm` 2"
+      - "@Saministamm|"
+      - "@Saministamm"
+      - "@saministamm 2"
+      - "@saministamm 3"
+      - "@saministamm|"
+      - "@Saministamm| 2"
+      - broad-sky-9360.k7uztejf9ief.workers.dev:443
+      - "@saministamm عضو شو قطع نشی 2"
+      - "@Saministamm 2"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - "@saministamm عضو شو قطع نشی"
       - "@saministamm"
-      - "@saministamm`"
-      - "@saministamm` 2"
+      - "@Saministamm|"
+      - "@Saministamm"
+      - "@saministamm 2"
+      - "@saministamm 3"
+      - "@saministamm|"
+      - "@Saministamm| 2"
+      - broad-sky-9360.k7uztejf9ief.workers.dev:443
+      - "@saministamm عضو شو قطع نشی 2"
+      - "@Saministamm 2"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - "@saministamm عضو شو قطع نشی"
       - "@saministamm"
-      - "@saministamm`"
-      - "@saministamm` 2"
+      - "@Saministamm|"
+      - "@Saministamm"
+      - "@saministamm 2"
+      - "@saministamm 3"
+      - "@saministamm|"
+      - "@Saministamm| 2"
+      - broad-sky-9360.k7uztejf9ief.workers.dev:443
+      - "@saministamm عضو شو قطع نشی 2"
+      - "@Saministamm 2"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - "@saministamm عضو شو قطع نشی"
       - "@saministamm"
-      - "@saministamm`"
-      - "@saministamm` 2"
+      - "@Saministamm|"
+      - "@Saministamm"
+      - "@saministamm 2"
+      - "@saministamm 3"
+      - "@saministamm|"
+      - "@Saministamm| 2"
+      - broad-sky-9360.k7uztejf9ief.workers.dev:443
+      - "@saministamm عضو شو قطع نشی 2"
+      - "@Saministamm 2"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -86,9 +142,17 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - "@saministamm عضو شو قطع نشی"
       - "@saministamm"
-      - "@saministamm`"
-      - "@saministamm` 2"
+      - "@Saministamm|"
+      - "@Saministamm"
+      - "@saministamm 2"
+      - "@saministamm 3"
+      - "@saministamm|"
+      - "@Saministamm| 2"
+      - broad-sky-9360.k7uztejf9ief.workers.dev:443
+      - "@saministamm عضو شو قطع نشی 2"
+      - "@Saministamm 2"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
