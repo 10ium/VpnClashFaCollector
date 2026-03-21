@@ -5,46 +5,47 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: قطع شدی بیا چنل نتا دارن ملی میکنن / proxygodratmand@, server: sv2.cerberusn.info, port: 36734, type: vless, tls: true, packet-encoding: xudp, uuid: ed2050bd-a203-452e-b947-d3038c033fc4, host: sv2.cerberusn.info, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxygodratmand قطع شدی بیا چنل فقط 🇮🇷", server: cloud.vpsino.com, port: 63822, type: vless, tls: true, packet-encoding: xudp, uuid: 18601f76-f2b7-8544-5043-e4b497d6fe05, host: cloud.vpsino.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxygodratmand قطع شدی بیا چنل فقط �…", server: cloud.vpsino.com, port: 63822, type: vless, tls: true, packet-encoding: xudp, uuid: 18601f76-f2b7-8544-5043-e4b497d6fe05, host: cloud.vpsino.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - قطع شدی بیا چنل نتا دارن ملی میکنن / proxygodratmand@
+      - "@proxygodratmand قطع شدی بیا چنل فقط 🇮🇷"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - قطع شدی بیا چنل نتا دارن ملی میکنن / proxygodratmand@
+      - "@proxygodratmand قطع شدی بیا چنل فقط 🇮🇷"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - قطع شدی بیا چنل نتا دارن ملی میکنن / proxygodratmand@
+      - "@proxygodratmand قطع شدی بیا چنل فقط 🇮🇷"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - قطع شدی بیا چنل نتا دارن ملی میکنن / proxygodratmand@
+      - "@proxygodratmand قطع شدی بیا چنل فقط 🇮🇷"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - قطع شدی بیا چنل نتا دارن ملی میکنن / proxygodratmand@
+      - "@proxygodratmand قطع شدی بیا چنل فقط 🇮🇷"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - قطع شدی بیا چنل نتا دارن ملی میکنن / proxygodratmand@
+      - "@proxygodratmand قطع شدی بیا چنل فقط 🇮🇷"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +73,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - قطع شدی بیا چنل نتا دارن ملی میکنن / proxygodratmand@
+      - "@proxygodratmand قطع شدی بیا چنل فقط 🇮🇷"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

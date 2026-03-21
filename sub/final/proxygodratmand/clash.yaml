@@ -465,7 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: قطع شدی بیا چنل نتا دارن ملی میکنن / proxygodratmand@, server: sv2.cerberusn.info, port: 36734, type: vless, tls: true, packet-encoding: xudp, uuid: ed2050bd-a203-452e-b947-d3038c033fc4, host: sv2.cerberusn.info, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxygodratmand قطع شدی بیا چنل فقط 🇮🇷", server: cloud.vpsino.com, port: 63822, type: vless, tls: true, packet-encoding: xudp, uuid: 18601f76-f2b7-8544-5043-e4b497d6fe05, host: cloud.vpsino.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxygodratmand قطع شدی بیا چنل فقط �…", server: cloud.vpsino.com, port: 63822, type: vless, tls: true, packet-encoding: xudp, uuid: 18601f76-f2b7-8544-5043-e4b497d6fe05, host: cloud.vpsino.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +483,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - قطع شدی بیا چنل نتا دارن ملی میکنن / proxygodratmand@
+      - "@proxygodratmand قطع شدی بیا چنل فقط 🇮🇷"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - قطع شدی بیا چنل نتا دارن ملی میکنن / proxygodratmand@
+      - "@proxygodratmand قطع شدی بیا چنل فقط 🇮🇷"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - قطع شدی بیا چنل نتا دارن ملی میکنن / proxygodratmand@
+      - "@proxygodratmand قطع شدی بیا چنل فقط 🇮🇷"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +513,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - قطع شدی بیا چنل نتا دارن ملی میکنن / proxygodratmand@
+      - "@proxygodratmand قطع شدی بیا چنل فقط 🇮🇷"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - قطع شدی بیا چنل نتا دارن ملی میکنن / proxygodratmand@
+      - "@proxygodratmand قطع شدی بیا چنل فقط 🇮🇷"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - قطع شدی بیا چنل نتا دارن ملی میکنن / proxygodratmand@
+      - "@proxygodratmand قطع شدی بیا چنل فقط 🇮🇷"
   - name: دانلود منیجر 📥
     type: select
     proxies:
