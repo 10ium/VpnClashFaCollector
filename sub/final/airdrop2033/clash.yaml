@@ -468,9 +468,7 @@ proxies:
   - {name: "@airdrop2033", server: cloud.vpsino.com, port: 48324, type: vless, tls: true, packet-encoding: xudp, uuid: 2589a64d-f100-a3b2-6512-136a42bb66fd, host: cloud.vpsino.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@airdrop203`", server: cloud3.vpsino.com, port: 6344, type: vless, tls: true, packet-encoding: xudp, uuid: 2589a64d-f100-a3b2-6512-136a42bb66fd, host: cloud3.vpsino.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@airdrop2033`", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: b6337939-de25-41bd-b067-333a15abbd65, network: ws, ws-opts: {path: /, headers: {Host: ar.liarashop.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@airdrop2033` 2", server: 82.202.159.239, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c2bef9b7-a352-41fe-97e8-a1f86d7eb0f1, servername: tradingview.com, host: tradingview.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: EMS0wzISeSbEe4JABPD8EgDnyLXgDmrX4_lcfG6VVX4, short-id: c76ba2c2fb172e8b}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@airdrop2033` 3", server: cloud.vpsino.com, port: 48324, type: vless, tls: true, packet-encoding: xudp, uuid: d80b632a-0b3d-9248-c0a0-44b3d7d2ee36, host: cloud.vpsino.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@airdrop2033` 4", server: vip-meli5.nightgemshop.com, port: 16019, type: vless, tls: true, packet-encoding: xudp, uuid: ecbaf16f-f845-47aa-ab92-86963c8bcb9b, host: vip-meli5.nightgemshop.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@airdrop2033` 2", server: cloud.vpsino.com, port: 48324, type: vless, tls: true, packet-encoding: xudp, uuid: d80b632a-0b3d-9248-c0a0-44b3d7d2ee36, host: cloud.vpsino.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -491,8 +489,6 @@ proxy-groups:
       - "@airdrop203`"
       - "@airdrop2033`"
       - "@airdrop2033` 2"
-      - "@airdrop2033` 3"
-      - "@airdrop2033` 4"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -503,8 +499,6 @@ proxy-groups:
       - "@airdrop203`"
       - "@airdrop2033`"
       - "@airdrop2033` 2"
-      - "@airdrop2033` 3"
-      - "@airdrop2033` 4"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -515,8 +509,6 @@ proxy-groups:
       - "@airdrop203`"
       - "@airdrop2033`"
       - "@airdrop2033` 2"
-      - "@airdrop2033` 3"
-      - "@airdrop2033` 4"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -536,8 +528,6 @@ proxy-groups:
       - "@airdrop203`"
       - "@airdrop2033`"
       - "@airdrop2033` 2"
-      - "@airdrop2033` 3"
-      - "@airdrop2033` 4"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -548,8 +538,6 @@ proxy-groups:
       - "@airdrop203`"
       - "@airdrop2033`"
       - "@airdrop2033` 2"
-      - "@airdrop2033` 3"
-      - "@airdrop2033` 4"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -560,8 +548,6 @@ proxy-groups:
       - "@airdrop203`"
       - "@airdrop2033`"
       - "@airdrop2033` 2"
-      - "@airdrop2033` 3"
-      - "@airdrop2033` 4"
   - name: دانلود منیجر 📥
     type: select
     proxies:
