@@ -1,78 +1,76 @@
 # آرشیو کانال: @SamnetInternet
-بروزرسانی: 2026-03-22 01:12:42 UTC
+بروزرسانی: 2026-03-22 10:20:11 UTC
 
-### 🕒 2026-03-21 16:01:42 UTC
+### 🕒 2026-03-22 02:01:03 UTC
+> ↪️ **Forwarded**
+
 ***🚀***
- اپدیت Scout Range v0.1.4
-بهبود اسکن DNS تانل + اضافه شدن تست DNSTT
+ اپدیت Scout Range v0.1.5
+بهبود تجربه ویندوز + اضافه شدن config.json برای تنظیمات اشتراکی
 ***✨***
  تغییرات:
-• اضافه شدن تست DNSTT بعد از اسکن DNS — حالا فقط resolverهای سالم و recursive وارد مرحله تست تانل میشن (دو حالت: tunnel-only و e2e با pubkey)
-• خروجی فقط از resolverهای موفق DNSTT — امکان Export Passed و Copy Passed برای گرفتن خروجی دقیق فقط از موارد پاس‌شده
-• قابل تنظیم شدن Recursion Host — دیگه محدود به 
-[google.com](http://google.com/)
- نیست، می‌تونی هر هاستی بدی
-• بهبود تارگت‌های دستی — Import TXT و Paste Targets بهتر شده، کار با CIDR و IP تکی ساده‌تر
-• بهبود detection برای dnstt-client — از مسیرهای مختلف پیدا میشه و نبودش به‌صورت واضح مشخص میشه
-• رفع باگ مهم در export DNSTT — قبلاً در نبود dnstt-client بعضی نتایج اشتباها موفق حساب میشدن، الان فقط نتایج واقعی خروجی داده میشه
+• رفع مشکل تایپ دوبل در فیلدها روی ویندوز — مشکل تکرار شدن کاراکترها در inputها برطرف شده  
+• رفع مشکل کلیک و تعامل با ماوس در ویندوز — دکمه‌ها و فیلدها دوباره درست قابل کلیک هستند  
+• اضافه شدن 
+`config.json`
+ — حالا می‌تونی تنظیمات هر مرحله را داخل فایل نگه داری و با بقیه به اشتراک بگذاری  
+• اضافه شدن 
+`Save Config`
+ داخل UI — ذخیره سریع تنظیمات فعلی برنامه بدون نیاز به ویرایش دستی فایل  
+• نمایش نسخه فعلی داخل هدر برنامه — برای گزارش باگ و تشخیص نسخه خیلی راحت‌تر شده  
+• بهبود paste در فیلدها — کپی/پیست در inputها و textareaها بهتر و قابل اتکاتر شده  
 ***⚙️***
  نکات:
-• تست DNSTT فقط روی resolverهای valid اجرا میشه
-• برای حالت e2e نیاز به pubkey و dnstt-client داری
-• خروجی نهایی فقط بر اساس نتیجه واقعی تانل ساخته میشه
+• فایل 
+`config.json`
+ می‌تونه شامل 
+`importConfig`، `scanConfig`
+ و 
+`dnsttConfig`
+ باشه  
+• تنظیمات import path تا جای ممکن به‌صورت portable ذخیره میشن تا اشتراک‌گذاری راحت‌تر باشه  
+• نسخه‌ای که داخل هدر می‌بینی حالا مرجع اصلی برای گزارش باگ‌هاست  
+***🧩***
+ نمونه config:
+{
+  "importConfig": {
+    "importFilePaths": {}
+  },
+  "scanConfig": {
+    "workers": "256",
+    "timeoutMS": "1200",
+    "port": "53",
+    "protocol": "UDP",
+    "recursionHost": "google.com",
+    "probeHost1": "soft98.ir",
+    "probeHost2": "bartarinha.ir"
+  },
+  "dnsttConfig": {
+    "domain": "d.iranmonitor.live",
+    "pubkey": "9e2bfd5b4e7644f14bbd74a41663e42bfa2a11497b04c88f7bc3d290144f7b37",
+    "timeoutMS": "3000",
+    "e2eTimeoutS": "20",
+    "querySize": "",
+    "e2ePort": "53"
+  }
+}
 ***📥***
  دانلود:
-[https://github.com/iampedii/range-scout](https://github.com/iampedii/range-scout)
-لینک داخلی 
-[http://s3.ir-thr-at1.arvanstorage.ir/range-scout/v0.1.4.zip](http://s3.ir-thr-at1.arvanstorage.ir/range-scout/v0.1.4.zip)
-
----
-
-### 🕒 2026-03-21 07:56:14 UTC
-***⚡***
- معرفی Fortify v0.9  ابزار امنیتی سرور
-یه ابزار متن‌باز ساختم که امنیت سرورهای لینوکسی رو به صورت خودکار بالا میبره.
-***🔍***
- چیکار میکنه؟
-برنامه Fortify سرویس‌های نصب شده روی سرور رو شناسایی میکنه (Xray, WireGuard, sing-box, Hysteria, OpenVPN, SSH, DNSTT) و بهشون امتیاز امنیتی از ۰ تا ۱۰۰ میده. بعد با چند کلیک میتونید سرور رو هاردن کنید.
-***⭐***
- امکانات اصلی:
-• 
-***🛡***
- شناسایی خودکار ۸ سرویس مختلف
-• 
-***📊***
- امتیازدهی امنیتی (A+ تا F)
-• 
-***🔥***
- فایروال دوگانه (nftables + iptables) با پشتیبانی IPv4/IPv6
-• 
-***🚫***
- ضد سواستفاده. بلاک SMTP، تورنت
-• 
-***🌍***
- جیو‌بلاک با امکان انتخاب کشور دلخواه
-• 
-***🔒***
- هاردنینگ SSH با محافظت از قفل شدن
-• 
-***📱***
- نوتیفیکیشن تلگرام
-• 
-***🎯***
- پروفایل‌های آماده (paranoid, public-share, reseller)
-***📌***
- نکته مهم: بهتره اول سرویس‌هاتون رو جدا نصب کنید مثلا Xray یا WireGuard بعد Fortify رو اجرا کنید تا مدیریت امنیتش رو بهتر کنه.
-***⚠️***
- این نسخه بتا (v0.9) هست و باگ و اینا داشته باشه. اگه علاقه‌مندید تستش کنید و بازخورد بدید خوب میشه. سرم خیلی شلوغه ولی سعی میکنم آپدیت‌ها رو بزنم طی روز های اینده 
-[https://github.com/SamNet-dev/fortify](https://github.com/SamNet-dev/fortify)
-
----
-
-### 🕒 2026-03-21 07:29:13 UTC
-دوستان عزیز، در این چند روزی که فعالیت من کمتر شده، در حال توسعه یک ربات کامل برای ابزارهای بررسی شبکه و امنیت آن روی ربات تلگرام بوده‌ام.
-این پروژه هنوز چند روز دیگر زمان نیاز دارد، اما تقریباً به نسخه نهایی نزدیک شده‌ام.
-در روزهای آینده آن را منتشر خواهم کرد..
+[https://github.com/PedramMarandi/range-scout/releases/tag/v0.1.5](https://github.com/PedramMarandi/range-scout/releases/tag/v0.1.5)
+***📥***
+ دانلود از سرور داخلی:
+All platforms
+[http://s3.ir-thr-at1.arvanstorage.ir/range-scout/v0.1.5.zip](http://s3.ir-thr-at1.arvanstorage.ir/range-scout/v0.1.5.zip)
+macOS Intel
+[http://s3.ir-thr-at1.arvanstorage.ir/range-scout/range-scout_darwin_amd64](http://s3.ir-thr-at1.arvanstorage.ir/range-scout/range-scout_darwin_amd64)
+macOS Apple Silicon
+[http://s3.ir-thr-at1.arvanstorage.ir/range-scout/range-scout_darwin_arm64](http://s3.ir-thr-at1.arvanstorage.ir/range-scout/range-scout_darwin_arm64)
+Linux amd64
+[http://s3.ir-thr-at1.arvanstorage.ir/range-scout/range-scout_linux_amd64](http://s3.ir-thr-at1.arvanstorage.ir/range-scout/range-scout_linux_amd64)
+Linux arm64
+[http://s3.ir-thr-at1.arvanstorage.ir/range-scout/range-scout_linux_arm64](http://s3.ir-thr-at1.arvanstorage.ir/range-scout/range-scout_linux_arm64)
+Windows amd64
+[http://s3.ir-thr-at1.arvanstorage.ir/range-scout/range-scout_windows_amd64.exe](http://s3.ir-thr-at1.arvanstorage.ir/range-scout/range-scout_windows_amd64.exe)
 
 ---
 
