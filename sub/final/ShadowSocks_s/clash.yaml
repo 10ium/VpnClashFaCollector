@@ -465,8 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "[🇩🇪]@Npv_ir 👈🏻👈🏻سرورجدید داخل چنل`", server: snt1.shahramv1.site, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 14db8096-7800-4cb8-bb52-1856e3b65785, servername: snt1.shahramv1.site, host: snt1.shahramv1.site, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@crayingroom تلگرام", server: gsmvpn.gsmvx.com, port: 5006, type: vmess, uuid: ef6e8954-20af-4266-a393-cccffa9db7c4, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: https://t.me/ConfigX2ray`, server: vip-meli3.nightgemshop.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 82990c58-26b7-4a75-81fe-66e63489e5e9, host: vip-meli3.nightgemshop.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "[🇩🇪]@Npv_ir 👈🏻👈🏻سرورجدید داخل چنل`"
-      - "@crayingroom تلگرام"
+      - https://t.me/ConfigX2ray`
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "[🇩🇪]@Npv_ir 👈🏻👈🏻سرورجدید داخل چنل`"
-      - "@crayingroom تلگرام"
+      - https://t.me/ConfigX2ray`
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "[🇩🇪]@Npv_ir 👈🏻👈🏻سرورجدید داخل چنل`"
-      - "@crayingroom تلگرام"
+      - https://t.me/ConfigX2ray`
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "[🇩🇪]@Npv_ir 👈🏻👈🏻سرورجدید داخل چنل`"
-      - "@crayingroom تلگرام"
+      - https://t.me/ConfigX2ray`
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "[🇩🇪]@Npv_ir 👈🏻👈🏻سرورجدید داخل چنل`"
-      - "@crayingroom تلگرام"
+      - https://t.me/ConfigX2ray`
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "[🇩🇪]@Npv_ir 👈🏻👈🏻سرورجدید داخل چنل`"
-      - "@crayingroom تلگرام"
+      - https://t.me/ConfigX2ray`
   - name: دانلود منیجر 📥
     type: select
     proxies:

@@ -465,8 +465,10 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "***🌪***-@SPEEDS_VPN1`", server: 188.121.117.72, port: 1010, type: ss, cipher: aes-256-gcm, password: 8725ba8d-c977-4917-b0e7-8d0dd6a121b1, udp: true, tfo: false}
-  - {name: "***🌪***-@SPEEDS_VPN1` 2", server: ir1.hicli001.ir, port: 28763, type: vless, tls: true, packet-encoding: xudp, uuid: 062fa1c7-6033-49d1-bf05-830ece50a320, host: soft98.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "`", server: hamrahiran.sorenashoping.xyz, port: 50552, type: vless, tls: true, packet-encoding: xudp, uuid: 02919851-ca80-492f-8bd3-b8fb0b8577a6, host: Fast.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🌪***-@SPEEDS_VPN1`", server: ir1.hicli001.ir, port: 28763, type: vless, tls: true, packet-encoding: xudp, uuid: 062fa1c7-6033-49d1-bf05-830ece50a320, host: soft98.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🌪***-@SPEEDS_VPN1` 2", server: ir.gafe-lorbad.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 22753114-c3cb-4613-9f2d-759a871489f7, host: ir.gafe-lorbad.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN`", server: vip-meli3.nightgemshop.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 82990c58-26b7-4a75-81fe-66e63489e5e9, host: vip-meli3.nightgemshop.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +485,30 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - "`"
       - "***🌪***-@SPEEDS_VPN1`"
       - "***🌪***-@SPEEDS_VPN1` 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
+      - "`"
       - "***🌪***-@SPEEDS_VPN1`"
       - "***🌪***-@SPEEDS_VPN1` 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
+      - "`"
       - "***🌪***-@SPEEDS_VPN1`"
       - "***🌪***-@SPEEDS_VPN1` 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +524,30 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "`"
       - "***🌪***-@SPEEDS_VPN1`"
       - "***🌪***-@SPEEDS_VPN1` 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "`"
       - "***🌪***-@SPEEDS_VPN1`"
       - "***🌪***-@SPEEDS_VPN1` 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "`"
       - "***🌪***-@SPEEDS_VPN1`"
       - "***🌪***-@SPEEDS_VPN1` 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN`"
   - name: دانلود منیجر 📥
     type: select
     proxies:
