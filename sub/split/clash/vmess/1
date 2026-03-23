@@ -465,14 +465,16 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@filembad", server: 188.121.116.114, port: 8080, type: vmess, uuid: 24c9821b-413d-4cee-8d45-e56b5df4332d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad", server: bahar.cringeworld.ir, port: 31245, type: vmess, uuid: f19b0825-cc4f-4bf1-9b04-98e5700ef086, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2rayconfigamir 8222", server: 61.245.11.60, port: 80, type: vmess, uuid: a3e3a710-79f8-4ae0-b83c-607aab40d197, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /vmess/, headers: {Host: 61.245.11.60}}, udp: true, tfo: false}
+  - {name: "@v2rayconfigamir 1910", server: 61.245.11.60, port: 80, type: vmess, uuid: a3e3a710-79f8-4ae0-b83c-607aab40d197, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /vmess/}, udp: true, tfo: false}
   - {name: "@filembad 2", server: 45.39.241.51, port: 38543, type: vmess, uuid: f54778cc-ce26-4f8d-923f-f8e62b090cde, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 3", server: 45.39.241.51, port: 38543, type: vmess, uuid: f54778cc-ce26-4f8d-923f-f8e62b090cde, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2rayconfigamir 6194", server: 61.245.11.60, port: 80, type: vmess, uuid: a3e3a710-79f8-4ae0-b83c-607aab40d197, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /vmess/}, udp: true, tfo: false}
   - {name: "🇩🇪 [openproxylist.com] vmess-DE", server: 164.92.245.167, port: 2096, type: vmess, uuid: 4c95d617-efd8-4045-98d5-4d00e96667f9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}, udp: true, tfo: false}
-  - {name: "@filembad 4", server: am.nftydreams.io, port: 2002, type: vmess, uuid: d2514b25-5889-403e-871c-fb10b05d17f5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 3", server: 178.104.67.88, port: 17055, type: vmess, uuid: 636e5317-0f8b-499c-9903-ca0d3d837f4a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 4", server: 178.104.67.88, port: 17055, type: vmess, uuid: 636e5317-0f8b-499c-9903-ca0d3d837f4a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@filembad 5", server: am.nftydreams.io, port: 2002, type: vmess, uuid: e49c6b32-d220-49c9-8bed-981248a06c5b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "🇩🇪 [openproxylist.com] vmess-DE 2", server: d2fog4flcfgb8c.cloudfront.net, port: 443, type: vmess, uuid: e070e567-7996-45a9-9016-0143420946ef, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /8536cb1926c24bbc99d7bd93350ec564, headers: {Host: d2fog4flcfgb8c.cloudfront.net}}, udp: true, tfo: false}
-  - {name: "@filembad 6", server: gsmvpn.gsmvx.com, port: 5006, type: vmess, uuid: ef6e8954-20af-4266-a393-cccffa9db7c4, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -490,13 +492,15 @@ proxy-groups:
     type: select
     proxies:
       - "@filembad"
+      - "@v2rayconfigamir 8222"
+      - "@v2rayconfigamir 1910"
       - "@filembad 2"
-      - "@filembad 3"
+      - "@v2rayconfigamir 6194"
       - 🇩🇪 [openproxylist.com] vmess-DE
+      - "@filembad 3"
       - "@filembad 4"
       - "@filembad 5"
       - 🇩🇪 [openproxylist.com] vmess-DE 2
-      - "@filembad 6"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -504,13 +508,15 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@filembad"
+      - "@v2rayconfigamir 8222"
+      - "@v2rayconfigamir 1910"
       - "@filembad 2"
-      - "@filembad 3"
+      - "@v2rayconfigamir 6194"
       - 🇩🇪 [openproxylist.com] vmess-DE
+      - "@filembad 3"
       - "@filembad 4"
       - "@filembad 5"
       - 🇩🇪 [openproxylist.com] vmess-DE 2
-      - "@filembad 6"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -518,13 +524,15 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@filembad"
+      - "@v2rayconfigamir 8222"
+      - "@v2rayconfigamir 1910"
       - "@filembad 2"
-      - "@filembad 3"
+      - "@v2rayconfigamir 6194"
       - 🇩🇪 [openproxylist.com] vmess-DE
+      - "@filembad 3"
       - "@filembad 4"
       - "@filembad 5"
       - 🇩🇪 [openproxylist.com] vmess-DE 2
-      - "@filembad 6"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -541,13 +549,15 @@ proxy-groups:
     interval: 600
     proxies:
       - "@filembad"
+      - "@v2rayconfigamir 8222"
+      - "@v2rayconfigamir 1910"
       - "@filembad 2"
-      - "@filembad 3"
+      - "@v2rayconfigamir 6194"
       - 🇩🇪 [openproxylist.com] vmess-DE
+      - "@filembad 3"
       - "@filembad 4"
       - "@filembad 5"
       - 🇩🇪 [openproxylist.com] vmess-DE 2
-      - "@filembad 6"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -555,13 +565,15 @@ proxy-groups:
     interval: 600
     proxies:
       - "@filembad"
+      - "@v2rayconfigamir 8222"
+      - "@v2rayconfigamir 1910"
       - "@filembad 2"
-      - "@filembad 3"
+      - "@v2rayconfigamir 6194"
       - 🇩🇪 [openproxylist.com] vmess-DE
+      - "@filembad 3"
       - "@filembad 4"
       - "@filembad 5"
       - 🇩🇪 [openproxylist.com] vmess-DE 2
-      - "@filembad 6"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -569,13 +581,15 @@ proxy-groups:
     interval: 600
     proxies:
       - "@filembad"
+      - "@v2rayconfigamir 8222"
+      - "@v2rayconfigamir 1910"
       - "@filembad 2"
-      - "@filembad 3"
+      - "@v2rayconfigamir 6194"
       - 🇩🇪 [openproxylist.com] vmess-DE
+      - "@filembad 3"
       - "@filembad 4"
       - "@filembad 5"
       - 🇩🇪 [openproxylist.com] vmess-DE 2
-      - "@filembad 6"
   - name: دانلود منیجر 📥
     type: select
     proxies:
