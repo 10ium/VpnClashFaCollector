@@ -465,8 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 94.101.179.197:443, server: 94.101.179.197, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 788d2a40-12fe-4296-b802-d218308e769b, servername: archive-azd1101.telewebion.ir, host: archive-azd1101.telewebion.ir, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "%2525F0%25259F%252587%2525AE%2525F0%25259F%252587%2525B7%252520%2525F0%25259F%252587%2525A9%2525F0%25259F%252587%2525AA%252520Starping%2525202@saministamm", server: de-2-tun-single.starping1.fun, port: 8083, type: vless, tls: true, packet-encoding: xudp, uuid: ee73ff6e-af32-43df-854e-754253bd1bd8, host: www.speedtest.net, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@saministamm.`", server: 77.83.245.135, port: 34205, type: vless, tls: true, packet-encoding: xudp, uuid: bc6f9208-ba56-4678-a29c-afc8b8af9b89, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 94.101.179.197:443
-      - "%2525F0%25259F%252587%2525AE%2525F0%25259F%252587%2525B7%252520%2525F0%25259F%252587%2525A9%2525F0%25259F%252587%2525AA%252520Starping%2525202@saministamm"
+      - "@saministamm.`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 94.101.179.197:443
-      - "%2525F0%25259F%252587%2525AE%2525F0%25259F%252587%2525B7%252520%2525F0%25259F%252587%2525A9%2525F0%25259F%252587%2525AA%252520Starping%2525202@saministamm"
+      - "@saministamm.`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 94.101.179.197:443
-      - "%2525F0%25259F%252587%2525AE%2525F0%25259F%252587%2525B7%252520%2525F0%25259F%252587%2525A9%2525F0%25259F%252587%2525AA%252520Starping%2525202@saministamm"
+      - "@saministamm.`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 94.101.179.197:443
-      - "%2525F0%25259F%252587%2525AE%2525F0%25259F%252587%2525B7%252520%2525F0%25259F%252587%2525A9%2525F0%25259F%252587%2525AA%252520Starping%2525202@saministamm"
+      - "@saministamm.`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 94.101.179.197:443
-      - "%2525F0%25259F%252587%2525AE%2525F0%25259F%252587%2525B7%252520%2525F0%25259F%252587%2525A9%2525F0%25259F%252587%2525AA%252520Starping%2525202@saministamm"
+      - "@saministamm.`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 94.101.179.197:443
-      - "%2525F0%25259F%252587%2525AE%2525F0%25259F%252587%2525B7%252520%2525F0%25259F%252587%2525A9%2525F0%25259F%252587%2525AA%252520Starping%2525202@saministamm"
+      - "@saministamm.`"
   - name: دانلود منیجر 📥
     type: select
     proxies:
