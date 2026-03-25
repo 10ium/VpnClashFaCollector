@@ -465,16 +465,14 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: " ", server: 57.129.140.88, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: k1v5g9FefdoO, udp: true, tfo: false}
-  - {name: "  2", server: 82.38.31.101, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
-  - {name: "  3", server: 82.38.31.35, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
-  - {name: "  4", server: 82.38.31.89, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
+  - {name: " ", server: 82.38.31.101, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
+  - {name: "  2", server: 82.38.31.35, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
+  - {name: "  3", server: 82.38.31.89, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
   - {name: "@ehsawn8", server: 83.222.8.148, port: 23753, type: ss, cipher: aes-256-gcm, password: 9pPKJ2mTdZuQ6ROJtylumfYRGS5eBq72go0hM5zH7xg=, udp: true, tfo: false}
   - {name: 38.180.152.210:8881, server: 38.180.152.210, port: 8881, type: ss, cipher: aes-256-gcm, password: kDWvXYZoTBcGkC4, udp: true, tfo: false}
-  - {name: "  5", server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true, tfo: false}
-  - {name: "  6", server: 172.67.180.92, port: 443, type: trojan, password: humanity, sni: www.multiplydose.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.multiplydose.com}}, udp: true, tfo: false}
-  - {name: "  7", server: 188.114.98.0, port: 443, type: trojan, password: humanity, sni: www.creationlong.org, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org}}, udp: true, tfo: false}
-  - {name: "  8", server: www.gossipglove.com, port: 443, type: trojan, password: humanity, sni: www.gossipglove.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.gossipglove.com}}, udp: true, tfo: false}
+  - {name: "  4", server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true, tfo: false}
+  - {name: "  5", server: 172.67.180.92, port: 443, type: trojan, password: humanity, sni: www.multiplydose.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.multiplydose.com}}, udp: true, tfo: false}
+  - {name: "  6", server: 188.114.98.0, port: 443, type: trojan, password: humanity, sni: www.creationlong.org, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org}}, udp: true, tfo: false}
   - {name: 18.159.228.130:22222, server: 18.159.228.130, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 35.181.217.149:22222, server: 35.181.217.149, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 51.44.2.160:22222, server: 51.44.2.160, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false, udp: true, tfo: false}
@@ -483,23 +481,17 @@ proxies:
   - {name: "@filembadvless:", server: 35.181.217.149, port: 22224, type: vless, tls: true, packet-encoding: xudp, uuid: 05519058-d2ac-4f28-9e4a-2b2a1386749e, servername: trojan.burgerip.co.uk, network: ws, ws-opts: {path: /telegram-channel-vlessconfig, headers: {Host: trojan.burgerip.co.uk}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: Telegram:@mtproto_proserver, server: 213.176.74.67, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: 110d7bad-5e17-4ce3-afd0-2cf2ebc71787, servername: music.yandex.ru, host: music.yandex.ru, path: /, reality-opts: {public-key: aFsY-EZjSNTomlAFShKwQIQMJ5pHiZQXXJpWvcz8WkQ, short-id: 0858af97f4e7324d}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@filembadvless: 2", server: tobitobi-c8040d1d55-edare.apps.ir-central1.arvancaas.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 11e3cbed-a0da-4c2f-a295-0397451a2d54, network: ws, ws-opts: {path: /, headers: {Host: tobitobi-c8040d1d55-edare.apps.ir-central1.arvancaas.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2rayconfigamir 4620", server: 103.118.42.35, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: 14b02e2a-8930-4afb-8412-ea4a4954ca5b, servername: ylnhh.cc.cd, network: ws, ws-opts: {path: /Telegram🇨🇳+@WangCai2, headers: {Host: ylnhh.cc.cd}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: anten.ir:443, server: anten.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 430399ca-d329-44c3-949c-0f74e3eb3b09, network: ws, ws-opts: {path: /, headers: {Host: cpcalendars.digital-ping.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxymelimon جوین شو تلگرام", server: anten.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 430399ca-d329-44c3-949c-0f74e3eb3b09, servername: cpcalendars.digital-ping.ir, alpn: [h3%2Ch2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: cpcalendars.digital-ping.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@filembadvless: 3", server: 77.83.245.135, port: 34205, type: vless, tls: true, packet-encoding: xudp, uuid: 437ff1c5-bffd-4f77-a7d3-ec768ac35211, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "  9", server: 57.129.53.181, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "  10", server: 57.129.53.182, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2rayconfigamir 6499", server: 38.54.23.58, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6048472f-0993-4ae0-8203-960b9a0f4113, servername: www.amazon.com, host: www.amazon.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2rayconfigamir 1541", server: dk01.sonicsonic.icu, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 71a5d7f2-2ac6-4020-acaf-3c59efa4e856, servername: apple.com, host: apple.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "  7", server: 57.129.53.181, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "  8", server: 57.129.53.182, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 50GB|02-v2- @unvisible_drops, server: 185.143.234.5, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8585380d-1d74-4b09-a955-5dbf862d13df, servername: alef.ir.oadeflantrogm.airasiadl.com, network: ws, ws-opts: {path: "/?ed=443", headers: {Host: alef.ir.oadeflantrogm.airasiadl.com}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@filembadss:", server: 77.83.245.135, port: 34205, type: vless, tls: true, packet-encoding: xudp, uuid: bc6f9208-ba56-4678-a29c-afc8b8af9b89, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@filembadvless: 4", server: 185.143.233.235, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: dcc74510-ed17-4b06-9aef-149bed1214bb, servername: pishparda.ir, network: ws, ws-opts: {path: /voip, headers: {Host: pishparda.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: Telegram:@mtproto_proserver 2, server: 82.192.72.240, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e49a185d-2ebb-4ed0-8977-a9fda30d03e8, servername: nl.reality.tv123.ru, host: nl.reality.tv123.ru, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2rayconfigamir 8038", server: 45.148.31.0, port: 15855, type: vless, tls: true, packet-encoding: xudp, uuid: e4fc4761-154f-490e-bbaa-b4fa193f1073, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 50GB02-v1-@unvisible_drops, server: 185.143.233.200, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e7b0a4b2-b1b3-4b8e-b8a3-79422428f5c8, servername: alef.ir.oadeflantrogm.airasiadl.com, network: ws, ws-opts: {path: "/?ed=443", headers: {Host: alef.ir.oadeflantrogm.airasiadl.com}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: Telegram:@mtproto_proserver 3, server: 89.124.89.24, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f7bae22e-20ab-11f1-835c-0242ac110002, servername: nl1.cyphervpn.pro, host: nl1.cyphervpn.pro, path: /, reality-opts: {public-key: YW-C1ihJAmuzFtvNLUggNlEh86DQm8jvfrJ-wMj7XQY, short-id: 5bfa0c}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2rayconfigamir 6310", server: n1752833184.lie5d.cyou, port: 443, type: vmess, uuid: 6c7d09e3-9cfa-41c8-8194-e81eb21bfb88, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: n1752833184.lie5d.cyou, network: ws, ws-opts: {path: /, headers: {Host: n1752833184.lie5d.cyou}}, udp: true, tfo: false}
-  - {name: "@v2rayconfigamir 2893", server: n1761214904.wpg27.xyz, port: 443, type: vmess, uuid: 7f6f64ae-3778-434c-adfc-95cb67ee8b73, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: n1761214904.wpg27.xyz}}, udp: true, tfo: false}
-  - {name: "@v2rayconfigamir 9308", server: 8.218.52.5, port: 443, type: vmess, uuid: 1f2daf43-ff90-4df9-9276-dfb8486d72bc, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: n1761214915.mv7wh.tech, network: ws, ws-opts: {path: /}, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -519,13 +511,11 @@ proxy-groups:
       - " "
       - "  2"
       - "  3"
-      - "  4"
       - "@ehsawn8"
       - 38.180.152.210:8881
+      - "  4"
       - "  5"
       - "  6"
-      - "  7"
-      - "  8"
       - 18.159.228.130:22222
       - 35.181.217.149:22222
       - 51.44.2.160:22222
@@ -534,23 +524,17 @@ proxy-groups:
       - "@filembadvless:"
       - Telegram:@mtproto_proserver
       - "@filembadvless: 2"
-      - "@v2rayconfigamir 4620"
       - anten.ir:443
       - "@proxymelimon جوین شو تلگرام"
       - "@filembadvless: 3"
-      - "  9"
-      - "  10"
-      - "@v2rayconfigamir 6499"
-      - "@v2rayconfigamir 1541"
+      - "  7"
+      - "  8"
+      - 50GB|02-v2- @unvisible_drops
       - "@filembadss:"
       - "@filembadvless: 4"
       - Telegram:@mtproto_proserver 2
-      - "@v2rayconfigamir 8038"
       - 50GB02-v1-@unvisible_drops
       - Telegram:@mtproto_proserver 3
-      - "@v2rayconfigamir 6310"
-      - "@v2rayconfigamir 2893"
-      - "@v2rayconfigamir 9308"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -560,13 +544,11 @@ proxy-groups:
       - " "
       - "  2"
       - "  3"
-      - "  4"
       - "@ehsawn8"
       - 38.180.152.210:8881
+      - "  4"
       - "  5"
       - "  6"
-      - "  7"
-      - "  8"
       - 18.159.228.130:22222
       - 35.181.217.149:22222
       - 51.44.2.160:22222
@@ -575,23 +557,17 @@ proxy-groups:
       - "@filembadvless:"
       - Telegram:@mtproto_proserver
       - "@filembadvless: 2"
-      - "@v2rayconfigamir 4620"
       - anten.ir:443
       - "@proxymelimon جوین شو تلگرام"
       - "@filembadvless: 3"
-      - "  9"
-      - "  10"
-      - "@v2rayconfigamir 6499"
-      - "@v2rayconfigamir 1541"
+      - "  7"
+      - "  8"
+      - 50GB|02-v2- @unvisible_drops
       - "@filembadss:"
       - "@filembadvless: 4"
       - Telegram:@mtproto_proserver 2
-      - "@v2rayconfigamir 8038"
       - 50GB02-v1-@unvisible_drops
       - Telegram:@mtproto_proserver 3
-      - "@v2rayconfigamir 6310"
-      - "@v2rayconfigamir 2893"
-      - "@v2rayconfigamir 9308"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -601,13 +577,11 @@ proxy-groups:
       - " "
       - "  2"
       - "  3"
-      - "  4"
       - "@ehsawn8"
       - 38.180.152.210:8881
+      - "  4"
       - "  5"
       - "  6"
-      - "  7"
-      - "  8"
       - 18.159.228.130:22222
       - 35.181.217.149:22222
       - 51.44.2.160:22222
@@ -616,23 +590,17 @@ proxy-groups:
       - "@filembadvless:"
       - Telegram:@mtproto_proserver
       - "@filembadvless: 2"
-      - "@v2rayconfigamir 4620"
       - anten.ir:443
       - "@proxymelimon جوین شو تلگرام"
       - "@filembadvless: 3"
-      - "  9"
-      - "  10"
-      - "@v2rayconfigamir 6499"
-      - "@v2rayconfigamir 1541"
+      - "  7"
+      - "  8"
+      - 50GB|02-v2- @unvisible_drops
       - "@filembadss:"
       - "@filembadvless: 4"
       - Telegram:@mtproto_proserver 2
-      - "@v2rayconfigamir 8038"
       - 50GB02-v1-@unvisible_drops
       - Telegram:@mtproto_proserver 3
-      - "@v2rayconfigamir 6310"
-      - "@v2rayconfigamir 2893"
-      - "@v2rayconfigamir 9308"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -651,13 +619,11 @@ proxy-groups:
       - " "
       - "  2"
       - "  3"
-      - "  4"
       - "@ehsawn8"
       - 38.180.152.210:8881
+      - "  4"
       - "  5"
       - "  6"
-      - "  7"
-      - "  8"
       - 18.159.228.130:22222
       - 35.181.217.149:22222
       - 51.44.2.160:22222
@@ -666,23 +632,17 @@ proxy-groups:
       - "@filembadvless:"
       - Telegram:@mtproto_proserver
       - "@filembadvless: 2"
-      - "@v2rayconfigamir 4620"
       - anten.ir:443
       - "@proxymelimon جوین شو تلگرام"
       - "@filembadvless: 3"
-      - "  9"
-      - "  10"
-      - "@v2rayconfigamir 6499"
-      - "@v2rayconfigamir 1541"
+      - "  7"
+      - "  8"
+      - 50GB|02-v2- @unvisible_drops
       - "@filembadss:"
       - "@filembadvless: 4"
       - Telegram:@mtproto_proserver 2
-      - "@v2rayconfigamir 8038"
       - 50GB02-v1-@unvisible_drops
       - Telegram:@mtproto_proserver 3
-      - "@v2rayconfigamir 6310"
-      - "@v2rayconfigamir 2893"
-      - "@v2rayconfigamir 9308"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -692,13 +652,11 @@ proxy-groups:
       - " "
       - "  2"
       - "  3"
-      - "  4"
       - "@ehsawn8"
       - 38.180.152.210:8881
+      - "  4"
       - "  5"
       - "  6"
-      - "  7"
-      - "  8"
       - 18.159.228.130:22222
       - 35.181.217.149:22222
       - 51.44.2.160:22222
@@ -707,23 +665,17 @@ proxy-groups:
       - "@filembadvless:"
       - Telegram:@mtproto_proserver
       - "@filembadvless: 2"
-      - "@v2rayconfigamir 4620"
       - anten.ir:443
       - "@proxymelimon جوین شو تلگرام"
       - "@filembadvless: 3"
-      - "  9"
-      - "  10"
-      - "@v2rayconfigamir 6499"
-      - "@v2rayconfigamir 1541"
+      - "  7"
+      - "  8"
+      - 50GB|02-v2- @unvisible_drops
       - "@filembadss:"
       - "@filembadvless: 4"
       - Telegram:@mtproto_proserver 2
-      - "@v2rayconfigamir 8038"
       - 50GB02-v1-@unvisible_drops
       - Telegram:@mtproto_proserver 3
-      - "@v2rayconfigamir 6310"
-      - "@v2rayconfigamir 2893"
-      - "@v2rayconfigamir 9308"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -733,13 +685,11 @@ proxy-groups:
       - " "
       - "  2"
       - "  3"
-      - "  4"
       - "@ehsawn8"
       - 38.180.152.210:8881
+      - "  4"
       - "  5"
       - "  6"
-      - "  7"
-      - "  8"
       - 18.159.228.130:22222
       - 35.181.217.149:22222
       - 51.44.2.160:22222
@@ -748,23 +698,17 @@ proxy-groups:
       - "@filembadvless:"
       - Telegram:@mtproto_proserver
       - "@filembadvless: 2"
-      - "@v2rayconfigamir 4620"
       - anten.ir:443
       - "@proxymelimon جوین شو تلگرام"
       - "@filembadvless: 3"
-      - "  9"
-      - "  10"
-      - "@v2rayconfigamir 6499"
-      - "@v2rayconfigamir 1541"
+      - "  7"
+      - "  8"
+      - 50GB|02-v2- @unvisible_drops
       - "@filembadss:"
       - "@filembadvless: 4"
       - Telegram:@mtproto_proserver 2
-      - "@v2rayconfigamir 8038"
       - 50GB02-v1-@unvisible_drops
       - Telegram:@mtproto_proserver 3
-      - "@v2rayconfigamir 6310"
-      - "@v2rayconfigamir 2893"
-      - "@v2rayconfigamir 9308"
   - name: دانلود منیجر 📥
     type: select
     proxies:

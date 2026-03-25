@@ -465,9 +465,12 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@proxymelimon جوین شو تلگرام", server: ing.anti-vpn.ru, port: 52006, type: vless, tls: true, packet-encoding: xudp, uuid: 52dbc2d8-00c5-2710-a898-22718fb85c12, servername: max.ru, host: max.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 4CH3o5zOMcFNMbnwXnkAg0FFepmsc0QzhahXkUzb1ik, short-id: d8c6b58bcbb0c323}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxymelimon جوین شو تلگرام 2", server: 92.60.78.221, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6897c181-24b1-4880-8660-e6c5c7ee13c7, servername: www.tradingview.com, host: www.tradingview.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: pkIWxbuPAasjatPaHnAaTnCxVj1RkDFsJEWpLUTOcWY, short-id: 9917d2350096}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxymelimon جوین شو تلگرام`", server: 212.193.153.187, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e81b43d3-bb75-07d0-8b11-f526aef4fef4, servername: lk-cdn.deploy-assure.ru, network: ws, ws-opts: {path: "/XIXVPN?ed", headers: {Host: lk-cdn.deploy-assure.ru}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: nlrt2.aetherdata.pro:2042, server: nlrt2.aetherdata.pro, port: 2042, type: vless, tls: true, packet-encoding: xudp, uuid: 414d8e3a-f58a-4ae6-852a-ce03c9d705ac, servername: zarebin.ir, host: zarebin.ir, path: /, reality-opts: {public-key: fQ1gSf_5tvYXm7g4FiWLUE9KmIOuAaQmxsANrtiBMkM, short-id: 7f4efc437225df63}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: sgrt2.aetherdata.pro:2043, server: sgrt2.aetherdata.pro, port: 2043, type: vless, tls: true, packet-encoding: xudp, uuid: 414d8e3a-f58a-4ae6-852a-ce03c9d705ac, servername: zarebin.ir, host: zarebin.ir, path: /, reality-opts: {public-key: fQ1gSf_5tvYXm7g4FiWLUE9KmIOuAaQmxsANrtiBMkM, short-id: 7f4efc437225df63}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: trrt2.aetherdata.pro:2041, server: trrt2.aetherdata.pro, port: 2041, type: vless, tls: true, packet-encoding: xudp, uuid: 414d8e3a-f58a-4ae6-852a-ce03c9d705ac, servername: zarebin.ir, host: zarebin.ir, path: /, reality-opts: {public-key: fQ1gSf_5tvYXm7g4FiWLUE9KmIOuAaQmxsANrtiBMkM, short-id: 7f4efc437225df63}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 188.114.98.0:80, server: 188.114.98.0, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 478cc26d-16b3-4fdd-be64-60d5a58c1622, network: ws, ws-opts: {path: /, headers: {Host: tt.andishehparenting.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: vip.vornacip.icu:35300, server: vip.vornacip.icu, port: 35300, type: vless, tls: true, packet-encoding: xudp, uuid: e9560046-f70c-49a1-b39d-664add51d4ca, host: vip.vornacip.icu, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@icv2ray", server: mel.idbede.com, port: 8443, type: vmess, uuid: e8392279-1a4b-4b30-98cc-0762020ef46f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,27 +487,36 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@proxymelimon جوین شو تلگرام"
-      - "@proxymelimon جوین شو تلگرام 2"
-      - "@proxymelimon جوین شو تلگرام`"
+      - nlrt2.aetherdata.pro:2042
+      - sgrt2.aetherdata.pro:2043
+      - trrt2.aetherdata.pro:2041
+      - 188.114.98.0:80
+      - vip.vornacip.icu:35300
+      - "@icv2ray"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@proxymelimon جوین شو تلگرام"
-      - "@proxymelimon جوین شو تلگرام 2"
-      - "@proxymelimon جوین شو تلگرام`"
+      - nlrt2.aetherdata.pro:2042
+      - sgrt2.aetherdata.pro:2043
+      - trrt2.aetherdata.pro:2041
+      - 188.114.98.0:80
+      - vip.vornacip.icu:35300
+      - "@icv2ray"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@proxymelimon جوین شو تلگرام"
-      - "@proxymelimon جوین شو تلگرام 2"
-      - "@proxymelimon جوین شو تلگرام`"
+      - nlrt2.aetherdata.pro:2042
+      - sgrt2.aetherdata.pro:2043
+      - trrt2.aetherdata.pro:2041
+      - 188.114.98.0:80
+      - vip.vornacip.icu:35300
+      - "@icv2ray"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -520,27 +532,36 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@proxymelimon جوین شو تلگرام"
-      - "@proxymelimon جوین شو تلگرام 2"
-      - "@proxymelimon جوین شو تلگرام`"
+      - nlrt2.aetherdata.pro:2042
+      - sgrt2.aetherdata.pro:2043
+      - trrt2.aetherdata.pro:2041
+      - 188.114.98.0:80
+      - vip.vornacip.icu:35300
+      - "@icv2ray"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@proxymelimon جوین شو تلگرام"
-      - "@proxymelimon جوین شو تلگرام 2"
-      - "@proxymelimon جوین شو تلگرام`"
+      - nlrt2.aetherdata.pro:2042
+      - sgrt2.aetherdata.pro:2043
+      - trrt2.aetherdata.pro:2041
+      - 188.114.98.0:80
+      - vip.vornacip.icu:35300
+      - "@icv2ray"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@proxymelimon جوین شو تلگرام"
-      - "@proxymelimon جوین شو تلگرام 2"
-      - "@proxymelimon جوین شو تلگرام`"
+      - nlrt2.aetherdata.pro:2042
+      - sgrt2.aetherdata.pro:2043
+      - trrt2.aetherdata.pro:2041
+      - 188.114.98.0:80
+      - vip.vornacip.icu:35300
+      - "@icv2ray"
   - name: دانلود منیجر 📥
     type: select
     proxies:

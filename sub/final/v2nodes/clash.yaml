@@ -465,6 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: 193.135.174.135:990, server: 193.135.174.135, port: 990, type: ss, cipher: chacha20-ietf-poly1305, password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=, udp: true, tfo: false}
   - {name: series-a1.samanehha.co:443, server: series-a1.samanehha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: W74XFALLLuw6m5IA, udp: true, tfo: false}
   - {name: 144.217.164.29:12000, server: 144.217.164.29, port: 12000, type: ss, cipher: aes-256-gcm, password: 8JCsPssfgS8tiRwiMlhARg==, udp: true, tfo: false}
   - {name: 144.217.7.33:12000, server: 144.217.7.33, port: 12000, type: ss, cipher: aes-256-gcm, password: 8JCsPssfgS8tiRwiMlhARg==, udp: true, tfo: false}
@@ -474,23 +475,27 @@ proxies:
   - {name: 13.192.204.27:23255, server: 13.192.204.27, port: 23255, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 5.253.40.7:2053, server: 5.253.40.7, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: 110d7bad-5e17-4ce3-afd0-2cf2ebc71787, servername: music.yandex.ru, host: music.yandex.ru, path: /, reality-opts: {public-key: aFsY-EZjSNTomlAFShKwQIQMJ5pHiZQXXJpWvcz8WkQ, short-id: 0858af97f4e7324d}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 94.131.8.31:2053, server: 94.131.8.31, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: 110d7bad-5e17-4ce3-afd0-2cf2ebc71787, servername: music.yandex.ru, host: music.yandex.ru, path: /, reality-opts: {public-key: aFsY-EZjSNTomlAFShKwQIQMJ5pHiZQXXJpWvcz8WkQ, short-id: 0858af97f4e7324d}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 64.188.78.121:30353, server: 64.188.78.121, port: 30353, type: vless, tls: true, packet-encoding: xudp, uuid: 3a4e812e-b3e8-4008-81b6-2d63405736b3, servername: www.icloud.com, host: www.icloud.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: kLPBaVSLHWbPQUYr3IzAzsDmDl9o2Gh8FcP1ONxxCWk, short-id: badd0a3410}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: cdn-gr-cf.barryvpn.com:8443, server: cdn-gr-cf.barryvpn.com, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 3d737761-5951-462e-86c1-ff921d9f9999, servername: images.apple.com, host: images.apple.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: tZ-tscsitfHIe63_9FAqruCnJaNFhRaKCnR8G-e4-CM, short-id: ae}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 144.31.239.139:25340, server: 144.31.239.139, port: 25340, type: vless, tls: true, packet-encoding: xudp, uuid: 40fb2d29-374c-4255-ae56-bf3ad95b8b37, servername: www.sony.com, host: www.sony.com, path: /, reality-opts: {public-key: fmLlp7Vg3qzskePTLeNWmgppe3TPYlHb_yqBzRxaxUE, short-id: 4830d187}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇳🇱 nl1.vpnjantit.com:10004, server: nl1.vpnjantit.com, port: 10004, type: vless, tls: true, packet-encoding: xudp, uuid: 426c7830-1d5c-11f1-add8-52ac00d0e60c, network: ws, ws-opts: {path: /vpnjantit, headers: {Host: nl1.vpnjantit.com}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 51.89.229.134:443, server: 51.89.229.134, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 53821f3c-5b03-456a-89f3-f8379f130752, servername: www.samsung.com, host: www.samsung.com, path: /, reality-opts: {public-key: 4e4FI0siWxFtLCRCVDQurn1wLTuvKWhRY0zj1SaUcyw, short-id: a13a7cc5}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 144.31.1.91:443, server: 144.31.1.91, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 576993a0-3b23-4c65-8c6d-2165b098826b, servername: plcdn6.dramatorg.net, host: plcdn6.dramatorg.net, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 172.64.53.126:443, server: 172.64.53.126, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5dc15e15-f285-4a9d-959b-0e4fbdd77b63, servername: powered-by-surena.user68f797c2f3e1b.workers.dev, network: ws, ws-opts: {path: /, headers: {Host: powered-by-surena.user68f797c2f3e1b.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 150.241.74.185:443, server: 150.241.74.185, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5f98c4f8-19f4-471d-8ed5-10c0550c0423, servername: tunnel.vk-apps.com, host: tunnel.vk-apps.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: cqsvMHPf2pc9Z54Q-apTtcYfesNjjPSecAKaKrsoL0Y, short-id: 4d94c4fb}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 150.241.75.139:443, server: 150.241.75.139, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5f98c4f8-19f4-471d-8ed5-10c0550c0423, servername: tunnel.vk-apps.com, host: tunnel.vk-apps.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: K0J7MeoQdkINpubvpI7F0sqfx3TYonr35gCj3xlxRnw, short-id: c34685e6}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 82.26.94.193:443, server: 82.26.94.193, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 66143a11-6e84-466e-9b83-5cfebfd2aea8, servername: www.nvidia.com, host: www.nvidia.com, path: /, reality-opts: {public-key: Qk4CqeROBNOLujmefdp-SbW9eTfDr6BCN3Bo04IzbDI, short-id: a26f9030ae}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 144.31.4.127:443, server: 144.31.4.127, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 7e0a9f75-b424-493b-b7e6-cebd7ea8642d, servername: plcdn14.melodramaonline.net, host: plcdn14.melodramaonline.net, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 85.192.49.230:443, server: 85.192.49.230, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8de7627c-1995-41f7-93e6-7fd9715514a2, servername: www.google.com, host: www.google.com, path: /, reality-opts: {public-key: VMMc3QkOG66O2cD0Ki36VOEDQxpGT5aK8KAwLGklJzw, short-id: c2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 89.19.215.209:443, server: 89.19.215.209, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 90c9c25c-df6c-4438-83d3-ef97166a9184, servername: 5post-gate.x5.ru, host: 5post-gate.x5.ru, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 144.31.238.232:443, server: 144.31.238.232, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a1afced8-420b-430d-b25a-08db1c3332da, servername: www.apple.com, host: www.apple.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 2IOXPZdkxdHts0gzVYWjAWTjuM1-OuPFGgHeFMVvNwY, short-id: 3aee9bf2757b2d1f}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 185.116.214.253:443, server: 185.116.214.253, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ad51da8f-c04c-4843-afaa-295accf942e3, servername: www.google.com, host: www.google.com, path: /, reality-opts: {public-key: upQDBPxUldlllbz4A_Zp4YAHM_sIkyQxIbQvRryKm1s, short-id: 86}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 150.241.203.76:11846, server: 150.241.203.76, port: 11846, type: vless, tls: true, packet-encoding: xudp, uuid: ae0e984d-423e-4d80-8c0e-1d127340b3b9, servername: www.google.com, host: www.google.com, path: /, reality-opts: {public-key: e0Ab0q-jsGRsEclV-tUUoNM3-g79sWQqSL4k7UYft3w, short-id: 49}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 64.188.106.173:2443, server: 64.188.106.173, port: 2443, type: vless, tls: true, packet-encoding: xudp, uuid: b9662467-171c-4afc-8fac-dabf62fc47cc, servername: www.microsoft.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: TestChatGRPC}, reality-opts: {public-key: EeM87Tb64-rdyOYJmKlx3OqxVXCLHIJvGGuDrc-In1k, short-id: a1b2c3d4}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 80.209.241.190:443, server: 80.209.241.190, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c01733dd-3e58-4da9-910b-cdd4560295bc, servername: www.tradingview.com, host: www.tradingview.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: IRv8qDf76Ix5WouZ-mznx7AZbGSM8JdyTuZy3UB19AE, short-id: a1b2c3d4}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 94.103.0.92:2443, server: 94.103.0.92, port: 2443, type: vless, tls: true, packet-encoding: xudp, uuid: c01733dd-3e58-4da9-910b-cdd4560295bc, servername: crowdtest.payment-widget-smarttv.plus.tst.kinopoisk.ru, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: TestChatGRPC}, reality-opts: {public-key: ZMvMtsHKNd39qVM9CuPLMEXUL19ViL4Qqqk1y5mMjko, short-id: a1b2c3d4}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: e2.aurorix.net:25930, server: e2.aurorix.net, port: 25930, type: vless, tls: true, packet-encoding: xudp, uuid: d70415c7-b3fb-43e9-915a-df66b2274c32, servername: www.microsoft.com, host: www.microsoft.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: iyV9M7K4Et9DgpzehijZ61ih3H1DnYCvjpSb-zC_qhk, short-id: 911451a18252bb5a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 109.120.189.174:443, server: 109.120.189.174, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e928d85d-f223-03e8-a1d2-a56e9fbd50e0, servername: ads.x5.ru, host: ads.x5.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 4CH3o5zOMcFNMbnwXnkAg0FFepmsc0QzhahXkUzb1ik, short-id: d8c6b58bcbb0c323}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 172.66.47.45:443, server: 172.66.47.45, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fc965ad9-bdd7-4815-ad71-b39ec5972dc1, servername: octopusss4.com, network: ws, ws-opts: {path: /tsghdws, headers: {Host: octopusss4.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 109.120.180.65:443, server: 109.120.180.65, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fd37be2f-f8d1-47de-97e8-13c28107d31e, servername: yandex.ru, host: yandex.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: SHIYN7zN9aFVxwKK-bIvDbhUgtHvlBhDi1qSl2sWwRw, short-id: e7}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 🇩🇪 de12.frostbot.ru:6443, server: de12.frostbot.ru, port: 6443, type: vless, tls: true, packet-encoding: xudp, uuid: fdc8d6e7-9520-4580-aefb-50185b539bdd, servername: github.com, host: github.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: x-VSf_bBIC1iELDvaoM4SKMTK2YAAnUlVkhAWBbvpSc, short-id: b9605803fb4b}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -508,6 +513,7 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - 193.135.174.135:990
       - series-a1.samanehha.co:443
       - 144.217.164.29:12000
       - 144.217.7.33:12000
@@ -517,23 +523,27 @@ proxy-groups:
       - 13.192.204.27:23255
       - 5.253.40.7:2053
       - 94.131.8.31:2053
+      - 64.188.78.121:30353
       - cdn-gr-cf.barryvpn.com:8443
       - 144.31.239.139:25340
+      - 🇳🇱 nl1.vpnjantit.com:10004
       - 51.89.229.134:443
-      - 144.31.1.91:443
       - 172.64.53.126:443
       - 150.241.74.185:443
       - 150.241.75.139:443
       - 82.26.94.193:443
       - 144.31.4.127:443
       - 85.192.49.230:443
+      - 89.19.215.209:443
+      - 144.31.238.232:443
+      - 185.116.214.253:443
       - 150.241.203.76:11846
+      - 64.188.106.173:2443
       - 80.209.241.190:443
       - 94.103.0.92:2443
       - e2.aurorix.net:25930
       - 109.120.189.174:443
       - 172.66.47.45:443
-      - 109.120.180.65:443
       - 🇩🇪 de12.frostbot.ru:6443
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -541,6 +551,7 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - 193.135.174.135:990
       - series-a1.samanehha.co:443
       - 144.217.164.29:12000
       - 144.217.7.33:12000
@@ -550,23 +561,27 @@ proxy-groups:
       - 13.192.204.27:23255
       - 5.253.40.7:2053
       - 94.131.8.31:2053
+      - 64.188.78.121:30353
       - cdn-gr-cf.barryvpn.com:8443
       - 144.31.239.139:25340
+      - 🇳🇱 nl1.vpnjantit.com:10004
       - 51.89.229.134:443
-      - 144.31.1.91:443
       - 172.64.53.126:443
       - 150.241.74.185:443
       - 150.241.75.139:443
       - 82.26.94.193:443
       - 144.31.4.127:443
       - 85.192.49.230:443
+      - 89.19.215.209:443
+      - 144.31.238.232:443
+      - 185.116.214.253:443
       - 150.241.203.76:11846
+      - 64.188.106.173:2443
       - 80.209.241.190:443
       - 94.103.0.92:2443
       - e2.aurorix.net:25930
       - 109.120.189.174:443
       - 172.66.47.45:443
-      - 109.120.180.65:443
       - 🇩🇪 de12.frostbot.ru:6443
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -574,6 +589,7 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - 193.135.174.135:990
       - series-a1.samanehha.co:443
       - 144.217.164.29:12000
       - 144.217.7.33:12000
@@ -583,23 +599,27 @@ proxy-groups:
       - 13.192.204.27:23255
       - 5.253.40.7:2053
       - 94.131.8.31:2053
+      - 64.188.78.121:30353
       - cdn-gr-cf.barryvpn.com:8443
       - 144.31.239.139:25340
+      - 🇳🇱 nl1.vpnjantit.com:10004
       - 51.89.229.134:443
-      - 144.31.1.91:443
       - 172.64.53.126:443
       - 150.241.74.185:443
       - 150.241.75.139:443
       - 82.26.94.193:443
       - 144.31.4.127:443
       - 85.192.49.230:443
+      - 89.19.215.209:443
+      - 144.31.238.232:443
+      - 185.116.214.253:443
       - 150.241.203.76:11846
+      - 64.188.106.173:2443
       - 80.209.241.190:443
       - 94.103.0.92:2443
       - e2.aurorix.net:25930
       - 109.120.189.174:443
       - 172.66.47.45:443
-      - 109.120.180.65:443
       - 🇩🇪 de12.frostbot.ru:6443
   - name: اتصال پایدار 🔗
     type: url-test
@@ -616,6 +636,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 193.135.174.135:990
       - series-a1.samanehha.co:443
       - 144.217.164.29:12000
       - 144.217.7.33:12000
@@ -625,23 +646,27 @@ proxy-groups:
       - 13.192.204.27:23255
       - 5.253.40.7:2053
       - 94.131.8.31:2053
+      - 64.188.78.121:30353
       - cdn-gr-cf.barryvpn.com:8443
       - 144.31.239.139:25340
+      - 🇳🇱 nl1.vpnjantit.com:10004
       - 51.89.229.134:443
-      - 144.31.1.91:443
       - 172.64.53.126:443
       - 150.241.74.185:443
       - 150.241.75.139:443
       - 82.26.94.193:443
       - 144.31.4.127:443
       - 85.192.49.230:443
+      - 89.19.215.209:443
+      - 144.31.238.232:443
+      - 185.116.214.253:443
       - 150.241.203.76:11846
+      - 64.188.106.173:2443
       - 80.209.241.190:443
       - 94.103.0.92:2443
       - e2.aurorix.net:25930
       - 109.120.189.174:443
       - 172.66.47.45:443
-      - 109.120.180.65:443
       - 🇩🇪 de12.frostbot.ru:6443
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -649,6 +674,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 193.135.174.135:990
       - series-a1.samanehha.co:443
       - 144.217.164.29:12000
       - 144.217.7.33:12000
@@ -658,23 +684,27 @@ proxy-groups:
       - 13.192.204.27:23255
       - 5.253.40.7:2053
       - 94.131.8.31:2053
+      - 64.188.78.121:30353
       - cdn-gr-cf.barryvpn.com:8443
       - 144.31.239.139:25340
+      - 🇳🇱 nl1.vpnjantit.com:10004
       - 51.89.229.134:443
-      - 144.31.1.91:443
       - 172.64.53.126:443
       - 150.241.74.185:443
       - 150.241.75.139:443
       - 82.26.94.193:443
       - 144.31.4.127:443
       - 85.192.49.230:443
+      - 89.19.215.209:443
+      - 144.31.238.232:443
+      - 185.116.214.253:443
       - 150.241.203.76:11846
+      - 64.188.106.173:2443
       - 80.209.241.190:443
       - 94.103.0.92:2443
       - e2.aurorix.net:25930
       - 109.120.189.174:443
       - 172.66.47.45:443
-      - 109.120.180.65:443
       - 🇩🇪 de12.frostbot.ru:6443
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -682,6 +712,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 193.135.174.135:990
       - series-a1.samanehha.co:443
       - 144.217.164.29:12000
       - 144.217.7.33:12000
@@ -691,23 +722,27 @@ proxy-groups:
       - 13.192.204.27:23255
       - 5.253.40.7:2053
       - 94.131.8.31:2053
+      - 64.188.78.121:30353
       - cdn-gr-cf.barryvpn.com:8443
       - 144.31.239.139:25340
+      - 🇳🇱 nl1.vpnjantit.com:10004
       - 51.89.229.134:443
-      - 144.31.1.91:443
       - 172.64.53.126:443
       - 150.241.74.185:443
       - 150.241.75.139:443
       - 82.26.94.193:443
       - 144.31.4.127:443
       - 85.192.49.230:443
+      - 89.19.215.209:443
+      - 144.31.238.232:443
+      - 185.116.214.253:443
       - 150.241.203.76:11846
+      - 64.188.106.173:2443
       - 80.209.241.190:443
       - 94.103.0.92:2443
       - e2.aurorix.net:25930
       - 109.120.189.174:443
       - 172.66.47.45:443
-      - 109.120.180.65:443
       - 🇩🇪 de12.frostbot.ru:6443
   - name: دانلود منیجر 📥
     type: select
