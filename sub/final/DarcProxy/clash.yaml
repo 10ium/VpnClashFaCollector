@@ -465,7 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: ViP, server: 89.45.56.83, port: 50156, type: vless, tls: true, packet-encoding: xudp, uuid: ee5ac6bd-3709-45d4-83e3-086cb10827ad, network: ws, ws-opts: {path: /, headers: {Host: 89.45.56.83}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: next.avenprime.ir:80, server: next.avenprime.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: d751aced-bfa7-4bab-9154-98195dbb2674, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: next.avenprime.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - ViP
+      - next.avenprime.ir:80
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - ViP
+      - next.avenprime.ir:80
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - ViP
+      - next.avenprime.ir:80
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - ViP
+      - next.avenprime.ir:80
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - ViP
+      - next.avenprime.ir:80
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - ViP
+      - next.avenprime.ir:80
   - name: دانلود منیجر 📥
     type: select
     proxies:

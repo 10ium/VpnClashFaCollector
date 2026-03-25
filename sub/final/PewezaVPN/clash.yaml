@@ -465,9 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@PewezaVPN (تلگرام)`", server: 94.101.179.197, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 788d2a40-12fe-4296-b802-d218308e769b, servername: archive-azd1101.telewebion.ir, host: archive-azd1101.telewebion.ir, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@PewezaVPN (تلگرام)` 2", server: 65.21.145.122, port: 30448, type: vless, tls: true, packet-encoding: xudp, uuid: bb89519d-d352-466e-a223-ad7bf282fb4f, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@PewezaVPN (تلگرام)` 3", server: farzandeiran.iransalar.top, port: 41316, type: vless, tls: true, packet-encoding: xudp, uuid: f2b041e5-58be-41c6-a090-3bf44ba7ee2d, host: Fast.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@PewezaVPN (تلگرام)`", server: mlh.mynethub99.top, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 18e35ca4-4b6e-43dd-9c28-b3ef89966821, servername: mlh.mynethub99.top, alpn: [h2%2Chttp%2F1.1], host: mlh.mynethub99.top, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@PewezaVPN (تلگرام)` 2", server: hamrahiran.sorenashoping.xyz, port: 45571, type: vless, tls: true, packet-encoding: xudp, uuid: 46063237-3655-482f-947e-7f79dc5de2a5, network: ws, ws-opts: {path: /, headers: {Host: hamrahiran.sorenashoping.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@PewezaVPN (تلگرام)` 3", server: 85.9.104.8, port: 62727, type: vless, tls: true, packet-encoding: xudp, uuid: a93a8999-82bf-46ff-86a9-fba981f35cdc, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@PewezaVPN (تلگرام)` 4", server: 91.107.129.147, port: 23142, type: vless, tls: true, packet-encoding: xudp, uuid: b62ffdfa-e1e5-ce44-a7a3-e8874ce1efa1, network: ws, ws-opts: {path: /, headers: {Host: i}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@PewezaVPN (تلگرام)` 5", server: www.p4free.site, port: 28254, type: vless, tls: true, packet-encoding: xudp, uuid: f2032be3-a30f-4ba0-9f18-7abc10f4a25e, host: www.p4free.site, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,6 +489,8 @@ proxy-groups:
       - "@PewezaVPN (تلگرام)`"
       - "@PewezaVPN (تلگرام)` 2"
       - "@PewezaVPN (تلگرام)` 3"
+      - "@PewezaVPN (تلگرام)` 4"
+      - "@PewezaVPN (تلگرام)` 5"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -496,6 +500,8 @@ proxy-groups:
       - "@PewezaVPN (تلگرام)`"
       - "@PewezaVPN (تلگرام)` 2"
       - "@PewezaVPN (تلگرام)` 3"
+      - "@PewezaVPN (تلگرام)` 4"
+      - "@PewezaVPN (تلگرام)` 5"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -505,6 +511,8 @@ proxy-groups:
       - "@PewezaVPN (تلگرام)`"
       - "@PewezaVPN (تلگرام)` 2"
       - "@PewezaVPN (تلگرام)` 3"
+      - "@PewezaVPN (تلگرام)` 4"
+      - "@PewezaVPN (تلگرام)` 5"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -523,6 +531,8 @@ proxy-groups:
       - "@PewezaVPN (تلگرام)`"
       - "@PewezaVPN (تلگرام)` 2"
       - "@PewezaVPN (تلگرام)` 3"
+      - "@PewezaVPN (تلگرام)` 4"
+      - "@PewezaVPN (تلگرام)` 5"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -532,6 +542,8 @@ proxy-groups:
       - "@PewezaVPN (تلگرام)`"
       - "@PewezaVPN (تلگرام)` 2"
       - "@PewezaVPN (تلگرام)` 3"
+      - "@PewezaVPN (تلگرام)` 4"
+      - "@PewezaVPN (تلگرام)` 5"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -541,6 +553,8 @@ proxy-groups:
       - "@PewezaVPN (تلگرام)`"
       - "@PewezaVPN (تلگرام)` 2"
       - "@PewezaVPN (تلگرام)` 3"
+      - "@PewezaVPN (تلگرام)` 4"
+      - "@PewezaVPN (تلگرام)` 5"
   - name: دانلود منیجر 📥
     type: select
     proxies:
