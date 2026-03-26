@@ -465,7 +465,6 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@proxygodratmand قطع شدی بیا چنل فقط 🇮🇷", server: super.lightvpro.ir, port: 1001, type: vless, tls: true, packet-encoding: xudp, uuid: 0e30c333-caf6-4c5d-b398-206b4ef9c97f, host: super.lightvpro.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxygodratmand قطع شدی بیا چنل فقط �%9…", server: super.lightvpro.ir, port: 1001, type: vless, tls: true, packet-encoding: xudp, uuid: 0e30c333-caf6-4c5d-b398-206b4ef9c97f, host: super.lightvpro.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -483,21 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@proxygodratmand قطع شدی بیا چنل فقط 🇮🇷"
+      - DIRECT
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@proxygodratmand قطع شدی بیا چنل فقط 🇮🇷"
+      - DIRECT
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@proxygodratmand قطع شدی بیا چنل فقط 🇮🇷"
+      - DIRECT
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -513,21 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@proxygodratmand قطع شدی بیا چنل فقط 🇮🇷"
+      - DIRECT
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@proxygodratmand قطع شدی بیا چنل فقط 🇮🇷"
+      - DIRECT
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@proxygodratmand قطع شدی بیا چنل فقط 🇮🇷"
+      - DIRECT
   - name: دانلود منیجر 📥
     type: select
     proxies:

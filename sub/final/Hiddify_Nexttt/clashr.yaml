@@ -5,137 +5,53 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@Hiddify_Nexttt", server: 102.37.156.224, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: aduB9HGxQHjA2SBMRjkHX6, udp: true, tfo: false}
-  - {name: Astro 4, server: 188.121.117.216, port: 48324, type: vless, tls: true, packet-encoding: xudp, uuid: 20dff991-201e-28b0-b584-fd5c8861de4d, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Astro 11, server: 188.121.117.216, port: 6344, type: vless, tls: true, packet-encoding: xudp, uuid: 20dff991-201e-28b0-b584-fd5c8861de4d, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Astro 6, server: 188.121.118.232, port: 48324, type: vless, tls: true, packet-encoding: xudp, uuid: 20dff991-201e-28b0-b584-fd5c8861de4d, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Astro 10, server: 188.121.118.232, port: 6344, type: vless, tls: true, packet-encoding: xudp, uuid: 20dff991-201e-28b0-b584-fd5c8861de4d, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Astro 5, server: 188.121.119.146, port: 48324, type: vless, tls: true, packet-encoding: xudp, uuid: 20dff991-201e-28b0-b584-fd5c8861de4d, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Astro 8, server: 188.121.119.146, port: 6344, type: vless, tls: true, packet-encoding: xudp, uuid: 20dff991-201e-28b0-b584-fd5c8861de4d, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Astro 2, server: 37.32.9.246, port: 48324, type: vless, tls: true, packet-encoding: xudp, uuid: 20dff991-201e-28b0-b584-fd5c8861de4d, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Astro 9, server: 37.32.9.246, port: 6344, type: vless, tls: true, packet-encoding: xudp, uuid: 20dff991-201e-28b0-b584-fd5c8861de4d, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Astro 3, server: 94.101.186.212, port: 48324, type: vless, tls: true, packet-encoding: xudp, uuid: 20dff991-201e-28b0-b584-fd5c8861de4d, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Astro 7, server: 94.101.186.212, port: 6344, type: vless, tls: true, packet-encoding: xudp, uuid: 20dff991-201e-28b0-b584-fd5c8861de4d, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Astro 1, server: 94.101.187.219, port: 48324, type: vless, tls: true, packet-encoding: xudp, uuid: 20dff991-201e-28b0-b584-fd5c8861de4d, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Astro 12, server: 94.101.187.219, port: 6344, type: vless, tls: true, packet-encoding: xudp, uuid: 20dff991-201e-28b0-b584-fd5c8861de4d, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ayyub202734_19377 🇮🇷 ², server: cloud3.vpsino.com, port: 6344, type: vless, tls: true, packet-encoding: xudp, uuid: 3a1a6c1e-d46f-6b9a-6d10-867de4f67595, host: cloud3.vpsino.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Hiddify_nexttt, server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 60c91e12-13a5-4930-af02-747182a9324f, network: ws, ws-opts: {path: /, headers: {Host: dl.avenflow.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Hiddify_Nexttt, server: 104.64.32.87, port: 5984, type: vless, tls: true, packet-encoding: xudp, uuid: 9c0b4941-5f45-4445-9f58-3f52cf41c137, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@Hiddify_Nexttt"
-      - Astro 4
-      - Astro 11
-      - Astro 6
-      - Astro 10
-      - Astro 5
-      - Astro 8
-      - Astro 2
-      - Astro 9
-      - Astro 3
-      - Astro 7
-      - Astro 1
-      - Astro 12
-      - ayyub202734_19377 🇮🇷 ²
+      - Hiddify_nexttt
+      - Hiddify_Nexttt
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@Hiddify_Nexttt"
-      - Astro 4
-      - Astro 11
-      - Astro 6
-      - Astro 10
-      - Astro 5
-      - Astro 8
-      - Astro 2
-      - Astro 9
-      - Astro 3
-      - Astro 7
-      - Astro 1
-      - Astro 12
-      - ayyub202734_19377 🇮🇷 ²
+      - Hiddify_nexttt
+      - Hiddify_Nexttt
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@Hiddify_Nexttt"
-      - Astro 4
-      - Astro 11
-      - Astro 6
-      - Astro 10
-      - Astro 5
-      - Astro 8
-      - Astro 2
-      - Astro 9
-      - Astro 3
-      - Astro 7
-      - Astro 1
-      - Astro 12
-      - ayyub202734_19377 🇮🇷 ²
+      - Hiddify_nexttt
+      - Hiddify_Nexttt
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@Hiddify_Nexttt"
-      - Astro 4
-      - Astro 11
-      - Astro 6
-      - Astro 10
-      - Astro 5
-      - Astro 8
-      - Astro 2
-      - Astro 9
-      - Astro 3
-      - Astro 7
-      - Astro 1
-      - Astro 12
-      - ayyub202734_19377 🇮🇷 ²
+      - Hiddify_nexttt
+      - Hiddify_Nexttt
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@Hiddify_Nexttt"
-      - Astro 4
-      - Astro 11
-      - Astro 6
-      - Astro 10
-      - Astro 5
-      - Astro 8
-      - Astro 2
-      - Astro 9
-      - Astro 3
-      - Astro 7
-      - Astro 1
-      - Astro 12
-      - ayyub202734_19377 🇮🇷 ²
+      - Hiddify_nexttt
+      - Hiddify_Nexttt
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@Hiddify_Nexttt"
-      - Astro 4
-      - Astro 11
-      - Astro 6
-      - Astro 10
-      - Astro 5
-      - Astro 8
-      - Astro 2
-      - Astro 9
-      - Astro 3
-      - Astro 7
-      - Astro 1
-      - Astro 12
-      - ayyub202734_19377 🇮🇷 ²
+      - Hiddify_nexttt
+      - Hiddify_Nexttt
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -163,20 +79,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@Hiddify_Nexttt"
-      - Astro 4
-      - Astro 11
-      - Astro 6
-      - Astro 10
-      - Astro 5
-      - Astro 8
-      - Astro 2
-      - Astro 9
-      - Astro 3
-      - Astro 7
-      - Astro 1
-      - Astro 12
-      - ayyub202734_19377 🇮🇷 ²
+      - Hiddify_nexttt
+      - Hiddify_Nexttt
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
