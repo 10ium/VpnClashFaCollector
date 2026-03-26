@@ -5,123 +5,95 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@filembad", server: mel.digitalldns.net, port: 8443, type: vmess, uuid: 37d67038-a83a-4c38-ab63-bffe55489ed7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "", server: 172.233.229.91, port: 14102, type: vmess, uuid: 27ba87fc-583f-4763-9060-83cf0b9264db, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇭🇰 [openproxylist.com] vmess-HK", server: 103.229.124.3, port: 20521, type: vmess, uuid: 292e9c90-25b3-4ff5-b98a-9ef5877714ab, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}, udp: true, tfo: false}
+  - {name: "@filembad", server: mel.idbede.com, port: 8443, type: vmess, uuid: 47ca7e88-e96d-44ab-98cd-cc9a8f387586, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@filembad 2", server: mel.idbede.com, port: 8443, type: vmess, uuid: 47ca7e88-e96d-44ab-98cd-cc9a8f387586, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 3", server: mel.idbede.com, port: 8443, type: vmess, uuid: 47ca7e88-e96d-44ab-98cd-cc9a8f387586, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 4", server: mel.idbede.com, port: 8443, type: vmess, uuid: 6a795c8f-b72c-4698-bf3b-14636a0a17cd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 5", server: mel.idbede.com, port: 8443, type: vmess, uuid: 722c2196-4dce-48ee-bec8-be713e74e97f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 6", server: mel.idbede.com, port: 8443, type: vmess, uuid: 25367fd1-36bc-464f-a327-a305bfbed7f4, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 7", server: mel.idbede.com, port: 8443, type: vmess, uuid: e8392279-1a4b-4b30-98cc-0762020ef46f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@icv2ray", server: mel.idbede.com, port: 8443, type: vmess, uuid: e8392279-1a4b-4b30-98cc-0762020ef46f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 8", server: mel.idbede.com, port: 8443, type: vmess, uuid: e8392279-1a4b-4b30-98cc-0762020ef46f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 9", server: mel.idbede.com, port: 8443, type: vmess, uuid: ebd26124-6351-43e2-b868-0022801d6ced, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 10", server: speed.cloudflare.com, port: 443, type: vmess, uuid: ffffffff-ffff-ffff-ffff-ffffffffffff, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: speed.cloudflare.com}}, udp: true, tfo: false}
-  - {name: "@filembad 11", server: mel.idbede.com, port: 8443, type: vmess, uuid: d0f0eec6-7c3d-4a61-a434-d50de1da6a14, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 3", server: mel.idbede.com, port: 8443, type: vmess, uuid: 7c1c9625-6671-4b7a-815d-3983d3ba00dd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 4", server: mel.idbede.com, port: 8443, type: vmess, uuid: 4924423b-d46f-4cc1-8fa4-07bf6184d3c2, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 5", server: speed.cloudflare.com, port: 443, type: vmess, uuid: ffffffff-ffff-ffff-ffff-ffffffffffff, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: speed.cloudflare.com}}, udp: true, tfo: false}
+  - {name: "@filembad 6", server: gsmvp.gsmvx.com, port: 2001, type: vmess, uuid: a7443503-fb1d-086d-11b2-2e37b32994d7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - ""
+      - 🇭🇰 [openproxylist.com] vmess-HK
       - "@filembad"
       - "@filembad 2"
       - "@filembad 3"
       - "@filembad 4"
       - "@filembad 5"
       - "@filembad 6"
-      - "@filembad 7"
-      - "@icv2ray"
-      - "@filembad 8"
-      - "@filembad 9"
-      - "@filembad 10"
-      - "@filembad 11"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - ""
+      - 🇭🇰 [openproxylist.com] vmess-HK
       - "@filembad"
       - "@filembad 2"
       - "@filembad 3"
       - "@filembad 4"
       - "@filembad 5"
       - "@filembad 6"
-      - "@filembad 7"
-      - "@icv2ray"
-      - "@filembad 8"
-      - "@filembad 9"
-      - "@filembad 10"
-      - "@filembad 11"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - ""
+      - 🇭🇰 [openproxylist.com] vmess-HK
       - "@filembad"
       - "@filembad 2"
       - "@filembad 3"
       - "@filembad 4"
       - "@filembad 5"
       - "@filembad 6"
-      - "@filembad 7"
-      - "@icv2ray"
-      - "@filembad 8"
-      - "@filembad 9"
-      - "@filembad 10"
-      - "@filembad 11"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - ""
+      - 🇭🇰 [openproxylist.com] vmess-HK
       - "@filembad"
       - "@filembad 2"
       - "@filembad 3"
       - "@filembad 4"
       - "@filembad 5"
       - "@filembad 6"
-      - "@filembad 7"
-      - "@icv2ray"
-      - "@filembad 8"
-      - "@filembad 9"
-      - "@filembad 10"
-      - "@filembad 11"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - ""
+      - 🇭🇰 [openproxylist.com] vmess-HK
       - "@filembad"
       - "@filembad 2"
       - "@filembad 3"
       - "@filembad 4"
       - "@filembad 5"
       - "@filembad 6"
-      - "@filembad 7"
-      - "@icv2ray"
-      - "@filembad 8"
-      - "@filembad 9"
-      - "@filembad 10"
-      - "@filembad 11"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - ""
+      - 🇭🇰 [openproxylist.com] vmess-HK
       - "@filembad"
       - "@filembad 2"
       - "@filembad 3"
       - "@filembad 4"
       - "@filembad 5"
       - "@filembad 6"
-      - "@filembad 7"
-      - "@icv2ray"
-      - "@filembad 8"
-      - "@filembad 9"
-      - "@filembad 10"
-      - "@filembad 11"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -149,18 +121,14 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - ""
+      - 🇭🇰 [openproxylist.com] vmess-HK
       - "@filembad"
       - "@filembad 2"
       - "@filembad 3"
       - "@filembad 4"
       - "@filembad 5"
       - "@filembad 6"
-      - "@filembad 7"
-      - "@icv2ray"
-      - "@filembad 8"
-      - "@filembad 9"
-      - "@filembad 10"
-      - "@filembad 11"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
