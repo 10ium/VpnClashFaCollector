@@ -465,7 +465,6 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: saministamm, server: 104.64.32.87, port: 5984, type: vless, tls: true, packet-encoding: xudp, uuid: 9c0b4941-5f45-4445-9f58-3f52cf41c137, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@saministamm", server: 94.183.170.10, port: 2152, type: vmess, uuid: ff94fc7b-03a6-4bae-bd74-c2ef549fbe0a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -483,7 +482,6 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - saministamm
       - "@saministamm"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -491,7 +489,6 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - saministamm
       - "@saministamm"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -499,7 +496,6 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - saministamm
       - "@saministamm"
   - name: اتصال پایدار 🔗
     type: url-test
@@ -516,7 +512,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - saministamm
       - "@saministamm"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -524,7 +519,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - saministamm
       - "@saministamm"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -532,7 +526,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - saministamm
       - "@saministamm"
   - name: دانلود منیجر 📥
     type: select
