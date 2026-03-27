@@ -465,6 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: nothome.noeq12.site:5050, server: nothome.noeq12.site, port: 5050, type: vless, tls: true, packet-encoding: xudp, uuid: 523cece2-1be9-47e4-bcad-60def7d726d9, host: nothome.noeq12.site, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: Hiddify_nexttt, server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 60c91e12-13a5-4930-af02-747182a9324f, network: ws, ws-opts: {path: /, headers: {Host: dl.avenflow.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: Hiddify_Nexttt, server: 104.64.32.87, port: 5984, type: vless, tls: true, packet-encoding: xudp, uuid: 9c0b4941-5f45-4445-9f58-3f52cf41c137, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
@@ -483,6 +484,7 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - nothome.noeq12.site:5050
       - Hiddify_nexttt
       - Hiddify_Nexttt
   - name: خودکار (بهترین پینگ) 🤖
@@ -491,6 +493,7 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - nothome.noeq12.site:5050
       - Hiddify_nexttt
       - Hiddify_Nexttt
   - name: پشتیبان (در صورت قطعی) 🧯
@@ -499,6 +502,7 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - nothome.noeq12.site:5050
       - Hiddify_nexttt
       - Hiddify_Nexttt
   - name: اتصال پایدار 🔗
@@ -516,6 +520,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - nothome.noeq12.site:5050
       - Hiddify_nexttt
       - Hiddify_Nexttt
   - name: توزیع بار (گردشی) 🔁
@@ -524,6 +529,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - nothome.noeq12.site:5050
       - Hiddify_nexttt
       - Hiddify_Nexttt
   - name: توزیع بار (موقت) ⏳
@@ -532,6 +538,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - nothome.noeq12.site:5050
       - Hiddify_nexttt
       - Hiddify_Nexttt
   - name: دانلود منیجر 📥

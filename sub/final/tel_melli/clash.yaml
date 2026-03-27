@@ -465,10 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@tel_melli💛", server: onlazh2.khakimilad.online, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 351ab55e-22ea-4e7c-a4df-4bd0273225f9, servername: www.aparat.com, host: www.aparat.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: AAZAKzA6b6g4dvXrZwyEM5WdrKcwisfUyWoXbVDlmVA, short-id: d2537da1d2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@tel_melli📶", server: we.configfast.site, port: 1142, type: vless, tls: true, packet-encoding: xudp, uuid: ae29791e-b4e7-4a42-bab1-e937a24ab4a1, host: bale.ai%2Cweb.splus.ir%2Cigap.net, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@tel_melli💎2", server: 185.143.234.5, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: affa41b7-95d2-407e-b38f-5a294744304f, servername: alef.ir.oadeflantrogm.realirshop.com, network: ws, ws-opts: {path: "/?ed=443", headers: {Host: alef.ir.oadeflantrogm.realirshop.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@tel_melli💎1", server: 100110011001100.usa.allmobo.sbs, port: 1045, type: vless, tls: true, packet-encoding: xudp, uuid: ba26f6fc-25da-427d-88e9-37ca26eaa520, host: anten.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,30 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@tel_melli💛"
       - "@tel_melli📶"
-      - "@tel_melli💎2"
-      - "@tel_melli💎1"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@tel_melli💛"
       - "@tel_melli📶"
-      - "@tel_melli💎2"
-      - "@tel_melli💎1"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@tel_melli💛"
       - "@tel_melli📶"
-      - "@tel_melli💎2"
-      - "@tel_melli💎1"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -524,30 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@tel_melli💛"
       - "@tel_melli📶"
-      - "@tel_melli💎2"
-      - "@tel_melli💎1"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@tel_melli💛"
       - "@tel_melli📶"
-      - "@tel_melli💎2"
-      - "@tel_melli💎1"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@tel_melli💛"
       - "@tel_melli📶"
-      - "@tel_melli💎2"
-      - "@tel_melli💎1"
   - name: دانلود منیجر 📥
     type: select
     proxies:

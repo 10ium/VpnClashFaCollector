@@ -465,15 +465,13 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "", server: 172.233.229.91, port: 14102, type: vmess, uuid: 27ba87fc-583f-4763-9060-83cf0b9264db, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "🇭🇰 [openproxylist.com] vmess-HK", server: 103.229.124.3, port: 20521, type: vmess, uuid: 292e9c90-25b3-4ff5-b98a-9ef5877714ab, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}, udp: true, tfo: false}
-  - {name: "@filembad", server: 2.144.22.222, port: 10616, type: vmess, uuid: bccda6b7-2c5a-4eb3-8398-184bee41c488, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad", server: 94.183.170.10, port: 2152, type: vmess, uuid: ff94fc7b-03a6-4bae-bd74-c2ef549fbe0a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@saministamm", server: 94.183.170.10, port: 2152, type: vmess, uuid: ff94fc7b-03a6-4bae-bd74-c2ef549fbe0a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 2", server: 94.183.170.10, port: 2152, type: vmess, uuid: ff94fc7b-03a6-4bae-bd74-c2ef549fbe0a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 3", server: 2.144.22.222, port: 10616, type: vmess, uuid: bccda6b7-2c5a-4eb3-8398-184bee41c488, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@v2rayconfigamir 1065", server: 209.126.84.189, port: 443, type: vmess, uuid: 2c981164-9b93-4bca-94ff-b78d3f8498d7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /vmessws, headers: {Host: 209.126.84.189}}, udp: true, tfo: false}
-  - {name: "@filembad 2", server: mel.idbede.com, port: 8443, type: vmess, uuid: 6677bfca-9bda-41ee-9a48-eabb4d8cb3e9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 3", server: mel.idbede.com, port: 8443, type: vmess, uuid: 7c1c9625-6671-4b7a-815d-3983d3ba00dd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 4", server: mel.idbede.com, port: 8443, type: vmess, uuid: 4924423b-d46f-4cc1-8fa4-07bf6184d3c2, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 4", server: mel.idbede.com, port: 8443, type: vmess, uuid: 6677bfca-9bda-41ee-9a48-eabb4d8cb3e9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: Join+Telegram:@Farah_VPN 🇨🇳, server: n1747624280.lie5d.cyou, port: 443, type: vmess, uuid: 49dcf4b4-81eb-4fe2-91d3-86dc2e27ced5, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: n1747624280.lie5d.cyou, network: ws, ws-opts: {path: /, headers: {Host: n1747624280.lie5d.cyou}}, udp: true, tfo: false}
-  - {name: "@filembad 5", server: gsmvp.gsmvx.com, port: 2001, type: vmess, uuid: a7443503-fb1d-086d-11b2-2e37b32994d7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -490,45 +488,39 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - ""
-      - 🇭🇰 [openproxylist.com] vmess-HK
       - "@filembad"
-      - "@v2rayconfigamir 1065"
+      - "@saministamm"
       - "@filembad 2"
       - "@filembad 3"
+      - "@v2rayconfigamir 1065"
       - "@filembad 4"
       - Join+Telegram:@Farah_VPN 🇨🇳
-      - "@filembad 5"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - ""
-      - 🇭🇰 [openproxylist.com] vmess-HK
       - "@filembad"
-      - "@v2rayconfigamir 1065"
+      - "@saministamm"
       - "@filembad 2"
       - "@filembad 3"
+      - "@v2rayconfigamir 1065"
       - "@filembad 4"
       - Join+Telegram:@Farah_VPN 🇨🇳
-      - "@filembad 5"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - ""
-      - 🇭🇰 [openproxylist.com] vmess-HK
       - "@filembad"
-      - "@v2rayconfigamir 1065"
+      - "@saministamm"
       - "@filembad 2"
       - "@filembad 3"
+      - "@v2rayconfigamir 1065"
       - "@filembad 4"
       - Join+Telegram:@Farah_VPN 🇨🇳
-      - "@filembad 5"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -544,45 +536,39 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - ""
-      - 🇭🇰 [openproxylist.com] vmess-HK
       - "@filembad"
-      - "@v2rayconfigamir 1065"
+      - "@saministamm"
       - "@filembad 2"
       - "@filembad 3"
+      - "@v2rayconfigamir 1065"
       - "@filembad 4"
       - Join+Telegram:@Farah_VPN 🇨🇳
-      - "@filembad 5"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - ""
-      - 🇭🇰 [openproxylist.com] vmess-HK
       - "@filembad"
-      - "@v2rayconfigamir 1065"
+      - "@saministamm"
       - "@filembad 2"
       - "@filembad 3"
+      - "@v2rayconfigamir 1065"
       - "@filembad 4"
       - Join+Telegram:@Farah_VPN 🇨🇳
-      - "@filembad 5"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - ""
-      - 🇭🇰 [openproxylist.com] vmess-HK
       - "@filembad"
-      - "@v2rayconfigamir 1065"
+      - "@saministamm"
       - "@filembad 2"
       - "@filembad 3"
+      - "@v2rayconfigamir 1065"
       - "@filembad 4"
       - Join+Telegram:@Farah_VPN 🇨🇳
-      - "@filembad 5"
   - name: دانلود منیجر 📥
     type: select
     proxies:

@@ -5,6 +5,7 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: nothome.noeq12.site:5050, server: nothome.noeq12.site, port: 5050, type: vless, tls: true, packet-encoding: xudp, uuid: 523cece2-1be9-47e4-bcad-60def7d726d9, host: nothome.noeq12.site, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: Hiddify_nexttt, server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 60c91e12-13a5-4930-af02-747182a9324f, network: ws, ws-opts: {path: /, headers: {Host: dl.avenflow.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: Hiddify_Nexttt, server: 104.64.32.87, port: 5984, type: vless, tls: true, packet-encoding: xudp, uuid: 9c0b4941-5f45-4445-9f58-3f52cf41c137, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
@@ -13,6 +14,7 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - nothome.noeq12.site:5050
       - Hiddify_nexttt
       - Hiddify_Nexttt
   - name: ♻️ 自动选择
@@ -21,6 +23,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - nothome.noeq12.site:5050
       - Hiddify_nexttt
       - Hiddify_Nexttt
   - name: 🌍 国外媒体
@@ -29,6 +32,7 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - nothome.noeq12.site:5050
       - Hiddify_nexttt
       - Hiddify_Nexttt
   - name: 📲 电报信息
@@ -36,6 +40,7 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - nothome.noeq12.site:5050
       - Hiddify_nexttt
       - Hiddify_Nexttt
   - name: Ⓜ️ 微软服务
@@ -43,6 +48,7 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - nothome.noeq12.site:5050
       - Hiddify_nexttt
       - Hiddify_Nexttt
   - name: 🍎 苹果服务
@@ -50,6 +56,7 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - nothome.noeq12.site:5050
       - Hiddify_nexttt
       - Hiddify_Nexttt
   - name: 🎯 全球直连
@@ -79,6 +86,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - nothome.noeq12.site:5050
       - Hiddify_nexttt
       - Hiddify_Nexttt
 rules:
