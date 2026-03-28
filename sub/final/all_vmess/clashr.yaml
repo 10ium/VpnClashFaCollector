@@ -5,11 +5,17 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@filembad", server: shop.khalijvps.com, port: 2154, type: vmess, uuid: 523e10a2-ecfd-4a63-9c4b-d9c488140a7a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad", server: mel.idbede.com, port: 8443, type: vmess, uuid: 47ca7e88-e96d-44ab-98cd-cc9a8f387586, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2rayconfigamir 7969", server: pq-hungary1.09vpn.com, port: 80, type: vmess, uuid: 703f722a-4bdf-4e9d-9afd-a681fdf87c74, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /vmess/, headers: {Host: pq-hungary1.09vpn.com}}, udp: true, tfo: false}
+  - {name: "@v2rayconfigamir 3127", server: 45.12.132.183, port: 80, type: vmess, uuid: 703f722a-4bdf-4e9d-9afd-a681fdf87c74, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /vmess/, headers: {Host: 45.12.132.183}}, udp: true, tfo: false}
+  - {name: "🇯🇵 [openproxylist.com] vmess-JP", server: static.ubejiasu.top, port: 31518, type: vmess, uuid: 957d12d8-048d-4b57-b09c-f19d027484a0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: www.baidu.com}}, udp: true, tfo: false}
   - {name: "🇰🇷 [openproxylist.com] vmess-KR", server: chuncheon03.zgjok.com, port: 443, type: vmess, uuid: 81d5cac4-d039-4874-9a20-c391f580012d, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: chuncheon03.zgjok.com}}, udp: true, tfo: false}
-  - {name: "@filembad 2", server: mel.usdtbama.com, port: 8443, type: vmess, uuid: 12d886aa-2392-469c-98a5-ae7ba0cf3140, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 3", server: mel.usdtbama.com, port: 8443, type: vmess, uuid: 3b8749bf-e4b9-48e1-8f6e-297c695ea6b8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 4", server: mel.usdtbama.com, port: 8443, type: vmess, uuid: 3b8749bf-e4b9-48e1-8f6e-297c695ea6b8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇺🇸 [openproxylist.com] vmess-US", server: static.ubejiasu.top, port: 31517, type: vmess, uuid: 957d12d8-048d-4b57-b09c-f19d027484a0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: www.baidu.com}}, udp: true, tfo: false}
+  - {name: "@filembad 2", server: 143.204.111.65, port: 80, type: vmess, uuid: 2b893f18-fd37-415b-b3e9-a30a710e3668, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /wss, headers: {Host: d1c6766qu9kywf.cloudfront.net}}, udp: true, tfo: false}
+  - {name: "@v2rayconfigamir 1704", server: 159.89.29.136, port: 80, type: vmess, uuid: d20d6ede-433c-11ed-b81f-cfd905df9958, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /vmess, headers: {Host: cx.com}}, udp: true, tfo: false}
+  - {name: "@v2rayconfigamir 5023", server: 198.41.208.172, port: 443, type: vmess, uuid: 20e92881-5fb4-4b05-bc77-57929476dc69, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: sg-gcore-2.sharecentre.online, network: ws, ws-opts: {path: /shirker, headers: {Host: sg-gcore-2.sharecentre.online}}, udp: true, tfo: false}
+  - {name: "@filembad 3", server: mel.usdtbama.com, port: 8443, type: vmess, uuid: 096defea-3a54-4deb-a345-d0efc233db4c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 4", server: mel.usdtbama.com, port: 8443, type: vmess, uuid: 096defea-3a54-4deb-a345-d0efc233db4c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -17,8 +23,14 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - "@filembad"
+      - "@v2rayconfigamir 7969"
+      - "@v2rayconfigamir 3127"
+      - 🇯🇵 [openproxylist.com] vmess-JP
       - 🇰🇷 [openproxylist.com] vmess-KR
+      - 🇺🇸 [openproxylist.com] vmess-US
       - "@filembad 2"
+      - "@v2rayconfigamir 1704"
+      - "@v2rayconfigamir 5023"
       - "@filembad 3"
       - "@filembad 4"
   - name: ♻️ 自动选择
@@ -28,8 +40,14 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@filembad"
+      - "@v2rayconfigamir 7969"
+      - "@v2rayconfigamir 3127"
+      - 🇯🇵 [openproxylist.com] vmess-JP
       - 🇰🇷 [openproxylist.com] vmess-KR
+      - 🇺🇸 [openproxylist.com] vmess-US
       - "@filembad 2"
+      - "@v2rayconfigamir 1704"
+      - "@v2rayconfigamir 5023"
       - "@filembad 3"
       - "@filembad 4"
   - name: 🌍 国外媒体
@@ -39,8 +57,14 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - "@filembad"
+      - "@v2rayconfigamir 7969"
+      - "@v2rayconfigamir 3127"
+      - 🇯🇵 [openproxylist.com] vmess-JP
       - 🇰🇷 [openproxylist.com] vmess-KR
+      - 🇺🇸 [openproxylist.com] vmess-US
       - "@filembad 2"
+      - "@v2rayconfigamir 1704"
+      - "@v2rayconfigamir 5023"
       - "@filembad 3"
       - "@filembad 4"
   - name: 📲 电报信息
@@ -49,8 +73,14 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@filembad"
+      - "@v2rayconfigamir 7969"
+      - "@v2rayconfigamir 3127"
+      - 🇯🇵 [openproxylist.com] vmess-JP
       - 🇰🇷 [openproxylist.com] vmess-KR
+      - 🇺🇸 [openproxylist.com] vmess-US
       - "@filembad 2"
+      - "@v2rayconfigamir 1704"
+      - "@v2rayconfigamir 5023"
       - "@filembad 3"
       - "@filembad 4"
   - name: Ⓜ️ 微软服务
@@ -59,8 +89,14 @@ proxy-groups:
       - 🎯 全球直连
       - 🚀 节点选择
       - "@filembad"
+      - "@v2rayconfigamir 7969"
+      - "@v2rayconfigamir 3127"
+      - 🇯🇵 [openproxylist.com] vmess-JP
       - 🇰🇷 [openproxylist.com] vmess-KR
+      - 🇺🇸 [openproxylist.com] vmess-US
       - "@filembad 2"
+      - "@v2rayconfigamir 1704"
+      - "@v2rayconfigamir 5023"
       - "@filembad 3"
       - "@filembad 4"
   - name: 🍎 苹果服务
@@ -69,8 +105,14 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@filembad"
+      - "@v2rayconfigamir 7969"
+      - "@v2rayconfigamir 3127"
+      - 🇯🇵 [openproxylist.com] vmess-JP
       - 🇰🇷 [openproxylist.com] vmess-KR
+      - 🇺🇸 [openproxylist.com] vmess-US
       - "@filembad 2"
+      - "@v2rayconfigamir 1704"
+      - "@v2rayconfigamir 5023"
       - "@filembad 3"
       - "@filembad 4"
   - name: 🎯 全球直连
@@ -101,8 +143,14 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - "@filembad"
+      - "@v2rayconfigamir 7969"
+      - "@v2rayconfigamir 3127"
+      - 🇯🇵 [openproxylist.com] vmess-JP
       - 🇰🇷 [openproxylist.com] vmess-KR
+      - 🇺🇸 [openproxylist.com] vmess-US
       - "@filembad 2"
+      - "@v2rayconfigamir 1704"
+      - "@v2rayconfigamir 5023"
       - "@filembad 3"
       - "@filembad 4"
 rules:

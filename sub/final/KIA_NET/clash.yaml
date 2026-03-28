@@ -465,7 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: حجم کم ☄️, server: rz.TheRetroVip.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 910fac92-8630-4a74-a22b-9f8efb398443, host: rz.TheRetroVip.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "[🇹🇷]", server: 77.83.245.135, port: 34205, type: vless, tls: true, packet-encoding: xudp, uuid: bc6f9208-ba56-4678-a29c-afc8b8af9b89, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - حجم کم ☄️
+      - "[🇹🇷]"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - حجم کم ☄️
+      - "[🇹🇷]"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - حجم کم ☄️
+      - "[🇹🇷]"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - حجم کم ☄️
+      - "[🇹🇷]"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - حجم کم ☄️
+      - "[🇹🇷]"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - حجم کم ☄️
+      - "[🇹🇷]"
   - name: دانلود منیجر 📥
     type: select
     proxies:
