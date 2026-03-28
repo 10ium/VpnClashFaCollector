@@ -6,11 +6,10 @@ log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
   - {name: "@filembad", server: shop.khalijvps.com, port: 2154, type: vmess, uuid: 523e10a2-ecfd-4a63-9c4b-d9c488140a7a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "🇳🇱 [openproxylist.com] vmess-NL", server: v30.hdacd.com, port: 30830, type: vmess, uuid: cbb3f877-d1fb-344c-87a9-d153bffd5484, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇰🇷 [openproxylist.com] vmess-KR", server: chuncheon03.zgjok.com, port: 443, type: vmess, uuid: 81d5cac4-d039-4874-9a20-c391f580012d, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: chuncheon03.zgjok.com}}, udp: true, tfo: false}
   - {name: "@filembad 2", server: mel.usdtbama.com, port: 8443, type: vmess, uuid: 12d886aa-2392-469c-98a5-ae7ba0cf3140, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 3", server: mel.usdtbama.com, port: 8443, type: vmess, uuid: 12d886aa-2392-469c-98a5-ae7ba0cf3140, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 3", server: mel.usdtbama.com, port: 8443, type: vmess, uuid: 3b8749bf-e4b9-48e1-8f6e-297c695ea6b8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@filembad 4", server: mel.usdtbama.com, port: 8443, type: vmess, uuid: 3b8749bf-e4b9-48e1-8f6e-297c695ea6b8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 5", server: mel.usdtbama.com, port: 8443, type: vmess, uuid: 3b8749bf-e4b9-48e1-8f6e-297c695ea6b8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -18,11 +17,10 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - "@filembad"
-      - 🇳🇱 [openproxylist.com] vmess-NL
+      - 🇰🇷 [openproxylist.com] vmess-KR
       - "@filembad 2"
       - "@filembad 3"
       - "@filembad 4"
-      - "@filembad 5"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -30,11 +28,10 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@filembad"
-      - 🇳🇱 [openproxylist.com] vmess-NL
+      - 🇰🇷 [openproxylist.com] vmess-KR
       - "@filembad 2"
       - "@filembad 3"
       - "@filembad 4"
-      - "@filembad 5"
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -42,44 +39,40 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - "@filembad"
-      - 🇳🇱 [openproxylist.com] vmess-NL
+      - 🇰🇷 [openproxylist.com] vmess-KR
       - "@filembad 2"
       - "@filembad 3"
       - "@filembad 4"
-      - "@filembad 5"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@filembad"
-      - 🇳🇱 [openproxylist.com] vmess-NL
+      - 🇰🇷 [openproxylist.com] vmess-KR
       - "@filembad 2"
       - "@filembad 3"
       - "@filembad 4"
-      - "@filembad 5"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - "@filembad"
-      - 🇳🇱 [openproxylist.com] vmess-NL
+      - 🇰🇷 [openproxylist.com] vmess-KR
       - "@filembad 2"
       - "@filembad 3"
       - "@filembad 4"
-      - "@filembad 5"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@filembad"
-      - 🇳🇱 [openproxylist.com] vmess-NL
+      - 🇰🇷 [openproxylist.com] vmess-KR
       - "@filembad 2"
       - "@filembad 3"
       - "@filembad 4"
-      - "@filembad 5"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -108,11 +101,10 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - "@filembad"
-      - 🇳🇱 [openproxylist.com] vmess-NL
+      - 🇰🇷 [openproxylist.com] vmess-KR
       - "@filembad 2"
       - "@filembad 3"
       - "@filembad 4"
-      - "@filembad 5"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

@@ -465,11 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 1-hamedvpns, server: 142.171.65.106, port: 8388, type: ss, cipher: 2022-blake3-aes-128-gcm, password: ASMkCw/SMA8MzZK8tv5vNw==:ASMkCw/SMA8MzZK8tv5vNw==, udp: true, tfo: false}
-  - {name: 4, server: 51.89.119.213, port: 11201, type: ss, cipher: chacha20-ietf-poly1305, password: 15b0573830081d01, udp: true, tfo: false}
-  - {name: 2, server: tinkered-pennies-puppies.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: hbGrpfvNrJsUmKmPbR3iY2, udp: true, tfo: false}
-  - {name: 3, server: 82.38.31.62, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
-  - {name: hp71, server: g1-de2-user.a1mshop.ir, port: 14300, type: vless, tls: true, packet-encoding: xudp, uuid: 3104a981-857e-4e2d-8d58-86e06a33b7f5, host: aparat.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hamedvpns_2`, server: ir.gafe-lorbad.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8e0a63a9-e44c-42f3-8274-0cd1f282e3e7, host: ir.gafe-lorbad.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hamedvpns_1`, server: demo.fllanagan.shop, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a72f055b-8929-4947-bbcd-1eb567e1f69e, host: demo.fllanagan.shop, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,33 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 1-hamedvpns
-      - 4
-      - 2
-      - 3
-      - hp71
+      - hamedvpns_2`
+      - hamedvpns_1`
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 1-hamedvpns
-      - 4
-      - 2
-      - 3
-      - hp71
+      - hamedvpns_2`
+      - hamedvpns_1`
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 1-hamedvpns
-      - 4
-      - 2
-      - 3
-      - hp71
+      - hamedvpns_2`
+      - hamedvpns_1`
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -528,33 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 1-hamedvpns
-      - 4
-      - 2
-      - 3
-      - hp71
+      - hamedvpns_2`
+      - hamedvpns_1`
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 1-hamedvpns
-      - 4
-      - 2
-      - 3
-      - hp71
+      - hamedvpns_2`
+      - hamedvpns_1`
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 1-hamedvpns
-      - 4
-      - 2
-      - 3
-      - hp71
+      - hamedvpns_2`
+      - hamedvpns_1`
   - name: دانلود منیجر 📥
     type: select
     proxies:
