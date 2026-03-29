@@ -5,67 +5,88 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "***🛜***-@SPEEDS_VPN1`", server: vasl2.kaiserping.site, port: 9096, type: vless, tls: true, packet-encoding: xudp, uuid: 427fc44d-ae6c-48b0-ab80-c645699b38a5, host: "telewebion.com,+ua.yektanet.com", path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "***🐦‍🔥***-@SPEEDS_VPN", server: 185.83.182.83, port: 45433, type: vless, tls: true, packet-encoding: xudp, uuid: 82154867-611d-48a6-92a5-c3eae466b07c, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "***🐦‍🔥***-@SPEEDS_VPN`", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: d8680ca0-b97c-40cf-9726-16c362eadf88, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: alfred-af5ad8949d-alfred13.apps.ir-central1.arvancaas.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "***🐦‍🔥***-@SPEEDS_VPN 2", server: emergency2.layer-ziro.ir, port: 2002, type: vless, tls: true, packet-encoding: xudp, uuid: f6f63745-ec4a-4fa7-bac4-04aa571a4ae0, host: anten.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN", server: ir.gafe-lorbad.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4f93c1f9-6dbf-4103-bfa7-2239105ae9d6, host: ir.gafe-lorbad.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN`", server: 193.58.119.134, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 649a9575-21d6-4887-b4c6-73019dcfb0a3, host: google.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN 2", server: 185.83.182.83, port: 45433, type: vless, tls: true, packet-encoding: xudp, uuid: 82154867-611d-48a6-92a5-c3eae466b07c, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN 3", server: jsv-ir2.randino.ir, port: 9624, type: vless, tls: true, packet-encoding: xudp, uuid: ca6e4902-1e1f-11f1-8d30-2ddfba49052f, host: jsv-ir2.randino.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN` 2", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: d8680ca0-b97c-40cf-9726-16c362eadf88, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: alfred-af5ad8949d-alfred13.apps.ir-central1.arvancaas.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN 4", server: grok.com, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: e0c50817-86dd-4ee1-bca3-6e296d85dd59, servername: blouck-de.gozarcloud.ir, network: grpc, grpc-opts: {grpc-mode: multi, grpc-service-name: Love}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN 5", server: emergency2.layer-ziro.ir, port: 2002, type: vless, tls: true, packet-encoding: xudp, uuid: f6f63745-ec4a-4fa7-bac4-04aa571a4ae0, host: anten.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "***🛜***-@SPEEDS_VPN1`"
       - "***🐦‍🔥***-@SPEEDS_VPN"
       - "***🐦‍🔥***-@SPEEDS_VPN`"
       - "***🐦‍🔥***-@SPEEDS_VPN 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN 4"
+      - "***🐦‍🔥***-@SPEEDS_VPN 5"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "***🛜***-@SPEEDS_VPN1`"
       - "***🐦‍🔥***-@SPEEDS_VPN"
       - "***🐦‍🔥***-@SPEEDS_VPN`"
       - "***🐦‍🔥***-@SPEEDS_VPN 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN 4"
+      - "***🐦‍🔥***-@SPEEDS_VPN 5"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "***🛜***-@SPEEDS_VPN1`"
       - "***🐦‍🔥***-@SPEEDS_VPN"
       - "***🐦‍🔥***-@SPEEDS_VPN`"
       - "***🐦‍🔥***-@SPEEDS_VPN 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN 4"
+      - "***🐦‍🔥***-@SPEEDS_VPN 5"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "***🛜***-@SPEEDS_VPN1`"
       - "***🐦‍🔥***-@SPEEDS_VPN"
       - "***🐦‍🔥***-@SPEEDS_VPN`"
       - "***🐦‍🔥***-@SPEEDS_VPN 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN 4"
+      - "***🐦‍🔥***-@SPEEDS_VPN 5"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "***🛜***-@SPEEDS_VPN1`"
       - "***🐦‍🔥***-@SPEEDS_VPN"
       - "***🐦‍🔥***-@SPEEDS_VPN`"
       - "***🐦‍🔥***-@SPEEDS_VPN 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN 4"
+      - "***🐦‍🔥***-@SPEEDS_VPN 5"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "***🛜***-@SPEEDS_VPN1`"
       - "***🐦‍🔥***-@SPEEDS_VPN"
       - "***🐦‍🔥***-@SPEEDS_VPN`"
       - "***🐦‍🔥***-@SPEEDS_VPN 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN 4"
+      - "***🐦‍🔥***-@SPEEDS_VPN 5"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -93,10 +114,13 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "***🛜***-@SPEEDS_VPN1`"
       - "***🐦‍🔥***-@SPEEDS_VPN"
       - "***🐦‍🔥***-@SPEEDS_VPN`"
       - "***🐦‍🔥***-@SPEEDS_VPN 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN 4"
+      - "***🐦‍🔥***-@SPEEDS_VPN 5"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

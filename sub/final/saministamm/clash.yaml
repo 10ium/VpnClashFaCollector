@@ -466,6 +466,7 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: "@saministamm تلگرام ما", server: 188.121.121.250, port: 59240, type: vless, tls: true, packet-encoding: xudp, uuid: 7e4a5d22-7089-4be7-8e8a-be4e17f5216d, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ABOLICY_188356🇩🇪, server: mel.usdtbama.com, port: 8443, type: vmess, uuid: 817b8c5c-b190-42dd-aa36-c0e4182f29d9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,6 +484,7 @@ proxy-groups:
     type: select
     proxies:
       - "@saministamm تلگرام ما"
+      - ABOLICY_188356🇩🇪
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -490,6 +492,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@saministamm تلگرام ما"
+      - ABOLICY_188356🇩🇪
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -497,6 +500,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@saministamm تلگرام ما"
+      - ABOLICY_188356🇩🇪
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -513,6 +517,7 @@ proxy-groups:
     interval: 600
     proxies:
       - "@saministamm تلگرام ما"
+      - ABOLICY_188356🇩🇪
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -520,6 +525,7 @@ proxy-groups:
     interval: 600
     proxies:
       - "@saministamm تلگرام ما"
+      - ABOLICY_188356🇩🇪
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -527,6 +533,7 @@ proxy-groups:
     interval: 600
     proxies:
       - "@saministamm تلگرام ما"
+      - ABOLICY_188356🇩🇪
   - name: دانلود منیجر 📥
     type: select
     proxies:

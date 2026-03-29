@@ -6,6 +6,7 @@ log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
   - {name: "@saministamm تلگرام ما", server: 188.121.121.250, port: 59240, type: vless, tls: true, packet-encoding: xudp, uuid: 7e4a5d22-7089-4be7-8e8a-be4e17f5216d, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ABOLICY_188356🇩🇪, server: mel.usdtbama.com, port: 8443, type: vmess, uuid: 817b8c5c-b190-42dd-aa36-c0e4182f29d9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -13,6 +14,7 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - "@saministamm تلگرام ما"
+      - ABOLICY_188356🇩🇪
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -20,6 +22,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@saministamm تلگرام ما"
+      - ABOLICY_188356🇩🇪
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -27,24 +30,28 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - "@saministamm تلگرام ما"
+      - ABOLICY_188356🇩🇪
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@saministamm تلگرام ما"
+      - ABOLICY_188356🇩🇪
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - "@saministamm تلگرام ما"
+      - ABOLICY_188356🇩🇪
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@saministamm تلگرام ما"
+      - ABOLICY_188356🇩🇪
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -73,6 +80,7 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - "@saministamm تلگرام ما"
+      - ABOLICY_188356🇩🇪
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
