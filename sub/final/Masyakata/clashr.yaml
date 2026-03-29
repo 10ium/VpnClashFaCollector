@@ -5,53 +5,67 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@v2rayconfigamir 6920`", server: outgoing-ladybird.rooster465.autos, port: 443, type: trojan, password: IL37892054, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2rayconfigamir 3320`", server: top-goshawk.rooster465.autos, port: 443, type: trojan, password: WF42809561, sni: top-goshawk.rooster465.autos, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "Telegram:  @Zero_Tunnel 🌸`", server: snapp.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 19666df6-009d-4426-8f05-7e19b7dc9da9, servername: my.simin123.shop, network: ws, ws-opts: {path: /, headers: {Host: my.simin123.shop}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "Telegram:  @Zero_Tunnel", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 26a8a48e-262c-4e9a-8717-f8976f7cfea2, network: ws, ws-opts: {path: "/DL?ed=2053", headers: {Host: m4.articler.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "Telegram:  @Zero_Tunnel`", server: snapp.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4d0e0ed6-188a-43cd-a1ee-57c987a02e4b, servername: kharidfollower.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: kharidfollower.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "Telegram:  @Zero_Tunnel` 2", server: 185.143.234.122, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: d29cf368-c2d3-4d72-bbc0-cb4588039226, network: ws, ws-opts: {path: /, headers: {Host: dl.koremusic.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@v2rayconfigamir 6920`"
-      - "@v2rayconfigamir 3320`"
+      - "Telegram:  @Zero_Tunnel 🌸`"
+      - "Telegram:  @Zero_Tunnel"
+      - "Telegram:  @Zero_Tunnel`"
+      - "Telegram:  @Zero_Tunnel` 2"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@v2rayconfigamir 6920`"
-      - "@v2rayconfigamir 3320`"
+      - "Telegram:  @Zero_Tunnel 🌸`"
+      - "Telegram:  @Zero_Tunnel"
+      - "Telegram:  @Zero_Tunnel`"
+      - "Telegram:  @Zero_Tunnel` 2"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@v2rayconfigamir 6920`"
-      - "@v2rayconfigamir 3320`"
+      - "Telegram:  @Zero_Tunnel 🌸`"
+      - "Telegram:  @Zero_Tunnel"
+      - "Telegram:  @Zero_Tunnel`"
+      - "Telegram:  @Zero_Tunnel` 2"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@v2rayconfigamir 6920`"
-      - "@v2rayconfigamir 3320`"
+      - "Telegram:  @Zero_Tunnel 🌸`"
+      - "Telegram:  @Zero_Tunnel"
+      - "Telegram:  @Zero_Tunnel`"
+      - "Telegram:  @Zero_Tunnel` 2"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@v2rayconfigamir 6920`"
-      - "@v2rayconfigamir 3320`"
+      - "Telegram:  @Zero_Tunnel 🌸`"
+      - "Telegram:  @Zero_Tunnel"
+      - "Telegram:  @Zero_Tunnel`"
+      - "Telegram:  @Zero_Tunnel` 2"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@v2rayconfigamir 6920`"
-      - "@v2rayconfigamir 3320`"
+      - "Telegram:  @Zero_Tunnel 🌸`"
+      - "Telegram:  @Zero_Tunnel"
+      - "Telegram:  @Zero_Tunnel`"
+      - "Telegram:  @Zero_Tunnel` 2"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -79,8 +93,10 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@v2rayconfigamir 6920`"
-      - "@v2rayconfigamir 3320`"
+      - "Telegram:  @Zero_Tunnel 🌸`"
+      - "Telegram:  @Zero_Tunnel"
+      - "Telegram:  @Zero_Tunnel`"
+      - "Telegram:  @Zero_Tunnel` 2"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

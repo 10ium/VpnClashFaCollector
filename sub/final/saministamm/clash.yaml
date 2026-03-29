@@ -466,7 +466,8 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: "@saministamm", server: 185.143.233.235, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 08238f73-88ae-49e0-81ad-aa0cf0e901d9, servername: endpoint.parhamm2.ir, network: ws, ws-opts: {path: /, headers: {Host: endpoint.parhamm2.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@saministamm تلگرام ما", server: 188.121.121.250, port: 59240, type: vless, tls: true, packet-encoding: xudp, uuid: 7e4a5d22-7089-4be7-8e8a-be4e17f5216d, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: https://t.me/saministamm, server: shop.webchipro2.ir, port: 7777, type: vless, tls: true, packet-encoding: xudp, uuid: 12652aba-cb8a-4b26-9bb7-748605b3ee57, host: shop.webchipro2.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: saministamm, server: shop.webchipro2.ir, port: 7777, type: vless, tls: true, packet-encoding: xudp, uuid: 12652aba-cb8a-4b26-9bb7-748605b3ee57, host: shop.webchipro2.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: ABOLICY_188356🇩🇪, server: mel.usdtbama.com, port: 8443, type: vmess, uuid: 817b8c5c-b190-42dd-aa36-c0e4182f29d9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -485,7 +486,8 @@ proxy-groups:
     type: select
     proxies:
       - "@saministamm"
-      - "@saministamm تلگرام ما"
+      - https://t.me/saministamm
+      - saministamm
       - ABOLICY_188356🇩🇪
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -494,7 +496,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@saministamm"
-      - "@saministamm تلگرام ما"
+      - https://t.me/saministamm
+      - saministamm
       - ABOLICY_188356🇩🇪
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -503,7 +506,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@saministamm"
-      - "@saministamm تلگرام ما"
+      - https://t.me/saministamm
+      - saministamm
       - ABOLICY_188356🇩🇪
   - name: اتصال پایدار 🔗
     type: url-test
@@ -521,7 +525,8 @@ proxy-groups:
     interval: 600
     proxies:
       - "@saministamm"
-      - "@saministamm تلگرام ما"
+      - https://t.me/saministamm
+      - saministamm
       - ABOLICY_188356🇩🇪
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -530,7 +535,8 @@ proxy-groups:
     interval: 600
     proxies:
       - "@saministamm"
-      - "@saministamm تلگرام ما"
+      - https://t.me/saministamm
+      - saministamm
       - ABOLICY_188356🇩🇪
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -539,7 +545,8 @@ proxy-groups:
     interval: 600
     proxies:
       - "@saministamm"
-      - "@saministamm تلگرام ما"
+      - https://t.me/saministamm
+      - saministamm
       - ABOLICY_188356🇩🇪
   - name: دانلود منیجر 📥
     type: select

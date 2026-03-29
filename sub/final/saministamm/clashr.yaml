@@ -6,7 +6,8 @@ log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
   - {name: "@saministamm", server: 185.143.233.235, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 08238f73-88ae-49e0-81ad-aa0cf0e901d9, servername: endpoint.parhamm2.ir, network: ws, ws-opts: {path: /, headers: {Host: endpoint.parhamm2.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@saministamm تلگرام ما", server: 188.121.121.250, port: 59240, type: vless, tls: true, packet-encoding: xudp, uuid: 7e4a5d22-7089-4be7-8e8a-be4e17f5216d, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: https://t.me/saministamm, server: shop.webchipro2.ir, port: 7777, type: vless, tls: true, packet-encoding: xudp, uuid: 12652aba-cb8a-4b26-9bb7-748605b3ee57, host: shop.webchipro2.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: saministamm, server: shop.webchipro2.ir, port: 7777, type: vless, tls: true, packet-encoding: xudp, uuid: 12652aba-cb8a-4b26-9bb7-748605b3ee57, host: shop.webchipro2.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: ABOLICY_188356🇩🇪, server: mel.usdtbama.com, port: 8443, type: vmess, uuid: 817b8c5c-b190-42dd-aa36-c0e4182f29d9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
@@ -15,7 +16,8 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - "@saministamm"
-      - "@saministamm تلگرام ما"
+      - https://t.me/saministamm
+      - saministamm
       - ABOLICY_188356🇩🇪
   - name: ♻️ 自动选择
     type: url-test
@@ -24,7 +26,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@saministamm"
-      - "@saministamm تلگرام ما"
+      - https://t.me/saministamm
+      - saministamm
       - ABOLICY_188356🇩🇪
   - name: 🌍 国外媒体
     type: select
@@ -33,7 +36,8 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - "@saministamm"
-      - "@saministamm تلگرام ما"
+      - https://t.me/saministamm
+      - saministamm
       - ABOLICY_188356🇩🇪
   - name: 📲 电报信息
     type: select
@@ -41,7 +45,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@saministamm"
-      - "@saministamm تلگرام ما"
+      - https://t.me/saministamm
+      - saministamm
       - ABOLICY_188356🇩🇪
   - name: Ⓜ️ 微软服务
     type: select
@@ -49,7 +54,8 @@ proxy-groups:
       - 🎯 全球直连
       - 🚀 节点选择
       - "@saministamm"
-      - "@saministamm تلگرام ما"
+      - https://t.me/saministamm
+      - saministamm
       - ABOLICY_188356🇩🇪
   - name: 🍎 苹果服务
     type: select
@@ -57,7 +63,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@saministamm"
-      - "@saministamm تلگرام ما"
+      - https://t.me/saministamm
+      - saministamm
       - ABOLICY_188356🇩🇪
   - name: 🎯 全球直连
     type: select
@@ -87,7 +94,8 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - "@saministamm"
-      - "@saministamm تلگرام ما"
+      - https://t.me/saministamm
+      - saministamm
       - ABOLICY_188356🇩🇪
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
