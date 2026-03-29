@@ -465,8 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: meliproxyy, server: tinkered-pennies-puppies.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: hbGrpfvNrJsUmKmPbR3iY2, udp: true, tfo: false}
-  - {name: meliproxyy 2, server: 82.38.31.62, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
+  - {name: "@meliproxyy`", server: my4.tehranhost.mom, port: 37004, type: vless, tls: true, packet-encoding: xudp, uuid: 88df4b42-f464-4a5d-b239-031cb613fd20, servername: www.digikala.com, host: www.digikala.com, path: /, reality-opts: {public-key: vxdmULi_cO7dha2aQnsjSViARO15hvI9HWyo0pVPlkQ, short-id: c385}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - meliproxyy
-      - meliproxyy 2
+      - "@meliproxyy`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - meliproxyy
-      - meliproxyy 2
+      - "@meliproxyy`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - meliproxyy
-      - meliproxyy 2
+      - "@meliproxyy`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - meliproxyy
-      - meliproxyy 2
+      - "@meliproxyy`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - meliproxyy
-      - meliproxyy 2
+      - "@meliproxyy`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - meliproxyy
-      - meliproxyy 2
+      - "@meliproxyy`"
   - name: دانلود منیجر 📥
     type: select
     proxies:

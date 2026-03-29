@@ -5,6 +5,9 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: ✅@tel_melli✅4, server: 2.188.227.168, port: 36729, type: vless, tls: true, packet-encoding: xudp, uuid: 7c4890be-57ec-4900-9bab-50dfd927021a, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ✅@tel_melli✅3, server: 2.188.227.168, port: 36729, type: vless, tls: true, packet-encoding: xudp, uuid: af4212b2-14e9-4431-9112-02eedf88c1da, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ✅@tel_melli✅2, server: 2.188.227.168, port: 36729, type: vless, tls: true, packet-encoding: xudp, uuid: b358bf1e-cb40-4791-8017-0eb7e70d72ef, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: dlc-new11.persianpinggame.com:5111, server: dlc-new11.persianpinggame.com, port: 5111, type: vless, tls: true, packet-encoding: xudp, uuid: d061c520-1cdb-11f1-972f-92000723b4ab, host: myket.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
@@ -12,6 +15,9 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - ✅@tel_melli✅4
+      - ✅@tel_melli✅3
+      - ✅@tel_melli✅2
       - dlc-new11.persianpinggame.com:5111
   - name: ♻️ 自动选择
     type: url-test
@@ -19,6 +25,9 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - ✅@tel_melli✅4
+      - ✅@tel_melli✅3
+      - ✅@tel_melli✅2
       - dlc-new11.persianpinggame.com:5111
   - name: 🌍 国外媒体
     type: select
@@ -26,24 +35,36 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - ✅@tel_melli✅4
+      - ✅@tel_melli✅3
+      - ✅@tel_melli✅2
       - dlc-new11.persianpinggame.com:5111
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - ✅@tel_melli✅4
+      - ✅@tel_melli✅3
+      - ✅@tel_melli✅2
       - dlc-new11.persianpinggame.com:5111
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - ✅@tel_melli✅4
+      - ✅@tel_melli✅3
+      - ✅@tel_melli✅2
       - dlc-new11.persianpinggame.com:5111
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - ✅@tel_melli✅4
+      - ✅@tel_melli✅3
+      - ✅@tel_melli✅2
       - dlc-new11.persianpinggame.com:5111
   - name: 🎯 全球直连
     type: select
@@ -72,6 +93,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - ✅@tel_melli✅4
+      - ✅@tel_melli✅3
+      - ✅@tel_melli✅2
       - dlc-new11.persianpinggame.com:5111
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
