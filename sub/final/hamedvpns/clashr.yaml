@@ -5,53 +5,46 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: hamedvpns_2`, server: ir.gafe-lorbad.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8e0a63a9-e44c-42f3-8274-0cd1f282e3e7, host: ir.gafe-lorbad.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: hamedvpns_1`, server: demo.fllanagan.shop, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a72f055b-8929-4947-bbcd-1eb567e1f69e, host: demo.fllanagan.shop, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 217.25.56.173:443, server: 217.25.56.173, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 0b2fe47a-f51c-4e00-85ba-eeae70addc80, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - hamedvpns_2`
-      - hamedvpns_1`
+      - 217.25.56.173:443
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - hamedvpns_2`
-      - hamedvpns_1`
+      - 217.25.56.173:443
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - hamedvpns_2`
-      - hamedvpns_1`
+      - 217.25.56.173:443
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - hamedvpns_2`
-      - hamedvpns_1`
+      - 217.25.56.173:443
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - hamedvpns_2`
-      - hamedvpns_1`
+      - 217.25.56.173:443
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - hamedvpns_2`
-      - hamedvpns_1`
+      - 217.25.56.173:443
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -79,8 +72,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - hamedvpns_2`
-      - hamedvpns_1`
+      - 217.25.56.173:443
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
