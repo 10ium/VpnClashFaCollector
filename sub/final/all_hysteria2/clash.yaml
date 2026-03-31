@@ -466,7 +466,6 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: ✊97@oneclickvpnkeys, server: 216.236.26.19, port: 49930, type: hysteria2, ports: 49930, password: bb7d8763-4afa-465f-b066-35786781ced2, sni: www.bing.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ✊8@oneclickvpnkeys, server: 195.154.54.131, port: 40022, type: hysteria2, ports: 40022, password: dongtaiwang.com, sni: www.microsoft.com, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 93@oneclickvpnkeys, server: 130.61.50.75, port: 6443, type: hysteria2, ports: 6443, password: zhangyang, sni: dash.cloudflare.com, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -485,7 +484,6 @@ proxy-groups:
     type: select
     proxies:
       - ✊97@oneclickvpnkeys
-      - ✊8@oneclickvpnkeys
       - 93@oneclickvpnkeys
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -494,7 +492,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - ✊97@oneclickvpnkeys
-      - ✊8@oneclickvpnkeys
       - 93@oneclickvpnkeys
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -503,7 +500,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - ✊97@oneclickvpnkeys
-      - ✊8@oneclickvpnkeys
       - 93@oneclickvpnkeys
   - name: اتصال پایدار 🔗
     type: url-test
@@ -521,7 +517,6 @@ proxy-groups:
     interval: 600
     proxies:
       - ✊97@oneclickvpnkeys
-      - ✊8@oneclickvpnkeys
       - 93@oneclickvpnkeys
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -530,7 +525,6 @@ proxy-groups:
     interval: 600
     proxies:
       - ✊97@oneclickvpnkeys
-      - ✊8@oneclickvpnkeys
       - 93@oneclickvpnkeys
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -539,7 +533,6 @@ proxy-groups:
     interval: 600
     proxies:
       - ✊97@oneclickvpnkeys
-      - ✊8@oneclickvpnkeys
       - 93@oneclickvpnkeys
   - name: دانلود منیجر 📥
     type: select

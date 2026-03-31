@@ -5,46 +5,74 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: "`", server: www.genshinclub.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 1667c559-b95b-490e-a45b-4c3ea2b1c52d, servername: movie.genshinclub.ir, host: movie.genshinclub.ir, path: /, reality-opts: {public-key: 7RnHm0iBdV4mH-3xQ-2urtMp6OMPJ0fGRA3RBV8dino, short-id: f04818bf}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2raycan", server: 78.39.56.3, port: 18828, type: vless, tls: true, packet-encoding: xudp, uuid: 2a302e1c-6386-420d-b702-ef78c07e3f0a, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@V2RTOX", server: null.pssilver.xyz, port: 51528, type: vless, tls: true, packet-encoding: xudp, uuid: 4390a864-48b4-4604-87fc-70349a110c28, host: null.pssilver.xyz, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 193.151.130.62:15011, server: 193.151.130.62, port: 15011, type: vless, tls: true, packet-encoding: xudp, uuid: 789db5da-ddf5-4922-b55a-8e91ea34b6a6, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ir.sjdpictures.ir:19305, server: ir.sjdpictures.ir, port: 19305, type: vless, tls: true, packet-encoding: xudp, uuid: 84e65d85-cd6b-48c8-ad80-255b3dea4a9d, host: telewebion.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - "`"
+      - "@v2raycan"
+      - "@V2RTOX"
       - 193.151.130.62:15011
+      - ir.sjdpictures.ir:19305
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - "`"
+      - "@v2raycan"
+      - "@V2RTOX"
       - 193.151.130.62:15011
+      - ir.sjdpictures.ir:19305
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - "`"
+      - "@v2raycan"
+      - "@V2RTOX"
       - 193.151.130.62:15011
+      - ir.sjdpictures.ir:19305
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - "`"
+      - "@v2raycan"
+      - "@V2RTOX"
       - 193.151.130.62:15011
+      - ir.sjdpictures.ir:19305
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - "`"
+      - "@v2raycan"
+      - "@V2RTOX"
       - 193.151.130.62:15011
+      - ir.sjdpictures.ir:19305
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - "`"
+      - "@v2raycan"
+      - "@V2RTOX"
       - 193.151.130.62:15011
+      - ir.sjdpictures.ir:19305
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +100,11 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - "`"
+      - "@v2raycan"
+      - "@V2RTOX"
       - 193.151.130.62:15011
+      - ir.sjdpictures.ir:19305
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
