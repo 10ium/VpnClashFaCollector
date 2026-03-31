@@ -465,13 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 4, server: shop.webchipro2.ir, port: 7777, type: vless, tls: true, packet-encoding: xudp, uuid: 12652aba-cb8a-4b26-9bb7-748605b3ee57, host: shop.webchipro2.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 1, server: 188.213.199.35, port: 40446, type: vless, tls: true, packet-encoding: xudp, uuid: 21f4cdc7-ad07-4cc5-be4d-f033c25d3da1, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 2, server: 45.131.209.130, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 57ba2ab1-a283-42eb-82ee-dc3561a805b8, servername: ovhwuxian.pai50288.uk, network: ws, ws-opts: {path: /57ba2ab1, headers: {Host: ovhwuxian.pai50288.uk}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: hp71, server: 193.151.130.62, port: 15011, type: vless, tls: true, packet-encoding: xudp, uuid: 789db5da-ddf5-4922-b55a-8e91ea34b6a6, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 5, server: jll.az99x.info, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 80a4cead-eef6-41b7-bfdb-cad1564fbcc8, network: ws, ws-opts: {path: /, headers: {Host: jll.az99x.info}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: hamedp71`, server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 8129299b-42a7-43a5-b8c4-2c15efadf198, network: ws, ws-opts: {path: /, headers: {Host: ar.liarashop.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 3, server: back.avenprime.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: c395f87b-2f6e-4815-b026-db825f7e1e8a, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: back.avenprime.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 33, server: 185.143.233.200, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a32240a5-ad06-4075-954b-2fcdd6df5616, servername: alef.ir.oadeflantrogm.airasiadl.com, network: ws, ws-opts: {path: "/?ed=443", headers: {Host: alef.ir.oadeflantrogm.airasiadl.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -488,39 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 4
-      - 1
-      - 2
-      - hp71
-      - 5
-      - hamedp71`
-      - 3
+      - 33
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 4
-      - 1
-      - 2
-      - hp71
-      - 5
-      - hamedp71`
-      - 3
+      - 33
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 4
-      - 1
-      - 2
-      - hp71
-      - 5
-      - hamedp71`
-      - 3
+      - 33
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -536,39 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 4
-      - 1
-      - 2
-      - hp71
-      - 5
-      - hamedp71`
-      - 3
+      - 33
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 4
-      - 1
-      - 2
-      - hp71
-      - 5
-      - hamedp71`
-      - 3
+      - 33
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 4
-      - 1
-      - 2
-      - hp71
-      - 5
-      - hamedp71`
-      - 3
+      - 33
   - name: دانلود منیجر 📥
     type: select
     proxies:
