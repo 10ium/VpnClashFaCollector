@@ -465,10 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@saministamm.`", server: 24.cheetoz.top, port: 25494, type: vless, tls: true, packet-encoding: xudp, uuid: 09174b39-40f6-425a-8880-0bc2226a7ab6, host: 24.cheetoz.top, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: saministamm, server: 217.25.56.173, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 0b2fe47a-f51c-4e00-85ba-eeae70addc80, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@saministamm`", server: 193.151.130.62, port: 15011, type: vless, tls: true, packet-encoding: xudp, uuid: 789db5da-ddf5-4922-b55a-8e91ea34b6a6, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: saministamm 2, server: zit.leperfume.ir, port: 9999, type: vless, tls: true, packet-encoding: xudp, uuid: acfaa802-3dae-4b0e-910a-c2663d83caf6, host: zit.leperfume.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: saministamm 3, server: mel.usdtbama.com, port: 8443, type: vmess, uuid: e1d24906-0803-4ec8-ab94-e3da5ba99417, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: saministamm 4, server: mel.usdtbama.com, port: 8443, type: vmess, uuid: 397ba0d4-d9f4-46f4-b8af-063fbd5f35fd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,30 +486,33 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@saministamm.`"
       - saministamm
       - "@saministamm`"
       - saministamm 2
+      - saministamm 3
+      - saministamm 4
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@saministamm.`"
       - saministamm
       - "@saministamm`"
       - saministamm 2
+      - saministamm 3
+      - saministamm 4
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@saministamm.`"
       - saministamm
       - "@saministamm`"
       - saministamm 2
+      - saministamm 3
+      - saministamm 4
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -524,30 +528,33 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@saministamm.`"
       - saministamm
       - "@saministamm`"
       - saministamm 2
+      - saministamm 3
+      - saministamm 4
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@saministamm.`"
       - saministamm
       - "@saministamm`"
       - saministamm 2
+      - saministamm 3
+      - saministamm 4
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@saministamm.`"
       - saministamm
       - "@saministamm`"
       - saministamm 2
+      - saministamm 3
+      - saministamm 4
   - name: دانلود منیجر 📥
     type: select
     proxies:
