@@ -465,11 +465,16 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: azadnet04`, server: 15.237.102.198, port: 22224, type: vless, tls: true, packet-encoding: xudp, uuid: 05519058-d2ac-4f28-9e4a-2b2a1386749e, servername: trojan.burgerip.co.uk, network: ws, ws-opts: {path: /telegram-channel-vlessconfig, headers: {Host: trojan.burgerip.co.uk}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@peach_shekan", server: s10.x2fast.top, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 0763477d-7e67-49f1-a855-cdff82b59e43, servername: s10.x2fast.top, alpn: ["h2,http/1.1"], network: ws, ws-opts: {path: /, headers: {Host: s10.x2fast.top}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "`", server: www.genshinclub.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 1667c559-b95b-490e-a45b-4c3ea2b1c52d, servername: movie.genshinclub.ir, host: movie.genshinclub.ir, path: /, reality-opts: {public-key: 7RnHm0iBdV4mH-3xQ-2urtMp6OMPJ0fGRA3RBV8dino, short-id: f04818bf}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@v2raycan", server: 78.39.56.3, port: 18828, type: vless, tls: true, packet-encoding: xudp, uuid: 2a302e1c-6386-420d-b702-ef78c07e3f0a, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@V2RTOX", server: null.pssilver.xyz, port: 51528, type: vless, tls: true, packet-encoding: xudp, uuid: 4390a864-48b4-4604-87fc-70349a110c28, host: null.pssilver.xyz, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 193.151.130.62:15011, server: 193.151.130.62, port: 15011, type: vless, tls: true, packet-encoding: xudp, uuid: 789db5da-ddf5-4922-b55a-8e91ea34b6a6, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: ir.sjdpictures.ir:19305, server: ir.sjdpictures.ir, port: 19305, type: vless, tls: true, packet-encoding: xudp, uuid: 84e65d85-cd6b-48c8-ad80-255b3dea4a9d, host: telewebion.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: azadnet04` 2, server: 92.42.203.170, port: 5690, type: vless, tls: true, packet-encoding: xudp, uuid: a9c28cf3-1962-8824-1175-a69268a0e213, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Main-Tnx>, server: 2.188.239.136, port: 48481, type: vless, tls: true, packet-encoding: xudp, uuid: afc904cb-5f69-4519-8347-e3aeebd73425, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: iran.rojan.website:3222, server: iran.rojan.website, port: 3222, type: vless, tls: true, packet-encoding: xudp, uuid: b6cebf5c-b797-4286-9d01-b6d0e091fcad, host: iran.rojan.website, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: G10.PRODNSSPEED10.IR:2083, server: G10.PRODNSSPEED10.IR, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: c805b05e-339d-40e0-8787-432d97a27345, servername: data-frm2.netsnap.ir`, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: R8I9Yqu0DxpQB2NKCxLA, headers: {Host: data-frm2.netsnap.ir`}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,33 +491,48 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - azadnet04`
+      - "@peach_shekan"
       - "`"
       - "@v2raycan"
       - "@V2RTOX"
-      - 193.151.130.62:15011
       - ir.sjdpictures.ir:19305
+      - azadnet04` 2
+      - Main-Tnx>
+      - iran.rojan.website:3222
+      - G10.PRODNSSPEED10.IR:2083
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
+      - azadnet04`
+      - "@peach_shekan"
       - "`"
       - "@v2raycan"
       - "@V2RTOX"
-      - 193.151.130.62:15011
       - ir.sjdpictures.ir:19305
+      - azadnet04` 2
+      - Main-Tnx>
+      - iran.rojan.website:3222
+      - G10.PRODNSSPEED10.IR:2083
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
+      - azadnet04`
+      - "@peach_shekan"
       - "`"
       - "@v2raycan"
       - "@V2RTOX"
-      - 193.151.130.62:15011
       - ir.sjdpictures.ir:19305
+      - azadnet04` 2
+      - Main-Tnx>
+      - iran.rojan.website:3222
+      - G10.PRODNSSPEED10.IR:2083
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -528,33 +548,48 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - azadnet04`
+      - "@peach_shekan"
       - "`"
       - "@v2raycan"
       - "@V2RTOX"
-      - 193.151.130.62:15011
       - ir.sjdpictures.ir:19305
+      - azadnet04` 2
+      - Main-Tnx>
+      - iran.rojan.website:3222
+      - G10.PRODNSSPEED10.IR:2083
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - azadnet04`
+      - "@peach_shekan"
       - "`"
       - "@v2raycan"
       - "@V2RTOX"
-      - 193.151.130.62:15011
       - ir.sjdpictures.ir:19305
+      - azadnet04` 2
+      - Main-Tnx>
+      - iran.rojan.website:3222
+      - G10.PRODNSSPEED10.IR:2083
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - azadnet04`
+      - "@peach_shekan"
       - "`"
       - "@v2raycan"
       - "@V2RTOX"
-      - 193.151.130.62:15011
       - ir.sjdpictures.ir:19305
+      - azadnet04` 2
+      - Main-Tnx>
+      - iran.rojan.website:3222
+      - G10.PRODNSSPEED10.IR:2083
   - name: دانلود منیجر 📥
     type: select
     proxies:

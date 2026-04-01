@@ -7,6 +7,7 @@ external-controller: 127.0.0.1:9090
 proxies:
   - {name: "Telegram:  @Zero_Tunnel", server: 185.143.233.200, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 452462a4-ce90-458d-9da8-d2391d2e8eea, network: ws, ws-opts: {path: /, headers: {Host: a1.supreme-xfast.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 50GB | 04-v1- @unvisible_drops`, server: 185.143.234.200, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: dc6c6048-18dc-4758-a30b-c4341cf4519d, servername: alef.ir.oadeflantrogm.abrirmahan.com, network: ws, ws-opts: {path: "/?ed=443", headers: {Host: alef.ir.oadeflantrogm.abrirmahan.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2rayconfigamir 7753", server: 61.245.11.60, port: 80, type: vmess, uuid: a3e3a710-79f8-4ae0-b83c-607aab40d197, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /vmess/}, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -15,6 +16,7 @@ proxy-groups:
       - DIRECT
       - "Telegram:  @Zero_Tunnel"
       - 50GB | 04-v1- @unvisible_drops`
+      - "@v2rayconfigamir 7753"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -23,6 +25,7 @@ proxy-groups:
     proxies:
       - "Telegram:  @Zero_Tunnel"
       - 50GB | 04-v1- @unvisible_drops`
+      - "@v2rayconfigamir 7753"
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -31,6 +34,7 @@ proxy-groups:
       - 🎯 全球直连
       - "Telegram:  @Zero_Tunnel"
       - 50GB | 04-v1- @unvisible_drops`
+      - "@v2rayconfigamir 7753"
   - name: 📲 电报信息
     type: select
     proxies:
@@ -38,6 +42,7 @@ proxy-groups:
       - 🎯 全球直连
       - "Telegram:  @Zero_Tunnel"
       - 50GB | 04-v1- @unvisible_drops`
+      - "@v2rayconfigamir 7753"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -45,6 +50,7 @@ proxy-groups:
       - 🚀 节点选择
       - "Telegram:  @Zero_Tunnel"
       - 50GB | 04-v1- @unvisible_drops`
+      - "@v2rayconfigamir 7753"
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -52,6 +58,7 @@ proxy-groups:
       - 🎯 全球直连
       - "Telegram:  @Zero_Tunnel"
       - 50GB | 04-v1- @unvisible_drops`
+      - "@v2rayconfigamir 7753"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -81,6 +88,7 @@ proxy-groups:
       - ♻️ 自动选择
       - "Telegram:  @Zero_Tunnel"
       - 50GB | 04-v1- @unvisible_drops`
+      - "@v2rayconfigamir 7753"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
