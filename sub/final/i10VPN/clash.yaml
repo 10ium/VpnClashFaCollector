@@ -465,7 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: Psiphon - @i10VPN 1`, server: jll.az99x.info, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 80a4cead-eef6-41b7-bfdb-cad1564fbcc8, network: ws, ws-opts: {path: /, headers: {Host: jll.az99x.info}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Psiphon - @i10VPN 2`, server: 45.92.93.108, port: 1000, type: ss, cipher: chacha20-ietf-poly1305, password: 8YLG7aioXkH5tYJu9AAYDg, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - Psiphon - @i10VPN 1`
+      - Psiphon - @i10VPN 2`
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - Psiphon - @i10VPN 1`
+      - Psiphon - @i10VPN 2`
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - Psiphon - @i10VPN 1`
+      - Psiphon - @i10VPN 2`
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Psiphon - @i10VPN 1`
+      - Psiphon - @i10VPN 2`
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Psiphon - @i10VPN 1`
+      - Psiphon - @i10VPN 2`
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Psiphon - @i10VPN 1`
+      - Psiphon - @i10VPN 2`
   - name: دانلود منیجر 📥
     type: select
     proxies:
