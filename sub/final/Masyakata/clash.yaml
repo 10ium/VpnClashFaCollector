@@ -466,7 +466,6 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: "@saministamm`", server: iribnewreport.watch-out.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b4e9234c-4517-400b-ac85-4e4b37657838, network: ws, ws-opts: {path: /j/47164, headers: {Host: iribnewreport.watch-out.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2rayconfigamir 7753", server: 61.245.11.60, port: 80, type: vmess, uuid: a3e3a710-79f8-4ae0-b83c-607aab40d197, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /vmess/}, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,7 +483,6 @@ proxy-groups:
     type: select
     proxies:
       - "@saministamm`"
-      - "@v2rayconfigamir 7753"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -492,7 +490,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@saministamm`"
-      - "@v2rayconfigamir 7753"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -500,7 +497,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@saministamm`"
-      - "@v2rayconfigamir 7753"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -517,7 +513,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@saministamm`"
-      - "@v2rayconfigamir 7753"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -525,7 +520,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@saministamm`"
-      - "@v2rayconfigamir 7753"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -533,7 +527,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@saministamm`"
-      - "@v2rayconfigamir 7753"
   - name: دانلود منیجر 📥
     type: select
     proxies:
