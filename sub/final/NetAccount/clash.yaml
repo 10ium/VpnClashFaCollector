@@ -465,7 +465,10 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: NetAccount`, server: 102.37.156.224, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: aduB9HGxQHjA2SBMRjkHX6, udp: true, tfo: false}
+  - {name: ERFAN-1203`, server: mirror12.virgool.best, port: 55012, type: vless, tls: true, packet-encoding: xudp, uuid: 12caf6fc-ed48-4037-acaa-dee1d812b980, servername: www.digikala.com, host: www.digikala.com, path: /, reality-opts: {public-key: vxdmULi_cO7dha2aQnsjSViARO15hvI9HWyo0pVPlkQ, short-id: c385}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: جوین شو وصل شو@saministamm`, server: forimarket.2.globalmymusic2.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 88f964e1-4ab8-4280-9557-e1cd573abdec, network: ws, ws-opts: {path: /filimo-video/177430809054030600/1774365690/cb857b0770767a2b38b3ebc9d4c44d7fc5630fdd/196328x264new1-1080p.mp4/s-20-v1-a1.ts, headers: {Host: best.3.iran.avenflow.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: T.me/FaraGate اینترنت آزاد`, server: s2.yektataravat.ir, port: 10432, type: vless, tls: true, packet-encoding: xudp, uuid: 93bf33f5-4b1b-4986-adb5-29849714c1b1, host: s2.yektataravat.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@`", server: api.playshoptv.com, port: 43173, type: vless, tls: true, packet-encoding: xudp, uuid: e37b9758-5026-4825-a4fb-8ef974103341, host: api.playshoptv.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +485,30 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - NetAccount`
+      - ERFAN-1203`
+      - جوین شو وصل شو@saministamm`
+      - T.me/FaraGate اینترنت آزاد`
+      - "@`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - NetAccount`
+      - ERFAN-1203`
+      - جوین شو وصل شو@saministamm`
+      - T.me/FaraGate اینترنت آزاد`
+      - "@`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - NetAccount`
+      - ERFAN-1203`
+      - جوین شو وصل شو@saministamm`
+      - T.me/FaraGate اینترنت آزاد`
+      - "@`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +524,30 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - NetAccount`
+      - ERFAN-1203`
+      - جوین شو وصل شو@saministamm`
+      - T.me/FaraGate اینترنت آزاد`
+      - "@`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - NetAccount`
+      - ERFAN-1203`
+      - جوین شو وصل شو@saministamm`
+      - T.me/FaraGate اینترنت آزاد`
+      - "@`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - NetAccount`
+      - ERFAN-1203`
+      - جوین شو وصل شو@saministamm`
+      - T.me/FaraGate اینترنت آزاد`
+      - "@`"
   - name: دانلود منیجر 📥
     type: select
     proxies:

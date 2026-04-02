@@ -1,5 +1,756 @@
 # آرشیو کانال: @SPEEDS_VPN1
-بروزرسانی: 2026-04-02 10:44:42 UTC
+بروزرسانی: 2026-04-02 20:27:35 UTC
+
+### 🕒 2026-04-02 16:44:36 UTC
+> ↪️ **Forwarded**
+
+***🔹***
+**آموزش termux+vaydns**
+بعد اینکه دانلود کردی میری تو فایل ها پوشه Download و از زیپ درش میاری
+بعدش میری تو ترموکس دستورات زیر رو میزنی :
+برای دادن دسترسی حافظه به ترموکس:
+`termux-setup-storage`
+انتقال فایل به محیط Termux:
+cp -f /storage/emulated/0/Download/vaydns/vaydns/vaydns-client-linux-arm64 ~/ && touch -t 202401010000 ~/vaydns-client-linux-arm64
+بعدش برای اجرا کردن:
+cd ~
+chmod +x vaydns-client-linux-arm64
+./vaydns-client-linux-arm64 \
+--domain t.iampedi8.live \
+--listen 127.0.0.1:7000 \
+--pubkey db48fc23911b1b875a94419a21f1ea7b9425e3f5b58fc0f0afa7d78a901bc02e \
+--udp 2.188.21.190:53 \
+--record-type cname
+  تو تلگرام هم و وصل میشی به پروکسی زیر
+[https://t.me/socks?server=127.0.0.1&port=7000](https://t.me/socks?server=127.0.0.1&port=7000)
+برای متوقف کردنش هم گزینه ctrl که بالای کیبورد هست رو میزنی و بعدشم حرف c 
+برای اجرای دوباره هم میتونی فلش بالا رو بزنی تا برگرده به دستور قبلی و مجدد اجرا کنی یا باز دستور ران کردنشو بزنی:
+./vaydns-client-linux-arm64 \
+--domain t.iampedi8.live \
+--listen 127.0.0.1:7000 \
+--pubkey db48fc23911b1b875a94419a21f1ea7b9425e3f5b58fc0f0afa7d78a901bc02e \
+--udp 2.188.21.190:53 \
+--record-type cname
+
+---
+
+### 🕒 2026-04-02 16:22:54 UTC
+***❗️***
+در ابتدا دقت کنید این آموزش اتصال مقداری امکان داره پیچیده باشه برای یسری از دوستان   
+***🔰***
+برنامه TERMUX/ترموکس   https://guardnet.ir/?view=1775139535_bf00c4b7.apk  
+***🔰***
+ کلاینت vaydns   https://guardnet.ir/?view=1775144428_af11cb14.zip   
+***❗️***
+بعد از دانلود صبر کنید…
+
+---
+
+### 🕒 2026-04-02 16:14:42 UTC
+***🛜***
+**سرور اختصاصی**
+ 
+**slipnet**
+***☑***
+***🔵***
+**برای **
+ ایرانسل 
+***🛜***
+***➿***
+***➿***
+***➿***
+***➿***
+***➿***
+***➿***
+`slipnet-enc://AYo0XGxVEfZqwijubjvT+SKlqcMvN7TQVncxsZZQenjWRDU9bUb9vezVID2IM88WNFacs1IbNCnF6r8RwxrUGReh51a6zRzfS/qlwN7I5jDZSnoNaiQsjNNbaioZDXIZjc9wiaoyvIFmTKKyT1n4/BWcYh+VcwViMkbILO/0TjTX4p+09qytC37VCn+ZOLAFnXiyS+OOdiyR0ZGEJmp0mmN43TUSWw4Ko4Ajy3IhkhtTnjOa2iWmjkAtDp39/eHHUpaVE9242pWh3RavyKkLsztyxhNNYyi9uWy8o+pAZ4nh1/DTW33BeHKA1+IFZuEyzHOYhHDAMn30o3qEb7902w8J8V6QRFgnpOybyLcaNh8fvEKSUwivSif4vihU1dDycINRM4lIz7pUhp0JkTY6nrl/vaxbif42wW1mAi4eOTeNR6ALjwLzOF2rG1LLFOya2gcYsfPfctx19oAIM2/dscMoadT8NhsZjvJTgyj4FFppFpCzSwNpA+FQVpm0YTgdsYslN7N9d6+rnT2ZHg0ggsS9d0PUD2iYqqZUsYMec5zZ8y+Kw0BcuiYS8S6sN9Mk/MdAUv/1rLPemcaq9GxQdBKtg/QigMisSYgemSIdteGlC8uLklPuCTSLal5g9X0=`
+***➿***
+***➿***
+***➿***
+***➿***
+***➿***
+***➿***
+**⚪️**
+**حتما از تنظیمات VPN MTU رو رویِ 512 بگذارید و تنظیمات رو ذخیره کنید .**
+**⚪️**
+**زمانی که کانفیگ رو ادد کردید قبل از اتصال رویِ علامتِ مداد کنارِ کانفیگ بزنید و DNS Query Size رو هم یکبار رویِ 50 بزارید و تست کنید و هم یکبار 60 بزارید و متصل بشید .**
+**⚪️**
+**حتما از تنظیمات گزینه‌ ی Proxy-only Mode رو‌ فعال کنید . بعد از اینکه کانفیگ متصل شد ، اگر که از جدید ترین ورژن SlipNet ( ورژنِ 2.4.4 ) استفاده می‌کنید به یکی از پروکسی هایِ زیر در تلگرام متصل شَوید .**
+[https://t.me/socks?server=0.0.0.0&port=10880](https://t.me/socks?server=0.0.0.0&port=10880)
+[https://t.me/socks?server=0.0.0.0&port=10880](https://t.me/socks?server=0.0.0.0&port=10880)
+**اگر از نسخه هایِ قبلیِ SlipNet استفاده می‌کنید به پروکسی هایِ زیر متصل شَوید .**
+[https://t.me/socks?server=0.0.0.0&port=1080](https://t.me/socks?server=0.0.0.0&port=1080)
+[https://t.me/socks?server=127.0.0.1&port=1080](https://t.me/socks?server=127.0.0.1&port=1080)
+***💙***
+**با ری اکشن ، فوروارد پست از ما حمایت کنید**
+***💙***
+***💙***
+**به هیچ عنوان دانلود غیرضروری نداشته باشید**
+***💙***
+***🔺***
+[**آموزش اتصال به کانفیگ **](https://t.me/Speeds_vpnhelp/41?single)
+***⚫***
+***🔺***
+[**آپدیت برنامه**](https://t.me/Speeds_vpnhelp/55?single)
+***⚫***
+***🔤***
+ 
+[@speeds_vpn](https://t.me/speeds_vpn)
+ 
+***🔺***
+***👇***
+***👇***
+***👇***
+***👇***
+
+---
+
+### 🕒 2026-04-02 16:03:50 UTC
+> ↪️ **Forwarded**
+
+***❗️***
+**در ابتدا دقت کنید این آموزش اتصال مقداری امکان داره پیچیده باشه برای یسری از دوستان**
+***🔰***
+**برنامه TERMUX/ترموکس**
+[https://guardnet.ir/?view=1775139535_bf00c4b7.apk](https://guardnet.ir/?view=1775139535_bf00c4b7.apk)
+***🔰***
+ 
+**کلاینت vaydns **
+[https://guardnet.ir/?view=1775144428_af11cb14.zip](https://guardnet.ir/?view=1775144428_af11cb14.zip)
+***❗️***
+**بعد از دانلود صبر کنید تا آموزش قرار بگیره**
+
+---
+
+### 🕒 2026-04-02 15:56:28 UTC
+***❗️***
+**دوتا برنامه براتون قرار میدم حتما دانلود و نصب کنید**
+**🔜**
+**به زودی آموزش کامل متصل شدن و نصب براتون گذاشته میشه**
+
+---
+
+### 🕒 2026-04-02 15:04:47 UTC
+اسماعیل سقاب اصفهانی، معاون پزشکیان ، در پیامی ویدیویی از شهروندان خواست که کمتر انرژی مصرف کنند و با خاموش کردن برق به سوی «دشمنان» شلیک کنند.
+هر کی یه لامپ خاموش کنه یه موشک به سمت اسرائیله
+
+---
+
+### 🕒 2026-04-02 14:35:53 UTC
+عصر حجر شدن ایران می‌ترسید؟ ترس نداره که، ما ۴۷ ساله تو عصر حجریم. تو دنیایی که اینترنت از پایه‌های اساسی زندگی هر آدمه ما ۳۴ روزه که اینترنت نداریم. تو دنیایی که آزادی پوشش حق همه‌ی آدماست ما دخترامونو بخاطر روسری نداشتن از دست دادیم. تو دنیایی که همه آینده…
+
+---
+
+### 🕒 2026-04-02 14:34:37 UTC
+PurVPN v12.5.apk
+
+---
+
+### 🕒 2026-04-02 14:34:07 UTC
+> ↪️ **Forwarded**
+
+***⚫️***
+** فیلترشکن PurVPN (اندروید)**
+***⚫️***
+ نسخه 12.5
+****
+***⚫️***
+[لینک دانلود داخلی](https://zaya.io/puuuuuuurrrrrrrriscommmmminnnnnnng)
+ | 
+[لینک دوم](https://uupload.ir/view/pur12.5_n84o.zip/)
+ | 
+[لینک سوم](http://uploadb.com/8oroo6q7qbcw/pur12.5.apk.html)
+
+---
+
+### 🕒 2026-04-02 14:28:26 UTC
+> ↪️ **Forwarded**
+
+***📌***
+ 
+**منابع مورد نیاز در زمان قطع اینترنت :**
+***📥***
+ سایت برای 
+**آپلود**
+ ( کلیپ‌بورد : برای انتقال متن ها مثل کانفیگ و پروکسی – برنامه و فایل ) :
+***🛜***
+ 
+[pastehub.ir](http://pastehub.ir/)
+***🛜***
+ 
+[m.ulni.ir](http://m.ulni.ir/)
+***🛜***
+ 
+[uploadkon.ir](http://uploadkon.ir/)
+***🛜***
+ 
+[picofile.com](http://picofile.com/)
+***🛜***
+ 
+[uupload.ir](http://uupload.ir/)
+***🛜***
+ 
+[linklick.ir](http://linklick.ir/)
+***🛜***
+ 
+[uploadboy.com](http://uploadboy.com/)
+***🛜***
+ 
+[my.files.ir](http://my.files.ir/)
+***🛜***
+ 
+[nixfile.com](http://nixfile.com/)
+***🛜***
+ 
+[guardnet.ir](http://guardnet.ir/)
+***🎬***
+ سایت برای دانلود 
+**فیلم و سریال**
+ ( بدون سانسور ) :
+***🛜***
+ 
+[myf2m.info](http://myf2m.info/)
+***🛜***
+ 
+[serialblog.blog.ir](http://serialblog.blog.ir/)
+***🛜***
+ 
+[filmaz.ir](http://filmaz.ir/)
+***🛜***
+ 
+[movie-chi.ir](http://movie-chi.ir/)
+ (اشتراکی)
+***🛜***
+ 
+[filmjoo.xyz](http://filmjoo.xyz/)
+***🛜***
+ 
+[filmkio.run](http://filmkio.run/)
+ (اشتراکی)
+***🛜***
+ 
+[dls2.iran-gamecenter-host.com/DonyayeSerial](http://dls2.iran-gamecenter-host.com/DonyayeSerial)
+***🛜***
+ 
+[simbaapp.ir](http://simbaapp.ir/)
+ (نیمه‌اشتراکی)
+***🛜***
+ 
+[movielix.ir](http://movielix.ir/)
+ (اشتراکی)
+***🛜***
+ 
+[Kiamovie.ir](http://Kiamovie.ir/)
+ (نیمه‌اشتراکی)
+***🛜***
+ 
+[f2mc.top](http://f2mc.top/)
+***🛜***
+ 
+[serialblog.net](http://serialblog.net/)
+***🛜***
+ 
+[movieyaab.ir](http://movieyaab.ir/)
+***🎬***
+ سایت برای 
+**زیرنویس فیلم و سریال**
+ :
+***🛜***
+ 
+[subkade.ir](http://subkade.ir/)
+***🛜***
+ 
+[subzone.ir](http://subzone.ir/)
+***🛜***
+ 
+[3fa.ir](http://3fa.ir/)
+***🎧***
+ سایت برای دانلود 
+**اهنگ**
+ :
+***🛜***
+ 
+[radio.9craft.ir](http://radio.9craft.ir/)
+***🛜***
+ 
+[melovaz.ir](http://melovaz.ir/)
+***🛜***
+ 
+[behmelody.in](http://behmelody.in/)
+***📖***
+ سایت برای 
+**کتاب**
+ :
+***🛜***
+ 
+[fidibo.com](http://fidibo.com/)
+***🛜***
+ 
+[taaghche.com](http://taaghche.com/)
+***🛜***
+ 
+[navaar.ir](http://navaar.ir/)
+***🛜***
+ 
+[libra-books.com](http://libra-books.com/)
+***🛜***
+ 
+[ebooksworld.ir](http://ebooksworld.ir/)
+***🎮***
+ سایت برای 
+**نرم افزار و بازی**
+ :
+***🛜***
+ 
+[bazion.ir](http://bazion.ir/)
+***🛜***
+ 
+[soft98.ir](http://soft98.ir/)
+***🛜***
+ 
+[yasdl.com](http://yasdl.com/)
+***🛜***
+ 
+[farsroid.com](http://farsroid.com/)
+***🛜***
+ 
+[vgdl.ir](http://vgdl.ir/)
+***🛜***
+ 
+[par30games.net](http://par30games.net/)
+***🛜***
+ 
+[gameq.ir](http://gameq.ir/)
+***🛜***
+ 
+[cafebazaar.ir](http://cafebazaar.ir/)
+***🛜***
+ 
+[myket.ir](http://myket.ir/)
+***🛜***
+ 
+[downloadha.com](http://downloadha.com/)
+***🛜***
+ 
+[download.ir](http://download.ir/)
+***🛜***
+ 
+[patoghu.com](http://patoghu.com/)
+***🛜***
+ 
+[gold-team.org](http://gold-team.org/)
+***🛜***
+ 
+[bosgame.ir](http://bosgame.ir/)
+***🛜***
+ 
+[pirategames.ir](http://pirategames.ir/)
+***🛜***
+ 
+[sarzamindownload.com](http://sarzamindownload.com/)
+***🛜***
+ 
+[dlfox.com](http://dlfox.com/)
+***☁***
+ سایت برای 
+**هواشناسی**
+ :
+***🛜***
+ 
+[irimo.ir](http://irimo.ir/)
+***🔍***
+ 
+**جستجوگر**
+ های داخلی :
+***🛜***
+ 
+[zarebin.ir](http://zarebin.ir/)
+***🛜***
+ 
+[gerdoo.me](http://gerdoo.me/)
+***🛜***
+ 
+[shaadbin.ir](http://shaadbin.ir/)
+***🛜***
+ 
+[2059.ir](http://2059.ir/)
+***💬***
+ 
+**هوش مصنوعی**
+ :
+***🛜***
+ 
+[chat.boofai.com](http://chat.boofai.com/)
+***🛜***
+ 
+[hooshyar.golrang.ai](http://hooshyar.golrang.ai/)
+***🛜***
+ 
+[hooshang.ai](http://hooshang.ai/)
+***🛜***
+ 
+[chat.smartbytes.ir](http://chat.smartbytes.ir/)
+***🗺***
+ 
+**نقشه انلاین و مسیریابی**
+ :
+***🛜***
+ 
+[neshan.org](http://neshan.org/)
+***🛜***
+ 
+[balad.ir](http://balad.ir/)
+***🔄***
+**ترجمه متن و دیکشنری**
+ :
+***🛜***
+ 
+[faraazin.ir](http://faraazin.ir/)
+***🛜***
+ 
+[abadis.ir](http://abadis.ir/)
+***🛜***
+ 
+[fastdic.com](http://fastdic.com/)
+[***🛜***dic.b-amooz.com](http://%F0%9F%9B%9Cdic.b-amooz.com/)
+***👆***
+ 
+**تمامی سایت های بالا با اینترنت داخلی قابل استفاده هستند**
+***❗️***
+**با احتیاط و اطلاع از جمع اوری اطلاعات که انجام میدن استفاده کنید**
+***❗️***
+
+---
+
+### 🕒 2026-04-02 14:06:00 UTC
+***🛜***
+**سرور اختصاصی**
+ 
+**slipnet**
+***☑***
+***🔵***
+**برای همه اپراتورها**
+ 
+***🛜***
+***🛜***
+***🛜***
+***🛜***
+***➿***
+***➿***
+***➿***
+***➿***
+***➿***
+***➿***
+`slipnet-enc://AdY8m3kXC8lrIGZ6LBIRGGC7R6NsXm47z3J+vNbtFqyB5wa7Fa+5gXlv2DQrdrYS/hV5skxpQyBgOdGOARf24DVUDRz+btUHPEzkDrGjykq3ZX6qAyR1nBzurleryqL2hJvVgitosxNI72ROM4cbtQ48X2H+fe+lTj3sAmUfSud3fXOMRyXFqQZMYM2dbvLqEa8qvCPus6mQl3+4QDfG3A0/ZQXAlr3yndVFzoew+tmr2PFMgvsffamKBf0OdB2JmBK6UqqR0hQiM5IttzeX96HITNhXD3iAYe8Y5FEiuKGsyjdeTowPFNVqbYjXWChevJKysq65h0rSCLHovXp4vKWAc9aontgB8KNKRetezWG2+vHviBrn8aBw4YboFjTS+NZfsY9nieoT1DK8yKHO86mfBJw7x5mSel4NBpfGFmW0MQWJrHqGPWpA+9lI1scI6i28ypSoJSeZ3Nt0QNba8MCqynlyWpGzTwXHQKONYkY7YwktDa9rCPsV4negP+W3kfX/HJy/6/7s/gXLVMYCbZiHCKVfWrYiVm+1uICk9aOtv+MAKdffknF/50SMspPwQRj4Skpu4PNNeEjFFnXxL9023Ilxrs46fVFu5SFeuiRbYN/pmQg2O7u166JZy2lSSF/N/0nHh/pAWhvsP0GERiRkgsmanlGl+GZ6g8JGeBTb5Fm2Z8hm`
+***➿***
+***➿***
+***➿***
+***➿***
+***➿***
+***➿***
+**⁉️**
+**️پس از وارد کردن کانفیگ روی مداد کنار کانفیگ بزنید و «Dns Query Size» رو روی 50-60قرار بدید**
+**❗️**
+**⤵️**
+**پس از کانکت شدن روی پروکسی بزنید و به پروکسی وصل بشید**
+[https://t.me/socks?server=0.0.0.0&port=10880](https://t.me/socks?server=0.0.0.0&port=10880)
+[https://t.me/socks?server=127.0.0.1&port=10880](https://t.me/socks?server=127.0.0.1&port=10880)
+**🚨**
+**توجه؛در تنظیمات گزینه «VPN MTU» روی کاستوم بزارید و عدد 512 رو وارد کنید**
+***💙***
+**با ری اکشن ، فوروارد پست از ما حمایت کنید**
+***💙***
+***💙***
+**به هیچ عنوان دانلود غیرضروری نداشته باشید**
+***💙***
+***🔺***
+[**آموزش اتصال به کانفیگ **](https://t.me/Speeds_vpnhelp/41?single)
+***⚫***
+***🔺***
+[**آپدیت برنامه**](https://t.me/Speeds_vpnhelp/55?single)
+***⚫***
+***🔤***
+ 
+[@speeds_vpn](https://t.me/speeds_vpn)
+ 
+***🔺***
+***👇***
+***👇***
+***👇***
+***👇***
+
+---
+
+### 🕒 2026-04-02 13:13:25 UTC
+***🔵***
+**TEST**
+***🔵***
+***➿***
+***➿***
+***➿***
+***➿***
+***➿***
+***➿***
+`vless://19f3a750-e0a7-4210-ad3e-694892266e44@vip.securnetwork.lol:8443?security=none&allowInsecure=0&encryption=none&type=tcp&host=fast.com&path=/&headerType=http#***🐦‍🔥***-@SPEEDS_VPN`
+***➿***
+***➿***
+***➿***
+***➿***
+***➿***
+***➿***
+***🔤***
+ 
+[@speeds_vpn](https://t.me/speeds_vpn)
+ 
+***🔺***
+***👇***
+***👇***
+***👇***
+***👇***
+
+---
+
+### 🕒 2026-04-02 12:48:35 UTC
+***🛜***
+**سرور اختصاصی**
+ 
+**slipnet**
+***☑***
+***🔵***
+***❗️***
+ 
+**فقط برای آپتل**
+***❗️***
+***➿***
+***➿***
+***➿***
+***➿***
+***➿***
+***➿***
+⁮⁮slipnet-enc://AWOtxqEGpA0DAHMpbCNEYrx8Cm4iyPNIOGJeCA0rOA42yJ5sY/OdK+FlaQZOygJXh6UHfrS0ret6swV+Om4bs5K1lUYbvyFKPbo7St/bacJ0T/rzq6C1iflBHYtUcp4rFBT4bzWe+eI07Dtt4HSWZ+NZboB31y3NS276LO+Ly/k1AF6hfcKboWfXeD68bXs/uC4lKhYreHTZ1zeGoBM9wVTdz9u6WyR/opKOnnOrqeCj8NGTB2UImzTrA/MFK1PlCATu/1/K61hqWQXBKbAEaRpQBIHgLTJLREYdvGlH1NqG8gRhaN3x8VW6GCjETS+vPCr43ueRcm1pWaE3/OQ8GT/znaX8VDFJlht+yLZ1ZAOmjIv1FSBk6xIsDF50QfdrLuN1tAPhb0L8ps39Kx6GcV0ATlRbyW/ABpdvlm9hy43MiRxJ+rnpM3UaQFsdwdMBjqfbEM4vm3u03g59XV5S/uHg65Frx96WbYBRTUXRSticaTXGluqut8g8JK7iqgd2IqtTNCJHDxIUxG4WUtrpUlOF1KMuQbnnSV9fgia0Wu04yf4E0QWocE159OCUUplKfxDTflfPFyO9vVKHZbsks2ZNNYvgA6/4s0Hy6gUu9AAINyk8F/JLE+eq0lTO221bqnsEVMiPf0KZYWwyCAndLloZ4dWRsfhf2LNgshZGPPB4b23pJsMt0GhXO3tyGKM=
+***➿***
+***➿***
+***➿***
+***➿***
+***➿***
+***➿***
+**⁉️**
+**️پس از وارد کردن کانفیگ روی مداد کنار کانفیگ بزنید و «Dns Query Size» رو روی 50-60قرار بدید**
+**❗️**
+**⤵️**
+**پس از کانکت شدن روی پروکسی بزنید و به پروکسی وصل بشید**
+[https://t.me/socks?server=0.0.0.0&port=10880](https://t.me/socks?server=0.0.0.0&port=10880)
+[https://t.me/socks?server=127.0.0.1&port=10880](https://t.me/socks?server=127.0.0.1&port=10880)
+**🚨**
+**توجه؛در تنظیمات گزینه «VPN MTU» روی کاستوم بزارید و عدد 512 رو وارد کنید**
+***💙***
+**با ری اکشن ، فوروارد پست از ما حمایت کنید**
+***💙***
+***💙***
+**به هیچ عنوان دانلود غیرضروری نداشته باشید**
+***💙***
+***🔺***
+[**آموزش اتصال به کانفیگ **](https://t.me/Speeds_vpnhelp/41?single)
+***⚫***
+***🔺***
+[**آپدیت برنامه**](https://t.me/Speeds_vpnhelp/104?single)
+***⚫***
+***🔤***
+ 
+[@speeds_vpn](https://t.me/speeds_vpn)
+ 
+***🔺***
+***👇***
+***👇***
+***👇***
+***👇***
+
+---
+
+### 🕒 2026-04-02 12:40:26 UTC
+برای اولین بار توی زندگیم میخوام دروغ سیزده بگم:  خامنه ای رو دفن کردن
+
+---
+
+### 🕒 2026-04-02 12:37:02 UTC
+طرفدارای جمهوری اسلامی دارن لفت میدن
+***❤️‍🔥***
+
+---
+
+### 🕒 2026-04-02 12:34:28 UTC
+***🛜***
+**سرور اختصاصی**
+ 
+**slipnet**
+***☑***
+***🔵***
+**برای همه اپراتورها**
+ 
+***🛜***
+***🛜***
+***🛜***
+***🛜***
+***➿***
+***➿***
+***➿***
+***➿***
+***➿***
+***➿***
+`slipnet-enc://Aej+YbyrBk4Vyr2zny8QpapaA/pGlD6JQD9s/HlxSqpwJr8JDufaUQ0ZGZRD69A7uyQPvq/sFBnp1PSyEUO/NfWkroIIor2P41mbKpmaTu6U+jgJ5qPTJV39pS03eDbTFU3EnIvvaTvY+7tK1Ih8PzxPoO+TD9p7Ls5ebX5bCXeCvsFXoMxAE/Go8/4SrsreH5SL5IP4yD2pFJDoYwCqvLT4HdGJt66JTG51Wi6Qgo84uo++wZczhTi0gRxYct9jzvvGRRmd5oGxWTQUsQYj+EmesGcTo2GvU226DXfImd+3L7fL/6v70xgEIPJdhQb/W53Q+IRIvqRuPX26JvDjEtRu4v+pUjYVN35xc4uuHGaAbrjyA+NI9gXULee8jJIMkQEUW9wiF6EsjebCKqecuSmlwvT8VZpB48htM4izanJ2L66v1Ky8DyREkrjPXblI5iJgiSj8Qw6SqjwV6r8djS9Bsj7JoACodtmEsZLGaKA4XOuVLFu56xBZrOQZiVeYtEjilmD5Bx9Q0u7HuoZcLxLhgeCQWqD9bJVC6eMREztL2SsQduIVeeAjNLc2B0YAnHwKizvxHe8tsDpjgJf7LIhVzQs3g+86R7e4c5doxLb7TQUbv1DcJJtrQqgdVGlOFPzGfe964ybh5UDkwaLAkfeQxtuXDRQMc5CTTONkaIzbxSIhVc4EVw==`
+***➿***
+***➿***
+***➿***
+***➿***
+***➿***
+***➿***
+**⁉️**
+**️پس از وارد کردن کانفیگ روی مداد کنار کانفیگ بزنید و «Dns Query Size» رو روی 50-60قرار بدید**
+**❗️**
+**⤵️**
+**پس از کانکت شدن روی پروکسی بزنید و به پروکسی وصل بشید**
+[https://t.me/socks?server=0.0.0.0&port=10880](https://t.me/socks?server=0.0.0.0&port=10880)
+[https://t.me/socks?server=127.0.0.1&port=10880](https://t.me/socks?server=127.0.0.1&port=10880)
+**🚨**
+**توجه؛در تنظیمات گزینه «VPN MTU» روی کاستوم بزارید و عدد 512 رو وارد کنید**
+***💙***
+**با ری اکشن ، فوروارد پست از ما حمایت کنید**
+***💙***
+***💙***
+**به هیچ عنوان دانلود غیرضروری نداشته باشید**
+***💙***
+***🔺***
+[**آموزش اتصال به کانفیگ **](https://t.me/Speeds_vpnhelp/41?single)
+***⚫***
+***🔺***
+[**آپدیت برنامه**](https://t.me/Speeds_vpnhelp/55?single)
+***⚫***
+***🔤***
+ 
+[@speeds_vpn](https://t.me/speeds_vpn)
+ 
+***🔺***
+***👇***
+***👇***
+***👇***
+***👇***
+
+---
+
+### 🕒 2026-04-02 11:39:34 UTC
+**عصر حجر شدن ایران می‌ترسید؟ ترس نداره که، ما ۴۷ ساله تو عصر حجریم.تو دنیایی که اینترنت از پایه‌های اساسی زندگی هر آدمه ما ۳۴ روزه که اینترنت نداریم.تو دنیایی که آزادی پوشش حق همه‌ی آدماست ما دخترامونو بخاطر روسری نداشتن از دست دادیم.تو دنیایی که همه آینده دارن ما دغدغه‌ی اینو داریم که تا فردا دوام میاریم یا نه.تو دنیایی که اعتراض حق هر آدمه ما ۴۵ هزارتا کشته برای ۲ شب اعتراضات دادیم.تو دنیایی که آب و برق پایدار حق هر جامعه‌ایه ما تابستونا نه آب داریم و نه برق.تو دنیایی که انسانیت شرط اوله ما حکومتی رو بالای سرمون داریم که ضد انسانیته.**
+
+---
+
+### 🕒 2026-04-02 11:31:13 UTC
+برای اولین بار توی زندگیم میخوام دروغ سیزده بگم:
+خامنه ای رو دفن کردن
+
+---
+
+### 🕒 2026-04-02 11:15:47 UTC
+***🛜***
+سرور اختصاصی slipnet
+***☑***
+ 
+***🔵***
+برای آپتل 
+***➿***
+***➿***
+***➿***
+***➿***
+***➿***
+***➿***
+ slipnet-enc://AVybajGsEHIN/e8kQlxJayeC2P4iA3GhQnLLniY0WUlw6ouCubiDH5hUGWsf3FbXhtD8q0igelsxo2ikYZJbUkinIYLyL8kLJ46Qo1mZm4FgwHfmT8lV1raQCVbVs6u5p9+QaLCe0Wnhe57ObkeY7zxper4YSmO+ZSrza3HH8iyQUQklZx2xgRZURHi/ib4XtMPEm53t…
+
+---
+
+### 🕒 2026-04-02 11:15:17 UTC
+> ↪️ **Forwarded**
+
+***🔰***
+**vaydns**
+استفاده از dns روی سیستم
+این برنامه رو نصب کنید.
+خیلی بهتر وصل میشه نسبت به اسلیپ
+100% وصل میشه
+[Github](https://github.com/net2share/vaydns/releases/download/)
+لینک داخلی:
+[Windows](https://guardnet.ir/index.php?view=1775118073_2cf65f85.exe)
+[Linux](http://kimoland.info/dl.php?path=919403827:5437320835809550081:1:ee8d3859096f16a9316fa4303bd7e866e6cc6969b10aab9e&amp;name=vaydns-client-linux-amd64)
+[Mac](https://guardnet.ir/?view=1775117464_5b2c3db7.zip)
+
+---
+
+### 🕒 2026-04-02 11:07:40 UTC
+***🛜***
+سرور اختصاصی slipnet
+***☑***
+ 
+***🔵***
+برای آپتل 
+***➿***
+***➿***
+***➿***
+***➿***
+***➿***
+***➿***
+ slipnet-enc://AVybajGsEHIN/e8kQlxJayeC2P4iA3GhQnLLniY0WUlw6ouCubiDH5hUGWsf3FbXhtD8q0igelsxo2ikYZJbUkinIYLyL8kLJ46Qo1mZm4FgwHfmT8lV1raQCVbVs6u5p9+QaLCe0Wnhe57ObkeY7zxper4YSmO+ZSrza3HH8iyQUQklZx2xgRZURHi/ib4XtMPEm53t…
+
+---
+
+### 🕒 2026-04-02 11:07:18 UTC
+***🛜***
+**سرور اختصاصی**
+ 
+**slipnet**
+***☑***
+***🔵***
+**برای آپتل**
+***➿***
+***➿***
+***➿***
+***➿***
+***➿***
+***➿***
+`slipnet-enc://AVybajGsEHIN/e8kQlxJayeC2P4iA3GhQnLLniY0WUlw6ouCubiDH5hUGWsf3FbXhtD8q0igelsxo2ikYZJbUkinIYLyL8kLJ46Qo1mZm4FgwHfmT8lV1raQCVbVs6u5p9+QaLCe0Wnhe57ObkeY7zxper4YSmO+ZSrza3HH8iyQUQklZx2xgRZURHi/ib4XtMPEm53tC7IYJoxcp4srsMrvzEOBjJ1WaOeFVWLFWTiiljJQiUQGOFHTYXiENyY8RHsAaQVpuirZn2QjP0PYsyia1sjd93A761JIfVZozLIKq7c+h0W286o1v7Jhm82BjiWP6s+kHXEgBjso+MPzQce5fzki5e5DiMlvA9qEE0QIb04w5NmwfeYUYOhLeX5AiPflVhZPRkO563Dg73kPgYmHrPk8r5/18w==`
+***➿***
+***➿***
+***➿***
+***➿***
+***➿***
+***➿***
+**⁉️**
+**️پس از وارد کردن کانفیگ روی مداد کنار کانفیگ بزنید و «Dns Query Size» رو روی 50-60قرار بدید**
+**❗️**
+**⤵️**
+**پس از کانکت شدن روی پروکسی بزنید و به پروکسی وصل بشید**
+[https://t.me/socks?server=0.0.0.0&port=10880](https://t.me/socks?server=0.0.0.0&port=10880)
+[https://t.me/socks?server=127.0.0.1&port=10880](https://t.me/socks?server=127.0.0.1&port=10880)
+**🚨**
+**توجه؛در تنظیمات گزینه «VPN MTU» روی کاستوم بزارید و عدد 512 رو وارد کنید**
+***💙***
+**با ری اکشن ، فوروارد پست از ما حمایت کنید**
+***💙***
+***💙***
+**به هیچ عنوان دانلود غیرضروری نداشته باشید**
+***💙***
+***🔺***
+[**آموزش اتصال به کانفیگ **](https://t.me/Speeds_vpnhelp/41?single)
+***⚫***
+***🔺***
+[**آپدیت برنامه**](https://t.me/Speeds_vpnhelp/55?single)
+***⚫***
+***🔤***
+ 
+[@speeds_vpn](https://t.me/speeds_vpn)
+ 
+***🔺***
+***👇***
+***👇***
+***👇***
+***👇***
+
+---
 
 ### 🕒 2026-04-02 10:02:36 UTC
 اینترنت پرو نام دیگر اینترنت طبقاتی است
@@ -324,418 +1075,6 @@ Username / Password → خالی
 ***🔤***
 **به زودی آموزش ها مجدد قرار میگیرند **
 ***🔤***
-
----
-
-### 🕒 2026-04-01 19:22:43 UTC
-***🟢***
- 
-**نظرها، پیشنهادات و انتقادات خودتان را برای ما ارسال کنید**
-،
-**در راستای بهبود هرچه بیشتر مسیرمان**
-***🔵***
- 
-[t.me/Speeds_vpn1?direct](http://t.me/Speeds_vpn1?direct)
-
----
-
-### 🕒 2026-04-01 18:57:08 UTC
-حمایت ها کم شده
-
----
-
-### 🕒 2026-04-01 16:53:27 UTC
-***🛜***
-سرور اختصاصی slipnet
-***☑***
- 
-***🔵***
-برای همه اپراتورها 
-***🛜***
-***🛜***
-***🛜***
-***🛜***
- 
-***➿***
-***➿***
-***➿***
-***➿***
-***➿***
-***➿***
- slipnet-enc://ARJBfFABvEUxMW57UeZsZr5EePQMS7wAiDCaJ6URtIXSuF6dnLPBExqvks4lh6pT5xNQfxtXu+0y85g72vjVi3c1140YJBST5W0OFW4E6Ch1RmH9MbKUmdjqeqbzJuhaNUK1jKWVXIiEyOmxUqsw52MzqxUwzcdmRxOwCd07JcePqkv1iX1baPWbBu…
-
----
-
-### 🕒 2026-04-01 16:52:15 UTC
-***🛜***
-سرور اختصاصی slipnet
-***☑***
- 
-***🔵***
-برای همه اپراتورها 
-***🛜***
-***🛜***
-***🛜***
-***🛜***
- 
-***➿***
-***➿***
-***➿***
-***➿***
-***➿***
-***➿***
- slipnet-enc://ARJBfFABvEUxMW57UeZsZr5EePQMS7wAiDCaJ6URtIXSuF6dnLPBExqvks4lh6pT5xNQfxtXu+0y85g72vjVi3c1140YJBST5W0OFW4E6Ch1RmH9MbKUmdjqeqbzJuhaNUK1jKWVXIiEyOmxUqsw52MzqxUwzcdmRxOwCd07JcePqkv1iX1baPWbBu…
-
----
-
-### 🕒 2026-04-01 16:51:29 UTC
-***🛜***
-**سرور اختصاصی**
- 
-**slipnet**
-***☑***
-***🔵***
-**برای همه اپراتورها**
- 
-***🛜***
-***🛜***
-***🛜***
-***🛜***
-***➿***
-***➿***
-***➿***
-***➿***
-***➿***
-***➿***
-`slipnet-enc://ARJBfFABvEUxMW57UeZsZr5EePQMS7wAiDCaJ6URtIXSuF6dnLPBExqvks4lh6pT5xNQfxtXu+0y85g72vjVi3c1140YJBST5W0OFW4E6Ch1RmH9MbKUmdjqeqbzJuhaNUK1jKWVXIiEyOmxUqsw52MzqxUwzcdmRxOwCd07JcePqkv1iX1baPWbBu83j59gnPsAFDPsftRPZ+gm6CBTMy6RXglMhmcxPN29v5Zkd60H00t+uzWZFb/aE4haTzCM8GJ0xfgzot/IicWI+VLAu9JiTvQjvqDEECD8wuhx7HQg0dDIn65couRV/Yc7G5I3tMA3tpqmOQo6qkDAFFwSJ7g8jIYUSQ7in7bPj1WN5I2xrilA2Frx2f0/tFIiMDDcpQVEbpr6cTjnrrMLzfSits5MlusJZqaZqtAqZ7zEJd45SX0M78AljCmKacb790yah8CypiWV8+huNSq1laWf/shMgzPuAXqonrjFYCl2ez7d8CD3dJpV/IO2XOIEw3pxV3Px/Eqhtc9B01WakB3ZkKPYDOe69HVPZX5YEVLtDPrH38DcHeXpWCd3nThBy9WI/b3m06o3fP0xUaTyq/g0PqEk3iG4qEATbXscODGxeoVOg0jBu219NqhRHWXKxo4jkNG+TBNF5Luj76KnPb8C`
-***➿***
-***➿***
-***➿***
-***➿***
-***➿***
-***➿***
-***💙***
-**با ری اکشن ، فوروارد پست از ما حمایت کنید**
-***💙***
-***💙***
-**به هیچ عنوان دانلود غیرضروری نداشته باشید**
-***💙***
-***🔺***
-[**آموزش اتصال به کانفیگ **](https://t.me/Speeds_vpnhelp/41?single)
-***⚫***
-***🔺***
-[**آپدیت برنامه**](https://t.me/Speeds_vpnhelp/55?single)
-***⚫***
-***🔤***
- 
-[@speeds_vpn](https://t.me/speeds_vpn)
- 
-***🔺***
-***👇***
-***👇***
-***👇***
-***👇***
-
----
-
-### 🕒 2026-04-01 16:39:10 UTC
-> ↪️ **Forwarded**
-
-شاهزاده رضا پهلوی:
-من به عنوان صدای ملتی دربرابر شما ایستاده ام که صدایشان خاموش شده. ملتی که صدایشان برای 33 روزه خاموش شده
-پیامکی در کار نیست. ارتباطی در کار نیست. نمیتونن به خانواده هاشون خبری بدن
-صدای بیش از 90 میلیون نفری که خاموش شده
-این خاموشی تصادفی نیست. این صدای خاموشیه رژیمیه که میخواد انقلابی رو در تاریکی بکُشه
-شاهزاده رضا پهلوی خطاب به دانشجویان دانشگاه لیبرتی:
-در همین حال که شما آینده‌تان را برنامه‌ریزی می‌کنید، جوانان ایرانی به این فکر می‌کنند که چگونه یک روز دیگر دوام بیاورند.
-درحالی که شما عاشق می‌شوید، جوانان ایرانی عشق و آرزوهایشان ناممکن می‌شود.
-جوانان ایرانی برای قطره‌ای از آزادی و حق انسانی، صدها دانش‌آموز و دانشجوی ایرانی به خیابان آمدند و کشته شدند.
-***🖥***
- 
-[@begakhbr](https://t.me/begakhbr)
- | بگا خبر 
-***🟢***
-
----
-
-### 🕒 2026-04-01 15:31:58 UTC
-**اگر نیاز به دانلود برنامه یا هر فایلی  دارید میتونید دایرکت کانال فایل رو برامون ارسال کنید تا در آپلودسنتر های داخلی براتون لینک تهیه کنیم**
-تا ساعت 8 شب فرصت ارسال دارید
-***❤️***
-[t.me/Speeds_vpn1?direct](http://t.me/Speeds_vpn1?direct)
-
----
-
-### 🕒 2026-04-01 14:48:02 UTC
-> ↪️ **Forwarded**
-
-***🚨***
- اگر برق قطع شد، چه کنیم؟ 
-***🤷‍♀️***
-راهنمای فوری در شرایط جنگی، اگر برق قطع شود:
-***✅***
-**۱‌. نجات غذا**
-• باز نکردن در فریزر یخچال تا ۴۸ ساعت
-• خواباندن لایه‌لایه گوشت، مرغ و ماهی در نمک فراوان
-***✅***
-**۲. نور و شارژ**
-• استفاده از باتری ماشین برای شارژ موبایل (در فضای باز)
-• استفاده از پورت USB لپ‌تاپ‌های خاموش برای شارژ گوشی
-• ساخت چراغ روغنی با قرار دادن فتیله نخی در روغن مایع
-• گذاشتن بطری آب روی فلش گوشی برای پخش شدن نور
-• حفظ باتری گوشی با خاموش کردن 
-دیتا و کاهش نور
-***✅***
-**۳. خطرات فنی و حبس**
-• جدا کردن فوری تمام وسایل از پریز
-• استفاده نکردن از آسانسور تحت هیچ شرایطی
-• یادگیری باز کردن در پارکینگ با اهرم دستی
-***✅***
-**۴. راهکارهای امنیتی**
-• محکم کردن درها با قفل کتابی (قطع دزدگیر و آیفون)
-• نصب زنگوله یا قوطی پشت در برای شنیدن صدای ورود فرد غریبه در تاریکی
-
----
-
-### 🕒 2026-04-01 14:39:42 UTC
-**برای همه اپراتورها**
- 
-***🛜***
-***🛜***
-***🛜***
-***🛜***
-***🕦***
-**حجم سرویس نامحدود**
-**لوکیشن**
-***🇹🇷***
-**ترکیه**
-***🇩🇪***
-آلمان 
-***🇨🇦***
-کانادا 
-***🇫🇮***
-فنلاند
-***🇫🇷***
-فرانسه
-***➿***
-***➿***
-***➿***
-***➿***
-***➿***
-***➿***
-`vless://b6c07d52-0288-4005-9634-b5d4bd661535@94.101.177.169:80?security=none&encryption=none&headerType=none&type=tcp#***🐦‍🔥***-@SPEEDS_VPNvless://164b06cf-297b-4c57-add2-c680b7abbad3@185.143.233.5:443?path=%2F%3Fed%3D443&security=tls&encryption=none&insecure=0&host=alef.ir.oadeflantrogm.iranaircdn.com&fp=randomized&type=ws&allowInsecure=0&sni=alef.ir.oadeflantrogm.iranaircdn.com#***🐦‍🔥***-@SPEEDS_VPNvless://dc615c85-8220-4c08-8da4-fa57c594961f@movie.mecro.ir:202?security=none&encryption=none&host=aparat.com&headerType=http&type=tcp#***🐦‍🔥***-@SPEEDS_VPNvless://dc615c85-8220-4c08-8da4-fa57c594961f@movie.mecro.ir:202?security=none&encryption=none&host=aparat.com&headerType=http&type=tcp#***🐦‍🔥***-@SPEEDS_VPN`
-***➿***
-***➿***
-***➿***
-***➿***
-***➿***
-***➿***
-***💙***
-**با ری اکشن ، فوروارد پست از حمایت حمایت کنید**
-***💙***
-***💙***
-**به هیچ عنوان دانلود غیرضروری نداشته باشید**
-***💙***
-***🔺***
-[برنامه حتما آپدیت باشه](https://t.me/Speeds_vpnhelp/17?single)
-***🛡***
-***🔺***
-[آموزش اتصال به کانفیگ ](https://t.me/Speeds_vpnhelp/25)
-***🎯***
-***🛎***
-**کانال پروکسی**
- 24 ساعته: 
-[@PRXYSHIT](https://t.me/PRXYSHIT)
-***🛎***
-**کانال کانفیگ**
- 24 ساعته: 
-[@VPNSHIT](https://t.me/VPNSHIT)
- 
-***🔤***
- 
-[@speeds_vpn](https://t.me/speeds_vpn)
- 
-***🔺***
-***👇***
-***👇***
-***👇***
-***👇***
-
----
-
-### 🕒 2026-04-01 12:46:25 UTC
-***🔴***
-**سرویس کانفیگ های اضطراری**
-***❗️***
-***➿***
-***➿***
-***➿***
-***➿***
-***➿***
-***➿***
-`vmess://eydhZGQnOiAnd3d3LmlyYW4tYXIuaXInLCAnYWlkJzogJzAnLCAnYWxwbic6ICcnLCAnZnAnOiAnJywgJ2hvc3QnOiAnJywgJ2lkJzogJ2FkNTY5OTY1LTUxN2UtNDQ0MC1hMjA4LTRlNGIyNThjMjMzOCcsICduZXQnOiAnd3MnLCAncGF0aCc6ICcvJywgJ3BvcnQnOiAnODAnLCAncHMnOiAn8J+Mqi1AU1BFRURTX1ZQTjEnLCAnc2N5JzogJ2F1dG8nLCAnc25pJzogJycsICd0bHMnOiAnJywgJ3R5cGUnOiAnLS0tJywgJ3YnOiAnMid9`
-***➿***
-***➿***
-***➿***
-***➿***
-***➿***
-***➿***
-***🔴***
-به پینگ توجهی نکنید
-***🔤***
- 
-[@speeds_vpn](https://t.me/speeds_vpn)
- 
-***🔺***
-***👇***
-***👇***
-***👇***
-***👇***
-
----
-
-### 🕒 2026-04-01 12:30:38 UTC
-***🔴***
-**سرویس کانفیگ های اضطراری**
-***❗️***
-***➿***
-***➿***
-***➿***
-***➿***
-***➿***
-***➿***
-`vless://dc615c85-8220-4c08-8da4-fa57c594961f@movie.mecro.ir:202?security=none&encryption=none&host=aparat.com&headerType=http&type=tcp#***🌪***-@SPEEDS_VPN1`
-***➿***
-***➿***
-***➿***
-***➿***
-***➿***
-***➿***
-***🔴***
-به پینگ توجهی نکنید
-***🔤***
- 
-[@speeds_vpn](https://t.me/speeds_vpn)
- 
-***🔺***
-***👇***
-***👇***
-***👇***
-***👇***
-
----
-
-### 🕒 2026-04-01 11:20:07 UTC
-میلیون ها کسب و کار به علت نبود اینترنت رسما نابود و فلج شده ؛ 
-**هیچکسم براش مهم نیست ! حتی زمان مشخصیم برای این بلاتکلیفی معلوم نیست .. **
-***💔***
-
----
-
-### 🕒 2026-04-01 10:57:13 UTC
-***🚨***
-هشدار جدی: مراقب سوءاستفاده‌گران و کلاهبرداران باشید
-در این روزهای سخت و پر از فشار بر مردم ایران، متأسفانه عده‌ای فرصت‌طلب و سودجو از شدت نیاز و نگرانی شهروندان سوءاستفاده کرده‌اند. این افراد با وعده‌های فریبنده‌ی فروش «کانفیگ‌های سازمانی»، «پروکسی استارلینک»، «اشتراک‌های ویژه» و ابزارهای دسترسی، با قیمت‌های نجومی و غیرمنطقی در شبکه‌های اجتماعی داخلی و خارجی فعالیت می‌کنند.
-بسیاری از این فروش‌ها فاقد هرگونه تست معتبر، ضمانت بازگشت وجه یا حتی منبع قابل اعتماد هستند. تجربه نشان داده که در اکثر موارد:
-پس از واریز پول، سرویس تنها برای چند ساعت (گاه کمتر از ۲۴–۴۸ ساعت) به‌صورت ناپایدار وصل می‌شود و سپس کاملاً از کار می‌افتد
-یا اصلاً هیچ اتصالی برقرار نمی‌شود و پول پرداختی به‌طور کامل از دست می‌رود
-این افراد در حالی که خود به‌خوبی می‌دانند اینترنت بین‌الملل همچنان کاملاً قطع است و هیچ کانفیگ یا سرویسی در حال حاضر پایداری واقعی ندارد، از فشار روانی و اضطرار مردم نهایت بهره‌برداری مالی را می‌کنند. این رفتار نه تنها غیراخلاقی، بلکه مصداق بارز سوءاستفاده از شرایط بحرانی کشور و استثمار درد و نیاز هم‌وطنان است.
-ما با
-
----
-
-### 🕒 2026-04-01 10:51:12 UTC
-***🔴***
-***🛜***
-همراه اول DNS
-***🔴***
-[46.209.48.5](http://46.209.48.5/)
-[37.202.186.29](http://37.202.186.29/)
-[31.47.32.34](http://31.47.32.34/)
-[93.118.138.109](http://93.118.138.109/)
-[217.144.106.113](http://217.144.106.113/)
-[217.144.107.239](http://217.144.107.239/)
-***🔤***
- 
-[@speeds_vpn](https://t.me/speeds_vpn)
- 
-***🔺***
-***👇***
-***👇***
-***👇***
-***👇***
-
----
-
-### 🕒 2026-04-01 10:49:32 UTC
-***🛜***
-سرور اختصاصی slipnet
-***☑***
- 
-***🔵***
-برای همه اپراتورها 
-***🛜***
-***🛜***
-***🛜***
-***🛜***
- 
-***➿***
-***➿***
-***➿***
-***➿***
-***➿***
-***➿***
- slipnet-enc://AaZUVJOI64Qd4sW90X1BaPlgpSghx5wKl1MLfvO56vEuBRqWi5yZPHVCkJPfpp5kpmExIIbud2M9oeWheZ7Nttug1VhojMoXgss+dQcjgsqWX40ZGfBGgxgIltcs8r4/vY5HeanxFsKwrNmqqr74FeXaRMY+koBu0EUwbXdm+f81OHwGbyWUQKQ1ti…
-
----
-
-### 🕒 2026-04-01 10:47:04 UTC
-***🛜***
-**سرور اختصاصی**
- 
-**slipnet**
-***☑***
-***🔵***
-**برای همه اپراتورها**
- 
-***🛜***
-***🛜***
-***🛜***
-***🛜***
-***➿***
-***➿***
-***➿***
-***➿***
-***➿***
-***➿***
-`slipnet-enc://AaZUVJOI64Qd4sW90X1BaPlgpSghx5wKl1MLfvO56vEuBRqWi5yZPHVCkJPfpp5kpmExIIbud2M9oeWheZ7Nttug1VhojMoXgss+dQcjgsqWX40ZGfBGgxgIltcs8r4/vY5HeanxFsKwrNmqqr74FeXaRMY+koBu0EUwbXdm+f81OHwGbyWUQKQ1tiE6B9csphPhgOGj4Ywc5JERhn8H5uN8k73EZOkD1ATb9soy1NFPdG6mJDS/cx+kAnMwi9CY7iZANT8icvAP9a1HASLN3brYFK2HpXfqc2A3E3R3TdLRgKGMOHtZtM3vgctNV2o3xR9l0/N/W6ogjpw0ukA3L/ugcOmfTTiwg5PyRd1S1d/OWLT8SVP8PbrdF9AgqyDh1QocyNOnzBR5Ev4+2GNzN+7qEfikb+S7l/Vu/6BGqndbysSY0ygyIy4bC7EIKrROSYOoUhdJzZEu2CQavOjeC2dyiTBVHK8VynZM5nRJeYWM6k8HJ4Irqrry/2zCt8keBiSPLEgYAQiglwJCh19piBXflumkRG1T5Qa6VuR4H66u3OlCMucEqQOJ9c2SEmRtqScABsJQYReCDp5bpBzDwonBFlppFyBcAxDSAONfoyUXyMBLvYfSeC3m9xaK52rNOXtG8jFsPx3BSdp+4Hof7BN0VBkymmLghX3FnCm+lTJtTmzWhVEBtSXX9jtsrH6qIg==`
-***➿***
-***➿***
-***➿***
-***➿***
-***➿***
-***➿***
-***💙***
-**با ری اکشن ، فوروارد پست از ما حمایت کنید**
-***💙***
-***💙***
-**به هیچ عنوان دانلود غیرضروری نداشته باشید**
-***💙***
-***🔺***
-[**آموزش اتصال به کانفیگ **](https://t.me/Speeds_vpnhelp/41?single)
-***⚫***
-***🔺***
-[**آپدیت برنامه**](https://t.me/Speeds_vpnhelp/55?single)
-***⚫***
-***🔤***
- 
-[@speeds_vpn](https://t.me/speeds_vpn)
- 
-***🔺***
-***👇***
-***👇***
-***👇***
-***👇***
 
 ---
 
