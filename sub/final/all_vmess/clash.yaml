@@ -465,9 +465,14 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "🇺🇸 [openproxylist.com] vmess-US", server: 47.90.244.153, port: 8443, type: vmess, uuid: 65e2a985-ad20-4486-a7ec-b67b20ee56af, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /ws}, udp: true, tfo: false}
-  - {name: "[25056] - Telegram : @configraygan", server: 185.181.183.124, port: 28094, type: vmess, uuid: a6440729-1046-4a9c-bc19-7c0ede4bf4d4, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}, udp: true, tfo: false}
+  - {name: ️ Join+Telegram:@Farah_VPN 🏳️, server: 82.198.246.250, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad", server: 47.244.120.197, port: 36703, type: vmess, uuid: 45b83519-9c4f-4052-a11b-02e017b636d4, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}, udp: true, tfo: false}
   - {name: "🇬🇧 [openproxylist.com] vmess-GB", server: cg1c12.waimaojd.com, port: 443, type: vmess, uuid: 0632bfa9-b15c-4257-8c75-32f7c0c53b27, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /api/v1/graphql, headers: {Host: cg1c12.waimaojd.com}}, udp: true, tfo: false}
+  - {name: "[25348] - Telegram : @configraygan", server: mel.usdtbama.com, port: 8443, type: vmess, uuid: b4a513cd-bedc-4b72-9af0-aee1827e1de0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Test 20mg, server: snapp.ir, port: 2053, type: vmess, uuid: e378ad65-f224-4c92-b3a8-074dd13c817a, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: cdn.havenet.ir, network: ws, ws-opts: {path: /, headers: {Host: cdn.havenet.ir}}, udp: true, tfo: false}
+  - {name: Test 20mg 2, server: snapp.ir, port: 2053, type: vmess, uuid: e378ad65-f224-4c92-b3a8-074dd13c817a, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: cdn.havenet.ir, network: ws, ws-opts: {path: /, headers: {Host: cdn.havenet.ir}}, udp: true, tfo: false}
+  - {name: "@filembad 2", server: star.reata.ir, port: 23677, type: vmess, uuid: e2757556-14b3-4b4f-b4ae-f3d40c5ee9eb, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 3", server: star.reata.ir, port: 23677, type: vmess, uuid: e2757556-14b3-4b4f-b4ae-f3d40c5ee9eb, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,27 +489,42 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 🇺🇸 [openproxylist.com] vmess-US
-      - "[25056] - Telegram : @configraygan"
+      - ️ Join+Telegram:@Farah_VPN 🏳️
+      - "@filembad"
       - 🇬🇧 [openproxylist.com] vmess-GB
+      - "[25348] - Telegram : @configraygan"
+      - Test 20mg
+      - Test 20mg 2
+      - "@filembad 2"
+      - "@filembad 3"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 🇺🇸 [openproxylist.com] vmess-US
-      - "[25056] - Telegram : @configraygan"
+      - ️ Join+Telegram:@Farah_VPN 🏳️
+      - "@filembad"
       - 🇬🇧 [openproxylist.com] vmess-GB
+      - "[25348] - Telegram : @configraygan"
+      - Test 20mg
+      - Test 20mg 2
+      - "@filembad 2"
+      - "@filembad 3"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 🇺🇸 [openproxylist.com] vmess-US
-      - "[25056] - Telegram : @configraygan"
+      - ️ Join+Telegram:@Farah_VPN 🏳️
+      - "@filembad"
       - 🇬🇧 [openproxylist.com] vmess-GB
+      - "[25348] - Telegram : @configraygan"
+      - Test 20mg
+      - Test 20mg 2
+      - "@filembad 2"
+      - "@filembad 3"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -520,27 +540,42 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇺🇸 [openproxylist.com] vmess-US
-      - "[25056] - Telegram : @configraygan"
+      - ️ Join+Telegram:@Farah_VPN 🏳️
+      - "@filembad"
       - 🇬🇧 [openproxylist.com] vmess-GB
+      - "[25348] - Telegram : @configraygan"
+      - Test 20mg
+      - Test 20mg 2
+      - "@filembad 2"
+      - "@filembad 3"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇺🇸 [openproxylist.com] vmess-US
-      - "[25056] - Telegram : @configraygan"
+      - ️ Join+Telegram:@Farah_VPN 🏳️
+      - "@filembad"
       - 🇬🇧 [openproxylist.com] vmess-GB
+      - "[25348] - Telegram : @configraygan"
+      - Test 20mg
+      - Test 20mg 2
+      - "@filembad 2"
+      - "@filembad 3"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇺🇸 [openproxylist.com] vmess-US
-      - "[25056] - Telegram : @configraygan"
+      - ️ Join+Telegram:@Farah_VPN 🏳️
+      - "@filembad"
       - 🇬🇧 [openproxylist.com] vmess-GB
+      - "[25348] - Telegram : @configraygan"
+      - Test 20mg
+      - Test 20mg 2
+      - "@filembad 2"
+      - "@filembad 3"
   - name: دانلود منیجر 📥
     type: select
     proxies:

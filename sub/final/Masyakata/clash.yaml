@@ -465,7 +465,10 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "`", server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true, tfo: false}
+  - {name: "***🇯🇵***`", server: 160.16.106.99, port: 4937, type: trojan, password: 6d29eb2f74293cb01a19b32cf08ad2e9, sni: www.nintendogames.net, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🇯🇵***` 2", server: 160.16.106.99, port: 2001, type: trojan, password: 9f7d5cb76d1645101994d9b25891e3b7, sni: www.nintendogames.net, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🇺🇸***`", server: 104.19.174.68, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: d37a75db-76b6-4db8-b213-0d5b044d138d, servername: hio-awx.pages.dev, network: ws, ws-opts: {path: /fast, headers: {Host: hio-awx.pages.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Test 20mg, server: snapp.ir, port: 2053, type: vmess, uuid: e378ad65-f224-4c92-b3a8-074dd13c817a, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: cdn.havenet.ir, network: ws, ws-opts: {path: /, headers: {Host: cdn.havenet.ir}}, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +485,30 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "`"
+      - "***🇯🇵***`"
+      - "***🇯🇵***` 2"
+      - "***🇺🇸***`"
+      - Test 20mg
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "`"
+      - "***🇯🇵***`"
+      - "***🇯🇵***` 2"
+      - "***🇺🇸***`"
+      - Test 20mg
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "`"
+      - "***🇯🇵***`"
+      - "***🇯🇵***` 2"
+      - "***🇺🇸***`"
+      - Test 20mg
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +524,30 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "`"
+      - "***🇯🇵***`"
+      - "***🇯🇵***` 2"
+      - "***🇺🇸***`"
+      - Test 20mg
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "`"
+      - "***🇯🇵***`"
+      - "***🇯🇵***` 2"
+      - "***🇺🇸***`"
+      - Test 20mg
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "`"
+      - "***🇯🇵***`"
+      - "***🇯🇵***` 2"
+      - "***🇺🇸***`"
+      - Test 20mg
   - name: دانلود منیجر 📥
     type: select
     proxies:

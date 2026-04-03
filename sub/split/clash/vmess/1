@@ -465,10 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "🇬🇧 [openproxylist.com] vmess-GB", server: cg1c12.waimaojd.com, port: 443, type: vmess, uuid: 0632bfa9-b15c-4257-8c75-32f7c0c53b27, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /api/v1/graphql, headers: {Host: cg1c12.waimaojd.com}}, udp: true, tfo: false}
   - {name: "🇺🇸 [openproxylist.com] vmess-US", server: 47.90.244.153, port: 8443, type: vmess, uuid: 65e2a985-ad20-4486-a7ec-b67b20ee56af, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /ws}, udp: true, tfo: false}
   - {name: "[25056] - Telegram : @configraygan", server: 185.181.183.124, port: 28094, type: vmess, uuid: a6440729-1046-4a9c-bc19-7c0ede4bf4d4, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}, udp: true, tfo: false}
-  - {name: "@filembad", server: 185.239.2.171, port: 2093, type: vmess, uuid: 448f64c8-33eb-4089-b112-cc58e80ff833, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /index.html, headers: {Host: nice.ceerror.shop}}, udp: true, tfo: false}
+  - {name: "🇬🇧 [openproxylist.com] vmess-GB", server: cg1c12.waimaojd.com, port: 443, type: vmess, uuid: 0632bfa9-b15c-4257-8c75-32f7c0c53b27, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /api/v1/graphql, headers: {Host: cg1c12.waimaojd.com}}, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,30 +484,27 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 🇬🇧 [openproxylist.com] vmess-GB
       - 🇺🇸 [openproxylist.com] vmess-US
       - "[25056] - Telegram : @configraygan"
-      - "@filembad"
+      - 🇬🇧 [openproxylist.com] vmess-GB
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 🇬🇧 [openproxylist.com] vmess-GB
       - 🇺🇸 [openproxylist.com] vmess-US
       - "[25056] - Telegram : @configraygan"
-      - "@filembad"
+      - 🇬🇧 [openproxylist.com] vmess-GB
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 🇬🇧 [openproxylist.com] vmess-GB
       - 🇺🇸 [openproxylist.com] vmess-US
       - "[25056] - Telegram : @configraygan"
-      - "@filembad"
+      - 🇬🇧 [openproxylist.com] vmess-GB
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -524,30 +520,27 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇬🇧 [openproxylist.com] vmess-GB
       - 🇺🇸 [openproxylist.com] vmess-US
       - "[25056] - Telegram : @configraygan"
-      - "@filembad"
+      - 🇬🇧 [openproxylist.com] vmess-GB
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇬🇧 [openproxylist.com] vmess-GB
       - 🇺🇸 [openproxylist.com] vmess-US
       - "[25056] - Telegram : @configraygan"
-      - "@filembad"
+      - 🇬🇧 [openproxylist.com] vmess-GB
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇬🇧 [openproxylist.com] vmess-GB
       - 🇺🇸 [openproxylist.com] vmess-US
       - "[25056] - Telegram : @configraygan"
-      - "@filembad"
+      - 🇬🇧 [openproxylist.com] vmess-GB
   - name: دانلود منیجر 📥
     type: select
     proxies:
