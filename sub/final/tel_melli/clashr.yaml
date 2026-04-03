@@ -8,7 +8,6 @@ proxies:
   - {name: dash.programming-coding.ir:26228, server: dash.programming-coding.ir, port: 26228, type: vless, tls: true, packet-encoding: xudp, uuid: 397e5b06-5adb-40b7-a9f7-314081aeaabc, host: dash.programming-coding.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: openx01027.temp.veraspeed.ir:80, server: openx01027.temp.veraspeed.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 59964617-bc08-452d-a092-2f66e2738d0b, network: ws, ws-opts: {path: /filimo-video/177430809054030600/1774365690/cb857b0770767a2b38b3ebc9d4c44d7fc5630fdd/196328x264new1-1080p.mp4/s-20-v1-a1.ts, headers: {Host: byebye.22.avenflow.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: home.netabin.ir:8443, server: home.netabin.ir, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 89354e3c-5037-4ee1-a88e-201fa0501bc6, host: home.netabin.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: new.idbedam.com:1000, server: new.idbedam.com, port: 1000, type: vless, tls: true, packet-encoding: xudp, uuid: b4533604-a36e-44d1-a8ab-043df362ba8f, network: grpc, grpc-opts: {grpc-mode: multi, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -18,7 +17,6 @@ proxy-groups:
       - dash.programming-coding.ir:26228
       - openx01027.temp.veraspeed.ir:80
       - home.netabin.ir:8443
-      - new.idbedam.com:1000
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -28,7 +26,6 @@ proxy-groups:
       - dash.programming-coding.ir:26228
       - openx01027.temp.veraspeed.ir:80
       - home.netabin.ir:8443
-      - new.idbedam.com:1000
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -38,7 +35,6 @@ proxy-groups:
       - dash.programming-coding.ir:26228
       - openx01027.temp.veraspeed.ir:80
       - home.netabin.ir:8443
-      - new.idbedam.com:1000
   - name: 📲 电报信息
     type: select
     proxies:
@@ -47,7 +43,6 @@ proxy-groups:
       - dash.programming-coding.ir:26228
       - openx01027.temp.veraspeed.ir:80
       - home.netabin.ir:8443
-      - new.idbedam.com:1000
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -56,7 +51,6 @@ proxy-groups:
       - dash.programming-coding.ir:26228
       - openx01027.temp.veraspeed.ir:80
       - home.netabin.ir:8443
-      - new.idbedam.com:1000
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -65,7 +59,6 @@ proxy-groups:
       - dash.programming-coding.ir:26228
       - openx01027.temp.veraspeed.ir:80
       - home.netabin.ir:8443
-      - new.idbedam.com:1000
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -96,7 +89,6 @@ proxy-groups:
       - dash.programming-coding.ir:26228
       - openx01027.temp.veraspeed.ir:80
       - home.netabin.ir:8443
-      - new.idbedam.com:1000
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

@@ -465,7 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Hiddify_Nexttt", server: 185.143.233.200, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a32240a5-ad06-4075-954b-2fcdd6df5616, servername: alef.ir.oadeflantrogm.airasiadl.com, network: ws, ws-opts: {path: "/?ed=443", headers: {Host: alef.ir.oadeflantrogm.airasiadl.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ww.boldtest.ir:8880, server: ww.boldtest.ir, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: b678614e-2bd6-4cf4-875b-b12f4c48a823, network: ws, ws-opts: {path: /, headers: {Host: ww.boldtest.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@Hiddify_Nexttt"
+      - ww.boldtest.ir:8880
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@Hiddify_Nexttt"
+      - ww.boldtest.ir:8880
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@Hiddify_Nexttt"
+      - ww.boldtest.ir:8880
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Hiddify_Nexttt"
+      - ww.boldtest.ir:8880
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Hiddify_Nexttt"
+      - ww.boldtest.ir:8880
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Hiddify_Nexttt"
+      - ww.boldtest.ir:8880
   - name: دانلود منیجر 📥
     type: select
     proxies:
