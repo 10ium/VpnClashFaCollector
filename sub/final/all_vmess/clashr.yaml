@@ -5,67 +5,60 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "🇬🇧 [openproxylist.com] vmess-GB", server: cg1c12.waimaojd.com, port: 443, type: vmess, uuid: 0632bfa9-b15c-4257-8c75-32f7c0c53b27, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /api/v1/graphql, headers: {Host: cg1c12.waimaojd.com}}, udp: true, tfo: false}
   - {name: "🇺🇸 [openproxylist.com] vmess-US", server: 47.90.244.153, port: 8443, type: vmess, uuid: 65e2a985-ad20-4486-a7ec-b67b20ee56af, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /ws}, udp: true, tfo: false}
   - {name: "[25056] - Telegram : @configraygan", server: 185.181.183.124, port: 28094, type: vmess, uuid: a6440729-1046-4a9c-bc19-7c0ede4bf4d4, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}, udp: true, tfo: false}
-  - {name: "@filembad", server: 185.239.2.171, port: 2093, type: vmess, uuid: 448f64c8-33eb-4089-b112-cc58e80ff833, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /index.html, headers: {Host: nice.ceerror.shop}}, udp: true, tfo: false}
+  - {name: "🇬🇧 [openproxylist.com] vmess-GB", server: cg1c12.waimaojd.com, port: 443, type: vmess, uuid: 0632bfa9-b15c-4257-8c75-32f7c0c53b27, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /api/v1/graphql, headers: {Host: cg1c12.waimaojd.com}}, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇬🇧 [openproxylist.com] vmess-GB
       - 🇺🇸 [openproxylist.com] vmess-US
       - "[25056] - Telegram : @configraygan"
-      - "@filembad"
+      - 🇬🇧 [openproxylist.com] vmess-GB
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 🇬🇧 [openproxylist.com] vmess-GB
       - 🇺🇸 [openproxylist.com] vmess-US
       - "[25056] - Telegram : @configraygan"
-      - "@filembad"
+      - 🇬🇧 [openproxylist.com] vmess-GB
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇬🇧 [openproxylist.com] vmess-GB
       - 🇺🇸 [openproxylist.com] vmess-US
       - "[25056] - Telegram : @configraygan"
-      - "@filembad"
+      - 🇬🇧 [openproxylist.com] vmess-GB
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇬🇧 [openproxylist.com] vmess-GB
       - 🇺🇸 [openproxylist.com] vmess-US
       - "[25056] - Telegram : @configraygan"
-      - "@filembad"
+      - 🇬🇧 [openproxylist.com] vmess-GB
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 🇬🇧 [openproxylist.com] vmess-GB
       - 🇺🇸 [openproxylist.com] vmess-US
       - "[25056] - Telegram : @configraygan"
-      - "@filembad"
+      - 🇬🇧 [openproxylist.com] vmess-GB
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇬🇧 [openproxylist.com] vmess-GB
       - 🇺🇸 [openproxylist.com] vmess-US
       - "[25056] - Telegram : @configraygan"
-      - "@filembad"
+      - 🇬🇧 [openproxylist.com] vmess-GB
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -93,10 +86,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇬🇧 [openproxylist.com] vmess-GB
       - 🇺🇸 [openproxylist.com] vmess-US
       - "[25056] - Telegram : @configraygan"
-      - "@filembad"
+      - 🇬🇧 [openproxylist.com] vmess-GB
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

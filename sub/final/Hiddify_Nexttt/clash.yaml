@@ -465,6 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: iribnewreport.watch-out.ir:443, server: iribnewreport.watch-out.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b4e9234c-4517-400b-ac85-4e4b37657838, network: ws, ws-opts: {path: /j/47164, headers: {Host: iribnewreport.watch-out.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@HIDDIFY_NEXTTT", server: iribnewreport.watch-out.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b4e9234c-4517-400b-ac85-4e4b37657838, network: ws, ws-opts: {path: /j/47164, headers: {Host: iribnewreport.watch-out.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: ww.boldtest.ir:8880, server: ww.boldtest.ir, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: b678614e-2bd6-4cf4-875b-b12f4c48a823, network: ws, ws-opts: {path: /, headers: {Host: ww.boldtest.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -482,6 +484,8 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - iribnewreport.watch-out.ir:443
+      - "@HIDDIFY_NEXTTT"
       - ww.boldtest.ir:8880
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -489,6 +493,8 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - iribnewreport.watch-out.ir:443
+      - "@HIDDIFY_NEXTTT"
       - ww.boldtest.ir:8880
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -496,6 +502,8 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - iribnewreport.watch-out.ir:443
+      - "@HIDDIFY_NEXTTT"
       - ww.boldtest.ir:8880
   - name: اتصال پایدار 🔗
     type: url-test
@@ -512,6 +520,8 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - iribnewreport.watch-out.ir:443
+      - "@HIDDIFY_NEXTTT"
       - ww.boldtest.ir:8880
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -519,6 +529,8 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - iribnewreport.watch-out.ir:443
+      - "@HIDDIFY_NEXTTT"
       - ww.boldtest.ir:8880
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -526,6 +538,8 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - iribnewreport.watch-out.ir:443
+      - "@HIDDIFY_NEXTTT"
       - ww.boldtest.ir:8880
   - name: دانلود منیجر 📥
     type: select
