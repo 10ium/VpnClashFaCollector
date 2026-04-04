@@ -465,7 +465,12 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: kia_net`, server: 193.151.130.62, port: 15011, type: vless, tls: true, packet-encoding: xudp, uuid: 789db5da-ddf5-4922-b55a-8e91ea34b6a6, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: سایفون, server: de22.fastplus7.site, port: 2086, type: vless, tls: true, packet-encoding: xudp, uuid: 0d1c3cee-2952-4a3e-a03e-fbe99d32dc72, network: ws, ws-opts: {path: /, headers: {Host: de21.fastplus11.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: کیانتت, server: de22.fastplus7.site, port: 2086, type: vless, tls: true, packet-encoding: xudp, uuid: 0d1c3cee-2952-4a3e-a03e-fbe99d32dc72, network: ws, ws-opts: {path: /, headers: {Host: de21.fastplus11.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: کیانتت`, server: de22.fastplus7.site, port: 2086, type: vless, tls: true, packet-encoding: xudp, uuid: 0d1c3cee-2952-4a3e-a03e-fbe99d32dc72, network: ws, ws-opts: {path: /, headers: {Host: de21.fastplus11.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: سایفون 2, server: s2.tehranionliine.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: b1ac23fb-b336-4d37-a3c0-64b29c4ef3a4, network: ws, ws-opts: {path: /, headers: {Host: s2.tehranionliine.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: کیا, server: s2.tehranionliine.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: b1ac23fb-b336-4d37-a3c0-64b29c4ef3a4, network: ws, ws-opts: {path: /, headers: {Host: s2.tehranionliine.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: کیانتت۷, server: s2.tehranionliine.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: b1ac23fb-b336-4d37-a3c0-64b29c4ef3a4, network: ws, ws-opts: {path: /, headers: {Host: s2.tehranionliine.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +487,36 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - kia_net`
+      - سایفون
+      - کیانتت
+      - کیانتت`
+      - سایفون 2
+      - کیا
+      - کیانتت۷
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - kia_net`
+      - سایفون
+      - کیانتت
+      - کیانتت`
+      - سایفون 2
+      - کیا
+      - کیانتت۷
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - kia_net`
+      - سایفون
+      - کیانتت
+      - کیانتت`
+      - سایفون 2
+      - کیا
+      - کیانتت۷
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +532,36 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - kia_net`
+      - سایفون
+      - کیانتت
+      - کیانتت`
+      - سایفون 2
+      - کیا
+      - کیانتت۷
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - kia_net`
+      - سایفون
+      - کیانتت
+      - کیانتت`
+      - سایفون 2
+      - کیا
+      - کیانتت۷
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - kia_net`
+      - سایفون
+      - کیانتت
+      - کیانتت`
+      - سایفون 2
+      - کیا
+      - کیانتت۷
   - name: دانلود منیجر 📥
     type: select
     proxies:

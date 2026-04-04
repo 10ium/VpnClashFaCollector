@@ -465,7 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: kamk-ir.mclstariran.fun:9090, server: kamk-ir.mclstariran.fun, port: 9090, type: vless, tls: true, packet-encoding: xudp, uuid: ad84d811-1fca-41a1-9ce4-a85e5120c854, host: www.speedtest.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Hiddify_Nexttt", server: final.idbedam.com, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 7bfadf73-a21a-47c8-a48a-d24ef76356fe, host: final.idbedam.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Hiddify_Nexttt 2", server: iribnewreport.watch-out.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b4e9234c-4517-400b-ac85-4e4b37657838, network: ws, ws-opts: {path: /j/47164, headers: {Host: iribnewreport.watch-out.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - kamk-ir.mclstariran.fun:9090
+      - "@Hiddify_Nexttt"
+      - "@Hiddify_Nexttt 2"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - kamk-ir.mclstariran.fun:9090
+      - "@Hiddify_Nexttt"
+      - "@Hiddify_Nexttt 2"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - kamk-ir.mclstariran.fun:9090
+      - "@Hiddify_Nexttt"
+      - "@Hiddify_Nexttt 2"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - kamk-ir.mclstariran.fun:9090
+      - "@Hiddify_Nexttt"
+      - "@Hiddify_Nexttt 2"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - kamk-ir.mclstariran.fun:9090
+      - "@Hiddify_Nexttt"
+      - "@Hiddify_Nexttt 2"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - kamk-ir.mclstariran.fun:9090
+      - "@Hiddify_Nexttt"
+      - "@Hiddify_Nexttt 2"
   - name: دانلود منیجر 📥
     type: select
     proxies:
