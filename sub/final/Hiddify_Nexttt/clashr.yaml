@@ -6,8 +6,6 @@ log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
   - {name: kamk-ir.mclstariran.fun:9090, server: kamk-ir.mclstariran.fun, port: 9090, type: vless, tls: true, packet-encoding: xudp, uuid: ad84d811-1fca-41a1-9ce4-a85e5120c854, host: www.speedtest.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: iribnewreport.watch-out.ir:443, server: iribnewreport.watch-out.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b4e9234c-4517-400b-ac85-4e4b37657838, network: ws, ws-opts: {path: /j/47164, headers: {Host: iribnewreport.watch-out.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@HIDDIFY_NEXTTT", server: iribnewreport.watch-out.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b4e9234c-4517-400b-ac85-4e4b37657838, network: ws, ws-opts: {path: /j/47164, headers: {Host: iribnewreport.watch-out.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -15,8 +13,6 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - kamk-ir.mclstariran.fun:9090
-      - iribnewreport.watch-out.ir:443
-      - "@HIDDIFY_NEXTTT"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -24,8 +20,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - kamk-ir.mclstariran.fun:9090
-      - iribnewreport.watch-out.ir:443
-      - "@HIDDIFY_NEXTTT"
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -33,32 +27,24 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - kamk-ir.mclstariran.fun:9090
-      - iribnewreport.watch-out.ir:443
-      - "@HIDDIFY_NEXTTT"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - kamk-ir.mclstariran.fun:9090
-      - iribnewreport.watch-out.ir:443
-      - "@HIDDIFY_NEXTTT"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - kamk-ir.mclstariran.fun:9090
-      - iribnewreport.watch-out.ir:443
-      - "@HIDDIFY_NEXTTT"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - kamk-ir.mclstariran.fun:9090
-      - iribnewreport.watch-out.ir:443
-      - "@HIDDIFY_NEXTTT"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -87,8 +73,6 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - kamk-ir.mclstariran.fun:9090
-      - iribnewreport.watch-out.ir:443
-      - "@HIDDIFY_NEXTTT"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

@@ -466,6 +466,7 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: 21@oneclickvpnkeys, server: 206.71.158.23, port: 45000, type: hysteria2, ports: 45000, password: Telegram--%3E%40Ln2Ray, obfs: salamander, obfs-password: Telegram--%3E%40Ln2Ray, sni: gavazn.55994421.xyz, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 21@oneclickvpnkeys 2, server: 62.210.25.116, port: 40022, type: hysteria2, ports: 40022, password: dongtaiwang.com, sni: www.microsoft.com, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 41@oneclickvpnkeys, server: reddeadfan.rd-team.ru, port: 2026, type: hysteria2, ports: 2026, password: rstnnl%3AhrQVPjgUr9HTgKyTj0oFCr6j4EpRzXTQ, obfs: salamander, obfs-password: FxZylbqClUqVqAs2nezW9kPyFb2edZ2, sni: reddeadfan.rd-team.ru, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -484,6 +485,7 @@ proxy-groups:
     type: select
     proxies:
       - 21@oneclickvpnkeys
+      - 21@oneclickvpnkeys 2
       - 41@oneclickvpnkeys
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -492,6 +494,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 21@oneclickvpnkeys
+      - 21@oneclickvpnkeys 2
       - 41@oneclickvpnkeys
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -500,6 +503,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 21@oneclickvpnkeys
+      - 21@oneclickvpnkeys 2
       - 41@oneclickvpnkeys
   - name: اتصال پایدار 🔗
     type: url-test
@@ -517,6 +521,7 @@ proxy-groups:
     interval: 600
     proxies:
       - 21@oneclickvpnkeys
+      - 21@oneclickvpnkeys 2
       - 41@oneclickvpnkeys
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -525,6 +530,7 @@ proxy-groups:
     interval: 600
     proxies:
       - 21@oneclickvpnkeys
+      - 21@oneclickvpnkeys 2
       - 41@oneclickvpnkeys
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -533,6 +539,7 @@ proxy-groups:
     interval: 600
     proxies:
       - 21@oneclickvpnkeys
+      - 21@oneclickvpnkeys 2
       - 41@oneclickvpnkeys
   - name: دانلود منیجر 📥
     type: select
