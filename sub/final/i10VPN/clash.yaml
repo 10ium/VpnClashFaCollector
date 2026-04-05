@@ -465,7 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: Psiphon - @i10VPN 3`, server: iribnewreport.watch-out.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b4e9234c-4517-400b-ac85-4e4b37657838, network: ws, ws-opts: {path: /j/47164, headers: {Host: iribnewreport.watch-out.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Psiphon - @i10VPN 4`, server: 185.238.140.212, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6fb4c229-6f9a-449a-a533-9f2a8040c71c, servername: www.microsoft.com, host: www.microsoft.com, path: /, reality-opts: {public-key: gMpp8SHZ5tGcxwaUEZ4e-ZHa8J0qIV7S5C0iO-qkEEE, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - Psiphon - @i10VPN 3`
+      - Psiphon - @i10VPN 4`
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - Psiphon - @i10VPN 3`
+      - Psiphon - @i10VPN 4`
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - Psiphon - @i10VPN 3`
+      - Psiphon - @i10VPN 4`
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Psiphon - @i10VPN 3`
+      - Psiphon - @i10VPN 4`
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Psiphon - @i10VPN 3`
+      - Psiphon - @i10VPN 4`
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Psiphon - @i10VPN 3`
+      - Psiphon - @i10VPN 4`
   - name: دانلود منیجر 📥
     type: select
     proxies:

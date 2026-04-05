@@ -465,7 +465,13 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 21@oneclickvpnkeys, server: 62.210.25.116, port: 40022, type: hysteria2, ports: 40022, password: dongtaiwang.com, sni: www.microsoft.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad`", server: 84.200.91.118, port: 443, type: hysteria2, ports: 443, password: 0f771058-7892-4d46-b77e-a69e811b9cbc, sni: hls-svod.itunes.apple.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 92@oneclickvpnkeys, server: 84.200.91.118, port: 443, type: hysteria2, ports: 443, password: 0f771058-7892-4d46-b77e-a69e811b9cbc, sni: hls-svod.itunes.apple.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad` 2", server: 84.200.91.118, port: 443, type: hysteria2, ports: 443, password: 0f771058-7892-4d46-b77e-a69e811b9cbc, sni: hls-svod.itunes.apple.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad` 3", server: 84.201.25.156, port: 443, type: hysteria2, ports: 443, password: 0f771058-7892-4d46-b77e-a69e811b9cbc, sni: hls-svod.itunes.apple.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 91@oneclickvpnkeys, server: 84.201.25.156, port: 443, type: hysteria2, ports: 443, password: 0f771058-7892-4d46-b77e-a69e811b9cbc, sni: hls-svod.itunes.apple.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad` 4", server: 89.124.73.31, port: 443, type: hysteria2, ports: 443, password: 0f771058-7892-4d46-b77e-a69e811b9cbc, sni: hls-svod.itunes.apple.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 98@oneclickvpnkeys, server: 89.124.73.31, port: 443, type: hysteria2, ports: 443, password: 0f771058-7892-4d46-b77e-a69e811b9cbc, sni: hls-svod.itunes.apple.com, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +488,39 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 21@oneclickvpnkeys
+      - "@filembad`"
+      - 92@oneclickvpnkeys
+      - "@filembad` 2"
+      - "@filembad` 3"
+      - 91@oneclickvpnkeys
+      - "@filembad` 4"
+      - 98@oneclickvpnkeys
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 21@oneclickvpnkeys
+      - "@filembad`"
+      - 92@oneclickvpnkeys
+      - "@filembad` 2"
+      - "@filembad` 3"
+      - 91@oneclickvpnkeys
+      - "@filembad` 4"
+      - 98@oneclickvpnkeys
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 21@oneclickvpnkeys
+      - "@filembad`"
+      - 92@oneclickvpnkeys
+      - "@filembad` 2"
+      - "@filembad` 3"
+      - 91@oneclickvpnkeys
+      - "@filembad` 4"
+      - 98@oneclickvpnkeys
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +536,39 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 21@oneclickvpnkeys
+      - "@filembad`"
+      - 92@oneclickvpnkeys
+      - "@filembad` 2"
+      - "@filembad` 3"
+      - 91@oneclickvpnkeys
+      - "@filembad` 4"
+      - 98@oneclickvpnkeys
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 21@oneclickvpnkeys
+      - "@filembad`"
+      - 92@oneclickvpnkeys
+      - "@filembad` 2"
+      - "@filembad` 3"
+      - 91@oneclickvpnkeys
+      - "@filembad` 4"
+      - 98@oneclickvpnkeys
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 21@oneclickvpnkeys
+      - "@filembad`"
+      - 92@oneclickvpnkeys
+      - "@filembad` 2"
+      - "@filembad` 3"
+      - 91@oneclickvpnkeys
+      - "@filembad` 4"
+      - 98@oneclickvpnkeys
   - name: دانلود منیجر 📥
     type: select
     proxies:

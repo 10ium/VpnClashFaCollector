@@ -465,10 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@v2FreeHub 🇫🇷", server: 162.19.208.118, port: 50285, type: ss, cipher: chacha20-ietf-poly1305, password: 4anGtou86vGB7r1lOm5n8g, udp: true, tfo: false}
-  - {name: "@v2FreeHub 🇷🇺`", server: 62.113.114.116, port: 42320, type: ss, cipher: chacha20-ietf-poly1305, password: BShcek5ydIWbXEnhI2vIym, udp: true, tfo: false}
-  - {name: "@v2FreeHub 🇫🇷 2", server: 109.172.55.232, port: 13760, type: vless, tls: true, packet-encoding: xudp, uuid: 5fad3ad2-1a94-40d0-85bb-51eb83f5c7df, servername: yandex.ru, host: yandex.ru, path: /, reality-opts: {public-key: ktZ1lxOpDoIq3mk39kNAi1uK0z3qTA6f-6u2KbQmICg, short-id: 58a8787420b6a153}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2FreeHub 🇩🇪", server: 81.19.141.190, port: 51529, type: vless, tls: true, packet-encoding: xudp, uuid: ad2879c1-7f77-4a4c-ba50-c24dd5ceffa4, servername: yandex.ru, host: yandex.ru, path: /, reality-opts: {public-key: 9smFk5QZXifHGrtwDwhbROsLBh179bExNWABnvUCvSw, short-id: b77a294515ecc200}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇨🇭 Switzerland (@v2FreeHub) SS`, server: 89.125.95.110, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: VEFFUGZkNtbTGAGde4vUQjqnGST-bgTP, udp: true, tfo: false}
+  - {name: 🇨🇭 Switzerland (@v2FreeHub) Vless`, server: 89.125.95.110, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6946cf76-2c1e-4fbc-a28a-e2beeb7c29cb, servername: www.yandex.com, host: www.yandex.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: nPcUKydxoRI66O3tT9O4QCZpLjOBvkGsiXG7pDX1BBw, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,30 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@v2FreeHub 🇫🇷"
-      - "@v2FreeHub 🇷🇺`"
-      - "@v2FreeHub 🇫🇷 2"
-      - "@v2FreeHub 🇩🇪"
+      - 🇨🇭 Switzerland (@v2FreeHub) SS`
+      - 🇨🇭 Switzerland (@v2FreeHub) Vless`
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@v2FreeHub 🇫🇷"
-      - "@v2FreeHub 🇷🇺`"
-      - "@v2FreeHub 🇫🇷 2"
-      - "@v2FreeHub 🇩🇪"
+      - 🇨🇭 Switzerland (@v2FreeHub) SS`
+      - 🇨🇭 Switzerland (@v2FreeHub) Vless`
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@v2FreeHub 🇫🇷"
-      - "@v2FreeHub 🇷🇺`"
-      - "@v2FreeHub 🇫🇷 2"
-      - "@v2FreeHub 🇩🇪"
+      - 🇨🇭 Switzerland (@v2FreeHub) SS`
+      - 🇨🇭 Switzerland (@v2FreeHub) Vless`
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -524,30 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2FreeHub 🇫🇷"
-      - "@v2FreeHub 🇷🇺`"
-      - "@v2FreeHub 🇫🇷 2"
-      - "@v2FreeHub 🇩🇪"
+      - 🇨🇭 Switzerland (@v2FreeHub) SS`
+      - 🇨🇭 Switzerland (@v2FreeHub) Vless`
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2FreeHub 🇫🇷"
-      - "@v2FreeHub 🇷🇺`"
-      - "@v2FreeHub 🇫🇷 2"
-      - "@v2FreeHub 🇩🇪"
+      - 🇨🇭 Switzerland (@v2FreeHub) SS`
+      - 🇨🇭 Switzerland (@v2FreeHub) Vless`
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2FreeHub 🇫🇷"
-      - "@v2FreeHub 🇷🇺`"
-      - "@v2FreeHub 🇫🇷 2"
-      - "@v2FreeHub 🇩🇪"
+      - 🇨🇭 Switzerland (@v2FreeHub) SS`
+      - 🇨🇭 Switzerland (@v2FreeHub) Vless`
   - name: دانلود منیجر 📥
     type: select
     proxies:
