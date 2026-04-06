@@ -467,6 +467,9 @@ rule-providers:
 proxies:
   - {name: NetAccount`, server: ir.notrinoo.click, port: 44398, type: vless, tls: true, packet-encoding: xudp, uuid: 00cdfff8-6009-48f1-a37f-dac6eb729f66, host: ir.notrinoo.click, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: NetAccount` 2, server: 185.143.233.5, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 431f7455-aee4-41f9-8b98-f2971ed18cf0, network: ws, ws-opts: {path: /, headers: {Host: myipuu-9acc2aad0b-cc.apps.ir-northwest1.arvancaas.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@NetAccount", server: 185.238.140.212, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6fb4c229-6f9a-449a-a533-9f2a8040c71c, servername: www.microsoft.com, host: www.microsoft.com, path: /, reality-opts: {public-key: gMpp8SHZ5tGcxwaUEZ4e-ZHa8J0qIV7S5C0iO-qkEEE, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: NetAccount, server: 185.238.140.212, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6fb4c229-6f9a-449a-a533-9f2a8040c71c, servername: www.microsoft.com, host: www.microsoft.com, path: /, reality-opts: {public-key: gMpp8SHZ5tGcxwaUEZ4e-ZHa8J0qIV7S5C0iO-qkEEE, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: NetAccount` 3, server: 185.238.140.212, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6fb4c229-6f9a-449a-a533-9f2a8040c71c, servername: www.microsoft.com, host: www.microsoft.com, path: /, reality-opts: {public-key: gMpp8SHZ5tGcxwaUEZ4e-ZHa8J0qIV7S5C0iO-qkEEE, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,6 +488,9 @@ proxy-groups:
     proxies:
       - NetAccount`
       - NetAccount` 2
+      - "@NetAccount"
+      - NetAccount
+      - NetAccount` 3
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -493,6 +499,9 @@ proxy-groups:
     proxies:
       - NetAccount`
       - NetAccount` 2
+      - "@NetAccount"
+      - NetAccount
+      - NetAccount` 3
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -501,6 +510,9 @@ proxy-groups:
     proxies:
       - NetAccount`
       - NetAccount` 2
+      - "@NetAccount"
+      - NetAccount
+      - NetAccount` 3
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -518,6 +530,9 @@ proxy-groups:
     proxies:
       - NetAccount`
       - NetAccount` 2
+      - "@NetAccount"
+      - NetAccount
+      - NetAccount` 3
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -526,6 +541,9 @@ proxy-groups:
     proxies:
       - NetAccount`
       - NetAccount` 2
+      - "@NetAccount"
+      - NetAccount
+      - NetAccount` 3
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -534,6 +552,9 @@ proxy-groups:
     proxies:
       - NetAccount`
       - NetAccount` 2
+      - "@NetAccount"
+      - NetAccount
+      - NetAccount` 3
   - name: دانلود منیجر 📥
     type: select
     proxies:
