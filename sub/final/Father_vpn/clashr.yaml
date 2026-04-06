@@ -5,53 +5,46 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@Father_vpn", server: str.hajodfnv.top, port: 52532, type: vless, tls: true, packet-encoding: xudp, uuid: 8f12451b-0488-4d21-bfff-79e8ae63c7cb, host: str.hajodfnv.top, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Father_vpn 2", server: 120.232.240.56, port: 16928, type: vmess, uuid: 5f6b3c3f-b0a8-33f5-95c6-371f8c6af973, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /v2ray, headers: {Host: "%7B%22Host%22:%22193.25.215.160%22%7D"}}, udp: true, tfo: false}
+  - {name: "@Hacknashid", server: pro.vpsino.com, port: 20493, type: vless, tls: true, packet-encoding: xudp, uuid: 47cb5726-b426-1a8c-d83e-9c13c7b90251, host: pro.vpsino.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@Father_vpn"
-      - "@Father_vpn 2"
+      - "@Hacknashid"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@Father_vpn"
-      - "@Father_vpn 2"
+      - "@Hacknashid"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@Father_vpn"
-      - "@Father_vpn 2"
+      - "@Hacknashid"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@Father_vpn"
-      - "@Father_vpn 2"
+      - "@Hacknashid"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@Father_vpn"
-      - "@Father_vpn 2"
+      - "@Hacknashid"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@Father_vpn"
-      - "@Father_vpn 2"
+      - "@Hacknashid"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -79,8 +72,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@Father_vpn"
-      - "@Father_vpn 2"
+      - "@Hacknashid"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
