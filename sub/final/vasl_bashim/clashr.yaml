@@ -5,7 +5,13 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@vasl_bashim`", server: 78.158.166.180, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: e911c552-3a98-41e0-b5fb-0dd3879887b7, servername: vod.ensf.top, alpn: [h2], network: ws, ws-opts: {path: /api/v1/irc, headers: {Host: vod.ensf.top}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim`", server: 147.78.1.230, port: 990, type: ss, cipher: chacha20-ietf-poly1305, password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=, udp: true, tfo: false}
+  - {name: "@vasl_bashim", server: 13.38.177.145, port: 22223, type: trojan, password: telegram-id-v2rayvpnchannel, sni: trojan.burgerip.co.uk, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim` 2", server: 37.152.189.74, port: 4431, type: vless, tls: true, packet-encoding: xudp, uuid: 37f2b456-5c0a-43da-be12-753c86393bdc, network: ws, ws-opts: {path: /ek/irinn/live/1080p/, headers: {Host: live-azd1102.telewebion.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim` 3", server: s2.tehranionliine.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: b1ac23fb-b336-4d37-a3c0-64b29c4ef3a4, network: ws, ws-opts: {path: "@vasl_bashim", headers: {Host: s2.tehranionliine.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim` 4", server: 185.143.233.5, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: c1d17981-7bc4-403a-994f-df6edad66c7b, network: ws, ws-opts: {path: /, headers: {Host: sc5.hamidzarinjooi.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim` 5", server: 185.143.233.122, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c3af5997-2b5a-411f-8fee-8c1a7aa879b1, servername: database-cbv.persianstorebnd.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /login/get/3929429349.rar/fortnite, headers: {Host: database-cbv.persianstorebnd.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim` 6", server: 78.158.166.180, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: e911c552-3a98-41e0-b5fb-0dd3879887b7, servername: vod.ensf.top, alpn: [h2], network: ws, ws-opts: {path: /api/v1/irc, headers: {Host: vod.ensf.top}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -13,6 +19,12 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - "@vasl_bashim`"
+      - "@vasl_bashim"
+      - "@vasl_bashim` 2"
+      - "@vasl_bashim` 3"
+      - "@vasl_bashim` 4"
+      - "@vasl_bashim` 5"
+      - "@vasl_bashim` 6"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -20,6 +32,12 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@vasl_bashim`"
+      - "@vasl_bashim"
+      - "@vasl_bashim` 2"
+      - "@vasl_bashim` 3"
+      - "@vasl_bashim` 4"
+      - "@vasl_bashim` 5"
+      - "@vasl_bashim` 6"
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -27,24 +45,48 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - "@vasl_bashim`"
+      - "@vasl_bashim"
+      - "@vasl_bashim` 2"
+      - "@vasl_bashim` 3"
+      - "@vasl_bashim` 4"
+      - "@vasl_bashim` 5"
+      - "@vasl_bashim` 6"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@vasl_bashim`"
+      - "@vasl_bashim"
+      - "@vasl_bashim` 2"
+      - "@vasl_bashim` 3"
+      - "@vasl_bashim` 4"
+      - "@vasl_bashim` 5"
+      - "@vasl_bashim` 6"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - "@vasl_bashim`"
+      - "@vasl_bashim"
+      - "@vasl_bashim` 2"
+      - "@vasl_bashim` 3"
+      - "@vasl_bashim` 4"
+      - "@vasl_bashim` 5"
+      - "@vasl_bashim` 6"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@vasl_bashim`"
+      - "@vasl_bashim"
+      - "@vasl_bashim` 2"
+      - "@vasl_bashim` 3"
+      - "@vasl_bashim` 4"
+      - "@vasl_bashim` 5"
+      - "@vasl_bashim` 6"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -73,6 +115,12 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - "@vasl_bashim`"
+      - "@vasl_bashim"
+      - "@vasl_bashim` 2"
+      - "@vasl_bashim` 3"
+      - "@vasl_bashim` 4"
+      - "@vasl_bashim` 5"
+      - "@vasl_bashim` 6"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

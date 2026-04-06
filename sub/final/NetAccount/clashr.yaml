@@ -6,13 +6,14 @@ log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
   - {name: NetAccount2, server: 18.156.97.29, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: NetAccount`, server: 185.143.233.5, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 431f7455-aee4-41f9-8b98-f2971ed18cf0, network: ws, ws-opts: {path: /, headers: {Host: myipuu-9acc2aad0b-cc.apps.ir-northwest1.arvancaas.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: NetAccount4, server: 176.108.242.76, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4371ad14-b981-4699-bedf-83fb79bde3e6, servername: www.vkvideo.ru, host: www.vkvideo.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: FkmYFobwxLMLEktYXywmjthuEYCZggITsxwPNasTKUg, short-id: 6354585c37827955}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@NetAccount", server: 185.238.140.212, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6fb4c229-6f9a-449a-a533-9f2a8040c71c, servername: www.microsoft.com, host: www.microsoft.com, path: /, reality-opts: {public-key: gMpp8SHZ5tGcxwaUEZ4e-ZHa8J0qIV7S5C0iO-qkEEE, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: NetAccount, server: 185.238.140.212, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6fb4c229-6f9a-449a-a533-9f2a8040c71c, servername: www.microsoft.com, host: www.microsoft.com, path: /, reality-opts: {public-key: gMpp8SHZ5tGcxwaUEZ4e-ZHa8J0qIV7S5C0iO-qkEEE, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: NetAccount6, server: 185.238.140.212, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6fb4c229-6f9a-449a-a533-9f2a8040c71c, servername: www.microsoft.com, host: www.microsoft.com, path: /, reality-opts: {public-key: gMpp8SHZ5tGcxwaUEZ4e-ZHa8J0qIV7S5C0iO-qkEEE, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: NetAccount` 2, server: 185.238.140.212, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6fb4c229-6f9a-449a-a533-9f2a8040c71c, servername: www.microsoft.com, host: www.microsoft.com, path: /, reality-opts: {public-key: gMpp8SHZ5tGcxwaUEZ4e-ZHa8J0qIV7S5C0iO-qkEEE, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: NetAccount`, server: 185.238.140.212, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6fb4c229-6f9a-449a-a533-9f2a8040c71c, servername: www.microsoft.com, host: www.microsoft.com, path: /, reality-opts: {public-key: gMpp8SHZ5tGcxwaUEZ4e-ZHa8J0qIV7S5C0iO-qkEEE, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: NetAccount3, server: swagmeli.swagmeli.site, port: 7, type: vless, tls: true, packet-encoding: xudp, uuid: e3caf84e-4697-40a8-800c-cc948998cc8e, network: ws, ws-opts: {path: /, headers: {Host: myket.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: NetAccount` 2, server: 78.158.166.180, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: e911c552-3a98-41e0-b5fb-0dd3879887b7, servername: vod.ensf.top, alpn: [h2], network: ws, ws-opts: {path: /api/v1/irc, headers: {Host: vod.ensf.top}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@NetAccount`", server: uncl.atlasc.ir, port: 32432, type: vless, tls: true, packet-encoding: xudp, uuid: ef010b15-0522-47a9-aec8-e46d2c85989a, host: www.aparat.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -20,13 +21,14 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - NetAccount2
-      - NetAccount`
       - NetAccount4
       - "@NetAccount"
       - NetAccount
       - NetAccount6
-      - NetAccount` 2
+      - NetAccount`
       - NetAccount3
+      - NetAccount` 2
+      - "@NetAccount`"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -34,13 +36,14 @@ proxy-groups:
     tolerance: 50
     proxies:
       - NetAccount2
-      - NetAccount`
       - NetAccount4
       - "@NetAccount"
       - NetAccount
       - NetAccount6
-      - NetAccount` 2
+      - NetAccount`
       - NetAccount3
+      - NetAccount` 2
+      - "@NetAccount`"
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -48,52 +51,56 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - NetAccount2
-      - NetAccount`
       - NetAccount4
       - "@NetAccount"
       - NetAccount
       - NetAccount6
-      - NetAccount` 2
+      - NetAccount`
       - NetAccount3
+      - NetAccount` 2
+      - "@NetAccount`"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - NetAccount2
-      - NetAccount`
       - NetAccount4
       - "@NetAccount"
       - NetAccount
       - NetAccount6
-      - NetAccount` 2
+      - NetAccount`
       - NetAccount3
+      - NetAccount` 2
+      - "@NetAccount`"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - NetAccount2
-      - NetAccount`
       - NetAccount4
       - "@NetAccount"
       - NetAccount
       - NetAccount6
-      - NetAccount` 2
+      - NetAccount`
       - NetAccount3
+      - NetAccount` 2
+      - "@NetAccount`"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - NetAccount2
-      - NetAccount`
       - NetAccount4
       - "@NetAccount"
       - NetAccount
       - NetAccount6
-      - NetAccount` 2
+      - NetAccount`
       - NetAccount3
+      - NetAccount` 2
+      - "@NetAccount`"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -122,13 +129,14 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - NetAccount2
-      - NetAccount`
       - NetAccount4
       - "@NetAccount"
       - NetAccount
       - NetAccount6
-      - NetAccount` 2
+      - NetAccount`
       - NetAccount3
+      - NetAccount` 2
+      - "@NetAccount`"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

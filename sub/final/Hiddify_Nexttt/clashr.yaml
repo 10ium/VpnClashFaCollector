@@ -9,6 +9,8 @@ proxies:
   - {name: "@Hiddify_Nexttt 2", server: 185.143.234.122, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 8fc836e4-f72f-40d7-8a55-8677324a2079, network: ws, ws-opts: {path: /, headers: {Host: S4.koremusic.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@Hiddify_Nexttt 3", server: 185.143.234.200, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: c1e0aa57-6ae8-429d-a304-80cc52eba9c1, network: ws, ws-opts: {path: /, headers: {Host: vhb2.parsimas.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@Hiddify_Nexttt 4", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: c3319fd7-627b-4ac2-a883-0bee53d15757, network: ws, ws-opts: {path: /, headers: {Host: arc.liarashop.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Hiddify_Nexttt 5", server: 78.158.166.180, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: e911c552-3a98-41e0-b5fb-0dd3879887b7, servername: vod.ensf.top, alpn: [h2], network: ws, ws-opts: {path: /api/v1/irc, headers: {Host: vod.ensf.top}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Hiddify_Nexttt`", server: 78.158.166.180, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: e911c552-3a98-41e0-b5fb-0dd3879887b7, servername: vod.ensf.top, alpn: [h2], network: ws, ws-opts: {path: /api/v1/irc, headers: {Host: vod.ensf.top}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -19,6 +21,8 @@ proxy-groups:
       - "@Hiddify_Nexttt 2"
       - "@Hiddify_Nexttt 3"
       - "@Hiddify_Nexttt 4"
+      - "@Hiddify_Nexttt 5"
+      - "@Hiddify_Nexttt`"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -29,6 +33,8 @@ proxy-groups:
       - "@Hiddify_Nexttt 2"
       - "@Hiddify_Nexttt 3"
       - "@Hiddify_Nexttt 4"
+      - "@Hiddify_Nexttt 5"
+      - "@Hiddify_Nexttt`"
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -39,6 +45,8 @@ proxy-groups:
       - "@Hiddify_Nexttt 2"
       - "@Hiddify_Nexttt 3"
       - "@Hiddify_Nexttt 4"
+      - "@Hiddify_Nexttt 5"
+      - "@Hiddify_Nexttt`"
   - name: 📲 电报信息
     type: select
     proxies:
@@ -48,6 +56,8 @@ proxy-groups:
       - "@Hiddify_Nexttt 2"
       - "@Hiddify_Nexttt 3"
       - "@Hiddify_Nexttt 4"
+      - "@Hiddify_Nexttt 5"
+      - "@Hiddify_Nexttt`"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -57,6 +67,8 @@ proxy-groups:
       - "@Hiddify_Nexttt 2"
       - "@Hiddify_Nexttt 3"
       - "@Hiddify_Nexttt 4"
+      - "@Hiddify_Nexttt 5"
+      - "@Hiddify_Nexttt`"
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -66,6 +78,8 @@ proxy-groups:
       - "@Hiddify_Nexttt 2"
       - "@Hiddify_Nexttt 3"
       - "@Hiddify_Nexttt 4"
+      - "@Hiddify_Nexttt 5"
+      - "@Hiddify_Nexttt`"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -97,6 +111,8 @@ proxy-groups:
       - "@Hiddify_Nexttt 2"
       - "@Hiddify_Nexttt 3"
       - "@Hiddify_Nexttt 4"
+      - "@Hiddify_Nexttt 5"
+      - "@Hiddify_Nexttt`"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
