@@ -465,7 +465,13 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: www.p4free.site:28722, server: www.p4free.site, port: 28722, type: vless, tls: true, packet-encoding: xudp, uuid: 3cd749d7-9f23-4727-9335-c66d37d28e9f, host: www.p4free.site, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***⚡***@V2ray_official`", server: mim.md-teach.com, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 0bf3ab52-e1b1-49e2-bfa5-389d9a251710, servername: md2.moradi.online, network: ws, ws-opts: {path: /, headers: {Host: md2.moradi.online}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***⚡***@V2ray_official", server: 78.158.166.180, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.jpmj.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: sni.jpmj.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***⚡***@V2ray_official` 2", server: 78.158.166.180, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.jpmj.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: sni.jpmj.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 78.158.166.180:2096, server: 78.158.166.180, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.jpmj.dev`, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: sni.jpmj.dev`}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***⚡***@V2ray_official 2", server: 78.158.166.180, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.jpmj.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: sni.jpmj.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***⚡***@V2ray_official 3", server: ez.pubgping.com, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: aaeb5b6b-3589-4d24-9b64-f1c6858d5733, host: ez.pubgping.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***⚡***@V2ray_official 4", server: 198.41.222.191, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: e388fffb-03b0-4227-ac2c-2b5cec1f5c34, network: ws, ws-opts: {path: /, headers: {Host: leecher56.matinheydri.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +488,39 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - www.p4free.site:28722
+      - "***⚡***@V2ray_official`"
+      - "***⚡***@V2ray_official"
+      - "***⚡***@V2ray_official` 2"
+      - 78.158.166.180:2096
+      - "***⚡***@V2ray_official 2"
+      - "***⚡***@V2ray_official 3"
+      - "***⚡***@V2ray_official 4"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - www.p4free.site:28722
+      - "***⚡***@V2ray_official`"
+      - "***⚡***@V2ray_official"
+      - "***⚡***@V2ray_official` 2"
+      - 78.158.166.180:2096
+      - "***⚡***@V2ray_official 2"
+      - "***⚡***@V2ray_official 3"
+      - "***⚡***@V2ray_official 4"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - www.p4free.site:28722
+      - "***⚡***@V2ray_official`"
+      - "***⚡***@V2ray_official"
+      - "***⚡***@V2ray_official` 2"
+      - 78.158.166.180:2096
+      - "***⚡***@V2ray_official 2"
+      - "***⚡***@V2ray_official 3"
+      - "***⚡***@V2ray_official 4"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +536,39 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - www.p4free.site:28722
+      - "***⚡***@V2ray_official`"
+      - "***⚡***@V2ray_official"
+      - "***⚡***@V2ray_official` 2"
+      - 78.158.166.180:2096
+      - "***⚡***@V2ray_official 2"
+      - "***⚡***@V2ray_official 3"
+      - "***⚡***@V2ray_official 4"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - www.p4free.site:28722
+      - "***⚡***@V2ray_official`"
+      - "***⚡***@V2ray_official"
+      - "***⚡***@V2ray_official` 2"
+      - 78.158.166.180:2096
+      - "***⚡***@V2ray_official 2"
+      - "***⚡***@V2ray_official 3"
+      - "***⚡***@V2ray_official 4"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - www.p4free.site:28722
+      - "***⚡***@V2ray_official`"
+      - "***⚡***@V2ray_official"
+      - "***⚡***@V2ray_official` 2"
+      - 78.158.166.180:2096
+      - "***⚡***@V2ray_official 2"
+      - "***⚡***@V2ray_official 3"
+      - "***⚡***@V2ray_official 4"
   - name: دانلود منیجر 📥
     type: select
     proxies:

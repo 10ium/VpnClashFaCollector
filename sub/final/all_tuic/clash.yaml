@@ -466,14 +466,11 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: 94@oneclickvpnkeys, server: 103.231.73.181, port: 50043, type: tuic, uuid: e033ef6e-ab4b-47d4-a523-ff568d2c8dbb, password: strong-secret-pass-777, alpn: [h3], udp-relay-mode: native, congestion-controller: bbr, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 32@oneclickvpnkeys, server: 146.19.247.219, port: 50043, type: tuic, uuid: e033ef6e-ab4b-47d4-a523-ff568d2c8dbb, password: strong-secret-pass-777, alpn: [h3], udp-relay-mode: native, congestion-controller: bbr, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 88@oneclickvpnkeys, server: 2.56.172.83, port: 50043, type: tuic, uuid: e033ef6e-ab4b-47d4-a523-ff568d2c8dbb, password: strong-secret-pass-777, alpn: [h3], udp-relay-mode: native, congestion-controller: bbr, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 91@oneclickvpnkeys, server: 45.12.146.179, port: 50043, type: tuic, uuid: e033ef6e-ab4b-47d4-a523-ff568d2c8dbb, password: strong-secret-pass-777, alpn: [h3], udp-relay-mode: native, congestion-controller: bbr, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 65@oneclickvpnkeys, server: 45.120.179.89, port: 50043, type: tuic, uuid: e033ef6e-ab4b-47d4-a523-ff568d2c8dbb, password: strong-secret-pass-777, alpn: [h3], udp-relay-mode: native, congestion-controller: bbr, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 93@oneclickvpnkeys, server: 82.117.255.37, port: 50043, type: tuic, uuid: e033ef6e-ab4b-47d4-a523-ff568d2c8dbb, password: strong-secret-pass-777, alpn: [h3], udp-relay-mode: native, congestion-controller: bbr, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 45@oneclickvpnkeys`, server: 82.118.16.61, port: 50043, type: tuic, uuid: e033ef6e-ab4b-47d4-a523-ff568d2c8dbb, password: strong-secret-pass-777, alpn: [h3], udp-relay-mode: native, congestion-controller: bbr, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 97@oneclickvpnkeys, server: 94.131.101.19, port: 50043, type: tuic, uuid: e033ef6e-ab4b-47d4-a523-ff568d2c8dbb, password: strong-secret-pass-777, alpn: [h3], udp-relay-mode: native, congestion-controller: bbr, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 17@oneclickvpnkeys, server: 94.131.105.125, port: 50043, type: tuic, uuid: e033ef6e-ab4b-47d4-a523-ff568d2c8dbb, password: strong-secret-pass-777, alpn: [h3], udp-relay-mode: native, congestion-controller: bbr, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -491,14 +488,11 @@ proxy-groups:
     type: select
     proxies:
       - 94@oneclickvpnkeys
-      - 32@oneclickvpnkeys
       - 88@oneclickvpnkeys
       - 91@oneclickvpnkeys
       - 65@oneclickvpnkeys
       - 93@oneclickvpnkeys
-      - 45@oneclickvpnkeys`
       - 97@oneclickvpnkeys
-      - 17@oneclickvpnkeys
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -506,14 +500,11 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 94@oneclickvpnkeys
-      - 32@oneclickvpnkeys
       - 88@oneclickvpnkeys
       - 91@oneclickvpnkeys
       - 65@oneclickvpnkeys
       - 93@oneclickvpnkeys
-      - 45@oneclickvpnkeys`
       - 97@oneclickvpnkeys
-      - 17@oneclickvpnkeys
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -521,14 +512,11 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 94@oneclickvpnkeys
-      - 32@oneclickvpnkeys
       - 88@oneclickvpnkeys
       - 91@oneclickvpnkeys
       - 65@oneclickvpnkeys
       - 93@oneclickvpnkeys
-      - 45@oneclickvpnkeys`
       - 97@oneclickvpnkeys
-      - 17@oneclickvpnkeys
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -545,14 +533,11 @@ proxy-groups:
     interval: 600
     proxies:
       - 94@oneclickvpnkeys
-      - 32@oneclickvpnkeys
       - 88@oneclickvpnkeys
       - 91@oneclickvpnkeys
       - 65@oneclickvpnkeys
       - 93@oneclickvpnkeys
-      - 45@oneclickvpnkeys`
       - 97@oneclickvpnkeys
-      - 17@oneclickvpnkeys
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -560,14 +545,11 @@ proxy-groups:
     interval: 600
     proxies:
       - 94@oneclickvpnkeys
-      - 32@oneclickvpnkeys
       - 88@oneclickvpnkeys
       - 91@oneclickvpnkeys
       - 65@oneclickvpnkeys
       - 93@oneclickvpnkeys
-      - 45@oneclickvpnkeys`
       - 97@oneclickvpnkeys
-      - 17@oneclickvpnkeys
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -575,14 +557,11 @@ proxy-groups:
     interval: 600
     proxies:
       - 94@oneclickvpnkeys
-      - 32@oneclickvpnkeys
       - 88@oneclickvpnkeys
       - 91@oneclickvpnkeys
       - 65@oneclickvpnkeys
       - 93@oneclickvpnkeys
-      - 45@oneclickvpnkeys`
       - 97@oneclickvpnkeys
-      - 17@oneclickvpnkeys
   - name: دانلود منیجر 📥
     type: select
     proxies:
