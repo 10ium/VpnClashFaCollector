@@ -465,9 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: dash.programming-coding.ir:26228, server: dash.programming-coding.ir, port: 26228, type: vless, tls: true, packet-encoding: xudp, uuid: 397e5b06-5adb-40b7-a9f7-314081aeaabc, host: dash.programming-coding.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: openx01027.temp.veraspeed.ir:80, server: openx01027.temp.veraspeed.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 59964617-bc08-452d-a092-2f66e2738d0b, network: ws, ws-opts: {path: /filimo-video/177430809054030600/1774365690/cb857b0770767a2b38b3ebc9d4c44d7fc5630fdd/196328x264new1-1080p.mp4/s-20-v1-a1.ts, headers: {Host: byebye.22.avenflow.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: home.netabin.ir:8443, server: home.netabin.ir, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 89354e3c-5037-4ee1-a88e-201fa0501bc6, host: home.netabin.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: iribnewreport.watch-out.ir:443, server: iribnewreport.watch-out.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b4e9234c-4517-400b-ac85-4e4b37657838, network: ws, ws-opts: {path: /j/47164, headers: {Host: iribnewreport.watch-out.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,27 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - dash.programming-coding.ir:26228
-      - openx01027.temp.veraspeed.ir:80
-      - home.netabin.ir:8443
+      - iribnewreport.watch-out.ir:443
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - dash.programming-coding.ir:26228
-      - openx01027.temp.veraspeed.ir:80
-      - home.netabin.ir:8443
+      - iribnewreport.watch-out.ir:443
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - dash.programming-coding.ir:26228
-      - openx01027.temp.veraspeed.ir:80
-      - home.netabin.ir:8443
+      - iribnewreport.watch-out.ir:443
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -520,27 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - dash.programming-coding.ir:26228
-      - openx01027.temp.veraspeed.ir:80
-      - home.netabin.ir:8443
+      - iribnewreport.watch-out.ir:443
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - dash.programming-coding.ir:26228
-      - openx01027.temp.veraspeed.ir:80
-      - home.netabin.ir:8443
+      - iribnewreport.watch-out.ir:443
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - dash.programming-coding.ir:26228
-      - openx01027.temp.veraspeed.ir:80
-      - home.netabin.ir:8443
+      - iribnewreport.watch-out.ir:443
   - name: دانلود منیجر 📥
     type: select
     proxies:
