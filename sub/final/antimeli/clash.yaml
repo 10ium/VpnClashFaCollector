@@ -465,9 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "CH: @antimeli", server: nt5.vhuma.com, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 02d42a09-709b-4acb-ba01-af812727e7d8, host: bama.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "CH: @antimeli 2", server: 185.81.99.32, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 346c0a43-11b0-4b85-b3ca-d1ccff41e785, servername: aparat.com, host: aparat.com, path: /, reality-opts: {public-key: hfWtgRA0ylK1Yh2lt5EnM7AAt1konMNBeTEv3LqecBQ, short-id: b0e32dad}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "CH: @antimeli`", server: srv2.panahga.ir, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: a33bf5d1-ca1b-4dff-9620-9c7673bd0342, servername: srv2.panahga.ir, alpn: [h2%2Chttp%2F1.1], host: srv2.panahga.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "CH: @antimeli`", server: 78.158.166.180, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: e911c552-3a98-41e0-b5fb-0dd3879887b7, servername: vod.ensf.top, alpn: [h2], network: ws, ws-opts: {path: /api/v1/irc, headers: {Host: vod.ensf.top}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,8 +482,6 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "CH: @antimeli"
-      - "CH: @antimeli 2"
       - "CH: @antimeli`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -493,8 +489,6 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - "CH: @antimeli"
-      - "CH: @antimeli 2"
       - "CH: @antimeli`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -502,8 +496,6 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - "CH: @antimeli"
-      - "CH: @antimeli 2"
       - "CH: @antimeli`"
   - name: اتصال پایدار 🔗
     type: url-test
@@ -520,8 +512,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "CH: @antimeli"
-      - "CH: @antimeli 2"
       - "CH: @antimeli`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -529,8 +519,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "CH: @antimeli"
-      - "CH: @antimeli 2"
       - "CH: @antimeli`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -538,8 +526,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "CH: @antimeli"
-      - "CH: @antimeli 2"
       - "CH: @antimeli`"
   - name: دانلود منیجر 📥
     type: select

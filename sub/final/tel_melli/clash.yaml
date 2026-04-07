@@ -467,6 +467,7 @@ rule-providers:
 proxies:
   - {name: iribnewreport.watch-out.ir:443, server: iribnewreport.watch-out.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b4e9234c-4517-400b-ac85-4e4b37657838, network: ws, ws-opts: {path: /j/47164, headers: {Host: iribnewreport.watch-out.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@hamvex �%8‌1�`", server: iribnewreport.watch-out.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b4e9234c-4517-400b-ac85-4e4b37657838, network: ws, ws-opts: {path: /j/47164, headers: {Host: iribnewreport.watch-out.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Viaping2GB, server: dn.brwakhanbarin.ir, port: 8080, type: vmess, uuid: aef2782e-3707-45c9-a941-5a7bf9ffe2db, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,6 +485,7 @@ proxy-groups:
     type: select
     proxies:
       - iribnewreport.watch-out.ir:443
+      - Viaping2GB
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -491,6 +493,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - iribnewreport.watch-out.ir:443
+      - Viaping2GB
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -498,6 +501,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - iribnewreport.watch-out.ir:443
+      - Viaping2GB
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -514,6 +518,7 @@ proxy-groups:
     interval: 600
     proxies:
       - iribnewreport.watch-out.ir:443
+      - Viaping2GB
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -521,6 +526,7 @@ proxy-groups:
     interval: 600
     proxies:
       - iribnewreport.watch-out.ir:443
+      - Viaping2GB
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -528,6 +534,7 @@ proxy-groups:
     interval: 600
     proxies:
       - iribnewreport.watch-out.ir:443
+      - Viaping2GB
   - name: دانلود منیجر 📥
     type: select
     proxies:

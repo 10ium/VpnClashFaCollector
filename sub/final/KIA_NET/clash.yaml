@@ -465,12 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Kia_Net", server: 18.156.97.29, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@kia_net", server: 176.108.242.76, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4371ad14-b981-4699-bedf-83fb79bde3e6, servername: www.vkvideo.ru, host: www.vkvideo.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: FkmYFobwxLMLEktYXywmjthuEYCZggITsxwPNasTKUg, short-id: 6354585c37827955}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: تست, server: 185.238.140.212, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6fb4c229-6f9a-449a-a533-9f2a8040c71c, servername: www.microsoft.com, host: www.microsoft.com, path: /, reality-opts: {public-key: gMpp8SHZ5tGcxwaUEZ4e-ZHa8J0qIV7S5C0iO-qkEEE, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Kia_Net 2", server: 185.143.234.122, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 8fc836e4-f72f-40d7-8a55-8677324a2079, network: ws, ws-opts: {path: /, headers: {Host: S4.koremusic.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: تسهه, server: 185.143.234.122, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 8fc836e4-f72f-40d7-8a55-8677324a2079, network: ws, ws-opts: {path: /, headers: {Host: S4.koremusic.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Kia_Net 3", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: c3319fd7-627b-4ac2-a883-0bee53d15757, network: ws, ws-opts: {path: /, headers: {Host: arc.liarashop.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: خخبب, server: 37.152.189.74, port: 4431, type: vless, tls: true, packet-encoding: xudp, uuid: 1b7ef0bd-e763-46cb-92fa-26369a0366fa, network: ws, ws-opts: {path: /ek/irinn/live/1080p/, headers: {Host: live-azd1102.telewebion.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,36 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@Kia_Net"
-      - "@kia_net"
-      - تست
-      - "@Kia_Net 2"
-      - تسهه
-      - "@Kia_Net 3"
+      - خخبب
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@Kia_Net"
-      - "@kia_net"
-      - تست
-      - "@Kia_Net 2"
-      - تسهه
-      - "@Kia_Net 3"
+      - خخبب
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@Kia_Net"
-      - "@kia_net"
-      - تست
-      - "@Kia_Net 2"
-      - تسهه
-      - "@Kia_Net 3"
+      - خخبب
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -532,36 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Kia_Net"
-      - "@kia_net"
-      - تست
-      - "@Kia_Net 2"
-      - تسهه
-      - "@Kia_Net 3"
+      - خخبب
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Kia_Net"
-      - "@kia_net"
-      - تست
-      - "@Kia_Net 2"
-      - تسهه
-      - "@Kia_Net 3"
+      - خخبب
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Kia_Net"
-      - "@kia_net"
-      - تست
-      - "@Kia_Net 2"
-      - تسهه
-      - "@Kia_Net 3"
+      - خخبب
   - name: دانلود منیجر 📥
     type: select
     proxies:

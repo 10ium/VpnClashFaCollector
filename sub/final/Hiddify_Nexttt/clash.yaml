@@ -465,9 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Hiddify_Nexttt", server: 185.143.234.122, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 8fc836e4-f72f-40d7-8a55-8677324a2079, network: ws, ws-opts: {path: /, headers: {Host: S4.koremusic.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Hiddify_Nexttt 2", server: 78.158.166.180, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: e911c552-3a98-41e0-b5fb-0dd3879887b7, servername: vod.ensf.top, alpn: [h2], network: ws, ws-opts: {path: /api/v1/irc, headers: {Host: vod.ensf.top}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Hiddify_Nexttt`", server: 78.158.166.180, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: e911c552-3a98-41e0-b5fb-0dd3879887b7, servername: vod.ensf.top, alpn: [h2], network: ws, ws-opts: {path: /api/v1/irc, headers: {Host: vod.ensf.top}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Hiddify_Nexttt", server: vip.gxnetshop.ir, port: 6000, type: vless, tls: true, packet-encoding: xudp, uuid: 3ef7131a-224f-4f28-9b9b-3517b75f28b3, host: vip.gxnetshop.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,8 +483,6 @@ proxy-groups:
     type: select
     proxies:
       - "@Hiddify_Nexttt"
-      - "@Hiddify_Nexttt 2"
-      - "@Hiddify_Nexttt`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -494,8 +490,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Hiddify_Nexttt"
-      - "@Hiddify_Nexttt 2"
-      - "@Hiddify_Nexttt`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -503,8 +497,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Hiddify_Nexttt"
-      - "@Hiddify_Nexttt 2"
-      - "@Hiddify_Nexttt`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -521,8 +513,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Hiddify_Nexttt"
-      - "@Hiddify_Nexttt 2"
-      - "@Hiddify_Nexttt`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -530,8 +520,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Hiddify_Nexttt"
-      - "@Hiddify_Nexttt 2"
-      - "@Hiddify_Nexttt`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -539,8 +527,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Hiddify_Nexttt"
-      - "@Hiddify_Nexttt 2"
-      - "@Hiddify_Nexttt`"
   - name: دانلود منیجر 📥
     type: select
     proxies:
