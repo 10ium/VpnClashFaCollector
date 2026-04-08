@@ -5,81 +5,46 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@airdrop2033", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 4f677fe6-5a78-44d8-87d7-edd62d3e0b1d, network: ws, ws-opts: {path: /, headers: {Host: ar.liarashop.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@airdrop2033`", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 4f677fe6-5a78-44d8-87d7-edd62d3e0b1d, network: ws, ws-opts: {path: /, headers: {Host: arc.liarashop.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Airdrop2033", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: c17e1e2f-b722-4252-b421-a22ce3803023, network: ws, ws-opts: {path: /, headers: {Host: ar.liarashop.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@AIRDROP2033`", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: c17e1e2f-b722-4252-b421-a22ce3803023, network: ws, ws-opts: {path: /, headers: {Host: arc.liarashop.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@airdrop2033 2", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: f47e0aae-4f5e-43df-ba49-ccbf729d2f58, network: ws, ws-opts: {path: /, headers: {Host: ar.liarashop.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@airdrop2033` 2", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: f47e0aae-4f5e-43df-ba49-ccbf729d2f58, network: ws, ws-opts: {path: /, headers: {Host: arc.liarashop.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ​@airdrop2033`, server: s11.soft988.site, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 4d805c98-636a-4491-baf4-f0b7115760db, servername: s11.soft988.site, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /wsrgdthrtrth, headers: {Host: s11.soft988.site}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@airdrop2033"
-      - "@airdrop2033`"
-      - "@Airdrop2033"
-      - "@AIRDROP2033`"
-      - "@airdrop2033 2"
-      - "@airdrop2033` 2"
+      - ​@airdrop2033`
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@airdrop2033"
-      - "@airdrop2033`"
-      - "@Airdrop2033"
-      - "@AIRDROP2033`"
-      - "@airdrop2033 2"
-      - "@airdrop2033` 2"
+      - ​@airdrop2033`
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@airdrop2033"
-      - "@airdrop2033`"
-      - "@Airdrop2033"
-      - "@AIRDROP2033`"
-      - "@airdrop2033 2"
-      - "@airdrop2033` 2"
+      - ​@airdrop2033`
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@airdrop2033"
-      - "@airdrop2033`"
-      - "@Airdrop2033"
-      - "@AIRDROP2033`"
-      - "@airdrop2033 2"
-      - "@airdrop2033` 2"
+      - ​@airdrop2033`
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@airdrop2033"
-      - "@airdrop2033`"
-      - "@Airdrop2033"
-      - "@AIRDROP2033`"
-      - "@airdrop2033 2"
-      - "@airdrop2033` 2"
+      - ​@airdrop2033`
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@airdrop2033"
-      - "@airdrop2033`"
-      - "@Airdrop2033"
-      - "@AIRDROP2033`"
-      - "@airdrop2033 2"
-      - "@airdrop2033` 2"
+      - ​@airdrop2033`
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -107,12 +72,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@airdrop2033"
-      - "@airdrop2033`"
-      - "@Airdrop2033"
-      - "@AIRDROP2033`"
-      - "@airdrop2033 2"
-      - "@airdrop2033` 2"
+      - ​@airdrop2033`
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

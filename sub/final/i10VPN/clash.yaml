@@ -468,6 +468,7 @@ proxies:
   - {name: Psiphon - @i10VPN 8, server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 6b5a60c2-ddcb-4075-aa1c-dad266d200bf, network: ws, ws-opts: {path: /, headers: {Host: ar.liarashop.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: Psiphon - @i10VPN 7`, server: iribnewreport.watch-out.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b4e9234c-4517-400b-ac85-4e4b37657838, network: ws, ws-opts: {path: /j/47164, headers: {Host: iribnewreport.watch-out.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: Psiphon - @i10VPN 6, server: 78.158.166.180, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: e911c552-3a98-41e0-b5fb-0dd3879887b7, servername: vod.ensf.top, alpn: [h2], network: ws, ws-opts: {path: /api/v1/irc, headers: {Host: vod.ensf.top}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Psiphon - @i10VPN 9, server: mehi.iammehrab.sbs, port: 3680, type: vmess, uuid: 4377ef22-c7e4-4242-a652-ecae1c73362c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,6 +488,7 @@ proxy-groups:
       - Psiphon - @i10VPN 8
       - Psiphon - @i10VPN 7`
       - Psiphon - @i10VPN 6
+      - Psiphon - @i10VPN 9
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -496,6 +498,7 @@ proxy-groups:
       - Psiphon - @i10VPN 8
       - Psiphon - @i10VPN 7`
       - Psiphon - @i10VPN 6
+      - Psiphon - @i10VPN 9
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -505,6 +508,7 @@ proxy-groups:
       - Psiphon - @i10VPN 8
       - Psiphon - @i10VPN 7`
       - Psiphon - @i10VPN 6
+      - Psiphon - @i10VPN 9
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -523,6 +527,7 @@ proxy-groups:
       - Psiphon - @i10VPN 8
       - Psiphon - @i10VPN 7`
       - Psiphon - @i10VPN 6
+      - Psiphon - @i10VPN 9
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -532,6 +537,7 @@ proxy-groups:
       - Psiphon - @i10VPN 8
       - Psiphon - @i10VPN 7`
       - Psiphon - @i10VPN 6
+      - Psiphon - @i10VPN 9
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -541,6 +547,7 @@ proxy-groups:
       - Psiphon - @i10VPN 8
       - Psiphon - @i10VPN 7`
       - Psiphon - @i10VPN 6
+      - Psiphon - @i10VPN 9
   - name: دانلود منیجر 📥
     type: select
     proxies:
