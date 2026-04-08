@@ -465,7 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Hacknashid", server: pro.vpsino.com, port: 20493, type: vless, tls: true, packet-encoding: xudp, uuid: 47cb5726-b426-1a8c-d83e-9c13c7b90251, host: pro.vpsino.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: tel:Father_vpn`, server: myrt7rt8e5w5gfdfEerh8.maral-pc.site, port: 442, type: vless, tls: true, packet-encoding: xudp, uuid: 0e3aad48-b46c-4899-9026-5913f222a3d0, host: 91.245.229.1, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: tel;@Father_vpn, server: final.idbedam.com, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: dae2522b-98b1-42f4-b12e-0b2c28c147c0, host: final.idbedam.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: tel;@Father_vpn`, server: 198.41.222.191, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: e388fffb-03b0-4227-ac2c-2b5cec1f5c34, network: ws, ws-opts: {path: /, headers: {Host: leecher56.matinheydri.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +484,27 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@Hacknashid"
+      - tel:Father_vpn`
+      - tel;@Father_vpn
+      - tel;@Father_vpn`
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@Hacknashid"
+      - tel:Father_vpn`
+      - tel;@Father_vpn
+      - tel;@Father_vpn`
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@Hacknashid"
+      - tel:Father_vpn`
+      - tel;@Father_vpn
+      - tel;@Father_vpn`
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +520,27 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Hacknashid"
+      - tel:Father_vpn`
+      - tel;@Father_vpn
+      - tel;@Father_vpn`
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Hacknashid"
+      - tel:Father_vpn`
+      - tel;@Father_vpn
+      - tel;@Father_vpn`
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Hacknashid"
+      - tel:Father_vpn`
+      - tel;@Father_vpn
+      - tel;@Father_vpn`
   - name: دانلود منیجر 📥
     type: select
     proxies:

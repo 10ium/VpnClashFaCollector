@@ -465,8 +465,6 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: iribnewreport.watch-out.ir:443, server: iribnewreport.watch-out.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b4e9234c-4517-400b-ac85-4e4b37657838, network: ws, ws-opts: {path: /j/47164, headers: {Host: iribnewreport.watch-out.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@hamvex �%8‌1�`", server: iribnewreport.watch-out.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b4e9234c-4517-400b-ac85-4e4b37657838, network: ws, ws-opts: {path: /j/47164, headers: {Host: iribnewreport.watch-out.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: Viaping2GB, server: dn.brwakhanbarin.ir, port: 8080, type: vmess, uuid: aef2782e-3707-45c9-a941-5a7bf9ffe2db, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -484,7 +482,6 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - iribnewreport.watch-out.ir:443
       - Viaping2GB
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -492,7 +489,6 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - iribnewreport.watch-out.ir:443
       - Viaping2GB
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -500,7 +496,6 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - iribnewreport.watch-out.ir:443
       - Viaping2GB
   - name: اتصال پایدار 🔗
     type: url-test
@@ -517,7 +512,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - iribnewreport.watch-out.ir:443
       - Viaping2GB
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -525,7 +519,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - iribnewreport.watch-out.ir:443
       - Viaping2GB
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -533,7 +526,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - iribnewreport.watch-out.ir:443
       - Viaping2GB
   - name: دانلود منیجر 📥
     type: select
