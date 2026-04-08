@@ -465,10 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@vasl_bashim", server: 78.158.166.180, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.jpmj.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: sni.jpmj.dev}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim   psiphon`", server: 78.158.166.180, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.jpmj.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: sni.jpmj.dev}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim`", server: 78.158.166.180, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.jpmj.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: sni.jpmj.dev}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim 2", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 6b5a60c2-ddcb-4075-aa1c-dad266d200bf, network: ws, ws-opts: {path: /, headers: {Host: ar.liarashop.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "Join us : �sl_bashim`", server: final.digitalldns.com, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: f88fc142-cd33-47bc-a2cb-bf657a9922b4, host: final.digitalldns.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,30 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@vasl_bashim"
-      - "@vasl_bashim   psiphon`"
-      - "@vasl_bashim`"
-      - "@vasl_bashim 2"
+      - DIRECT
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@vasl_bashim"
-      - "@vasl_bashim   psiphon`"
-      - "@vasl_bashim`"
-      - "@vasl_bashim 2"
+      - DIRECT
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@vasl_bashim"
-      - "@vasl_bashim   psiphon`"
-      - "@vasl_bashim`"
-      - "@vasl_bashim 2"
+      - DIRECT
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -524,30 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@vasl_bashim"
-      - "@vasl_bashim   psiphon`"
-      - "@vasl_bashim`"
-      - "@vasl_bashim 2"
+      - DIRECT
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@vasl_bashim"
-      - "@vasl_bashim   psiphon`"
-      - "@vasl_bashim`"
-      - "@vasl_bashim 2"
+      - DIRECT
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@vasl_bashim"
-      - "@vasl_bashim   psiphon`"
-      - "@vasl_bashim`"
-      - "@vasl_bashim 2"
+      - DIRECT
   - name: دانلود منیجر 📥
     type: select
     proxies:
