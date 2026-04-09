@@ -466,7 +466,7 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: hp71, server: myrt7rt8e5w5gfdfEerh8.maral-pc.site, port: 442, type: vless, tls: true, packet-encoding: xudp, uuid: 0e3aad48-b46c-4899-9026-5913f222a3d0, host: 91.245.229.1, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: hamedvpns, server: simurgh.adslimit.info, port: 2345, type: vless, tls: true, packet-encoding: xudp, uuid: 20adc847-4159-4f39-b79f-d563b660945f, host: simurgh.adslimit.info, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hp, server: 188.114.98.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: aaaaaabb-4ddd-4eee-9fff-ffffffffffff, servername: JoinProxyVPN11.afrcloud07.mmv.kr, network: ws, ws-opts: {path: /57.129.47.47=2053, headers: {Host: JoinProxyVPN11.afrcloud07.mmv.kr}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,7 +484,7 @@ proxy-groups:
     type: select
     proxies:
       - hp71
-      - hamedvpns
+      - hp
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -492,7 +492,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - hp71
-      - hamedvpns
+      - hp
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -500,7 +500,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - hp71
-      - hamedvpns
+      - hp
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -517,7 +517,7 @@ proxy-groups:
     interval: 600
     proxies:
       - hp71
-      - hamedvpns
+      - hp
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -525,7 +525,7 @@ proxy-groups:
     interval: 600
     proxies:
       - hp71
-      - hamedvpns
+      - hp
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -533,7 +533,7 @@ proxy-groups:
     interval: 600
     proxies:
       - hp71
-      - hamedvpns
+      - hp
   - name: دانلود منیجر 📥
     type: select
     proxies:

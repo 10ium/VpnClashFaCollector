@@ -465,6 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: "@vasl_bashim ترکیبی`", server: tob1-c8040d1d55-edare.apps.ir-central1.arvancaas.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 1707f998-6f09-44b1-b725-d3fe27df3e9e, network: ws, ws-opts: {path: /, headers: {Host: tob1-c8040d1d55-edare.apps.ir-central1.arvancaas.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim`", server: valen.vlaen776.sbs, port: 49032, type: vless, tls: true, packet-encoding: xudp, uuid: cd2311bb-039f-4ccb-a103-9ab44f67fd8d, host: myket.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "Join us : �sl_bashim`", server: final.digitalldns.com, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: f88fc142-cd33-47bc-a2cb-bf657a9922b4, host: final.digitalldns.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -482,21 +484,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - DIRECT
+      - "@vasl_bashim ترکیبی`"
+      - "@vasl_bashim`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - DIRECT
+      - "@vasl_bashim ترکیبی`"
+      - "@vasl_bashim`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - DIRECT
+      - "@vasl_bashim ترکیبی`"
+      - "@vasl_bashim`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +517,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - DIRECT
+      - "@vasl_bashim ترکیبی`"
+      - "@vasl_bashim`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - DIRECT
+      - "@vasl_bashim ترکیبی`"
+      - "@vasl_bashim`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - DIRECT
+      - "@vasl_bashim ترکیبی`"
+      - "@vasl_bashim`"
   - name: دانلود منیجر 📥
     type: select
     proxies:
