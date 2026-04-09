@@ -465,7 +465,6 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: hp71, server: myrt7rt8e5w5gfdfEerh8.maral-pc.site, port: 442, type: vless, tls: true, packet-encoding: xudp, uuid: 0e3aad48-b46c-4899-9026-5913f222a3d0, host: 91.245.229.1, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: hp, server: 188.114.98.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: aaaaaabb-4ddd-4eee-9fff-ffffffffffff, servername: JoinProxyVPN11.afrcloud07.mmv.kr, network: ws, ws-opts: {path: /57.129.47.47=2053, headers: {Host: JoinProxyVPN11.afrcloud07.mmv.kr}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -483,7 +482,6 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - hp71
       - hp
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -491,7 +489,6 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - hp71
       - hp
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -499,7 +496,6 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - hp71
       - hp
   - name: اتصال پایدار 🔗
     type: url-test
@@ -516,7 +512,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - hp71
       - hp
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -524,7 +519,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - hp71
       - hp
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -532,7 +526,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - hp71
       - hp
   - name: دانلود منیجر 📥
     type: select
