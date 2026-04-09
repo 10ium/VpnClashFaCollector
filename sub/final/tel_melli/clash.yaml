@@ -465,7 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: Viaping2GB, server: dn.brwakhanbarin.ir, port: 8080, type: vmess, uuid: aef2782e-3707-45c9-a941-5a7bf9ffe2db, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@", server: 188.114.98.0, port: 443, type: trojan, password: humanity, sni: www.creationlong.org, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org}}, udp: true, tfo: false}
+  - {name: "@B2vasl1`", server: sv2.lokhtkon.site, port: 53514, type: vless, tls: true, packet-encoding: xudp, uuid: ea27e2ab-7095-4e5a-93df-75ff738ae4c0, host: sv2.lokhtkon.site, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - Viaping2GB
+      - "@"
+      - "@B2vasl1`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - Viaping2GB
+      - "@"
+      - "@B2vasl1`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - Viaping2GB
+      - "@"
+      - "@B2vasl1`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Viaping2GB
+      - "@"
+      - "@B2vasl1`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Viaping2GB
+      - "@"
+      - "@B2vasl1`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Viaping2GB
+      - "@"
+      - "@B2vasl1`"
   - name: دانلود منیجر 📥
     type: select
     proxies:

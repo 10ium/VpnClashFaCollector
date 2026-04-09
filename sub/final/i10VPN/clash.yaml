@@ -467,7 +467,6 @@ rule-providers:
 proxies:
   - {name: Psiphon - @i10VPN 10`, server: 94.182.92.94, port: 10552, type: vless, tls: true, packet-encoding: xudp, uuid: aca8bc97-2e78-4933-8bc8-ada7cd5a5f20, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: Psiphon - @i10VPN 11, server: varzesh3.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c387b0f2-5d9e-4c95-882d-1d5eeb443ce2, servername: nginx-3b1e7ed824-abol.apps.ir-central1.arvancaas.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /movie, headers: {Host: nginx-3b1e7ed824-abol.apps.ir-central1.arvancaas.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Psiphon - @i10VPN 9, server: mehi.iammehrab.sbs, port: 3680, type: vmess, uuid: 4377ef22-c7e4-4242-a652-ecae1c73362c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,7 +485,6 @@ proxy-groups:
     proxies:
       - Psiphon - @i10VPN 10`
       - Psiphon - @i10VPN 11
-      - Psiphon - @i10VPN 9
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -495,7 +493,6 @@ proxy-groups:
     proxies:
       - Psiphon - @i10VPN 10`
       - Psiphon - @i10VPN 11
-      - Psiphon - @i10VPN 9
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -504,7 +501,6 @@ proxy-groups:
     proxies:
       - Psiphon - @i10VPN 10`
       - Psiphon - @i10VPN 11
-      - Psiphon - @i10VPN 9
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -522,7 +518,6 @@ proxy-groups:
     proxies:
       - Psiphon - @i10VPN 10`
       - Psiphon - @i10VPN 11
-      - Psiphon - @i10VPN 9
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -531,7 +526,6 @@ proxy-groups:
     proxies:
       - Psiphon - @i10VPN 10`
       - Psiphon - @i10VPN 11
-      - Psiphon - @i10VPN 9
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -540,7 +534,6 @@ proxy-groups:
     proxies:
       - Psiphon - @i10VPN 10`
       - Psiphon - @i10VPN 11
-      - Psiphon - @i10VPN 9
   - name: دانلود منیجر 📥
     type: select
     proxies:

@@ -5,46 +5,53 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: Viaping2GB, server: dn.brwakhanbarin.ir, port: 8080, type: vmess, uuid: aef2782e-3707-45c9-a941-5a7bf9ffe2db, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@", server: 188.114.98.0, port: 443, type: trojan, password: humanity, sni: www.creationlong.org, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org}}, udp: true, tfo: false}
+  - {name: "@B2vasl1`", server: sv2.lokhtkon.site, port: 53514, type: vless, tls: true, packet-encoding: xudp, uuid: ea27e2ab-7095-4e5a-93df-75ff738ae4c0, host: sv2.lokhtkon.site, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - Viaping2GB
+      - "@"
+      - "@B2vasl1`"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - Viaping2GB
+      - "@"
+      - "@B2vasl1`"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - Viaping2GB
+      - "@"
+      - "@B2vasl1`"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - Viaping2GB
+      - "@"
+      - "@B2vasl1`"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - Viaping2GB
+      - "@"
+      - "@B2vasl1`"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - Viaping2GB
+      - "@"
+      - "@B2vasl1`"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +79,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - Viaping2GB
+      - "@"
+      - "@B2vasl1`"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
