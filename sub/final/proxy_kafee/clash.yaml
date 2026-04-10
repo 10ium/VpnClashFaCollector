@@ -466,10 +466,6 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: "@proxy_kafee + Psiphon`", server: 188.114.98.0, port: 443, type: trojan, password: humanity, sni: www.creationlong.org, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org}}, udp: true, tfo: false}
-  - {name: 2, server: help.vapshops.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 23ea81b7-410b-4d35-bad8-5d0dfac72be4, network: ws, ws-opts: {path: /get-orders/all, headers: {Host: help.vapshops.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 1, server: help.vapshops.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 74e2c66f-87ec-4cec-a622-68d61154e8ac, network: ws, ws-opts: {path: /get-orders/all, headers: {Host: help.vapshops.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: CDN-RSLmasihdev71b5-otizu-new-2G003, server: help.vapshops.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: cdc42592-6928-43aa-9549-5b204eba1586, network: ws, ws-opts: {path: /get-orders/all, headers: {Host: help.vapshops.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: CDN-RSLmasihdev71b5-otizu-new-2G009, server: help.vapshops.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: e88719e3-69e4-4e86-a62b-825a9c2f1064, network: ws, ws-opts: {path: /get-orders/all, headers: {Host: help.vapshops.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,10 +483,6 @@ proxy-groups:
     type: select
     proxies:
       - "@proxy_kafee + Psiphon`"
-      - 2
-      - 1
-      - CDN-RSLmasihdev71b5-otizu-new-2G003
-      - CDN-RSLmasihdev71b5-otizu-new-2G009
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -498,10 +490,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@proxy_kafee + Psiphon`"
-      - 2
-      - 1
-      - CDN-RSLmasihdev71b5-otizu-new-2G003
-      - CDN-RSLmasihdev71b5-otizu-new-2G009
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -509,10 +497,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@proxy_kafee + Psiphon`"
-      - 2
-      - 1
-      - CDN-RSLmasihdev71b5-otizu-new-2G003
-      - CDN-RSLmasihdev71b5-otizu-new-2G009
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -529,10 +513,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@proxy_kafee + Psiphon`"
-      - 2
-      - 1
-      - CDN-RSLmasihdev71b5-otizu-new-2G003
-      - CDN-RSLmasihdev71b5-otizu-new-2G009
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -540,10 +520,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@proxy_kafee + Psiphon`"
-      - 2
-      - 1
-      - CDN-RSLmasihdev71b5-otizu-new-2G003
-      - CDN-RSLmasihdev71b5-otizu-new-2G009
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -551,10 +527,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@proxy_kafee + Psiphon`"
-      - 2
-      - 1
-      - CDN-RSLmasihdev71b5-otizu-new-2G003
-      - CDN-RSLmasihdev71b5-otizu-new-2G009
   - name: دانلود منیجر 📥
     type: select
     proxies:

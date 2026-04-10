@@ -465,7 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: hp, server: 188.114.98.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: aaaaaabb-4ddd-4eee-9fff-ffffffffffff, servername: JoinProxyVPN11.afrcloud07.mmv.kr, network: ws, ws-opts: {path: /57.129.47.47=2053, headers: {Host: JoinProxyVPN11.afrcloud07.mmv.kr}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hp71`, server: valen.vlaen776.sbs, port: 28889, type: vless, tls: true, packet-encoding: xudp, uuid: 6845b107-4bd7-4b63-92d8-c7d3cb21bb8d, host: myket.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hp71` 2, server: final.usdtbama.com, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 7785c47f-a59a-44de-9cbb-973914f6aef6, host: final.usdtbama.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hp71` 3, server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: a84a171f-b228-4f47-adec-c11737df2ed9, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hp71` 4, server: 188.114.98.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: aaaaaabb-4ddd-4eee-9fff-ffffffffffff, servername: joinProxyVPN11.afrcloud07.mmv.kr, network: ws, ws-opts: {path: /57.129.47.52=8443, headers: {Host: joinProxyVPN11.afrcloud07.mmv.kr}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hp71***💯***`, server: haji.nahidapp.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f1d697f4-355d-4c3b-a625-06859a6f4d22, servername: haji.nahidapp.com, network: ws, ws-opts: {path: /haji/, headers: {Host: haji.nahidapp.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +486,33 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - hp
+      - hp71`
+      - hp71` 2
+      - hp71` 3
+      - hp71` 4
+      - hp71***💯***`
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - hp
+      - hp71`
+      - hp71` 2
+      - hp71` 3
+      - hp71` 4
+      - hp71***💯***`
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - hp
+      - hp71`
+      - hp71` 2
+      - hp71` 3
+      - hp71` 4
+      - hp71***💯***`
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +528,33 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - hp
+      - hp71`
+      - hp71` 2
+      - hp71` 3
+      - hp71` 4
+      - hp71***💯***`
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - hp
+      - hp71`
+      - hp71` 2
+      - hp71` 3
+      - hp71` 4
+      - hp71***💯***`
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - hp
+      - hp71`
+      - hp71` 2
+      - hp71` 3
+      - hp71` 4
+      - hp71***💯***`
   - name: دانلود منیجر 📥
     type: select
     proxies:

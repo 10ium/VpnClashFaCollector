@@ -466,7 +466,9 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: 15@oneclickvpnkeys, server: 51.195.241.243, port: 443, type: hysteria2, ports: 443, password: 0d892bc7-41c5-4dc5-90bb-40dfc0043dd5, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 37@oneclickvpnkeys, server: 5.181.21.132, port: 1935, type: hysteria2, ports: 1935, password: hysteria2_fastlane_jwiedq1o6%3AgJ4QaCJfdNQffhf2p4YkDqwSwj588q7D, sni: at1.h.smartaisupport.ru, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 14@oneclickvpnkeys, server: reddeadfan.rd-team.ru, port: 2026, type: hysteria2, ports: 2026, password: rstnnl%3AhrQVPjgUr9HTgKyTj0oFCr6j4EpRzXTQ, obfs: salamander, obfs-password: FxZylbqClUqVqAs2nezW9kPyFb2edZ2, sni: reddeadfan.rd-team.ru, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 39@oneclickvpnkeys`, server: 82.118.16.61, port: 444, type: hysteria2, ports: 444, password: strong-secret-pass-777, obfs: salamander, obfs-password: cry_me_a_r1ver_2026, sni: www.microsoft.com, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,7 +486,9 @@ proxy-groups:
     type: select
     proxies:
       - 15@oneclickvpnkeys
+      - 37@oneclickvpnkeys
       - 14@oneclickvpnkeys
+      - 39@oneclickvpnkeys`
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -492,7 +496,9 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 15@oneclickvpnkeys
+      - 37@oneclickvpnkeys
       - 14@oneclickvpnkeys
+      - 39@oneclickvpnkeys`
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -500,7 +506,9 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 15@oneclickvpnkeys
+      - 37@oneclickvpnkeys
       - 14@oneclickvpnkeys
+      - 39@oneclickvpnkeys`
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -517,7 +525,9 @@ proxy-groups:
     interval: 600
     proxies:
       - 15@oneclickvpnkeys
+      - 37@oneclickvpnkeys
       - 14@oneclickvpnkeys
+      - 39@oneclickvpnkeys`
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -525,7 +535,9 @@ proxy-groups:
     interval: 600
     proxies:
       - 15@oneclickvpnkeys
+      - 37@oneclickvpnkeys
       - 14@oneclickvpnkeys
+      - 39@oneclickvpnkeys`
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -533,7 +545,9 @@ proxy-groups:
     interval: 600
     proxies:
       - 15@oneclickvpnkeys
+      - 37@oneclickvpnkeys
       - 14@oneclickvpnkeys
+      - 39@oneclickvpnkeys`
   - name: دانلود منیجر 📥
     type: select
     proxies:

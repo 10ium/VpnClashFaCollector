@@ -6,10 +6,6 @@ log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
   - {name: "@proxy_kafee + Psiphon`", server: 188.114.98.0, port: 443, type: trojan, password: humanity, sni: www.creationlong.org, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org}}, udp: true, tfo: false}
-  - {name: 2, server: help.vapshops.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 23ea81b7-410b-4d35-bad8-5d0dfac72be4, network: ws, ws-opts: {path: /get-orders/all, headers: {Host: help.vapshops.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 1, server: help.vapshops.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 74e2c66f-87ec-4cec-a622-68d61154e8ac, network: ws, ws-opts: {path: /get-orders/all, headers: {Host: help.vapshops.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: CDN-RSLmasihdev71b5-otizu-new-2G003, server: help.vapshops.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: cdc42592-6928-43aa-9549-5b204eba1586, network: ws, ws-opts: {path: /get-orders/all, headers: {Host: help.vapshops.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: CDN-RSLmasihdev71b5-otizu-new-2G009, server: help.vapshops.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: e88719e3-69e4-4e86-a62b-825a9c2f1064, network: ws, ws-opts: {path: /get-orders/all, headers: {Host: help.vapshops.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -17,10 +13,6 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - "@proxy_kafee + Psiphon`"
-      - 2
-      - 1
-      - CDN-RSLmasihdev71b5-otizu-new-2G003
-      - CDN-RSLmasihdev71b5-otizu-new-2G009
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -28,10 +20,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@proxy_kafee + Psiphon`"
-      - 2
-      - 1
-      - CDN-RSLmasihdev71b5-otizu-new-2G003
-      - CDN-RSLmasihdev71b5-otizu-new-2G009
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -39,40 +27,24 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - "@proxy_kafee + Psiphon`"
-      - 2
-      - 1
-      - CDN-RSLmasihdev71b5-otizu-new-2G003
-      - CDN-RSLmasihdev71b5-otizu-new-2G009
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@proxy_kafee + Psiphon`"
-      - 2
-      - 1
-      - CDN-RSLmasihdev71b5-otizu-new-2G003
-      - CDN-RSLmasihdev71b5-otizu-new-2G009
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - "@proxy_kafee + Psiphon`"
-      - 2
-      - 1
-      - CDN-RSLmasihdev71b5-otizu-new-2G003
-      - CDN-RSLmasihdev71b5-otizu-new-2G009
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@proxy_kafee + Psiphon`"
-      - 2
-      - 1
-      - CDN-RSLmasihdev71b5-otizu-new-2G003
-      - CDN-RSLmasihdev71b5-otizu-new-2G009
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -101,10 +73,6 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - "@proxy_kafee + Psiphon`"
-      - 2
-      - 1
-      - CDN-RSLmasihdev71b5-otizu-new-2G003
-      - CDN-RSLmasihdev71b5-otizu-new-2G009
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
