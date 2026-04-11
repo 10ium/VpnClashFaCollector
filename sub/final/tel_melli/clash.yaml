@@ -465,8 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@", server: 188.114.98.0, port: 443, type: trojan, password: humanity, sni: www.creationlong.org, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org}}, udp: true, tfo: false}
-  - {name: "@B2vasl1`", server: sv2.lokhtkon.site, port: 53514, type: vless, tls: true, packet-encoding: xudp, uuid: ea27e2ab-7095-4e5a-93df-75ff738ae4c0, host: sv2.lokhtkon.site, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Tel @Free_Npv, server: video.ir.temas-lomat.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 852a7161-7240-45e3-86fa-5ee2edb08350, host: video.ir.temas-lomat.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ip.iran.mobileemdad.top:8080, server: ip.iran.mobileemdad.top, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 917bbb3b-a22c-4a69-8731-61274bfe3818, host: ip.iran.mobileemdad.top, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Configir98", server: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir, port: 443, type: vmess, uuid: 8c748b5d-20a5-458f-8256-4b78bb5ebdc4, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /api/direct, headers: {Host: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir}}, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +484,27 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@"
-      - "@B2vasl1`"
+      - Tel @Free_Npv
+      - ip.iran.mobileemdad.top:8080
+      - "@Configir98"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@"
-      - "@B2vasl1`"
+      - Tel @Free_Npv
+      - ip.iran.mobileemdad.top:8080
+      - "@Configir98"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@"
-      - "@B2vasl1`"
+      - Tel @Free_Npv
+      - ip.iran.mobileemdad.top:8080
+      - "@Configir98"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +520,27 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@"
-      - "@B2vasl1`"
+      - Tel @Free_Npv
+      - ip.iran.mobileemdad.top:8080
+      - "@Configir98"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@"
-      - "@B2vasl1`"
+      - Tel @Free_Npv
+      - ip.iran.mobileemdad.top:8080
+      - "@Configir98"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@"
-      - "@B2vasl1`"
+      - Tel @Free_Npv
+      - ip.iran.mobileemdad.top:8080
+      - "@Configir98"
   - name: دانلود منیجر 📥
     type: select
     proxies:
