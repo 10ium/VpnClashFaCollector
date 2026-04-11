@@ -465,11 +465,10 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@starrlinnk 5GB", server: 37.32.27.85, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 1ec3774f-e4b9-4c65-9e4a-c6250efc5695, network: ws, ws-opts: {path: /, headers: {Host: a1.supreme-xfast.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@Masyakata`", server: video.ir.temas-lomat.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 852a7161-7240-45e3-96fa-5ee2edb08350, host: video.ir.temas-lomat.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: https:`, server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: a84a171f-b228-4f47-adec-c11737df2ed9, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@crayingroom", server: haji.nahidapp.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f1d697f4-355d-4c3b-a625-06859a6f4d22, servername: haji.nahidapp.com, network: ws, ws-opts: {path: /haji/, headers: {Host: haji.nahidapp.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "🇺🇸 Join us : @crayingroom", server: final.digitalldns.com, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: f88fc142-cd33-47bc-a2cb-bf657a9922b4, host: final.digitalldns.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@oliver_soul", server: haji.nahidapp.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f1d697f4-355d-4c3b-a625-06859a6f4d22, servername: haji.nahidapp.com, network: ws, ws-opts: {path: /haji/, headers: {Host: haji.nahidapp.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,33 +485,30 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@starrlinnk 5GB"
       - "@Masyakata`"
       - https:`
       - "@crayingroom"
-      - "🇺🇸 Join us : @crayingroom"
+      - "@oliver_soul"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@starrlinnk 5GB"
       - "@Masyakata`"
       - https:`
       - "@crayingroom"
-      - "🇺🇸 Join us : @crayingroom"
+      - "@oliver_soul"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@starrlinnk 5GB"
       - "@Masyakata`"
       - https:`
       - "@crayingroom"
-      - "🇺🇸 Join us : @crayingroom"
+      - "@oliver_soul"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -528,33 +524,30 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@starrlinnk 5GB"
       - "@Masyakata`"
       - https:`
       - "@crayingroom"
-      - "🇺🇸 Join us : @crayingroom"
+      - "@oliver_soul"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@starrlinnk 5GB"
       - "@Masyakata`"
       - https:`
       - "@crayingroom"
-      - "🇺🇸 Join us : @crayingroom"
+      - "@oliver_soul"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@starrlinnk 5GB"
       - "@Masyakata`"
       - https:`
       - "@crayingroom"
-      - "🇺🇸 Join us : @crayingroom"
+      - "@oliver_soul"
   - name: دانلود منیجر 📥
     type: select
     proxies:
