@@ -465,9 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: Tel;@Father_vpn³`, server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: a84a171f-b228-4f47-adec-c11737df2ed9, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Tel;@Father_vpn², server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: da70bf4e-da1a-487e-9ebe-5d9e02f8cd73, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Tel;@Father_vpn¹, server: se.ayhan.mom, port: 13137, type: vless, tls: true, packet-encoding: xudp, uuid: f81156d3-658d-4c0a-95b1-5b7733fe5dc0, network: ws, ws-opts: {path: /, headers: {Host: telewebion.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Tel:@Father_vpn`, server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 4f8e5b8d-0a6f-4537-85c1-18bc5f5259e2, network: ws, ws-opts: {path: /, headers: {Host: dl700tobi.sudoserver.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Tel:@Father_vpn` 2, server: teamlifez.ir, port: 3000, type: vless, tls: true, packet-encoding: xudp, uuid: d813dd5d-b96d-4a71-ad0e-c3fc2ea29a94, host: teamlifez.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,27 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - Tel;@Father_vpn³`
-      - Tel;@Father_vpn²
-      - Tel;@Father_vpn¹
+      - Tel:@Father_vpn`
+      - Tel:@Father_vpn` 2
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - Tel;@Father_vpn³`
-      - Tel;@Father_vpn²
-      - Tel;@Father_vpn¹
+      - Tel:@Father_vpn`
+      - Tel:@Father_vpn` 2
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - Tel;@Father_vpn³`
-      - Tel;@Father_vpn²
-      - Tel;@Father_vpn¹
+      - Tel:@Father_vpn`
+      - Tel:@Father_vpn` 2
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -520,27 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Tel;@Father_vpn³`
-      - Tel;@Father_vpn²
-      - Tel;@Father_vpn¹
+      - Tel:@Father_vpn`
+      - Tel:@Father_vpn` 2
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Tel;@Father_vpn³`
-      - Tel;@Father_vpn²
-      - Tel;@Father_vpn¹
+      - Tel:@Father_vpn`
+      - Tel:@Father_vpn` 2
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Tel;@Father_vpn³`
-      - Tel;@Father_vpn²
-      - Tel;@Father_vpn¹
+      - Tel:@Father_vpn`
+      - Tel:@Father_vpn` 2
   - name: دانلود منیجر 📥
     type: select
     proxies:
