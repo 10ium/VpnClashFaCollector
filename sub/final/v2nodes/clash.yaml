@@ -465,6 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: n8mrcg005964vnc.cybervena.com:50099, server: n8mrcg005964vnc.cybervena.com, port: 50099, type: ss, cipher: chacha20-ietf-poly1305, password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4, udp: true, tfo: false}
   - {name: 🇨🇳 xgrr.sdnlv0.cn:11515, server: xgrr.sdnlv0.cn, port: 11515, type: ss, cipher: chacha20-ietf-poly1305, password: 8ba6a37d-8715-440d-942a-a3e6c23a9290, udp: true, tfo: false}
   - {name: 🇨🇳 xgrr.sdnlv0.cn:14193, server: xgrr.sdnlv0.cn, port: 14193, type: ss, cipher: chacha20-ietf-poly1305, password: 8ba6a37d-8715-440d-942a-a3e6c23a9290, udp: true, tfo: false}
   - {name: 🇨🇳 xgrr.sdnlv0.cn:18008, server: xgrr.sdnlv0.cn, port: 18008, type: ss, cipher: chacha20-ietf-poly1305, password: 8ba6a37d-8715-440d-942a-a3e6c23a9290, udp: true, tfo: false}
@@ -479,7 +480,6 @@ proxies:
   - {name: tr03.network-cdn-gw-yd.net:36221, server: tr03.network-cdn-gw-yd.net, port: 36221, type: ss, cipher: chacha20-ietf-poly1305, password: b235696d-7873-4b15-9b22-7dae3a0b6747, udp: true, tfo: false}
   - {name: 15.204.247.49:12000, server: 15.204.247.49, port: 12000, type: ss, cipher: aes-256-gcm, password: 8JCsPssfgS8tiRwiMlhARg==, udp: true, tfo: false}
   - {name: 57.128.214.100:12000, server: 57.128.214.100, port: 12000, type: ss, cipher: aes-256-gcm, password: 8JCsPssfgS8tiRwiMlhARg==, udp: true, tfo: false}
-  - {name: 194.87.240.185:2083, server: 194.87.240.185, port: 2083, type: trojan, password: q2jXRWncMA7pQren_VjQKhSQfoBWK_, sni: xo.e0f.cx, skip-cert-verify: false, network: ws, ws-opts: {path: /trojan-ws, headers: {Host: xo.e0f.cx}}, udp: true, tfo: false}
   - {name: 63.180.162.248:22222, server: 63.180.162.248, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 45.86.70.95:8443, server: 45.86.70.95, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 1e45a266-9a04-47af-b703-e53a67373cc9, servername: max.ru, host: max.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: zQ3SBKNWRtAsrnU-Y2XiSEHodF_sgZ3UsKNfmIwRbjI, short-id: 9ff26c38f9b488}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: reserve.pilates.rodeo:2053, server: reserve.pilates.rodeo, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: 3d243df5-9cda-4aac-89d5-354de77d79e2, servername: nice.ducks.tel, alpn: ["http/1.1,h2"], network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: grpc}, skip-cert-verify: false, udp: true, tfo: false}
@@ -487,8 +487,7 @@ proxies:
   - {name: se1.samovargate.com:443, server: se1.samovargate.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 82b5b465-3307-4a25-acef-abd1649bbedf, servername: www.microsoft.com, host: www.microsoft.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: gwuAehnMX6e-n1fxIenfjx43j3qXXi7Cb4wfnW5VyBQ, short-id: f04729f65b9ea261}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 217.13.104.213:443, server: 217.13.104.213, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8caa79f8-7c5f-409b-83d9-9df627408164, servername: sun6-22.userapi.com, host: sun6-22.userapi.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
   - {name: dongjing2.zqjsqapi.com:443, server: dongjing2.zqjsqapi.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8d5e7f2a-3c1b-4d9e-a6f8-2b5c0e7d4a19, servername: dongjing2.zqjsqapi.com, network: ws, ws-opts: {path: /proxy, headers: {Host: dongjing2.zqjsqapi.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 213.165.39.93:44217, server: 213.165.39.93, port: 44217, type: vless, tls: true, packet-encoding: xudp, uuid: a02f6161-ed4a-4b27-afa8-d2cbf34d69b4, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "🇮🇳 [openproxylist.com] vmess-IN", server: gtm1.ktmwan.net, port: 12887, type: vmess, uuid: 21324e77-b4d2-4fca-8884-5e8b75836d2a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: baidu.com}}, udp: true, tfo: false}
+  - {name: mangu1.zqjsqapi.com:443, server: mangu1.zqjsqapi.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8d5e7f2a-3c1b-4d9e-a6f8-2b5c0e7d4a19, servername: mangu1.zqjsqapi.com, network: ws, ws-opts: {path: /proxy, headers: {Host: mangu1.zqjsqapi.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -505,6 +504,7 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - n8mrcg005964vnc.cybervena.com:50099
       - 🇨🇳 xgrr.sdnlv0.cn:11515
       - 🇨🇳 xgrr.sdnlv0.cn:14193
       - 🇨🇳 xgrr.sdnlv0.cn:18008
@@ -519,7 +519,6 @@ proxy-groups:
       - tr03.network-cdn-gw-yd.net:36221
       - 15.204.247.49:12000
       - 57.128.214.100:12000
-      - 194.87.240.185:2083
       - 63.180.162.248:22222
       - 45.86.70.95:8443
       - reserve.pilates.rodeo:2053
@@ -527,14 +526,14 @@ proxy-groups:
       - se1.samovargate.com:443
       - 217.13.104.213:443
       - dongjing2.zqjsqapi.com:443
-      - 213.165.39.93:44217
-      - 🇮🇳 [openproxylist.com] vmess-IN
+      - mangu1.zqjsqapi.com:443
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
+      - n8mrcg005964vnc.cybervena.com:50099
       - 🇨🇳 xgrr.sdnlv0.cn:11515
       - 🇨🇳 xgrr.sdnlv0.cn:14193
       - 🇨🇳 xgrr.sdnlv0.cn:18008
@@ -549,7 +548,6 @@ proxy-groups:
       - tr03.network-cdn-gw-yd.net:36221
       - 15.204.247.49:12000
       - 57.128.214.100:12000
-      - 194.87.240.185:2083
       - 63.180.162.248:22222
       - 45.86.70.95:8443
       - reserve.pilates.rodeo:2053
@@ -557,14 +555,14 @@ proxy-groups:
       - se1.samovargate.com:443
       - 217.13.104.213:443
       - dongjing2.zqjsqapi.com:443
-      - 213.165.39.93:44217
-      - 🇮🇳 [openproxylist.com] vmess-IN
+      - mangu1.zqjsqapi.com:443
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
+      - n8mrcg005964vnc.cybervena.com:50099
       - 🇨🇳 xgrr.sdnlv0.cn:11515
       - 🇨🇳 xgrr.sdnlv0.cn:14193
       - 🇨🇳 xgrr.sdnlv0.cn:18008
@@ -579,7 +577,6 @@ proxy-groups:
       - tr03.network-cdn-gw-yd.net:36221
       - 15.204.247.49:12000
       - 57.128.214.100:12000
-      - 194.87.240.185:2083
       - 63.180.162.248:22222
       - 45.86.70.95:8443
       - reserve.pilates.rodeo:2053
@@ -587,8 +584,7 @@ proxy-groups:
       - se1.samovargate.com:443
       - 217.13.104.213:443
       - dongjing2.zqjsqapi.com:443
-      - 213.165.39.93:44217
-      - 🇮🇳 [openproxylist.com] vmess-IN
+      - mangu1.zqjsqapi.com:443
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -604,6 +600,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - n8mrcg005964vnc.cybervena.com:50099
       - 🇨🇳 xgrr.sdnlv0.cn:11515
       - 🇨🇳 xgrr.sdnlv0.cn:14193
       - 🇨🇳 xgrr.sdnlv0.cn:18008
@@ -618,7 +615,6 @@ proxy-groups:
       - tr03.network-cdn-gw-yd.net:36221
       - 15.204.247.49:12000
       - 57.128.214.100:12000
-      - 194.87.240.185:2083
       - 63.180.162.248:22222
       - 45.86.70.95:8443
       - reserve.pilates.rodeo:2053
@@ -626,14 +622,14 @@ proxy-groups:
       - se1.samovargate.com:443
       - 217.13.104.213:443
       - dongjing2.zqjsqapi.com:443
-      - 213.165.39.93:44217
-      - 🇮🇳 [openproxylist.com] vmess-IN
+      - mangu1.zqjsqapi.com:443
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - n8mrcg005964vnc.cybervena.com:50099
       - 🇨🇳 xgrr.sdnlv0.cn:11515
       - 🇨🇳 xgrr.sdnlv0.cn:14193
       - 🇨🇳 xgrr.sdnlv0.cn:18008
@@ -648,7 +644,6 @@ proxy-groups:
       - tr03.network-cdn-gw-yd.net:36221
       - 15.204.247.49:12000
       - 57.128.214.100:12000
-      - 194.87.240.185:2083
       - 63.180.162.248:22222
       - 45.86.70.95:8443
       - reserve.pilates.rodeo:2053
@@ -656,14 +651,14 @@ proxy-groups:
       - se1.samovargate.com:443
       - 217.13.104.213:443
       - dongjing2.zqjsqapi.com:443
-      - 213.165.39.93:44217
-      - 🇮🇳 [openproxylist.com] vmess-IN
+      - mangu1.zqjsqapi.com:443
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - n8mrcg005964vnc.cybervena.com:50099
       - 🇨🇳 xgrr.sdnlv0.cn:11515
       - 🇨🇳 xgrr.sdnlv0.cn:14193
       - 🇨🇳 xgrr.sdnlv0.cn:18008
@@ -678,7 +673,6 @@ proxy-groups:
       - tr03.network-cdn-gw-yd.net:36221
       - 15.204.247.49:12000
       - 57.128.214.100:12000
-      - 194.87.240.185:2083
       - 63.180.162.248:22222
       - 45.86.70.95:8443
       - reserve.pilates.rodeo:2053
@@ -686,8 +680,7 @@ proxy-groups:
       - se1.samovargate.com:443
       - 217.13.104.213:443
       - dongjing2.zqjsqapi.com:443
-      - 213.165.39.93:44217
-      - 🇮🇳 [openproxylist.com] vmess-IN
+      - mangu1.zqjsqapi.com:443
   - name: دانلود منیجر 📥
     type: select
     proxies:
