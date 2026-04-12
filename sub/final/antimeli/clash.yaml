@@ -465,7 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "CH: @antimeli`", server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: a84a171f-b228-4f47-adec-c11737df2ed9, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@iciou", server: a-m.iran-mehrbu.ir, port: 3131, type: vless, tls: true, packet-encoding: xudp, uuid: fafe7971-b3fb-4f99-a9d7-46374153f64e, host: a-m.iran-mehrbu.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "CH: @antimeli`"
+      - "@iciou"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "CH: @antimeli`"
+      - "@iciou"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "CH: @antimeli`"
+      - "@iciou"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "CH: @antimeli`"
+      - "@iciou"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "CH: @antimeli`"
+      - "@iciou"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "CH: @antimeli`"
+      - "@iciou"
   - name: دانلود منیجر 📥
     type: select
     proxies:
