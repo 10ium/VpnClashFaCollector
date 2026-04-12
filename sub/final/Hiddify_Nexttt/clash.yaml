@@ -465,7 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Hiddify_Nexttt", server: vip.gxnetshop.ir, port: 6000, type: vless, tls: true, packet-encoding: xudp, uuid: 3ef7131a-224f-4f28-9b9b-3517b75f28b3, host: vip.gxnetshop.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Hiddify_nexttt", server: 104.18.12.149, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a01daac7-1e65-4645-854d-b47d226f6b08, servername: y6-3cj.PAgES.DEV, network: ws, ws-opts: {path: /, headers: {Host: y6-3cj.PAgES.DEV}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Hiddify_Nexttt", server: 104.18.13.149, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f8ba32b4-0c40-49ed-a895-f9b07c51114f, servername: x.mtt1.xyz, network: ws, ws-opts: {path: t.me/TEAMNETGRATISCOLTXT, headers: {Host: x.mtt1.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,6 +483,7 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - "@Hiddify_nexttt"
       - "@Hiddify_Nexttt"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -489,6 +491,7 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - "@Hiddify_nexttt"
       - "@Hiddify_Nexttt"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -496,6 +499,7 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - "@Hiddify_nexttt"
       - "@Hiddify_Nexttt"
   - name: اتصال پایدار 🔗
     type: url-test
@@ -512,6 +516,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@Hiddify_nexttt"
       - "@Hiddify_Nexttt"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -519,6 +524,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@Hiddify_nexttt"
       - "@Hiddify_Nexttt"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -526,6 +532,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@Hiddify_nexttt"
       - "@Hiddify_Nexttt"
   - name: دانلود منیجر 📥
     type: select

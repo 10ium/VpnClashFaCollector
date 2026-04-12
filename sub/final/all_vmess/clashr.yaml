@@ -5,123 +5,67 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@filembad", server: 185.189.58.195, port: 31935, type: vmess, uuid: dfe36cdf-bc0b-4e8b-94b9-9e5a1dcaa4c2, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 2", server: 37.32.15.54, port: 8000, type: vmess, uuid: c20e24c7-b5b9-4de2-cae7-f468264437ca, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 3", server: msg16.linuxapp.cloud, port: 900, type: vmess, uuid: cae8967c09d5c8c5eba736f9767b9e64, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: aparat.com}}, udp: true, tfo: false}
-  - {name: "@v2rayconfigamir 7376", server: 45.15.185.17, port: 80, type: vmess, uuid: c503a96a-a2f5-4847-a31f-20c17ecf3be4, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /vmess/, headers: {Host: 45.15.185.17}}, udp: true, tfo: false}
-  - {name: "@v2rayconfigamir 1686", server: 45.15.185.17, port: 80, type: vmess, uuid: c503a96a-a2f5-4847-a31f-20c17ecf3be4, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /vmess/}, udp: true, tfo: false}
-  - {name: "@filembad 4", server: 103.229.124.3, port: 20521, type: vmess, uuid: 292e9c90-25b3-4ff5-b98a-9ef5877714ab, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}, udp: true, tfo: false}
-  - {name: "@filembad 5", server: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir, port: 443, type: vmess, uuid: 8c748b5d-20a5-458f-8256-4b78bb5ebdc4, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /api/direct, headers: {Host: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir}}, udp: true, tfo: false}
-  - {name: برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩, server: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir, port: 443, type: vmess, uuid: 8c748b5d-20a5-458f-8256-4b78bb5ebdc4, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /api/direct, headers: {Host: pt-nginx-teh-ecf39d18c9-rrhvp.apps.ir-thr-ba1.arvancaas.ir}}, udp: true, tfo: false}
-  - {name: "@filembad 6", server: star.diiginet.ir, port: 24396, type: vmess, uuid: 38403a32-48b8-4575-a3aa-5f7c884d72b0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 7", server: star.diiginet.ir, port: 24396, type: vmess, uuid: 38403a32-48b8-4575-a3aa-5f7c884d72b0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 8", server: star.diiginet.ir, port: 47718, type: vmess, uuid: 7a5f71ce-be48-4c6d-91f4-08f64231e135, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 9", server: star.diiginet.ir, port: 24396, type: vmess, uuid: 38403a32-48b8-4575-a3aa-5f7c884d72b0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: NetAccount, server: 104.18.12.149, port: 443, type: vmess, uuid: 6cc103a1-3e49-4c8e-a2c1-f70d24b19c65, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: backfall.azadiconfig.top, network: ws, ws-opts: {path: /store, headers: {Host: backfall.azadiconfig.top}}, udp: true, tfo: false}
+  - {name: configraygan, server: 104.18.12.149, port: 80, type: vmess, uuid: 75e03526-8387-4d10-a129-b512563b31b6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad", server: 104.18.12.149, port: 443, type: vmess, uuid: 6cc103a1-3e49-4c8e-a2c1-f70d24b19c65, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: backfall.azadiconfig.top, network: ws, ws-opts: {path: /store, headers: {Host: backfall.azadiconfig.top}}, udp: true, tfo: false}
+  - {name: "@filembad 2", server: 104.18.12.149, port: 443, type: vmess, uuid: 4571389d-7e40-4a3d-b278-9e4a320a0f3c, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: work.clientserviceplatform.online, network: ws, ws-opts: {path: /, headers: {Host: work.clientserviceplatform.online}}, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - NetAccount
+      - configraygan
       - "@filembad"
       - "@filembad 2"
-      - "@filembad 3"
-      - "@v2rayconfigamir 7376"
-      - "@v2rayconfigamir 1686"
-      - "@filembad 4"
-      - "@filembad 5"
-      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩
-      - "@filembad 6"
-      - "@filembad 7"
-      - "@filembad 8"
-      - "@filembad 9"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - NetAccount
+      - configraygan
       - "@filembad"
       - "@filembad 2"
-      - "@filembad 3"
-      - "@v2rayconfigamir 7376"
-      - "@v2rayconfigamir 1686"
-      - "@filembad 4"
-      - "@filembad 5"
-      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩
-      - "@filembad 6"
-      - "@filembad 7"
-      - "@filembad 8"
-      - "@filembad 9"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - NetAccount
+      - configraygan
       - "@filembad"
       - "@filembad 2"
-      - "@filembad 3"
-      - "@v2rayconfigamir 7376"
-      - "@v2rayconfigamir 1686"
-      - "@filembad 4"
-      - "@filembad 5"
-      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩
-      - "@filembad 6"
-      - "@filembad 7"
-      - "@filembad 8"
-      - "@filembad 9"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - NetAccount
+      - configraygan
       - "@filembad"
       - "@filembad 2"
-      - "@filembad 3"
-      - "@v2rayconfigamir 7376"
-      - "@v2rayconfigamir 1686"
-      - "@filembad 4"
-      - "@filembad 5"
-      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩
-      - "@filembad 6"
-      - "@filembad 7"
-      - "@filembad 8"
-      - "@filembad 9"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - NetAccount
+      - configraygan
       - "@filembad"
       - "@filembad 2"
-      - "@filembad 3"
-      - "@v2rayconfigamir 7376"
-      - "@v2rayconfigamir 1686"
-      - "@filembad 4"
-      - "@filembad 5"
-      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩
-      - "@filembad 6"
-      - "@filembad 7"
-      - "@filembad 8"
-      - "@filembad 9"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - NetAccount
+      - configraygan
       - "@filembad"
       - "@filembad 2"
-      - "@filembad 3"
-      - "@v2rayconfigamir 7376"
-      - "@v2rayconfigamir 1686"
-      - "@filembad 4"
-      - "@filembad 5"
-      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩
-      - "@filembad 6"
-      - "@filembad 7"
-      - "@filembad 8"
-      - "@filembad 9"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -149,18 +93,10 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - NetAccount
+      - configraygan
       - "@filembad"
       - "@filembad 2"
-      - "@filembad 3"
-      - "@v2rayconfigamir 7376"
-      - "@v2rayconfigamir 1686"
-      - "@filembad 4"
-      - "@filembad 5"
-      - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩
-      - "@filembad 6"
-      - "@filembad 7"
-      - "@filembad 8"
-      - "@filembad 9"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

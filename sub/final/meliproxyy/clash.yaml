@@ -465,8 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@meliproxyy", server: 188.114.98.0, port: 2087, type: vless, tls: true, packet-encoding: xudp, uuid: 3f58cc47-94f6-40d3-8797-1ce66cb0555e, servername: nl4.maxriser.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: nl4.maxriser.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@meliproxyy`", server: 188.114.98.0, port: 2087, type: vless, tls: true, packet-encoding: xudp, uuid: 3f58cc47-94f6-40d3-8797-1ce66cb0555e, servername: nl4.maxriser.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: nl4.maxriser.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@meliproxyy`", server: 104.18.12.149, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 92bc8d2b-8253-4467-8ebb-be6c99851ecd, servername: vipnet16ss.alireza031.shop, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: vipnet16ss.alireza031.shop}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,7 +482,6 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@meliproxyy"
       - "@meliproxyy`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -491,7 +489,6 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - "@meliproxyy"
       - "@meliproxyy`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -499,7 +496,6 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - "@meliproxyy"
       - "@meliproxyy`"
   - name: اتصال پایدار 🔗
     type: url-test
@@ -516,7 +512,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@meliproxyy"
       - "@meliproxyy`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -524,7 +519,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@meliproxyy"
       - "@meliproxyy`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -532,7 +526,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@meliproxyy"
       - "@meliproxyy`"
   - name: دانلود منیجر 📥
     type: select

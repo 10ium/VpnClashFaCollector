@@ -465,8 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: Psiphon - @lrnbymaa 10`, server: 94.182.92.94, port: 10552, type: vless, tls: true, packet-encoding: xudp, uuid: aca8bc97-2e78-4933-8bc8-ada7cd5a5f20, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Psiphon - @lrnbymaa 11, server: varzesh3.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c387b0f2-5d9e-4c95-882d-1d5eeb443ce2, servername: nginx-3b1e7ed824-abol.apps.ir-central1.arvancaas.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /movie, headers: {Host: nginx-3b1e7ed824-abol.apps.ir-central1.arvancaas.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: lrnbymaa`, server: 104.18.12.149, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: e44c9ff3-5a05-4ee9-b050-b8fbc7c1af04, servername: kingman.turboo-server.com.co, network: ws, ws-opts: {path: /, headers: {Host: kingman.turboo-server.com.co}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - Psiphon - @lrnbymaa 10`
-      - Psiphon - @lrnbymaa 11
+      - lrnbymaa`
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - Psiphon - @lrnbymaa 10`
-      - Psiphon - @lrnbymaa 11
+      - lrnbymaa`
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - Psiphon - @lrnbymaa 10`
-      - Psiphon - @lrnbymaa 11
+      - lrnbymaa`
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Psiphon - @lrnbymaa 10`
-      - Psiphon - @lrnbymaa 11
+      - lrnbymaa`
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Psiphon - @lrnbymaa 10`
-      - Psiphon - @lrnbymaa 11
+      - lrnbymaa`
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Psiphon - @lrnbymaa 10`
-      - Psiphon - @lrnbymaa 11
+      - lrnbymaa`
   - name: دانلود منیجر 📥
     type: select
     proxies:
