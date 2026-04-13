@@ -1,94 +1,24 @@
 # آرشیو کانال: @rahgozar94725_ip
-بروزرسانی: 2026-04-13 01:29:09 UTC
+بروزرسانی: 2026-04-13 11:15:05 UTC
 
-### 🕒 2026-04-12 06:52:14 UTC
+### 🕒 2026-04-13 08:12:16 UTC
 > ↪️ **Forwarded**
 
-**آموزش کامل و گام‌به‌گام اشتراک‌گذاری پورت 53 با استفاده از dnsdist**
-اگه سرویس dnstm رو ران کردی و حالا می‌خوای یه پروژه دیگه مثل MasterDnsVPN رو هم کنارش داشته باشی، باید پورت ۵۳ رو مدیریت کنی. با این آموزش یاد میگیری که چطوری این کار رو انجام بدی.
-**⚠️ مهم: با کانفیگ همین سرور، ssh‌ نزن چون وسط کار، موقتا قطعش می‌کنیم**
-***✅***
- 
-**گام1: پیدا کردن مشخصات و پورت‌های فعلی**
-اول باید بفهمیم هر کدوم از سرویس‌های dnstm الان دارن روی چه پورتی و با چه ساب‌دامنه‌ای کار می‌کنن. این دستور رو بزن:
-ps aux | grep dnstm
-توی خروجی، دنبال ساب‌دامنه‌ها و پورت‌هایی بگرد که با 
-[127.0.0.1](http://127.0.0.1/)
- شروع می‌شن (مثلاً پورت‌های ۵۳۱۰، ۵۳۱۱ یا ۵۳۱۲). این‌ها رو یه جا یادداشت کن چون توی فایل کانفیگ بهشون نیاز داریم.
-***✅***
- 
-**گام 2: متوقف کردن سرویس dnstm**
-برای اینکه پورت ۵۳ رو آزاد کنیم، باید سرویسی که الان داره ازش استفاده می‌کنه رو متوقف کنیم. با این دستور اسم دقیقش رو پیدا کن:
-systemctl list-units --type=service | grep dnstm
-توی لیست خروجی، سرویسی که اسمش شامل dnsrouter هست همون هدف ماست مثلاً
-** dnstm-dnsrouter.service**
-با دستور زیر سرویسش رو متوقف می‌کنیم:
-sudo systemctl stop dnstm-dnsrouter
-sudo systemctl disable dnstm-dnsrouter
-***✅***
- 
-**گام 3:‌ نصب MasterDNS**
-با دستور زیر این پروژه رو نصب می‌کنیم:
-bash <(curl -Ls https://raw.githubusercontent.com/masterking32/MasterDnsVPN/main/server_linux_install.sh)
-بعد از نصب کامل، موقتا باید سرویسش رو متوقف کنیم:
-systemctl stop masterdnsvpn
-**✅ گام 4: نصب پیش‌نیاز (dnsdist)**
-حالا ابزار مدیریت پورت رو نصب می‌کنیم:
-sudo apt update && sudo apt install dnsdist -y
-**✅ گام 5: تنظیم فایل کانفیگ dnsdist**
-حالا باید به این ابزار بگیم هر ساب‌دامنه رو به کدوم پورت داخلی بفرسته. اول فایل رو باز کن:
-sudo nano /etc/dnsdist/dnsdist.conf
-کل محتویات فایل رو پاک کن و این‌ها رو داخلش بنویس. یادت باشه 
-**ساب‌دامنه‌ها و پورت‌ها رو بر اساس چیزی که در گام 1 پیدا کردی**
- تغییر بدی:
-setACL('0.0.0.0/0')
-setLocal('0.0.0.0:53')
-newServer({address='127.0.0.1:5310', pool='service1'})
-newServer({address='127.0.0.1:5311', pool='service2'})
-newServer({address='127.0.0.1:5312', pool='service3'})
-newServer({address='127.0.0.1:5314', pool='master_dns'})
-addAction("ns2.example.com.", PoolAction("service1"))
-addAction("ns3.example.com.", PoolAction("service2"))
-addAction("ns4.example.com.", PoolAction("service3"))
-addAction("ns5.example.com.", PoolAction("master_dns"))
-newServer({address='1.1.1.1', pool='cloudflare'})
-**⚠️در بخش newServer پورت‌های داخلی سرویس‌های فعلی رو وارد کن⚠️در بخش addAction ساب‌دامنه‌های مربوط به هر سرویس رو دقیقاً بنویس⚠️پورت 5314 رو برای پروژه جدید (مثل MasterDnsVPN) در نظر گرفتیم**
-**⚠️ اگر تعداد سرویس بیشتری داری، طبق همین الگو، در addAction و newServer اضافه کن،‌ اگر کمتره خط اضافی رو از  addAction و newServer  پاک کن.**
-**✅ گام 6: تنظیم پروژه جدید**
-حالا فایل کانفیگ 
-**MasterDnsVPN**
- رو باز کن و تغییرات زیر رو اعمال کن تا با dnsdist هماهنگ بشه:
-UDP_HOST = "127.0.0.1"
-UDP_PORT = 5314
-**✅ گام 7: اجرای نهایی و سوئیچ کردن**
-توی این مرحله پورت 53 رو از روتر قدیمی می‌گیریم و میدیم به dnsdist. این دستورات رو به ترتیب اجرا کن:
-برای متوقف کردن روتر قدیمی (اسمی که در گام 2 پیدا کردی رو جایگزین کن):
-sudo systemctl stop dnstm-dnsrouter
-sudo systemctl disable dnstm-dnsrouter
-برای چک کردن اینکه پورت ۵۳ کاملاً آزاد شده باشه:
-sudo netstat -tulnp | grep :53
-برای تست کردن فایل کانفیگ جدید که ارور نداشته باشه:
-dnsdist --check-config
-اگه اروری ندیدی، سرویس جدید رو فعال و استارت کن:
-sudo systemctl enable dnsdist
-sudo systemctl restart dnsdist
-sudo systemctl restart masterdnsvpn
-**❌ راه برگشت اضطراری (Rollback)**
-اگه به هر دلیلی یوزرها قطع شدن یا سیستم درست کار نکرد، با این دستور سریع همه چیز رو به حالت اول برگردون:
-sudo systemctl stop dnsdist && sudo systemctl start dnstm-dnsrouter
-***⚠️***
- توجه: 
-**اگر MasterDNS آپدیت داد، به این صورت عمل کن:**
-اول سرویس dnsdist رو متوقف میکنیم
-sudo systemctl stop dnsdist
- 
-بعد از آپدیت MasterDNS، مثل گام 6  فایل کانفیگ 
-**MasterDnsVPN**
- رو باز کن و تغییرات زیر رو اعمال کن تا با dnsdist هماهنگ بشه:
-UDP_HOST = "127.0.0.1"
-UDP_PORT = 5314
- حالا با دستور زیر مجددا همه سرویس ها رو فعال میکنیم:
-systemctl stop masterdnsvpn && systemctl restart dnsdist && systemctl restart masterdnsvpn
+SlipNet is free, source-available, and built to fight internet censorship. No ads, no data collection, no subscriptions. Your donation helps keep this tool free and improving for everyone who needs it.
+اسلیپ‌نت از معدود راهکارهایی است که از ابتدای محدودیت‌ها دوام آورده و مسیر دسترسی به اینترنت آزاد را باز نگه داشته.
+​برای اینکه این پروژه در این روزهای حیاتی زنده بمونه و بتونه به مقابله با محدودیت‌های فنی ادامه بده، به حمایت شما نیاز داره. اگر این ابزار براتون مفید بوده، می‌تونید باحمایت به تداوم توسعه‌ش کمک کنید:
+​
+***🔒***
+ Monero (XMR):
+48wa9asF4AdZCq8KvPqBmqN3s98XFQ2MG7pL8MY6hAc6ZXBd8D61LArebdmAwCk5jBBbR2BuiHkSraEYFhx5AdDqLxDB4GU
+​
+***🌐***
+ Crypto (BEP20 / ERC20 / Arbitrum):
+0xd4140058389572d50dc8716e768e687c050dd5c9
+***⚡️***
+TRX (Tron):
+TGgmKhFLQN5bJT8MpU58nU45F6LMs4YdzJ
+حمایت‌های شما صرف تحقیق، توسعه و به‌روزرسانی فنی پروژه‌ای می‌شود که هدفش تنها یک چیز است: اتصال پایدار و آزاد.
 
 ---
 

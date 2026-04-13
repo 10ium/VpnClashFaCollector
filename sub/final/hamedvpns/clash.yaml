@@ -474,6 +474,7 @@ proxies:
   - {name: 5, server: snapp.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 5793e4f5-8490-4f44-82fa-d97230eb67dd, network: ws, ws-opts: {path: /, headers: {Host: cm.programming-coding.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: hamedp71-1, server: 104.18.12.149, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.jpmj.dev, network: ws, ws-opts: {path: "/?ed=2560&telegram🇨🇳 @wangcai2", headers: {Host: sni.jpmj.dev}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@hamedp71`", server: mmd.az99x.info, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: b2bd5bed-2715-4b6c-c920-91a9d13fa707, network: ws, ws-opts: {path: /, headers: {Host: mmd.az99x.info}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hp, server: mmd.az99x.info, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: b2bd5bed-2715-4b6c-c920-91a9d13fa707, network: ws, ws-opts: {path: /, headers: {Host: mmd.az99x.info}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -499,6 +500,7 @@ proxy-groups:
       - 5
       - hamedp71-1
       - "@hamedp71`"
+      - hp
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -514,6 +516,7 @@ proxy-groups:
       - 5
       - hamedp71-1
       - "@hamedp71`"
+      - hp
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -529,6 +532,7 @@ proxy-groups:
       - 5
       - hamedp71-1
       - "@hamedp71`"
+      - hp
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -553,6 +557,7 @@ proxy-groups:
       - 5
       - hamedp71-1
       - "@hamedp71`"
+      - hp
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -568,6 +573,7 @@ proxy-groups:
       - 5
       - hamedp71-1
       - "@hamedp71`"
+      - hp
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -583,6 +589,7 @@ proxy-groups:
       - 5
       - hamedp71-1
       - "@hamedp71`"
+      - hp
   - name: دانلود منیجر 📥
     type: select
     proxies:
