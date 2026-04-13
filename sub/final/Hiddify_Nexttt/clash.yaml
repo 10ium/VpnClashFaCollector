@@ -465,10 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Hiddify_nexttt", server: 104.18.12.149, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a01daac7-1e65-4645-854d-b47d226f6b08, servername: y6-3cj.PAgES.DEV, network: ws, ws-opts: {path: /, headers: {Host: y6-3cj.PAgES.DEV}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: https://t.me/Hiddify_nexttt`, server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 9ddbe9f3-41e8-463a-8b31-01ebed0e771a, network: ws, ws-opts: {path: /, headers: {Host: mail.frontendev.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "Telegram:  @Hiddify_nexttt", server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: b6131f5c-ad81-4e21-9c71-b49a8fd709a5, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Hiddify_Nexttt", server: 104.18.13.149, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f8ba32b4-0c40-49ed-a895-f9b07c51114f, servername: x.mtt1.xyz, network: ws, ws-opts: {path: t.me/TEAMNETGRATISCOLTXT, headers: {Host: x.mtt1.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Hiddify_Nexttt 2", server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: fcea5925-8782-48ca-9ed3-2728cff92c05, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Hiddify_Nexttt", server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: fcea5925-8782-48ca-9ed3-2728cff92c05, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,30 +484,27 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@Hiddify_nexttt"
+      - https://t.me/Hiddify_nexttt`
       - "Telegram:  @Hiddify_nexttt"
       - "@Hiddify_Nexttt"
-      - "@Hiddify_Nexttt 2"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@Hiddify_nexttt"
+      - https://t.me/Hiddify_nexttt`
       - "Telegram:  @Hiddify_nexttt"
       - "@Hiddify_Nexttt"
-      - "@Hiddify_Nexttt 2"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@Hiddify_nexttt"
+      - https://t.me/Hiddify_nexttt`
       - "Telegram:  @Hiddify_nexttt"
       - "@Hiddify_Nexttt"
-      - "@Hiddify_Nexttt 2"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -524,30 +520,27 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Hiddify_nexttt"
+      - https://t.me/Hiddify_nexttt`
       - "Telegram:  @Hiddify_nexttt"
       - "@Hiddify_Nexttt"
-      - "@Hiddify_Nexttt 2"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Hiddify_nexttt"
+      - https://t.me/Hiddify_nexttt`
       - "Telegram:  @Hiddify_nexttt"
       - "@Hiddify_Nexttt"
-      - "@Hiddify_Nexttt 2"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Hiddify_nexttt"
+      - https://t.me/Hiddify_nexttt`
       - "Telegram:  @Hiddify_nexttt"
       - "@Hiddify_Nexttt"
-      - "@Hiddify_Nexttt 2"
   - name: دانلود منیجر 📥
     type: select
     proxies:

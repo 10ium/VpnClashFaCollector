@@ -465,8 +465,12 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: Tel:@Father_vpn`, server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 4f8e5b8d-0a6f-4537-85c1-18bc5f5259e2, network: ws, ws-opts: {path: /, headers: {Host: dl700tobi.sudoserver.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Tel:@Father_vpn` 2, server: teamlifez.ir, port: 3000, type: vless, tls: true, packet-encoding: xudp, uuid: d813dd5d-b96d-4a71-ad0e-c3fc2ea29a94, host: teamlifez.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Father_vpn¹", server: 104.18.12.149, port: 443, type: trojan, password: humanity, sni: www.ignitelimit.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.ignitelimit.com}}, udp: true, tfo: false}
+  - {name: TEL:@Father_VPN¹`, server: 104.18.12.149, port: 443, type: trojan, password: humanity, sni: www.ignitelimit.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.ignitelimit.com}}, udp: true, tfo: false}
+  - {name: "@Father_vpn²", server: abr.superip.ir, port: 2082, type: vless, tls: true, packet-encoding: xudp, uuid: 014dc545-69e8-41bb-bea7-c6a35bd3fd40, network: ws, ws-opts: {path: /API/superip, headers: {Host: brand.bi6x.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Father_VPN`", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 137a9fef-629a-4197-abe9-9114a314a77c, network: ws, ws-opts: {path: /, headers: {Host: arv.liarashop.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Father_vpn⁴`", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 137a9fef-629a-4197-abe9-9114a314a77c, network: ws, ws-opts: {path: /, headers: {Host: arv.liarashop.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Father_vpn³", server: 185.143.234.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: ebc4099f-ac3a-4c12-b634-c2fa0664c018, network: ws, ws-opts: {path: /@ICV2RAY, headers: {Host: cyrus-test.ruabr.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +487,36 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - Tel:@Father_vpn`
-      - Tel:@Father_vpn` 2
+      - "@Father_vpn¹"
+      - TEL:@Father_VPN¹`
+      - "@Father_vpn²"
+      - "@Father_VPN`"
+      - "@Father_vpn⁴`"
+      - "@Father_vpn³"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - Tel:@Father_vpn`
-      - Tel:@Father_vpn` 2
+      - "@Father_vpn¹"
+      - TEL:@Father_VPN¹`
+      - "@Father_vpn²"
+      - "@Father_VPN`"
+      - "@Father_vpn⁴`"
+      - "@Father_vpn³"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - Tel:@Father_vpn`
-      - Tel:@Father_vpn` 2
+      - "@Father_vpn¹"
+      - TEL:@Father_VPN¹`
+      - "@Father_vpn²"
+      - "@Father_VPN`"
+      - "@Father_vpn⁴`"
+      - "@Father_vpn³"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +532,36 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Tel:@Father_vpn`
-      - Tel:@Father_vpn` 2
+      - "@Father_vpn¹"
+      - TEL:@Father_VPN¹`
+      - "@Father_vpn²"
+      - "@Father_VPN`"
+      - "@Father_vpn⁴`"
+      - "@Father_vpn³"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Tel:@Father_vpn`
-      - Tel:@Father_vpn` 2
+      - "@Father_vpn¹"
+      - TEL:@Father_VPN¹`
+      - "@Father_vpn²"
+      - "@Father_VPN`"
+      - "@Father_vpn⁴`"
+      - "@Father_vpn³"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Tel:@Father_vpn`
-      - Tel:@Father_vpn` 2
+      - "@Father_vpn¹"
+      - TEL:@Father_VPN¹`
+      - "@Father_vpn²"
+      - "@Father_VPN`"
+      - "@Father_vpn⁴`"
+      - "@Father_vpn³"
   - name: دانلود منیجر 📥
     type: select
     proxies:

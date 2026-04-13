@@ -465,9 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "CH: @antimeli`", server: 104.18.12.149, port: 443, type: trojan, password: humanity, sni: www.multiplydose.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.multiplydose.com}}, udp: true, tfo: false}
-  - {name: "CH: @antimeli` 2", server: www.ignitelimit.com, port: 443, type: trojan, password: humanity, sni: www.ignitelimit.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.ignitelimit.com}}, udp: true, tfo: false}
-  - {name: "CH: @antimeli` 3", server: 104.18.12.149, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a01daac7-1e65-4645-854d-b47d226f6b08, servername: y6-3cj.PAgES.DEV, network: ws, ws-opts: {path: /, headers: {Host: y6-3cj.PAgES.DEV}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "CH: @antimeli`", server: snapp.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 63e7247a-83e8-4149-9c76-46f9703de759, network: ws, ws-opts: {path: /, headers: {Host: arv.liarashop.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,8 +483,6 @@ proxy-groups:
     type: select
     proxies:
       - "CH: @antimeli`"
-      - "CH: @antimeli` 2"
-      - "CH: @antimeli` 3"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -494,8 +490,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "CH: @antimeli`"
-      - "CH: @antimeli` 2"
-      - "CH: @antimeli` 3"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -503,8 +497,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "CH: @antimeli`"
-      - "CH: @antimeli` 2"
-      - "CH: @antimeli` 3"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -521,8 +513,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "CH: @antimeli`"
-      - "CH: @antimeli` 2"
-      - "CH: @antimeli` 3"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -530,8 +520,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "CH: @antimeli`"
-      - "CH: @antimeli` 2"
-      - "CH: @antimeli` 3"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -539,8 +527,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "CH: @antimeli`"
-      - "CH: @antimeli` 2"
-      - "CH: @antimeli` 3"
   - name: دانلود منیجر 📥
     type: select
     proxies:

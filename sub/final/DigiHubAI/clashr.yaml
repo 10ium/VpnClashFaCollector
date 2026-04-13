@@ -5,46 +5,60 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@DigiHubAI`", server: 104.18.12.149, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.jpmj.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: sni.jpmj.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@DigiHubAI", server: 104.18.12.149, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 57ba2ab1-a283-42eb-82ee-dc3561a805b8, servername: ovhwuxian.pai50288.uk, network: ws, ws-opts: {path: /57ba2ab1, headers: {Host: ovhwuxian.pai50288.uk}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@DigiHubAI 2", server: 104.18.12.149, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.jpmj.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: sni.jpmj.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@DigiHubAI 3", server: 104.18.12.149, port: 8443, type: vmess, uuid: 516d8a7a-3f0b-41d3-bad0-246116381516, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: t1.620720.xyz, network: ws, ws-opts: {path: /, headers: {Host: t1.620720.xyz}}, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@DigiHubAI`"
+      - "@DigiHubAI"
+      - "@DigiHubAI 2"
+      - "@DigiHubAI 3"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@DigiHubAI`"
+      - "@DigiHubAI"
+      - "@DigiHubAI 2"
+      - "@DigiHubAI 3"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@DigiHubAI`"
+      - "@DigiHubAI"
+      - "@DigiHubAI 2"
+      - "@DigiHubAI 3"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@DigiHubAI`"
+      - "@DigiHubAI"
+      - "@DigiHubAI 2"
+      - "@DigiHubAI 3"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@DigiHubAI`"
+      - "@DigiHubAI"
+      - "@DigiHubAI 2"
+      - "@DigiHubAI 3"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@DigiHubAI`"
+      - "@DigiHubAI"
+      - "@DigiHubAI 2"
+      - "@DigiHubAI 3"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +86,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@DigiHubAI`"
+      - "@DigiHubAI"
+      - "@DigiHubAI 2"
+      - "@DigiHubAI 3"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

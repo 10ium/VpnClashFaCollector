@@ -465,20 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: configraygan, server: 104.18.12.149, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true, tfo: false}
-  - {name: configraygan 2, server: 104.18.12.149, port: 443, type: trojan, password: humanity, sni: www.gossipglove.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.gossipglove.com}}, udp: true, tfo: false}
-  - {name: configraygan 3, server: 104.18.12.149, port: 443, type: trojan, password: humanity, sni: www.ignitelimit.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.ignitelimit.com}}, udp: true, tfo: false}
-  - {name: configraygan 4, server: 104.18.12.149, port: 443, type: trojan, password: humanity, sni: www.multiplydose.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.multiplydose.com}}, udp: true, tfo: false}
-  - {name: configraygan 5, server: 104.18.12.149, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 10efeee0-ecb4-4f58-85e9-893781252585, servername: www.soonteam.top, alpn: ["h2,http/1.1"], host: www.soonteam.top, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@configraygan", server: 104.18.12.149, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.jpmj.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: sni.jpmj.dev}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: configraygan 6, server: 104.18.12.149, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.jpmj.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: sni.jpmj.dev}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: configraygan 7, server: 104.18.12.149, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.v6.navy, network: ws, ws-opts: {path: /, headers: {Host: sni.111000.v6.navy}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: configraygan 8, server: 104.18.12.149, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a01daac7-1e65-4645-854d-b47d226f6b08, servername: y6-3cj.PAgES.DEV, network: ws, ws-opts: {path: /, headers: {Host: y6-3cj.PAgES.DEV}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: configraygan 9, server: 104.18.12.149, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a61466ef-41c0-4613-99a8-af2e8364b2c6, servername: soonteam.imsoon.io, alpn: ["h2,http/1.1"], host: soonteam.imsoon.io, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: configraygan 10, server: 104.18.12.149, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a62c40a2-ce60-4790-b6c5-c7a1e13ccb2d, servername: Clu.servert1op.ir, alpn: ["h3,h2,http/1.1"], network: ws, ws-opts: {path: "/test?ed=2560", headers: {Host: Clu.servert1op.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: configraygan 11, server: mmd.az99x.info, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: b2bd5bed-2715-4b6c-c920-91a9d13fa707, network: ws, ws-opts: {path: /, headers: {Host: mmd.az99x.info}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: configraygan 12, server: 104.18.12.149, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: e44c9ff3-5a05-4ee9-b050-b8fbc7c1af04, servername: itfgnf-hkjkhfmhghf-hjmngb.infinitecreativehorizons.com, host: itfgnf-hkjkhfmhghf-hjmngb.infinitecreativehorizons.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: configraygan 13, server: 104.18.12.149, port: 80, type: vmess, uuid: 75e03526-8387-4d10-a129-b512563b31b6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -495,60 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - configraygan
-      - configraygan 2
-      - configraygan 3
-      - configraygan 4
-      - configraygan 5
       - "@configraygan"
-      - configraygan 6
-      - configraygan 7
-      - configraygan 8
-      - configraygan 9
-      - configraygan 10
-      - configraygan 11
-      - configraygan 12
-      - configraygan 13
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - configraygan
-      - configraygan 2
-      - configraygan 3
-      - configraygan 4
-      - configraygan 5
       - "@configraygan"
-      - configraygan 6
-      - configraygan 7
-      - configraygan 8
-      - configraygan 9
-      - configraygan 10
-      - configraygan 11
-      - configraygan 12
-      - configraygan 13
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - configraygan
-      - configraygan 2
-      - configraygan 3
-      - configraygan 4
-      - configraygan 5
       - "@configraygan"
-      - configraygan 6
-      - configraygan 7
-      - configraygan 8
-      - configraygan 9
-      - configraygan 10
-      - configraygan 11
-      - configraygan 12
-      - configraygan 13
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -564,60 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - configraygan
-      - configraygan 2
-      - configraygan 3
-      - configraygan 4
-      - configraygan 5
       - "@configraygan"
-      - configraygan 6
-      - configraygan 7
-      - configraygan 8
-      - configraygan 9
-      - configraygan 10
-      - configraygan 11
-      - configraygan 12
-      - configraygan 13
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - configraygan
-      - configraygan 2
-      - configraygan 3
-      - configraygan 4
-      - configraygan 5
       - "@configraygan"
-      - configraygan 6
-      - configraygan 7
-      - configraygan 8
-      - configraygan 9
-      - configraygan 10
-      - configraygan 11
-      - configraygan 12
-      - configraygan 13
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - configraygan
-      - configraygan 2
-      - configraygan 3
-      - configraygan 4
-      - configraygan 5
       - "@configraygan"
-      - configraygan 6
-      - configraygan 7
-      - configraygan 8
-      - configraygan 9
-      - configraygan 10
-      - configraygan 11
-      - configraygan 12
-      - configraygan 13
   - name: دانلود منیجر 📥
     type: select
     proxies:

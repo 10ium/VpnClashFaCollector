@@ -5,53 +5,81 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: Tel:@Father_vpn`, server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 4f8e5b8d-0a6f-4537-85c1-18bc5f5259e2, network: ws, ws-opts: {path: /, headers: {Host: dl700tobi.sudoserver.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Tel:@Father_vpn` 2, server: teamlifez.ir, port: 3000, type: vless, tls: true, packet-encoding: xudp, uuid: d813dd5d-b96d-4a71-ad0e-c3fc2ea29a94, host: teamlifez.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Father_vpn¹", server: 104.18.12.149, port: 443, type: trojan, password: humanity, sni: www.ignitelimit.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.ignitelimit.com}}, udp: true, tfo: false}
+  - {name: TEL:@Father_VPN¹`, server: 104.18.12.149, port: 443, type: trojan, password: humanity, sni: www.ignitelimit.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.ignitelimit.com}}, udp: true, tfo: false}
+  - {name: "@Father_vpn²", server: abr.superip.ir, port: 2082, type: vless, tls: true, packet-encoding: xudp, uuid: 014dc545-69e8-41bb-bea7-c6a35bd3fd40, network: ws, ws-opts: {path: /API/superip, headers: {Host: brand.bi6x.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Father_VPN`", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 137a9fef-629a-4197-abe9-9114a314a77c, network: ws, ws-opts: {path: /, headers: {Host: arv.liarashop.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Father_vpn⁴`", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 137a9fef-629a-4197-abe9-9114a314a77c, network: ws, ws-opts: {path: /, headers: {Host: arv.liarashop.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Father_vpn³", server: 185.143.234.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: ebc4099f-ac3a-4c12-b634-c2fa0664c018, network: ws, ws-opts: {path: /@ICV2RAY, headers: {Host: cyrus-test.ruabr.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - Tel:@Father_vpn`
-      - Tel:@Father_vpn` 2
+      - "@Father_vpn¹"
+      - TEL:@Father_VPN¹`
+      - "@Father_vpn²"
+      - "@Father_VPN`"
+      - "@Father_vpn⁴`"
+      - "@Father_vpn³"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - Tel:@Father_vpn`
-      - Tel:@Father_vpn` 2
+      - "@Father_vpn¹"
+      - TEL:@Father_VPN¹`
+      - "@Father_vpn²"
+      - "@Father_VPN`"
+      - "@Father_vpn⁴`"
+      - "@Father_vpn³"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - Tel:@Father_vpn`
-      - Tel:@Father_vpn` 2
+      - "@Father_vpn¹"
+      - TEL:@Father_VPN¹`
+      - "@Father_vpn²"
+      - "@Father_VPN`"
+      - "@Father_vpn⁴`"
+      - "@Father_vpn³"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - Tel:@Father_vpn`
-      - Tel:@Father_vpn` 2
+      - "@Father_vpn¹"
+      - TEL:@Father_VPN¹`
+      - "@Father_vpn²"
+      - "@Father_VPN`"
+      - "@Father_vpn⁴`"
+      - "@Father_vpn³"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - Tel:@Father_vpn`
-      - Tel:@Father_vpn` 2
+      - "@Father_vpn¹"
+      - TEL:@Father_VPN¹`
+      - "@Father_vpn²"
+      - "@Father_VPN`"
+      - "@Father_vpn⁴`"
+      - "@Father_vpn³"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - Tel:@Father_vpn`
-      - Tel:@Father_vpn` 2
+      - "@Father_vpn¹"
+      - TEL:@Father_VPN¹`
+      - "@Father_vpn²"
+      - "@Father_VPN`"
+      - "@Father_vpn⁴`"
+      - "@Father_vpn³"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -79,8 +107,12 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - Tel:@Father_vpn`
-      - Tel:@Father_vpn` 2
+      - "@Father_vpn¹"
+      - TEL:@Father_VPN¹`
+      - "@Father_vpn²"
+      - "@Father_VPN`"
+      - "@Father_vpn⁴`"
+      - "@Father_vpn³"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
