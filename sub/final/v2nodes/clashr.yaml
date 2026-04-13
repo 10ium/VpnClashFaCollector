@@ -5,9 +5,8 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: n8mrcg005964vnc.cybervena.com:50099, server: n8mrcg005964vnc.cybervena.com, port: 50099, type: ss, cipher: chacha20-ietf-poly1305, password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4, udp: true, tfo: false}
   - {name: r3mrcg001286ek2.cybervena.com:50099, server: r3mrcg001286ek2.cybervena.com, port: 50099, type: ss, cipher: chacha20-ietf-poly1305, password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4, udp: true, tfo: false}
-  - {name: n8mrcg005964vnc.cybervena.com:50099 2, server: n8mrcg005964vnc.cybervena.com, port: 50099, type: ss, cipher: chacha20-ietf-poly1305, password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4, udp: true, tfo: false}
+  - {name: n8mrcg005964vnc.cybervena.com:50099, server: n8mrcg005964vnc.cybervena.com, port: 50099, type: ss, cipher: chacha20-ietf-poly1305, password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4, udp: true, tfo: false}
   - {name: 🇨🇳 xgrr.sdnlv0.cn:15783, server: xgrr.sdnlv0.cn, port: 15783, type: ss, cipher: chacha20-ietf-poly1305, password: 8ba6a37d-8715-440d-942a-a3e6c23a9290, udp: true, tfo: false}
   - {name: 🇨🇳 xgrr.sdnlv0.cn:31032, server: xgrr.sdnlv0.cn, port: 31032, type: ss, cipher: chacha20-ietf-poly1305, password: 8ba6a37d-8715-440d-942a-a3e6c23a9290, udp: true, tfo: false}
   - {name: 🇨🇳 xgrr.sdnlv0.cn:33144, server: xgrr.sdnlv0.cn, port: 33144, type: ss, cipher: chacha20-ietf-poly1305, password: 8ba6a37d-8715-440d-942a-a3e6c23a9290, udp: true, tfo: false}
@@ -20,6 +19,7 @@ proxies:
   - {name: 15.204.247.49:12000, server: 15.204.247.49, port: 12000, type: ss, cipher: aes-256-gcm, password: 8JCsPssfgS8tiRwiMlhARg==, udp: true, tfo: false}
   - {name: 57.128.214.100:12000, server: 57.128.214.100, port: 12000, type: ss, cipher: aes-256-gcm, password: 8JCsPssfgS8tiRwiMlhARg==, udp: true, tfo: false}
   - {name: 13.231.242.181:9201, server: 13.231.242.181, port: 9201, type: trojan, password: 187dda4498be9ac4f28db939d5940185, sni: www.nintendogames.net, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: www.ignitelimit.com:443, server: www.ignitelimit.com, port: 443, type: trojan, password: humanity, sni: www.ignitelimit.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.ignitelimit.com}}, udp: true, tfo: false}
   - {name: 35.180.104.104:22222, server: 35.180.104.104, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 63.183.254.133:22222, server: 63.183.254.133, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 🇬🇧 gb-6.flowersyellow.ru:443, server: gb-6.flowersyellow.ru, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 050fb692-dba7-4b69-b1fd-182c8e1c53eb, servername: www.samsung.com, host: www.samsung.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
@@ -32,25 +32,24 @@ proxies:
   - {name: 109.234.39.219:443, server: 109.234.39.219, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 2202983c-4238-4beb-8519-27cd3dcd12ab, servername: yahoo.com, host: yahoo.com, path: /, reality-opts: {public-key: iE7UA_fWJTdKZ2SUaAMY_8F9hpawC14D431KNkcXfkI, short-id: de71}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 153.80.249.101:443, server: 153.80.249.101, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 2491c11c-b958-4553-96f7-1aaa7cad8320, servername: dl.google.com, host: dl.google.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: T9-LNstrlOx3Bme7jREFDfDcvgYt3YGUpkTH4Uhwlws, short-id: 4da040bb05be9f47}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: reserve.pilates.rodeo:2053, server: reserve.pilates.rodeo, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: 3d243df5-9cda-4aac-89d5-354de77d79e2, servername: nice.ducks.tel, alpn: [http%2F1.1%2Ch2], network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: grpc}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: reserve.pilates.rodeo:2053 2, server: reserve.pilates.rodeo, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: 3d243df5-9cda-4aac-89d5-354de77d79e2, servername: nice.ducks.tel, alpn: ["http/1.1,h2"], network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: grpc}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 91.199.50.37:443, server: 91.199.50.37, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 43488128-319e-f480-64ea-0acdc712e2a8, servername: www.alibaba.com, host: www.alibaba.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: kkRsTNjRh_XrrTM6eZllllldzoL5Z9IqlBkDtmYLMhw, short-id: c906f73d3ba8211f}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 🇷🇺 empty-dust.ru:443, server: empty-dust.ru, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 47777915-7325-44c1-8122-251f701f5cb0, servername: bitter-voice.empty-dust.ru, host: bitter-voice.empty-dust.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 5yR0iloe8gXWX6PghzeZoxy2j1IC0gC-1Rduw4fUzG8, short-id: 5c472469282af031}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: austria.coverprotect.info:443, server: austria.coverprotect.info, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4ce98305-2c38-4e1f-aa7b-ef6f77bbfc7c, servername: austria.coverprotect.info, host: austria.coverprotect.info, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: niiQUWkfq_H7K9kDI7rZVMId2WvlmafWLWknL1Cu2QA, short-id: e3ec60fe5f53a97c}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 85.209.153.60:52335, server: 85.209.153.60, port: 52335, type: vless, tls: true, packet-encoding: xudp, uuid: 6ec3c298-1058-43bd-81e3-54b155c4ae21, servername: www.deepl.com, host: www.deepl.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: lwhFlU5V70GDf5OKTFeIAPC5uMKfvlGb3Y6nE-MmRmI, short-id: 72}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 62.84.100.201:59999, server: 62.84.100.201, port: 59999, type: vless, tls: true, packet-encoding: xudp, uuid: 7a36ff3b-9571-407c-95c0-9f6d57177c20, servername: yastatic.net, host: yastatic.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: x0t1otRGBv62aJKGNbsQRJGtwh-sp6CEScFS6S8y3EM, short-id: 9c77d4b3}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 🇫🇷 fr1.samovargate.com:443, server: fr1.samovargate.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 82b5b465-3307-4a25-acef-abd1649bbedf, servername: www.microsoft.com, host: www.microsoft.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: gwuAehnMX6e-n1fxIenfjx43j3qXXi7Cb4wfnW5VyBQ, short-id: f04729f65b9ea261}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: mangu1.zqjsqapi.com:443, server: mangu1.zqjsqapi.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8d5e7f2a-3c1b-4d9e-a6f8-2b5c0e7d4a19, servername: mangu1.zqjsqapi.com, network: ws, ws-opts: {path: /proxy, headers: {Host: mangu1.zqjsqapi.com}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 195.66.27.89:7443, server: 195.66.27.89, port: 7443, type: vless, tls: true, packet-encoding: xudp, uuid: 8f8380ae-9f5d-4cb5-8f5f-0f70fbe054a9, servername: chat.deepseek.com, host: chat.deepseek.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 5QAO98ot2U7TcGs_f6EEaQjCzNOJLNHqPf6smYsdFVI, short-id: d82fb387}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 45.15.171.80:8443, server: 45.15.171.80, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: e033ef6e-ab4b-47d4-a523-ff568d2c8dbb, servername: tradingview.com, host: tradingview.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 83.97.78.219:443, server: 83.97.78.219, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e060f013-53e5-4d88-bf5e-f93baa562ac5, servername: www.google.com, host: www.google.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 185.231.204.21:8443, server: 185.231.204.21, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: fb9d7f81-0520-48e1-b7be-e5678ccf1b92, servername: api-maps.yandex.ru, host: api-maps.yandex.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: S49a5-vW8qiWXvd7uaYkd2Y-dPRIYw91KO3urkfk-U0, short-id: fedcba9876543210}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - n8mrcg005964vnc.cybervena.com:50099
       - r3mrcg001286ek2.cybervena.com:50099
-      - n8mrcg005964vnc.cybervena.com:50099 2
+      - n8mrcg005964vnc.cybervena.com:50099
       - 🇨🇳 xgrr.sdnlv0.cn:15783
       - 🇨🇳 xgrr.sdnlv0.cn:31032
       - 🇨🇳 xgrr.sdnlv0.cn:33144
@@ -63,6 +62,7 @@ proxy-groups:
       - 15.204.247.49:12000
       - 57.128.214.100:12000
       - 13.231.242.181:9201
+      - www.ignitelimit.com:443
       - 35.180.104.104:22222
       - 63.183.254.133:22222
       - 🇬🇧 gb-6.flowersyellow.ru:443
@@ -75,25 +75,24 @@ proxy-groups:
       - 109.234.39.219:443
       - 153.80.249.101:443
       - reserve.pilates.rodeo:2053
-      - reserve.pilates.rodeo:2053 2
       - 91.199.50.37:443
       - 🇷🇺 empty-dust.ru:443
       - austria.coverprotect.info:443
       - 85.209.153.60:52335
       - 62.84.100.201:59999
       - 🇫🇷 fr1.samovargate.com:443
-      - mangu1.zqjsqapi.com:443
       - 195.66.27.89:7443
+      - 45.15.171.80:8443
       - 83.97.78.219:443
+      - 185.231.204.21:8443
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - n8mrcg005964vnc.cybervena.com:50099
       - r3mrcg001286ek2.cybervena.com:50099
-      - n8mrcg005964vnc.cybervena.com:50099 2
+      - n8mrcg005964vnc.cybervena.com:50099
       - 🇨🇳 xgrr.sdnlv0.cn:15783
       - 🇨🇳 xgrr.sdnlv0.cn:31032
       - 🇨🇳 xgrr.sdnlv0.cn:33144
@@ -106,6 +105,7 @@ proxy-groups:
       - 15.204.247.49:12000
       - 57.128.214.100:12000
       - 13.231.242.181:9201
+      - www.ignitelimit.com:443
       - 35.180.104.104:22222
       - 63.183.254.133:22222
       - 🇬🇧 gb-6.flowersyellow.ru:443
@@ -118,25 +118,24 @@ proxy-groups:
       - 109.234.39.219:443
       - 153.80.249.101:443
       - reserve.pilates.rodeo:2053
-      - reserve.pilates.rodeo:2053 2
       - 91.199.50.37:443
       - 🇷🇺 empty-dust.ru:443
       - austria.coverprotect.info:443
       - 85.209.153.60:52335
       - 62.84.100.201:59999
       - 🇫🇷 fr1.samovargate.com:443
-      - mangu1.zqjsqapi.com:443
       - 195.66.27.89:7443
+      - 45.15.171.80:8443
       - 83.97.78.219:443
+      - 185.231.204.21:8443
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - n8mrcg005964vnc.cybervena.com:50099
       - r3mrcg001286ek2.cybervena.com:50099
-      - n8mrcg005964vnc.cybervena.com:50099 2
+      - n8mrcg005964vnc.cybervena.com:50099
       - 🇨🇳 xgrr.sdnlv0.cn:15783
       - 🇨🇳 xgrr.sdnlv0.cn:31032
       - 🇨🇳 xgrr.sdnlv0.cn:33144
@@ -149,6 +148,7 @@ proxy-groups:
       - 15.204.247.49:12000
       - 57.128.214.100:12000
       - 13.231.242.181:9201
+      - www.ignitelimit.com:443
       - 35.180.104.104:22222
       - 63.183.254.133:22222
       - 🇬🇧 gb-6.flowersyellow.ru:443
@@ -161,24 +161,23 @@ proxy-groups:
       - 109.234.39.219:443
       - 153.80.249.101:443
       - reserve.pilates.rodeo:2053
-      - reserve.pilates.rodeo:2053 2
       - 91.199.50.37:443
       - 🇷🇺 empty-dust.ru:443
       - austria.coverprotect.info:443
       - 85.209.153.60:52335
       - 62.84.100.201:59999
       - 🇫🇷 fr1.samovargate.com:443
-      - mangu1.zqjsqapi.com:443
       - 195.66.27.89:7443
+      - 45.15.171.80:8443
       - 83.97.78.219:443
+      - 185.231.204.21:8443
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - n8mrcg005964vnc.cybervena.com:50099
       - r3mrcg001286ek2.cybervena.com:50099
-      - n8mrcg005964vnc.cybervena.com:50099 2
+      - n8mrcg005964vnc.cybervena.com:50099
       - 🇨🇳 xgrr.sdnlv0.cn:15783
       - 🇨🇳 xgrr.sdnlv0.cn:31032
       - 🇨🇳 xgrr.sdnlv0.cn:33144
@@ -191,6 +190,7 @@ proxy-groups:
       - 15.204.247.49:12000
       - 57.128.214.100:12000
       - 13.231.242.181:9201
+      - www.ignitelimit.com:443
       - 35.180.104.104:22222
       - 63.183.254.133:22222
       - 🇬🇧 gb-6.flowersyellow.ru:443
@@ -203,24 +203,23 @@ proxy-groups:
       - 109.234.39.219:443
       - 153.80.249.101:443
       - reserve.pilates.rodeo:2053
-      - reserve.pilates.rodeo:2053 2
       - 91.199.50.37:443
       - 🇷🇺 empty-dust.ru:443
       - austria.coverprotect.info:443
       - 85.209.153.60:52335
       - 62.84.100.201:59999
       - 🇫🇷 fr1.samovargate.com:443
-      - mangu1.zqjsqapi.com:443
       - 195.66.27.89:7443
+      - 45.15.171.80:8443
       - 83.97.78.219:443
+      - 185.231.204.21:8443
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - n8mrcg005964vnc.cybervena.com:50099
       - r3mrcg001286ek2.cybervena.com:50099
-      - n8mrcg005964vnc.cybervena.com:50099 2
+      - n8mrcg005964vnc.cybervena.com:50099
       - 🇨🇳 xgrr.sdnlv0.cn:15783
       - 🇨🇳 xgrr.sdnlv0.cn:31032
       - 🇨🇳 xgrr.sdnlv0.cn:33144
@@ -233,6 +232,7 @@ proxy-groups:
       - 15.204.247.49:12000
       - 57.128.214.100:12000
       - 13.231.242.181:9201
+      - www.ignitelimit.com:443
       - 35.180.104.104:22222
       - 63.183.254.133:22222
       - 🇬🇧 gb-6.flowersyellow.ru:443
@@ -245,24 +245,23 @@ proxy-groups:
       - 109.234.39.219:443
       - 153.80.249.101:443
       - reserve.pilates.rodeo:2053
-      - reserve.pilates.rodeo:2053 2
       - 91.199.50.37:443
       - 🇷🇺 empty-dust.ru:443
       - austria.coverprotect.info:443
       - 85.209.153.60:52335
       - 62.84.100.201:59999
       - 🇫🇷 fr1.samovargate.com:443
-      - mangu1.zqjsqapi.com:443
       - 195.66.27.89:7443
+      - 45.15.171.80:8443
       - 83.97.78.219:443
+      - 185.231.204.21:8443
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - n8mrcg005964vnc.cybervena.com:50099
       - r3mrcg001286ek2.cybervena.com:50099
-      - n8mrcg005964vnc.cybervena.com:50099 2
+      - n8mrcg005964vnc.cybervena.com:50099
       - 🇨🇳 xgrr.sdnlv0.cn:15783
       - 🇨🇳 xgrr.sdnlv0.cn:31032
       - 🇨🇳 xgrr.sdnlv0.cn:33144
@@ -275,6 +274,7 @@ proxy-groups:
       - 15.204.247.49:12000
       - 57.128.214.100:12000
       - 13.231.242.181:9201
+      - www.ignitelimit.com:443
       - 35.180.104.104:22222
       - 63.183.254.133:22222
       - 🇬🇧 gb-6.flowersyellow.ru:443
@@ -287,16 +287,16 @@ proxy-groups:
       - 109.234.39.219:443
       - 153.80.249.101:443
       - reserve.pilates.rodeo:2053
-      - reserve.pilates.rodeo:2053 2
       - 91.199.50.37:443
       - 🇷🇺 empty-dust.ru:443
       - austria.coverprotect.info:443
       - 85.209.153.60:52335
       - 62.84.100.201:59999
       - 🇫🇷 fr1.samovargate.com:443
-      - mangu1.zqjsqapi.com:443
       - 195.66.27.89:7443
+      - 45.15.171.80:8443
       - 83.97.78.219:443
+      - 185.231.204.21:8443
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -324,9 +324,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - n8mrcg005964vnc.cybervena.com:50099
       - r3mrcg001286ek2.cybervena.com:50099
-      - n8mrcg005964vnc.cybervena.com:50099 2
+      - n8mrcg005964vnc.cybervena.com:50099
       - 🇨🇳 xgrr.sdnlv0.cn:15783
       - 🇨🇳 xgrr.sdnlv0.cn:31032
       - 🇨🇳 xgrr.sdnlv0.cn:33144
@@ -339,6 +338,7 @@ proxy-groups:
       - 15.204.247.49:12000
       - 57.128.214.100:12000
       - 13.231.242.181:9201
+      - www.ignitelimit.com:443
       - 35.180.104.104:22222
       - 63.183.254.133:22222
       - 🇬🇧 gb-6.flowersyellow.ru:443
@@ -351,16 +351,16 @@ proxy-groups:
       - 109.234.39.219:443
       - 153.80.249.101:443
       - reserve.pilates.rodeo:2053
-      - reserve.pilates.rodeo:2053 2
       - 91.199.50.37:443
       - 🇷🇺 empty-dust.ru:443
       - austria.coverprotect.info:443
       - 85.209.153.60:52335
       - 62.84.100.201:59999
       - 🇫🇷 fr1.samovargate.com:443
-      - mangu1.zqjsqapi.com:443
       - 195.66.27.89:7443
+      - 45.15.171.80:8443
       - 83.97.78.219:443
+      - 185.231.204.21:8443
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
