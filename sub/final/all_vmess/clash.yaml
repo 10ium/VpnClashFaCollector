@@ -466,12 +466,18 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: NetAccount, server: 188.114.98.0, port: 8443, type: vmess, uuid: 39382035-3420-4937-a031-303220393820, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /ws, headers: {Host: tr-1.stunnel.cc}}, udp: true, tfo: false}
+  - {name: "@filembad", server: 78.109.199.55, port: 11072, type: vmess, uuid: 9bf1b227-8b96-4705-929e-23a36703c9a9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 2", server: app.streamd2.ir, port: 443, type: vmess, uuid: 2c485c99-41c4-4c49-9180-61533321c255, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇸🇬 [openproxylist.com] vmess-SG", server: xg1c4.waimaofuwujd.cc, port: 443, type: vmess, uuid: 1a87fc81-6846-4246-add3-00a38baa8c0f, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /api/v1/graphql, headers: {Host: xg1c4.waimaofuwujd.cc}}, udp: true, tfo: false}
   - {name: "🇺🇸 [openproxylist.com] vmess-US", server: 45.82.161.225, port: 22324, type: vmess, uuid: 04621bae-ab36-11ec-b909-0242ac120002, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 3", server: 78.109.199.55, port: 11072, type: vmess, uuid: 9bf1b227-8b96-4705-929e-23a36703c9a9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 4", server: 104.17.101.35, port: 443, type: vmess, uuid: 824c58b1-65ba-4680-a609-663a000dbb92, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /}, udp: true, tfo: false}
   - {name: "@configraygan D1", server: 104.18.12.149, port: 80, type: vmess, uuid: 75e03526-8387-4d10-a129-b512563b31b6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: configraygan, server: 104.18.12.149, port: 80, type: vmess, uuid: 75e03526-8387-4d10-a129-b512563b31b6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩, server: 104.18.12.149, port: 80, type: vmess, uuid: 75e03526-8387-4d10-a129-b512563b31b6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "🇭🇰 [openproxylist.com] vmess-HK", server: efan.dnsefan04881.com, port: 7754, type: vmess, uuid: 009e558d-3cf4-49d8-b5e4-82c9e14fe1a4, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad", server: star.diiginet.ir, port: 24396, type: vmess, uuid: 38403a32-48b8-4575-a3aa-5f7c884d72b0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 5", server: 104.18.190.52, port: 443, type: vmess, uuid: 824c58b1-65ba-4680-a609-663a000dbb92, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /}, udp: true, tfo: false}
+  - {name: "@filembad 6", server: app.streamd2.ir, port: 443, type: vmess, uuid: 2c485c99-41c4-4c49-9180-61533321c255, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 7", server: labayk.ya.khamenei.soft98ver2.azumiral.top, port: 2086, type: vmess, uuid: b11090b3-d09b-4e40-bdbd-b576f3051e3d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -489,12 +495,18 @@ proxy-groups:
     type: select
     proxies:
       - NetAccount
+      - "@filembad"
+      - "@filembad 2"
+      - 🇸🇬 [openproxylist.com] vmess-SG
       - 🇺🇸 [openproxylist.com] vmess-US
+      - "@filembad 3"
+      - "@filembad 4"
       - "@configraygan D1"
       - configraygan
       - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩
-      - 🇭🇰 [openproxylist.com] vmess-HK
-      - "@filembad"
+      - "@filembad 5"
+      - "@filembad 6"
+      - "@filembad 7"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -502,12 +514,18 @@ proxy-groups:
     tolerance: 50
     proxies:
       - NetAccount
+      - "@filembad"
+      - "@filembad 2"
+      - 🇸🇬 [openproxylist.com] vmess-SG
       - 🇺🇸 [openproxylist.com] vmess-US
+      - "@filembad 3"
+      - "@filembad 4"
       - "@configraygan D1"
       - configraygan
       - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩
-      - 🇭🇰 [openproxylist.com] vmess-HK
-      - "@filembad"
+      - "@filembad 5"
+      - "@filembad 6"
+      - "@filembad 7"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -515,12 +533,18 @@ proxy-groups:
     tolerance: 50
     proxies:
       - NetAccount
+      - "@filembad"
+      - "@filembad 2"
+      - 🇸🇬 [openproxylist.com] vmess-SG
       - 🇺🇸 [openproxylist.com] vmess-US
+      - "@filembad 3"
+      - "@filembad 4"
       - "@configraygan D1"
       - configraygan
       - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩
-      - 🇭🇰 [openproxylist.com] vmess-HK
-      - "@filembad"
+      - "@filembad 5"
+      - "@filembad 6"
+      - "@filembad 7"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -537,12 +561,18 @@ proxy-groups:
     interval: 600
     proxies:
       - NetAccount
+      - "@filembad"
+      - "@filembad 2"
+      - 🇸🇬 [openproxylist.com] vmess-SG
       - 🇺🇸 [openproxylist.com] vmess-US
+      - "@filembad 3"
+      - "@filembad 4"
       - "@configraygan D1"
       - configraygan
       - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩
-      - 🇭🇰 [openproxylist.com] vmess-HK
-      - "@filembad"
+      - "@filembad 5"
+      - "@filembad 6"
+      - "@filembad 7"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -550,12 +580,18 @@ proxy-groups:
     interval: 600
     proxies:
       - NetAccount
+      - "@filembad"
+      - "@filembad 2"
+      - 🇸🇬 [openproxylist.com] vmess-SG
       - 🇺🇸 [openproxylist.com] vmess-US
+      - "@filembad 3"
+      - "@filembad 4"
       - "@configraygan D1"
       - configraygan
       - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩
-      - 🇭🇰 [openproxylist.com] vmess-HK
-      - "@filembad"
+      - "@filembad 5"
+      - "@filembad 6"
+      - "@filembad 7"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -563,12 +599,18 @@ proxy-groups:
     interval: 600
     proxies:
       - NetAccount
+      - "@filembad"
+      - "@filembad 2"
+      - 🇸🇬 [openproxylist.com] vmess-SG
       - 🇺🇸 [openproxylist.com] vmess-US
+      - "@filembad 3"
+      - "@filembad 4"
       - "@configraygan D1"
       - configraygan
       - برای اتصال دائمی جوین شو🚏 TelegramID ⌲Express_freevpn 🪩
-      - 🇭🇰 [openproxylist.com] vmess-HK
-      - "@filembad"
+      - "@filembad 5"
+      - "@filembad 6"
+      - "@filembad 7"
   - name: دانلود منیجر 📥
     type: select
     proxies:
