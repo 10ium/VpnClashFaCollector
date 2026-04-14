@@ -465,9 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@filembad", server: 94.72.127.58, port: 443, type: ss, cipher: aes-256-gcm, password: jJHq807bQ7TM0yOh, udp: true, tfo: false}
-  - {name: WS-TLS | @Express_alaki | src @anotherme_night, server: afrcloud22.mmv.kr, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8fc83032-cb7e-4626-8058-f7051a68eb7b, servername: afrcloud22.mmv.kr, network: ws, ws-opts: {path: /44.217.235.114=2053, headers: {Host: afrcloud22.mmv.kr}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ☢️35@unvisible_drops, server: 38.180.144.156, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: ae0a43bc-6189-456e-9b8a-a93f39af336e, servername: www.microsoft.com, host: www.microsoft.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 76Cfr5qNl9BCrSb6jdkrgj0HbwfyCwj4oF6JJVhKD0s, short-id: 42d7234d875308a2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@FG_Link", server: 104.17.72.206, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 06ef598c-1555-4887-b3f9-08214a2f6792, servername: 2026.hhhhh.eu.org, network: ws, ws-opts: {path: /222.167.202.31:7443, headers: {Host: 2026.hhhhh.eu.org}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,27 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@filembad"
-      - WS-TLS | @Express_alaki | src @anotherme_night
-      - ☢️35@unvisible_drops
+      - "@FG_Link"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@filembad"
-      - WS-TLS | @Express_alaki | src @anotherme_night
-      - ☢️35@unvisible_drops
+      - "@FG_Link"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@filembad"
-      - WS-TLS | @Express_alaki | src @anotherme_night
-      - ☢️35@unvisible_drops
+      - "@FG_Link"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -520,27 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@filembad"
-      - WS-TLS | @Express_alaki | src @anotherme_night
-      - ☢️35@unvisible_drops
+      - "@FG_Link"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@filembad"
-      - WS-TLS | @Express_alaki | src @anotherme_night
-      - ☢️35@unvisible_drops
+      - "@FG_Link"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@filembad"
-      - WS-TLS | @Express_alaki | src @anotherme_night
-      - ☢️35@unvisible_drops
+      - "@FG_Link"
   - name: دانلود منیجر 📥
     type: select
     proxies:

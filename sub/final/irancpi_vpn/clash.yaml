@@ -465,7 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 211, server: 18.184.111.178, port: 21115, type: vless, tls: true, packet-encoding: xudp, uuid: cba2519c-fe34-4a00-97f1-a8d1499b1583, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: NetAccount`, server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.multiplydose.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.multiplydose.com}}, udp: true, tfo: false}
+  - {name: ✅➣@Zel2ovpn`, server: 172.64.152.23, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 388a6c57-87e7-420b-afe2-b3eb670fd7da, network: ws, ws-opts: {path: / @ProxyVPN11, headers: {Host: vip.yaml7.ggff.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: moz-1️⃣`, server: snapp.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 4862104c-0b6f-4f88-b410-cf35e30f722f, network: ws, ws-opts: {path: /, headers: {Host: op.electrodragon.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +484,27 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 211
+      - NetAccount`
+      - ✅➣@Zel2ovpn`
+      - moz-1️⃣`
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 211
+      - NetAccount`
+      - ✅➣@Zel2ovpn`
+      - moz-1️⃣`
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 211
+      - NetAccount`
+      - ✅➣@Zel2ovpn`
+      - moz-1️⃣`
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +520,27 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 211
+      - NetAccount`
+      - ✅➣@Zel2ovpn`
+      - moz-1️⃣`
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 211
+      - NetAccount`
+      - ✅➣@Zel2ovpn`
+      - moz-1️⃣`
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 211
+      - NetAccount`
+      - ✅➣@Zel2ovpn`
+      - moz-1️⃣`
   - name: دانلود منیجر 📥
     type: select
     proxies:

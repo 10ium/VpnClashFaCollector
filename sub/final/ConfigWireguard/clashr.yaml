@@ -5,53 +5,158 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: tinkered-pennies-puppies.freesocks.work:443, server: tinkered-pennies-puppies.freesocks.work, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: hbGrpfvNrJsUmKmPbR3iY2, udp: true, tfo: false}
-  - {name: 82.38.31.62:8080, server: 82.38.31.62, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
+  - {name: 172.64.149.54:2096, server: 172.64.149.54, port: 2096, type: trojan, password: 8r%3C%5B9%27l6hAO%238ZQi, sni: Koma-YT.PAGeS.Dev, skip-cert-verify: false, network: ws, ws-opts: {path: /tr, headers: {Host: Koma-YT.PAGeS.Dev}}, udp: true, tfo: false}
+  - {name: 104.17.72.206:443, server: 104.17.72.206, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 06ef598c-1555-4887-b3f9-08214a2f6792, servername: 2026.hhhhh.eu.org, network: ws, ws-opts: {path: /222.167.202.31:7443, headers: {Host: 2026.hhhhh.eu.org}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: free02, server: 104.17.72.206, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 06ef598c-1555-4887-b3f9-08214a2f6792, servername: 2026.hhhhh.eu.org, network: ws, ws-opts: {path: /222.167.202.31:7443, headers: {Host: 2026.hhhhh.eu.org}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 104.17.72.206:443 2, server: 104.17.72.206, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 06ef598c-1555-4887-b3f9-08214a2f6792, servername: 2026.hhhhh.eu.org, network: ws, ws-opts: {path: /222.167.202.31:7443, headers: {Host: 2026.hhhhh.eu.org}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 3, server: 104.17.72.206, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 06ef598c-1555-4887-b3f9-08214a2f6792, servername: 2026.hhhhh.eu.org, network: ws, ws-opts: {path: /222.167.202.31:7443, headers: {Host: 2026.hhhhh.eu.org}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: free01, server: 104.17.72.206, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 06ef598c-1555-4887-b3f9-08214a2f6792, servername: 2026.hhhhh.eu.org, network: ws, ws-opts: {path: /222.167.202.31:7443, headers: {Host: 2026.hhhhh.eu.org}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 104.17.72.206:443 3, server: 104.17.72.206, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 06ef598c-1555-4887-b3f9-08214a2f6792, servername: 2026.hhhhh.eu.org, network: ws, ws-opts: {path: /222.167.202.31:7443, headers: {Host: 2026.hhhhh.eu.org}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ope.raheaiande.ir:18934, server: ope.raheaiande.ir, port: 18934, type: vless, tls: true, packet-encoding: xudp, uuid: 34ffcfa8-3d14-413c-946a-aeb8356508bc, host: ope.raheaiande.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Conf 0x00, server: 104.18.16.56, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 388a6c57-87e7-420b-afe2-b3eb670fd7da, network: ws, ws-opts: {path: / @ProxyVPN11, headers: {Host: vip.yaml7.ggff.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 104.18.13.149:2053, server: 104.18.13.149, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.dynv6.net, network: ws, ws-opts: {path: /, headers: {Host: sni.111000.dynv6.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 104.18.13.149:443, server: 104.18.13.149, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.v6.navy, network: ws, ws-opts: {path: /, headers: {Host: sni.111000.v6.navy}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 104.18.13.149:8443, server: 104.18.13.149, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.dynv6.net, network: ws, ws-opts: {path: "/?Telegram @v2rayngzendegimamad", headers: {Host: sni.111000.dynv6.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 104.18.13.149:8443 2, server: 104.18.13.149, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.dynv6.net`, network: ws, ws-opts: {path: "/?Telegram🇨🇳 @WangCai2", headers: {Host: sni.111000.dynv6.net`}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 104.18.13.149:8443 3, server: 104.18.13.149, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.dynv6.net, network: ws, ws-opts: {path: "/?Telegram🇨🇳 @WangCai2", headers: {Host: sni.111000.dynv6.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 104.18.13.149:8443 4, server: 104.18.13.149, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.dynv6.net, network: ws, ws-opts: {path: "/?Telegram🇨🇳+@WangCai2", headers: {Host: sni.111000.dynv6.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 104.18.12.149:443, server: 104.18.12.149, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a01daac7-1e65-4645-854d-b47d226f6b08, servername: y6-3cj.PAgES.DEV, network: ws, ws-opts: {path: /Tel-@V2rayAlpha, headers: {Host: y6-3cj.PAgES.DEV}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 188.114.98.0:443, server: 188.114.98.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: cff6f361-828a-43c8-a8b5-8d10b32e57fb, servername: zh.hollowspot.ir, alpn: [http%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: zh.hollowspot.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - tinkered-pennies-puppies.freesocks.work:443
-      - 82.38.31.62:8080
+      - 172.64.149.54:2096
+      - 104.17.72.206:443
+      - free02
+      - 104.17.72.206:443 2
+      - 3
+      - free01
+      - 104.17.72.206:443 3
+      - ope.raheaiande.ir:18934
+      - Conf 0x00
+      - 104.18.13.149:2053
+      - 104.18.13.149:443
+      - 104.18.13.149:8443
+      - 104.18.13.149:8443 2
+      - 104.18.13.149:8443 3
+      - 104.18.13.149:8443 4
+      - 104.18.12.149:443
+      - 188.114.98.0:443
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - tinkered-pennies-puppies.freesocks.work:443
-      - 82.38.31.62:8080
+      - 172.64.149.54:2096
+      - 104.17.72.206:443
+      - free02
+      - 104.17.72.206:443 2
+      - 3
+      - free01
+      - 104.17.72.206:443 3
+      - ope.raheaiande.ir:18934
+      - Conf 0x00
+      - 104.18.13.149:2053
+      - 104.18.13.149:443
+      - 104.18.13.149:8443
+      - 104.18.13.149:8443 2
+      - 104.18.13.149:8443 3
+      - 104.18.13.149:8443 4
+      - 104.18.12.149:443
+      - 188.114.98.0:443
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - tinkered-pennies-puppies.freesocks.work:443
-      - 82.38.31.62:8080
+      - 172.64.149.54:2096
+      - 104.17.72.206:443
+      - free02
+      - 104.17.72.206:443 2
+      - 3
+      - free01
+      - 104.17.72.206:443 3
+      - ope.raheaiande.ir:18934
+      - Conf 0x00
+      - 104.18.13.149:2053
+      - 104.18.13.149:443
+      - 104.18.13.149:8443
+      - 104.18.13.149:8443 2
+      - 104.18.13.149:8443 3
+      - 104.18.13.149:8443 4
+      - 104.18.12.149:443
+      - 188.114.98.0:443
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - tinkered-pennies-puppies.freesocks.work:443
-      - 82.38.31.62:8080
+      - 172.64.149.54:2096
+      - 104.17.72.206:443
+      - free02
+      - 104.17.72.206:443 2
+      - 3
+      - free01
+      - 104.17.72.206:443 3
+      - ope.raheaiande.ir:18934
+      - Conf 0x00
+      - 104.18.13.149:2053
+      - 104.18.13.149:443
+      - 104.18.13.149:8443
+      - 104.18.13.149:8443 2
+      - 104.18.13.149:8443 3
+      - 104.18.13.149:8443 4
+      - 104.18.12.149:443
+      - 188.114.98.0:443
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - tinkered-pennies-puppies.freesocks.work:443
-      - 82.38.31.62:8080
+      - 172.64.149.54:2096
+      - 104.17.72.206:443
+      - free02
+      - 104.17.72.206:443 2
+      - 3
+      - free01
+      - 104.17.72.206:443 3
+      - ope.raheaiande.ir:18934
+      - Conf 0x00
+      - 104.18.13.149:2053
+      - 104.18.13.149:443
+      - 104.18.13.149:8443
+      - 104.18.13.149:8443 2
+      - 104.18.13.149:8443 3
+      - 104.18.13.149:8443 4
+      - 104.18.12.149:443
+      - 188.114.98.0:443
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - tinkered-pennies-puppies.freesocks.work:443
-      - 82.38.31.62:8080
+      - 172.64.149.54:2096
+      - 104.17.72.206:443
+      - free02
+      - 104.17.72.206:443 2
+      - 3
+      - free01
+      - 104.17.72.206:443 3
+      - ope.raheaiande.ir:18934
+      - Conf 0x00
+      - 104.18.13.149:2053
+      - 104.18.13.149:443
+      - 104.18.13.149:8443
+      - 104.18.13.149:8443 2
+      - 104.18.13.149:8443 3
+      - 104.18.13.149:8443 4
+      - 104.18.12.149:443
+      - 188.114.98.0:443
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -79,8 +184,23 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - tinkered-pennies-puppies.freesocks.work:443
-      - 82.38.31.62:8080
+      - 172.64.149.54:2096
+      - 104.17.72.206:443
+      - free02
+      - 104.17.72.206:443 2
+      - 3
+      - free01
+      - 104.17.72.206:443 3
+      - ope.raheaiande.ir:18934
+      - Conf 0x00
+      - 104.18.13.149:2053
+      - 104.18.13.149:443
+      - 104.18.13.149:8443
+      - 104.18.13.149:8443 2
+      - 104.18.13.149:8443 3
+      - 104.18.13.149:8443 4
+      - 104.18.12.149:443
+      - 188.114.98.0:443
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

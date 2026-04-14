@@ -1,5 +1,244 @@
 # آرشیو کانال: @KIA_NET
-بروزرسانی: 2026-04-14 01:22:48 UTC
+بروزرسانی: 2026-04-14 10:57:53 UTC
+
+### 🕒 2026-04-14 10:48:03 UTC
+فایروال آپدیت شد و مجدد همچی رو بستن
+***👍***
+
+---
+
+### 🕒 2026-04-14 10:22:54 UTC
+{   "api" : {     "listen" : "127.0.0.1:10085",     "services" : [       "HandlerService",       "StatsService"     ],     "tag" : "api"   },   "dns" : {     "queryStrategy" : "UseIPv4"   },   "inbounds" : [     {       "listen" : "127.0.0.1",       "port"…
+
+---
+
+### 🕒 2026-04-14 10:21:46 UTC
+{
+  "api" : {
+    "listen" : "127.0.0.1:10085",
+    "services" : [
+      "HandlerService",
+      "StatsService"
+    ],
+    "tag" : "api"
+  },
+  "dns" : {
+    "queryStrategy" : "UseIPv4"
+  },
+  "inbounds" : [
+    {
+      "listen" : "127.0.0.1",
+      "port" : 10808,
+      "protocol" : "socks",
+      "settings" : {
+        "auth" : "noauth",
+        "udp" : true
+      },
+      "sniffing" : {
+        "destOverride" : [
+          "tls",
+          "http",
+          "quic"
+        ],
+        "enabled" : true,
+        "excludedDomains" : [
+        ],
+        "metadataOnly" : false,
+        "routeOnly" : true
+      },
+      "tag" : "socks-in"
+    },
+    {
+      "listen" : "127.0.0.1",
+      "port" : 10809,
+      "protocol" : "http",
+      "settings" : {
+        "auth" : "noauth",
+        "udp" : true
+      },
+      "sniffing" : {
+        "destOverride" : [
+          "tls",
+          "http",
+          "quic"
+        ],
+        "enabled" : true,
+        "excludedDomains" : [
+        ],
+        "metadataOnly" : false,
+        "routeOnly" : true
+      },
+      "tag" : "http"
+    },
+    {
+      "listen" : "127.0.0.1",
+      "port" : 10820,
+      "protocol" : "socks",
+      "settings" : {
+        "auth" : "noauth",
+        "udp" : true
+      },
+      "sniffing" : {
+        "destOverride" : [
+          "tls",
+          "http",
+          "quic"
+        ],
+        "enabled" : true,
+        "excludedDomains" : [
+        ],
+        "metadataOnly" : false,
+        "routeOnly" : true
+      },
+      "tag" : "socks-direct"
+    }
+  ],
+  "log" : {
+    "access" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/02D37A64-B30F-4512-BC1B-B933D2B2CACB\/Library\/Application Support\/Xray\/logs\/access.log",
+    "dnsLog" : true,
+    "error" : "\/private\/var\/mobile\/Containers\/Shared\/AppGroup\/02D37A64-B30F-4512-BC1B-B933D2B2CACB\/Library\/Application Support\/Xray\/logs\/connectionLogs\/2026-04-14_10-01-56.log",
+    "loglevel" : "Warning"
+  },
+  "outbounds" : [
+    {
+      "protocol" : "vless",
+      "settings" : {
+        "testpre" : null,
+        "testseed" : null,
+        "vnext" : [
+          {
+            "address" : "172.64.152.100",
+            "port" : 443,
+            "users" : [
+              {
+                "encryption" : "none",
+                "flow" : "",
+                "id" : "d37a75db-76b6-4db8-b213-0d5b044d138d",
+                "level" : 8,
+                "security" : "auto"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings" : {
+        "network" : "ws",
+        "security" : "tls",
+        "tlsSettings" : {
+          "allowInsecure" : false,
+          "alpn" : [
+          ],
+          "disableSystemRoot" : false,
+          "echForceQuery" : "none",
+          "enableSessionResumption" : false,
+          "fingerprint" : "chrome",
+          "mldsa65Verify" : "",
+          "pinnedPeerCertSha256" : "",
+          "serverName" : "hio-awx.pages.dev"
+        },
+        "wsSettings" : {
+          "headers" : {
+            "Host" : "hio-awx.pages.dev"
+          },
+          "path" : "\/"
+        }
+      },
+      "tag" : "proxy"
+    },
+    {
+      "protocol" : "freedom",
+      "tag" : "direct"
+    },
+    {
+      "protocol" : "blackhole",
+      "tag" : "block"
+    }
+  ],
+  "policy" : {
+    "levels" : {
+      "8" : {
+        "bufferSize" : 3,
+        "connIdle" : 300,
+        "downlinkOnly" : 4,
+        "handshake" : 3,
+        "statsUserDownlink" : false,
+        "statsUserOnline" : false,
+        "statsUserUplink" : false,
+        "uplinkOnly" : 2
+      }
+    },
+    "system" : {
+      "statsInboundDownlink" : true,
+      "statsInboundUplink" : true,
+      "statsOutboundDownlink" : true,
+      "statsOutboundUplink" : true
+    }
+  },
+  "remarks" : "@kia_net",
+  "routing" : {
+    "domainStrategy" : "AsIs",
+    "rules" : [
+      {
+        "inboundTag" : [
+          "socks-direct"
+        ],
+        "outboundTag" : "direct"
+      }
+    ]
+  },
+  "stats" : {
+  }
+}
+
+---
+
+### 🕒 2026-04-14 10:18:45 UTC
+kiaNet تست شده ایرانسل.npvt
+
+---
+
+### 🕒 2026-04-14 10:17:20 UTC
+اگه ایفون هستید یا اندروید
+اپلیکشن ویتوری V2ray و اپلیشکین نپ تانل   Npv Tunnel   حتما حتما نصب‌کنید رو گشیتون این دوتا اپ همیشه اندروید و ایفون داشته باشید
+
+---
+
+### 🕒 2026-04-14 10:13:59 UTC
+{"remarks":"@Kia_Net 
+***🔥***
+***🔥***
+***🔥***
+","log":{"loglevel":"warning"},"inbounds":[{"tag":"socks","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true,"userLevel":8},"sniffing":{"enabled":true,"destOverride":["http","tls"],"routeOnly":false}}],"outbounds":[{"tag":"proxy","protocol":"vless","settings":{"vnext":[{"address":"104.16.80.73","port":443,"users":[{"id":"06ef598c-1555-4887-b3f9-08214a2f6792","level":8,"encryption":"none"}]}]},"streamSettings":{"network":"ws","security":"tls","wsSettings":{"path":"/222.167.202.31:7443","headers":{"Host":"2026.hhhhh.eu.org"}},"tlsSettings":{"allowInsecure":true,"serverName":"2026.hhhhh.eu.org","show":false}},"mux":{"enabled":false,"concurrency":-1,"xudpConcurrency":8,"xudpProxyUDP443":""}},{"tag":"direct","protocol":"freedom","settings":{"domainStrategy":"UseIP"},"mux":{"enabled":false,"concurrency":8,"xudpConcurrency":8,"xudpProxyUDP443":""}},{"tag":"block","protocol":"blackhole","settings":{"response":{"type":"http"}},"mux":{"enabled":false,"concurrency":8,"xudpConcurrency":8,"xudpProxyUDP443":""}}],"dns":{"servers":["1.1.1.1"],"hosts":{"domain:googleapis.cn":"googleapis.com","dns.alidns.com":["223.5.5.5","223.6.6.6","2400:3200::1","2400:3200:baba::1"],"one.one.one.one":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"dot.pub":["1.12.12.12","120.53.53.53"],"dns.google":["8.8.8.8","8.8.4.4","2001:4860:4860::8888","2001:4860:4860::8844"],"dns.quad9.net":["9.9.9.9","149.112.112.112","2620:fe::fe","2620:fe::9"],"common.dot.dns.yandex.net":["77.88.8.8","77.88.8.1","2a02:6b8::feed:0ff","2a02:6b8:0:1::feed:0ff"]}},"routing":{"domainStrategy":"IPIfNonMatch","rules":[{"type":"field","ip":["1.1.1.1"],"outboundTag":"proxy","port":"53"},{"type":"field","ip":["223.5.5.5"],"outboundTag":"direct","port":"53"}]}}
+
+---
+
+### 🕒 2026-04-14 10:02:18 UTC
+kiaNet تست شده ایرانسل.npvt
+
+---
+
+### 🕒 2026-04-14 10:02:06 UTC
+`@KIA_NET`
+   ‌‌پسورد
+
+---
+
+### 🕒 2026-04-14 09:41:17 UTC
+vless://cb213db5-803d-49dd-a7e2-46d938af0751@104.18.4.130:2082?path=%2F%20%40ProxyVPN11&security=none&encryption=none&host=amiroo-l43dac88-v2.amiroo-d8b.workers.dev&type=ws#%D9%85
+
+---
+
+### 🕒 2026-04-14 08:52:07 UTC
+***🔵***
+گروه هکری خرگوش زرد مدعی شده :  امروز صبح موفق شده تعداد بسیار زیادی از تونل های اتصالی ایران به اینترنت جهانی رو هک کنه و فاییروال حکومت فریز شده، در چند دقیقه گذشته شاهد آنلاین شدن تعداد زیادی از کاربران هستیم، البته معلوم نیست این وضعیت ادامه دار باشه…
+
+---
+
+### 🕒 2026-04-14 08:51:02 UTC
+***🔵***
+گروه هکری خرگوش زرد مدعی شده :  امروز صبح موفق شده تعداد بسیار زیادی از تونل های اتصالی ایران به اینترنت جهانی رو هک کنه و فاییروال حکومت فریز شده، در چند دقیقه گذشته شاهد آنلاین شدن تعداد زیادی از کاربران هستیم، البته معلوم نیست این وضعیت ادامه دار باشه یا نه
+
+---
 
 ### 🕒 2026-04-13 22:22:05 UTC
 [***♻️*** کیانت کانفــــیگ: 𝐊𝐢𝐚_𝐍𝐞𝐭 ***♻️***](https://t.me/Kia_Net)
@@ -33,47 +272,6 @@
 ***🚀***
  پلن‌های حجیم اقتصادی:…
 »
-
----
-
-### 🕒 2026-04-13 20:46:17 UTC
-***✅***
- فایروال روی تمام مناطق اعمال شده فیلترینگ سختتر شده .
-
----
-
-### 🕒 2026-04-13 14:20:40 UTC
-**ترامپ رسما آغاز محاصره دریایی ایران را اعلام کرد**
-
----
-
-### 🕒 2026-04-13 12:46:09 UTC
-`socks://Og@37.32.14.196:1083#6%20`
-`socks://Og@37.32.14.196:1083#4`
-ترکیب سایفون
-
----
-
-### 🕒 2026-04-13 12:43:43 UTC
-***💬***
- موتورهایِ جستجوگرِ سازگار با اینترنتِ ملی 
-***💬***
-***⚪️***
- 
-[Search.Bertina.ir](http://Search.Bertina.ir/)
-***⚪️***
- 
-[Kavosh.zone](http://Kavosh.zone/)
-+ چه تفاوتی با ذره‌بین و امثالِ اون داره ؟ ذره‌بین فقط متکی به نتایجِ جست‌ و جویِ داخلی هست و به عبارتی فقط سایت هایی که خودش بخواد رو براتون نمایش میده ولی برتینا همون نتایجِ جست و جویِ گوگل رو براتون به نمایش میذاره البته فقط سایت هایی که با اینترنتِ ملی باز میشن رو می‌تونید باز کنید .
-***🔴***
- پیشنهاد میشه که کلا اپلیکیشن هایِ موتور هایِ جستجوگرِ ایرانی رو نصب نکنید و فقط از وبسایت استفاده کنید .
-
----
-
-### 🕒 2026-04-13 07:19:57 UTC
-[tg://proxy?server=65.109.61.31&port=8443&secret=dd104462821249bd7ac519130220c25d09](tg://proxy?server=65.109.61.31&port=8443&secret=dd104462821249bd7ac519130220c25d09)
-[tg://proxy?server=178.104.72.162&port=443&secret=dd104462821249bd7ac519130220c25d09](tg://proxy?server=178.104.72.162&port=443&secret=dd104462821249bd7ac519130220c25d09)
-[tg://proxy?server=vavan.online&port=443&secret=dd104462821249bd7ac519130220c25d09](tg://proxy?server=vavan.online&port=443&secret=dd104462821249bd7ac519130220c25d09)
 
 ---
 

@@ -466,7 +466,10 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: 🇨🇭 Switzerland (@v2FreeHub) SS`, server: 89.125.95.110, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: VEFFUGZkNtbTGAGde4vUQjqnGST-bgTP, udp: true, tfo: false}
+  - {name: Belarus (@v2FreeHub) SS, server: 95.128.71.77, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: VEFFUGZkNtbTGAGde4vUQjqnGST-bgTP, udp: true, tfo: false}
+  - {name: "@v2FreeHub | Psiphon & v2Ray`", server: 104.17.72.206, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 06ef598c-1555-4887-b3f9-08214a2f6792, servername: 2026.hhhhh.eu.org, network: ws, ws-opts: {path: /222.167.202.31:7443, headers: {Host: 2026.hhhhh.eu.org}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 🇨🇭 Switzerland (@v2FreeHub) Vless`, server: 89.125.95.110, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6946cf76-2c1e-4fbc-a28a-e2beeb7c29cb, servername: www.yandex.com, host: www.yandex.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: nPcUKydxoRI66O3tT9O4QCZpLjOBvkGsiXG7pDX1BBw, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Belarus (@v2FreeHub) Vless, server: 95.128.71.77, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6946cf76-2c1e-4fbc-a28a-e2beeb7c29cb, servername: www.yandex.com, host: www.yandex.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: nPcUKydxoRI66O3tT9O4QCZpLjOBvkGsiXG7pDX1BBw, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,7 +487,10 @@ proxy-groups:
     type: select
     proxies:
       - 🇨🇭 Switzerland (@v2FreeHub) SS`
+      - Belarus (@v2FreeHub) SS
+      - "@v2FreeHub | Psiphon & v2Ray`"
       - 🇨🇭 Switzerland (@v2FreeHub) Vless`
+      - Belarus (@v2FreeHub) Vless
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -492,7 +498,10 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 🇨🇭 Switzerland (@v2FreeHub) SS`
+      - Belarus (@v2FreeHub) SS
+      - "@v2FreeHub | Psiphon & v2Ray`"
       - 🇨🇭 Switzerland (@v2FreeHub) Vless`
+      - Belarus (@v2FreeHub) Vless
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -500,7 +509,10 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 🇨🇭 Switzerland (@v2FreeHub) SS`
+      - Belarus (@v2FreeHub) SS
+      - "@v2FreeHub | Psiphon & v2Ray`"
       - 🇨🇭 Switzerland (@v2FreeHub) Vless`
+      - Belarus (@v2FreeHub) Vless
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -517,7 +529,10 @@ proxy-groups:
     interval: 600
     proxies:
       - 🇨🇭 Switzerland (@v2FreeHub) SS`
+      - Belarus (@v2FreeHub) SS
+      - "@v2FreeHub | Psiphon & v2Ray`"
       - 🇨🇭 Switzerland (@v2FreeHub) Vless`
+      - Belarus (@v2FreeHub) Vless
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -525,7 +540,10 @@ proxy-groups:
     interval: 600
     proxies:
       - 🇨🇭 Switzerland (@v2FreeHub) SS`
+      - Belarus (@v2FreeHub) SS
+      - "@v2FreeHub | Psiphon & v2Ray`"
       - 🇨🇭 Switzerland (@v2FreeHub) Vless`
+      - Belarus (@v2FreeHub) Vless
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -533,7 +551,10 @@ proxy-groups:
     interval: 600
     proxies:
       - 🇨🇭 Switzerland (@v2FreeHub) SS`
+      - Belarus (@v2FreeHub) SS
+      - "@v2FreeHub | Psiphon & v2Ray`"
       - 🇨🇭 Switzerland (@v2FreeHub) Vless`
+      - Belarus (@v2FreeHub) Vless
   - name: دانلود منیجر 📥
     type: select
     proxies:

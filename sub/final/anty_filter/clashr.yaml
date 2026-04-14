@@ -5,88 +5,60 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@vpnbaz 🌵", server: 51.250.0.147, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 64aafe63-ef36-4da5-8bf9-838d767bfe74, servername: ads.x5.ru, host: ads.x5.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: FkmYFobwxLMLEktYXywmjthuEYCZggITsxwPNasTKUg, short-id: 95ec618532fa065e}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz 🍋‍🟩", server: 144.31.63.7, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 851aa636-6d4b-40e1-b484-f14ad697d2a1, servername: deout.funvideorus.net, host: deout.funvideorus.net, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz 🍓", server: vb13.homianco.ir, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: d5f2b8ad-5ee4-41fe-95e9-7adc1acb0549, servername: play.google.com, host: play.google.com, path: /, reality-opts: {public-key: K0iITauuYEqIayR3IB5Ny8MVKyORDJ65rUSHc3tLe1E, short-id: 42c0b628ba6a42a9}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz 🎨", server: 1.cdnconn.com, port: 23335, type: vless, tls: true, packet-encoding: xudp, uuid: e384913f-8863-47b4-8858-a84b68abb4a6, servername: icloud.com, host: icloud.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 7Gi8eiUU9TIVbGuvSU16gl5-Aqt7tcCSB9x6CSxyvik, short-id: 67b1e94e4dd1ef90}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz 🎭", server: 2.cdnconn.com, port: 23335, type: vless, tls: true, packet-encoding: xudp, uuid: e384913f-8863-47b4-8858-a84b68abb4a6, servername: icloud.com, host: icloud.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 7Gi8eiUU9TIVbGuvSU16gl5-Aqt7tcCSB9x6CSxyvik, short-id: 67b1e94e4dd1ef90}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz 🎳", server: 4.cdnconn.com, port: 23335, type: vless, tls: true, packet-encoding: xudp, uuid: e384913f-8863-47b4-8858-a84b68abb4a6, servername: icloud.com, host: icloud.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 7Gi8eiUU9TIVbGuvSU16gl5-Aqt7tcCSB9x6CSxyvik, short-id: 67b1e94e4dd1ef90}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz 🥎", server: 57.129.59.201, port: 443, type: vmess, uuid: 03fcc618-b93d-6796-6aed-8a38c975d581, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: kampong.org, network: ws, ws-opts: {path: linkvws, headers: {Host: kampong.org}}, udp: true, tfo: false}
+  - {name: "Telegram: @vpnbaz", server: 172.64.149.54, port: 2096, type: trojan, password: 8r%3C%5B9%27l6hAO%238ZQi, sni: Koma-YT.PAGeS.Dev, skip-cert-verify: false, network: ws, ws-opts: {path: /tr, headers: {Host: Koma-YT.PAGeS.Dev}}, udp: true, tfo: false}
+  - {name: "Telegram: @vpnbaz 2", server: 172.64.149.54, port: 2096, type: trojan, password: 8r%3C%5B9%27l6hAO%238ZQi, sni: Koma-YT.PAGeS.Dev, skip-cert-verify: false, network: ws, ws-opts: {path: /tr, headers: {Host: Koma-YT.PAGeS.Dev}}, udp: true, tfo: false}
+  - {name: "Telegram: @vpnbaz 3", server: 172.64.149.54, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 06ef598c-1555-4887-b3f9-08214a2f6792, servername: 2026.hhhhh.eu.org, network: ws, ws-opts: {path: /222.167.202.31:7443, headers: {Host: 2026.hhhhh.eu.org}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@vpnbaz 🌵"
-      - "@vpnbaz 🍋‍🟩"
-      - "@vpnbaz 🍓"
-      - "@vpnbaz 🎨"
-      - "@vpnbaz 🎭"
-      - "@vpnbaz 🎳"
-      - "@vpnbaz 🥎"
+      - "Telegram: @vpnbaz"
+      - "Telegram: @vpnbaz 2"
+      - "Telegram: @vpnbaz 3"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@vpnbaz 🌵"
-      - "@vpnbaz 🍋‍🟩"
-      - "@vpnbaz 🍓"
-      - "@vpnbaz 🎨"
-      - "@vpnbaz 🎭"
-      - "@vpnbaz 🎳"
-      - "@vpnbaz 🥎"
+      - "Telegram: @vpnbaz"
+      - "Telegram: @vpnbaz 2"
+      - "Telegram: @vpnbaz 3"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@vpnbaz 🌵"
-      - "@vpnbaz 🍋‍🟩"
-      - "@vpnbaz 🍓"
-      - "@vpnbaz 🎨"
-      - "@vpnbaz 🎭"
-      - "@vpnbaz 🎳"
-      - "@vpnbaz 🥎"
+      - "Telegram: @vpnbaz"
+      - "Telegram: @vpnbaz 2"
+      - "Telegram: @vpnbaz 3"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@vpnbaz 🌵"
-      - "@vpnbaz 🍋‍🟩"
-      - "@vpnbaz 🍓"
-      - "@vpnbaz 🎨"
-      - "@vpnbaz 🎭"
-      - "@vpnbaz 🎳"
-      - "@vpnbaz 🥎"
+      - "Telegram: @vpnbaz"
+      - "Telegram: @vpnbaz 2"
+      - "Telegram: @vpnbaz 3"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@vpnbaz 🌵"
-      - "@vpnbaz 🍋‍🟩"
-      - "@vpnbaz 🍓"
-      - "@vpnbaz 🎨"
-      - "@vpnbaz 🎭"
-      - "@vpnbaz 🎳"
-      - "@vpnbaz 🥎"
+      - "Telegram: @vpnbaz"
+      - "Telegram: @vpnbaz 2"
+      - "Telegram: @vpnbaz 3"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@vpnbaz 🌵"
-      - "@vpnbaz 🍋‍🟩"
-      - "@vpnbaz 🍓"
-      - "@vpnbaz 🎨"
-      - "@vpnbaz 🎭"
-      - "@vpnbaz 🎳"
-      - "@vpnbaz 🥎"
+      - "Telegram: @vpnbaz"
+      - "Telegram: @vpnbaz 2"
+      - "Telegram: @vpnbaz 3"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -114,13 +86,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@vpnbaz 🌵"
-      - "@vpnbaz 🍋‍🟩"
-      - "@vpnbaz 🍓"
-      - "@vpnbaz 🎨"
-      - "@vpnbaz 🎭"
-      - "@vpnbaz 🎳"
-      - "@vpnbaz 🥎"
+      - "Telegram: @vpnbaz"
+      - "Telegram: @vpnbaz 2"
+      - "Telegram: @vpnbaz 3"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

@@ -465,7 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: hp, server: mmd.az99x.info, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: b2bd5bed-2715-4b6c-c920-91a9d13fa707, network: ws, ws-opts: {path: /, headers: {Host: mmd.az99x.info}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hp, server: 104.17.70.206, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 00fc76cc-d6a6-4ecc-b16e-5a7c4a6db20c, network: ws, ws-opts: {path: "/Telegram@SoonTeam,Telegram@SoonTeam,Telegram@SoonTeam,Telegram@SoonTeam", headers: {Host: xser.ab841.com.}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: DIDI2, server: 172.64.149.54, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: bd2d5309-137d-4d12-9db9-8a36b1e8afdd, alpn: [http%2F1.1], network: ws, ws-opts: {path: /14dcc7e1, headers: {Host: botdyqs.samanidempire.org}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: DIDI, server: 188.114.97.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: bd2d5309-137d-4d12-9db9-8a36b1e8afdd, alpn: [http%2F1.1], network: ws, ws-opts: {path: /14dcc7e1, headers: {Host: botdyqs.samanidempire.org}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,6 +485,8 @@ proxy-groups:
     type: select
     proxies:
       - hp
+      - DIDI2
+      - DIDI
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -490,6 +494,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - hp
+      - DIDI2
+      - DIDI
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -497,6 +503,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - hp
+      - DIDI2
+      - DIDI
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -513,6 +521,8 @@ proxy-groups:
     interval: 600
     proxies:
       - hp
+      - DIDI2
+      - DIDI
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -520,6 +530,8 @@ proxy-groups:
     interval: 600
     proxies:
       - hp
+      - DIDI2
+      - DIDI
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -527,6 +539,8 @@ proxy-groups:
     interval: 600
     proxies:
       - hp
+      - DIDI2
+      - DIDI
   - name: دانلود منیجر 📥
     type: select
     proxies:
