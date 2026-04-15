@@ -465,9 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: hp, server: 104.17.70.206, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 00fc76cc-d6a6-4ecc-b16e-5a7c4a6db20c, network: ws, ws-opts: {path: "/Telegram@SoonTeam,Telegram@SoonTeam,Telegram@SoonTeam,Telegram@SoonTeam", headers: {Host: xser.ab841.com.}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: DIDI2, server: 172.64.149.54, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: bd2d5309-137d-4d12-9db9-8a36b1e8afdd, alpn: [http%2F1.1], network: ws, ws-opts: {path: /14dcc7e1, headers: {Host: botdyqs.samanidempire.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: DIDI, server: 188.114.97.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: bd2d5309-137d-4d12-9db9-8a36b1e8afdd, alpn: [http%2F1.1], network: ws, ws-opts: {path: /14dcc7e1, headers: {Host: botdyqs.samanidempire.org}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "`", server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 6f9ee133-2530-4699-8a0b-1ca468689d7b, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,27 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - hp
-      - DIDI2
-      - DIDI
+      - "`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - hp
-      - DIDI2
-      - DIDI
+      - "`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - hp
-      - DIDI2
-      - DIDI
+      - "`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -520,27 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - hp
-      - DIDI2
-      - DIDI
+      - "`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - hp
-      - DIDI2
-      - DIDI
+      - "`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - hp
-      - DIDI2
-      - DIDI
+      - "`"
   - name: دانلود منیجر 📥
     type: select
     proxies:
