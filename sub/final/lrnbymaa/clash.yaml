@@ -465,11 +465,10 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: lrnbymaa`, server: 104.17.72.206, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 06ef598c-1555-4887-b3f9-08214a2f6792, servername: 2026.hhhhh.eu.org, network: ws, ws-opts: {path: /222.167.202.31:7443, headers: {Host: 2026.hhhhh.eu.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: lrnbymaa` 2, server: 104.18.13.149, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 4dc0b42a-1a8a-4337-851b-5d8a1f149fca, servername: kingman.turboo-server.com.co, network: ws, ws-opts: {path: /, headers: {Host: kingman.turboo-server.com.co}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Lrnbymaa`, server: 104.18.13.149, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.indevs.in, network: ws, ws-opts: {path: /, headers: {Host: sni.111000.indevs.in}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: lrnbymaa` 3, server: 104.18.13.149, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.dynv6.net, network: ws, ws-opts: {path: "/?Telegram🇨🇳 @WangCai2", headers: {Host: sni.111000.dynv6.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Lrnbymaa` 2, server: 104.18.12.149, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b60e5c32-3d4e-425c-a785-a36cd0621a72, servername: S4-f45.pAGeS.DeV, network: ws, ws-opts: {path: /, headers: {Host: S4-f45.pAGeS.DeV}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: lrnbymaa`, server: 8.6.112.0, port: 443, type: trojan, password: humanity, sni: www.ignitelimit.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.ignitelimit.com}}, udp: true, tfo: false}
+  - {name: lrnbymaa` 2, server: 8.6.112.6, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.dynv6.net, network: ws, ws-opts: {path: /, headers: {Host: sni.111000.dynv6.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: lrnbymaa` 3, server: 78.111.11.11, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6fd98b96-9dd2-442c-92a4-a449cdf0fd1e, servername: ef88878e-c5a7-412f-82f1-0b09c6792d29.hollowspot.ir, alpn: [http%2F1.1], network: ws, ws-opts: {path: /api/v1/uuid/9e97a8c9-fdb0-4dfb-9557-2a90a554aee4, headers: {Host: ef88878e-c5a7-412f-82f1-0b09c6792d29.hollowspot.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: lrnbymaa` 4, server: 8.6.112.6, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: eb211fb7-40c8-4314-8b67-7b5f025e0f62, servername: kamalnet.pages.dev, network: ws, ws-opts: {path: /, headers: {Host: kamalnet.pages.dev}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -488,9 +487,8 @@ proxy-groups:
     proxies:
       - lrnbymaa`
       - lrnbymaa` 2
-      - Lrnbymaa`
       - lrnbymaa` 3
-      - Lrnbymaa` 2
+      - lrnbymaa` 4
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -499,9 +497,8 @@ proxy-groups:
     proxies:
       - lrnbymaa`
       - lrnbymaa` 2
-      - Lrnbymaa`
       - lrnbymaa` 3
-      - Lrnbymaa` 2
+      - lrnbymaa` 4
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -510,9 +507,8 @@ proxy-groups:
     proxies:
       - lrnbymaa`
       - lrnbymaa` 2
-      - Lrnbymaa`
       - lrnbymaa` 3
-      - Lrnbymaa` 2
+      - lrnbymaa` 4
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -530,9 +526,8 @@ proxy-groups:
     proxies:
       - lrnbymaa`
       - lrnbymaa` 2
-      - Lrnbymaa`
       - lrnbymaa` 3
-      - Lrnbymaa` 2
+      - lrnbymaa` 4
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -541,9 +536,8 @@ proxy-groups:
     proxies:
       - lrnbymaa`
       - lrnbymaa` 2
-      - Lrnbymaa`
       - lrnbymaa` 3
-      - Lrnbymaa` 2
+      - lrnbymaa` 4
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -552,9 +546,8 @@ proxy-groups:
     proxies:
       - lrnbymaa`
       - lrnbymaa` 2
-      - Lrnbymaa`
       - lrnbymaa` 3
-      - Lrnbymaa` 2
+      - lrnbymaa` 4
   - name: دانلود منیجر 📥
     type: select
     proxies:

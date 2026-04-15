@@ -465,14 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: moz1(@King_Network7), server: 104.17.72.206, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 06ef598c-1555-4887-b3f9-08214a2f6792, servername: 2026.hhhhh.eu.org, network: ws, ws-opts: {path: /222.167.202.31:7443, headers: {Host: 2026.hhhhh.eu.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "***🆔***@iphone02016vpn", server: 104.16.80.73, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 2e5417ee-7777-4e21-b800-6d8d04dd8e15, servername: net.gfxkl.pics, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /@ClaudeNET, headers: {Host: net.gfxkl.pics}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "***🆔***@iphone02016vpn 2", server: 104.17.72.206, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 3c8df9ed-633e-4759-bce3-250af4f45b35, servername: m.speedvip2.shop, network: ws, ws-opts: {path: /, headers: {Host: m.speedvip2.shop}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "***🆔***@iphone02016vpn 3", server: 172.64.152.23, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 4dc0b42a-1a8a-4337-851b-5d8a1f149fca, servername: deold.turboo-server.com.co, network: ws, ws-opts: {path: /, headers: {Host: deold.turboo-server.com.co}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: moz3(@King_Network7), server: 104.18.13.149, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.dynv6.net, network: ws, ws-opts: {path: "/?Telegram🇨🇳 @WangCai2", headers: {Host: sni.111000.dynv6.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: DIDI2, server: 172.64.149.54, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: bd2d5309-137d-4d12-9db9-8a36b1e8afdd, alpn: [http%2F1.1], network: ws, ws-opts: {path: /14dcc7e1, headers: {Host: botdyqs.samanidempire.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: DIDI, server: 188.114.97.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: bd2d5309-137d-4d12-9db9-8a36b1e8afdd, alpn: [http%2F1.1], network: ws, ws-opts: {path: /14dcc7e1, headers: {Host: botdyqs.samanidempire.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: moz2(@King_Network7), server: 188.114.98.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: cff6f361-828a-43c8-a8b5-8d10b32e57fb, servername: zh.hollowspot.ir, alpn: [http%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: zh.hollowspot.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: vipV2rayNGnp, server: 8.6.112.0, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.dynv6.net, network: ws, ws-opts: {path: "/?Telegram🇨🇳 @WangCai2", headers: {Host: sni.111000.dynv6.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Trxlns 20Gb", server: star.p40.site, port: 5678, type: vmess, uuid: 4b22767a-51fe-410d-b929-13ba4a7c036a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -489,42 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - moz1(@King_Network7)
-      - "***🆔***@iphone02016vpn"
-      - "***🆔***@iphone02016vpn 2"
-      - "***🆔***@iphone02016vpn 3"
-      - moz3(@King_Network7)
-      - DIDI2
-      - DIDI
-      - moz2(@King_Network7)
+      - vipV2rayNGnp
+      - "@Trxlns 20Gb"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - moz1(@King_Network7)
-      - "***🆔***@iphone02016vpn"
-      - "***🆔***@iphone02016vpn 2"
-      - "***🆔***@iphone02016vpn 3"
-      - moz3(@King_Network7)
-      - DIDI2
-      - DIDI
-      - moz2(@King_Network7)
+      - vipV2rayNGnp
+      - "@Trxlns 20Gb"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - moz1(@King_Network7)
-      - "***🆔***@iphone02016vpn"
-      - "***🆔***@iphone02016vpn 2"
-      - "***🆔***@iphone02016vpn 3"
-      - moz3(@King_Network7)
-      - DIDI2
-      - DIDI
-      - moz2(@King_Network7)
+      - vipV2rayNGnp
+      - "@Trxlns 20Gb"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -540,42 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - moz1(@King_Network7)
-      - "***🆔***@iphone02016vpn"
-      - "***🆔***@iphone02016vpn 2"
-      - "***🆔***@iphone02016vpn 3"
-      - moz3(@King_Network7)
-      - DIDI2
-      - DIDI
-      - moz2(@King_Network7)
+      - vipV2rayNGnp
+      - "@Trxlns 20Gb"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - moz1(@King_Network7)
-      - "***🆔***@iphone02016vpn"
-      - "***🆔***@iphone02016vpn 2"
-      - "***🆔***@iphone02016vpn 3"
-      - moz3(@King_Network7)
-      - DIDI2
-      - DIDI
-      - moz2(@King_Network7)
+      - vipV2rayNGnp
+      - "@Trxlns 20Gb"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - moz1(@King_Network7)
-      - "***🆔***@iphone02016vpn"
-      - "***🆔***@iphone02016vpn 2"
-      - "***🆔***@iphone02016vpn 3"
-      - moz3(@King_Network7)
-      - DIDI2
-      - DIDI
-      - moz2(@King_Network7)
+      - vipV2rayNGnp
+      - "@Trxlns 20Gb"
   - name: دانلود منیجر 📥
     type: select
     proxies:
