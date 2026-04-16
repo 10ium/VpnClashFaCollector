@@ -465,7 +465,14 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Hiddify_Nexttt", server: 8.6.112.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.v6.navy, network: ws, ws-opts: {path: /, headers: {Host: sni.111000.v6.navy}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Hiddify_Nexttt", server: 8.6.112.0, port: 443, type: trojan, password: humanity, sni: www.multiplydose.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.multiplydose.com}}, udp: true, tfo: false}
+  - {name: "@Hiddify_Nexttt 2", server: 194.59.171.217, port: 14774, type: vless, tls: true, packet-encoding: xudp, uuid: 3b80a4b4-187a-49b0-a52c-5c455c41ba98, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Hiddify_Nexttt 3", server: 194.59.171.217, port: 14774, type: vless, tls: true, packet-encoding: xudp, uuid: 3be173d0-06d0-4631-a491-4945449ed28e, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Hiddify_nexttt", server: 194.59.171.217, port: 14774, type: vless, tls: true, packet-encoding: xudp, uuid: 5c5fd440-327d-4749-a940-98b08cb10cad, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Hiddify_Nexttt 4", server: shop.shadowroute.site, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 65ea4681-21ad-47a3-9589-de4864135ee1, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: shop.shadowroute.site}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Hiddify_Nexttt 5", server: login.rayanserv.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 6847c9af-9ed8-4f01-8da6-7e2aaacae676, network: ws, ws-opts: {path: /, headers: {Host: login.rayanserv.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Hiddify_Nexttt 6", server: 37.152.189.74, port: 4431, type: vless, tls: true, packet-encoding: xudp, uuid: 9ecaef11-cbb8-4a95-983b-3df1f521f776, network: ws, ws-opts: {path: /ek/irinn/live/1080p/, headers: {Host: live-azd1102.telewebion.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Hiddify_Nexttt 7", server: 194.59.171.217, port: 14774, type: vless, tls: true, packet-encoding: xudp, uuid: a91d6088-c444-47a1-a275-d8c43f10b64d, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,6 +490,13 @@ proxy-groups:
     type: select
     proxies:
       - "@Hiddify_Nexttt"
+      - "@Hiddify_Nexttt 2"
+      - "@Hiddify_Nexttt 3"
+      - "@Hiddify_nexttt"
+      - "@Hiddify_Nexttt 4"
+      - "@Hiddify_Nexttt 5"
+      - "@Hiddify_Nexttt 6"
+      - "@Hiddify_Nexttt 7"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -490,6 +504,13 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Hiddify_Nexttt"
+      - "@Hiddify_Nexttt 2"
+      - "@Hiddify_Nexttt 3"
+      - "@Hiddify_nexttt"
+      - "@Hiddify_Nexttt 4"
+      - "@Hiddify_Nexttt 5"
+      - "@Hiddify_Nexttt 6"
+      - "@Hiddify_Nexttt 7"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -497,6 +518,13 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Hiddify_Nexttt"
+      - "@Hiddify_Nexttt 2"
+      - "@Hiddify_Nexttt 3"
+      - "@Hiddify_nexttt"
+      - "@Hiddify_Nexttt 4"
+      - "@Hiddify_Nexttt 5"
+      - "@Hiddify_Nexttt 6"
+      - "@Hiddify_Nexttt 7"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -513,6 +541,13 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Hiddify_Nexttt"
+      - "@Hiddify_Nexttt 2"
+      - "@Hiddify_Nexttt 3"
+      - "@Hiddify_nexttt"
+      - "@Hiddify_Nexttt 4"
+      - "@Hiddify_Nexttt 5"
+      - "@Hiddify_Nexttt 6"
+      - "@Hiddify_Nexttt 7"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -520,6 +555,13 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Hiddify_Nexttt"
+      - "@Hiddify_Nexttt 2"
+      - "@Hiddify_Nexttt 3"
+      - "@Hiddify_nexttt"
+      - "@Hiddify_Nexttt 4"
+      - "@Hiddify_Nexttt 5"
+      - "@Hiddify_Nexttt 6"
+      - "@Hiddify_Nexttt 7"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -527,6 +569,13 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Hiddify_Nexttt"
+      - "@Hiddify_Nexttt 2"
+      - "@Hiddify_Nexttt 3"
+      - "@Hiddify_nexttt"
+      - "@Hiddify_Nexttt 4"
+      - "@Hiddify_Nexttt 5"
+      - "@Hiddify_Nexttt 6"
+      - "@Hiddify_Nexttt 7"
   - name: دانلود منیجر 📥
     type: select
     proxies:

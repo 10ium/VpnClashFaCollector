@@ -465,13 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: Tel;@Father_vpn`, server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 0fc605b1-1e04-49c4-bdef-2f4c21cd1a23, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Tel;@Father_VPN`, server: 185.143.234.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 2601740f-12a1-4e61-ba12-4e84915f5ed8, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Father_vpn`", server: 94.101.178.172, port: 35880, type: vless, tls: true, packet-encoding: xudp, uuid: 33def33b-3bf0-490d-bfd9-5582390968f0, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Tel;@Father_vpn` 2, server: 193.151.138.64, port: 25001, type: vless, tls: true, packet-encoding: xudp, uuid: 9fcba658-fd4c-4a5e-9ed5-b44f038e8ecb, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Tel;@Father_vpn` 3, server: 185.143.234.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: e9b5e97e-e042-4a0d-ad47-4149352db54f, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Tel;@Father_vpn` 4, server: 8.6.112.6, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: eb211fb7-40c8-4314-8b67-7b5f025e0f62, servername: kamalnet.pages.dev, network: ws, ws-opts: {path: /, headers: {Host: kamalnet.pages.dev}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Tel;@Father_vpn` 5, server: 37.32.27.85, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: fdedb0f9-f5e4-4278-9c2f-30a3fe6dce20, network: ws, ws-opts: {path: /, headers: {Host: a1.supreme-xfast.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Tel;@Father_vpn`, server: 193.151.138.64, port: 25001, type: vless, tls: true, packet-encoding: xudp, uuid: 9fcba658-fd4c-4a5e-9ed5-b44f038e8ecb, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Tel;@Father_vpn` 2, server: 37.32.27.85, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: fdedb0f9-f5e4-4278-9c2f-30a3fe6dce20, network: ws, ws-opts: {path: /, headers: {Host: a1.supreme-xfast.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -489,12 +484,7 @@ proxy-groups:
     type: select
     proxies:
       - Tel;@Father_vpn`
-      - Tel;@Father_VPN`
-      - "@Father_vpn`"
       - Tel;@Father_vpn` 2
-      - Tel;@Father_vpn` 3
-      - Tel;@Father_vpn` 4
-      - Tel;@Father_vpn` 5
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -502,12 +492,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - Tel;@Father_vpn`
-      - Tel;@Father_VPN`
-      - "@Father_vpn`"
       - Tel;@Father_vpn` 2
-      - Tel;@Father_vpn` 3
-      - Tel;@Father_vpn` 4
-      - Tel;@Father_vpn` 5
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -515,12 +500,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - Tel;@Father_vpn`
-      - Tel;@Father_VPN`
-      - "@Father_vpn`"
       - Tel;@Father_vpn` 2
-      - Tel;@Father_vpn` 3
-      - Tel;@Father_vpn` 4
-      - Tel;@Father_vpn` 5
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -537,12 +517,7 @@ proxy-groups:
     interval: 600
     proxies:
       - Tel;@Father_vpn`
-      - Tel;@Father_VPN`
-      - "@Father_vpn`"
       - Tel;@Father_vpn` 2
-      - Tel;@Father_vpn` 3
-      - Tel;@Father_vpn` 4
-      - Tel;@Father_vpn` 5
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -550,12 +525,7 @@ proxy-groups:
     interval: 600
     proxies:
       - Tel;@Father_vpn`
-      - Tel;@Father_VPN`
-      - "@Father_vpn`"
       - Tel;@Father_vpn` 2
-      - Tel;@Father_vpn` 3
-      - Tel;@Father_vpn` 4
-      - Tel;@Father_vpn` 5
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -563,12 +533,7 @@ proxy-groups:
     interval: 600
     proxies:
       - Tel;@Father_vpn`
-      - Tel;@Father_VPN`
-      - "@Father_vpn`"
       - Tel;@Father_vpn` 2
-      - Tel;@Father_vpn` 3
-      - Tel;@Father_vpn` 4
-      - Tel;@Father_vpn` 5
   - name: دانلود منیجر 📥
     type: select
     proxies:
