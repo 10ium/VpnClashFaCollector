@@ -465,7 +465,14 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: 8.6.112.0:2096, server: 8.6.112.0, port: 2096, type: trojan, password: 8r%3C%5B9%27l6hAO%238ZQi, sni: Koma-YT.PAGeS.Dev, skip-cert-verify: false, network: ws, ws-opts: {path: /tr, headers: {Host: Koma-YT.PAGeS.Dev}}, udp: true, tfo: false}
+  - {name: "@NetAccount`", server: 8.6.112.0, port: 443, type: trojan, password: humanity, sni: www.calmloud.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmloud.com}}, udp: true, tfo: false}
+  - {name: "@NetAccount` 2", server: 8.6.112.6, port: 443, type: trojan, password: humanity, sni: www.calmloud.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmloud.com}}, udp: true, tfo: false}
+  - {name: "@NetAccount` 3", server: 8.6.112.6, port: 443, type: trojan, password: humanity, sni: www.gossipglove.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.gossipglove.com}}, udp: true, tfo: false}
   - {name: vipV2rayNGnp, server: 8.6.112.0, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.dynv6.net, network: ws, ws-opts: {path: "/?Telegram🇨🇳 @WangCai2", headers: {Host: sni.111000.dynv6.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 8.6.112.0:443, server: 8.6.112.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a53bb23d-7bd0-4327-b534-ed25a0a9f693, servername: god.solilollipop.sitevipV2rayNGnp, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /god, headers: {Host: god.solilollipop.sitevipV2rayNGnp}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 8.6.112.0:443 2, server: 8.6.112.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d37a75db-76b6-4db8-b213-0d5b044d138d, servername: hio-awx.pages.dev, network: ws, ws-opts: {path: /, headers: {Host: hio-awx.pages.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@hamedvpns`", server: 8.6.112.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d37a75db-76b6-4db8-b213-0d5b044d138d, servername: hio-awx.pages.dev, network: ws, ws-opts: {path: /, headers: {Host: hio-awx.pages.dev}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@Trxlns 20Gb", server: star.p40.site, port: 5678, type: vmess, uuid: 4b22767a-51fe-410d-b929-13ba4a7c036a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -483,7 +490,14 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - 8.6.112.0:2096
+      - "@NetAccount`"
+      - "@NetAccount` 2"
+      - "@NetAccount` 3"
       - vipV2rayNGnp
+      - 8.6.112.0:443
+      - 8.6.112.0:443 2
+      - "@hamedvpns`"
       - "@Trxlns 20Gb"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -491,7 +505,14 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - 8.6.112.0:2096
+      - "@NetAccount`"
+      - "@NetAccount` 2"
+      - "@NetAccount` 3"
       - vipV2rayNGnp
+      - 8.6.112.0:443
+      - 8.6.112.0:443 2
+      - "@hamedvpns`"
       - "@Trxlns 20Gb"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -499,7 +520,14 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - 8.6.112.0:2096
+      - "@NetAccount`"
+      - "@NetAccount` 2"
+      - "@NetAccount` 3"
       - vipV2rayNGnp
+      - 8.6.112.0:443
+      - 8.6.112.0:443 2
+      - "@hamedvpns`"
       - "@Trxlns 20Gb"
   - name: اتصال پایدار 🔗
     type: url-test
@@ -516,7 +544,14 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 8.6.112.0:2096
+      - "@NetAccount`"
+      - "@NetAccount` 2"
+      - "@NetAccount` 3"
       - vipV2rayNGnp
+      - 8.6.112.0:443
+      - 8.6.112.0:443 2
+      - "@hamedvpns`"
       - "@Trxlns 20Gb"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -524,7 +559,14 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 8.6.112.0:2096
+      - "@NetAccount`"
+      - "@NetAccount` 2"
+      - "@NetAccount` 3"
       - vipV2rayNGnp
+      - 8.6.112.0:443
+      - 8.6.112.0:443 2
+      - "@hamedvpns`"
       - "@Trxlns 20Gb"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -532,7 +574,14 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 8.6.112.0:2096
+      - "@NetAccount`"
+      - "@NetAccount` 2"
+      - "@NetAccount` 3"
       - vipV2rayNGnp
+      - 8.6.112.0:443
+      - 8.6.112.0:443 2
+      - "@hamedvpns`"
       - "@Trxlns 20Gb"
   - name: دانلود منیجر 📥
     type: select

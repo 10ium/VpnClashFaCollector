@@ -16,10 +16,12 @@ proxies:
   - {name: "@vasl_bashim 3", server: snapp.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 5f12e894-5230-4ae4-a70d-389ae4052a3e, network: ws, ws-opts: {path: /path, headers: {Host: vip.elmovipservice.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@vasl_bashim 4", server: 104.18.13.149, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.v6.navy, network: ws, ws-opts: {path: /, headers: {Host: sni.111000.v6.navy}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@vasl_bashim 5", server: 8.6.112.0, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.jpmj.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: sni.jpmj.dev}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim` 6", server: 185.143.234.235, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 9a73c3b2-d483-42f7-8bd4-bd6e3dc5a5ec, network: ws, ws-opts: {path: /, headers: {Host: ire.binping.lol}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim` 6", server: verso.nahidapp.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 735327c8-34f3-40cf-ad6e-313f81a15cd9, servername: verso.nahidapp.com, alpn: [http%2F1.1], network: ws, ws-opts: {path: /vl/, headers: {Host: verso.nahidapp.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim` 7", server: 185.143.234.235, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 9a73c3b2-d483-42f7-8bd4-bd6e3dc5a5ec, network: ws, ws-opts: {path: /, headers: {Host: ire.binping.lol}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@vasl_bashim 6", server: 185.143.234.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: bb01fc6c-de57-4b2e-8b22-8480736d20d1, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@`", server: 217.114.40.212, port: 17577, type: vless, tls: true, packet-encoding: xudp, uuid: c484549d-96c2-42f3-bc30-1d8c29c71244, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim` 7", server: ar.speed1vipsarbaziclick.site, port: 41371, type: vless, tls: true, packet-encoding: xudp, uuid: de8c3b93-6e91-4e79-8495-e826e401eded, host: ar.speed1vipsarbaziclick.site, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim 7", server: verso.nahidapp.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d7567f4e-70d5-48f4-99a4-bd70d5c0a902, servername: verso.nahidapp.com, alpn: [http%2F1.1], network: ws, ws-opts: {path: /vl/, headers: {Host: verso.nahidapp.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim` 8", server: ar.speed1vipsarbaziclick.site, port: 41371, type: vless, tls: true, packet-encoding: xudp, uuid: de8c3b93-6e91-4e79-8495-e826e401eded, host: ar.speed1vipsarbaziclick.site, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -38,9 +40,11 @@ proxy-groups:
       - "@vasl_bashim 4"
       - "@vasl_bashim 5"
       - "@vasl_bashim` 6"
+      - "@vasl_bashim` 7"
       - "@vasl_bashim 6"
       - "@`"
-      - "@vasl_bashim` 7"
+      - "@vasl_bashim 7"
+      - "@vasl_bashim` 8"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -59,9 +63,11 @@ proxy-groups:
       - "@vasl_bashim 4"
       - "@vasl_bashim 5"
       - "@vasl_bashim` 6"
+      - "@vasl_bashim` 7"
       - "@vasl_bashim 6"
       - "@`"
-      - "@vasl_bashim` 7"
+      - "@vasl_bashim 7"
+      - "@vasl_bashim` 8"
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -80,9 +86,11 @@ proxy-groups:
       - "@vasl_bashim 4"
       - "@vasl_bashim 5"
       - "@vasl_bashim` 6"
+      - "@vasl_bashim` 7"
       - "@vasl_bashim 6"
       - "@`"
-      - "@vasl_bashim` 7"
+      - "@vasl_bashim 7"
+      - "@vasl_bashim` 8"
   - name: 📲 电报信息
     type: select
     proxies:
@@ -100,9 +108,11 @@ proxy-groups:
       - "@vasl_bashim 4"
       - "@vasl_bashim 5"
       - "@vasl_bashim` 6"
+      - "@vasl_bashim` 7"
       - "@vasl_bashim 6"
       - "@`"
-      - "@vasl_bashim` 7"
+      - "@vasl_bashim 7"
+      - "@vasl_bashim` 8"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -120,9 +130,11 @@ proxy-groups:
       - "@vasl_bashim 4"
       - "@vasl_bashim 5"
       - "@vasl_bashim` 6"
+      - "@vasl_bashim` 7"
       - "@vasl_bashim 6"
       - "@`"
-      - "@vasl_bashim` 7"
+      - "@vasl_bashim 7"
+      - "@vasl_bashim` 8"
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -140,9 +152,11 @@ proxy-groups:
       - "@vasl_bashim 4"
       - "@vasl_bashim 5"
       - "@vasl_bashim` 6"
+      - "@vasl_bashim` 7"
       - "@vasl_bashim 6"
       - "@`"
-      - "@vasl_bashim` 7"
+      - "@vasl_bashim 7"
+      - "@vasl_bashim` 8"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -182,9 +196,11 @@ proxy-groups:
       - "@vasl_bashim 4"
       - "@vasl_bashim 5"
       - "@vasl_bashim` 6"
+      - "@vasl_bashim` 7"
       - "@vasl_bashim 6"
       - "@`"
-      - "@vasl_bashim` 7"
+      - "@vasl_bashim 7"
+      - "@vasl_bashim` 8"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
