@@ -1,5 +1,213 @@
 # آرشیو کانال: @KIA_NET
-بروزرسانی: 2026-04-17 01:22:43 UTC
+بروزرسانی: 2026-04-17 10:48:14 UTC
+
+### 🕒 2026-04-17 08:04:25 UTC
+**آموزش جدید اتصال با روش spoofsni در اندروید با ترموکس و V2Ray**
+ 
+**ابتدا برنامه ی Termux را از یکی از لینک های داخلی زیر نصب کنید:**
+**لینک داخلی :**
+[https://uplod.ir/ebhs63tr7jzs/Termux.zip.htm](https://uplod.ir/ebhs63tr7jzs/Termux.zip.htm)
+ 
+**قبل اینکه مراحل رو برید اول چک کنید آیا این روش برای شما جواب میده یا نهاین دستور رو در ترموکس بزنید :**
+`ping static.cloudflareinsights.com`
+اگه نوشت Time Out یعنی جواب نمیده باید یه SNI دیگه تست کنید. اما اگر پینگ داد (مطابق عکس بالا) یعنی این روش براتون وصل میشه. برای ادامه مراحل در ترموکس کلید CTRL و حرف C رو بزنید تا دستور پینگ متوقف بشه.
+ به VPN وصل بشید چون در ترموکس باید پکیج دانلود بشه و ادامه مراحل نیاز به فیلترشکن داره.
+ 
+**دستورات زیر رو به ترتیب بزنید: **
+pkg update
+pkg upgrade
+pkg install python
+pkg install git
+termux-setup-storage
+git clone 
+[https://github.com/Rainman69/SNISPF.git](https://github.com/Rainman69/SNISPF.git)
+cd SNISPF
+pip install .
+ 
+**خب حالا VPN خودتون رو قطع کنید و دستور زیر رو بزنید:**
+snispf -l 
+[0.0.0.0:40443](http://0.0.0.0:40443/)
+ -c 
+[104.16.80.73](http://104.16.80.73/)
+ -s 
+[static.cloudflareinsights.com](http://static.cloudflareinsights.com/)
+ حالا برید وارد برنامه V2RayNG بشید و از منوی کناری Per-app settings رو بزنید تیک Enable per-app رو فعال کنید و فقط تلگرام رو انتخاب کنید  به عقب برگردید این سرور رو اضافه کنید و وصل بشید:
+vless://a01daac7-1e65-4645-854d-b47d226f6b08@127.0.0.1:40443?encryption=none&security=tls&sni=y6-3cj.PAgES.DEV&insecure=0&allowInsecure=0&type=ws&host=y6-3cj.PAgES.DEV&path=%2F#@V2raysCollector
+برای قطع کردن اتصال کافیه در ترموکس دکمه CTRL و دکمه C در کیبورد گوشیتون رو بزنید و سرور V2ray هم داخل برنامه قطع کنید. برای اتصال مجدد فقط کافیه دستور SNI رو دوباره در ترموکس وارد کنید و اینتر بزنید که اجرا بشه یعنی این دستور:
+snispf -l 
+[0.0.0.0:40443](http://0.0.0.0:40443/)
+ -c 
+[104.16.80.73](http://104.16.80.73/)
+ -s 
+[static.cloudflareinsights.com](http://static.cloudflareinsights.com/)
+در مرحله اخر  v2ray رو روشن کنید 
+چند تا Sni متصل :
+104.17.72.206
+188.114.98.0
+104.18.12.149
+104.18.16.56
+172.64.149.54
+104.16.80.73
+static.cloudflareinsights.com
+sourceforge.net
+[@kia_net](https://t.me/kia_net)
+
+---
+
+### 🕒 2026-04-17 05:21:32 UTC
+{   "dns": {     "queryStrategy": "UseIPv4",     "hosts": {       "geosite:google": "www.google.com"     },     "servers": [       "217.218.127.127"     ]   },   "inbounds": [     {       "listen": "127.0.0.1",       "port": 10808,       "protocol": "socks"…
+
+---
+
+### 🕒 2026-04-17 05:20:32 UTC
+{
+  "dns": {
+    "queryStrategy": "UseIPv4",
+    "hosts": {
+      "geosite:google": "www.google.com"
+    },
+    "servers": [
+      "217.218.127.127"
+    ]
+  },
+  "inbounds": [
+    {
+      "listen": "127.0.0.1",
+      "port": 10808,
+      "protocol": "socks",
+      "settings": {
+        "auth": "noauth",
+        "udp": true,
+        "userLevel": 8
+      },
+      "sniffing": {
+        "destOverride": [
+          "http",
+          "tls"
+        ],
+        "enabled": true
+      },
+      "tag": "socks"
+    },
+    {
+      "listen": "127.0.0.1",
+      "port": 10809,
+      "protocol": "http",
+      "settings": {
+        "userLevel": 8
+      },
+      "tag": "http"
+    },
+    {
+      "port": 10853,
+      "protocol": "dokodemo-door",
+      "settings": {
+        "address": "217.218.127.127",
+        "network": "tcp,udp",
+        "port": 53
+      },
+      "tag": "dns-in"
+    }
+  ],
+  "log": {
+    "loglevel": "none"
+  },
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {
+        "domainStrategy": "UseIPv4"
+      },
+      "tag": "direct"
+    },
+    {
+      "protocol": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "protocol": "blackhole",
+      "settings": {
+        "response": {
+          "type": "http"
+        }
+      },
+      "tag": "block"
+    },
+    {
+      "protocol": "socks",
+      "tag": "dummy",
+      "settings": {
+        "servers": [
+          {
+            "address": "127.0.0.1",
+            "port": 10808
+          }
+        ]
+      }
+    }
+  ],
+  "remarks": "Google Services",
+  "routing": {
+    "domainStrategy": "IPIfNonMatch",
+    "rules": [
+      {
+        "inboundTag": [
+          "dns-in"
+        ],
+        "outboundTag": "dns-out",
+        "type": "field"
+      },
+      {
+        "inboundTag": [
+          "socks-in"
+        ],
+        "port": 53,
+        "outboundTag": "dns-out",
+        "type": "field"
+      },
+      {
+        "ip": [
+          "10.10.34.34",
+          "10.10.34.35",
+          "10.10.34.36"
+        ],
+        "outboundTag": "block",
+        "type": "field"
+      }
+    ]
+  }
+}
+
+---
+
+### 🕒 2026-04-17 05:19:14 UTC
+ترکیب سایفون vless://6202b230-417c-4d8e-b624-0f71afa9c75d@8.6.112.0:2096?allowInsecure=1&ed=2560&eh=Sec-WebSocket-Protocol&encryption=none&host=sni.jpmj.dev&path=%2F&security=tls&sni=sni.jpmj.dev&type=ws#hp71
+
+---
+
+### 🕒 2026-04-17 05:18:58 UTC
+ترکیب سایفون
+vless://6202b230-417c-4d8e-b624-0f71afa9c75d@8.6.112.0:2096?allowInsecure=1&ed=2560&eh=Sec-WebSocket-Protocol&encryption=none&host=sni.jpmj.dev&path=%2F&security=tls&sni=sni.jpmj.dev&type=ws#hp71
+
+---
+
+### 🕒 2026-04-17 05:18:20 UTC
+تلگرام پروکسی)
+[https://t.me/socks?server=91.234.39.141&port=1080](https://t.me/socks?server=91.234.39.141&port=1080)
+بدون فیلتر هیچ 
+نت همراه تست شده
+
+---
+
+### 🕒 2026-04-17 05:13:28 UTC
+{"remarks":"@kia_net)","log":{"loglevel":"warning"},"inbounds":[{"tag":"socks","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true,"userLevel":8},"sniffing":{"enabled":true,"destOverride":["http","tls"],"routeOnly":false}}],"outbounds":[{"tag":"proxy"…
+
+---
+
+### 🕒 2026-04-17 05:09:25 UTC
+{"remarks":"@kia_net)","log":{"loglevel":"warning"},"inbounds":[{"tag":"socks","port":10808,"protocol":"socks","settings":{"auth":"noauth","udp":true,"userLevel":8},"sniffing":{"enabled":true,"destOverride":["http","tls"],"routeOnly":false}}],"outbounds":[{"tag":"proxy","protocol":"socks","settings":{"servers":[{"address":"91.234.39.141","ota":false,"port":1080,"level":8}]},"streamSettings":{"network":"tcp"},"mux":{"enabled":false,"concurrency":-1,"xudpConcurrency":8,"xudpProxyUDP443":""}},{"tag":"direct","protocol":"freedom","settings":{"domainStrategy":"UseIP"},"mux":{"enabled":false,"concurrency":8,"xudpConcurrency":8,"xudpProxyUDP443":""}},{"tag":"block","protocol":"blackhole","settings":{"response":{"type":"http"}},"mux":{"enabled":false,"concurrency":8,"xudpConcurrency":8,"xudpProxyUDP443":""}}],"dns":{"servers":["1.1.1.1"],"hosts":{"domain:googleapis.cn":"googleapis.com","dns.alidns.com":["223.5.5.5","223.6.6.6","2400:3200::1","2400:3200:baba::1"],"one.one.one.one":["1.1.1.1","1.0.0.1","2606:4700:4700::1111","2606:4700:4700::1001"],"dot.pub":["1.12.12.12","120.53.53.53"],"dns.google":["8.8.8.8","8.8.4.4","2001:4860:4860::8888","2001:4860:4860::8844"],"dns.quad9.net":["9.9.9.9","149.112.112.112","2620:fe::fe","2620:fe::9"],"common.dot.dns.yandex.net":["77.88.8.8","77.88.8.1","2a02:6b8::feed:0ff","2a02:6b8:0:1::feed:0ff"]}},"routing":{"domainStrategy":"IPIfNonMatch","rules":[{"type":"field","ip":["1.1.1.1"],"outboundTag":"proxy","port":"53"},{"type":"field","ip":["223.5.5.5"],"outboundTag":"direct","port":"53"},{"type":"field","ip":["1.1.1.1"],"outboundTag":"proxy","port":"53"},{"type":"field","ip":["223.5.5.5"],"outboundTag":"direct","port":"53"}]}}
+
+---
 
 ### 🕒 2026-04-16 14:31:16 UTC
 ***🇸🇪***
@@ -31,12 +239,6 @@
 ***🔗***
  
 [https://t.me/proxy?server=195.254.165.247&port=25565&secret=dd79e344818749bd7ac519130220c25d09](https://t.me/proxy?server=195.254.165.247&port=25565&secret=dd79e344818749bd7ac519130220c25d09)
-
----
-
-### 🕒 2026-04-16 08:03:30 UTC
-[https://t.me/socks?server=STARLINK7.vayzro.site&port=34656&user=%40Porteqal3&pass=Porteqal3](https://t.me/socks?server=STARLINK7.vayzro.site&port=34656&user=%40Porteqal3&pass=Porteqal3)
-ایرانسل
 
 ---
 
