@@ -8,8 +8,9 @@ proxies:
   - {name: "", server: 66.181.36.174, port: 52914, type: vmess, uuid: 8ae1c2f0-3127-49ac-acad-def55b04c231, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: " 2", server: 67.220.72.237, port: 22324, type: vmess, uuid: 04621bae-ab36-11ec-b909-0242ac120002, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "🇺🇸 [openproxylist.com] vmess-US", server: 216.167.43.29, port: 3438, type: vmess, uuid: 01d3482e-27f5-4eac-ab5e-906787bb32ef, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}, udp: true, tfo: false}
-  - {name: "@filembad", server: 217.218.52.1, port: 11182, type: vmess, uuid: f62d2411-c34d-460b-a93e-b789e03ca8b3, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 2", server: a.iranfilm.online, port: 11333, type: vmess, uuid: 9bd9defb-2995-416c-99a4-68a199e51dca, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad", server: a.iranfilm.online, port: 11333, type: vmess, uuid: 9bd9defb-2995-416c-99a4-68a199e51dca, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 2", server: amir3.zaringoold.ir, port: 46096, type: vmess, uuid: 94756b9c-902d-4f48-a008-ca1f421f4182, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 3", server: cold-dawn-9246.fly.dev, port: 443, type: vmess, uuid: ea4909ef-7ca6-4b46-bf2e-6c07896ef338, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /ea4909ef-7ca6-4b46-bf2e-6c07896ef338-vm, headers: {Host: cold-dawn-9246.fly.dev}}, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -21,6 +22,7 @@ proxy-groups:
       - 🇺🇸 [openproxylist.com] vmess-US
       - "@filembad"
       - "@filembad 2"
+      - "@filembad 3"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -32,6 +34,7 @@ proxy-groups:
       - 🇺🇸 [openproxylist.com] vmess-US
       - "@filembad"
       - "@filembad 2"
+      - "@filembad 3"
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -43,6 +46,7 @@ proxy-groups:
       - 🇺🇸 [openproxylist.com] vmess-US
       - "@filembad"
       - "@filembad 2"
+      - "@filembad 3"
   - name: 📲 电报信息
     type: select
     proxies:
@@ -53,6 +57,7 @@ proxy-groups:
       - 🇺🇸 [openproxylist.com] vmess-US
       - "@filembad"
       - "@filembad 2"
+      - "@filembad 3"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -63,6 +68,7 @@ proxy-groups:
       - 🇺🇸 [openproxylist.com] vmess-US
       - "@filembad"
       - "@filembad 2"
+      - "@filembad 3"
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -73,6 +79,7 @@ proxy-groups:
       - 🇺🇸 [openproxylist.com] vmess-US
       - "@filembad"
       - "@filembad 2"
+      - "@filembad 3"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -105,6 +112,7 @@ proxy-groups:
       - 🇺🇸 [openproxylist.com] vmess-US
       - "@filembad"
       - "@filembad 2"
+      - "@filembad 3"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

@@ -465,6 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: Amirstar`, server: 104.18.12.149, port: 443, type: trojan, password: humanity, sni: www.ignitelimit.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.ignitelimit.com}}, udp: true, tfo: false}
+  - {name: Amirstar` 2, server: 192.168.1.10, port: 40443, type: trojan, password: humanity, sni: www.ignitelimit.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.ignitelimit.com}}, udp: true, tfo: false}
   - {name: "`", server: 45.82.136.188, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c9ffd52c-3907-4c93-9bce-c30c5af509ac, servername: webassets.cafebazaar.ir, network: ws, ws-opts: {path: /, headers: {Host: webassets.cafebazaar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -482,6 +484,8 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - Amirstar`
+      - Amirstar` 2
       - "`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -489,6 +493,8 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - Amirstar`
+      - Amirstar` 2
       - "`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -496,6 +502,8 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - Amirstar`
+      - Amirstar` 2
       - "`"
   - name: اتصال پایدار 🔗
     type: url-test
@@ -512,6 +520,8 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - Amirstar`
+      - Amirstar` 2
       - "`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -519,6 +529,8 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - Amirstar`
+      - Amirstar` 2
       - "`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -526,6 +538,8 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - Amirstar`
+      - Amirstar` 2
       - "`"
   - name: دانلود منیجر 📥
     type: select

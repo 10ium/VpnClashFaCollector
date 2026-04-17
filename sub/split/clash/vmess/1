@@ -466,9 +466,10 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: "", server: 66.181.36.174, port: 52914, type: vmess, uuid: 8ae1c2f0-3127-49ac-acad-def55b04c231, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: " 2", server: 67.220.72.237, port: 22324, type: vmess, uuid: 04621bae-ab36-11ec-b909-0242ac120002, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "🇺🇸 [openproxylist.com] vmess-US", server: 216.167.43.29, port: 3438, type: vmess, uuid: 01d3482e-27f5-4eac-ab5e-906787bb32ef, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}, udp: true, tfo: false}
-  - {name: "@filembad", server: zorf.marzxox.biz, port: 14298, type: vmess, uuid: 9e3ba37f-1811-462b-8996-4b782efbd1eb, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Trxlns 20Gb", server: star.p40.site, port: 5678, type: vmess, uuid: 4b22767a-51fe-410d-b929-13ba4a7c036a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad", server: 217.218.52.1, port: 11182, type: vmess, uuid: f62d2411-c34d-460b-a93e-b789e03ca8b3, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 2", server: a.iranfilm.online, port: 11333, type: vmess, uuid: 9bd9defb-2995-416c-99a4-68a199e51dca, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,9 +487,10 @@ proxy-groups:
     type: select
     proxies:
       - ""
+      - " 2"
       - 🇺🇸 [openproxylist.com] vmess-US
       - "@filembad"
-      - "@Trxlns 20Gb"
+      - "@filembad 2"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -496,9 +498,10 @@ proxy-groups:
     tolerance: 50
     proxies:
       - ""
+      - " 2"
       - 🇺🇸 [openproxylist.com] vmess-US
       - "@filembad"
-      - "@Trxlns 20Gb"
+      - "@filembad 2"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -506,9 +509,10 @@ proxy-groups:
     tolerance: 50
     proxies:
       - ""
+      - " 2"
       - 🇺🇸 [openproxylist.com] vmess-US
       - "@filembad"
-      - "@Trxlns 20Gb"
+      - "@filembad 2"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -525,9 +529,10 @@ proxy-groups:
     interval: 600
     proxies:
       - ""
+      - " 2"
       - 🇺🇸 [openproxylist.com] vmess-US
       - "@filembad"
-      - "@Trxlns 20Gb"
+      - "@filembad 2"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -535,9 +540,10 @@ proxy-groups:
     interval: 600
     proxies:
       - ""
+      - " 2"
       - 🇺🇸 [openproxylist.com] vmess-US
       - "@filembad"
-      - "@Trxlns 20Gb"
+      - "@filembad 2"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -545,9 +551,10 @@ proxy-groups:
     interval: 600
     proxies:
       - ""
+      - " 2"
       - 🇺🇸 [openproxylist.com] vmess-US
       - "@filembad"
-      - "@Trxlns 20Gb"
+      - "@filembad 2"
   - name: دانلود منیجر 📥
     type: select
     proxies:

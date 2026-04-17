@@ -469,10 +469,11 @@ proxies:
   - {name: "@vasl_bashim` 2", server: 8.6.112.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 651a858c-2975-4b96-96b7-82745b38714c, servername: api.frest.ir, alpn: [http%2F1.1], network: ws, ws-opts: {path: /WITH_CHACHA20_POLY1305_SHA256, headers: {Host: api.frest.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@vasl_bashim` 3", server: login.rayanserv.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 6847c9af-9ed8-4f01-8da6-7e2aaacae676, network: ws, ws-opts: {path: /, headers: {Host: login.rayanserv.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@vasl_bashim` 4", server: 185.143.234.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 89d90963-e99a-4ed1-b5c5-f656e6ed5044, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim` 5", server: snapp.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: b885e321-a380-455b-b717-44c543491c29, network: ws, ws-opts: {path: /, headers: {Host: cm.programming-coding.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim` 5", server: 37.152.190.119, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: a9b51066-137b-48ef-a54a-0c220028882b, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim` 6", server: snapp.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: b885e321-a380-455b-b717-44c543491c29, network: ws, ws-opts: {path: /, headers: {Host: cm.programming-coding.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@vasl_bashim", server: link2x12493.temp.veraspeed.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: c6a12a94-4804-494e-93eb-8364f258959b, network: ws, ws-opts: {path: /filimo-video/177430809054030600/1774365690/cb857b0770767a2b38b3ebc9d4c44d7fc5630fdd/196328x264new1-1080p.mp4/s-20-v1-a1.ts, headers: {Host: byebye.22.avenflow.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@vasl_bashim 2", server: trailers.sv1.cdn.yoozmovie.com, port: 16771, type: vless, tls: true, packet-encoding: xudp, uuid: ca3f80bd-a13e-42f2-90fe-c909ca12b6f4, host: google.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim` 6", server: 45.82.136.188, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f9d9a8e6-7df0-4c7b-bb2d-97d1c7e14f1f, servername: webassets.cafebazaar.ir, network: ws, ws-opts: {path: /, headers: {Host: webassets.cafebazaar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim` 7", server: 45.82.136.188, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f9d9a8e6-7df0-4c7b-bb2d-97d1c7e14f1f, servername: webassets.cafebazaar.ir, network: ws, ws-opts: {path: /, headers: {Host: webassets.cafebazaar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -494,9 +495,10 @@ proxy-groups:
       - "@vasl_bashim` 3"
       - "@vasl_bashim` 4"
       - "@vasl_bashim` 5"
+      - "@vasl_bashim` 6"
       - "@vasl_bashim"
       - "@vasl_bashim 2"
-      - "@vasl_bashim` 6"
+      - "@vasl_bashim` 7"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -508,9 +510,10 @@ proxy-groups:
       - "@vasl_bashim` 3"
       - "@vasl_bashim` 4"
       - "@vasl_bashim` 5"
+      - "@vasl_bashim` 6"
       - "@vasl_bashim"
       - "@vasl_bashim 2"
-      - "@vasl_bashim` 6"
+      - "@vasl_bashim` 7"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -522,9 +525,10 @@ proxy-groups:
       - "@vasl_bashim` 3"
       - "@vasl_bashim` 4"
       - "@vasl_bashim` 5"
+      - "@vasl_bashim` 6"
       - "@vasl_bashim"
       - "@vasl_bashim 2"
-      - "@vasl_bashim` 6"
+      - "@vasl_bashim` 7"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -545,9 +549,10 @@ proxy-groups:
       - "@vasl_bashim` 3"
       - "@vasl_bashim` 4"
       - "@vasl_bashim` 5"
+      - "@vasl_bashim` 6"
       - "@vasl_bashim"
       - "@vasl_bashim 2"
-      - "@vasl_bashim` 6"
+      - "@vasl_bashim` 7"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -559,9 +564,10 @@ proxy-groups:
       - "@vasl_bashim` 3"
       - "@vasl_bashim` 4"
       - "@vasl_bashim` 5"
+      - "@vasl_bashim` 6"
       - "@vasl_bashim"
       - "@vasl_bashim 2"
-      - "@vasl_bashim` 6"
+      - "@vasl_bashim` 7"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -573,9 +579,10 @@ proxy-groups:
       - "@vasl_bashim` 3"
       - "@vasl_bashim` 4"
       - "@vasl_bashim` 5"
+      - "@vasl_bashim` 6"
       - "@vasl_bashim"
       - "@vasl_bashim 2"
-      - "@vasl_bashim` 6"
+      - "@vasl_bashim` 7"
   - name: دانلود منیجر 📥
     type: select
     proxies:
