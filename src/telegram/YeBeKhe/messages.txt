@@ -1,5 +1,333 @@
 # آرشیو کانال: @YeBeKhe
-بروزرسانی: 2026-04-18 10:34:41 UTC
+بروزرسانی: 2026-04-18 20:27:59 UTC
+
+### 🕒 2026-04-18 18:18:11 UTC
+سایتهای جدیدی که دقایقی پیش در اکثر اینترنت ها باز شده اند :
+[sciencedirect.com](http://sciencedirect.com/)
+ 
+[github.com](http://github.com/)
+[e7.c.lencr.org](http://e7.c.lencr.org/)
+ 
+[npmjs.com](http://npmjs.com/)
+
+---
+
+### 🕒 2026-04-18 14:10:18 UTC
+کانفیگ جیسون + Fragment 
+برای نت های ضعیف‌تر
+***💚***
+{
+  "LISTEN_HOST": "0.0.0.0",
+  "LISTEN_PORT": 40443,
+  "CONNECT_IP": "104.19.229.21",
+  "CONNECT_PORT": 443,
+  "FAKE_SNI": "hcaptcha.com",
+  "BYPASS_METHOD": "fragment",
+  "FRAGMENT_STRATEGY": "sni_split",
+  "FRAGMENT_DELAY": 0.1,
+  "USE_TTL_TRICK": false,
+  "FAKE_SNI_METHOD": "prefix_fake",
+  "SCANNER_ENABLED": false,
+  "SCANNER_COUNT": 100,
+  "SCANNER_CONCURRENCY": 16,
+  "SCANNER_TIMEOUT": 4.0,
+  "SCANNER_TEST_DOWNLOAD": false,
+  "SCANNER_RESCAN_INTERVAL": 0,
+  "SCANNER_CACHE": "",
+  "SCANNER_TOP_N": 10,
+  "SCANNER_CUSTOM_RANGES": [],
+  "SNI_DOMAINS": []
+}
+[@Patternihaaa](https://t.me/Patternihaaa)
+
+---
+
+### 🕒 2026-04-18 14:10:17 UTC
+ورژن گرافیکی SNI Spoof
+دوستانی که با نرم‌افزار قبلی مشکل دارن اینو تست کنن
+[https://github.com/atarevals/SNI-Spoofing/releases](https://github.com/atarevals/SNI-Spoofing/releases)
+داخلی 
+[https://my.files.ir/drive/s/L3p8XC9S4C5olugIkn819e59KdVyHe](https://my.files.ir/drive/s/L3p8XC9S4C5olugIkn819e59KdVyHe)
+مراحل:
+Run as administrator  
+مثل تصویر مقادیر تغییر بدید و استارت کنید
+سپس به کانفیگ های زیر متصل‌شید: 
+trojan://humanity@127.0.0.1:40443?security=tls&sni=www.creationlong.org&insecure=1&allowInsecure=1&type=ws&host=www.creationlong.org&path=%2Fassignment#Patternihaaa
+vless://a01daac7-1e65-4645-854d-b47d226f6b08@127.0.0.1:40443?encryption=none&security=tls&sni=y6-3cj.PAgES.DEV&insecure=0&allowInsecure=0&type=ws&host=y6-3cj.PAgES.DEV&path=%2F#Patternihaaa
+[@Patternihaaa](https://t.me/Patternihaaa)
+
+---
+
+### 🕒 2026-04-18 13:48:32 UTC
+**لینک داخلی نسخه اسلیپنت ۲.۵.۲**
+Slipnet 2.5.2
+Full universal 
+[http://kalbod-team.ir/f/c709ac71778b4839](http://kalbod-team.ir/f/c709ac71778b4839)
+Full V8a
+[http://kalbod-team.ir/f/0b5ad4a22d3f41b5](http://kalbod-team.ir/f/0b5ad4a22d3f41b5)
+•••••••••••••
+Lite universal 
+[http://kalbod-team.ir/f/20773593e61f471f](http://kalbod-team.ir/f/20773593e61f471f)
+Lite V8a
+[http://kalbod-team.ir/f/84fe354d06f744d1](http://kalbod-team.ir/f/84fe354d06f744d1)
+Lite V7a
+[http://kalbod-team.ir/f/03d31889a2424a08](http://kalbod-team.ir/f/03d31889a2424a08)
+[@ConfigWireguard](https://t.me/ConfigWireguard)
+
+---
+
+### 🕒 2026-04-18 13:48:32 UTC
+SlipNet v2.5.2 — Changelog  New Tunnel: VLESS over CDN  - VLESS over WebSocket through any CDN IP (Cloudflare tested). Routes UUID + raw TCP payload through the CDN edge to your server. - WebSocket is the only transport currently exposed in the UI — importing…
+
+---
+
+### 🕒 2026-04-18 13:48:31 UTC
+**SlipNet v2.5.2 — Changelog**
+**New Tunnel: VLESS over CDN**
+- VLESS over WebSocket through any CDN IP (Cloudflare tested). Routes UUID + raw TCP payload through the CDN edge to your server.
+- 
+**WebSocket is the only transport currently exposed in the UI — importing a VLESS URI with a non-WebSocket transport (tcp, grpc, kcp, etc.) surfaces a warning and is skipped.**
+- Reality URIs are accepted but downgraded to plain TLS; XTLS-Vision flows are silently ignored. (A raw-TCP VLESS path exists inside the bridge for future use but is not reachable from the profile editor or the URI importer.)
+- Built-in local SOCKS5 front — works in both VPN and proxy-only modes.
+---
+**SNI Fragmentation (DPI Bypass)**
+Six strategies (selectable per profile):
+- 
+**Micro ★★**
+ — 1 byte per TLS record + forced TCP MSS cap. Strongest against reassembling DPI; reduces post-handshake throughput.
+- 
+**Multi ★**
+ — 16–40 byte TLS records with random jitter. Balanced stealth and speed.
+- 
+**Disorder ★**
+ — TTL-bombs the first half so packets arrive out of order. Defeats in-order reassembly DPI.
+- 
+**Fake**
+ — Sends a decoy ClientHello (custom hostname) with low TTL; kernel retransmit delivers the real one after DPI decision.
+- 
+**SNI Split**
+ — Classic byte-split inside the SNI hostname. Low overhead.
+- 
+**Half**
+ — Splits the ClientHello in half. Fallback when SNI location cannot be parsed.
+**Advanced options (Profile Editor):**
+- 
+**Decoy Hostname (Fake)**
+ — Any allowed SNI (default: 
+`www.google.com`
+). Truncated or space-padded to match real hostname length.
+- 
+**Decoy TTL (Fake / Disorder)**
+ — 1–64 hops. Must expire between local DPI and CDN edge.
+- 
+**Fragment Delay**
+ — ~50 ms (normal networks), 300–500 ms (aggressive DPI).
+- 
+**Force TCP MSS**
+ — 
+`0`
+ = auto (Micro / padding only), 
+`40–1400`
+ = explicit cap, negative = disabled.
+- 
+**ClientHello Padding**
+ — Micro-fragments every byte (~6× overhead).
+- 
+**TLS SNI Override**
+ — Replace handshake SNI (domain fronting).
+- 
+**WS Header Obfuscation**
+ — Browser-like randomized WebSocket upgrade headers.
+- 
+**WS Cover Traffic**
+ — Random-size ping frames during relay.
+---
+**Locked profiles**
+- VayDNS advanced settings are now editable on locked profiles. The full block (Response Record Type, Query Length, Query Rate Limit, Idle Timeout, Keepalive, UDP Timeout) renders in the locked-profile editor, so users can tune wire-level DNS behavior without needing the unlocked config. Core connection fields (server, UUID, resolvers) remain locked.
+**Server Reachability & Profile Sorting**
+- 
+**Sort by ping**
+ — Reorders profiles by latency (fastest first). Failed profiles sink to bottom; order persists.
+- 
+**Improved DNS-tunnel testing (DNSTT, NoizDNS, VayDNS + SSH):**
+  - Iterates resolvers sequentially; fails only if all fail or time budget is exhausted.
+  - Hard timeout prevents slow profiles from blocking the entire test.
+  - Uses isolated ephemeral tunnel clients (unique ports) instead of shared bridges → fixes 
+`Bridge start failed`
+ / port collisions.
+  - Stops after tunnel handshake (Noise + KCP + smux + SOCKS5 / SSH banner). Avoids false negatives from external fetch checks.
+- 
+**VLESS testing**
+ now targets CDN edge directly (
+`cdnIp:cdnPort`
+) to match real TLS/WS behavior.
+---
+**Fixes**
+- VayDNS / VayDNS+SSH traffic stats now update correctly in proxy-only mode (previously stuck at 0).
+
+---
+
+### 🕒 2026-04-18 13:48:22 UTC
+برای گوشی ترموکس روت لازم داره
+
+---
+
+### 🕒 2026-04-18 13:48:22 UTC
+***☠️***
+آموزش روش جدید و قدرتمند SNI Spoofing - اتصال رایگان و بدون هزینه به اینترنت آزاد!   دانلود فایل نرم افزار:  دانلود از تلگرام | لینک پروژه در گیتهاب | لینک دانلود داخلی | لینک دانلود داخلی۲  توی این ویدیو آموزش کامل و قدم‌به‌قدم می‌دم که چطور بتونید به صورت…
+
+---
+
+### 🕒 2026-04-18 13:48:21 UTC
+[**#Spoof**](?q=%23Spoof)
+** |  تنظیمات اتصال جدید✅از این تنظیمات برای اتصال از روش Spoof استفاده کنید**
+**محتوای فایل Config.json**
+****
+{
+"LISTEN_HOST": "0.0.0.0",
+  "LISTEN_PORT": 40443,
+  "CONNECT_IP": "104.18.13.149",
+  "CONNECT_PORT": 443,
+  "FAKE_SNI": "sourceforge.net"
+}
+-----
+{
+  "LISTEN_HOST": "0.0.0.0",
+  "LISTEN_PORT": 40443,
+  "CONNECT_IP": "188.114.98.0",
+  "CONNECT_PORT": 443,
+  "FAKE_SNI": "tandfonline.com"
+}
+-----
+{
+  "LISTEN_HOST": "0.0.0.0",
+  "LISTEN_PORT": 40443,
+  "CONNECT_IP": "104.16.79.73",
+  "CONNECT_PORT": 443,
+  "FAKE_SNI": "static.cloudflareinsights.com"
+}
+-----
+{
+  "LISTEN_HOST": "0.0.0.0",
+  "LISTEN_PORT": 40443,
+  "CONNECT_IP": "104.19.229.21",
+  "CONNECT_PORT": 443,
+  "FAKE_SNI": "hcaptcha.com"
+}
+-----
+{
+  "LISTEN_HOST": "0.0.0.0",
+  "LISTEN_PORT": 40443,
+  "CONNECT_IP": "104.19.230.21",
+  "CONNECT_PORT": 443,
+  "FAKE_SNI": "hcaptcha.com"
+}
+----
+{
+  "LISTEN_HOST": "0.0.0.0",
+  "LISTEN_PORT": 40443,
+  "CONNECT_IP": "104.18.4.130",
+  "CONNECT_PORT": 443,
+  "FAKE_SNI": "security.vercel.com"
+}
+----
+{
+  "LISTEN_HOST": "0.0.0.0",
+  "LISTEN_PORT": 40443,
+  "CONNECT_IP": "104.18.17.56",
+  "CONNECT_PORT": 443,
+  "FAKE_SNI": "a.fsdn.com",
+  "QUEUE_NUM": 100,
+  "HANDSHAKE_TIMEOUT_MS": 2000
+}
+----
+{
+  "LISTEN_HOST": "0.0.0.0",
+  "LISTEN_PORT": 40443,
+  "CONNECT_IP": "104.19.229.21",
+  "CONNECT_PORT": 443,
+  "FAKE_SNI": "data.hcaptcha.com"
+}
+** 🟢روش جدید برای بهتر وصل شدن :اشتراک حرفه ای DNS شکن رو باید داشته باشید و یا کنید روی سیستم و بعد از سایت **
+[**cdnjs.com**](http://cdnjs.com/)
+** که پشت کلود هست و فقط با شکن میاد استفاده کنید.با این روش میشه از سایت های دیگه هم برای SNI بجای hcaptcha استفاده کرد تا وقتی شکن وصله✅🟢این Sni با ترکیب DNS حرفه ای شکن وصله**
+***✅***
+{
+  "LISTEN_HOST": "0.0.0.0",
+  "LISTEN_PORT": 40443,
+  "CONNECT_IP": "104.19.229.21",
+  "CONNECT_PORT": 443,
+  "FAKE_SNI": "cdnjs.com"
+}
+**اگه برنامه بهتون لاگ میده🟢ولی متصل نمیشید از کانفیگ های پست های بالا تست کنید✅**
+
+---
+
+### 🕒 2026-04-18 13:48:20 UTC
+آموزش متنی مرحله به مرحله و خیلی ساده SNI Spoofing  
+۱. دانلود برنامه Patterniha  
+[لینک پروژه در گیتهاب](https://github.com/patterniha/SNI-Spoofing/releases)
+  |  
+[لینک دانلود داخلی](http://kalbod-team.ir/f/c59324e7756b43e7)
+۲. استخراج فایل‌ها  
+فایل رو استخراج کنین. داخل پوشه باید فایل Patterniha.exe باشه.
+۳. فایل JSON رو آماده کنین  
+تو همون پوشه‌ای که Patterniha.exe هست، فایل config.json رو ویرایش کنین
+بعد این محتوا رو دقیق کپی کنین داخلش:
+{
+  "LISTEN_HOST": "0.0.0.0",
+  "LISTEN_PORT": 40443,
+  "CONNECT_IP": "104.19.229.21",
+  "CONNECT_PORT": 443,
+  "FAKE_SNI": "www.hcaptcha.com",
+  "QUEUE_NUM": 1000,
+  "HANDSHAKE_TIMEOUT_MS": 2000
+}
+۴. برنامه رو اجرا کنین  
+- روی فایل Patterniha.exe راست کلیک کنین  
+- گزینه Run as administrator رو بزنین (خیلی مهمه!)
+۵. کانفیگ V2Ray/Xray/Nekobox/v2rayNG رو تنظیم کنین  
+تو کانفیگی که داری فقط این دو تا رو عوض کن:
+- Address یا آدرس سرور → 
+[127.0.0.1](http://127.0.0.1/)
+  
+- Port یا پورت → 40443
+بقیه چیزا (UUID، path، TLS، Reality و ...) رو همون قبلی نگه دار.
+کانفیگ رو ذخیره کن و بزن Connect. باید وصل بشه.
+[روش اتصال گوشی و نیازمند ترموکس و روت](https://t.me/ConfigWireguard/31450)
+
+---
+
+### 🕒 2026-04-18 13:48:20 UTC
+***☠️***
+آموزش روش جدید و قدرتمند SNI Spoofing - اتصال رایگان و بدون هزینه به اینترنت آزاد!
+دانلود فایل نرم افزار: 
+[دانلود از تلگرام](https://t.me/MatinSenPaii/2617)
+ | 
+[لینک پروژه در گیتهاب](https://github.com/patterniha/SNI-Spoofing/releases)
+ | 
+[لینک دانلود داخلی](http://kalbod-team.ir/f/c59324e7756b43e7)
+ | 
+[لینک دانلود داخلی۲](https://www.uploadina.com/23a716ae1912896d/SNI-Spoofing-by-patt-1vrggx.rar)
+توی این ویدیو آموزش کامل و قدم‌به‌قدم می‌دم که چطور بتونید به صورت کاملا رایگان با SNI-Spoofing با سرعت اینترنت خودتون متصل بشید!
+[تماشا در تلگرام](https://t.me/MatinSenPaii/2626)
+  |  
+[تماشا در یوتوب](https://youtu.be/dujMBt4sCpw)
+ | 
+[دانلود اموزش با لینک داخلی](http://kalbod-team.ir/f/141ccb1048ef4bfa)
+نکات مهم:
+اگه پترنیها ران نشد یه بار از کانفیگ real delay بگیرن استارت میشه
+- همیشه Patterniha رو به عنوان مدیر (Run as administrator) اجرا کن.
+- اگه ویندوز فایروال پرسید، اجازه دسترسی بده.
+- اگه وصل نشد: برنامه رو Stop کن، دوباره Start کن، یا یه config.json جدید با IP دیگه امتحان کن
+﻿
+لینک آخرین نسخه V2rayN دسکتاپ: " 
+[http://kalbod-team.ir/f/8addd29352714b1b](http://kalbod-team.ir/f/8addd29352714b1b)
+ "
+[روش اتصال گوشی و نیازمند ترموکس و روت](https://t.me/ConfigWireguard/31450)
+[نمونه فایل config.json](https://t.me/ConfigWireguard/31448)
+
+---
 
 ### 🕒 2026-04-18 09:56:23 UTC
 [https://t.me/yebekhe/2786](https://t.me/yebekhe/2786)
@@ -18,25 +346,6 @@
 پرزیدنت ترامپ: «نمی‌دانم. شاید آن را تمدید نکنم — اما محاصره باقی خواهد ماند... متأسفانه مجبور خواهیم شد دوباره بمباران را آغاز کنیم.» 
 ***💣***
 ***🚫***
-
----
-
-### 🕒 2026-04-17 15:59:56 UTC
-ترامپ به رویترز گفت: 
-ایالات متحده محاصره تنگه هرمز را تا زمانی که توافق با ایران نهایی شود، حفظ خواهد کرد. 
-***🚢***
-***🚫***
-***🇺🇸***
-***🇮🇷***
-آمریکا با ایران همکاری خواهد کرد تا اورانیوم غنی‌شده خود را بازیابی کرده و آن را به آمریکا بازگرداند. 
-***🔄***
-ما با سرعتی آرام برای بازیابی اورانیوم وارد عمل خواهیم شد. 
-***🐢***
-***⚛️***
-ترامپ می‌گوید پس از رسیدن به توافق، ممکن است به اسلام‌آباد سفر کند، اما هنوز این تصمیم را اتخاذ نکرده است. 
-***🤔***
-***✈️***
-***🇵🇰***
 
 ---
 

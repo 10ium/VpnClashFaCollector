@@ -5,46 +5,67 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@SPEEDS_VPN-جوین-بشید`", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: d4db42fc-351d-48a2-ac8b-b67446bffb33, network: ws, ws-opts: {path: /, headers: {Host: sv1-dl.persianmusics.site}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN`", server: 185.143.232.32, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 1631b7ec-f378-45c9-b837-24b77041692f, network: ws, ws-opts: {path: /, headers: {Host: ir-st5.ge9.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN` 2", server: 45.82.138.240, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 3f6e9fc6-90ac-4137-8bb9-f29be4f0843c, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 52dd2455-b2ce-4a04-a075-0b7f2bde9989, network: ws, ws-opts: {path: /, headers: {Host: sv1-dl.persianmusics.site}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN 2", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: cfee0059-5510-4934-a728-52728ec227b2, network: ws, ws-opts: {path: /, headers: {Host: sv1-dl.persianmusics.site}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@SPEEDS_VPN-جوین-بشید`"
+      - "***🐦‍🔥***-@SPEEDS_VPN`"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN"
+      - "***🐦‍🔥***-@SPEEDS_VPN 2"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@SPEEDS_VPN-جوین-بشید`"
+      - "***🐦‍🔥***-@SPEEDS_VPN`"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN"
+      - "***🐦‍🔥***-@SPEEDS_VPN 2"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@SPEEDS_VPN-جوین-بشید`"
+      - "***🐦‍🔥***-@SPEEDS_VPN`"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN"
+      - "***🐦‍🔥***-@SPEEDS_VPN 2"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@SPEEDS_VPN-جوین-بشید`"
+      - "***🐦‍🔥***-@SPEEDS_VPN`"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN"
+      - "***🐦‍🔥***-@SPEEDS_VPN 2"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@SPEEDS_VPN-جوین-بشید`"
+      - "***🐦‍🔥***-@SPEEDS_VPN`"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN"
+      - "***🐦‍🔥***-@SPEEDS_VPN 2"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@SPEEDS_VPN-جوین-بشید`"
+      - "***🐦‍🔥***-@SPEEDS_VPN`"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN"
+      - "***🐦‍🔥***-@SPEEDS_VPN 2"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +93,10 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@SPEEDS_VPN-جوین-بشید`"
+      - "***🐦‍🔥***-@SPEEDS_VPN`"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN"
+      - "***🐦‍🔥***-@SPEEDS_VPN 2"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

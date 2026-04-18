@@ -5,67 +5,74 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@kamkarstore", server: arvancloud.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: adc273e9-ea91-4835-acac-ea6e4b27aa34, network: ws, ws-opts: {path: "@TunizoNET", headers: {Host: dom.amirenzohost.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@kamkarstore 2", server: arvancloud.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: c27cf658-8ea9-436b-9c9d-cb2866563cba, network: ws, ws-opts: {path: "@TunizoNET", headers: {Host: dom.amirenzohost.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@kamkarstore 3", server: 172.64.152.100, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d37a75db-76b6-4db8-b213-0d5b044d138d, servername: hio-awx.pages.dev, network: ws, ws-opts: {path: /, headers: {Host: hio-awx.pages.dev}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Masyakata", server: arvancloud.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: d83ab7c4-95f8-4812-8b68-6172a8f747a0, network: ws, ws-opts: {path: "@TunizoNET", headers: {Host: dom.amirenzohost.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: telegram.nexoraservre1.top:48563, server: telegram.nexoraservre1.top, port: 48563, type: vless, tls: true, packet-encoding: xudp, uuid: 14aeee66-501d-4f93-811b-9e2732dbe00f, host: telegram.nexoraservre1.top, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@UnNurmal`", server: telegram.nexoraservre1.top, port: 48563, type: vless, tls: true, packet-encoding: xudp, uuid: 14aeee66-501d-4f93-811b-9e2732dbe00f, host: telegram.nexoraservre1.top, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@UnNurmal", server: telegram.nexoraservre1.top, port: 48563, type: vless, tls: true, packet-encoding: xudp, uuid: 14aeee66-501d-4f93-811b-9e2732dbe00f, host: telegram.nexoraservre1.top, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Masyakata", server: 45.82.138.240, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 3f6e9fc6-90ac-4137-8bb9-f29be4f0843c, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@UnNurmal 2", server: 37.152.189.74, port: 4431, type: vless, tls: true, packet-encoding: xudp, uuid: 42b0eed5-d850-4b13-a4e8-0f8a093cbed4, network: ws, ws-opts: {path: /ek/irinn/live/1080p/, headers: {Host: live-azd1102.telewebion.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@kamkarstore"
-      - "@kamkarstore 2"
-      - "@kamkarstore 3"
+      - telegram.nexoraservre1.top:48563
+      - "@UnNurmal`"
+      - "@UnNurmal"
       - "@Masyakata"
+      - "@UnNurmal 2"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@kamkarstore"
-      - "@kamkarstore 2"
-      - "@kamkarstore 3"
+      - telegram.nexoraservre1.top:48563
+      - "@UnNurmal`"
+      - "@UnNurmal"
       - "@Masyakata"
+      - "@UnNurmal 2"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@kamkarstore"
-      - "@kamkarstore 2"
-      - "@kamkarstore 3"
+      - telegram.nexoraservre1.top:48563
+      - "@UnNurmal`"
+      - "@UnNurmal"
       - "@Masyakata"
+      - "@UnNurmal 2"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@kamkarstore"
-      - "@kamkarstore 2"
-      - "@kamkarstore 3"
+      - telegram.nexoraservre1.top:48563
+      - "@UnNurmal`"
+      - "@UnNurmal"
       - "@Masyakata"
+      - "@UnNurmal 2"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@kamkarstore"
-      - "@kamkarstore 2"
-      - "@kamkarstore 3"
+      - telegram.nexoraservre1.top:48563
+      - "@UnNurmal`"
+      - "@UnNurmal"
       - "@Masyakata"
+      - "@UnNurmal 2"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@kamkarstore"
-      - "@kamkarstore 2"
-      - "@kamkarstore 3"
+      - telegram.nexoraservre1.top:48563
+      - "@UnNurmal`"
+      - "@UnNurmal"
       - "@Masyakata"
+      - "@UnNurmal 2"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -93,10 +100,11 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@kamkarstore"
-      - "@kamkarstore 2"
-      - "@kamkarstore 3"
+      - telegram.nexoraservre1.top:48563
+      - "@UnNurmal`"
+      - "@UnNurmal"
       - "@Masyakata"
+      - "@UnNurmal 2"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
