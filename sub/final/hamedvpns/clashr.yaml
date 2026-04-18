@@ -5,60 +5,46 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "`", server: 94.101.179.129, port: 27216, type: vless, tls: true, packet-encoding: xudp, uuid: 616db6a6-24b8-4d1f-8234-72bfb44fac80, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: hp, server: 5.239.245.250, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.indevs.in, network: ws, ws-opts: {path: /, headers: {Host: sni.111000.indevs.in}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: hp71, server: 8.6.112.0, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.jpmj.dev, network: ws, ws-opts: {path: /, headers: {Host: sni.jpmj.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hamedvpns`, server: 45.82.136.188, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f9d9a8e6-7df0-4c7b-bb2d-97d1c7e14f1f, servername: webassets.cafebazaar.ir, network: ws, ws-opts: {path: /, headers: {Host: webassets.cafebazaar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "`"
-      - hp
-      - hp71
+      - hamedvpns`
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "`"
-      - hp
-      - hp71
+      - hamedvpns`
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "`"
-      - hp
-      - hp71
+      - hamedvpns`
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "`"
-      - hp
-      - hp71
+      - hamedvpns`
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "`"
-      - hp
-      - hp71
+      - hamedvpns`
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "`"
-      - hp
-      - hp71
+      - hamedvpns`
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -86,9 +72,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "`"
-      - hp
-      - hp71
+      - hamedvpns`
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

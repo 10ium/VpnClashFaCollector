@@ -465,9 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "`", server: 94.101.179.129, port: 27216, type: vless, tls: true, packet-encoding: xudp, uuid: 616db6a6-24b8-4d1f-8234-72bfb44fac80, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: hp, server: 5.239.245.250, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.indevs.in, network: ws, ws-opts: {path: /, headers: {Host: sni.111000.indevs.in}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: hp71, server: 8.6.112.0, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.jpmj.dev, network: ws, ws-opts: {path: /, headers: {Host: sni.jpmj.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hamedvpns`, server: 45.82.136.188, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f9d9a8e6-7df0-4c7b-bb2d-97d1c7e14f1f, servername: webassets.cafebazaar.ir, network: ws, ws-opts: {path: /, headers: {Host: webassets.cafebazaar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,27 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "`"
-      - hp
-      - hp71
+      - hamedvpns`
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "`"
-      - hp
-      - hp71
+      - hamedvpns`
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "`"
-      - hp
-      - hp71
+      - hamedvpns`
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -520,27 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "`"
-      - hp
-      - hp71
+      - hamedvpns`
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "`"
-      - hp
-      - hp71
+      - hamedvpns`
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "`"
-      - hp
-      - hp71
+      - hamedvpns`
   - name: دانلود منیجر 📥
     type: select
     proxies:

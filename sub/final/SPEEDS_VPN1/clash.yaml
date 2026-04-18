@@ -465,8 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`", server: 185.143.234.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 53a087ef-2863-4e4a-9480-1c6c6c996f37, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید", server: 78.157.53.235, port: 35651, type: vless, tls: true, packet-encoding: xudp, uuid: GozargahAzadi, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@SPEEDS_VPN-جوین-بشید`", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: d4db42fc-351d-48a2-ac8b-b67446bffb33, network: ws, ws-opts: {path: /, headers: {Host: sv1-dl.persianmusics.site}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`"
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید"
+      - "@SPEEDS_VPN-جوین-بشید`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`"
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید"
+      - "@SPEEDS_VPN-جوین-بشید`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`"
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید"
+      - "@SPEEDS_VPN-جوین-بشید`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`"
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید"
+      - "@SPEEDS_VPN-جوین-بشید`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`"
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید"
+      - "@SPEEDS_VPN-جوین-بشید`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`"
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید"
+      - "@SPEEDS_VPN-جوین-بشید`"
   - name: دانلود منیجر 📥
     type: select
     proxies:
