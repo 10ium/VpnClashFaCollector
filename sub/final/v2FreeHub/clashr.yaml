@@ -5,46 +5,46 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@v2FreeHub`", server: 185.143.234.235, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 9a73c3b2-d483-42f7-8bd4-bd6e3dc5a5ec, network: ws, ws-opts: {path: /, headers: {Host: ire.binping.lol}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2FreeHub 🇫🇮`", server: 91.108.241.188, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 4180cade-7ec7-4da7-8d0e-3c04636a514b, servername: joss.gvpn2.web.id, network: ws, ws-opts: {path: /Free-VPN-CF-Geo-Project/91.108.241.188=8443, headers: {Host: joss.gvpn2.web.id}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@v2FreeHub`"
+      - "@v2FreeHub 🇫🇮`"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@v2FreeHub`"
+      - "@v2FreeHub 🇫🇮`"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@v2FreeHub`"
+      - "@v2FreeHub 🇫🇮`"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@v2FreeHub`"
+      - "@v2FreeHub 🇫🇮`"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@v2FreeHub`"
+      - "@v2FreeHub 🇫🇮`"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@v2FreeHub`"
+      - "@v2FreeHub 🇫🇮`"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +72,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@v2FreeHub`"
+      - "@v2FreeHub 🇫🇮`"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

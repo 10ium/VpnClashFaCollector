@@ -465,7 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@v2FreeHub`", server: 185.143.234.235, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 9a73c3b2-d483-42f7-8bd4-bd6e3dc5a5ec, network: ws, ws-opts: {path: /, headers: {Host: ire.binping.lol}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2FreeHub 🇫🇮`", server: 91.108.241.188, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 4180cade-7ec7-4da7-8d0e-3c04636a514b, servername: joss.gvpn2.web.id, network: ws, ws-opts: {path: /Free-VPN-CF-Geo-Project/91.108.241.188=8443, headers: {Host: joss.gvpn2.web.id}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@v2FreeHub`"
+      - "@v2FreeHub 🇫🇮`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@v2FreeHub`"
+      - "@v2FreeHub 🇫🇮`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@v2FreeHub`"
+      - "@v2FreeHub 🇫🇮`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2FreeHub`"
+      - "@v2FreeHub 🇫🇮`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2FreeHub`"
+      - "@v2FreeHub 🇫🇮`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2FreeHub`"
+      - "@v2FreeHub 🇫🇮`"
   - name: دانلود منیجر 📥
     type: select
     proxies:

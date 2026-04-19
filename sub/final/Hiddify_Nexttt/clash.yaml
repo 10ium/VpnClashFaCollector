@@ -465,10 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Hiddify_Nexttt", server: telegram.nexoraservre1.top, port: 48563, type: vless, tls: true, packet-encoding: xudp, uuid: 14aeee66-501d-4f93-811b-9e2732dbe00f, host: telegram.nexoraservre1.top, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@Hiddify_Nexttt***👈***", server: snapp.ir, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: 72005558-6498-4925-a005-98583360d500, network: ws, ws-opts: {path: /rsvpn, headers: {Host: rsvpn2.xchitozx.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Hiddify_Nexttt 2", server: p.brun-tbsop.ir, port: 40408, type: vless, tls: true, packet-encoding: xudp, uuid: 74f2d518-fb8e-46d3-90a1-bd74b10b5cce, host: p.brun-tbsop.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Hiddify_Nexttt 3", server: 45.82.136.188, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f9d9a8e6-7df0-4c7b-bb2d-97d1c7e14f1f, servername: webassets.cafebazaar.ir, network: ws, ws-opts: {path: /, headers: {Host: webassets.cafebazaar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Hiddify_Nexttt", server: 45.82.136.188, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f9d9a8e6-7df0-4c7b-bb2d-97d1c7e14f1f, servername: webassets.cafebazaar.ir, network: ws, ws-opts: {path: /, headers: {Host: webassets.cafebazaar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,30 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@Hiddify_Nexttt"
       - "@Hiddify_Nexttt***👈***"
-      - "@Hiddify_Nexttt 2"
-      - "@Hiddify_Nexttt 3"
+      - "@Hiddify_Nexttt"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@Hiddify_Nexttt"
       - "@Hiddify_Nexttt***👈***"
-      - "@Hiddify_Nexttt 2"
-      - "@Hiddify_Nexttt 3"
+      - "@Hiddify_Nexttt"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@Hiddify_Nexttt"
       - "@Hiddify_Nexttt***👈***"
-      - "@Hiddify_Nexttt 2"
-      - "@Hiddify_Nexttt 3"
+      - "@Hiddify_Nexttt"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -524,30 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Hiddify_Nexttt"
       - "@Hiddify_Nexttt***👈***"
-      - "@Hiddify_Nexttt 2"
-      - "@Hiddify_Nexttt 3"
+      - "@Hiddify_Nexttt"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Hiddify_Nexttt"
       - "@Hiddify_Nexttt***👈***"
-      - "@Hiddify_Nexttt 2"
-      - "@Hiddify_Nexttt 3"
+      - "@Hiddify_Nexttt"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Hiddify_Nexttt"
       - "@Hiddify_Nexttt***👈***"
-      - "@Hiddify_Nexttt 2"
-      - "@Hiddify_Nexttt 3"
+      - "@Hiddify_Nexttt"
   - name: دانلود منیجر 📥
     type: select
     proxies:
