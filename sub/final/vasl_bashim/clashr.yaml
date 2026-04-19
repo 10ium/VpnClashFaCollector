@@ -6,7 +6,6 @@ log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
   - {name: "@vasl_bashim`", server: telegram.nexoraservre1.top, port: 48563, type: vless, tls: true, packet-encoding: xudp, uuid: 14aeee66-501d-4f93-811b-9e2732dbe00f, host: telegram.nexoraservre1.top, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim` 2", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 4b687601-6053-4e1d-847e-94d41e966377, network: ws, ws-opts: {path: /, headers: {Host: test1232-a1c43e7893-test1.apps.ir-central1.arvancaas.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -14,7 +13,6 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - "@vasl_bashim`"
-      - "@vasl_bashim` 2"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -22,7 +20,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@vasl_bashim`"
-      - "@vasl_bashim` 2"
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -30,28 +27,24 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - "@vasl_bashim`"
-      - "@vasl_bashim` 2"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@vasl_bashim`"
-      - "@vasl_bashim` 2"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - "@vasl_bashim`"
-      - "@vasl_bashim` 2"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@vasl_bashim`"
-      - "@vasl_bashim` 2"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -80,7 +73,6 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - "@vasl_bashim`"
-      - "@vasl_bashim` 2"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
