@@ -466,8 +466,9 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: "@`", server: snapp.ir, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: 72005558-6498-4925-a005-98583360d500, network: ws, ws-opts: {path: /rsvpn, headers: {Host: rsvpn2.xchitozx.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@p`", server: snapp.ir, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: 72005558-6498-4925-a005-98583360d500, network: ws, ws-opts: {path: /rsvpn, headers: {Host: rsvpn2.xchitozx.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@@proxy_kafee", server: 5g-ez.adelshoop.net, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: c5dd6e5f-55d8-47ce-80e6-641d54f28b45, network: ws, ws-opts: {path: /, headers: {Host: 5g-ez.adelshoop.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee`", server: 188.121.117.19, port: 53232, type: vless, tls: true, packet-encoding: xudp, uuid: b3aa412f-0453-4242-b36f-ab491545aac1, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: proxy_kafee`, server: 45.82.136.188, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f9d9a8e6-7df0-4c7b-bb2d-97d1c7e14f1f, servername: webassets.cafebazaar.ir, network: ws, ws-opts: {path: /, headers: {Host: webassets.cafebazaar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee` 2", server: 45.82.136.188, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f9d9a8e6-7df0-4c7b-bb2d-97d1c7e14f1f, servername: webassets.cafebazaar.ir, network: ws, ws-opts: {path: /, headers: {Host: webassets.cafebazaar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,8 +486,9 @@ proxy-groups:
     type: select
     proxies:
       - "@`"
-      - "@p`"
-      - "@@proxy_kafee"
+      - "@proxy_kafee`"
+      - proxy_kafee`
+      - "@proxy_kafee` 2"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -494,8 +496,9 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@`"
-      - "@p`"
-      - "@@proxy_kafee"
+      - "@proxy_kafee`"
+      - proxy_kafee`
+      - "@proxy_kafee` 2"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -503,8 +506,9 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@`"
-      - "@p`"
-      - "@@proxy_kafee"
+      - "@proxy_kafee`"
+      - proxy_kafee`
+      - "@proxy_kafee` 2"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -521,8 +525,9 @@ proxy-groups:
     interval: 600
     proxies:
       - "@`"
-      - "@p`"
-      - "@@proxy_kafee"
+      - "@proxy_kafee`"
+      - proxy_kafee`
+      - "@proxy_kafee` 2"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -530,8 +535,9 @@ proxy-groups:
     interval: 600
     proxies:
       - "@`"
-      - "@p`"
-      - "@@proxy_kafee"
+      - "@proxy_kafee`"
+      - proxy_kafee`
+      - "@proxy_kafee` 2"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -539,8 +545,9 @@ proxy-groups:
     interval: 600
     proxies:
       - "@`"
-      - "@p`"
-      - "@@proxy_kafee"
+      - "@proxy_kafee`"
+      - proxy_kafee`
+      - "@proxy_kafee` 2"
   - name: دانلود منیجر 📥
     type: select
     proxies:

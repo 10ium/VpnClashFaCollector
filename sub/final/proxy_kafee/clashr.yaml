@@ -6,8 +6,9 @@ log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
   - {name: "@`", server: snapp.ir, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: 72005558-6498-4925-a005-98583360d500, network: ws, ws-opts: {path: /rsvpn, headers: {Host: rsvpn2.xchitozx.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@p`", server: snapp.ir, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: 72005558-6498-4925-a005-98583360d500, network: ws, ws-opts: {path: /rsvpn, headers: {Host: rsvpn2.xchitozx.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@@proxy_kafee", server: 5g-ez.adelshoop.net, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: c5dd6e5f-55d8-47ce-80e6-641d54f28b45, network: ws, ws-opts: {path: /, headers: {Host: 5g-ez.adelshoop.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee`", server: 188.121.117.19, port: 53232, type: vless, tls: true, packet-encoding: xudp, uuid: b3aa412f-0453-4242-b36f-ab491545aac1, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: proxy_kafee`, server: 45.82.136.188, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f9d9a8e6-7df0-4c7b-bb2d-97d1c7e14f1f, servername: webassets.cafebazaar.ir, network: ws, ws-opts: {path: /, headers: {Host: webassets.cafebazaar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee` 2", server: 45.82.136.188, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f9d9a8e6-7df0-4c7b-bb2d-97d1c7e14f1f, servername: webassets.cafebazaar.ir, network: ws, ws-opts: {path: /, headers: {Host: webassets.cafebazaar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -15,8 +16,9 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - "@`"
-      - "@p`"
-      - "@@proxy_kafee"
+      - "@proxy_kafee`"
+      - proxy_kafee`
+      - "@proxy_kafee` 2"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -24,8 +26,9 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@`"
-      - "@p`"
-      - "@@proxy_kafee"
+      - "@proxy_kafee`"
+      - proxy_kafee`
+      - "@proxy_kafee` 2"
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -33,32 +36,36 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - "@`"
-      - "@p`"
-      - "@@proxy_kafee"
+      - "@proxy_kafee`"
+      - proxy_kafee`
+      - "@proxy_kafee` 2"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@`"
-      - "@p`"
-      - "@@proxy_kafee"
+      - "@proxy_kafee`"
+      - proxy_kafee`
+      - "@proxy_kafee` 2"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - "@`"
-      - "@p`"
-      - "@@proxy_kafee"
+      - "@proxy_kafee`"
+      - proxy_kafee`
+      - "@proxy_kafee` 2"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@`"
-      - "@p`"
-      - "@@proxy_kafee"
+      - "@proxy_kafee`"
+      - proxy_kafee`
+      - "@proxy_kafee` 2"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -87,8 +94,9 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - "@`"
-      - "@p`"
-      - "@@proxy_kafee"
+      - "@proxy_kafee`"
+      - proxy_kafee`
+      - "@proxy_kafee` 2"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
