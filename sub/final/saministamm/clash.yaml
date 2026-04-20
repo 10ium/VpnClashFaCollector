@@ -465,14 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: saministamm`, server: tr.tehranionliine.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 41c1375f-1e8d-47af-e526-59aa698a3b37, servername: 185.226.94.188, network: ws, ws-opts: {path: /, headers: {Host: 185.226.94.188}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@saministamm", server: 85.239.33.76, port: 4354, type: vless, tls: true, packet-encoding: xudp, uuid: 4c3a2f39-dc52-4322-ac66-83010d12bfc0, servername: apple.com, host: apple.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@saministamm`", server: 85.239.33.76, port: 4354, type: vless, tls: true, packet-encoding: xudp, uuid: 4c3a2f39-dc52-4322-ac66-83010d12bfc0, servername: apple.com, host: apple.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: https://t.me/saministamm`, server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 5377335c-508c-42e9-9e20-1f6c1eebed03, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: saministamm, server: snapp.ir, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: 72005558-6498-4925-a005-98583360d500, network: ws, ws-opts: {path: /rsvpn, headers: {Host: rsvpn2.xchitozx.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: saministamm` 2, server: snapp.ir, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: 72005558-6498-4925-a005-98583360d500, network: ws, ws-opts: {path: /rsvpn, headers: {Host: rsvpn2.xchitozx.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: saministamm 2, server: 185.143.234.235, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: c260ae7b-1166-46b0-8ae6-96753689a5e2, network: ws, ws-opts: {path: /, headers: {Host: vip.az99x.info}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@saministamm 2", server: 5g-ez.adelshoop.net, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: c5dd6e5f-55d8-47ce-80e6-641d54f28b45, network: ws, ws-opts: {path: /, headers: {Host: 5g-ez.adelshoop.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: https://t.me/saministamm`, server: 87.248.154.247, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 0c4c5758-0e85-4eb6-940f-60b48c6c76f5, host: filimo.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: saministamm`, server: snapp.ir, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: 72005558-6498-4925-a005-98583360d500, network: ws, ws-opts: {path: /rsvpn, headers: {Host: rsvpn2.xchitozx.org}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@saministamm", server: 5g-ez.adelshoop.net, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: c5dd6e5f-55d8-47ce-80e6-641d54f28b45, network: ws, ws-opts: {path: /, headers: {Host: 5g-ez.adelshoop.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@saministamm`", server: 185.143.234.120, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ee8ecba5-ccfb-4885-9a45-f1c8ebbf2d11, servername: alef.ir.oadeflantrogm.abrirmahan.com, network: ws, ws-opts: {path: "/?ed=443", headers: {Host: alef.ir.oadeflantrogm.abrirmahan.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: WiFi | @saministamm, server: 217.114.40.130, port: 5050, type: vmess, uuid: faaadda1-3584-479b-a3aa-88ca5ebe7bb7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -489,42 +486,33 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - https://t.me/saministamm`
       - saministamm`
       - "@saministamm"
       - "@saministamm`"
-      - https://t.me/saministamm`
-      - saministamm
-      - saministamm` 2
-      - saministamm 2
-      - "@saministamm 2"
+      - WiFi | @saministamm
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
+      - https://t.me/saministamm`
       - saministamm`
       - "@saministamm"
       - "@saministamm`"
-      - https://t.me/saministamm`
-      - saministamm
-      - saministamm` 2
-      - saministamm 2
-      - "@saministamm 2"
+      - WiFi | @saministamm
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
+      - https://t.me/saministamm`
       - saministamm`
       - "@saministamm"
       - "@saministamm`"
-      - https://t.me/saministamm`
-      - saministamm
-      - saministamm` 2
-      - saministamm 2
-      - "@saministamm 2"
+      - WiFi | @saministamm
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -540,42 +528,33 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - https://t.me/saministamm`
       - saministamm`
       - "@saministamm"
       - "@saministamm`"
-      - https://t.me/saministamm`
-      - saministamm
-      - saministamm` 2
-      - saministamm 2
-      - "@saministamm 2"
+      - WiFi | @saministamm
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - https://t.me/saministamm`
       - saministamm`
       - "@saministamm"
       - "@saministamm`"
-      - https://t.me/saministamm`
-      - saministamm
-      - saministamm` 2
-      - saministamm 2
-      - "@saministamm 2"
+      - WiFi | @saministamm
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - https://t.me/saministamm`
       - saministamm`
       - "@saministamm"
       - "@saministamm`"
-      - https://t.me/saministamm`
-      - saministamm
-      - saministamm` 2
-      - saministamm 2
-      - "@saministamm 2"
+      - WiFi | @saministamm
   - name: دانلود منیجر 📥
     type: select
     proxies:

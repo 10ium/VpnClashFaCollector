@@ -465,9 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "***🐦‍🔥***-@SPEEDS_VPN", server: 94.183.175.172, port: 1313, type: vless, tls: true, packet-encoding: xudp, uuid: 05b4b2a2-d9f1-46f1-848b-79f61585cf27, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "***🐦‍🔥***-@SPEEDS_VPN 2", server: snapp.ir, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: 72005558-6498-4925-a005-98583360d500, network: ws, ws-opts: {path: /rsvpn, headers: {Host: rsvpn2.xchitozx.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "***🐦‍🔥***-@SPEEDS_VPN`", server: snapp.ir, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: 72005558-6498-4925-a005-98583360d500, network: ws, ws-opts: {path: /rsvpn, headers: {Host: rsvpn2.xchitozx.org}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@SPEEDS_VPN-جوین-بدید`", server: ram.greenbookvip.online, port: 22992, type: vless, tls: true, packet-encoding: xudp, uuid: c664b00e-7410-4963-a911-b029928d2401, servername: www.aparat.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, reality-opts: {public-key: _K7LTG-QOMMaAYYW6XtVX3BHPNblhdhfCUfYVm3DDjM, short-id: 473019}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,27 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "***🐦‍🔥***-@SPEEDS_VPN"
-      - "***🐦‍🔥***-@SPEEDS_VPN 2"
-      - "***🐦‍🔥***-@SPEEDS_VPN`"
+      - "@SPEEDS_VPN-جوین-بدید`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "***🐦‍🔥***-@SPEEDS_VPN"
-      - "***🐦‍🔥***-@SPEEDS_VPN 2"
-      - "***🐦‍🔥***-@SPEEDS_VPN`"
+      - "@SPEEDS_VPN-جوین-بدید`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "***🐦‍🔥***-@SPEEDS_VPN"
-      - "***🐦‍🔥***-@SPEEDS_VPN 2"
-      - "***🐦‍🔥***-@SPEEDS_VPN`"
+      - "@SPEEDS_VPN-جوین-بدید`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -520,27 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "***🐦‍🔥***-@SPEEDS_VPN"
-      - "***🐦‍🔥***-@SPEEDS_VPN 2"
-      - "***🐦‍🔥***-@SPEEDS_VPN`"
+      - "@SPEEDS_VPN-جوین-بدید`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "***🐦‍🔥***-@SPEEDS_VPN"
-      - "***🐦‍🔥***-@SPEEDS_VPN 2"
-      - "***🐦‍🔥***-@SPEEDS_VPN`"
+      - "@SPEEDS_VPN-جوین-بدید`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "***🐦‍🔥***-@SPEEDS_VPN"
-      - "***🐦‍🔥***-@SPEEDS_VPN 2"
-      - "***🐦‍🔥***-@SPEEDS_VPN`"
+      - "@SPEEDS_VPN-جوین-بدید`"
   - name: دانلود منیجر 📥
     type: select
     proxies:
