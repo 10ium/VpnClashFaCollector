@@ -465,16 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@meliproxyy", server: clud.soonteam.top, port: 2096, type: trojan, password: 8r%3C%5B9%27l6hAO%238ZQi, sni: Koma-YT.pages.dev, skip-cert-verify: false, network: ws, ws-opts: {path: "", headers: {Host: Koma-YT.pages.dev}}, udp: true, tfo: false}
-  - {name: "@meliproxyy 2", server: clud.soonteam.top, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 2247d5b9-570c-477a-9191-350f6025cb38, servername: cloud.endlessteam.site, network: ws, ws-opts: {path: /, headers: {Host: cloud.endlessteam.site}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@meliproxyy 3", server: clud.soonteam.top, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 4dc0b42a-1a8a-4337-851b-5d8a1f149fca, servername: kingman.turboo-server.com.co, network: ws, ws-opts: {path: /, headers: {Host: kingman.turboo-server.com.co}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@meliproxyy 4", server: clud.soonteam.top, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 529ad031-70ae-4352-bf3d-19297d35190b, servername: mioptp.miomio.cloud, network: ws, ws-opts: {path: /, headers: {Host: mioptp.miomio.cloud}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@meliproxyy 5", server: 8.6.112.6, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.dynv6.net, network: ws, ws-opts: {path: /, headers: {Host: sni.111000.dynv6.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@meliproxyy`", server: 8.6.112.6, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.dynv6.net, network: ws, ws-opts: {path: /, headers: {Host: sni.111000.dynv6.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@meliproxyy 6", server: clud.soonteam.top, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.indevs.in, network: ws, ws-opts: {path: /, headers: {Host: sni.111000.indevs.in}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@meliproxyy 7", server: clud.soonteam.top, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 733a9a09-ba93-4e73-b1f3-ae0bcbd88310, servername: noisy-paper.workers.dev, network: ws, ws-opts: {path: /, headers: {Host: noisy-paper.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@meliproxyy` 2", server: clud.soonteam.top, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9, servername: 2-4jq.pages.dev, network: ws, ws-opts: {path: /, headers: {Host: 2-4jq.pages.dev}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@meliproxyy 8", server: clud.soonteam.top, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: cff6f361-828a-43c8-a8b5-8d10b32e57fb, servername: zh.hollowspot.ir, network: ws, ws-opts: {path: /, headers: {Host: zh.hollowspot.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@meliproxyy`", server: abr.superip.ir, port: 2086, type: vless, tls: true, packet-encoding: xudp, uuid: 0ecb2769-9d3c-4ed3-9ffd-88a96f90f30a, network: ws, ws-opts: {path: /API/superip, headers: {Host: cd2.phill-up.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -491,48 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@meliproxyy"
-      - "@meliproxyy 2"
-      - "@meliproxyy 3"
-      - "@meliproxyy 4"
-      - "@meliproxyy 5"
       - "@meliproxyy`"
-      - "@meliproxyy 6"
-      - "@meliproxyy 7"
-      - "@meliproxyy` 2"
-      - "@meliproxyy 8"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@meliproxyy"
-      - "@meliproxyy 2"
-      - "@meliproxyy 3"
-      - "@meliproxyy 4"
-      - "@meliproxyy 5"
       - "@meliproxyy`"
-      - "@meliproxyy 6"
-      - "@meliproxyy 7"
-      - "@meliproxyy` 2"
-      - "@meliproxyy 8"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@meliproxyy"
-      - "@meliproxyy 2"
-      - "@meliproxyy 3"
-      - "@meliproxyy 4"
-      - "@meliproxyy 5"
       - "@meliproxyy`"
-      - "@meliproxyy 6"
-      - "@meliproxyy 7"
-      - "@meliproxyy` 2"
-      - "@meliproxyy 8"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -548,48 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@meliproxyy"
-      - "@meliproxyy 2"
-      - "@meliproxyy 3"
-      - "@meliproxyy 4"
-      - "@meliproxyy 5"
       - "@meliproxyy`"
-      - "@meliproxyy 6"
-      - "@meliproxyy 7"
-      - "@meliproxyy` 2"
-      - "@meliproxyy 8"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@meliproxyy"
-      - "@meliproxyy 2"
-      - "@meliproxyy 3"
-      - "@meliproxyy 4"
-      - "@meliproxyy 5"
       - "@meliproxyy`"
-      - "@meliproxyy 6"
-      - "@meliproxyy 7"
-      - "@meliproxyy` 2"
-      - "@meliproxyy 8"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@meliproxyy"
-      - "@meliproxyy 2"
-      - "@meliproxyy 3"
-      - "@meliproxyy 4"
-      - "@meliproxyy 5"
       - "@meliproxyy`"
-      - "@meliproxyy 6"
-      - "@meliproxyy 7"
-      - "@meliproxyy` 2"
-      - "@meliproxyy 8"
   - name: دانلود منیجر 📥
     type: select
     proxies:

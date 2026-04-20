@@ -465,12 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Capoit`", server: 185.143.234.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 2601740f-12a1-4e61-ba12-4e84915f5ed8, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit", server: clud.soonteam.top, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 4dc0b42a-1a8a-4337-851b-5d8a1f149fca, servername: kingman.turboo-server.com.co, network: ws, ws-opts: {path: /, headers: {Host: kingman.turboo-server.com.co}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit 2", server: 104.18.13.149, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.v6.navy, network: ws, ws-opts: {path: /, headers: {Host: sni.111000.v6.navy}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit 3", server: 8.6.112.0, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.jpmj.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: sni.jpmj.dev}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit 4", server: clud.soonteam.top, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 733a9a09-ba93-4e73-b1f3-ae0bcbd88310, servername: noisy-paper.workers.dev, network: ws, ws-opts: {path: /, headers: {Host: noisy-paper.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 2", server: clud.soonteam.top, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ce069292-c8bf-40dd-a6b1-87818a1e64e9, servername: 2-4jq.pages.dev, network: ws, ws-opts: {path: /, headers: {Host: 2-4jq.pages.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit`", server: 185.143.234.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 59536b5c-a132-44b7-bc68-f22f01922964, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 2", server: usa.mynethub99.top, port: 2080, type: vless, tls: true, packet-encoding: xudp, uuid: 76d95002-7e5d-4d6d-8668-22209ff502d9, servername: usa.mynethub99.top, alpn: [h2%2Chttp%2F1.1], host: usa.mynethub99.top, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 3", server: 185.143.233.5, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 86488b91-3fdd-41a4-93bd-cb7867ceb124, network: ws, ws-opts: {path: "/graphql?ed=30", headers: {Host: dl2.smartnetworktools.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 4", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: a52d7385-45c3-4f16-a7f8-0d13d5132135, servername: cdngraph.newmew.site, alpn: [http%2F1.1], network: ws, ws-opts: {path: "/graphql?ed=2560", headers: {Host: cdngraph.newmew.site}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 5", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: d2223a3e-7996-4a6b-aed7-84d192e9c9d1, servername: cdngraph.newmew.site, alpn: [http%2F1.1], network: ws, ws-opts: {path: "/graphql?ed=2560", headers: {Host: cdngraph.newmew.site}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -488,11 +487,10 @@ proxy-groups:
     type: select
     proxies:
       - "@Capoit`"
-      - "@Capoit"
-      - "@Capoit 2"
-      - "@Capoit 3"
-      - "@Capoit 4"
       - "@Capoit` 2"
+      - "@Capoit` 3"
+      - "@Capoit` 4"
+      - "@Capoit` 5"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -500,11 +498,10 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Capoit`"
-      - "@Capoit"
-      - "@Capoit 2"
-      - "@Capoit 3"
-      - "@Capoit 4"
       - "@Capoit` 2"
+      - "@Capoit` 3"
+      - "@Capoit` 4"
+      - "@Capoit` 5"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -512,11 +509,10 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Capoit`"
-      - "@Capoit"
-      - "@Capoit 2"
-      - "@Capoit 3"
-      - "@Capoit 4"
       - "@Capoit` 2"
+      - "@Capoit` 3"
+      - "@Capoit` 4"
+      - "@Capoit` 5"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -533,11 +529,10 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit`"
-      - "@Capoit"
-      - "@Capoit 2"
-      - "@Capoit 3"
-      - "@Capoit 4"
       - "@Capoit` 2"
+      - "@Capoit` 3"
+      - "@Capoit` 4"
+      - "@Capoit` 5"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -545,11 +540,10 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit`"
-      - "@Capoit"
-      - "@Capoit 2"
-      - "@Capoit 3"
-      - "@Capoit 4"
       - "@Capoit` 2"
+      - "@Capoit` 3"
+      - "@Capoit` 4"
+      - "@Capoit` 5"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -557,11 +551,10 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit`"
-      - "@Capoit"
-      - "@Capoit 2"
-      - "@Capoit 3"
-      - "@Capoit 4"
       - "@Capoit` 2"
+      - "@Capoit` 3"
+      - "@Capoit` 4"
+      - "@Capoit` 5"
   - name: دانلود منیجر 📥
     type: select
     proxies:
