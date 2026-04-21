@@ -465,8 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: Tel:Father_vpn`, server: 193.162.129.155, port: 13252, type: vless, tls: true, packet-encoding: xudp, uuid: 6de04a86-d013-40a0-95c0-893aa35ff674, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Tel;Father_vpn`, server: ram.greenbookvip.online, port: 22992, type: vless, tls: true, packet-encoding: xudp, uuid: c664b00e-7410-4963-a911-b029928d2401, servername: www.aparat.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, reality-opts: {public-key: _K7LTG-QOMMaAYYW6XtVX3BHPNblhdhfCUfYVm3DDjM, short-id: 473019}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Father_vpn`", server: 87.248.154.8, port: 14774, type: vless, tls: true, packet-encoding: xudp, uuid: 78925179-4f42-4b0f-ad88-a6c8baecd1dd, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: Tel;@Father_vpn`, server: 94.183.149.168, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: d24e1b75-d80f-4818-d621-ee919ea71c16, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -484,8 +483,7 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - Tel:Father_vpn`
-      - Tel;Father_vpn`
+      - "@Father_vpn`"
       - Tel;@Father_vpn`
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -493,8 +491,7 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - Tel:Father_vpn`
-      - Tel;Father_vpn`
+      - "@Father_vpn`"
       - Tel;@Father_vpn`
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -502,8 +499,7 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - Tel:Father_vpn`
-      - Tel;Father_vpn`
+      - "@Father_vpn`"
       - Tel;@Father_vpn`
   - name: اتصال پایدار 🔗
     type: url-test
@@ -520,8 +516,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Tel:Father_vpn`
-      - Tel;Father_vpn`
+      - "@Father_vpn`"
       - Tel;@Father_vpn`
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -529,8 +524,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Tel:Father_vpn`
-      - Tel;Father_vpn`
+      - "@Father_vpn`"
       - Tel;@Father_vpn`
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -538,8 +532,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Tel:Father_vpn`
-      - Tel;Father_vpn`
+      - "@Father_vpn`"
       - Tel;@Father_vpn`
   - name: دانلود منیجر 📥
     type: select
