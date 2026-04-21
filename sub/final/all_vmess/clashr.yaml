@@ -5,95 +5,109 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: "@filembad", server: stream.azadrah22.com, port: 80, type: vmess, uuid: 76e151a7-9980-4077-bd52-07ef4e9cb496, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /user, headers: {Host: stream.azadrah22.com}}, udp: true, tfo: false}
   - {name: "🇺🇸 [openproxylist.com] vmess-US", server: 82.198.246.214, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "🇺🇸 [openproxylist.com] vmess-US 2", server: 82.198.246.37, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 8729 | ⚡️Telegram - t.me/configraygan, server: 47.90.244.153, port: 8443, type: vmess, uuid: 65e2a985-ad20-4486-a7ec-b67b20ee56af, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /ws}, udp: true, tfo: false}
   - {name: "🇺🇸 [openproxylist.com] vmess-US 3", server: 82.198.246.9, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad", server: 172.66.213.38, port: 443, type: vmess, uuid: dfbbc8de-8a4f-407d-8069-6de38d83c4e1, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: "", network: grpc, grpc-opts: {grpc-service-name: WgCmp8p80KDzo64uHE}, udp: true, tfo: false}
-  - {name: "@filembad 2", server: 185.143.233.235, port: 80, type: vmess, uuid: 820091c5-fc6a-4c2e-9d05-e73b3154b531, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: n3.multiservers.ir}}, udp: true, tfo: false}
-  - {name: WiFi | @saministamm, server: 217.114.40.130, port: 5050, type: vmess, uuid: faaadda1-3584-479b-a3aa-88ca5ebe7bb7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 2", server: player.onlineserverr2.top, port: 2080, type: vmess, uuid: 920d02a9-4f04-41bb-b830-738411ce53c5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@filembad 3", server: shop.onlinesite.top, port: 2131, type: vmess, uuid: 2cca9b37-d38e-4a1b-8543-59c137588a3a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 4", server: snapp.ir, port: 80, type: vmess, uuid: bc1f8b11-6ba9-4211-9cbd-11300ea51412, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: darxhinteam.bravo-six.ir}}, udp: true, tfo: false}
+  - {name: "@filembad 5", server: snapp.ir, port: 80, type: vmess, uuid: bc1f8b11-6ba9-4211-9cbd-11300ea51412, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: darxhinteam.bravo-six.ir}}, udp: true, tfo: false}
+  - {name: "@filembad 6", server: snapp.ir, port: 80, type: vmess, uuid: ca457972-449d-45c7-a48a-49825f86d76a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: darxhinteam.bravo-six.ir}}, udp: true, tfo: false}
+  - {name: "@filembad 7", server: snapp.ir, port: 80, type: vmess, uuid: 803624b5-b9b5-4151-b32d-c4616977d358, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: darxhinteam.bravo-six.ir}}, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - "@filembad"
       - 🇺🇸 [openproxylist.com] vmess-US
       - 🇺🇸 [openproxylist.com] vmess-US 2
-      - 8729 | ⚡️Telegram - t.me/configraygan
       - 🇺🇸 [openproxylist.com] vmess-US 3
-      - "@filembad"
       - "@filembad 2"
-      - WiFi | @saministamm
       - "@filembad 3"
+      - "@filembad 4"
+      - "@filembad 5"
+      - "@filembad 6"
+      - "@filembad 7"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - "@filembad"
       - 🇺🇸 [openproxylist.com] vmess-US
       - 🇺🇸 [openproxylist.com] vmess-US 2
-      - 8729 | ⚡️Telegram - t.me/configraygan
       - 🇺🇸 [openproxylist.com] vmess-US 3
-      - "@filembad"
       - "@filembad 2"
-      - WiFi | @saministamm
       - "@filembad 3"
+      - "@filembad 4"
+      - "@filembad 5"
+      - "@filembad 6"
+      - "@filembad 7"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - "@filembad"
       - 🇺🇸 [openproxylist.com] vmess-US
       - 🇺🇸 [openproxylist.com] vmess-US 2
-      - 8729 | ⚡️Telegram - t.me/configraygan
       - 🇺🇸 [openproxylist.com] vmess-US 3
-      - "@filembad"
       - "@filembad 2"
-      - WiFi | @saministamm
       - "@filembad 3"
+      - "@filembad 4"
+      - "@filembad 5"
+      - "@filembad 6"
+      - "@filembad 7"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - "@filembad"
       - 🇺🇸 [openproxylist.com] vmess-US
       - 🇺🇸 [openproxylist.com] vmess-US 2
-      - 8729 | ⚡️Telegram - t.me/configraygan
       - 🇺🇸 [openproxylist.com] vmess-US 3
-      - "@filembad"
       - "@filembad 2"
-      - WiFi | @saministamm
       - "@filembad 3"
+      - "@filembad 4"
+      - "@filembad 5"
+      - "@filembad 6"
+      - "@filembad 7"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - "@filembad"
       - 🇺🇸 [openproxylist.com] vmess-US
       - 🇺🇸 [openproxylist.com] vmess-US 2
-      - 8729 | ⚡️Telegram - t.me/configraygan
       - 🇺🇸 [openproxylist.com] vmess-US 3
-      - "@filembad"
       - "@filembad 2"
-      - WiFi | @saministamm
       - "@filembad 3"
+      - "@filembad 4"
+      - "@filembad 5"
+      - "@filembad 6"
+      - "@filembad 7"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - "@filembad"
       - 🇺🇸 [openproxylist.com] vmess-US
       - 🇺🇸 [openproxylist.com] vmess-US 2
-      - 8729 | ⚡️Telegram - t.me/configraygan
       - 🇺🇸 [openproxylist.com] vmess-US 3
-      - "@filembad"
       - "@filembad 2"
-      - WiFi | @saministamm
       - "@filembad 3"
+      - "@filembad 4"
+      - "@filembad 5"
+      - "@filembad 6"
+      - "@filembad 7"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -121,14 +135,16 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - "@filembad"
       - 🇺🇸 [openproxylist.com] vmess-US
       - 🇺🇸 [openproxylist.com] vmess-US 2
-      - 8729 | ⚡️Telegram - t.me/configraygan
       - 🇺🇸 [openproxylist.com] vmess-US 3
-      - "@filembad"
       - "@filembad 2"
-      - WiFi | @saministamm
       - "@filembad 3"
+      - "@filembad 4"
+      - "@filembad 5"
+      - "@filembad 6"
+      - "@filembad 7"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
