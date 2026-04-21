@@ -5,6 +5,7 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: freenet_vt 2`, server: 185.143.234.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 3cc89cfb-c39e-42cc-b7a0-618824a6ac1b, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: freenet_vt `, server: 2.144.20.130, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5785444d-596b-425c-8b1c-727a539508d9, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
@@ -12,6 +13,7 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - freenet_vt 2`
       - freenet_vt `
   - name: ♻️ 自动选择
     type: url-test
@@ -19,6 +21,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - freenet_vt 2`
       - freenet_vt `
   - name: 🌍 国外媒体
     type: select
@@ -26,24 +29,28 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - freenet_vt 2`
       - freenet_vt `
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - freenet_vt 2`
       - freenet_vt `
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - freenet_vt 2`
       - freenet_vt `
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - freenet_vt 2`
       - freenet_vt `
   - name: 🎯 全球直连
     type: select
@@ -72,6 +79,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - freenet_vt 2`
       - freenet_vt `
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连

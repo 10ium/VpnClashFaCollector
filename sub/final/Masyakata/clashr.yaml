@@ -5,67 +5,102 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: packetnet.vianabeauty.ir:45359, server: packetnet.vianabeauty.ir, port: 45359, type: vless, tls: true, packet-encoding: xudp, uuid: 3f20075c-a1f0-4d4c-b45c-7cdc8332484d, host: packetnet.vianabeauty.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: packetnet.vianabeauty.ir:45359 2, server: packetnet.vianabeauty.ir, port: 45359, type: vless, tls: true, packet-encoding: xudp, uuid: 7d953698-4765-40bf-aa13-a413f26719a4, host: packetnet.vianabeauty.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: packetnet.vianabeauty.ir:45359 3, server: packetnet.vianabeauty.ir, port: 45359, type: vless, tls: true, packet-encoding: xudp, uuid: afc9ee95-1d3f-4abd-968d-7230a34fdfbd, host: packetnet.vianabeauty.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxymelimon لطفا برای حمایت جوین شید", server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: bbde4453-6295-4446-89d4-af10288de933, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: www.ignitelimit.com:443, server: www.ignitelimit.com, port: 443, type: trojan, password: humanity, sni: www.ignitelimit.com, skip-cert-verify: false, network: ws, ws-opts: {path: /Assignment, headers: {Host: www.ignitelimit.com}}, udp: true, tfo: false}
+  - {name: www.arvancloud.ir:8880, server: www.arvancloud.ir, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 04c66e44-f54f-4c39-8b7c-a99daa70273d, network: ws, ws-opts: {path: /Mehd, headers: {Host: vs4bazi-newoverserv.itbazi.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Masyakata`, server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 225343f5-f9ce-44b4-b6a1-1e31aa185ce3, network: ws, ws-opts: {path: /, headers: {Host: sv2-dl.persianmusics.site}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: snapp.ir:2082, server: snapp.ir, port: 2082, type: vless, tls: true, packet-encoding: xudp, uuid: 461cd5bc-5011-4d64-bd54-5151f8a09b4b, network: ws, ws-opts: {path: /, headers: {Host: dl800tobi.sudoserver.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Masyakata`", server: 5.57.33.95, port: 56509, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.indevs.in, network: ws, ws-opts: {path: "/?ed=2560&Telegram @i10VPN", headers: {Host: sni.111000.indevs.in}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "telegram: @Masyakts`", server: speedtest.kenargozar.com, port: 8088, type: vless, tls: true, packet-encoding: xudp, uuid: 63b2cafd-3ba3-4f81-83bf-769646ba028c, servername: www.aparat.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: aparat-stream}, reality-opts: {public-key: TPJnRnX2QIzZpDq5rk1EQMuYpH9hgTBCEPSYsuWEI2s, short-id: e59fc4d65a4ef287}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: snapp.ir:80, server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: dbf5d452-2c4b-42be-86fd-414fda23923d, network: ws, ws-opts: {path: "/?ed=2080", headers: {Host: 1.jojo.avenflow.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 185.143.234.235:80, server: 185.143.234.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: ea227ffd-be0c-4acd-a70c-9b6b4777d862, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 185.143.234.235:80 2, server: 185.143.234.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: ea227ffd-be0c-4acd-a70c-9b6b4777d862, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - packetnet.vianabeauty.ir:45359
-      - packetnet.vianabeauty.ir:45359 2
-      - packetnet.vianabeauty.ir:45359 3
-      - "@proxymelimon لطفا برای حمایت جوین شید"
+      - www.ignitelimit.com:443
+      - www.arvancloud.ir:8880
+      - Masyakata`
+      - snapp.ir:2082
+      - "@Masyakata`"
+      - "telegram: @Masyakts`"
+      - snapp.ir:80
+      - 185.143.234.235:80
+      - 185.143.234.235:80 2
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - packetnet.vianabeauty.ir:45359
-      - packetnet.vianabeauty.ir:45359 2
-      - packetnet.vianabeauty.ir:45359 3
-      - "@proxymelimon لطفا برای حمایت جوین شید"
+      - www.ignitelimit.com:443
+      - www.arvancloud.ir:8880
+      - Masyakata`
+      - snapp.ir:2082
+      - "@Masyakata`"
+      - "telegram: @Masyakts`"
+      - snapp.ir:80
+      - 185.143.234.235:80
+      - 185.143.234.235:80 2
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - packetnet.vianabeauty.ir:45359
-      - packetnet.vianabeauty.ir:45359 2
-      - packetnet.vianabeauty.ir:45359 3
-      - "@proxymelimon لطفا برای حمایت جوین شید"
+      - www.ignitelimit.com:443
+      - www.arvancloud.ir:8880
+      - Masyakata`
+      - snapp.ir:2082
+      - "@Masyakata`"
+      - "telegram: @Masyakts`"
+      - snapp.ir:80
+      - 185.143.234.235:80
+      - 185.143.234.235:80 2
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - packetnet.vianabeauty.ir:45359
-      - packetnet.vianabeauty.ir:45359 2
-      - packetnet.vianabeauty.ir:45359 3
-      - "@proxymelimon لطفا برای حمایت جوین شید"
+      - www.ignitelimit.com:443
+      - www.arvancloud.ir:8880
+      - Masyakata`
+      - snapp.ir:2082
+      - "@Masyakata`"
+      - "telegram: @Masyakts`"
+      - snapp.ir:80
+      - 185.143.234.235:80
+      - 185.143.234.235:80 2
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - packetnet.vianabeauty.ir:45359
-      - packetnet.vianabeauty.ir:45359 2
-      - packetnet.vianabeauty.ir:45359 3
-      - "@proxymelimon لطفا برای حمایت جوین شید"
+      - www.ignitelimit.com:443
+      - www.arvancloud.ir:8880
+      - Masyakata`
+      - snapp.ir:2082
+      - "@Masyakata`"
+      - "telegram: @Masyakts`"
+      - snapp.ir:80
+      - 185.143.234.235:80
+      - 185.143.234.235:80 2
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - packetnet.vianabeauty.ir:45359
-      - packetnet.vianabeauty.ir:45359 2
-      - packetnet.vianabeauty.ir:45359 3
-      - "@proxymelimon لطفا برای حمایت جوین شید"
+      - www.ignitelimit.com:443
+      - www.arvancloud.ir:8880
+      - Masyakata`
+      - snapp.ir:2082
+      - "@Masyakata`"
+      - "telegram: @Masyakts`"
+      - snapp.ir:80
+      - 185.143.234.235:80
+      - 185.143.234.235:80 2
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -93,10 +128,15 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - packetnet.vianabeauty.ir:45359
-      - packetnet.vianabeauty.ir:45359 2
-      - packetnet.vianabeauty.ir:45359 3
-      - "@proxymelimon لطفا برای حمایت جوین شید"
+      - www.ignitelimit.com:443
+      - www.arvancloud.ir:8880
+      - Masyakata`
+      - snapp.ir:2082
+      - "@Masyakata`"
+      - "telegram: @Masyakts`"
+      - snapp.ir:80
+      - 185.143.234.235:80
+      - 185.143.234.235:80 2
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
