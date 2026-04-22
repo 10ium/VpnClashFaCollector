@@ -5,74 +5,46 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@airdrop2033`", server: packetnet.vianabeauty.ir, port: 45359, type: vless, tls: true, packet-encoding: xudp, uuid: 85d177f9-f50a-4a4d-828c-cedb49268990, host: packetnet.vianabeauty.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@airdrop2033` 2", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: b22379ce-2fea-4c0f-91a3-ff1150670387, network: ws, ws-opts: {path: /, headers: {Host: sv1-dl.persianmusics.site}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@airdrop2033` 3", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: c9ee1322-9438-4b2b-92ca-7b33396d4fc1, network: ws, ws-opts: {path: /, headers: {Host: sv1-dl.persianmusics.site}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@airdrop2033", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: d14128ce-91c1-4725-adf8-b9e9c9b68e1f, network: ws, ws-opts: {path: /, headers: {Host: sv1-dl.persianmusics.site}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@airdrop2033` 4", server: 37.32.27.85, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: ff8e1938-9510-48d2-9de9-98fc0c1d4a1e, network: ws, ws-opts: {path: /, headers: {Host: a1.supreme-xfast.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@airdrop2033", server: pgame.wiliy.xyz, port: 53839, type: vmess, uuid: d0f94d28-eb97-4844-a81c-0a527a8de1d4, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@airdrop2033`"
-      - "@airdrop2033` 2"
-      - "@airdrop2033` 3"
       - "@airdrop2033"
-      - "@airdrop2033` 4"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@airdrop2033`"
-      - "@airdrop2033` 2"
-      - "@airdrop2033` 3"
       - "@airdrop2033"
-      - "@airdrop2033` 4"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@airdrop2033`"
-      - "@airdrop2033` 2"
-      - "@airdrop2033` 3"
       - "@airdrop2033"
-      - "@airdrop2033` 4"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@airdrop2033`"
-      - "@airdrop2033` 2"
-      - "@airdrop2033` 3"
       - "@airdrop2033"
-      - "@airdrop2033` 4"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@airdrop2033`"
-      - "@airdrop2033` 2"
-      - "@airdrop2033` 3"
       - "@airdrop2033"
-      - "@airdrop2033` 4"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@airdrop2033`"
-      - "@airdrop2033` 2"
-      - "@airdrop2033` 3"
       - "@airdrop2033"
-      - "@airdrop2033` 4"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -100,11 +72,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@airdrop2033`"
-      - "@airdrop2033` 2"
-      - "@airdrop2033` 3"
       - "@airdrop2033"
-      - "@airdrop2033` 4"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

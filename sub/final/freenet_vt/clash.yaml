@@ -467,8 +467,6 @@ rule-providers:
 proxies:
   - {name: freenet_vt, server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 22109ab6-bfdd-4062-ae1c-054c74353e39, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: freenet_vt `, server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 22109ab6-bfdd-4062-ae1c-054c74353e39, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: freenet_vt 2`, server: 185.143.234.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 3cc89cfb-c39e-42cc-b7a0-618824a6ac1b, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: freenet_vt ` 2, server: 2.144.20.130, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5785444d-596b-425c-8b1c-727a539508d9, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,8 +485,6 @@ proxy-groups:
     proxies:
       - freenet_vt
       - freenet_vt `
-      - freenet_vt 2`
-      - freenet_vt ` 2
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -497,8 +493,6 @@ proxy-groups:
     proxies:
       - freenet_vt
       - freenet_vt `
-      - freenet_vt 2`
-      - freenet_vt ` 2
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -507,8 +501,6 @@ proxy-groups:
     proxies:
       - freenet_vt
       - freenet_vt `
-      - freenet_vt 2`
-      - freenet_vt ` 2
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -526,8 +518,6 @@ proxy-groups:
     proxies:
       - freenet_vt
       - freenet_vt `
-      - freenet_vt 2`
-      - freenet_vt ` 2
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -536,8 +526,6 @@ proxy-groups:
     proxies:
       - freenet_vt
       - freenet_vt `
-      - freenet_vt 2`
-      - freenet_vt ` 2
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -546,8 +534,6 @@ proxy-groups:
     proxies:
       - freenet_vt
       - freenet_vt `
-      - freenet_vt 2`
-      - freenet_vt ` 2
   - name: دانلود منیجر 📥
     type: select
     proxies:

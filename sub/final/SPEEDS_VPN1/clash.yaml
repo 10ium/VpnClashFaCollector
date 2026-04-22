@@ -465,13 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@SPEEDS_VPN-جوین-بدید`", server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 22109ab6-bfdd-4062-ae1c-054c74353e39, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "***🐦‍🔥***-@SPEEDS_VPN", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 8a5ce970-f679-4f22-9e05-dedbb16643e7, servername: cdngraph.newmew.site, alpn: [http%2F1.1], network: ws, ws-opts: {path: "/graphql?ed=2560", headers: {Host: cdngraph.newmew.site}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید", server: rfiksma.top, port: 10355, type: vless, tls: true, packet-encoding: xudp, uuid: a177f318-1769-41c5-861a-25ffd5adcc51, host: rfiksma.top, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "***🐦‍🔥***-@SPEEDS_VPN 2", server: 185.143.234.5, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: aa054c14-2bfa-4df2-8ef3-958a2125d099, servername: alef.ir.oadeflantrogm.abrmahanair.com, network: ws, ws-opts: {path: "/?ed=443", headers: {Host: alef.ir.oadeflantrogm.abrmahanair.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "***🐦‍🔥***-@SPEEDS_VPN 3", server: meli.masterdadeh.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: afc24d41-9453-010b-7e51-c62d3b3e62cc, servername: 185.226.94.198, network: ws, ws-opts: {path: /, headers: {Host: 185.226.94.198}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`", server: 8.6.112.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d37a75db-76b6-4db8-b213-0d5b044d138d, servername: hio-awx.pages.dev, network: ws, ws-opts: {path: /, headers: {Host: hio-awx.pages.dev}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "***🐦‍🔥***-@SPEEDS_VPN`", server: meli.masterdadeh.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: f24bd99f-c4fe-b913-3b4d-dcfb86c1b3cd, servername: 185.226.94.198, network: ws, ws-opts: {path: /, headers: {Host: 185.226.94.198}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@speeds_vpn-کانال-پشتیبان-جوین-بشید`", server: cloudinohost.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d229bc5d-b9ed-4591-897c-442cca6f67cd, servername: cloudinohost.com, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: cloudinohost.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -488,39 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@SPEEDS_VPN-جوین-بدید`"
-      - "***🐦‍🔥***-@SPEEDS_VPN"
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید"
-      - "***🐦‍🔥***-@SPEEDS_VPN 2"
-      - "***🐦‍🔥***-@SPEEDS_VPN 3"
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`"
-      - "***🐦‍🔥***-@SPEEDS_VPN`"
+      - "@speeds_vpn-کانال-پشتیبان-جوین-بشید`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@SPEEDS_VPN-جوین-بدید`"
-      - "***🐦‍🔥***-@SPEEDS_VPN"
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید"
-      - "***🐦‍🔥***-@SPEEDS_VPN 2"
-      - "***🐦‍🔥***-@SPEEDS_VPN 3"
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`"
-      - "***🐦‍🔥***-@SPEEDS_VPN`"
+      - "@speeds_vpn-کانال-پشتیبان-جوین-بشید`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@SPEEDS_VPN-جوین-بدید`"
-      - "***🐦‍🔥***-@SPEEDS_VPN"
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید"
-      - "***🐦‍🔥***-@SPEEDS_VPN 2"
-      - "***🐦‍🔥***-@SPEEDS_VPN 3"
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`"
-      - "***🐦‍🔥***-@SPEEDS_VPN`"
+      - "@speeds_vpn-کانال-پشتیبان-جوین-بشید`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -536,39 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@SPEEDS_VPN-جوین-بدید`"
-      - "***🐦‍🔥***-@SPEEDS_VPN"
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید"
-      - "***🐦‍🔥***-@SPEEDS_VPN 2"
-      - "***🐦‍🔥***-@SPEEDS_VPN 3"
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`"
-      - "***🐦‍🔥***-@SPEEDS_VPN`"
+      - "@speeds_vpn-کانال-پشتیبان-جوین-بشید`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@SPEEDS_VPN-جوین-بدید`"
-      - "***🐦‍🔥***-@SPEEDS_VPN"
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید"
-      - "***🐦‍🔥***-@SPEEDS_VPN 2"
-      - "***🐦‍🔥***-@SPEEDS_VPN 3"
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`"
-      - "***🐦‍🔥***-@SPEEDS_VPN`"
+      - "@speeds_vpn-کانال-پشتیبان-جوین-بشید`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@SPEEDS_VPN-جوین-بدید`"
-      - "***🐦‍🔥***-@SPEEDS_VPN"
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید"
-      - "***🐦‍🔥***-@SPEEDS_VPN 2"
-      - "***🐦‍🔥***-@SPEEDS_VPN 3"
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`"
-      - "***🐦‍🔥***-@SPEEDS_VPN`"
+      - "@speeds_vpn-کانال-پشتیبان-جوین-بشید`"
   - name: دانلود منیجر 📥
     type: select
     proxies:
