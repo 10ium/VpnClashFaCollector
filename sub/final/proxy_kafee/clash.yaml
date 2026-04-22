@@ -465,19 +465,14 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@proxy_kafee", server: Dot.psdgold.st, port: 51636, type: vless, tls: true, packet-encoding: xudp, uuid: 059683fd-b372-4204-9a70-3667d404b28f, host: Dot.psdgold.st, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee 2", server: 81.12.54.14, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 206d462c-2da2-47e2-b4ab-7b307aff30e8, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee", server: 81.12.54.14, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 206d462c-2da2-47e2-b4ab-7b307aff30e8, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@`", server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 22109ab6-bfdd-4062-ae1c-054c74353e39, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee`", server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 22109ab6-bfdd-4062-ae1c-054c74353e39, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "`", server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 22109ab6-bfdd-4062-ae1c-054c74353e39, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee` 2", server: 94.101.179.129, port: 56658, type: vless, tls: true, packet-encoding: xudp, uuid: 3df69e7e-2010-4b2f-aa94-ebde0366c977, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee - Psiphon 19`", server: 2.144.20.130, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5785444d-596b-425c-8b1c-727a539508d9, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: Go @@P`, server: 5.57.33.95, port: 56509, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.indevs.in, network: ws, ws-opts: {path: "/?ed=2560&Telegram @V2RAY_VPN_IR", headers: {Host: sni.111000.indevs.in}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee 3", server: DotC.psdgold.st, port: 51636, type: vless, tls: true, packet-encoding: xudp, uuid: 86036bff-c70c-429a-b43e-7ee84764a61e, host: DotC.psdgold.st, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@` 2", server: api1.iramsmartkeyka.ir, port: 2095, type: vless, tls: true, packet-encoding: xudp, uuid: ce871f8f-5f02-435b-b1db-e0739969aa02, network: ws, ws-opts: {path: /wsVMarketLoad, headers: {Host: api1.iramsmartkeyka.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: proxy_kafee, server: Dot.psdgold.st, port: 51636, type: vless, tls: true, packet-encoding: xudp, uuid: e139566b-3a6b-4bdc-a106-4bed64e12666, host: Dot.psdgold.st, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee` 2", server: snapp.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 7c8c4cfc-75b6-4860-84f6-048a6c126b21, network: ws, ws-opts: {path: /, headers: {Host: hi.jahansportmarkazi.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee` 3", server: 45.82.136.188, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f9d9a8e6-7df0-4c7b-bb2d-97d1c7e14f1f, servername: webassets.cafebazaar.ir, network: ws, ws-opts: {path: /, headers: {Host: webassets.cafebazaar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@` 3", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: fc7132e6-6943-424c-84bc-adbb60398a93, network: ws, ws-opts: {path: /app1, headers: {Host: cdn.yeksanstudio.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -495,18 +490,13 @@ proxy-groups:
     type: select
     proxies:
       - "@proxy_kafee"
-      - "@proxy_kafee 2"
       - "@`"
       - "@proxy_kafee`"
       - "`"
-      - "@proxy_kafee` 2"
       - "@proxy_kafee - Psiphon 19`"
       - Go @@P`
-      - "@proxy_kafee 3"
-      - "@` 2"
-      - proxy_kafee
+      - "@proxy_kafee` 2"
       - "@proxy_kafee` 3"
-      - "@` 3"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -514,18 +504,13 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@proxy_kafee"
-      - "@proxy_kafee 2"
       - "@`"
       - "@proxy_kafee`"
       - "`"
-      - "@proxy_kafee` 2"
       - "@proxy_kafee - Psiphon 19`"
       - Go @@P`
-      - "@proxy_kafee 3"
-      - "@` 2"
-      - proxy_kafee
+      - "@proxy_kafee` 2"
       - "@proxy_kafee` 3"
-      - "@` 3"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -533,18 +518,13 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@proxy_kafee"
-      - "@proxy_kafee 2"
       - "@`"
       - "@proxy_kafee`"
       - "`"
-      - "@proxy_kafee` 2"
       - "@proxy_kafee - Psiphon 19`"
       - Go @@P`
-      - "@proxy_kafee 3"
-      - "@` 2"
-      - proxy_kafee
+      - "@proxy_kafee` 2"
       - "@proxy_kafee` 3"
-      - "@` 3"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -561,18 +541,13 @@ proxy-groups:
     interval: 600
     proxies:
       - "@proxy_kafee"
-      - "@proxy_kafee 2"
       - "@`"
       - "@proxy_kafee`"
       - "`"
-      - "@proxy_kafee` 2"
       - "@proxy_kafee - Psiphon 19`"
       - Go @@P`
-      - "@proxy_kafee 3"
-      - "@` 2"
-      - proxy_kafee
+      - "@proxy_kafee` 2"
       - "@proxy_kafee` 3"
-      - "@` 3"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -580,18 +555,13 @@ proxy-groups:
     interval: 600
     proxies:
       - "@proxy_kafee"
-      - "@proxy_kafee 2"
       - "@`"
       - "@proxy_kafee`"
       - "`"
-      - "@proxy_kafee` 2"
       - "@proxy_kafee - Psiphon 19`"
       - Go @@P`
-      - "@proxy_kafee 3"
-      - "@` 2"
-      - proxy_kafee
+      - "@proxy_kafee` 2"
       - "@proxy_kafee` 3"
-      - "@` 3"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -599,18 +569,13 @@ proxy-groups:
     interval: 600
     proxies:
       - "@proxy_kafee"
-      - "@proxy_kafee 2"
       - "@`"
       - "@proxy_kafee`"
       - "`"
-      - "@proxy_kafee` 2"
       - "@proxy_kafee - Psiphon 19`"
       - Go @@P`
-      - "@proxy_kafee 3"
-      - "@` 2"
-      - proxy_kafee
+      - "@proxy_kafee` 2"
       - "@proxy_kafee` 3"
-      - "@` 3"
   - name: دانلود منیجر 📥
     type: select
     proxies:
