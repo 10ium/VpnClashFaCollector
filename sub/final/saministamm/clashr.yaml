@@ -7,7 +7,6 @@ external-controller: 127.0.0.1:9090
 proxies:
   - {name: "@saministamm", server: 185.94.29.156, port: 4001, type: vless, tls: true, packet-encoding: xudp, uuid: 00000000-0000-4000-8000-000000000000, servername: sub.mot.ip-ddns.com, network: ws, ws-opts: {path: /, headers: {Host: sub.mot.ip-ddns.com}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: saministamm, server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 22109ab6-bfdd-4062-ae1c-054c74353e39, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 176.96.138.17:2087, server: 176.96.138.17, port: 2087, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.indevs.in, network: ws, ws-opts: {path: /, headers: {Host: sni.111000.indevs.in}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@saministamm 2", server: 172.64.149.54, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 77534396-dead-4a6c-8761-03939cd4fdc8, servername: my.vulmart.ir, network: ws, ws-opts: {path: /, headers: {Host: my.vulmart.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 172.64.149.54:443, server: 172.64.149.54, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 77534396-dead-4a6c-8761-03939cd4fdc8, servername: my.vulmart.ir, network: ws, ws-opts: {path: /, headers: {Host: my.vulmart.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@saministamm`", server: 172.64.149.54, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 77534396-dead-4a6c-8761-03939cd4fdc8, servername: my.vulmart.ir, network: ws, ws-opts: {path: /, headers: {Host: my.vulmart.ir}}, skip-cert-verify: false, udp: true, tfo: false}
@@ -17,7 +16,7 @@ proxies:
   - {name: "@saministamm 4", server: 194.59.215.131, port: 672, type: vless, tls: true, packet-encoding: xudp, uuid: bc953469-14e8-4536-afbd-56dc8edf138a, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@saministamm | چنل تلگراممون`", server: mochi-d1bdb57cd7-kalak.apps.ir-central1.arvancaas.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c7201267-8439-4ba6-8c41-fc0ecd5472b3, network: ws, ws-opts: {path: /vless, headers: {Host: mochi-d1bdb57cd7-kalak.apps.ir-central1.arvancaas.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: https://t.me/saministamm` 2, server: mochi-d1bdb57cd7-kalak.apps.ir-central1.arvancaas.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c7201267-8439-4ba6-8c41-fc0ecd5472b3, network: ws, ws-opts: {path: /vless, headers: {Host: mochi-d1bdb57cd7-kalak.apps.ir-central1.arvancaas.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: saministamm 2, server: 185.143.233.5, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c9fad6b5-c353-4dae-a753-5bf1b9da65e2, servername: fn.8lack.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/chat?ed=128", headers: {Host: fn.8lack.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: https://t.me/saministamm` 3, server: cloudinohost.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d229bc5d-b9ed-4591-897c-442cca6f67cd, servername: cloudinohost.com, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: cloudinohost.com}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: Tel_ @akhbar_iraniuz ترکیبی, server: v11.mailiran.net, port: 11999, type: vmess, uuid: 8257b31e-0805-4f28-9209-251b72b9a593, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: v11.mailiran.net}}, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
@@ -27,7 +26,6 @@ proxy-groups:
       - DIRECT
       - "@saministamm"
       - saministamm
-      - 176.96.138.17:2087
       - "@saministamm 2"
       - 172.64.149.54:443
       - "@saministamm`"
@@ -37,7 +35,7 @@ proxy-groups:
       - "@saministamm 4"
       - "@saministamm | چنل تلگراممون`"
       - https://t.me/saministamm` 2
-      - saministamm 2
+      - https://t.me/saministamm` 3
       - Tel_ @akhbar_iraniuz ترکیبی
   - name: ♻️ 自动选择
     type: url-test
@@ -47,7 +45,6 @@ proxy-groups:
     proxies:
       - "@saministamm"
       - saministamm
-      - 176.96.138.17:2087
       - "@saministamm 2"
       - 172.64.149.54:443
       - "@saministamm`"
@@ -57,7 +54,7 @@ proxy-groups:
       - "@saministamm 4"
       - "@saministamm | چنل تلگراممون`"
       - https://t.me/saministamm` 2
-      - saministamm 2
+      - https://t.me/saministamm` 3
       - Tel_ @akhbar_iraniuz ترکیبی
   - name: 🌍 国外媒体
     type: select
@@ -67,7 +64,6 @@ proxy-groups:
       - 🎯 全球直连
       - "@saministamm"
       - saministamm
-      - 176.96.138.17:2087
       - "@saministamm 2"
       - 172.64.149.54:443
       - "@saministamm`"
@@ -77,7 +73,7 @@ proxy-groups:
       - "@saministamm 4"
       - "@saministamm | چنل تلگراممون`"
       - https://t.me/saministamm` 2
-      - saministamm 2
+      - https://t.me/saministamm` 3
       - Tel_ @akhbar_iraniuz ترکیبی
   - name: 📲 电报信息
     type: select
@@ -86,7 +82,6 @@ proxy-groups:
       - 🎯 全球直连
       - "@saministamm"
       - saministamm
-      - 176.96.138.17:2087
       - "@saministamm 2"
       - 172.64.149.54:443
       - "@saministamm`"
@@ -96,7 +91,7 @@ proxy-groups:
       - "@saministamm 4"
       - "@saministamm | چنل تلگراممون`"
       - https://t.me/saministamm` 2
-      - saministamm 2
+      - https://t.me/saministamm` 3
       - Tel_ @akhbar_iraniuz ترکیبی
   - name: Ⓜ️ 微软服务
     type: select
@@ -105,7 +100,6 @@ proxy-groups:
       - 🚀 节点选择
       - "@saministamm"
       - saministamm
-      - 176.96.138.17:2087
       - "@saministamm 2"
       - 172.64.149.54:443
       - "@saministamm`"
@@ -115,7 +109,7 @@ proxy-groups:
       - "@saministamm 4"
       - "@saministamm | چنل تلگراممون`"
       - https://t.me/saministamm` 2
-      - saministamm 2
+      - https://t.me/saministamm` 3
       - Tel_ @akhbar_iraniuz ترکیبی
   - name: 🍎 苹果服务
     type: select
@@ -124,7 +118,6 @@ proxy-groups:
       - 🎯 全球直连
       - "@saministamm"
       - saministamm
-      - 176.96.138.17:2087
       - "@saministamm 2"
       - 172.64.149.54:443
       - "@saministamm`"
@@ -134,7 +127,7 @@ proxy-groups:
       - "@saministamm 4"
       - "@saministamm | چنل تلگراممون`"
       - https://t.me/saministamm` 2
-      - saministamm 2
+      - https://t.me/saministamm` 3
       - Tel_ @akhbar_iraniuz ترکیبی
   - name: 🎯 全球直连
     type: select
@@ -165,7 +158,6 @@ proxy-groups:
       - ♻️ 自动选择
       - "@saministamm"
       - saministamm
-      - 176.96.138.17:2087
       - "@saministamm 2"
       - 172.64.149.54:443
       - "@saministamm`"
@@ -175,7 +167,7 @@ proxy-groups:
       - "@saministamm 4"
       - "@saministamm | چنل تلگراممون`"
       - https://t.me/saministamm` 2
-      - saministamm 2
+      - https://t.me/saministamm` 3
       - Tel_ @akhbar_iraniuz ترکیبی
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
