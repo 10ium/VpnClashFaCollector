@@ -465,7 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@V2RAYENGLISH`", server: varzesh3.com, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: ea22f5f3-f74b-427a-a45f-30165c730fa0, network: ws, ws-opts: {path: /, headers: {Host: mmdi.novatechsystem.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@V2RAYENGLISH", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@V2RAYENGLISH`"
+      - "@V2RAYENGLISH"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@V2RAYENGLISH`"
+      - "@V2RAYENGLISH"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@V2RAYENGLISH`"
+      - "@V2RAYENGLISH"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@V2RAYENGLISH`"
+      - "@V2RAYENGLISH"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@V2RAYENGLISH`"
+      - "@V2RAYENGLISH"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@V2RAYENGLISH`"
+      - "@V2RAYENGLISH"
   - name: دانلود منیجر 📥
     type: select
     proxies:

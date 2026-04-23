@@ -465,17 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@`", server: 38.60.171.254, port: 990, type: ss, cipher: chacha20-ietf-poly1305, password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=, udp: true, tfo: false}
-  - {name: "@Masyakata`", server: 82.38.31.190, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
-  - {name: "@Masyakata` 2", server: 135.84.67.21, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.dynv6.net, network: ws, ws-opts: {path: /, headers: {Host: sni.111000.dynv6.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2rayconfigamir 4315", server: ip1-fast.tyryqyserver.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 85df0ad4-8818-4aa5-9799-4bb7232de9e0, network: ws, ws-opts: {path: "/?ed=2052", headers: {Host: tamamde1.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2rayconfigamir 1602", server: ip3-fast.tyryqyserver.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 85df0ad4-8818-4aa5-9799-4bb7232de9e0, network: ws, ws-opts: {path: "/?ed=2052", headers: {Host: tamamde1.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: chimishetv`, server: mochi-d1bdb57cd7-kalak.apps.ir-central1.arvancaas.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c7201267-8439-4ba6-8c41-fc0ecd5472b3, network: ws, ws-opts: {path: /vless, headers: {Host: mochi-d1bdb57cd7-kalak.apps.ir-central1.arvancaas.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Fa-cdn-xt76ff5a-cdn`, server: mochi-d1bdb57cd7-kalak.apps.ir-central1.arvancaas.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c7201267-8439-4ba6-8c41-fc0ecd5472b3, network: ws, ws-opts: {path: /vless, headers: {Host: mochi-d1bdb57cd7-kalak.apps.ir-central1.arvancaas.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "telegram: @Masyakata", server: 185.220.227.100, port: 2080, type: vless, tls: true, packet-encoding: xudp, uuid: 986a442c-6621-4197-9a35-0ae697d0e20d, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@Hiddify_Nexttt 👈🍋‍🟩 کانال تلگرامی ما`", server: cloudinohost.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d229bc5d-b9ed-4591-897c-442cca6f67cd, servername: cloudinohost.com, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: cloudinohost.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: open-net-vpn, server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "telegram: @hupivpn", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@Hiddify_Nexttt 👈🕹 کانال تلگرامی ما", server: v11.mailiran.net, port: 11999, type: vmess, uuid: 8257b31e-0805-4f28-9209-251b72b9a593, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: v11.mailiran.net}}, udp: true, tfo: false}
-  - {name: Free, server: v11.mailiran.net, port: 11999, type: vmess, uuid: 8257b31e-0805-4f28-9209-251b72b9a593, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: v11.mailiran.net}}, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -492,51 +486,33 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@`"
-      - "@Masyakata`"
-      - "@Masyakata` 2"
-      - "@v2rayconfigamir 4315"
-      - "@v2rayconfigamir 1602"
-      - chimishetv`
-      - Fa-cdn-xt76ff5a-cdn`
+      - "telegram: @Masyakata"
       - "@Hiddify_Nexttt 👈🍋‍🟩 کانال تلگرامی ما`"
+      - open-net-vpn
       - "telegram: @hupivpn"
       - "@Hiddify_Nexttt 👈🕹 کانال تلگرامی ما"
-      - Free
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@`"
-      - "@Masyakata`"
-      - "@Masyakata` 2"
-      - "@v2rayconfigamir 4315"
-      - "@v2rayconfigamir 1602"
-      - chimishetv`
-      - Fa-cdn-xt76ff5a-cdn`
+      - "telegram: @Masyakata"
       - "@Hiddify_Nexttt 👈🍋‍🟩 کانال تلگرامی ما`"
+      - open-net-vpn
       - "telegram: @hupivpn"
       - "@Hiddify_Nexttt 👈🕹 کانال تلگرامی ما"
-      - Free
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@`"
-      - "@Masyakata`"
-      - "@Masyakata` 2"
-      - "@v2rayconfigamir 4315"
-      - "@v2rayconfigamir 1602"
-      - chimishetv`
-      - Fa-cdn-xt76ff5a-cdn`
+      - "telegram: @Masyakata"
       - "@Hiddify_Nexttt 👈🍋‍🟩 کانال تلگرامی ما`"
+      - open-net-vpn
       - "telegram: @hupivpn"
       - "@Hiddify_Nexttt 👈🕹 کانال تلگرامی ما"
-      - Free
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -552,51 +528,33 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@`"
-      - "@Masyakata`"
-      - "@Masyakata` 2"
-      - "@v2rayconfigamir 4315"
-      - "@v2rayconfigamir 1602"
-      - chimishetv`
-      - Fa-cdn-xt76ff5a-cdn`
+      - "telegram: @Masyakata"
       - "@Hiddify_Nexttt 👈🍋‍🟩 کانال تلگرامی ما`"
+      - open-net-vpn
       - "telegram: @hupivpn"
       - "@Hiddify_Nexttt 👈🕹 کانال تلگرامی ما"
-      - Free
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@`"
-      - "@Masyakata`"
-      - "@Masyakata` 2"
-      - "@v2rayconfigamir 4315"
-      - "@v2rayconfigamir 1602"
-      - chimishetv`
-      - Fa-cdn-xt76ff5a-cdn`
+      - "telegram: @Masyakata"
       - "@Hiddify_Nexttt 👈🍋‍🟩 کانال تلگرامی ما`"
+      - open-net-vpn
       - "telegram: @hupivpn"
       - "@Hiddify_Nexttt 👈🕹 کانال تلگرامی ما"
-      - Free
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@`"
-      - "@Masyakata`"
-      - "@Masyakata` 2"
-      - "@v2rayconfigamir 4315"
-      - "@v2rayconfigamir 1602"
-      - chimishetv`
-      - Fa-cdn-xt76ff5a-cdn`
+      - "telegram: @Masyakata"
       - "@Hiddify_Nexttt 👈🍋‍🟩 کانال تلگرامی ما`"
+      - open-net-vpn
       - "telegram: @hupivpn"
       - "@Hiddify_Nexttt 👈🕹 کانال تلگرامی ما"
-      - Free
   - name: دانلود منیجر 📥
     type: select
     proxies:

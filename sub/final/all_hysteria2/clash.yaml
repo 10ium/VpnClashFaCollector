@@ -465,16 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: 15625 | ⚡️Telegram - t.me/SOSkeyNET, server: 144.31.224.14, port: 443, type: hysteria2, ports: 443, password: 123456789StrongPass, sni: www.cloudflare.com, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 14989 | ⚡️Telegram - t.me/SOSkeyNET, server: 72.56.122.195, port: 443, type: hysteria2, ports: 443, password: hysteria_master_password, sni: google.com, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 4@oneclickvpnkeys, server: 72.56.122.195, port: 443, type: hysteria2, ports: 443, password: hysteria_master_password, sni: google.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 13270 | ⚡️Telegram - t.me/SOSkeyNET, server: vpn-jp-001.fastervpn.world, port: 443, type: hysteria2, ports: 443, password: qQe1z5kU8kN6SlKnDt9Ru3Qp, sni: vpn-jp-001.fastervpn.world, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 13275 | ⚡️Telegram - t.me/SOSkeyNET, server: vpn-jp-002.fastervpn.world, port: 443, type: hysteria2, ports: 443, password: qQe1z5kU8kN6SlKnDt9Ru3Qp, sni: vpn-jp-002.fastervpn.world, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 13276 | ⚡️Telegram - t.me/SOSkeyNET, server: vpn-jp-003.fastervpn.world, port: 443, type: hysteria2, ports: 443, password: qQe1z5kU8kN6SlKnDt9Ru3Qp, sni: vpn-jp-003.fastervpn.world, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 13271 | ⚡️Telegram - t.me/SOSkeyNET, server: vpn-jp-004.fastervpn.world, port: 443, type: hysteria2, ports: 443, password: qQe1z5kU8kN6SlKnDt9Ru3Qp, sni: vpn-jp-004.fastervpn.world, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 13273 | ⚡️Telegram - t.me/SOSkeyNET, server: vpn-sg-001.fastervpn.world, port: 443, type: hysteria2, ports: 443, password: qQe1z5kU8kN6SlKnDt9Ru3Qp, sni: vpn-sg-001.fastervpn.world, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 13272 | ⚡️Telegram - t.me/SOSkeyNET, server: vpn-sg-003.fastervpn.world, port: 443, type: hysteria2, ports: 443, password: qQe1z5kU8kN6SlKnDt9Ru3Qp, sni: vpn-sg-003.fastervpn.world, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 13279 | ⚡️Telegram - t.me/SOSkeyNET, server: vpn-tw-001.fastervpn.world, port: 443, type: hysteria2, ports: 443, password: qQe1z5kU8kN6SlKnDt9Ru3Qp, sni: vpn-tw-001.fastervpn.world, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 13274 | ⚡️Telegram - t.me/SOSkeyNET, server: vpn-vn-001.fastervpn.world, port: 443, type: hysteria2, ports: 443, password: qQe1z5kU8kN6SlKnDt9Ru3Qp, sni: vpn-vn-001.fastervpn.world, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -491,48 +484,27 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - 15625 | ⚡️Telegram - t.me/SOSkeyNET
       - 14989 | ⚡️Telegram - t.me/SOSkeyNET
       - 4@oneclickvpnkeys
-      - 13270 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13275 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13276 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13271 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13273 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13272 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13279 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13274 | ⚡️Telegram - t.me/SOSkeyNET
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
+      - 15625 | ⚡️Telegram - t.me/SOSkeyNET
       - 14989 | ⚡️Telegram - t.me/SOSkeyNET
       - 4@oneclickvpnkeys
-      - 13270 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13275 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13276 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13271 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13273 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13272 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13279 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13274 | ⚡️Telegram - t.me/SOSkeyNET
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
+      - 15625 | ⚡️Telegram - t.me/SOSkeyNET
       - 14989 | ⚡️Telegram - t.me/SOSkeyNET
       - 4@oneclickvpnkeys
-      - 13270 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13275 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13276 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13271 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13273 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13272 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13279 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13274 | ⚡️Telegram - t.me/SOSkeyNET
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -548,48 +520,27 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 15625 | ⚡️Telegram - t.me/SOSkeyNET
       - 14989 | ⚡️Telegram - t.me/SOSkeyNET
       - 4@oneclickvpnkeys
-      - 13270 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13275 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13276 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13271 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13273 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13272 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13279 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13274 | ⚡️Telegram - t.me/SOSkeyNET
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 15625 | ⚡️Telegram - t.me/SOSkeyNET
       - 14989 | ⚡️Telegram - t.me/SOSkeyNET
       - 4@oneclickvpnkeys
-      - 13270 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13275 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13276 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13271 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13273 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13272 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13279 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13274 | ⚡️Telegram - t.me/SOSkeyNET
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 15625 | ⚡️Telegram - t.me/SOSkeyNET
       - 14989 | ⚡️Telegram - t.me/SOSkeyNET
       - 4@oneclickvpnkeys
-      - 13270 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13275 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13276 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13271 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13273 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13272 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13279 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13274 | ⚡️Telegram - t.me/SOSkeyNET
   - name: دانلود منیجر 📥
     type: select
     proxies:

@@ -5,46 +5,46 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@V2RAYENGLISH`", server: varzesh3.com, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: ea22f5f3-f74b-427a-a45f-30165c730fa0, network: ws, ws-opts: {path: /, headers: {Host: mmdi.novatechsystem.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@V2RAYENGLISH", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@V2RAYENGLISH`"
+      - "@V2RAYENGLISH"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@V2RAYENGLISH`"
+      - "@V2RAYENGLISH"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@V2RAYENGLISH`"
+      - "@V2RAYENGLISH"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@V2RAYENGLISH`"
+      - "@V2RAYENGLISH"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@V2RAYENGLISH`"
+      - "@V2RAYENGLISH"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@V2RAYENGLISH`"
+      - "@V2RAYENGLISH"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +72,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@V2RAYENGLISH`"
+      - "@V2RAYENGLISH"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

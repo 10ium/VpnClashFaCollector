@@ -5,109 +5,60 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: 15625 | ⚡️Telegram - t.me/SOSkeyNET, server: 144.31.224.14, port: 443, type: hysteria2, ports: 443, password: 123456789StrongPass, sni: www.cloudflare.com, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 14989 | ⚡️Telegram - t.me/SOSkeyNET, server: 72.56.122.195, port: 443, type: hysteria2, ports: 443, password: hysteria_master_password, sni: google.com, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 4@oneclickvpnkeys, server: 72.56.122.195, port: 443, type: hysteria2, ports: 443, password: hysteria_master_password, sni: google.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 13270 | ⚡️Telegram - t.me/SOSkeyNET, server: vpn-jp-001.fastervpn.world, port: 443, type: hysteria2, ports: 443, password: qQe1z5kU8kN6SlKnDt9Ru3Qp, sni: vpn-jp-001.fastervpn.world, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 13275 | ⚡️Telegram - t.me/SOSkeyNET, server: vpn-jp-002.fastervpn.world, port: 443, type: hysteria2, ports: 443, password: qQe1z5kU8kN6SlKnDt9Ru3Qp, sni: vpn-jp-002.fastervpn.world, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 13276 | ⚡️Telegram - t.me/SOSkeyNET, server: vpn-jp-003.fastervpn.world, port: 443, type: hysteria2, ports: 443, password: qQe1z5kU8kN6SlKnDt9Ru3Qp, sni: vpn-jp-003.fastervpn.world, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 13271 | ⚡️Telegram - t.me/SOSkeyNET, server: vpn-jp-004.fastervpn.world, port: 443, type: hysteria2, ports: 443, password: qQe1z5kU8kN6SlKnDt9Ru3Qp, sni: vpn-jp-004.fastervpn.world, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 13273 | ⚡️Telegram - t.me/SOSkeyNET, server: vpn-sg-001.fastervpn.world, port: 443, type: hysteria2, ports: 443, password: qQe1z5kU8kN6SlKnDt9Ru3Qp, sni: vpn-sg-001.fastervpn.world, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 13272 | ⚡️Telegram - t.me/SOSkeyNET, server: vpn-sg-003.fastervpn.world, port: 443, type: hysteria2, ports: 443, password: qQe1z5kU8kN6SlKnDt9Ru3Qp, sni: vpn-sg-003.fastervpn.world, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 13279 | ⚡️Telegram - t.me/SOSkeyNET, server: vpn-tw-001.fastervpn.world, port: 443, type: hysteria2, ports: 443, password: qQe1z5kU8kN6SlKnDt9Ru3Qp, sni: vpn-tw-001.fastervpn.world, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 13274 | ⚡️Telegram - t.me/SOSkeyNET, server: vpn-vn-001.fastervpn.world, port: 443, type: hysteria2, ports: 443, password: qQe1z5kU8kN6SlKnDt9Ru3Qp, sni: vpn-vn-001.fastervpn.world, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - 15625 | ⚡️Telegram - t.me/SOSkeyNET
       - 14989 | ⚡️Telegram - t.me/SOSkeyNET
       - 4@oneclickvpnkeys
-      - 13270 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13275 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13276 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13271 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13273 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13272 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13279 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13274 | ⚡️Telegram - t.me/SOSkeyNET
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - 15625 | ⚡️Telegram - t.me/SOSkeyNET
       - 14989 | ⚡️Telegram - t.me/SOSkeyNET
       - 4@oneclickvpnkeys
-      - 13270 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13275 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13276 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13271 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13273 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13272 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13279 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13274 | ⚡️Telegram - t.me/SOSkeyNET
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 15625 | ⚡️Telegram - t.me/SOSkeyNET
       - 14989 | ⚡️Telegram - t.me/SOSkeyNET
       - 4@oneclickvpnkeys
-      - 13270 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13275 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13276 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13271 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13273 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13272 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13279 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13274 | ⚡️Telegram - t.me/SOSkeyNET
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 15625 | ⚡️Telegram - t.me/SOSkeyNET
       - 14989 | ⚡️Telegram - t.me/SOSkeyNET
       - 4@oneclickvpnkeys
-      - 13270 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13275 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13276 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13271 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13273 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13272 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13279 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13274 | ⚡️Telegram - t.me/SOSkeyNET
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - 15625 | ⚡️Telegram - t.me/SOSkeyNET
       - 14989 | ⚡️Telegram - t.me/SOSkeyNET
       - 4@oneclickvpnkeys
-      - 13270 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13275 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13276 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13271 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13273 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13272 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13279 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13274 | ⚡️Telegram - t.me/SOSkeyNET
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 15625 | ⚡️Telegram - t.me/SOSkeyNET
       - 14989 | ⚡️Telegram - t.me/SOSkeyNET
       - 4@oneclickvpnkeys
-      - 13270 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13275 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13276 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13271 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13273 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13272 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13279 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13274 | ⚡️Telegram - t.me/SOSkeyNET
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -135,16 +86,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 15625 | ⚡️Telegram - t.me/SOSkeyNET
       - 14989 | ⚡️Telegram - t.me/SOSkeyNET
       - 4@oneclickvpnkeys
-      - 13270 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13275 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13276 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13271 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13273 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13272 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13279 | ⚡️Telegram - t.me/SOSkeyNET
-      - 13274 | ⚡️Telegram - t.me/SOSkeyNET
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

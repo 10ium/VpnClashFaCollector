@@ -465,12 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: Tel;Father_vpn³, server: 185.94.29.156, port: 4001, type: vless, tls: true, packet-encoding: xudp, uuid: 00000000-0000-4000-8000-000000000000, servername: sub.mot.ip-ddns.com, network: ws, ws-opts: {path: /, headers: {Host: sub.mot.ip-ddns.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Tel:Father_vpn`, server: link-dl.mizbanertebatfarda.ir, port: 2095, type: vless, tls: true, packet-encoding: xudp, uuid: 4a86f341-72e3-4d3a-91c0-47d4385f6a0e, network: ws, ws-opts: {path: /, headers: {Host: link-dl.mizbanertebatfarda.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Tel;Father_vpn⁴, server: 172.64.149.54, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 77534396-dead-4a6c-8761-03939cd4fdc8, servername: my.vulmart.ir, network: ws, ws-opts: {path: /, headers: {Host: my.vulmart.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Tel;Father_vpn⁵`, server: 185.143.233.120, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 802ed98e-39a1-41f5-a721-4c1aeec986a5, servername: alef.ir.oadeflantrogm.iranaircdn.com, network: ws, ws-opts: {path: "/?ed=443", headers: {Host: alef.ir.oadeflantrogm.iranaircdn.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Tel;Father_vpn², server: varzesh3.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 8b157d0b-7fff-47bc-bff8-fa84ec3fc768, network: ws, ws-opts: {path: /, headers: {Host: jd.knet-prime.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Tel;Father_vpn¹, server: 194.59.215.131, port: 672, type: vless, tls: true, packet-encoding: xudp, uuid: bc953469-14e8-4536-afbd-56dc8edf138a, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Tel;Father_vpn`, server: pg.nexorainnovationhub.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 14349148-ddef-4fdb-94fc-2d72bfbb4498, network: ws, ws-opts: {path: /, headers: {Host: a31.restaurantnetwork.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Tel;Father_vpn` 2, server: 185.143.234.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: a2772ce5-647f-4967-835a-135ed9701422, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,36 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - Tel;Father_vpn³
-      - Tel:Father_vpn`
-      - Tel;Father_vpn⁴
-      - Tel;Father_vpn⁵`
-      - Tel;Father_vpn²
-      - Tel;Father_vpn¹
+      - Tel;Father_vpn`
+      - Tel;Father_vpn` 2
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - Tel;Father_vpn³
-      - Tel:Father_vpn`
-      - Tel;Father_vpn⁴
-      - Tel;Father_vpn⁵`
-      - Tel;Father_vpn²
-      - Tel;Father_vpn¹
+      - Tel;Father_vpn`
+      - Tel;Father_vpn` 2
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - Tel;Father_vpn³
-      - Tel:Father_vpn`
-      - Tel;Father_vpn⁴
-      - Tel;Father_vpn⁵`
-      - Tel;Father_vpn²
-      - Tel;Father_vpn¹
+      - Tel;Father_vpn`
+      - Tel;Father_vpn` 2
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -532,36 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Tel;Father_vpn³
-      - Tel:Father_vpn`
-      - Tel;Father_vpn⁴
-      - Tel;Father_vpn⁵`
-      - Tel;Father_vpn²
-      - Tel;Father_vpn¹
+      - Tel;Father_vpn`
+      - Tel;Father_vpn` 2
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Tel;Father_vpn³
-      - Tel:Father_vpn`
-      - Tel;Father_vpn⁴
-      - Tel;Father_vpn⁵`
-      - Tel;Father_vpn²
-      - Tel;Father_vpn¹
+      - Tel;Father_vpn`
+      - Tel;Father_vpn` 2
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Tel;Father_vpn³
-      - Tel:Father_vpn`
-      - Tel;Father_vpn⁴
-      - Tel;Father_vpn⁵`
-      - Tel;Father_vpn²
-      - Tel;Father_vpn¹
+      - Tel;Father_vpn`
+      - Tel;Father_vpn` 2
   - name: دانلود منیجر 📥
     type: select
     proxies:

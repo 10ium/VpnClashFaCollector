@@ -5,11 +5,16 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: proxy_kafee`, server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 10d15584-fe06-4c78-b106-7a96439e731b, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: proxy_kafee, server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 355cbbae-10ac-4715-8790-c8dc57d7d9f6, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee - Psiphon 23`", server: 185.143.234.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 49522264-23cf-4e32-9e34-c5c8bb4eb509, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "`", server: mochi-d1bdb57cd7-kalak.apps.ir-central1.arvancaas.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c7201267-8439-4ba6-8c41-fc0ecd5472b3, network: ws, ws-opts: {path: /vless, headers: {Host: mochi-d1bdb57cd7-kalak.apps.ir-central1.arvancaas.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee`", server: 185.143.234.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: d025ab69-864f-4370-ae56-e5bcafd62199, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee", server: 79.175.167.196, port: 4041, type: vless, tls: true, packet-encoding: xudp, uuid: f8db6882-e6b2-4f57-bed8-515d094a39e3, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee👑", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee👑 2", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee - Psiphon 24", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee 👈🫔 کانال ما", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee 2", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee6", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: Telegram @proxy_kafee, server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee3", server: v11.mailiran.net, port: 11999, type: vmess, uuid: 8257b31e-0805-4f28-9209-251b72b9a593, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: v11.mailiran.net}}, udp: true, tfo: false}
 proxy-groups:
@@ -18,11 +23,16 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - proxy_kafee`
+      - proxy_kafee
       - "@proxy_kafee - Psiphon 23`"
-      - "`"
-      - "@proxy_kafee`"
       - "@proxy_kafee"
+      - "@proxy_kafee👑"
+      - "@proxy_kafee👑 2"
       - "@proxy_kafee - Psiphon 24"
+      - "@proxy_kafee 👈🫔 کانال ما"
+      - "@proxy_kafee 2"
+      - "@proxy_kafee6"
       - Telegram @proxy_kafee
       - "@proxy_kafee3"
   - name: ♻️ 自动选择
@@ -31,11 +41,16 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - proxy_kafee`
+      - proxy_kafee
       - "@proxy_kafee - Psiphon 23`"
-      - "`"
-      - "@proxy_kafee`"
       - "@proxy_kafee"
+      - "@proxy_kafee👑"
+      - "@proxy_kafee👑 2"
       - "@proxy_kafee - Psiphon 24"
+      - "@proxy_kafee 👈🫔 کانال ما"
+      - "@proxy_kafee 2"
+      - "@proxy_kafee6"
       - Telegram @proxy_kafee
       - "@proxy_kafee3"
   - name: 🌍 国外媒体
@@ -44,11 +59,16 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - proxy_kafee`
+      - proxy_kafee
       - "@proxy_kafee - Psiphon 23`"
-      - "`"
-      - "@proxy_kafee`"
       - "@proxy_kafee"
+      - "@proxy_kafee👑"
+      - "@proxy_kafee👑 2"
       - "@proxy_kafee - Psiphon 24"
+      - "@proxy_kafee 👈🫔 کانال ما"
+      - "@proxy_kafee 2"
+      - "@proxy_kafee6"
       - Telegram @proxy_kafee
       - "@proxy_kafee3"
   - name: 📲 电报信息
@@ -56,11 +76,16 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - proxy_kafee`
+      - proxy_kafee
       - "@proxy_kafee - Psiphon 23`"
-      - "`"
-      - "@proxy_kafee`"
       - "@proxy_kafee"
+      - "@proxy_kafee👑"
+      - "@proxy_kafee👑 2"
       - "@proxy_kafee - Psiphon 24"
+      - "@proxy_kafee 👈🫔 کانال ما"
+      - "@proxy_kafee 2"
+      - "@proxy_kafee6"
       - Telegram @proxy_kafee
       - "@proxy_kafee3"
   - name: Ⓜ️ 微软服务
@@ -68,11 +93,16 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - proxy_kafee`
+      - proxy_kafee
       - "@proxy_kafee - Psiphon 23`"
-      - "`"
-      - "@proxy_kafee`"
       - "@proxy_kafee"
+      - "@proxy_kafee👑"
+      - "@proxy_kafee👑 2"
       - "@proxy_kafee - Psiphon 24"
+      - "@proxy_kafee 👈🫔 کانال ما"
+      - "@proxy_kafee 2"
+      - "@proxy_kafee6"
       - Telegram @proxy_kafee
       - "@proxy_kafee3"
   - name: 🍎 苹果服务
@@ -80,11 +110,16 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - proxy_kafee`
+      - proxy_kafee
       - "@proxy_kafee - Psiphon 23`"
-      - "`"
-      - "@proxy_kafee`"
       - "@proxy_kafee"
+      - "@proxy_kafee👑"
+      - "@proxy_kafee👑 2"
       - "@proxy_kafee - Psiphon 24"
+      - "@proxy_kafee 👈🫔 کانال ما"
+      - "@proxy_kafee 2"
+      - "@proxy_kafee6"
       - Telegram @proxy_kafee
       - "@proxy_kafee3"
   - name: 🎯 全球直连
@@ -114,11 +149,16 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - proxy_kafee`
+      - proxy_kafee
       - "@proxy_kafee - Psiphon 23`"
-      - "`"
-      - "@proxy_kafee`"
       - "@proxy_kafee"
+      - "@proxy_kafee👑"
+      - "@proxy_kafee👑 2"
       - "@proxy_kafee - Psiphon 24"
+      - "@proxy_kafee 👈🫔 کانال ما"
+      - "@proxy_kafee 2"
+      - "@proxy_kafee6"
       - Telegram @proxy_kafee
       - "@proxy_kafee3"
 rules:

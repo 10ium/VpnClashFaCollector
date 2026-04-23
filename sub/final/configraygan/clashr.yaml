@@ -5,67 +5,116 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "`", server: 194.48.198.140, port: 53994, type: vless, tls: true, packet-encoding: xudp, uuid: 8adf1bd9-c0f9-45e2-ac98-f2d5ed16b439, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: configraygan, server: mochi-d1bdb57cd7-kalak.apps.ir-central1.arvancaas.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c7201267-8439-4ba6-8c41-fc0ecd5472b3, network: ws, ws-opts: {path: /vless, headers: {Host: mochi-d1bdb57cd7-kalak.apps.ir-central1.arvancaas.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: configraygan 2, server: snapp.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: d8cfdace-b09e-4b65-a69e-5cd5d6bfc667, network: ws, ws-opts: {path: /, headers: {Host: hi.jahansportmarkazi.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: configraygan 3, server: 37.32.27.85, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: fcfac74b-4da6-4ce4-b2ac-0b89c395de2d, network: ws, ws-opts: {path: /, headers: {Host: a1.supreme-xfast.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan, server: 193.151.153.47, port: 34661, type: vless, tls: true, packet-encoding: xudp, uuid: 4278a814-4a82-4b9b-8092-0ba60a3fb2f6, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan", server: 193.151.153.47, port: 34661, type: vless, tls: true, packet-encoding: xudp, uuid: 4278a814-4a82-4b9b-8092-0ba60a3fb2f6, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan + سایفون", server: 95.38.242.205, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: bd311d15-955f-4f6e-a328-c54ca514b5c5, host: tgju.org, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan + سایفون 2", server: support.ankernamad.ir, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: bd311d15-955f-4f6e-a328-c54ca514b5c5, host: tgju.org, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan + سایفون 3", server: 95.38.242.216, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: c4e20d58-4518-4feb-8f5c-cb5c4dd27330, host: tgju.org, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan + سایفون 4", server: home.asanpaf.ir, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: c4e20d58-4518-4feb-8f5c-cb5c4dd27330, host: tgju.org, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "Telegram:  @configraygan", server: varzesh3.com, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: ea22f5f3-f74b-427a-a45f-30165c730fa0, network: ws, ws-opts: {path: /, headers: {Host: mmdi.novatechsystem.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan 2, server: 5.188.190.252, port: 22324, type: vmess, uuid: 04621bae-ab36-11ec-b909-0242ac120002, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan + سایفون 5", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "Telegram:  @configraygan 2", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@configraygan + سایفون 6", server: serveraddress.domain.com, port: 443, type: vmess, uuid: 8b27bf75-38d5-4409-89dc-d5c44b577afc, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: serveraddress.domain.com, network: ws, ws-opts: {path: /secologist, headers: {Host: serveraddress.domain.com}}, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "`"
       - configraygan
+      - "@configraygan"
+      - "@configraygan + سایفون"
+      - "@configraygan + سایفون 2"
+      - "@configraygan + سایفون 3"
+      - "@configraygan + سایفون 4"
+      - "Telegram:  @configraygan"
       - configraygan 2
-      - configraygan 3
+      - "@configraygan + سایفون 5"
+      - "Telegram:  @configraygan 2"
+      - "@configraygan + سایفون 6"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "`"
       - configraygan
+      - "@configraygan"
+      - "@configraygan + سایفون"
+      - "@configraygan + سایفون 2"
+      - "@configraygan + سایفون 3"
+      - "@configraygan + سایفون 4"
+      - "Telegram:  @configraygan"
       - configraygan 2
-      - configraygan 3
+      - "@configraygan + سایفون 5"
+      - "Telegram:  @configraygan 2"
+      - "@configraygan + سایفون 6"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "`"
       - configraygan
+      - "@configraygan"
+      - "@configraygan + سایفون"
+      - "@configraygan + سایفون 2"
+      - "@configraygan + سایفون 3"
+      - "@configraygan + سایفون 4"
+      - "Telegram:  @configraygan"
       - configraygan 2
-      - configraygan 3
+      - "@configraygan + سایفون 5"
+      - "Telegram:  @configraygan 2"
+      - "@configraygan + سایفون 6"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "`"
       - configraygan
+      - "@configraygan"
+      - "@configraygan + سایفون"
+      - "@configraygan + سایفون 2"
+      - "@configraygan + سایفون 3"
+      - "@configraygan + سایفون 4"
+      - "Telegram:  @configraygan"
       - configraygan 2
-      - configraygan 3
+      - "@configraygan + سایفون 5"
+      - "Telegram:  @configraygan 2"
+      - "@configraygan + سایفون 6"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "`"
       - configraygan
+      - "@configraygan"
+      - "@configraygan + سایفون"
+      - "@configraygan + سایفون 2"
+      - "@configraygan + سایفون 3"
+      - "@configraygan + سایفون 4"
+      - "Telegram:  @configraygan"
       - configraygan 2
-      - configraygan 3
+      - "@configraygan + سایفون 5"
+      - "Telegram:  @configraygan 2"
+      - "@configraygan + سایفون 6"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "`"
       - configraygan
+      - "@configraygan"
+      - "@configraygan + سایفون"
+      - "@configraygan + سایفون 2"
+      - "@configraygan + سایفون 3"
+      - "@configraygan + سایفون 4"
+      - "Telegram:  @configraygan"
       - configraygan 2
-      - configraygan 3
+      - "@configraygan + سایفون 5"
+      - "Telegram:  @configraygan 2"
+      - "@configraygan + سایفون 6"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -93,10 +142,17 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "`"
       - configraygan
+      - "@configraygan"
+      - "@configraygan + سایفون"
+      - "@configraygan + سایفون 2"
+      - "@configraygan + سایفون 3"
+      - "@configraygan + سایفون 4"
+      - "Telegram:  @configraygan"
       - configraygan 2
-      - configraygan 3
+      - "@configraygan + سایفون 5"
+      - "Telegram:  @configraygan 2"
+      - "@configraygan + سایفون 6"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
