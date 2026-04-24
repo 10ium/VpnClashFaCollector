@@ -470,7 +470,6 @@ proxies:
   - {name: "@vasl_bashim", server: 185.220.227.100, port: 2080, type: vless, tls: true, packet-encoding: xudp, uuid: 986a442c-6621-4197-9a35-0ae697d0e20d, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: https%3A%2F%2Ft.me%2Fvasl_bashim, server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@vasl_bashim 2", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim 3", server: v11.mailiran.net, port: 11999, type: vmess, uuid: 8257b31e-0805-4f28-9209-251b72b9a593, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: v11.mailiran.net}}, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -492,7 +491,6 @@ proxy-groups:
       - "@vasl_bashim"
       - https%3A%2F%2Ft.me%2Fvasl_bashim
       - "@vasl_bashim 2"
-      - "@vasl_bashim 3"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -504,7 +502,6 @@ proxy-groups:
       - "@vasl_bashim"
       - https%3A%2F%2Ft.me%2Fvasl_bashim
       - "@vasl_bashim 2"
-      - "@vasl_bashim 3"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -516,7 +513,6 @@ proxy-groups:
       - "@vasl_bashim"
       - https%3A%2F%2Ft.me%2Fvasl_bashim
       - "@vasl_bashim 2"
-      - "@vasl_bashim 3"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -537,7 +533,6 @@ proxy-groups:
       - "@vasl_bashim"
       - https%3A%2F%2Ft.me%2Fvasl_bashim
       - "@vasl_bashim 2"
-      - "@vasl_bashim 3"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -549,7 +544,6 @@ proxy-groups:
       - "@vasl_bashim"
       - https%3A%2F%2Ft.me%2Fvasl_bashim
       - "@vasl_bashim 2"
-      - "@vasl_bashim 3"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -561,7 +555,6 @@ proxy-groups:
       - "@vasl_bashim"
       - https%3A%2F%2Ft.me%2Fvasl_bashim
       - "@vasl_bashim 2"
-      - "@vasl_bashim 3"
   - name: دانلود منیجر 📥
     type: select
     proxies:

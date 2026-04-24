@@ -10,7 +10,6 @@ proxies:
   - {name: "@vasl_bashim", server: 185.220.227.100, port: 2080, type: vless, tls: true, packet-encoding: xudp, uuid: 986a442c-6621-4197-9a35-0ae697d0e20d, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: https%3A%2F%2Ft.me%2Fvasl_bashim, server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@vasl_bashim 2", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim 3", server: v11.mailiran.net, port: 11999, type: vmess, uuid: 8257b31e-0805-4f28-9209-251b72b9a593, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: v11.mailiran.net}}, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -22,7 +21,6 @@ proxy-groups:
       - "@vasl_bashim"
       - https%3A%2F%2Ft.me%2Fvasl_bashim
       - "@vasl_bashim 2"
-      - "@vasl_bashim 3"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -34,7 +32,6 @@ proxy-groups:
       - "@vasl_bashim"
       - https%3A%2F%2Ft.me%2Fvasl_bashim
       - "@vasl_bashim 2"
-      - "@vasl_bashim 3"
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -46,7 +43,6 @@ proxy-groups:
       - "@vasl_bashim"
       - https%3A%2F%2Ft.me%2Fvasl_bashim
       - "@vasl_bashim 2"
-      - "@vasl_bashim 3"
   - name: 📲 电报信息
     type: select
     proxies:
@@ -57,7 +53,6 @@ proxy-groups:
       - "@vasl_bashim"
       - https%3A%2F%2Ft.me%2Fvasl_bashim
       - "@vasl_bashim 2"
-      - "@vasl_bashim 3"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -68,7 +63,6 @@ proxy-groups:
       - "@vasl_bashim"
       - https%3A%2F%2Ft.me%2Fvasl_bashim
       - "@vasl_bashim 2"
-      - "@vasl_bashim 3"
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -79,7 +73,6 @@ proxy-groups:
       - "@vasl_bashim"
       - https%3A%2F%2Ft.me%2Fvasl_bashim
       - "@vasl_bashim 2"
-      - "@vasl_bashim 3"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -112,7 +105,6 @@ proxy-groups:
       - "@vasl_bashim"
       - https%3A%2F%2Ft.me%2Fvasl_bashim
       - "@vasl_bashim 2"
-      - "@vasl_bashim 3"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

@@ -465,7 +465,6 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@i10VPN - Psiphon 23`", server: 185.143.234.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 49522264-23cf-4e32-9e34-c5c8bb4eb509, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@i10VPN - Psiphon 25", server: 185.220.227.100, port: 2080, type: vless, tls: true, packet-encoding: xudp, uuid: 986a442c-6621-4197-9a35-0ae697d0e20d, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@i10VPN - Psiphon 24", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
@@ -484,7 +483,6 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@i10VPN - Psiphon 23`"
       - "@i10VPN - Psiphon 25"
       - "@i10VPN - Psiphon 24"
   - name: خودکار (بهترین پینگ) 🤖
@@ -493,7 +491,6 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - "@i10VPN - Psiphon 23`"
       - "@i10VPN - Psiphon 25"
       - "@i10VPN - Psiphon 24"
   - name: پشتیبان (در صورت قطعی) 🧯
@@ -502,7 +499,6 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - "@i10VPN - Psiphon 23`"
       - "@i10VPN - Psiphon 25"
       - "@i10VPN - Psiphon 24"
   - name: اتصال پایدار 🔗
@@ -520,7 +516,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@i10VPN - Psiphon 23`"
       - "@i10VPN - Psiphon 25"
       - "@i10VPN - Psiphon 24"
   - name: توزیع بار (گردشی) 🔁
@@ -529,7 +524,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@i10VPN - Psiphon 23`"
       - "@i10VPN - Psiphon 25"
       - "@i10VPN - Psiphon 24"
   - name: توزیع بار (موقت) ⏳
@@ -538,7 +532,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@i10VPN - Psiphon 23`"
       - "@i10VPN - Psiphon 25"
       - "@i10VPN - Psiphon 24"
   - name: دانلود منیجر 📥

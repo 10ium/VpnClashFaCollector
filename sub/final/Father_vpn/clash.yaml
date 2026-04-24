@@ -466,7 +466,10 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: Tel;Father_vpn`, server: pg.nexorainnovationhub.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 14349148-ddef-4fdb-94fc-2d72bfbb4498, network: ws, ws-opts: {path: /, headers: {Host: a31.restaurantnetwork.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Tel;Father_vpn` 2, server: 185.143.234.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: a2772ce5-647f-4967-835a-135ed9701422, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Tel;Father_vpn` 2, server: 193.151.153.47, port: 34661, type: vless, tls: true, packet-encoding: xudp, uuid: 4278a814-4a82-4b9b-8092-0ba60a3fb2f6, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Tel;Father_vpn` 3, server: Snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 56c41039-532d-4360-86be-4bc7849b4dea, network: ws, ws-opts: {path: /, headers: {Host: S1.webvps.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Tel;Father_vpn, server: trex.nahidapp.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 87892959-27c8-4492-8f31-da14be631839, servername: trex.nahidapp.com, network: ws, ws-opts: {path: /vless-ws, headers: {Host: trex.nahidapp.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Tel;Father_vpn` 4, server: 185.143.234.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: a2772ce5-647f-4967-835a-135ed9701422, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,6 +488,9 @@ proxy-groups:
     proxies:
       - Tel;Father_vpn`
       - Tel;Father_vpn` 2
+      - Tel;Father_vpn` 3
+      - Tel;Father_vpn
+      - Tel;Father_vpn` 4
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -493,6 +499,9 @@ proxy-groups:
     proxies:
       - Tel;Father_vpn`
       - Tel;Father_vpn` 2
+      - Tel;Father_vpn` 3
+      - Tel;Father_vpn
+      - Tel;Father_vpn` 4
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -501,6 +510,9 @@ proxy-groups:
     proxies:
       - Tel;Father_vpn`
       - Tel;Father_vpn` 2
+      - Tel;Father_vpn` 3
+      - Tel;Father_vpn
+      - Tel;Father_vpn` 4
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -518,6 +530,9 @@ proxy-groups:
     proxies:
       - Tel;Father_vpn`
       - Tel;Father_vpn` 2
+      - Tel;Father_vpn` 3
+      - Tel;Father_vpn
+      - Tel;Father_vpn` 4
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -526,6 +541,9 @@ proxy-groups:
     proxies:
       - Tel;Father_vpn`
       - Tel;Father_vpn` 2
+      - Tel;Father_vpn` 3
+      - Tel;Father_vpn
+      - Tel;Father_vpn` 4
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -534,6 +552,9 @@ proxy-groups:
     proxies:
       - Tel;Father_vpn`
       - Tel;Father_vpn` 2
+      - Tel;Father_vpn` 3
+      - Tel;Father_vpn
+      - Tel;Father_vpn` 4
   - name: دانلود منیجر 📥
     type: select
     proxies:

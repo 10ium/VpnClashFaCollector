@@ -5,46 +5,95 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "Telegram: @vpnbaz", server: 8.6.112.6, port: 443, type: trojan, password: humanity, sni: www.creationlong.org, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org}}, udp: true, tfo: false}
+  - {name: "@vpnbaz | ترکیبی", server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 10d15584-fe06-4c78-b106-7a96439e731b, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz | ترکیبی ایرانسل", server: 185.143.234.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: f20de03b-c016-45cd-a6e2-d73713fa1fe0, network: ws, ws-opts: {path: /, headers: {Host: d.nsa03.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz | ترکیبی همراه اول", server: 185.143.234.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: f20de03b-c016-45cd-a6e2-d73713fa1fe0, network: ws, ws-opts: {path: /, headers: {Host: d.nsa03.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ترکیبی مخابرات | @vpnbaz, server: 185.143.234.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: f20de03b-c016-45cd-a6e2-d73713fa1fe0, network: ws, ws-opts: {path: /, headers: {Host: d.nsa03.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz | ترکیبی رایتل", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz | ترکیبی همراه اول 2", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz | ترکیبی مخابرات", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz | ترکیبی 2", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "Telegram: @vpnbaz"
+      - "@vpnbaz | ترکیبی"
+      - "@vpnbaz | ترکیبی ایرانسل"
+      - "@vpnbaz | ترکیبی همراه اول"
+      - ترکیبی مخابرات | @vpnbaz
+      - "@vpnbaz | ترکیبی رایتل"
+      - "@vpnbaz | ترکیبی همراه اول 2"
+      - "@vpnbaz | ترکیبی مخابرات"
+      - "@vpnbaz | ترکیبی 2"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "Telegram: @vpnbaz"
+      - "@vpnbaz | ترکیبی"
+      - "@vpnbaz | ترکیبی ایرانسل"
+      - "@vpnbaz | ترکیبی همراه اول"
+      - ترکیبی مخابرات | @vpnbaz
+      - "@vpnbaz | ترکیبی رایتل"
+      - "@vpnbaz | ترکیبی همراه اول 2"
+      - "@vpnbaz | ترکیبی مخابرات"
+      - "@vpnbaz | ترکیبی 2"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "Telegram: @vpnbaz"
+      - "@vpnbaz | ترکیبی"
+      - "@vpnbaz | ترکیبی ایرانسل"
+      - "@vpnbaz | ترکیبی همراه اول"
+      - ترکیبی مخابرات | @vpnbaz
+      - "@vpnbaz | ترکیبی رایتل"
+      - "@vpnbaz | ترکیبی همراه اول 2"
+      - "@vpnbaz | ترکیبی مخابرات"
+      - "@vpnbaz | ترکیبی 2"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "Telegram: @vpnbaz"
+      - "@vpnbaz | ترکیبی"
+      - "@vpnbaz | ترکیبی ایرانسل"
+      - "@vpnbaz | ترکیبی همراه اول"
+      - ترکیبی مخابرات | @vpnbaz
+      - "@vpnbaz | ترکیبی رایتل"
+      - "@vpnbaz | ترکیبی همراه اول 2"
+      - "@vpnbaz | ترکیبی مخابرات"
+      - "@vpnbaz | ترکیبی 2"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "Telegram: @vpnbaz"
+      - "@vpnbaz | ترکیبی"
+      - "@vpnbaz | ترکیبی ایرانسل"
+      - "@vpnbaz | ترکیبی همراه اول"
+      - ترکیبی مخابرات | @vpnbaz
+      - "@vpnbaz | ترکیبی رایتل"
+      - "@vpnbaz | ترکیبی همراه اول 2"
+      - "@vpnbaz | ترکیبی مخابرات"
+      - "@vpnbaz | ترکیبی 2"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "Telegram: @vpnbaz"
+      - "@vpnbaz | ترکیبی"
+      - "@vpnbaz | ترکیبی ایرانسل"
+      - "@vpnbaz | ترکیبی همراه اول"
+      - ترکیبی مخابرات | @vpnbaz
+      - "@vpnbaz | ترکیبی رایتل"
+      - "@vpnbaz | ترکیبی همراه اول 2"
+      - "@vpnbaz | ترکیبی مخابرات"
+      - "@vpnbaz | ترکیبی 2"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +121,14 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "Telegram: @vpnbaz"
+      - "@vpnbaz | ترکیبی"
+      - "@vpnbaz | ترکیبی ایرانسل"
+      - "@vpnbaz | ترکیبی همراه اول"
+      - ترکیبی مخابرات | @vpnbaz
+      - "@vpnbaz | ترکیبی رایتل"
+      - "@vpnbaz | ترکیبی همراه اول 2"
+      - "@vpnbaz | ترکیبی مخابرات"
+      - "@vpnbaz | ترکیبی 2"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
