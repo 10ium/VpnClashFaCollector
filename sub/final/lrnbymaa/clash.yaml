@@ -465,10 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: lrnbymaa`, server: 8.6.112.0, port: 443, type: trojan, password: humanity, sni: www.ignitelimit.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.ignitelimit.com}}, udp: true, tfo: false}
-  - {name: lrnbymaa` 2, server: 8.6.112.6, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.dynv6.net, network: ws, ws-opts: {path: /, headers: {Host: sni.111000.dynv6.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: lrnbymaa` 3, server: 78.111.11.11, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6fd98b96-9dd2-442c-92a4-a449cdf0fd1e, servername: ef88878e-c5a7-412f-82f1-0b09c6792d29.hollowspot.ir, alpn: [http%2F1.1], network: ws, ws-opts: {path: /api/v1/uuid/9e97a8c9-fdb0-4dfb-9557-2a90a554aee4, headers: {Host: ef88878e-c5a7-412f-82f1-0b09c6792d29.hollowspot.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: lrnbymaa` 4, server: 8.6.112.6, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: eb211fb7-40c8-4314-8b67-7b5f025e0f62, servername: kamalnet.pages.dev, network: ws, ws-opts: {path: /, headers: {Host: kamalnet.pages.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: lrnbymaa`, server: 78.109.199.60, port: 12050, type: vless, tls: true, packet-encoding: xudp, uuid: f0626fab-0ae9-4928-b183-0e87136ca577, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,9 +483,6 @@ proxy-groups:
     type: select
     proxies:
       - lrnbymaa`
-      - lrnbymaa` 2
-      - lrnbymaa` 3
-      - lrnbymaa` 4
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -496,9 +490,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - lrnbymaa`
-      - lrnbymaa` 2
-      - lrnbymaa` 3
-      - lrnbymaa` 4
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -506,9 +497,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - lrnbymaa`
-      - lrnbymaa` 2
-      - lrnbymaa` 3
-      - lrnbymaa` 4
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -525,9 +513,6 @@ proxy-groups:
     interval: 600
     proxies:
       - lrnbymaa`
-      - lrnbymaa` 2
-      - lrnbymaa` 3
-      - lrnbymaa` 4
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -535,9 +520,6 @@ proxy-groups:
     interval: 600
     proxies:
       - lrnbymaa`
-      - lrnbymaa` 2
-      - lrnbymaa` 3
-      - lrnbymaa` 4
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -545,9 +527,6 @@ proxy-groups:
     interval: 600
     proxies:
       - lrnbymaa`
-      - lrnbymaa` 2
-      - lrnbymaa` 3
-      - lrnbymaa` 4
   - name: دانلود منیجر 📥
     type: select
     proxies:
