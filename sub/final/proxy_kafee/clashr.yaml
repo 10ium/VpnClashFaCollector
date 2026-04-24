@@ -5,102 +5,102 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: proxy_kafee`, server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 10d15584-fe06-4c78-b106-7a96439e731b, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: proxy_kafee, server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 355cbbae-10ac-4715-8790-c8dc57d7d9f6, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "`", server: 193.151.153.47, port: 34661, type: vless, tls: true, packet-encoding: xudp, uuid: 4278a814-4a82-4b9b-8092-0ba60a3fb2f6, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee", server: varzesh3.com, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: c334010c-b5eb-4d80-bc93-9d7b52b03e6e, network: ws, ws-opts: {path: /, headers: {Host: pt.novatechplus.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ویتوری و سایفون @proxy_kafee, server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee👑", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee👑 2", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee کانال تلگرامی ما : 1", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee کانال تلگرامی ما : 2", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee کانال تلگرامی ما : 3", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee کانال تلگرامی ما :", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee 👈🫔 کانال ما", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee6", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee 2", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - proxy_kafee`
-      - proxy_kafee
       - "`"
-      - "@proxy_kafee👑"
-      - "@proxy_kafee👑 2"
-      - "@proxy_kafee کانال تلگرامی ما :"
-      - "@proxy_kafee 👈🫔 کانال ما"
       - "@proxy_kafee"
-      - "@proxy_kafee6"
+      - ویتوری و سایفون @proxy_kafee
+      - "@proxy_kafee👑"
+      - "@proxy_kafee کانال تلگرامی ما : 1"
+      - "@proxy_kafee کانال تلگرامی ما : 2"
+      - "@proxy_kafee کانال تلگرامی ما : 3"
+      - "@proxy_kafee کانال تلگرامی ما :"
+      - "@proxy_kafee 2"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - proxy_kafee`
-      - proxy_kafee
       - "`"
-      - "@proxy_kafee👑"
-      - "@proxy_kafee👑 2"
-      - "@proxy_kafee کانال تلگرامی ما :"
-      - "@proxy_kafee 👈🫔 کانال ما"
       - "@proxy_kafee"
-      - "@proxy_kafee6"
+      - ویتوری و سایفون @proxy_kafee
+      - "@proxy_kafee👑"
+      - "@proxy_kafee کانال تلگرامی ما : 1"
+      - "@proxy_kafee کانال تلگرامی ما : 2"
+      - "@proxy_kafee کانال تلگرامی ما : 3"
+      - "@proxy_kafee کانال تلگرامی ما :"
+      - "@proxy_kafee 2"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - proxy_kafee`
-      - proxy_kafee
       - "`"
-      - "@proxy_kafee👑"
-      - "@proxy_kafee👑 2"
-      - "@proxy_kafee کانال تلگرامی ما :"
-      - "@proxy_kafee 👈🫔 کانال ما"
       - "@proxy_kafee"
-      - "@proxy_kafee6"
+      - ویتوری و سایفون @proxy_kafee
+      - "@proxy_kafee👑"
+      - "@proxy_kafee کانال تلگرامی ما : 1"
+      - "@proxy_kafee کانال تلگرامی ما : 2"
+      - "@proxy_kafee کانال تلگرامی ما : 3"
+      - "@proxy_kafee کانال تلگرامی ما :"
+      - "@proxy_kafee 2"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - proxy_kafee`
-      - proxy_kafee
       - "`"
-      - "@proxy_kafee👑"
-      - "@proxy_kafee👑 2"
-      - "@proxy_kafee کانال تلگرامی ما :"
-      - "@proxy_kafee 👈🫔 کانال ما"
       - "@proxy_kafee"
-      - "@proxy_kafee6"
+      - ویتوری و سایفون @proxy_kafee
+      - "@proxy_kafee👑"
+      - "@proxy_kafee کانال تلگرامی ما : 1"
+      - "@proxy_kafee کانال تلگرامی ما : 2"
+      - "@proxy_kafee کانال تلگرامی ما : 3"
+      - "@proxy_kafee کانال تلگرامی ما :"
+      - "@proxy_kafee 2"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - proxy_kafee`
-      - proxy_kafee
       - "`"
-      - "@proxy_kafee👑"
-      - "@proxy_kafee👑 2"
-      - "@proxy_kafee کانال تلگرامی ما :"
-      - "@proxy_kafee 👈🫔 کانال ما"
       - "@proxy_kafee"
-      - "@proxy_kafee6"
+      - ویتوری و سایفون @proxy_kafee
+      - "@proxy_kafee👑"
+      - "@proxy_kafee کانال تلگرامی ما : 1"
+      - "@proxy_kafee کانال تلگرامی ما : 2"
+      - "@proxy_kafee کانال تلگرامی ما : 3"
+      - "@proxy_kafee کانال تلگرامی ما :"
+      - "@proxy_kafee 2"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - proxy_kafee`
-      - proxy_kafee
       - "`"
-      - "@proxy_kafee👑"
-      - "@proxy_kafee👑 2"
-      - "@proxy_kafee کانال تلگرامی ما :"
-      - "@proxy_kafee 👈🫔 کانال ما"
       - "@proxy_kafee"
-      - "@proxy_kafee6"
+      - ویتوری و سایفون @proxy_kafee
+      - "@proxy_kafee👑"
+      - "@proxy_kafee کانال تلگرامی ما : 1"
+      - "@proxy_kafee کانال تلگرامی ما : 2"
+      - "@proxy_kafee کانال تلگرامی ما : 3"
+      - "@proxy_kafee کانال تلگرامی ما :"
+      - "@proxy_kafee 2"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -128,15 +128,15 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - proxy_kafee`
-      - proxy_kafee
       - "`"
-      - "@proxy_kafee👑"
-      - "@proxy_kafee👑 2"
-      - "@proxy_kafee کانال تلگرامی ما :"
-      - "@proxy_kafee 👈🫔 کانال ما"
       - "@proxy_kafee"
-      - "@proxy_kafee6"
+      - ویتوری و سایفون @proxy_kafee
+      - "@proxy_kafee👑"
+      - "@proxy_kafee کانال تلگرامی ما : 1"
+      - "@proxy_kafee کانال تلگرامی ما : 2"
+      - "@proxy_kafee کانال تلگرامی ما : 3"
+      - "@proxy_kafee کانال تلگرامی ما :"
+      - "@proxy_kafee 2"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

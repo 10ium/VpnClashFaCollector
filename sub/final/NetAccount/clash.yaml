@@ -465,8 +465,6 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: NetAccount`, server: 185.143.233.5, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 87148d84-ea25-4d25-8009-a4a7b2854558, servername: dn.8lack.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/chat?ed=128", headers: {Host: dn.8lack.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: NetAccount` 2, server: 185.143.234.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: a2772ce5-647f-4967-835a-135ed9701422, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: NetAccount, server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -484,8 +482,6 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - NetAccount`
-      - NetAccount` 2
       - NetAccount
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -493,8 +489,6 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - NetAccount`
-      - NetAccount` 2
       - NetAccount
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -502,8 +496,6 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - NetAccount`
-      - NetAccount` 2
       - NetAccount
   - name: اتصال پایدار 🔗
     type: url-test
@@ -520,8 +512,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - NetAccount`
-      - NetAccount` 2
       - NetAccount
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -529,8 +519,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - NetAccount`
-      - NetAccount` 2
       - NetAccount
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -538,8 +526,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - NetAccount`
-      - NetAccount` 2
       - NetAccount
   - name: دانلود منیجر 📥
     type: select

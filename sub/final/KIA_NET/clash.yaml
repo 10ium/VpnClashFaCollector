@@ -465,10 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: kia_net`, server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 22109ab6-bfdd-4062-ae1c-054c74353e39, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ترکیب  کیا, server: 2.144.20.130, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5785444d-596b-425c-8b1c-727a539508d9, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ترکیب, server: mochi-d1bdb57cd7-kalak.apps.ir-central1.arvancaas.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c7201267-8439-4ba6-8c41-fc0ecd5472b3, network: ws, ws-opts: {path: /vless, headers: {Host: mochi-d1bdb57cd7-kalak.apps.ir-central1.arvancaas.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ترکیب`, server: mochi-d1bdb57cd7-kalak.apps.ir-central1.arvancaas.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c7201267-8439-4ba6-8c41-fc0ecd5472b3, network: ws, ws-opts: {path: /vless, headers: {Host: mochi-d1bdb57cd7-kalak.apps.ir-central1.arvancaas.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ،kia_net1, server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,30 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - kia_net`
-      - ترکیب  کیا
-      - ترکیب
-      - ترکیب`
+      - ،kia_net1
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - kia_net`
-      - ترکیب  کیا
-      - ترکیب
-      - ترکیب`
+      - ،kia_net1
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - kia_net`
-      - ترکیب  کیا
-      - ترکیب
-      - ترکیب`
+      - ،kia_net1
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -524,30 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - kia_net`
-      - ترکیب  کیا
-      - ترکیب
-      - ترکیب`
+      - ،kia_net1
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - kia_net`
-      - ترکیب  کیا
-      - ترکیب
-      - ترکیب`
+      - ،kia_net1
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - kia_net`
-      - ترکیب  کیا
-      - ترکیب
-      - ترکیب`
+      - ،kia_net1
   - name: دانلود منیجر 📥
     type: select
     proxies:

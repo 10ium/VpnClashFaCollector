@@ -465,7 +465,6 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 15625 | ⚡️Telegram - t.me/SOSkeyNET, server: 144.31.224.14, port: 443, type: hysteria2, ports: 443, password: 123456789StrongPass, sni: www.cloudflare.com, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 16168 | ⚡️Telegram - t.me/SOSkeyNET, server: 144.31.224.14, port: 443, type: hysteria2, ports: 443, password: 123456789StrongPass, sni: www.cloudflare.com, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -483,7 +482,6 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 15625 | ⚡️Telegram - t.me/SOSkeyNET
       - 16168 | ⚡️Telegram - t.me/SOSkeyNET
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -491,7 +489,6 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - 15625 | ⚡️Telegram - t.me/SOSkeyNET
       - 16168 | ⚡️Telegram - t.me/SOSkeyNET
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -499,7 +496,6 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - 15625 | ⚡️Telegram - t.me/SOSkeyNET
       - 16168 | ⚡️Telegram - t.me/SOSkeyNET
   - name: اتصال پایدار 🔗
     type: url-test
@@ -516,7 +512,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 15625 | ⚡️Telegram - t.me/SOSkeyNET
       - 16168 | ⚡️Telegram - t.me/SOSkeyNET
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -524,7 +519,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 15625 | ⚡️Telegram - t.me/SOSkeyNET
       - 16168 | ⚡️Telegram - t.me/SOSkeyNET
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -532,7 +526,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 15625 | ⚡️Telegram - t.me/SOSkeyNET
       - 16168 | ⚡️Telegram - t.me/SOSkeyNET
   - name: دانلود منیجر 📥
     type: select

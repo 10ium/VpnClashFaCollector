@@ -465,6 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: "@V2RAYENGLISH`", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: a2aa9012-57c4-4e7f-9a1d-018ed0292f2b, network: ws, ws-opts: {path: /, headers: {Host: trx.noventa.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@V2RAYENGLISH", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -482,6 +483,7 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - "@V2RAYENGLISH`"
       - "@V2RAYENGLISH"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -489,6 +491,7 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - "@V2RAYENGLISH`"
       - "@V2RAYENGLISH"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -496,6 +499,7 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - "@V2RAYENGLISH`"
       - "@V2RAYENGLISH"
   - name: اتصال پایدار 🔗
     type: url-test
@@ -512,6 +516,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@V2RAYENGLISH`"
       - "@V2RAYENGLISH"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -519,6 +524,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@V2RAYENGLISH`"
       - "@V2RAYENGLISH"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -526,6 +532,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@V2RAYENGLISH`"
       - "@V2RAYENGLISH"
   - name: دانلود منیجر 📥
     type: select
