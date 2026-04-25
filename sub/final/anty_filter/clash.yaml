@@ -465,14 +465,10 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@vpnbaz | ترکیبی", server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 10d15584-fe06-4c78-b106-7a96439e731b, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz | ترکیبی ایرانسل", server: 185.143.234.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: f20de03b-c016-45cd-a6e2-d73713fa1fe0, network: ws, ws-opts: {path: /, headers: {Host: d.nsa03.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz | ترکیبی همراه اول", server: 185.143.234.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: f20de03b-c016-45cd-a6e2-d73713fa1fe0, network: ws, ws-opts: {path: /, headers: {Host: d.nsa03.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ترکیبی مخابرات | @vpnbaz, server: 185.143.234.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: f20de03b-c016-45cd-a6e2-d73713fa1fe0, network: ws, ws-opts: {path: /, headers: {Host: d.nsa03.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz | ترکیبی رایتل", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz | ترکیبی همراه اول 2", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz | ترکیبی مخابرات", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz | ترکیبی 2", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz | ترکیبی", server: 185.143.233.5, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: -0d7a-496f-8e97-0bbc33bff55d, servername: in.8lack.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/chat?ed=128", headers: {Host: in.8lack.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz | ترکیبی 2", server: 172.64.149.54, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.dynv6.net, network: ws, ws-opts: {path: "/?Telegram🇨🇳 @WangCai2", headers: {Host: sni.111000.dynv6.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz | ترکیبی 3", server: 185.143.233.5, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a3bfe21b-0d7a-496f-8e97-0bbc33bff55d, servername: in.8lack.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/chat?ed=128", headers: {Host: in.8lack.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz | ترکیبی 4", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -490,13 +486,9 @@ proxy-groups:
     type: select
     proxies:
       - "@vpnbaz | ترکیبی"
-      - "@vpnbaz | ترکیبی ایرانسل"
-      - "@vpnbaz | ترکیبی همراه اول"
-      - ترکیبی مخابرات | @vpnbaz
-      - "@vpnbaz | ترکیبی رایتل"
-      - "@vpnbaz | ترکیبی همراه اول 2"
-      - "@vpnbaz | ترکیبی مخابرات"
       - "@vpnbaz | ترکیبی 2"
+      - "@vpnbaz | ترکیبی 3"
+      - "@vpnbaz | ترکیبی 4"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -504,13 +496,9 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@vpnbaz | ترکیبی"
-      - "@vpnbaz | ترکیبی ایرانسل"
-      - "@vpnbaz | ترکیبی همراه اول"
-      - ترکیبی مخابرات | @vpnbaz
-      - "@vpnbaz | ترکیبی رایتل"
-      - "@vpnbaz | ترکیبی همراه اول 2"
-      - "@vpnbaz | ترکیبی مخابرات"
       - "@vpnbaz | ترکیبی 2"
+      - "@vpnbaz | ترکیبی 3"
+      - "@vpnbaz | ترکیبی 4"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -518,13 +506,9 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@vpnbaz | ترکیبی"
-      - "@vpnbaz | ترکیبی ایرانسل"
-      - "@vpnbaz | ترکیبی همراه اول"
-      - ترکیبی مخابرات | @vpnbaz
-      - "@vpnbaz | ترکیبی رایتل"
-      - "@vpnbaz | ترکیبی همراه اول 2"
-      - "@vpnbaz | ترکیبی مخابرات"
       - "@vpnbaz | ترکیبی 2"
+      - "@vpnbaz | ترکیبی 3"
+      - "@vpnbaz | ترکیبی 4"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -541,13 +525,9 @@ proxy-groups:
     interval: 600
     proxies:
       - "@vpnbaz | ترکیبی"
-      - "@vpnbaz | ترکیبی ایرانسل"
-      - "@vpnbaz | ترکیبی همراه اول"
-      - ترکیبی مخابرات | @vpnbaz
-      - "@vpnbaz | ترکیبی رایتل"
-      - "@vpnbaz | ترکیبی همراه اول 2"
-      - "@vpnbaz | ترکیبی مخابرات"
       - "@vpnbaz | ترکیبی 2"
+      - "@vpnbaz | ترکیبی 3"
+      - "@vpnbaz | ترکیبی 4"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -555,13 +535,9 @@ proxy-groups:
     interval: 600
     proxies:
       - "@vpnbaz | ترکیبی"
-      - "@vpnbaz | ترکیبی ایرانسل"
-      - "@vpnbaz | ترکیبی همراه اول"
-      - ترکیبی مخابرات | @vpnbaz
-      - "@vpnbaz | ترکیبی رایتل"
-      - "@vpnbaz | ترکیبی همراه اول 2"
-      - "@vpnbaz | ترکیبی مخابرات"
       - "@vpnbaz | ترکیبی 2"
+      - "@vpnbaz | ترکیبی 3"
+      - "@vpnbaz | ترکیبی 4"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -569,13 +545,9 @@ proxy-groups:
     interval: 600
     proxies:
       - "@vpnbaz | ترکیبی"
-      - "@vpnbaz | ترکیبی ایرانسل"
-      - "@vpnbaz | ترکیبی همراه اول"
-      - ترکیبی مخابرات | @vpnbaz
-      - "@vpnbaz | ترکیبی رایتل"
-      - "@vpnbaz | ترکیبی همراه اول 2"
-      - "@vpnbaz | ترکیبی مخابرات"
       - "@vpnbaz | ترکیبی 2"
+      - "@vpnbaz | ترکیبی 3"
+      - "@vpnbaz | ترکیبی 4"
   - name: دانلود منیجر 📥
     type: select
     proxies:

@@ -465,6 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: "@i10VPN - Psiphon 29`", server: 185.143.233.5, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: -0d7a-496f-8e97-0bbc33bff55d, servername: in.8lack.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/chat?ed=128", headers: {Host: in.8lack.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@i10VPN - Psiphon 30`", server: 62.60.147.73, port: 20020, type: vless, tls: true, packet-encoding: xudp, uuid: 60de7f07-71b7-4b37-a04c-db5d769ec130, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@i10VPN - Psiphon 28`", server: 185.143.233.5, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a3bfe21b-0d7a-496f-8e97-0bbc33bff55d, servername: in.8lack.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/chat?ed=128", headers: {Host: in.8lack.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -482,6 +484,8 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - "@i10VPN - Psiphon 29`"
+      - "@i10VPN - Psiphon 30`"
       - "@i10VPN - Psiphon 28`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -489,6 +493,8 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - "@i10VPN - Psiphon 29`"
+      - "@i10VPN - Psiphon 30`"
       - "@i10VPN - Psiphon 28`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -496,6 +502,8 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - "@i10VPN - Psiphon 29`"
+      - "@i10VPN - Psiphon 30`"
       - "@i10VPN - Psiphon 28`"
   - name: اتصال پایدار 🔗
     type: url-test
@@ -512,6 +520,8 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@i10VPN - Psiphon 29`"
+      - "@i10VPN - Psiphon 30`"
       - "@i10VPN - Psiphon 28`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -519,6 +529,8 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@i10VPN - Psiphon 29`"
+      - "@i10VPN - Psiphon 30`"
       - "@i10VPN - Psiphon 28`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -526,6 +538,8 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@i10VPN - Psiphon 29`"
+      - "@i10VPN - Psiphon 30`"
       - "@i10VPN - Psiphon 28`"
   - name: دانلود منیجر 📥
     type: select

@@ -465,13 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "***🇰🇿***`", server: 8.209.74.72, port: 20001, type: ss, cipher: chacha20-ietf-poly1305, password: PWpjPo3tqhPN4yRZ, udp: true, tfo: false}
-  - {name: "@oliver_soul | ترکیبی", server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 10d15584-fe06-4c78-b106-7a96439e731b, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@`", server: arvan1.un1ty.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 24d19028-f0ea-4111-8fb1-8e14e755a853, network: ws, ws-opts: {path: /jesuschrist, headers: {Host: arvan1.un1ty.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: Masyakata`, server: sdl.ciliko.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 27c3f9d4-ae71-eb92-7249-0ef4ef46b0b4, network: ws, ws-opts: {path: /, headers: {Host: sdl.ciliko.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Masyakata`", server: meli.masterdadeh.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 5b450693-fa03-7feb-a1f6-d4fc005aca18, servername: 185.226.94.198, network: ws, ws-opts: {path: /, headers: {Host: 185.226.94.198}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@Masyakata", server: 46.34.163.235, port: 43588, type: vless, tls: true, packet-encoding: xudp, uuid: 7c9594ae-6bbf-4430-a39b-4def77db322a, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@Masyakata 2", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: a7a9ba8d-fefe-4f91-804b-75ce163fa0a0, network: ws, ws-opts: {path: /, headers: {Host: ssssssma.linuwebtunnel.site}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "telegram: @hupivpn", server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf, port: 20227, type: vmess, uuid: fbcddd21-fc3b-47ea-a21d-178e5e706c97, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@sogoandfuckyourlove", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -488,39 +486,33 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "***🇰🇿***`"
-      - "@oliver_soul | ترکیبی"
-      - "@`"
       - Masyakata`
+      - "@Masyakata`"
       - "@Masyakata"
       - "@Masyakata 2"
-      - "telegram: @hupivpn"
+      - "@sogoandfuckyourlove"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "***🇰🇿***`"
-      - "@oliver_soul | ترکیبی"
-      - "@`"
       - Masyakata`
+      - "@Masyakata`"
       - "@Masyakata"
       - "@Masyakata 2"
-      - "telegram: @hupivpn"
+      - "@sogoandfuckyourlove"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "***🇰🇿***`"
-      - "@oliver_soul | ترکیبی"
-      - "@`"
       - Masyakata`
+      - "@Masyakata`"
       - "@Masyakata"
       - "@Masyakata 2"
-      - "telegram: @hupivpn"
+      - "@sogoandfuckyourlove"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -536,39 +528,33 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "***🇰🇿***`"
-      - "@oliver_soul | ترکیبی"
-      - "@`"
       - Masyakata`
+      - "@Masyakata`"
       - "@Masyakata"
       - "@Masyakata 2"
-      - "telegram: @hupivpn"
+      - "@sogoandfuckyourlove"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "***🇰🇿***`"
-      - "@oliver_soul | ترکیبی"
-      - "@`"
       - Masyakata`
+      - "@Masyakata`"
       - "@Masyakata"
       - "@Masyakata 2"
-      - "telegram: @hupivpn"
+      - "@sogoandfuckyourlove"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "***🇰🇿***`"
-      - "@oliver_soul | ترکیبی"
-      - "@`"
       - Masyakata`
+      - "@Masyakata`"
       - "@Masyakata"
       - "@Masyakata 2"
-      - "telegram: @hupivpn"
+      - "@sogoandfuckyourlove"
   - name: دانلود منیجر 📥
     type: select
     proxies:

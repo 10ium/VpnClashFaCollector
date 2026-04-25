@@ -465,17 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: voip8.divar.mom:55008, server: voip8.divar.mom, port: 55008, type: vless, tls: true, packet-encoding: xudp, uuid: 1ee00626-3289-4bb9-a77a-2f913e04d954, servername: www.digikala.com, host: www.digikala.com, path: /, reality-opts: {public-key: vxdmULi_cO7dha2aQnsjSViARO15hvI9HWyo0pVPlkQ, short-id: c385}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: test`, server: sould.preghost2.ir, port: 64090, type: vless, tls: true, packet-encoding: xudp, uuid: 2d9460e5-3c0a-4da3-b527-6dfde37c2d3d, servername: sould.preghost2.ir, alpn: [h2%2Chttp%2F1.1], network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: aparat-stream}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: Main-Test1`, server: u1htop.standalonemsnew.cam, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 9b4872aa-0980-4e08-a2b2-4f0064f5d81c, network: ws, ws-opts: {path: /, headers: {Host: u1htop.standalonemsnew.cam}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: iicenet`, server: 185.143.234.235, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 9c53f695-eb63-475c-b11f-e64fa828020d, servername: cndnt.ir, network: ws, ws-opts: {path: /data, headers: {Host: cndnt.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 9hone02016vpn, server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: a55cad09-6530-436e-aed9-dab91e98cb2a, network: ws, ws-opts: {path: /, headers: {Host: nice.jahansportmarkazi.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee", server: varzesh3.com, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: c334010c-b5eb-4d80-bc93-9d7b52b03e6e, network: ws, ws-opts: {path: /, headers: {Host: pt.novatechplus.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "Telegram : @SocksProxy 🍃`", server: 185.143.234.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: f20de03b-c016-45cd-a6e2-d73713fa1fe0, network: ws, ws-opts: {path: /, headers: {Host: d.nsa03.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ترکیبی, server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@V2RAYENGLISH", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee |  تلگرام جوین باش✅️", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee 2", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -492,51 +484,27 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - voip8.divar.mom:55008
-      - test`
       - Main-Test1`
       - iicenet`
-      - 9hone02016vpn
-      - "@proxy_kafee"
-      - "Telegram : @SocksProxy 🍃`"
-      - ترکیبی
       - "@V2RAYENGLISH"
-      - "@proxy_kafee |  تلگرام جوین باش✅️"
-      - "@proxy_kafee 2"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - voip8.divar.mom:55008
-      - test`
       - Main-Test1`
       - iicenet`
-      - 9hone02016vpn
-      - "@proxy_kafee"
-      - "Telegram : @SocksProxy 🍃`"
-      - ترکیبی
       - "@V2RAYENGLISH"
-      - "@proxy_kafee |  تلگرام جوین باش✅️"
-      - "@proxy_kafee 2"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - voip8.divar.mom:55008
-      - test`
       - Main-Test1`
       - iicenet`
-      - 9hone02016vpn
-      - "@proxy_kafee"
-      - "Telegram : @SocksProxy 🍃`"
-      - ترکیبی
       - "@V2RAYENGLISH"
-      - "@proxy_kafee |  تلگرام جوین باش✅️"
-      - "@proxy_kafee 2"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -552,51 +520,27 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - voip8.divar.mom:55008
-      - test`
       - Main-Test1`
       - iicenet`
-      - 9hone02016vpn
-      - "@proxy_kafee"
-      - "Telegram : @SocksProxy 🍃`"
-      - ترکیبی
       - "@V2RAYENGLISH"
-      - "@proxy_kafee |  تلگرام جوین باش✅️"
-      - "@proxy_kafee 2"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - voip8.divar.mom:55008
-      - test`
       - Main-Test1`
       - iicenet`
-      - 9hone02016vpn
-      - "@proxy_kafee"
-      - "Telegram : @SocksProxy 🍃`"
-      - ترکیبی
       - "@V2RAYENGLISH"
-      - "@proxy_kafee |  تلگرام جوین باش✅️"
-      - "@proxy_kafee 2"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - voip8.divar.mom:55008
-      - test`
       - Main-Test1`
       - iicenet`
-      - 9hone02016vpn
-      - "@proxy_kafee"
-      - "Telegram : @SocksProxy 🍃`"
-      - ترکیبی
       - "@V2RAYENGLISH"
-      - "@proxy_kafee |  تلگرام جوین باش✅️"
-      - "@proxy_kafee 2"
   - name: دانلود منیجر 📥
     type: select
     proxies:

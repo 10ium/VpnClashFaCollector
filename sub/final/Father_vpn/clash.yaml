@@ -465,9 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: Tel;Father_vpn`, server: 185.143.234.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 04fa65ad-5178-49c0-b679-a5442e3bfe78, network: ws, ws-opts: {path: /, headers: {Host: d.nsa03.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Tel;Father_vpn` 2, server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 22109ab6-bfdd-4062-ae1c-054c74353e39, host: vixon.portab.org, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Tel;Father_vpn` 3, server: 185.143.234.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: f20de03b-c016-45cd-a6e2-d73713fa1fe0, network: ws, ws-opts: {path: /, headers: {Host: d.nsa03.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Tel;Father_vpn`, server: vitallife.gg, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 7a2273f3-36ee-4764-bc75-e3c8fed996aa, servername: vitallife.gg, alpn: [http%2F1.1], network: ws, ws-opts: {path: /wp-content/cachecache, headers: {Host: vitallife.gg}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Tel;Father_vpn, server: 185.236.38.44, port: 19946, type: vmess, uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,8 +484,7 @@ proxy-groups:
     type: select
     proxies:
       - Tel;Father_vpn`
-      - Tel;Father_vpn` 2
-      - Tel;Father_vpn` 3
+      - Tel;Father_vpn
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -494,8 +492,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - Tel;Father_vpn`
-      - Tel;Father_vpn` 2
-      - Tel;Father_vpn` 3
+      - Tel;Father_vpn
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -503,8 +500,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - Tel;Father_vpn`
-      - Tel;Father_vpn` 2
-      - Tel;Father_vpn` 3
+      - Tel;Father_vpn
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -521,8 +517,7 @@ proxy-groups:
     interval: 600
     proxies:
       - Tel;Father_vpn`
-      - Tel;Father_vpn` 2
-      - Tel;Father_vpn` 3
+      - Tel;Father_vpn
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -530,8 +525,7 @@ proxy-groups:
     interval: 600
     proxies:
       - Tel;Father_vpn`
-      - Tel;Father_vpn` 2
-      - Tel;Father_vpn` 3
+      - Tel;Father_vpn
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -539,8 +533,7 @@ proxy-groups:
     interval: 600
     proxies:
       - Tel;Father_vpn`
-      - Tel;Father_vpn` 2
-      - Tel;Father_vpn` 3
+      - Tel;Father_vpn
   - name: دانلود منیجر 📥
     type: select
     proxies:
