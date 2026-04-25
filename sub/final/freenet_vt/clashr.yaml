@@ -5,7 +5,7 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: ،frreenet_vt, server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: freenet_vt `, server: 62.60.147.73, port: 20020, type: vless, tls: true, packet-encoding: xudp, uuid: 60de7f07-71b7-4b37-a04c-db5d769ec130, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: freenet_vt, server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
@@ -13,7 +13,7 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - ،frreenet_vt
+      - freenet_vt `
       - freenet_vt
   - name: ♻️ 自动选择
     type: url-test
@@ -21,7 +21,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - ،frreenet_vt
+      - freenet_vt `
       - freenet_vt
   - name: 🌍 国外媒体
     type: select
@@ -29,28 +29,28 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - ،frreenet_vt
+      - freenet_vt `
       - freenet_vt
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - ،frreenet_vt
+      - freenet_vt `
       - freenet_vt
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - ،frreenet_vt
+      - freenet_vt `
       - freenet_vt
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - ،frreenet_vt
+      - freenet_vt `
       - freenet_vt
   - name: 🎯 全球直连
     type: select
@@ -79,7 +79,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - ،frreenet_vt
+      - freenet_vt `
       - freenet_vt
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连

@@ -466,12 +466,15 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: "@vasl_bashim", server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 22109ab6-bfdd-4062-ae1c-054c74353e39, host: vixon.portab.org, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim`", server: anten.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 5050193d-1a82-4fea-933d-994083bae6a7, network: ws, ws-opts: {path: /, headers: {Host: ss.linuwebtunnel.site}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim`", server: 185.213.165.81, port: 12019, type: vless, tls: true, packet-encoding: xudp, uuid: 2ae36cda-3cca-4ead-831e-80000308bf91, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim` 2", server: anten.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 5050193d-1a82-4fea-933d-994083bae6a7, network: ws, ws-opts: {path: /, headers: {Host: ss.linuwebtunnel.site}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@vasl_bashim 2", server: 185.143.235.253, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 5eb2b49f-2657-4d90-ac8a-050a384c5547, network: ws, ws-opts: {path: /, headers: {Host: ss.oppobot.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@vasl_bashim 3", server: 185.143.235.253, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 5eb2b49f-2657-4d90-ac8a-050a384c5547, network: ws, ws-opts: {path: /, headers: {Host: ss.oppobot.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim` 2", server: tr.tehranionliine.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: b9ffc9c6-aad0-0056-45ee-4f551a0f0b4a, servername: 185.226.94.188, network: ws, ws-opts: {path: /, headers: {Host: 185.226.94.188}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim` 3", server: 185.143.233.5, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a3bfe21b-0d7a-496f-8e97-0bbc33bff55d, servername: in.8lack.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/chat?ed=128", headers: {Host: in.8lack.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim` 4", server: tr.tehranionliine.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: b9ffc9c6-aad0-0056-45ee-4f551a0f0b4a, servername: 185.226.94.188, network: ws, ws-opts: {path: /, headers: {Host: 185.226.94.188}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@vasl_bashim 4", server: mochi-d1bdb57cd7-kalak.apps.ir-central1.arvancaas.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c7201267-8439-4ba6-8c41-fc0ecd5472b3, network: ws, ws-opts: {path: /vless, headers: {Host: mochi-d1bdb57cd7-kalak.apps.ir-central1.arvancaas.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim` 3", server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: ca683ff2-5d4b-4d3a-8802-a3f790801604, network: ws, ws-opts: {path: /, headers: {Host: d.nsa03.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim` 5", server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: ca683ff2-5d4b-4d3a-8802-a3f790801604, network: ws, ws-opts: {path: /, headers: {Host: d.nsa03.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bawhim`", server: khan10.tarfandgallery.sbs, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ff6d6f8e-79f2-441e-ac39-bc3406f86e5c, servername: khan10.tarfandgallery.sbs, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: khan10.tarfandgallery.sbs}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@vasl_bashim 5", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -491,11 +494,14 @@ proxy-groups:
     proxies:
       - "@vasl_bashim"
       - "@vasl_bashim`"
+      - "@vasl_bashim` 2"
       - "@vasl_bashim 2"
       - "@vasl_bashim 3"
-      - "@vasl_bashim` 2"
-      - "@vasl_bashim 4"
       - "@vasl_bashim` 3"
+      - "@vasl_bashim` 4"
+      - "@vasl_bashim 4"
+      - "@vasl_bashim` 5"
+      - "@vasl_bawhim`"
       - "@vasl_bashim 5"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -505,11 +511,14 @@ proxy-groups:
     proxies:
       - "@vasl_bashim"
       - "@vasl_bashim`"
+      - "@vasl_bashim` 2"
       - "@vasl_bashim 2"
       - "@vasl_bashim 3"
-      - "@vasl_bashim` 2"
-      - "@vasl_bashim 4"
       - "@vasl_bashim` 3"
+      - "@vasl_bashim` 4"
+      - "@vasl_bashim 4"
+      - "@vasl_bashim` 5"
+      - "@vasl_bawhim`"
       - "@vasl_bashim 5"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -519,11 +528,14 @@ proxy-groups:
     proxies:
       - "@vasl_bashim"
       - "@vasl_bashim`"
+      - "@vasl_bashim` 2"
       - "@vasl_bashim 2"
       - "@vasl_bashim 3"
-      - "@vasl_bashim` 2"
-      - "@vasl_bashim 4"
       - "@vasl_bashim` 3"
+      - "@vasl_bashim` 4"
+      - "@vasl_bashim 4"
+      - "@vasl_bashim` 5"
+      - "@vasl_bawhim`"
       - "@vasl_bashim 5"
   - name: اتصال پایدار 🔗
     type: url-test
@@ -542,11 +554,14 @@ proxy-groups:
     proxies:
       - "@vasl_bashim"
       - "@vasl_bashim`"
+      - "@vasl_bashim` 2"
       - "@vasl_bashim 2"
       - "@vasl_bashim 3"
-      - "@vasl_bashim` 2"
-      - "@vasl_bashim 4"
       - "@vasl_bashim` 3"
+      - "@vasl_bashim` 4"
+      - "@vasl_bashim 4"
+      - "@vasl_bashim` 5"
+      - "@vasl_bawhim`"
       - "@vasl_bashim 5"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -556,11 +571,14 @@ proxy-groups:
     proxies:
       - "@vasl_bashim"
       - "@vasl_bashim`"
+      - "@vasl_bashim` 2"
       - "@vasl_bashim 2"
       - "@vasl_bashim 3"
-      - "@vasl_bashim` 2"
-      - "@vasl_bashim 4"
       - "@vasl_bashim` 3"
+      - "@vasl_bashim` 4"
+      - "@vasl_bashim 4"
+      - "@vasl_bashim` 5"
+      - "@vasl_bawhim`"
       - "@vasl_bashim 5"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -570,11 +588,14 @@ proxy-groups:
     proxies:
       - "@vasl_bashim"
       - "@vasl_bashim`"
+      - "@vasl_bashim` 2"
       - "@vasl_bashim 2"
       - "@vasl_bashim 3"
-      - "@vasl_bashim` 2"
-      - "@vasl_bashim 4"
       - "@vasl_bashim` 3"
+      - "@vasl_bashim` 4"
+      - "@vasl_bashim 4"
+      - "@vasl_bashim` 5"
+      - "@vasl_bawhim`"
       - "@vasl_bashim 5"
   - name: دانلود منیجر 📥
     type: select
