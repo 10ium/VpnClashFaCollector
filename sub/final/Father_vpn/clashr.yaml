@@ -5,7 +5,10 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: TEL;Father_vpn`, server: 172.64.149.54, port: 2096, type: trojan, password: 8r%3C%5B9%27l6hAO%238ZQi, sni: Koma-YT.PAGeS.Dev, skip-cert-verify: false, network: ws, ws-opts: {path: /tr, headers: {Host: Koma-YT.PAGeS.Dev}}, udp: true, tfo: false}
   - {name: Tel;Father_vpn`, server: vitallife.gg, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 7a2273f3-36ee-4764-bc75-e3c8fed996aa, servername: vitallife.gg, alpn: [http%2F1.1], network: ws, ws-opts: {path: /wp-content/cachecache, headers: {Host: vitallife.gg}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: TEL;Father_vpn` 2, server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: ceb70fc0-4886-4462-9651-d53b6367846d, network: ws, ws-opts: {path: /FIRELINK, headers: {Host: firelink.arian-go-internet.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: TEL;Father_vpn` 3, server: varzesh3.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: d17f8922-93e7-4756-be18-c15c8ee59b63, network: ws, ws-opts: {path: /, headers: {Host: nobody.panivo.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: Tel;Father_vpn, server: 185.236.38.44, port: 19946, type: vmess, uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
@@ -13,7 +16,10 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - TEL;Father_vpn`
       - Tel;Father_vpn`
+      - TEL;Father_vpn` 2
+      - TEL;Father_vpn` 3
       - Tel;Father_vpn
   - name: ♻️ 自动选择
     type: url-test
@@ -21,7 +27,10 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - TEL;Father_vpn`
       - Tel;Father_vpn`
+      - TEL;Father_vpn` 2
+      - TEL;Father_vpn` 3
       - Tel;Father_vpn
   - name: 🌍 国外媒体
     type: select
@@ -29,28 +38,40 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - TEL;Father_vpn`
       - Tel;Father_vpn`
+      - TEL;Father_vpn` 2
+      - TEL;Father_vpn` 3
       - Tel;Father_vpn
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - TEL;Father_vpn`
       - Tel;Father_vpn`
+      - TEL;Father_vpn` 2
+      - TEL;Father_vpn` 3
       - Tel;Father_vpn
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - TEL;Father_vpn`
       - Tel;Father_vpn`
+      - TEL;Father_vpn` 2
+      - TEL;Father_vpn` 3
       - Tel;Father_vpn
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - TEL;Father_vpn`
       - Tel;Father_vpn`
+      - TEL;Father_vpn` 2
+      - TEL;Father_vpn` 3
       - Tel;Father_vpn
   - name: 🎯 全球直连
     type: select
@@ -79,7 +100,10 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - TEL;Father_vpn`
       - Tel;Father_vpn`
+      - TEL;Father_vpn` 2
+      - TEL;Father_vpn` 3
       - Tel;Father_vpn
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
