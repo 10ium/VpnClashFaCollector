@@ -465,10 +465,16 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@vpnbaz | ترکیبی", server: 185.143.233.5, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: -0d7a-496f-8e97-0bbc33bff55d, servername: in.8lack.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/chat?ed=128", headers: {Host: in.8lack.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz | ترکیبی 2", server: 172.64.149.54, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.dynv6.net, network: ws, ws-opts: {path: "/?Telegram🇨🇳 @WangCai2", headers: {Host: sni.111000.dynv6.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz | ترکیبی 3", server: 185.143.233.5, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a3bfe21b-0d7a-496f-8e97-0bbc33bff55d, servername: in.8lack.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/chat?ed=128", headers: {Host: in.8lack.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz | ترکیبی 4", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "Telegram: @vpnbaz", server: 104.20.6.134, port: 443, type: trojan, password: humanity, sni: www.multiplydose.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.multiplydose.com}}, udp: true, tfo: false}
+  - {name: "Telegram: @vpnbaz 2", server: 104.20.6.134, port: 443, type: trojan, password: humanity, sni: www.ignitelimit.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.ignitelimit.com}}, udp: true, tfo: false}
+  - {name: "@vpnbaz | ترکیبی", server: meli3.masterdadeh.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 168a3be7-9401-e72e-7762-f25ed8dc652a, servername: 185.226.94.200, network: ws, ws-opts: {path: /, headers: {Host: 185.226.94.200}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz | ترکیبی 2", server: abr.superip.ir, port: 2082, type: vless, tls: true, packet-encoding: xudp, uuid: 301f1fed-c749-422b-b732-acf6735470b5, network: ws, ws-opts: {path: /API/superip, headers: {Host: brand.bi6x.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz | ترکیبی 3", server: tr.tehranionliine.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 4b7ad979-3e10-1c34-01ab-fea337389504, network: ws, ws-opts: {path: /, headers: {Host: tr.tehranionliine.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz | ترکیبی 4", server: 37.32.25.35, port: 58846, type: vless, tls: true, packet-encoding: xudp, uuid: 606d956b-0184-43ac-b77e-988f05ce2969, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz | ترکیبی 5", server: 62.60.147.73, port: 20020, type: vless, tls: true, packet-encoding: xudp, uuid: 60de7f07-71b7-4b37-a04c-db5d769ec130, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz | ترکیبی 6", server: 37.32.5.155, port: 2028, type: vless, tls: true, packet-encoding: xudp, uuid: 868eb379-6dc7-45a4-a707-0f7da1092703, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "Telegram: @vpnbaz 3", server: 104.20.6.134, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a01daac7-1e65-4645-854d-b47d226f6b08, servername: y6-3cj.PAgES.DEV, network: ws, ws-opts: {path: /, headers: {Host: y6-3cj.PAgES.DEV}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz | ترکیبی 7", server: 217.218.52.1, port: 10841, type: vmess, uuid: 79edf429-f5c0-4226-8235-18c470cedd29, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,30 +491,48 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - "Telegram: @vpnbaz"
+      - "Telegram: @vpnbaz 2"
       - "@vpnbaz | ترکیبی"
       - "@vpnbaz | ترکیبی 2"
       - "@vpnbaz | ترکیبی 3"
       - "@vpnbaz | ترکیبی 4"
+      - "@vpnbaz | ترکیبی 5"
+      - "@vpnbaz | ترکیبی 6"
+      - "Telegram: @vpnbaz 3"
+      - "@vpnbaz | ترکیبی 7"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
+      - "Telegram: @vpnbaz"
+      - "Telegram: @vpnbaz 2"
       - "@vpnbaz | ترکیبی"
       - "@vpnbaz | ترکیبی 2"
       - "@vpnbaz | ترکیبی 3"
       - "@vpnbaz | ترکیبی 4"
+      - "@vpnbaz | ترکیبی 5"
+      - "@vpnbaz | ترکیبی 6"
+      - "Telegram: @vpnbaz 3"
+      - "@vpnbaz | ترکیبی 7"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
+      - "Telegram: @vpnbaz"
+      - "Telegram: @vpnbaz 2"
       - "@vpnbaz | ترکیبی"
       - "@vpnbaz | ترکیبی 2"
       - "@vpnbaz | ترکیبی 3"
       - "@vpnbaz | ترکیبی 4"
+      - "@vpnbaz | ترکیبی 5"
+      - "@vpnbaz | ترکیبی 6"
+      - "Telegram: @vpnbaz 3"
+      - "@vpnbaz | ترکیبی 7"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -524,30 +548,48 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "Telegram: @vpnbaz"
+      - "Telegram: @vpnbaz 2"
       - "@vpnbaz | ترکیبی"
       - "@vpnbaz | ترکیبی 2"
       - "@vpnbaz | ترکیبی 3"
       - "@vpnbaz | ترکیبی 4"
+      - "@vpnbaz | ترکیبی 5"
+      - "@vpnbaz | ترکیبی 6"
+      - "Telegram: @vpnbaz 3"
+      - "@vpnbaz | ترکیبی 7"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "Telegram: @vpnbaz"
+      - "Telegram: @vpnbaz 2"
       - "@vpnbaz | ترکیبی"
       - "@vpnbaz | ترکیبی 2"
       - "@vpnbaz | ترکیبی 3"
       - "@vpnbaz | ترکیبی 4"
+      - "@vpnbaz | ترکیبی 5"
+      - "@vpnbaz | ترکیبی 6"
+      - "Telegram: @vpnbaz 3"
+      - "@vpnbaz | ترکیبی 7"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "Telegram: @vpnbaz"
+      - "Telegram: @vpnbaz 2"
       - "@vpnbaz | ترکیبی"
       - "@vpnbaz | ترکیبی 2"
       - "@vpnbaz | ترکیبی 3"
       - "@vpnbaz | ترکیبی 4"
+      - "@vpnbaz | ترکیبی 5"
+      - "@vpnbaz | ترکیبی 6"
+      - "Telegram: @vpnbaz 3"
+      - "@vpnbaz | ترکیبی 7"
   - name: دانلود منیجر 📥
     type: select
     proxies:
