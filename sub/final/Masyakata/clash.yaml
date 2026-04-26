@@ -465,10 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: Masyakata`, server: sdl.ciliko.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 27c3f9d4-ae71-eb92-7249-0ef4ef46b0b4, network: ws, ws-opts: {path: /, headers: {Host: sdl.ciliko.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@Masyakata`", server: meli.masterdadeh.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 5b450693-fa03-7feb-a1f6-d4fc005aca18, servername: 185.226.94.198, network: ws, ws-opts: {path: /, headers: {Host: 185.226.94.198}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Masyakata", server: 46.34.163.235, port: 43588, type: vless, tls: true, packet-encoding: xudp, uuid: 7c9594ae-6bbf-4430-a39b-4def77db322a, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Masyakata 2", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: a7a9ba8d-fefe-4f91-804b-75ce163fa0a0, network: ws, ws-opts: {path: /, headers: {Host: ssssssma.linuwebtunnel.site}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 185.143.233.5:80, server: 185.143.233.5, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 6836c246-e9b2-41a2-8702-4d880cbd4938, network: ws, ws-opts: {path: "/gamescore?ed=128", headers: {Host: cdn4.restaurantworld.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: dastambod1.skiv.me:2087, server: dastambod1.skiv.me, port: 2087, type: vless, tls: true, packet-encoding: xudp, uuid: 6a3ef907-0100-4b7d-8ce0-aa473b3f9e8a, network: ws, ws-opts: {path: "/api30?ed=2048", headers: {Host: dastambod1.skiv.me}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: https://t.me/Masyakata, server: 95.38.197.219, port: 41379, type: vless, tls: true, packet-encoding: xudp, uuid: b738ce99-ddaa-4eea-a3f6-2266e1cc961c, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: varzesh3.com:80, server: varzesh3.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: d17f8922-93e7-4756-be18-c15c8ee59b63, network: ws, ws-opts: {path: /, headers: {Host: nobody.panivo.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@sogoandfuckyourlove", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -486,10 +487,11 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - Masyakata`
       - "@Masyakata`"
-      - "@Masyakata"
-      - "@Masyakata 2"
+      - 185.143.233.5:80
+      - dastambod1.skiv.me:2087
+      - https://t.me/Masyakata
+      - varzesh3.com:80
       - "@sogoandfuckyourlove"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -497,10 +499,11 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - Masyakata`
       - "@Masyakata`"
-      - "@Masyakata"
-      - "@Masyakata 2"
+      - 185.143.233.5:80
+      - dastambod1.skiv.me:2087
+      - https://t.me/Masyakata
+      - varzesh3.com:80
       - "@sogoandfuckyourlove"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -508,10 +511,11 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - Masyakata`
       - "@Masyakata`"
-      - "@Masyakata"
-      - "@Masyakata 2"
+      - 185.143.233.5:80
+      - dastambod1.skiv.me:2087
+      - https://t.me/Masyakata
+      - varzesh3.com:80
       - "@sogoandfuckyourlove"
   - name: اتصال پایدار 🔗
     type: url-test
@@ -528,10 +532,11 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Masyakata`
       - "@Masyakata`"
-      - "@Masyakata"
-      - "@Masyakata 2"
+      - 185.143.233.5:80
+      - dastambod1.skiv.me:2087
+      - https://t.me/Masyakata
+      - varzesh3.com:80
       - "@sogoandfuckyourlove"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -539,10 +544,11 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Masyakata`
       - "@Masyakata`"
-      - "@Masyakata"
-      - "@Masyakata 2"
+      - 185.143.233.5:80
+      - dastambod1.skiv.me:2087
+      - https://t.me/Masyakata
+      - varzesh3.com:80
       - "@sogoandfuckyourlove"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -550,10 +556,11 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Masyakata`
       - "@Masyakata`"
-      - "@Masyakata"
-      - "@Masyakata 2"
+      - 185.143.233.5:80
+      - dastambod1.skiv.me:2087
+      - https://t.me/Masyakata
+      - varzesh3.com:80
       - "@sogoandfuckyourlove"
   - name: دانلود منیجر 📥
     type: select
