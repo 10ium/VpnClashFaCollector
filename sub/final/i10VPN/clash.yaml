@@ -466,7 +466,6 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: "@i10VPN - Psiphon 32`", server: blubank.sb24.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 3ff87a9a-305d-4723-9c9e-88b8a7796d41, network: ws, ws-opts: {path: /i10VPN, headers: {Host: networkex.onyxshoes.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@i10VPN - Psiphon 31`", server: 37.32.5.155, port: 2028, type: vless, tls: true, packet-encoding: xudp, uuid: 868eb379-6dc7-45a4-a707-0f7da1092703, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,7 +483,6 @@ proxy-groups:
     type: select
     proxies:
       - "@i10VPN - Psiphon 32`"
-      - "@i10VPN - Psiphon 31`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -492,7 +490,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@i10VPN - Psiphon 32`"
-      - "@i10VPN - Psiphon 31`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -500,7 +497,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@i10VPN - Psiphon 32`"
-      - "@i10VPN - Psiphon 31`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -517,7 +513,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@i10VPN - Psiphon 32`"
-      - "@i10VPN - Psiphon 31`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -525,7 +520,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@i10VPN - Psiphon 32`"
-      - "@i10VPN - Psiphon 31`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -533,7 +527,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@i10VPN - Psiphon 32`"
-      - "@i10VPN - Psiphon 31`"
   - name: دانلود منیجر 📥
     type: select
     proxies:
