@@ -465,9 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@proxy_kafee👑💤`", server: 172.64.149.54, port: 2096, type: trojan, password: 8r%3C%5B9%27l6hAO%238ZQi, sni: Koma-YT.PAGeS.Dev, skip-cert-verify: false, network: ws, ws-opts: {path: /tr, headers: {Host: Koma-YT.PAGeS.Dev}}, udp: true, tfo: false}
-  - {name: "@proxy_kafee", server: 185.143.234.235, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: a3b1d134-e3d8-45ab-9996-a3800be0fcdc, network: ws, ws-opts: {path: /, headers: {Host: vip.az99x.info}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee", server: 104.20.6.134, port: 2096, type: trojan, password: 8r%3C%5B9%27l6hAO%238ZQi, sni: Koma-YT.PAGeS.Dev, skip-cert-verify: false, network: ws, ws-opts: {path: /tr, headers: {Host: Koma-YT.PAGeS.Dev}}, udp: true, tfo: false}
+  - {name: proxy_kafee`, server: 104.20.6.134, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.jpmj.dev, network: ws, ws-opts: {path: /, headers: {Host: sni.jpmj.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee 2", server: 185.143.234.235, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: a3b1d134-e3d8-45ab-9996-a3800be0fcdc, network: ws, ws-opts: {path: /, headers: {Host: vip.az99x.info}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee🃏`", server: 95.38.197.219, port: 41379, type: vless, tls: true, packet-encoding: xudp, uuid: b738ce99-ddaa-4eea-a3f6-2266e1cc961c, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: proxy_kafee, server: 104.20.6.134, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: e558a01d-cac3-4052-8dc5-51a97f159352, servername: ultraserverp.ultrascarface.ir, network: ws, ws-opts: {path: "/home?ed=2048", headers: {Host: ultraserverp.ultrascarface.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee2`", server: detail.barttary.ir, port: 55802, type: vless, tls: true, packet-encoding: xudp, uuid: f1038624-e835-4884-8d8f-34b2eb8198c9, host: detail.barttary.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -485,9 +487,11 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@proxy_kafee👑💤`"
       - "@proxy_kafee"
+      - proxy_kafee`
+      - "@proxy_kafee 2"
       - "@proxy_kafee🃏`"
+      - proxy_kafee
       - "@proxy_kafee2`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -495,9 +499,11 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - "@proxy_kafee👑💤`"
       - "@proxy_kafee"
+      - proxy_kafee`
+      - "@proxy_kafee 2"
       - "@proxy_kafee🃏`"
+      - proxy_kafee
       - "@proxy_kafee2`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -505,9 +511,11 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - "@proxy_kafee👑💤`"
       - "@proxy_kafee"
+      - proxy_kafee`
+      - "@proxy_kafee 2"
       - "@proxy_kafee🃏`"
+      - proxy_kafee
       - "@proxy_kafee2`"
   - name: اتصال پایدار 🔗
     type: url-test
@@ -524,9 +532,11 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@proxy_kafee👑💤`"
       - "@proxy_kafee"
+      - proxy_kafee`
+      - "@proxy_kafee 2"
       - "@proxy_kafee🃏`"
+      - proxy_kafee
       - "@proxy_kafee2`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -534,9 +544,11 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@proxy_kafee👑💤`"
       - "@proxy_kafee"
+      - proxy_kafee`
+      - "@proxy_kafee 2"
       - "@proxy_kafee🃏`"
+      - proxy_kafee
       - "@proxy_kafee2`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -544,9 +556,11 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@proxy_kafee👑💤`"
       - "@proxy_kafee"
+      - proxy_kafee`
+      - "@proxy_kafee 2"
       - "@proxy_kafee🃏`"
+      - proxy_kafee
       - "@proxy_kafee2`"
   - name: دانلود منیجر 📥
     type: select
