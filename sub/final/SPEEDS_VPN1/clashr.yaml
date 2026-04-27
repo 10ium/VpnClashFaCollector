@@ -5,46 +5,46 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`", server: 62.60.147.73, port: 20020, type: vless, tls: true, packet-encoding: xudp, uuid: 60de7f07-71b7-4b37-a04c-db5d769ec130, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@SPEEDS_VPN-جوین-بدید`", server: 185.143.233.5, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8014017f-3f40-46e9-b02d-87e6c54d877e, servername: dn.8lack.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/chat?ed=128", headers: {Host: dn.8lack.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`"
+      - "@SPEEDS_VPN-جوین-بدید`"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`"
+      - "@SPEEDS_VPN-جوین-بدید`"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`"
+      - "@SPEEDS_VPN-جوین-بدید`"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`"
+      - "@SPEEDS_VPN-جوین-بدید`"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`"
+      - "@SPEEDS_VPN-جوین-بدید`"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`"
+      - "@SPEEDS_VPN-جوین-بدید`"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +72,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`"
+      - "@SPEEDS_VPN-جوین-بدید`"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

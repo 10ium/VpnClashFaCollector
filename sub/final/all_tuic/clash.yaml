@@ -465,7 +465,6 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@filembad`", server: 70.34.197.98, port: 443, type: tuic, uuid: 87bc1693-8860-41d7-acf4-e6edf49abbbb, password: crivAv10hAdr-fop4Lne, congestion-controller: bbr, skip-cert-verify: false, udp: true, tfo: false}
   - {name: t@oneclickvpnkeys`, server: 45.140.167.209, port: 50043, type: tuic, uuid: e033ef6e-ab4b-47d4-a523-ff568d2c8dbb, password: strong-secret-pass-777, alpn: [h3], udp-relay-mode: native, congestion-controller: bbr, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -483,7 +482,6 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@filembad`"
       - t@oneclickvpnkeys`
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -491,7 +489,6 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - "@filembad`"
       - t@oneclickvpnkeys`
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -499,7 +496,6 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - "@filembad`"
       - t@oneclickvpnkeys`
   - name: اتصال پایدار 🔗
     type: url-test
@@ -516,7 +512,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@filembad`"
       - t@oneclickvpnkeys`
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -524,7 +519,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@filembad`"
       - t@oneclickvpnkeys`
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -532,7 +526,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@filembad`"
       - t@oneclickvpnkeys`
   - name: دانلود منیجر 📥
     type: select

@@ -465,10 +465,12 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@vasl_bashim`", server: 5.253.24.202, port: 17032, type: vless, tls: true, packet-encoding: xudp, uuid: 9e36ec67-2638-4ebe-8b00-c6a8c1f2ea13, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim` 2", server: 185.143.233.200, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: b31e7244-28fd-4975-b534-d1cecd7fc8cd, network: ws, ws-opts: {path: /, headers: {Host: refer.parsimas.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ✅️@vasl_bashim, server: 2.189.86.97, port: 33735, type: ss, cipher: chacha20-ietf-poly1305, password: buzNcMI0KAK2dQT/aluTa/euPOydwf5M3NvX4fNK5QM=, udp: true, tfo: false}
+  - {name: ✅️@vasl_bashim 2, server: blubank.sb24.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 3ff87a9a-305d-4723-9c9e-88b8a7796d41, network: ws, ws-opts: {path: /, headers: {Host: networkex.onyxshoes.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim", server: 185.143.233.5, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8014017f-3f40-46e9-b02d-87e6c54d877e, servername: dn.8lack.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/chat?ed=128", headers: {Host: dn.8lack.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim`", server: office.weai.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 850255c0-8444-4b92-bf3f-01cde9f52fab, servername: git.revi.voto, host: git.revi.voto, path: /, reality-opts: {public-key: 065ekp_uJftu5-HVe7NziOIS7ajpv0dylhsJK6ylzRE, short-id: ffe4b45f7e2f0778}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim` 2", server: vzb.piko-network.top, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 9b9f36d0-93f6-4c39-af54-2428c9c0e794, host: vzb.piko-network.top, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@vasl_bashim` 3", server: detail.barttary.ir, port: 55802, type: vless, tls: true, packet-encoding: xudp, uuid: f1038624-e835-4884-8d8f-34b2eb8198c9, host: detail.barttary.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim", server: 217.218.52.1, port: 10841, type: vmess, uuid: 79edf429-f5c0-4226-8235-18c470cedd29, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@vasl_bashim 2", server: dn.torontomovie.com, port: 8080, type: vmess, uuid: 2206de3b-53ed-405a-893f-f9a83c96fe93, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -486,10 +488,12 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - ✅️@vasl_bashim
+      - ✅️@vasl_bashim 2
+      - "@vasl_bashim"
       - "@vasl_bashim`"
       - "@vasl_bashim` 2"
       - "@vasl_bashim` 3"
-      - "@vasl_bashim"
       - "@vasl_bashim 2"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -497,10 +501,12 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - ✅️@vasl_bashim
+      - ✅️@vasl_bashim 2
+      - "@vasl_bashim"
       - "@vasl_bashim`"
       - "@vasl_bashim` 2"
       - "@vasl_bashim` 3"
-      - "@vasl_bashim"
       - "@vasl_bashim 2"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -508,10 +514,12 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - ✅️@vasl_bashim
+      - ✅️@vasl_bashim 2
+      - "@vasl_bashim"
       - "@vasl_bashim`"
       - "@vasl_bashim` 2"
       - "@vasl_bashim` 3"
-      - "@vasl_bashim"
       - "@vasl_bashim 2"
   - name: اتصال پایدار 🔗
     type: url-test
@@ -528,10 +536,12 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - ✅️@vasl_bashim
+      - ✅️@vasl_bashim 2
+      - "@vasl_bashim"
       - "@vasl_bashim`"
       - "@vasl_bashim` 2"
       - "@vasl_bashim` 3"
-      - "@vasl_bashim"
       - "@vasl_bashim 2"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -539,10 +549,12 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - ✅️@vasl_bashim
+      - ✅️@vasl_bashim 2
+      - "@vasl_bashim"
       - "@vasl_bashim`"
       - "@vasl_bashim` 2"
       - "@vasl_bashim` 3"
-      - "@vasl_bashim"
       - "@vasl_bashim 2"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -550,10 +562,12 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - ✅️@vasl_bashim
+      - ✅️@vasl_bashim 2
+      - "@vasl_bashim"
       - "@vasl_bashim`"
       - "@vasl_bashim` 2"
       - "@vasl_bashim` 3"
-      - "@vasl_bashim"
       - "@vasl_bashim 2"
   - name: دانلود منیجر 📥
     type: select

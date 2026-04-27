@@ -466,9 +466,7 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: "@Capoit`", server: 37.32.5.155, port: 2028, type: vless, tls: true, packet-encoding: xudp, uuid: 868eb379-6dc7-45a4-a707-0f7da1092703, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 2", server: 104.20.5.134, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: 89b3cbba-e6ac-485a-9481-976a0415eab9, servername: cIAllO-EGB.pAGES.dev, network: ws, ws-opts: {path: /%252F, headers: {Host: cIAllO-EGB.pAGES.dev}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 3", server: 104.20.6.134, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a01daac7-1e65-4645-854d-b47d226f6b08, servername: y6-3cj.PAgES.DEV, network: ws, ws-opts: {path: /, headers: {Host: y6-3cj.PAgES.DEV}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit", server: 104.20.5.134, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: d37a75db-76b6-4db8-b213-0d5b044d138d, servername: hio-awx.pages.dev, network: ws, ws-opts: {path: /, headers: {Host: hio-awx.pages.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 2", server: 104.20.6.134, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a01daac7-1e65-4645-854d-b47d226f6b08, servername: y6-3cj.PAgES.DEV, network: ws, ws-opts: {path: /, headers: {Host: y6-3cj.PAgES.DEV}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,8 +485,6 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
-      - "@Capoit` 3"
-      - "@Capoit"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -497,8 +493,6 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
-      - "@Capoit` 3"
-      - "@Capoit"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -507,8 +501,6 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
-      - "@Capoit` 3"
-      - "@Capoit"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -526,8 +518,6 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
-      - "@Capoit` 3"
-      - "@Capoit"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -536,8 +526,6 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
-      - "@Capoit` 3"
-      - "@Capoit"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -546,8 +534,6 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
-      - "@Capoit` 3"
-      - "@Capoit"
   - name: دانلود منیجر 📥
     type: select
     proxies:

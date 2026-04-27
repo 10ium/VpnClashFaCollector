@@ -5,6 +5,7 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: "@i10VPN - Psiphon 32`", server: blubank.sb24.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 3ff87a9a-305d-4723-9c9e-88b8a7796d41, network: ws, ws-opts: {path: /i10VPN, headers: {Host: networkex.onyxshoes.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@i10VPN - Psiphon 31`", server: 37.32.5.155, port: 2028, type: vless, tls: true, packet-encoding: xudp, uuid: 868eb379-6dc7-45a4-a707-0f7da1092703, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
@@ -12,6 +13,7 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - "@i10VPN - Psiphon 32`"
       - "@i10VPN - Psiphon 31`"
   - name: ♻️ 自动选择
     type: url-test
@@ -19,6 +21,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - "@i10VPN - Psiphon 32`"
       - "@i10VPN - Psiphon 31`"
   - name: 🌍 国外媒体
     type: select
@@ -26,24 +29,28 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - "@i10VPN - Psiphon 32`"
       - "@i10VPN - Psiphon 31`"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - "@i10VPN - Psiphon 32`"
       - "@i10VPN - Psiphon 31`"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - "@i10VPN - Psiphon 32`"
       - "@i10VPN - Psiphon 31`"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - "@i10VPN - Psiphon 32`"
       - "@i10VPN - Psiphon 31`"
   - name: 🎯 全球直连
     type: select
@@ -72,6 +79,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - "@i10VPN - Psiphon 32`"
       - "@i10VPN - Psiphon 31`"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
