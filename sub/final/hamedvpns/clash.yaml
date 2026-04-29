@@ -465,11 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 3***✅***`, server: 2.189.86.97, port: 33735, type: ss, cipher: chacha20-ietf-poly1305, password: buzNcMI0KAK2dQT/aluTa/euPOydwf5M3NvX4fNK5QM=, udp: true, tfo: false}
-  - {name: Aman_vpn, server: s2.tehranionliine.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 19c1104a-077c-4008-8df1-15c8fd488330, network: ws, ws-opts: {path: /, headers: {Host: s2.tehranionliine.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: iran, server: blubank.sb24.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 3ff87a9a-305d-4723-9c9e-88b8a7796d41, network: ws, ws-opts: {path: /, headers: {Host: networkex.onyxshoes.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: snapp.ir:80, server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 7d8212ef-d86b-4f75-9ab9-1f2bdb4e9f41, network: ws, ws-opts: {path: https://t.me/drvpn7`, headers: {Host: cpi.lithiumnet.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 5, server: 94.183.149.168, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: d24e1b75-d80f-4818-d621-ee919ea71c16, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: super, server: s3.tehranionliine.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: cb8f7ea3-2412-44bd-9aff-12d10d6c8859, network: ws, ws-opts: {path: /, headers: {Host: s3.tehranionliine.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,33 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 3***✅***`
-      - Aman_vpn
-      - iran
-      - snapp.ir:80
-      - 5
+      - super
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 3***✅***`
-      - Aman_vpn
-      - iran
-      - snapp.ir:80
-      - 5
+      - super
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 3***✅***`
-      - Aman_vpn
-      - iran
-      - snapp.ir:80
-      - 5
+      - super
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -528,33 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 3***✅***`
-      - Aman_vpn
-      - iran
-      - snapp.ir:80
-      - 5
+      - super
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 3***✅***`
-      - Aman_vpn
-      - iran
-      - snapp.ir:80
-      - 5
+      - super
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 3***✅***`
-      - Aman_vpn
-      - iran
-      - snapp.ir:80
-      - 5
+      - super
   - name: دانلود منیجر 📥
     type: select
     proxies:
