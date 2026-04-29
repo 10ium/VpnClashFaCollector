@@ -465,7 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: super, server: s3.tehranionliine.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: cb8f7ea3-2412-44bd-9aff-12d10d6c8859, network: ws, ws-opts: {path: /, headers: {Host: s3.tehranionliine.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Aman_vpn, server: de.tehranionliine.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 4478116d-211f-4c4e-bad5-81d09d1d1dfa, network: ws, ws-opts: {path: /, headers: {Host: de.tehranionliine.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - super
+      - Aman_vpn
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - super
+      - Aman_vpn
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - super
+      - Aman_vpn
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - super
+      - Aman_vpn
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - super
+      - Aman_vpn
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - super
+      - Aman_vpn
   - name: دانلود منیجر 📥
     type: select
     proxies:

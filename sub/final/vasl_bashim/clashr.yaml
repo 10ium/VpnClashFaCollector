@@ -5,53 +5,81 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: "@vasl_bashim`", server: iri.hosmci.ir, port: 41473, type: vless, tls: true, packet-encoding: xudp, uuid: 04a0dd1a-e72b-44f3-a69b-ec9919d4f74d, servername: ir.hosmci.ir, alpn: [h2%2Chttp%2F1.1%2Ch3], network: ws, ws-opts: {path: "/upload/?ed=2560", headers: {Host: ir.hosmci.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim` 2", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 0b69e6e7-3bf4-432f-a6bf-0ae060dc53a1, network: ws, ws-opts: {path: "/?ed=2080", headers: {Host: 1.jojo.avenflow.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim` 3", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 3618297d-a934-4e04-a548-856d186ed6a7, network: ws, ws-opts: {path: /, headers: {Host: biawban.yeksancloud.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@vasl_bashim", server: plink.nightproplayers.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 667b6718-fe72-454d-b521-027f3fa5efca, network: ws, ws-opts: {path: /, headers: {Host: plink.nightproplayers.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim`", server: 185.143.233.5, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b92eb8c1-13df-47ca-a4a6-46fccc1bd2c5, servername: an.8lack.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/chat?ed=128", headers: {Host: an.8lack.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim` 4", server: 185.143.234.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: b8799fac-622a-4142-aab2-2aa862ad35f2, network: ws, ws-opts: {path: /, headers: {Host: vixon.portab.org}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim` 5", server: 185.143.233.5, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b92eb8c1-13df-47ca-a4a6-46fccc1bd2c5, servername: an.8lack.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/chat?ed=128", headers: {Host: an.8lack.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@vasl_bashim"
       - "@vasl_bashim`"
+      - "@vasl_bashim` 2"
+      - "@vasl_bashim` 3"
+      - "@vasl_bashim"
+      - "@vasl_bashim` 4"
+      - "@vasl_bashim` 5"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@vasl_bashim"
       - "@vasl_bashim`"
+      - "@vasl_bashim` 2"
+      - "@vasl_bashim` 3"
+      - "@vasl_bashim"
+      - "@vasl_bashim` 4"
+      - "@vasl_bashim` 5"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@vasl_bashim"
       - "@vasl_bashim`"
+      - "@vasl_bashim` 2"
+      - "@vasl_bashim` 3"
+      - "@vasl_bashim"
+      - "@vasl_bashim` 4"
+      - "@vasl_bashim` 5"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@vasl_bashim"
       - "@vasl_bashim`"
+      - "@vasl_bashim` 2"
+      - "@vasl_bashim` 3"
+      - "@vasl_bashim"
+      - "@vasl_bashim` 4"
+      - "@vasl_bashim` 5"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@vasl_bashim"
       - "@vasl_bashim`"
+      - "@vasl_bashim` 2"
+      - "@vasl_bashim` 3"
+      - "@vasl_bashim"
+      - "@vasl_bashim` 4"
+      - "@vasl_bashim` 5"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@vasl_bashim"
       - "@vasl_bashim`"
+      - "@vasl_bashim` 2"
+      - "@vasl_bashim` 3"
+      - "@vasl_bashim"
+      - "@vasl_bashim` 4"
+      - "@vasl_bashim` 5"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -79,8 +107,12 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@vasl_bashim"
       - "@vasl_bashim`"
+      - "@vasl_bashim` 2"
+      - "@vasl_bashim` 3"
+      - "@vasl_bashim"
+      - "@vasl_bashim` 4"
+      - "@vasl_bashim` 5"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

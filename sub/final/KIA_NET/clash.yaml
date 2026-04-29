@@ -465,10 +465,18 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: kia_net`, server: 104.20.6.134, port: 443, type: trojan, password: humanity, sni: www.calmloud.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmloud.com}}, udp: true, tfo: false}
-  - {name: .., server: 104.20.6.134, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.indevs.in, network: ws, ws-opts: {path: /, headers: {Host: sni.111000.indevs.in}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@..کیا", server: 104.20.6.134, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a01daac7-1e65-4645-854d-b47d226f6b08, servername: y6-3cj.PAgES.DEV, network: ws, ws-opts: {path: /, headers: {Host: y6-3cj.PAgES.DEV}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@..کیا`", server: 104.20.6.134, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a01daac7-1e65-4645-854d-b47d226f6b08, servername: y6-3cj.PAgES.DEV, network: ws, ws-opts: {path: /, headers: {Host: y6-3cj.PAgES.DEV}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "[🇨🇦]kianet`", server: 79.127.200.169, port: 990, type: ss, cipher: chacha20-ietf-poly1305, password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=, udp: true, tfo: false}
+  - {name: "[🇳🇱]", server: 185.117.91.27, port: 21836, type: ss, cipher: chacha20-ietf-poly1305, password: PDNcrHbGmb5u76Og8NatjZ, udp: true, tfo: false}
+  - {name: "@kia_net2", server: 20.87.107.99, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: VKcGHydApr9F7Gux, udp: true, tfo: false}
+  - {name: "[kia", server: 20.87.107.99, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: VKcGHydApr9F7Gux, udp: true, tfo: false}
+  - {name: "[🇳🇱] 2", server: 213.109.147.242, port: 62685, type: ss, cipher: chacha20-ietf-poly1305, password: VpKABcOpNNA0l5G2AVOmw8, udp: true, tfo: false}
+  - {name: "[🇳🇱]`", server: 213.109.147.242, port: 62685, type: ss, cipher: chacha20-ietf-poly1305, password: VpKABcOpNNA0l5G2AVOmw8, udp: true, tfo: false}
+  - {name: "@kia_net1", server: 20.87.107.99, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: akMKO9KXowxFcx5A, udp: true, tfo: false}
+  - {name: "[🇮🇷]`", server: iri.hosmci.ir, port: 41473, type: vless, tls: true, packet-encoding: xudp, uuid: 04a0dd1a-e72b-44f3-a69b-ec9919d4f74d, servername: ir.hosmci.ir, network: ws, ws-opts: {path: "/upload/?ed=2560", headers: {Host: ir.hosmci.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@kia_net3`", server: iri.hosmci.ir, port: 41473, type: vless, tls: true, packet-encoding: xudp, uuid: 04a0dd1a-e72b-44f3-a69b-ec9919d4f74d, servername: ir.hosmci.ir, network: ws, ws-opts: {path: "/upload/?ed=2560", headers: {Host: ir.hosmci.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "[🇩🇪]", server: du.mobileemdad.top, port: 42542, type: vless, tls: true, packet-encoding: xudp, uuid: 2d2c29fd-ed07-43ee-9514-e62f1645fb6c, host: du.mobileemdad.top, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "[🇴🇳]", server: 38.54.23.58, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6048472f-0993-4ae0-8203-960b9a0f4113, servername: www.amazon.com, host: www.amazon.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "[🇮🇷]", server: camp.nahidapp.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: dfb828c8-772c-48a4-855e-b526e03c1433, network: ws, ws-opts: {path: /IF_VPN_Bot, headers: {Host: camp.nahidapp.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,30 +493,54 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - kia_net`
-      - ..
-      - "@..کیا"
-      - "@..کیا`"
+      - "[🇨🇦]kianet`"
+      - "[🇳🇱]"
+      - "@kia_net2"
+      - "[kia"
+      - "[🇳🇱] 2"
+      - "[🇳🇱]`"
+      - "@kia_net1"
+      - "[🇮🇷]`"
+      - "@kia_net3`"
+      - "[🇩🇪]"
+      - "[🇴🇳]"
+      - "[🇮🇷]"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - kia_net`
-      - ..
-      - "@..کیا"
-      - "@..کیا`"
+      - "[🇨🇦]kianet`"
+      - "[🇳🇱]"
+      - "@kia_net2"
+      - "[kia"
+      - "[🇳🇱] 2"
+      - "[🇳🇱]`"
+      - "@kia_net1"
+      - "[🇮🇷]`"
+      - "@kia_net3`"
+      - "[🇩🇪]"
+      - "[🇴🇳]"
+      - "[🇮🇷]"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - kia_net`
-      - ..
-      - "@..کیا"
-      - "@..کیا`"
+      - "[🇨🇦]kianet`"
+      - "[🇳🇱]"
+      - "@kia_net2"
+      - "[kia"
+      - "[🇳🇱] 2"
+      - "[🇳🇱]`"
+      - "@kia_net1"
+      - "[🇮🇷]`"
+      - "@kia_net3`"
+      - "[🇩🇪]"
+      - "[🇴🇳]"
+      - "[🇮🇷]"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -524,30 +556,54 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - kia_net`
-      - ..
-      - "@..کیا"
-      - "@..کیا`"
+      - "[🇨🇦]kianet`"
+      - "[🇳🇱]"
+      - "@kia_net2"
+      - "[kia"
+      - "[🇳🇱] 2"
+      - "[🇳🇱]`"
+      - "@kia_net1"
+      - "[🇮🇷]`"
+      - "@kia_net3`"
+      - "[🇩🇪]"
+      - "[🇴🇳]"
+      - "[🇮🇷]"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - kia_net`
-      - ..
-      - "@..کیا"
-      - "@..کیا`"
+      - "[🇨🇦]kianet`"
+      - "[🇳🇱]"
+      - "@kia_net2"
+      - "[kia"
+      - "[🇳🇱] 2"
+      - "[🇳🇱]`"
+      - "@kia_net1"
+      - "[🇮🇷]`"
+      - "@kia_net3`"
+      - "[🇩🇪]"
+      - "[🇴🇳]"
+      - "[🇮🇷]"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - kia_net`
-      - ..
-      - "@..کیا"
-      - "@..کیا`"
+      - "[🇨🇦]kianet`"
+      - "[🇳🇱]"
+      - "@kia_net2"
+      - "[kia"
+      - "[🇳🇱] 2"
+      - "[🇳🇱]`"
+      - "@kia_net1"
+      - "[🇮🇷]`"
+      - "@kia_net3`"
+      - "[🇩🇪]"
+      - "[🇴🇳]"
+      - "[🇮🇷]"
   - name: دانلود منیجر 📥
     type: select
     proxies:
