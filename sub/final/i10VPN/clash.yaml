@@ -465,9 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@i10VPN - Psiphon 34`", server: 185.143.234.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 04fa65ad-5178-49c0-b679-a5442e3bfe78, network: ws, ws-opts: {path: /, headers: {Host: d.nsa03.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@i10VPN - Psiphon 39`", server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 1f5358e8-f57c-44b8-9864-9c236672fbc8, network: ws, ws-opts: {path: /, headers: {Host: d.nsa03.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@i10VPN - Psiphon 38`", server: trex.nahidapp.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 2f4e3910-aa35-41a4-856a-5a75d19dd853, servername: trex.nahidapp.com, network: ws, ws-opts: {path: /vless-ws, headers: {Host: trex.nahidapp.com}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@i10VPN - Psiphon 37`", server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 57847df6-3ef1-477f-986c-c8dfb55d4160, network: ws, ws-opts: {path: /, headers: {Host: d.nsa03.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@i10VPN - Psiphon 35`", server: th.gostargate.top, port: 49961, type: vless, tls: true, packet-encoding: xudp, uuid: 65cb52fc-4c72-4b43-bdac-ed9c31a40714, host: th.gostargate.top, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,27 +484,27 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@i10VPN - Psiphon 34`"
+      - "@i10VPN - Psiphon 39`"
+      - "@i10VPN - Psiphon 38`"
       - "@i10VPN - Psiphon 37`"
-      - "@i10VPN - Psiphon 35`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@i10VPN - Psiphon 34`"
+      - "@i10VPN - Psiphon 39`"
+      - "@i10VPN - Psiphon 38`"
       - "@i10VPN - Psiphon 37`"
-      - "@i10VPN - Psiphon 35`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@i10VPN - Psiphon 34`"
+      - "@i10VPN - Psiphon 39`"
+      - "@i10VPN - Psiphon 38`"
       - "@i10VPN - Psiphon 37`"
-      - "@i10VPN - Psiphon 35`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -520,27 +520,27 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@i10VPN - Psiphon 34`"
+      - "@i10VPN - Psiphon 39`"
+      - "@i10VPN - Psiphon 38`"
       - "@i10VPN - Psiphon 37`"
-      - "@i10VPN - Psiphon 35`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@i10VPN - Psiphon 34`"
+      - "@i10VPN - Psiphon 39`"
+      - "@i10VPN - Psiphon 38`"
       - "@i10VPN - Psiphon 37`"
-      - "@i10VPN - Psiphon 35`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@i10VPN - Psiphon 34`"
+      - "@i10VPN - Psiphon 39`"
+      - "@i10VPN - Psiphon 38`"
       - "@i10VPN - Psiphon 37`"
-      - "@i10VPN - Psiphon 35`"
   - name: دانلود منیجر 📥
     type: select
     proxies:

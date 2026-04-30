@@ -467,8 +467,6 @@ rule-providers:
 proxies:
   - {name: "@V2RAYENGLISH`", server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 57847df6-3ef1-477f-986c-c8dfb55d4160, network: ws, ws-opts: {path: /, headers: {Host: d.nsa03.com}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@V2RAYENGLISH` 2", server: golden.alisecvice.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 58f676d0-f2fb-4cba-923b-8769f29a6e28, network: ws, ws-opts: {path: /, headers: {Host: golden.alisecvice.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@V2RAYENGLISH` 3", server: th.gostargate.top, port: 49961, type: vless, tls: true, packet-encoding: xudp, uuid: 65cb52fc-4c72-4b43-bdac-ed9c31a40714, host: th.gostargate.top, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@V2RAYENGLISH", server: 188.121.108.90, port: 46742, type: vmess, uuid: 221ed633-838f-4110-bf41-86936c1bc8fc, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,8 +485,6 @@ proxy-groups:
     proxies:
       - "@V2RAYENGLISH`"
       - "@V2RAYENGLISH` 2"
-      - "@V2RAYENGLISH` 3"
-      - "@V2RAYENGLISH"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -497,8 +493,6 @@ proxy-groups:
     proxies:
       - "@V2RAYENGLISH`"
       - "@V2RAYENGLISH` 2"
-      - "@V2RAYENGLISH` 3"
-      - "@V2RAYENGLISH"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -507,8 +501,6 @@ proxy-groups:
     proxies:
       - "@V2RAYENGLISH`"
       - "@V2RAYENGLISH` 2"
-      - "@V2RAYENGLISH` 3"
-      - "@V2RAYENGLISH"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -526,8 +518,6 @@ proxy-groups:
     proxies:
       - "@V2RAYENGLISH`"
       - "@V2RAYENGLISH` 2"
-      - "@V2RAYENGLISH` 3"
-      - "@V2RAYENGLISH"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -536,8 +526,6 @@ proxy-groups:
     proxies:
       - "@V2RAYENGLISH`"
       - "@V2RAYENGLISH` 2"
-      - "@V2RAYENGLISH` 3"
-      - "@V2RAYENGLISH"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -546,8 +534,6 @@ proxy-groups:
     proxies:
       - "@V2RAYENGLISH`"
       - "@V2RAYENGLISH` 2"
-      - "@V2RAYENGLISH` 3"
-      - "@V2RAYENGLISH"
   - name: دانلود منیجر 📥
     type: select
     proxies:

@@ -465,11 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@SPEEDS_VPN-جوین-بدید`", server: 185.143.233.5, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 3e4f6e33-79de-4453-922e-129c1a6ff8c4, servername: bn.8lack.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/chat?ed=128", headers: {Host: bn.8lack.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`", server: mtn.itsazan.info, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: 4dbc938a-430e-42d7-a59c-a57d97076125, servername: mtn.itsazan.info, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /api/v1/users, headers: {Host: mtn.itsazan.info}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "***🐦‍🔥***-@SPEEDS_VPN", server: khan10.tarfandgallery.sbs, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 65116132-8405-4606-b35f-ccdaab0c04e1, servername: khan10.tarfandgallery.sbs, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: khan10.tarfandgallery.sbs}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "***🐦‍🔥***-@SPEEDS_VPN 2", server: th.gostargate.top, port: 49961, type: vless, tls: true, packet-encoding: xudp, uuid: 65cb52fc-4c72-4b43-bdac-ed9c31a40714, host: th.gostargate.top, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "***🐦‍🔥***-@SPEEDS_VPN`", server: th.gostargate.top, port: 49961, type: vless, tls: true, packet-encoding: xudp, uuid: 65cb52fc-4c72-4b43-bdac-ed9c31a40714, host: th.gostargate.top, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN", server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 1f5358e8-f57c-44b8-9864-9c236672fbc8, network: ws, ws-opts: {path: /, headers: {Host: d.nsa03.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN`", server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 1f5358e8-f57c-44b8-9864-9c236672fbc8, network: ws, ws-opts: {path: /, headers: {Host: d.nsa03.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,10 +483,7 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@SPEEDS_VPN-جوین-بدید`"
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`"
       - "***🐦‍🔥***-@SPEEDS_VPN"
-      - "***🐦‍🔥***-@SPEEDS_VPN 2"
       - "***🐦‍🔥***-@SPEEDS_VPN`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -497,10 +491,7 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - "@SPEEDS_VPN-جوین-بدید`"
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`"
       - "***🐦‍🔥***-@SPEEDS_VPN"
-      - "***🐦‍🔥***-@SPEEDS_VPN 2"
       - "***🐦‍🔥***-@SPEEDS_VPN`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -508,10 +499,7 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - "@SPEEDS_VPN-جوین-بدید`"
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`"
       - "***🐦‍🔥***-@SPEEDS_VPN"
-      - "***🐦‍🔥***-@SPEEDS_VPN 2"
       - "***🐦‍🔥***-@SPEEDS_VPN`"
   - name: اتصال پایدار 🔗
     type: url-test
@@ -528,10 +516,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@SPEEDS_VPN-جوین-بدید`"
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`"
       - "***🐦‍🔥***-@SPEEDS_VPN"
-      - "***🐦‍🔥***-@SPEEDS_VPN 2"
       - "***🐦‍🔥***-@SPEEDS_VPN`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -539,10 +524,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@SPEEDS_VPN-جوین-بدید`"
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`"
       - "***🐦‍🔥***-@SPEEDS_VPN"
-      - "***🐦‍🔥***-@SPEEDS_VPN 2"
       - "***🐦‍🔥***-@SPEEDS_VPN`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -550,10 +532,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@SPEEDS_VPN-جوین-بدید`"
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`"
       - "***🐦‍🔥***-@SPEEDS_VPN"
-      - "***🐦‍🔥***-@SPEEDS_VPN 2"
       - "***🐦‍🔥***-@SPEEDS_VPN`"
   - name: دانلود منیجر 📥
     type: select
