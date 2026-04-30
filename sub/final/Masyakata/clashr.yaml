@@ -5,7 +5,9 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: Masyakata, server: 37.32.20.55, port: 80, type: trojan, password: 4OE9MojBpg, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@@Masyakata", server: payment.abas-taraghe.space, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 1c002135-d978-45ed-a5d2-c8ae0811f467, servername: payment.behtarinoo.com, alpn: [http%2F1.1], network: ws, ws-opts: {path: /2038, headers: {Host: payment.behtarinoo.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@@Masyakata 2", server: ite.pishvatech.lol, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 23df5a72-4f57-4d6b-a766-63cd93b7eab5, network: ws, ws-opts: {path: /, headers: {Host: ite.pishvatech.lol}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: https://t.me/Masyakata, server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 6b70429e-a94a-43ce-9d9e-81ddd3d569d3, network: ws, ws-opts: {path: /, headers: {Host: vip.dijestbilty-en.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: oliver_soul, server: 185.143.233.235, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: c69cc697-7587-4e9a-a066-b21ba3766d0d, network: ws, ws-opts: {path: /, headers: {Host: dev.artarona.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
@@ -13,7 +15,9 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - Masyakata
+      - "@@Masyakata"
+      - "@@Masyakata 2"
+      - https://t.me/Masyakata
       - oliver_soul
   - name: ♻️ 自动选择
     type: url-test
@@ -21,7 +25,9 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - Masyakata
+      - "@@Masyakata"
+      - "@@Masyakata 2"
+      - https://t.me/Masyakata
       - oliver_soul
   - name: 🌍 国外媒体
     type: select
@@ -29,28 +35,36 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - Masyakata
+      - "@@Masyakata"
+      - "@@Masyakata 2"
+      - https://t.me/Masyakata
       - oliver_soul
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - Masyakata
+      - "@@Masyakata"
+      - "@@Masyakata 2"
+      - https://t.me/Masyakata
       - oliver_soul
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - Masyakata
+      - "@@Masyakata"
+      - "@@Masyakata 2"
+      - https://t.me/Masyakata
       - oliver_soul
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - Masyakata
+      - "@@Masyakata"
+      - "@@Masyakata 2"
+      - https://t.me/Masyakata
       - oliver_soul
   - name: 🎯 全球直连
     type: select
@@ -79,7 +93,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - Masyakata
+      - "@@Masyakata"
+      - "@@Masyakata 2"
+      - https://t.me/Masyakata
       - oliver_soul
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连

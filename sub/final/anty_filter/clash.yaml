@@ -465,11 +465,12 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@vpnbaz | ترکیبی", server: 185.143.234.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 04fa65ad-5178-49c0-b679-a5442e3bfe78, network: ws, ws-opts: {path: /, headers: {Host: d.nsa03.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz | ترکیبی 2", server: th.gostargate.top, port: 49961, type: vless, tls: true, packet-encoding: xudp, uuid: 65cb52fc-4c72-4b43-bdac-ed9c31a40714, host: th.gostargate.top, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz | ترکیبی 3", server: 185.143.233.234, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 9a06cc2a-8967-4d6b-abfc-f9c5501ff4ad, servername: s1.pishparda.ir, network: ws, ws-opts: {path: /voip, headers: {Host: s1.pishparda.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz | ترکیبی 4", server: 188.121.108.90, port: 46742, type: vmess, uuid: 221ed633-838f-4110-bf41-86936c1bc8fc, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz | ترکیبی 5", server: mig-sin.darkube.ir, port: 443, type: vmess, uuid: 254721a9-5739-4baf-b35d-9bc950e346db, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /api/direct, headers: {Host: mig-sin.darkube.ir}}, udp: true, tfo: false}
+  - {name: "@vpnbaz | ترکیبی", server: varzesh3.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 0d3ad8c0-eda2-4c7f-b356-7377c9fc56ae, network: ws, ws-opts: {path: /ws, headers: {Host: nobody.fasterspeed.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz | ترکیبی 2", server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 1f5358e8-f57c-44b8-9864-9c236672fbc8, network: ws, ws-opts: {path: /, headers: {Host: d.nsa03.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz | ترکیبی 3", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 6b70429e-a94a-43ce-9d9e-81ddd3d569d3, network: ws, ws-opts: {path: /, headers: {Host: vip.dijestbilty-en.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz | ترکیبی 4", server: snapp.ir, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: 6fd1d1ff-5e9a-4b15-a8e4-ca4dd811ab5c, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: arvv.teamlifez.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz | ترکیبی 5", server: me.ciliko.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: b13d6475-07c5-3cfe-99c3-c0b8230672af, network: ws, ws-opts: {path: /, headers: {Host: me.ciliko.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz | ترکیبی 6", server: 185.143.233.5, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b3f248c6-a96a-409a-9e13-9db0a3e7df52, servername: dn.8lack.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/chat?ed=128", headers: {Host: dn.8lack.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -491,6 +492,7 @@ proxy-groups:
       - "@vpnbaz | ترکیبی 3"
       - "@vpnbaz | ترکیبی 4"
       - "@vpnbaz | ترکیبی 5"
+      - "@vpnbaz | ترکیبی 6"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -502,6 +504,7 @@ proxy-groups:
       - "@vpnbaz | ترکیبی 3"
       - "@vpnbaz | ترکیبی 4"
       - "@vpnbaz | ترکیبی 5"
+      - "@vpnbaz | ترکیبی 6"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -513,6 +516,7 @@ proxy-groups:
       - "@vpnbaz | ترکیبی 3"
       - "@vpnbaz | ترکیبی 4"
       - "@vpnbaz | ترکیبی 5"
+      - "@vpnbaz | ترکیبی 6"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -533,6 +537,7 @@ proxy-groups:
       - "@vpnbaz | ترکیبی 3"
       - "@vpnbaz | ترکیبی 4"
       - "@vpnbaz | ترکیبی 5"
+      - "@vpnbaz | ترکیبی 6"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -544,6 +549,7 @@ proxy-groups:
       - "@vpnbaz | ترکیبی 3"
       - "@vpnbaz | ترکیبی 4"
       - "@vpnbaz | ترکیبی 5"
+      - "@vpnbaz | ترکیبی 6"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -555,6 +561,7 @@ proxy-groups:
       - "@vpnbaz | ترکیبی 3"
       - "@vpnbaz | ترکیبی 4"
       - "@vpnbaz | ترکیبی 5"
+      - "@vpnbaz | ترکیبی 6"
   - name: دانلود منیجر 📥
     type: select
     proxies:

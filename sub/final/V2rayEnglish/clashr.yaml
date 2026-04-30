@@ -5,8 +5,7 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@V2RAYENGLISH`", server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 57847df6-3ef1-477f-986c-c8dfb55d4160, network: ws, ws-opts: {path: /, headers: {Host: d.nsa03.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@V2RAYENGLISH` 2", server: golden.alisecvice.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 58f676d0-f2fb-4cba-923b-8769f29a6e28, network: ws, ws-opts: {path: /, headers: {Host: golden.alisecvice.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@V2RAYENGLISH`", server: varzesh3.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 0d3ad8c0-eda2-4c7f-b356-7377c9fc56ae, network: ws, ws-opts: {path: /ws, headers: {Host: nobody.fasterspeed.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -14,7 +13,6 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - "@V2RAYENGLISH`"
-      - "@V2RAYENGLISH` 2"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -22,7 +20,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@V2RAYENGLISH`"
-      - "@V2RAYENGLISH` 2"
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -30,28 +27,24 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - "@V2RAYENGLISH`"
-      - "@V2RAYENGLISH` 2"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@V2RAYENGLISH`"
-      - "@V2RAYENGLISH` 2"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - "@V2RAYENGLISH`"
-      - "@V2RAYENGLISH` 2"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@V2RAYENGLISH`"
-      - "@V2RAYENGLISH` 2"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -80,7 +73,6 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - "@V2RAYENGLISH`"
-      - "@V2RAYENGLISH` 2"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
