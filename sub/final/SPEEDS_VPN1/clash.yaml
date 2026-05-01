@@ -465,8 +465,13 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "***🐦‍🔥***-@SPEEDS_VPN", server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 1f5358e8-f57c-44b8-9864-9c236672fbc8, network: ws, ws-opts: {path: /, headers: {Host: d.nsa03.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "***🐦‍🔥***-@SPEEDS_VPN`", server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 1f5358e8-f57c-44b8-9864-9c236672fbc8, network: ws, ws-opts: {path: /, headers: {Host: d.nsa03.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN", server: 193.151.143.138, port: 201, type: vless, tls: true, packet-encoding: xudp, uuid: 042bcb1f-23dd-4ae9-9dc0-e301f89a5359, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN 2", server: varzesh3.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 0d3ad8c0-eda2-4c7f-b356-7377c9fc56ae, network: ws, ws-opts: {path: /ws, headers: {Host: nobody.fasterspeed.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN 3", server: 185.143.233.235, port: 2095, type: vless, tls: true, packet-encoding: xudp, uuid: 270bb251-06a8-4066-8a92-f0d1bd06150a, network: ws, ws-opts: {path: /, headers: {Host: Ml.artarona.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN 4", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 6b70429e-a94a-43ce-9d9e-81ddd3d569d3, network: ws, ws-opts: {path: /, headers: {Host: vip.dijestbilty-en.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN 5", server: snapp.ir, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: 6fd1d1ff-5e9a-4b15-a8e4-ca4dd811ab5c, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: arvv.teamlifez.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN`", server: me.ciliko.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: b13d6475-07c5-3cfe-99c3-c0b8230672af, network: ws, ws-opts: {path: /, headers: {Host: me.ciliko.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN` 2", server: iri.hosmci.ir, port: 35163, type: vless, tls: true, packet-encoding: xudp, uuid: ea7ae912-3566-4b67-bf67-54397d5f8736, servername: de.hosmci.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/upload/?ed=2560", headers: {Host: de.hosmci.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,7 +489,12 @@ proxy-groups:
     type: select
     proxies:
       - "***🐦‍🔥***-@SPEEDS_VPN"
+      - "***🐦‍🔥***-@SPEEDS_VPN 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN 4"
+      - "***🐦‍🔥***-@SPEEDS_VPN 5"
       - "***🐦‍🔥***-@SPEEDS_VPN`"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 2"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -492,7 +502,12 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "***🐦‍🔥***-@SPEEDS_VPN"
+      - "***🐦‍🔥***-@SPEEDS_VPN 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN 4"
+      - "***🐦‍🔥***-@SPEEDS_VPN 5"
       - "***🐦‍🔥***-@SPEEDS_VPN`"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 2"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -500,7 +515,12 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "***🐦‍🔥***-@SPEEDS_VPN"
+      - "***🐦‍🔥***-@SPEEDS_VPN 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN 4"
+      - "***🐦‍🔥***-@SPEEDS_VPN 5"
       - "***🐦‍🔥***-@SPEEDS_VPN`"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 2"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -517,7 +537,12 @@ proxy-groups:
     interval: 600
     proxies:
       - "***🐦‍🔥***-@SPEEDS_VPN"
+      - "***🐦‍🔥***-@SPEEDS_VPN 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN 4"
+      - "***🐦‍🔥***-@SPEEDS_VPN 5"
       - "***🐦‍🔥***-@SPEEDS_VPN`"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 2"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -525,7 +550,12 @@ proxy-groups:
     interval: 600
     proxies:
       - "***🐦‍🔥***-@SPEEDS_VPN"
+      - "***🐦‍🔥***-@SPEEDS_VPN 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN 4"
+      - "***🐦‍🔥***-@SPEEDS_VPN 5"
       - "***🐦‍🔥***-@SPEEDS_VPN`"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 2"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -533,7 +563,12 @@ proxy-groups:
     interval: 600
     proxies:
       - "***🐦‍🔥***-@SPEEDS_VPN"
+      - "***🐦‍🔥***-@SPEEDS_VPN 2"
+      - "***🐦‍🔥***-@SPEEDS_VPN 3"
+      - "***🐦‍🔥***-@SPEEDS_VPN 4"
+      - "***🐦‍🔥***-@SPEEDS_VPN 5"
       - "***🐦‍🔥***-@SPEEDS_VPN`"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 2"
   - name: دانلود منیجر 📥
     type: select
     proxies:
