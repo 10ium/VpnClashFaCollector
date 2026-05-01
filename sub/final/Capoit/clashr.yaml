@@ -5,13 +5,15 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@Capoit`", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 6b70429e-a94a-43ce-9d9e-81ddd3d569d3, network: ws, ws-opts: {path: /, headers: {Host: vip.dijestbilty-en.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vipV2rayNGnp", server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 1f5358e8-f57c-44b8-9864-9c236672fbc8, network: ws, ws-opts: {path: /, headers: {Host: d.nsa03.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit`", server: 185.143.233.5, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: da1e8c1b-2cfc-4986-8a6d-5a2e387fb1aa, servername: fn.8lack.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/chat?ed=128", headers: {Host: fn.8lack.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - "@vipV2rayNGnp"
       - "@Capoit`"
   - name: ♻️ 自动选择
     type: url-test
@@ -19,6 +21,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - "@vipV2rayNGnp"
       - "@Capoit`"
   - name: 🌍 国外媒体
     type: select
@@ -26,24 +29,28 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - "@vipV2rayNGnp"
       - "@Capoit`"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - "@vipV2rayNGnp"
       - "@Capoit`"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - "@vipV2rayNGnp"
       - "@Capoit`"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - "@vipV2rayNGnp"
       - "@Capoit`"
   - name: 🎯 全球直连
     type: select
@@ -72,6 +79,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - "@vipV2rayNGnp"
       - "@Capoit`"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连

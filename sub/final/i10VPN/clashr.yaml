@@ -5,53 +5,46 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@i10VPN - Psiphon 40`", server: 185.143.233.235, port: 2095, type: vless, tls: true, packet-encoding: xudp, uuid: 270bb251-06a8-4066-8a92-f0d1bd06150a, network: ws, ws-opts: {path: /, headers: {Host: Ml.artarona.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@i10VPN - Psiphon 42`", server: 185.143.233.5, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 601ed233-56e7-4f7a-b486-06ed55f1cec0, servername: fn.8lack.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/chat?ed=128", headers: {Host: fn.8lack.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@i10VPN - Psiphon 44`", server: snapp.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 0a7fe2d9-d537-4876-a96d-202fa10eda90, network: ws, ws-opts: {path: /, headers: {Host: wt.programming-coding.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@i10VPN - Psiphon 40`"
-      - "@i10VPN - Psiphon 42`"
+      - "@i10VPN - Psiphon 44`"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@i10VPN - Psiphon 40`"
-      - "@i10VPN - Psiphon 42`"
+      - "@i10VPN - Psiphon 44`"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@i10VPN - Psiphon 40`"
-      - "@i10VPN - Psiphon 42`"
+      - "@i10VPN - Psiphon 44`"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@i10VPN - Psiphon 40`"
-      - "@i10VPN - Psiphon 42`"
+      - "@i10VPN - Psiphon 44`"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@i10VPN - Psiphon 40`"
-      - "@i10VPN - Psiphon 42`"
+      - "@i10VPN - Psiphon 44`"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@i10VPN - Psiphon 40`"
-      - "@i10VPN - Psiphon 42`"
+      - "@i10VPN - Psiphon 44`"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -79,8 +72,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@i10VPN - Psiphon 40`"
-      - "@i10VPN - Psiphon 42`"
+      - "@i10VPN - Psiphon 44`"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

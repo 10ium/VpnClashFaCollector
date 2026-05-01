@@ -465,11 +465,12 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@@Masyakata", server: payment.abas-taraghe.space, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 1c002135-d978-45ed-a5d2-c8ae0811f467, servername: payment.behtarinoo.com, alpn: [http%2F1.1], network: ws, ws-opts: {path: /2038, headers: {Host: payment.behtarinoo.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@@Masyakata 2", server: ite.pishvatech.lol, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 23df5a72-4f57-4d6b-a766-63cd93b7eab5, network: ws, ws-opts: {path: /, headers: {Host: ite.pishvatech.lol}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: US_6|2.9MB/s`, server: vpn-us-006.fastervpn.world, port: 443, type: hysteria2, ports: 443, password: qQe1z5kU8kN6SlKnDt9Ru3Qp, sni: vpn-us-006.fastervpn.world, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ❓Other_1|3.3MB/s, server: 162.159.45.207, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 388a6c57-87e7-420b-afe2-b3eb670fd7da, network: ws, ws-opts: {path: /, headers: {Host: vip.yaml7.ggff.net}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@Masyakata`", server: 185.143.233.5, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 601ed233-56e7-4f7a-b486-06ed55f1cec0, servername: fn.8lack.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/chat?ed=128", headers: {Host: fn.8lack.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: https://t.me/Masyakata, server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 6b70429e-a94a-43ce-9d9e-81ddd3d569d3, network: ws, ws-opts: {path: /, headers: {Host: vip.dijestbilty-en.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: https://t.me/Masyakata 2, server: th.gostargate.top, port: 49961, type: vless, tls: true, packet-encoding: xudp, uuid: ae0d71fb-5121-4b78-adbc-753dbe2cd1a8, host: th.gostargate.top, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: https://t.me/Masyakata, server: th.gostargate.top, port: 49961, type: vless, tls: true, packet-encoding: xudp, uuid: ae0d71fb-5121-4b78-adbc-753dbe2cd1a8, host: th.gostargate.top, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: SG_3|1.8MB/s, server: m.cnmjin.net, port: 16618, type: vmess, uuid: c3bb4d48-63db-439e-bb4b-a541729c4f72, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: b51d264b1d49f78bcc89624068d93405.mobgslb.tbcache.com}}, udp: true, tfo: false}
+  - {name: US_5|2.4MB/s, server: t.cnmjcn.cyou, port: 16648, type: vmess, uuid: c3bb4d48-63db-439e-bb4b-a541729c4f72, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: b51d264b1d49f78bcc89624068d93405.mobgslb.tbcache.com}}, udp: true, tfo: false}
   - {name: https://t.me/Configir98, server: 217.218.52.1, port: 11182, type: vmess, uuid: f62d2411-c34d-460b-a93e-b789e03ca8b3, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -487,11 +488,12 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@@Masyakata"
-      - "@@Masyakata 2"
+      - US_6|2.9MB/s`
+      - ❓Other_1|3.3MB/s
       - "@Masyakata`"
       - https://t.me/Masyakata
-      - https://t.me/Masyakata 2
+      - SG_3|1.8MB/s
+      - US_5|2.4MB/s
       - https://t.me/Configir98
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -499,11 +501,12 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - "@@Masyakata"
-      - "@@Masyakata 2"
+      - US_6|2.9MB/s`
+      - ❓Other_1|3.3MB/s
       - "@Masyakata`"
       - https://t.me/Masyakata
-      - https://t.me/Masyakata 2
+      - SG_3|1.8MB/s
+      - US_5|2.4MB/s
       - https://t.me/Configir98
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -511,11 +514,12 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - "@@Masyakata"
-      - "@@Masyakata 2"
+      - US_6|2.9MB/s`
+      - ❓Other_1|3.3MB/s
       - "@Masyakata`"
       - https://t.me/Masyakata
-      - https://t.me/Masyakata 2
+      - SG_3|1.8MB/s
+      - US_5|2.4MB/s
       - https://t.me/Configir98
   - name: اتصال پایدار 🔗
     type: url-test
@@ -532,11 +536,12 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@@Masyakata"
-      - "@@Masyakata 2"
+      - US_6|2.9MB/s`
+      - ❓Other_1|3.3MB/s
       - "@Masyakata`"
       - https://t.me/Masyakata
-      - https://t.me/Masyakata 2
+      - SG_3|1.8MB/s
+      - US_5|2.4MB/s
       - https://t.me/Configir98
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -544,11 +549,12 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@@Masyakata"
-      - "@@Masyakata 2"
+      - US_6|2.9MB/s`
+      - ❓Other_1|3.3MB/s
       - "@Masyakata`"
       - https://t.me/Masyakata
-      - https://t.me/Masyakata 2
+      - SG_3|1.8MB/s
+      - US_5|2.4MB/s
       - https://t.me/Configir98
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -556,11 +562,12 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@@Masyakata"
-      - "@@Masyakata 2"
+      - US_6|2.9MB/s`
+      - ❓Other_1|3.3MB/s
       - "@Masyakata`"
       - https://t.me/Masyakata
-      - https://t.me/Masyakata 2
+      - SG_3|1.8MB/s
+      - US_5|2.4MB/s
       - https://t.me/Configir98
   - name: دانلود منیجر 📥
     type: select
