@@ -468,8 +468,10 @@ proxies:
   - {name: "@@saministamm", server: game.khodavand.shop, port: 3031, type: vless, tls: true, packet-encoding: xudp, uuid: 0819897c-e09a-46c8-af5d-5012cebf9c26, host: game.khodavand.shop, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@@saministamm`", server: game.khodavand.shop, port: 3031, type: vless, tls: true, packet-encoding: xudp, uuid: 0819897c-e09a-46c8-af5d-5012cebf9c26, host: game.khodavand.shop, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: https://t.me/saministamm`, server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 1f5358e8-f57c-44b8-9864-9c236672fbc8, network: ws, ws-opts: {path: /, headers: {Host: d.nsa03.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@saministamm`", server: 170.168.103.156, port: 8081, type: vless, tls: true, packet-encoding: xudp, uuid: 89960e91-7f08-401d-98b1-60a8ca601c6f, host: www.speedtest.net, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: saministamm`, server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 1f5358e8-f57c-44b8-9864-9c236672fbc8, network: ws, ws-opts: {path: /, headers: {Host: d.nsa03.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@saministamm`", server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 1f5358e8-f57c-44b8-9864-9c236672fbc8, network: ws, ws-opts: {path: /, headers: {Host: d.nsa03.com}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@saministamm` 2", server: 170.168.103.156, port: 8081, type: vless, tls: true, packet-encoding: xudp, uuid: 89960e91-7f08-401d-98b1-60a8ca601c6f, host: www.speedtest.net, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@saministamm` 3", server: 170.168.103.156, port: 8081, type: vless, tls: true, packet-encoding: xudp, uuid: 89960e91-7f08-401d-98b1-60a8ca601c6f, host: www.speedtest.net, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -489,8 +491,10 @@ proxy-groups:
       - "@@saministamm"
       - "@@saministamm`"
       - https://t.me/saministamm`
+      - saministamm`
       - "@saministamm`"
       - "@saministamm` 2"
+      - "@saministamm` 3"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -500,8 +504,10 @@ proxy-groups:
       - "@@saministamm"
       - "@@saministamm`"
       - https://t.me/saministamm`
+      - saministamm`
       - "@saministamm`"
       - "@saministamm` 2"
+      - "@saministamm` 3"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -511,8 +517,10 @@ proxy-groups:
       - "@@saministamm"
       - "@@saministamm`"
       - https://t.me/saministamm`
+      - saministamm`
       - "@saministamm`"
       - "@saministamm` 2"
+      - "@saministamm` 3"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -531,8 +539,10 @@ proxy-groups:
       - "@@saministamm"
       - "@@saministamm`"
       - https://t.me/saministamm`
+      - saministamm`
       - "@saministamm`"
       - "@saministamm` 2"
+      - "@saministamm` 3"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -542,8 +552,10 @@ proxy-groups:
       - "@@saministamm"
       - "@@saministamm`"
       - https://t.me/saministamm`
+      - saministamm`
       - "@saministamm`"
       - "@saministamm` 2"
+      - "@saministamm` 3"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -553,8 +565,10 @@ proxy-groups:
       - "@@saministamm"
       - "@@saministamm`"
       - https://t.me/saministamm`
+      - saministamm`
       - "@saministamm`"
       - "@saministamm` 2"
+      - "@saministamm` 3"
   - name: دانلود منیجر 📥
     type: select
     proxies:

@@ -469,12 +469,12 @@ proxies:
   - {name: proxy_kafee`, server: snapp.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 0a7fe2d9-d537-4876-a96d-202fa10eda90, network: ws, ws-opts: {path: /, headers: {Host: wt.programming-coding.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee`", server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 1f5358e8-f57c-44b8-9864-9c236672fbc8, network: ws, ws-opts: {path: /, headers: {Host: d.nsa03.com}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee | ترکیبی", server: 185.143.233.5, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 2b94f5e8-8f5f-4888-9f95-5e31c79ce3c2, servername: en.8lack.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/chat?ed=128", headers: {Host: en.8lack.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee", server: trex.nahidapp.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 75cee306-7440-4e09-b162-30b456ae45d2, servername: trex.nahidapp.com, network: ws, ws-opts: {path: /vless-ws, headers: {Host: trex.nahidapp.com}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee | ترکیبی`", server: 185.143.233.5, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 97cc1f58-1e07-4cac-8714-f98848201693, servername: gn.8lack.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/chat?ed=128", headers: {Host: gn.8lack.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee | ترکیبی 2", server: 185.143.233.5, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a7f4c93a-98e1-4835-82f0-0571f8378d14, servername: hn.8lack.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/chat?ed=128", headers: {Host: hn.8lack.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee 2", server: trex.nahidapp.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d3e4df67-8ab6-455e-912a-933f5b9b0608, servername: trex.nahidapp.com, network: ws, ws-opts: {path: /vless-ws, headers: {Host: trex.nahidapp.com}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee | ترکیبی 3", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: d9749e17-2e5c-4fe6-bd3b-2b5c5c2060ec, network: ws, ws-opts: {path: /, headers: {Host: gamefa.yeksanplus.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee | ترکیبی 4", server: 185.143.233.5, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e180d545-84e5-421f-853a-191c27026c32, servername: gn.8lack.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/chat?ed=128", headers: {Host: gn.8lack.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee", server: iri.hosmci.ir, port: 35163, type: vless, tls: true, packet-encoding: xudp, uuid: ea7ae912-3566-4b67-bf67-54397d5f8736, servername: de.hosmci.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/upload/?ed=2560", headers: {Host: de.hosmci.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee 43", server: 217.218.52.1, port: 11182, type: vmess, uuid: f62d2411-c34d-460b-a93e-b789e03ca8b3, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -495,12 +495,12 @@ proxy-groups:
       - proxy_kafee`
       - "@proxy_kafee`"
       - "@proxy_kafee | ترکیبی"
+      - "@proxy_kafee"
       - "@proxy_kafee | ترکیبی`"
       - "@proxy_kafee | ترکیبی 2"
+      - "@proxy_kafee 2"
       - "@proxy_kafee | ترکیبی 3"
       - "@proxy_kafee | ترکیبی 4"
-      - "@proxy_kafee"
-      - "@proxy_kafee 43"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -511,12 +511,12 @@ proxy-groups:
       - proxy_kafee`
       - "@proxy_kafee`"
       - "@proxy_kafee | ترکیبی"
+      - "@proxy_kafee"
       - "@proxy_kafee | ترکیبی`"
       - "@proxy_kafee | ترکیبی 2"
+      - "@proxy_kafee 2"
       - "@proxy_kafee | ترکیبی 3"
       - "@proxy_kafee | ترکیبی 4"
-      - "@proxy_kafee"
-      - "@proxy_kafee 43"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -527,12 +527,12 @@ proxy-groups:
       - proxy_kafee`
       - "@proxy_kafee`"
       - "@proxy_kafee | ترکیبی"
+      - "@proxy_kafee"
       - "@proxy_kafee | ترکیبی`"
       - "@proxy_kafee | ترکیبی 2"
+      - "@proxy_kafee 2"
       - "@proxy_kafee | ترکیبی 3"
       - "@proxy_kafee | ترکیبی 4"
-      - "@proxy_kafee"
-      - "@proxy_kafee 43"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -552,12 +552,12 @@ proxy-groups:
       - proxy_kafee`
       - "@proxy_kafee`"
       - "@proxy_kafee | ترکیبی"
+      - "@proxy_kafee"
       - "@proxy_kafee | ترکیبی`"
       - "@proxy_kafee | ترکیبی 2"
+      - "@proxy_kafee 2"
       - "@proxy_kafee | ترکیبی 3"
       - "@proxy_kafee | ترکیبی 4"
-      - "@proxy_kafee"
-      - "@proxy_kafee 43"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -568,12 +568,12 @@ proxy-groups:
       - proxy_kafee`
       - "@proxy_kafee`"
       - "@proxy_kafee | ترکیبی"
+      - "@proxy_kafee"
       - "@proxy_kafee | ترکیبی`"
       - "@proxy_kafee | ترکیبی 2"
+      - "@proxy_kafee 2"
       - "@proxy_kafee | ترکیبی 3"
       - "@proxy_kafee | ترکیبی 4"
-      - "@proxy_kafee"
-      - "@proxy_kafee 43"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -584,12 +584,12 @@ proxy-groups:
       - proxy_kafee`
       - "@proxy_kafee`"
       - "@proxy_kafee | ترکیبی"
+      - "@proxy_kafee"
       - "@proxy_kafee | ترکیبی`"
       - "@proxy_kafee | ترکیبی 2"
+      - "@proxy_kafee 2"
       - "@proxy_kafee | ترکیبی 3"
       - "@proxy_kafee | ترکیبی 4"
-      - "@proxy_kafee"
-      - "@proxy_kafee 43"
   - name: دانلود منیجر 📥
     type: select
     proxies:
