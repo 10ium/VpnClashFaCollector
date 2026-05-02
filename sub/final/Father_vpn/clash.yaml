@@ -465,7 +465,10 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: TEL;Father_vpn`, server: 170.168.103.156, port: 8081, type: vless, tls: true, packet-encoding: xudp, uuid: 89960e91-7f08-401d-98b1-60a8ca601c6f, host: www.speedtest.net, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: TEL;Father_vpn`, server: 104.19.229.21, port: 443, type: trojan, password: humanity, sni: www.creationlong.org, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org}}, udp: true, tfo: false}
+  - {name: TEL;Father_vpn` 2, server: meli.masterdadeh.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 37c23ba9-1123-b1fc-978d-2ae157af8902, servername: 185.226.94.198, network: ws, ws-opts: {path: /, headers: {Host: 185.226.94.198}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: TEL;Father_vpn` 3, server: 216.24.57.1, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8c4604ef-749c-4b56-adf1-7da405002a21, servername: qyi.fqjd663.ggff.net, network: ws, ws-opts: {path: /, headers: {Host: qyi.fqjd663.ggff.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: TEL;Father_vpn` 4, server: Tapsi.ir, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: a171d29f-dd4a-4dea-8b8f-f11e4c710d9a, network: ws, ws-opts: {path: /cdn, headers: {Host: vp.movizdl.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,6 +486,9 @@ proxy-groups:
     type: select
     proxies:
       - TEL;Father_vpn`
+      - TEL;Father_vpn` 2
+      - TEL;Father_vpn` 3
+      - TEL;Father_vpn` 4
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -490,6 +496,9 @@ proxy-groups:
     tolerance: 50
     proxies:
       - TEL;Father_vpn`
+      - TEL;Father_vpn` 2
+      - TEL;Father_vpn` 3
+      - TEL;Father_vpn` 4
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -497,6 +506,9 @@ proxy-groups:
     tolerance: 50
     proxies:
       - TEL;Father_vpn`
+      - TEL;Father_vpn` 2
+      - TEL;Father_vpn` 3
+      - TEL;Father_vpn` 4
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -513,6 +525,9 @@ proxy-groups:
     interval: 600
     proxies:
       - TEL;Father_vpn`
+      - TEL;Father_vpn` 2
+      - TEL;Father_vpn` 3
+      - TEL;Father_vpn` 4
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -520,6 +535,9 @@ proxy-groups:
     interval: 600
     proxies:
       - TEL;Father_vpn`
+      - TEL;Father_vpn` 2
+      - TEL;Father_vpn` 3
+      - TEL;Father_vpn` 4
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -527,6 +545,9 @@ proxy-groups:
     interval: 600
     proxies:
       - TEL;Father_vpn`
+      - TEL;Father_vpn` 2
+      - TEL;Father_vpn` 3
+      - TEL;Father_vpn` 4
   - name: دانلود منیجر 📥
     type: select
     proxies:

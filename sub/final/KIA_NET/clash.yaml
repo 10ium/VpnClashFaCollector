@@ -465,10 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: کیانت, server: varzesh3.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 0d3ad8c0-eda2-4c7f-b356-7377c9fc56ae, network: ws, ws-opts: {path: /ws, headers: {Host: nobody.fasterspeed.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: کیانت۲, server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 6b70429e-a94a-43ce-9d9e-81ddd3d569d3, network: ws, ws-opts: {path: /, headers: {Host: vip.dijestbilty-en.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: کیانت۳, server: me.ciliko.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: b13d6475-07c5-3cfe-99c3-c0b8230672af, network: ws, ws-opts: {path: /, headers: {Host: me.ciliko.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: کیانت ۵`, server: 185.143.233.5, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b3f248c6-a96a-409a-9e13-9db0a3e7df52, servername: dn.8lack.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/chat?ed=128", headers: {Host: dn.8lack.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "[🇨🇦]", server: 104.20.6.134, port: 443, type: trojan, password: 8r%3C%5B9%27l6hAO%238ZQi, sni: Koma-YT.PAGeS.Dev, skip-cert-verify: false, network: ws, ws-opts: {path: /tr, headers: {Host: Koma-YT.PAGeS.Dev}}, udp: true, tfo: false}
+  - {name: "[🇨🇦]`", server: 104.19.229.21, port: 443, type: trojan, password: humanity, sni: www.creationlong.org, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org}}, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,30 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - کیانت
-      - کیانت۲
-      - کیانت۳
-      - کیانت ۵`
+      - "[🇨🇦]"
+      - "[🇨🇦]`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - کیانت
-      - کیانت۲
-      - کیانت۳
-      - کیانت ۵`
+      - "[🇨🇦]"
+      - "[🇨🇦]`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - کیانت
-      - کیانت۲
-      - کیانت۳
-      - کیانت ۵`
+      - "[🇨🇦]"
+      - "[🇨🇦]`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -524,30 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - کیانت
-      - کیانت۲
-      - کیانت۳
-      - کیانت ۵`
+      - "[🇨🇦]"
+      - "[🇨🇦]`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - کیانت
-      - کیانت۲
-      - کیانت۳
-      - کیانت ۵`
+      - "[🇨🇦]"
+      - "[🇨🇦]`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - کیانت
-      - کیانت۲
-      - کیانت۳
-      - کیانت ۵`
+      - "[🇨🇦]"
+      - "[🇨🇦]`"
   - name: دانلود منیجر 📥
     type: select
     proxies:

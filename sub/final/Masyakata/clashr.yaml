@@ -5,74 +5,60 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: US_6|2.9MB/s`, server: vpn-us-006.fastervpn.world, port: 443, type: hysteria2, ports: 443, password: qQe1z5kU8kN6SlKnDt9Ru3Qp, sni: vpn-us-006.fastervpn.world, skip-cert-verify: false, udp: true, tfo: false}
   - {name: https://t.me/Masyakata, server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 1f5358e8-f57c-44b8-9864-9c236672fbc8, network: ws, ws-opts: {path: /, headers: {Host: d.nsa03.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ❓Other_1|3.3MB/s, server: 162.159.45.207, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 388a6c57-87e7-420b-afe2-b3eb670fd7da, network: ws, ws-opts: {path: /, headers: {Host: vip.yaml7.ggff.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: SG_3|1.8MB/s, server: m.cnmjin.net, port: 16618, type: vmess, uuid: c3bb4d48-63db-439e-bb4b-a541729c4f72, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: b51d264b1d49f78bcc89624068d93405.mobgslb.tbcache.com}}, udp: true, tfo: false}
-  - {name: US_5|2.4MB/s, server: t.cnmjcn.cyou, port: 16648, type: vmess, uuid: c3bb4d48-63db-439e-bb4b-a541729c4f72, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: b51d264b1d49f78bcc89624068d93405.mobgslb.tbcache.com}}, udp: true, tfo: false}
+  - {name: meli.masterdadeh.ir:80, server: meli.masterdadeh.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 37c23ba9-1123-b1fc-978d-2ae157af8902, servername: 185.226.94.198, network: ws, ws-opts: {path: /, headers: {Host: 185.226.94.198}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Masyakata", server: game.khodavand.shop, port: 3031, type: vless, tls: true, packet-encoding: xudp, uuid: 8e7c005a-b90b-4b76-84ae-99bfeda2705f, host: game.khodavand.shop, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - US_6|2.9MB/s`
       - https://t.me/Masyakata
-      - ❓Other_1|3.3MB/s
-      - SG_3|1.8MB/s
-      - US_5|2.4MB/s
+      - meli.masterdadeh.ir:80
+      - "@Masyakata"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - US_6|2.9MB/s`
       - https://t.me/Masyakata
-      - ❓Other_1|3.3MB/s
-      - SG_3|1.8MB/s
-      - US_5|2.4MB/s
+      - meli.masterdadeh.ir:80
+      - "@Masyakata"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - US_6|2.9MB/s`
       - https://t.me/Masyakata
-      - ❓Other_1|3.3MB/s
-      - SG_3|1.8MB/s
-      - US_5|2.4MB/s
+      - meli.masterdadeh.ir:80
+      - "@Masyakata"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - US_6|2.9MB/s`
       - https://t.me/Masyakata
-      - ❓Other_1|3.3MB/s
-      - SG_3|1.8MB/s
-      - US_5|2.4MB/s
+      - meli.masterdadeh.ir:80
+      - "@Masyakata"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - US_6|2.9MB/s`
       - https://t.me/Masyakata
-      - ❓Other_1|3.3MB/s
-      - SG_3|1.8MB/s
-      - US_5|2.4MB/s
+      - meli.masterdadeh.ir:80
+      - "@Masyakata"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - US_6|2.9MB/s`
       - https://t.me/Masyakata
-      - ❓Other_1|3.3MB/s
-      - SG_3|1.8MB/s
-      - US_5|2.4MB/s
+      - meli.masterdadeh.ir:80
+      - "@Masyakata"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -100,11 +86,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - US_6|2.9MB/s`
       - https://t.me/Masyakata
-      - ❓Other_1|3.3MB/s
-      - SG_3|1.8MB/s
-      - US_5|2.4MB/s
+      - meli.masterdadeh.ir:80
+      - "@Masyakata"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
