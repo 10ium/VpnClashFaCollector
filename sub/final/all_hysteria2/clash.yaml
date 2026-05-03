@@ -465,9 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 19968 | ⚡️Telegram - t.me/SOSkeyNET, server: 45.81.19.251, port: 2087, type: hysteria2, ports: 2087, password: 2nsMXDvFMF, sni: web.rubika.ir, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 19966 | ⚡️Telegram - t.me/SOSkeyNET, server: 45.81.19.251, port: 443, type: hysteria2, ports: 443, password: 2nsMXDvFMF, sni: web.bale.ai, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@filembad`", server: 45.81.19.251, port: 443, type: hysteria2, ports: 443, password: DBUklcvOyH, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Hiddify_Nexttt 👈🪇 کانال تلگرامی ما", server: 45.81.19.251, port: 443, type: hysteria2, ports: 443, password: DBUklcvOyH, sni: web.bale.ai, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@Hiddify_Nexttt 👈🪇 کانال تلگرامی ما`", server: 45.81.19.251, port: 443, type: hysteria2, ports: 443, password: DBUklcvOyH, sni: web.bale.ai, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@SiNAVM کانال تلگرامی`", server: 45.81.19.251, port: 443, type: hysteria2, ports: 443, password: DBUklcvOyH, sni: web.bale.ai, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@filembad` 2", server: 45.81.19.251, port: 443, type: hysteria2, ports: 443, password: DBUklcvOyH, sni: web.bale.ai, skip-cert-verify: false, udp: true, tfo: false}
@@ -475,8 +474,10 @@ proxies:
   - {name: "@proxy_kafee", server: 45.81.19.251, port: 443, type: hysteria2, ports: 443, password: DBUklcvOyH, sni: web.bale.ai, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee 46`", server: 45.81.19.251, port: 443, type: hysteria2, ports: 443, password: DBUklcvOyH, sni: web.bale.ai, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee2`", server: 45.81.19.251, port: 443, type: hysteria2, ports: 443, password: DBUklcvOyH, sni: web.bale.ai, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee49`", server: 45.81.19.251, port: 443, type: hysteria2, ports: 443, password: DBUklcvOyH, sni: web.bale.ai, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 20070 | ⚡️Telegram - t.me/SOSkeyNET, server: 45.81.19.251, port: 443, type: hysteria2, ports: 443, password: DBUklcvOyH, sni: web.bale.ai, skip-cert-verify: false, udp: true, tfo: false}
   - {name: https://t.me/saministamm.`, server: 45.81.19.251, port: 443, type: hysteria2, ports: 443, password: DBUklcvOyH, sni: web.bale.ai, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 45.81.19.251:443, server: 45.81.19.251, port: 443, type: hysteria2, ports: 443, password: DBUklcvOyH, sni: web.bale.ai`, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -493,9 +494,8 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 19968 | ⚡️Telegram - t.me/SOSkeyNET
-      - 19966 | ⚡️Telegram - t.me/SOSkeyNET
       - "@filembad`"
+      - "@Hiddify_Nexttt 👈🪇 کانال تلگرامی ما"
       - "@Hiddify_Nexttt 👈🪇 کانال تلگرامی ما`"
       - "@SiNAVM کانال تلگرامی`"
       - "@filembad` 2"
@@ -503,17 +503,18 @@ proxy-groups:
       - "@proxy_kafee"
       - "@proxy_kafee 46`"
       - "@proxy_kafee2`"
+      - "@proxy_kafee49`"
       - 20070 | ⚡️Telegram - t.me/SOSkeyNET
       - https://t.me/saministamm.`
+      - 45.81.19.251:443
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 19968 | ⚡️Telegram - t.me/SOSkeyNET
-      - 19966 | ⚡️Telegram - t.me/SOSkeyNET
       - "@filembad`"
+      - "@Hiddify_Nexttt 👈🪇 کانال تلگرامی ما"
       - "@Hiddify_Nexttt 👈🪇 کانال تلگرامی ما`"
       - "@SiNAVM کانال تلگرامی`"
       - "@filembad` 2"
@@ -521,17 +522,18 @@ proxy-groups:
       - "@proxy_kafee"
       - "@proxy_kafee 46`"
       - "@proxy_kafee2`"
+      - "@proxy_kafee49`"
       - 20070 | ⚡️Telegram - t.me/SOSkeyNET
       - https://t.me/saministamm.`
+      - 45.81.19.251:443
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 19968 | ⚡️Telegram - t.me/SOSkeyNET
-      - 19966 | ⚡️Telegram - t.me/SOSkeyNET
       - "@filembad`"
+      - "@Hiddify_Nexttt 👈🪇 کانال تلگرامی ما"
       - "@Hiddify_Nexttt 👈🪇 کانال تلگرامی ما`"
       - "@SiNAVM کانال تلگرامی`"
       - "@filembad` 2"
@@ -539,8 +541,10 @@ proxy-groups:
       - "@proxy_kafee"
       - "@proxy_kafee 46`"
       - "@proxy_kafee2`"
+      - "@proxy_kafee49`"
       - 20070 | ⚡️Telegram - t.me/SOSkeyNET
       - https://t.me/saministamm.`
+      - 45.81.19.251:443
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -556,9 +560,8 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 19968 | ⚡️Telegram - t.me/SOSkeyNET
-      - 19966 | ⚡️Telegram - t.me/SOSkeyNET
       - "@filembad`"
+      - "@Hiddify_Nexttt 👈🪇 کانال تلگرامی ما"
       - "@Hiddify_Nexttt 👈🪇 کانال تلگرامی ما`"
       - "@SiNAVM کانال تلگرامی`"
       - "@filembad` 2"
@@ -566,17 +569,18 @@ proxy-groups:
       - "@proxy_kafee"
       - "@proxy_kafee 46`"
       - "@proxy_kafee2`"
+      - "@proxy_kafee49`"
       - 20070 | ⚡️Telegram - t.me/SOSkeyNET
       - https://t.me/saministamm.`
+      - 45.81.19.251:443
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 19968 | ⚡️Telegram - t.me/SOSkeyNET
-      - 19966 | ⚡️Telegram - t.me/SOSkeyNET
       - "@filembad`"
+      - "@Hiddify_Nexttt 👈🪇 کانال تلگرامی ما"
       - "@Hiddify_Nexttt 👈🪇 کانال تلگرامی ما`"
       - "@SiNAVM کانال تلگرامی`"
       - "@filembad` 2"
@@ -584,17 +588,18 @@ proxy-groups:
       - "@proxy_kafee"
       - "@proxy_kafee 46`"
       - "@proxy_kafee2`"
+      - "@proxy_kafee49`"
       - 20070 | ⚡️Telegram - t.me/SOSkeyNET
       - https://t.me/saministamm.`
+      - 45.81.19.251:443
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 19968 | ⚡️Telegram - t.me/SOSkeyNET
-      - 19966 | ⚡️Telegram - t.me/SOSkeyNET
       - "@filembad`"
+      - "@Hiddify_Nexttt 👈🪇 کانال تلگرامی ما"
       - "@Hiddify_Nexttt 👈🪇 کانال تلگرامی ما`"
       - "@SiNAVM کانال تلگرامی`"
       - "@filembad` 2"
@@ -602,8 +607,10 @@ proxy-groups:
       - "@proxy_kafee"
       - "@proxy_kafee 46`"
       - "@proxy_kafee2`"
+      - "@proxy_kafee49`"
       - 20070 | ⚡️Telegram - t.me/SOSkeyNET
       - https://t.me/saministamm.`
+      - 45.81.19.251:443
   - name: دانلود منیجر 📥
     type: select
     proxies:
