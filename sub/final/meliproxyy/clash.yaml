@@ -465,10 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@meliproxyy`", server: 104.20.6.134, port: 443, type: trojan, password: humanity, sni: www.multiplydose.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.multiplydose.com}}, udp: true, tfo: false}
-  - {name: "@meliproxyy", server: 104.20.6.134, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.jpmj.dev, network: ws, ws-opts: {path: /, headers: {Host: sni.jpmj.dev}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@meliproxyy 2", server: 104.20.6.134, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.indevs.in, network: ws, ws-opts: {path: /, headers: {Host: sni.111000.indevs.in}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@meliproxyy 3", server: 104.20.6.134, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.indevs.in, network: ws, ws-opts: {path: /, headers: {Host: sni.111000.indevs.in}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@meliproxyy`", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: f57c2196-4c99-43c3-95c8-f9a0cf941f98, network: ws, ws-opts: {path: /, headers: {Host: newbalance.zivaroid.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,9 +483,6 @@ proxy-groups:
     type: select
     proxies:
       - "@meliproxyy`"
-      - "@meliproxyy"
-      - "@meliproxyy 2"
-      - "@meliproxyy 3"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -496,9 +490,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@meliproxyy`"
-      - "@meliproxyy"
-      - "@meliproxyy 2"
-      - "@meliproxyy 3"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -506,9 +497,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@meliproxyy`"
-      - "@meliproxyy"
-      - "@meliproxyy 2"
-      - "@meliproxyy 3"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -525,9 +513,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@meliproxyy`"
-      - "@meliproxyy"
-      - "@meliproxyy 2"
-      - "@meliproxyy 3"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -535,9 +520,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@meliproxyy`"
-      - "@meliproxyy"
-      - "@meliproxyy 2"
-      - "@meliproxyy 3"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -545,9 +527,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@meliproxyy`"
-      - "@meliproxyy"
-      - "@meliproxyy 2"
-      - "@meliproxyy 3"
   - name: دانلود منیجر 📥
     type: select
     proxies:
