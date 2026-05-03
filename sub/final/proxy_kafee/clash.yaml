@@ -465,12 +465,14 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: "@proxy_kafee", server: 45.81.19.251, port: 443, type: hysteria2, ports: 443, password: DBUklcvOyH, sni: web.bale.ai, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee 46`", server: 45.81.19.251, port: 443, type: hysteria2, ports: 443, password: DBUklcvOyH, sni: web.bale.ai, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee2`", server: 45.81.19.251, port: 443, type: hysteria2, ports: 443, password: DBUklcvOyH, sni: web.bale.ai, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee`", server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 1f5358e8-f57c-44b8-9864-9c236672fbc8, network: ws, ws-opts: {path: /, headers: {Host: d.nsa03.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee", server: trex.nahidapp.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 75cee306-7440-4e09-b162-30b456ae45d2, servername: trex.nahidapp.com, network: ws, ws-opts: {path: /vless-ws, headers: {Host: trex.nahidapp.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee 2", server: trex.nahidapp.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 75cee306-7440-4e09-b162-30b456ae45d2, servername: trex.nahidapp.com, network: ws, ws-opts: {path: /vless-ws, headers: {Host: trex.nahidapp.com}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee1", server: 216.24.57.1, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8c4604ef-749c-4b56-adf1-7da405002a21, servername: qyi.fqjd663.ggff.net, network: ws, ws-opts: {path: /, headers: {Host: qyi.fqjd663.ggff.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee 2", server: trex.nahidapp.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d3e4df67-8ab6-455e-912a-933f5b9b0608, servername: trex.nahidapp.com, network: ws, ws-opts: {path: /vless-ws, headers: {Host: trex.nahidapp.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee 3", server: cf.comecloud.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e8e1e1fc-83e6-4de3-9e08-7d77521e67b4, servername: Clu.servert1op.ir, alpn: [h3%2Ch2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/test?ed=2560", headers: {Host: Clu.servert1op.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee 3", server: trex.nahidapp.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d3e4df67-8ab6-455e-912a-933f5b9b0608, servername: trex.nahidapp.com, network: ws, ws-opts: {path: /vless-ws, headers: {Host: trex.nahidapp.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee 4", server: cf.comecloud.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e8e1e1fc-83e6-4de3-9e08-7d77521e67b4, servername: Clu.servert1op.ir, alpn: [h3%2Ch2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/test?ed=2560", headers: {Host: Clu.servert1op.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,36 +489,42 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - "@proxy_kafee"
+      - "@proxy_kafee 46`"
       - "@proxy_kafee2`"
       - "@proxy_kafee`"
-      - "@proxy_kafee"
-      - "@proxy_kafee1"
       - "@proxy_kafee 2"
+      - "@proxy_kafee1"
       - "@proxy_kafee 3"
+      - "@proxy_kafee 4"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
+      - "@proxy_kafee"
+      - "@proxy_kafee 46`"
       - "@proxy_kafee2`"
       - "@proxy_kafee`"
-      - "@proxy_kafee"
-      - "@proxy_kafee1"
       - "@proxy_kafee 2"
+      - "@proxy_kafee1"
       - "@proxy_kafee 3"
+      - "@proxy_kafee 4"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
+      - "@proxy_kafee"
+      - "@proxy_kafee 46`"
       - "@proxy_kafee2`"
       - "@proxy_kafee`"
-      - "@proxy_kafee"
-      - "@proxy_kafee1"
       - "@proxy_kafee 2"
+      - "@proxy_kafee1"
       - "@proxy_kafee 3"
+      - "@proxy_kafee 4"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -532,36 +540,42 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@proxy_kafee"
+      - "@proxy_kafee 46`"
       - "@proxy_kafee2`"
       - "@proxy_kafee`"
-      - "@proxy_kafee"
-      - "@proxy_kafee1"
       - "@proxy_kafee 2"
+      - "@proxy_kafee1"
       - "@proxy_kafee 3"
+      - "@proxy_kafee 4"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@proxy_kafee"
+      - "@proxy_kafee 46`"
       - "@proxy_kafee2`"
       - "@proxy_kafee`"
-      - "@proxy_kafee"
-      - "@proxy_kafee1"
       - "@proxy_kafee 2"
+      - "@proxy_kafee1"
       - "@proxy_kafee 3"
+      - "@proxy_kafee 4"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@proxy_kafee"
+      - "@proxy_kafee 46`"
       - "@proxy_kafee2`"
       - "@proxy_kafee`"
-      - "@proxy_kafee"
-      - "@proxy_kafee1"
       - "@proxy_kafee 2"
+      - "@proxy_kafee1"
       - "@proxy_kafee 3"
+      - "@proxy_kafee 4"
   - name: دانلود منیجر 📥
     type: select
     proxies:

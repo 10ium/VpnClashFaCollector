@@ -6,7 +6,6 @@ log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
   - {name: "%]wolfNET-4", server: 178.239.145.21, port: 101, type: vless, tls: true, packet-encoding: xudp, uuid: 8e348ebd-1258-4d83-9721-81f922d314e9, host: mci.neteaderType=htp, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "dark--5G-12548179-4.86GB📊-29D,11H⏳", server: freak.gexar.top, port: 2095, type: vless, tls: true, packet-encoding: xudp, uuid: 9f5cf197-ac43-4fc2-96eb-b880d02002de, network: ws, ws-opts: {path: /, headers: {Host: freak.gexar.top}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -14,7 +13,6 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - "%]wolfNET-4"
-      - dark--5G-12548179-4.86GB📊-29D,11H⏳
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -22,7 +20,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "%]wolfNET-4"
-      - dark--5G-12548179-4.86GB📊-29D,11H⏳
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -30,28 +27,24 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - "%]wolfNET-4"
-      - dark--5G-12548179-4.86GB📊-29D,11H⏳
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "%]wolfNET-4"
-      - dark--5G-12548179-4.86GB📊-29D,11H⏳
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - "%]wolfNET-4"
-      - dark--5G-12548179-4.86GB📊-29D,11H⏳
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "%]wolfNET-4"
-      - dark--5G-12548179-4.86GB📊-29D,11H⏳
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -80,7 +73,6 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - "%]wolfNET-4"
-      - dark--5G-12548179-4.86GB📊-29D,11H⏳
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

@@ -465,12 +465,16 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: r3mrcg0011499tl.cybervena.com:50099, server: r3mrcg0011499tl.cybervena.com, port: 50099, type: ss, cipher: chacha20-ietf-poly1305, password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4, udp: true, tfo: false}
+  - {name: r3mrcg001286ek2.cybervena.com:50099, server: r3mrcg001286ek2.cybervena.com, port: 50099, type: ss, cipher: chacha20-ietf-poly1305, password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4, udp: true, tfo: false}
   - {name: r3mrcg007117fb8.cybervena.com:50099, server: r3mrcg007117fb8.cybervena.com, port: 50099, type: ss, cipher: chacha20-ietf-poly1305, password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4, udp: true, tfo: false}
   - {name: 108.181.58.239:8388, server: 108.181.58.239, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: CJmTCCx7Ltud, udp: true, tfo: false}
   - {name: admin.c1.webramz.co:443, server: admin.c1.webramz.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: W74XFALLLuw6m5IA, udp: true, tfo: false}
+  - {name: 46.17.42.114:40129, server: 46.17.42.114, port: 40129, type: ss, cipher: aes-256-gcm, password: 7ae4e68cf77f6089, udp: true, tfo: false}
+  - {name: 195.58.49.9:40901, server: 195.58.49.9, port: 40901, type: ss, cipher: aes-256-gcm, password: 9f3d1a6d31468599, udp: true, tfo: false}
+  - {name: 45.140.169.216:40412, server: 45.140.169.216, port: 40412, type: ss, cipher: aes-256-gcm, password: c5fcdf7829112cb4, udp: true, tfo: false}
+  - {name: 🇸🇬 svip-sg.xiaobaivpn.icu:28815, server: svip-sg.xiaobaivpn.icu, port: 28815, type: trojan, password: 39edcbab-49dd-4326-9f77-305c2e45d45c, sni: svip-sg.xiaobaivpn.icu, skip-cert-verify: false, udp: true, tfo: false}
   - {name: hl-freedom-1.undef.network:443, server: hl-freedom-1.undef.network, port: 443, type: trojan, password: JaFKnqNcvnBT63t3rquidGsln, sni: HL-FREEDOM-1.UNDEF.NETWORK, skip-cert-verify: false, network: ws, ws-opts: {path: "%2Ff2fc2a1f", headers: {Host: HL-FREEDOM-1.UNDEF.NETWORK}}, udp: true, tfo: false}
-  - {name: 🇬🇧 uk-1.fishchipsexpress.com:443, server: uk-1.fishchipsexpress.com, port: 443, type: trojan, password: R8ufkVqwRZAgtwjyrA, sni: uk-1.fishchipsexpress.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 170.168.102.234:2083, server: 170.168.102.234, port: 2083, type: trojan, password: q2jXRWncMA7pQren_VjQKhSQfoBWK_, sni: xo.e0f.cx, skip-cert-verify: false, network: ws, ws-opts: {path: /trojan-ws, headers: {Host: xo.e0f.cx}}, udp: true, tfo: false}
   - {name: 35.180.146.148:22222, server: 35.180.146.148, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 170.168.103.156:8081, server: 170.168.103.156, port: 8081, type: vless, tls: true, packet-encoding: xudp, uuid: 89960e91-7f08-401d-98b1-60a8ca601c6f, host: www.speedtest.net, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 50.228.203.26:443, server: 50.228.203.26, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 981fca81-5be1-41f8-ac9b-d138e8109943, servername: babayaga-6i7.pages.dev, network: ws, ws-opts: {path: "/?ed=2560&Telegram🇨🇳@WangCai2", headers: {Host: babayaga-6i7.pages.dev}}, skip-cert-verify: false, udp: true, tfo: false}
@@ -492,12 +496,16 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - r3mrcg0011499tl.cybervena.com:50099
+      - r3mrcg001286ek2.cybervena.com:50099
       - r3mrcg007117fb8.cybervena.com:50099
       - 108.181.58.239:8388
       - admin.c1.webramz.co:443
+      - 46.17.42.114:40129
+      - 195.58.49.9:40901
+      - 45.140.169.216:40412
+      - 🇸🇬 svip-sg.xiaobaivpn.icu:28815
       - hl-freedom-1.undef.network:443
-      - 🇬🇧 uk-1.fishchipsexpress.com:443
-      - 170.168.102.234:2083
       - 35.180.146.148:22222
       - 170.168.103.156:8081
       - 50.228.203.26:443
@@ -509,12 +517,16 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - r3mrcg0011499tl.cybervena.com:50099
+      - r3mrcg001286ek2.cybervena.com:50099
       - r3mrcg007117fb8.cybervena.com:50099
       - 108.181.58.239:8388
       - admin.c1.webramz.co:443
+      - 46.17.42.114:40129
+      - 195.58.49.9:40901
+      - 45.140.169.216:40412
+      - 🇸🇬 svip-sg.xiaobaivpn.icu:28815
       - hl-freedom-1.undef.network:443
-      - 🇬🇧 uk-1.fishchipsexpress.com:443
-      - 170.168.102.234:2083
       - 35.180.146.148:22222
       - 170.168.103.156:8081
       - 50.228.203.26:443
@@ -526,12 +538,16 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - r3mrcg0011499tl.cybervena.com:50099
+      - r3mrcg001286ek2.cybervena.com:50099
       - r3mrcg007117fb8.cybervena.com:50099
       - 108.181.58.239:8388
       - admin.c1.webramz.co:443
+      - 46.17.42.114:40129
+      - 195.58.49.9:40901
+      - 45.140.169.216:40412
+      - 🇸🇬 svip-sg.xiaobaivpn.icu:28815
       - hl-freedom-1.undef.network:443
-      - 🇬🇧 uk-1.fishchipsexpress.com:443
-      - 170.168.102.234:2083
       - 35.180.146.148:22222
       - 170.168.103.156:8081
       - 50.228.203.26:443
@@ -552,12 +568,16 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - r3mrcg0011499tl.cybervena.com:50099
+      - r3mrcg001286ek2.cybervena.com:50099
       - r3mrcg007117fb8.cybervena.com:50099
       - 108.181.58.239:8388
       - admin.c1.webramz.co:443
+      - 46.17.42.114:40129
+      - 195.58.49.9:40901
+      - 45.140.169.216:40412
+      - 🇸🇬 svip-sg.xiaobaivpn.icu:28815
       - hl-freedom-1.undef.network:443
-      - 🇬🇧 uk-1.fishchipsexpress.com:443
-      - 170.168.102.234:2083
       - 35.180.146.148:22222
       - 170.168.103.156:8081
       - 50.228.203.26:443
@@ -569,12 +589,16 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - r3mrcg0011499tl.cybervena.com:50099
+      - r3mrcg001286ek2.cybervena.com:50099
       - r3mrcg007117fb8.cybervena.com:50099
       - 108.181.58.239:8388
       - admin.c1.webramz.co:443
+      - 46.17.42.114:40129
+      - 195.58.49.9:40901
+      - 45.140.169.216:40412
+      - 🇸🇬 svip-sg.xiaobaivpn.icu:28815
       - hl-freedom-1.undef.network:443
-      - 🇬🇧 uk-1.fishchipsexpress.com:443
-      - 170.168.102.234:2083
       - 35.180.146.148:22222
       - 170.168.103.156:8081
       - 50.228.203.26:443
@@ -586,12 +610,16 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - r3mrcg0011499tl.cybervena.com:50099
+      - r3mrcg001286ek2.cybervena.com:50099
       - r3mrcg007117fb8.cybervena.com:50099
       - 108.181.58.239:8388
       - admin.c1.webramz.co:443
+      - 46.17.42.114:40129
+      - 195.58.49.9:40901
+      - 45.140.169.216:40412
+      - 🇸🇬 svip-sg.xiaobaivpn.icu:28815
       - hl-freedom-1.undef.network:443
-      - 🇬🇧 uk-1.fishchipsexpress.com:443
-      - 170.168.102.234:2083
       - 35.180.146.148:22222
       - 170.168.103.156:8081
       - 50.228.203.26:443
