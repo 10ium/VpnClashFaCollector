@@ -465,6 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: 🇨🇦 zone.ca.f2zone.ir:17759, server: zone.ca.f2zone.ir, port: 17759, type: vless, tls: true, packet-encoding: xudp, uuid: 3cbad916-d882-4773-8dfb-15564f2d29fe, host: telewebion.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "%]wolfNET-4", server: 178.239.145.21, port: 101, type: vless, tls: true, packet-encoding: xudp, uuid: 8e348ebd-1258-4d83-9721-81f922d314e9, host: mci.neteaderType=htp, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -482,6 +483,7 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - 🇨🇦 zone.ca.f2zone.ir:17759
       - "%]wolfNET-4"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -489,6 +491,7 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - 🇨🇦 zone.ca.f2zone.ir:17759
       - "%]wolfNET-4"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -496,6 +499,7 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - 🇨🇦 zone.ca.f2zone.ir:17759
       - "%]wolfNET-4"
   - name: اتصال پایدار 🔗
     type: url-test
@@ -512,6 +516,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 🇨🇦 zone.ca.f2zone.ir:17759
       - "%]wolfNET-4"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -519,6 +524,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 🇨🇦 zone.ca.f2zone.ir:17759
       - "%]wolfNET-4"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -526,6 +532,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 🇨🇦 zone.ca.f2zone.ir:17759
       - "%]wolfNET-4"
   - name: دانلود منیجر 📥
     type: select

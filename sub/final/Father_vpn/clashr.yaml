@@ -5,102 +5,60 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: TEL;Father_vpn, server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 2c3a3169-784f-4fde-8301-c1b4a0dcd738, network: ws, ws-opts: {path: /, headers: {Host: movie.slmastractor.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: TEL;Father_vpn 2, server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 465c319b-6963-4e61-a3ab-2bd407947fbf, network: ws, ws-opts: {path: /, headers: {Host: server-c0053a1c-f7bc-4c77-860c-1fbbcdec175b.ir-thr-si1.arvancompute.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: TEL;Father_vpn`, server: snapp.ir, port: 2082, type: vless, tls: true, packet-encoding: xudp, uuid: 48028784-4999-4447-8dbd-56a551f8dffa, network: ws, ws-opts: {path: /, headers: {Host: iran.zebra-license.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: TEL;Father_vpn` 2, server: Ikco.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 5b472cca-4187-43bd-855b-d7a9428df8e6, network: ws, ws-opts: {path: /cdn, headers: {Host: cp.movizdl.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: TEL;Father_vpn` 3, server: Ikco.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 73805cfb-4535-4797-9ad4-9e13c8dd5b3d, network: ws, ws-opts: {path: /cdn, headers: {Host: cp.movizdl.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: TEL;Father_vpn` 4, server: Ikco.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 7b99dbaf-8259-4e95-97ee-17ea6e085ded, network: ws, ws-opts: {path: /cdn, headers: {Host: cp.movizdl.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: TEL;Father_vpn 3, server: varzesh3.com, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: dabf84d3-95b5-4c56-847b-654009175a83, network: ws, ws-opts: {path: /, headers: {Host: ma.nexoratechcenter.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: TEL;Father_vpn` 5, server: varzesh3.com, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: f21f7ade-1c2c-465c-b443-a7ae8929db65, network: ws, ws-opts: {path: /, headers: {Host: ma.nexoratechcenter.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: TEL;Father_vpn 4, server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: f46747a6-6797-48c3-9546-9914e0d13f75, network: ws, ws-opts: {path: /, headers: {Host: movie.slmastractor.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: TEL;Father_vpn`, server: Ikco.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 5b472cca-4187-43bd-855b-d7a9428df8e6, network: ws, ws-opts: {path: /cdn, headers: {Host: cp.movizdl.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: TEL;Father_vpn` 2, server: Ikco.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 73805cfb-4535-4797-9ad4-9e13c8dd5b3d, network: ws, ws-opts: {path: /cdn, headers: {Host: cp.movizdl.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: TEL;Father_vpn` 3, server: Ikco.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 7b99dbaf-8259-4e95-97ee-17ea6e085ded, network: ws, ws-opts: {path: /cdn, headers: {Host: cp.movizdl.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - TEL;Father_vpn
-      - TEL;Father_vpn 2
       - TEL;Father_vpn`
       - TEL;Father_vpn` 2
       - TEL;Father_vpn` 3
-      - TEL;Father_vpn` 4
-      - TEL;Father_vpn 3
-      - TEL;Father_vpn` 5
-      - TEL;Father_vpn 4
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - TEL;Father_vpn
-      - TEL;Father_vpn 2
       - TEL;Father_vpn`
       - TEL;Father_vpn` 2
       - TEL;Father_vpn` 3
-      - TEL;Father_vpn` 4
-      - TEL;Father_vpn 3
-      - TEL;Father_vpn` 5
-      - TEL;Father_vpn 4
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - TEL;Father_vpn
-      - TEL;Father_vpn 2
       - TEL;Father_vpn`
       - TEL;Father_vpn` 2
       - TEL;Father_vpn` 3
-      - TEL;Father_vpn` 4
-      - TEL;Father_vpn 3
-      - TEL;Father_vpn` 5
-      - TEL;Father_vpn 4
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - TEL;Father_vpn
-      - TEL;Father_vpn 2
       - TEL;Father_vpn`
       - TEL;Father_vpn` 2
       - TEL;Father_vpn` 3
-      - TEL;Father_vpn` 4
-      - TEL;Father_vpn 3
-      - TEL;Father_vpn` 5
-      - TEL;Father_vpn 4
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - TEL;Father_vpn
-      - TEL;Father_vpn 2
       - TEL;Father_vpn`
       - TEL;Father_vpn` 2
       - TEL;Father_vpn` 3
-      - TEL;Father_vpn` 4
-      - TEL;Father_vpn 3
-      - TEL;Father_vpn` 5
-      - TEL;Father_vpn 4
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - TEL;Father_vpn
-      - TEL;Father_vpn 2
       - TEL;Father_vpn`
       - TEL;Father_vpn` 2
       - TEL;Father_vpn` 3
-      - TEL;Father_vpn` 4
-      - TEL;Father_vpn 3
-      - TEL;Father_vpn` 5
-      - TEL;Father_vpn 4
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -128,15 +86,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - TEL;Father_vpn
-      - TEL;Father_vpn 2
       - TEL;Father_vpn`
       - TEL;Father_vpn` 2
       - TEL;Father_vpn` 3
-      - TEL;Father_vpn` 4
-      - TEL;Father_vpn 3
-      - TEL;Father_vpn` 5
-      - TEL;Father_vpn 4
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

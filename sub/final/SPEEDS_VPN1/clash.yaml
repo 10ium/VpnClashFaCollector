@@ -465,7 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`", server: 185.143.233.122, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 865b827a-c0a6-4624-a452-db3ed0c141ea, network: ws, ws-opts: {path: /, headers: {Host: ua1.kianorbit.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@speeds_vpn-کانال-پشتیبان-جوین-بشید`", server: order15.virgool.best, port: 55015, type: vless, tls: true, packet-encoding: xudp, uuid: e638bd82-f0a4-4f74-a6bb-28ab8f1c7aba, servername: www.digikala.com, host: www.digikala.com, path: /, reality-opts: {public-key: vxdmULi_cO7dha2aQnsjSViARO15hvI9HWyo0pVPlkQ, short-id: c385}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@speeds_vpn-کانال-پشتیبان-جوین-بشید` 2", server: i-love-iran.amlakayuni.ir, port: 2087, type: vless, tls: true, packet-encoding: xudp, uuid: eef82e78-5a10-ac23-747b-43569143c696, servername: i-love-iran.amlakayuni.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/?ed=2087", headers: {Host: i-love-iran.amlakayuni.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`"
+      - "@speeds_vpn-کانال-پشتیبان-جوین-بشید`"
+      - "@speeds_vpn-کانال-پشتیبان-جوین-بشید` 2"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`"
+      - "@speeds_vpn-کانال-پشتیبان-جوین-بشید`"
+      - "@speeds_vpn-کانال-پشتیبان-جوین-بشید` 2"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`"
+      - "@speeds_vpn-کانال-پشتیبان-جوین-بشید`"
+      - "@speeds_vpn-کانال-پشتیبان-جوین-بشید` 2"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`"
+      - "@speeds_vpn-کانال-پشتیبان-جوین-بشید`"
+      - "@speeds_vpn-کانال-پشتیبان-جوین-بشید` 2"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`"
+      - "@speeds_vpn-کانال-پشتیبان-جوین-بشید`"
+      - "@speeds_vpn-کانال-پشتیبان-جوین-بشید` 2"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`"
+      - "@speeds_vpn-کانال-پشتیبان-جوین-بشید`"
+      - "@speeds_vpn-کانال-پشتیبان-جوین-بشید` 2"
   - name: دانلود منیجر 📥
     type: select
     proxies:

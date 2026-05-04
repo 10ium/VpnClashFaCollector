@@ -465,8 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: sos 13@DarcProxy, server: line2.gymplusplus.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 21d8154d-04eb-4877-8195-f03d758880fc, network: ws, ws-opts: {path: /, headers: {Host: line2.gymplusplus.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: SAS12@DarcProxy, server: line2.gymplusplus.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 76e05632-9c29-47f7-86d9-511c2aacd1e7, network: ws, ws-opts: {path: /, headers: {Host: line2.gymplusplus.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@DarcProxy tarkib 1", server: varzesh3.com, port: 2082, type: vless, tls: true, packet-encoding: xudp, uuid: b2ad7f3a-e844-4630-8200-3f4af5c3a5c2, network: ws, ws-opts: {path: /, headers: {Host: snappp.khanumjan.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@DarcProxy tarkib 2\ufeff`", server: varzesh3.com, port: 2082, type: vless, tls: true, packet-encoding: xudp, uuid: bc6dd5e1-5e3a-408d-a936-f6d64bac65c1, network: ws, ws-opts: {path: /, headers: {Host: snappp.khanumjan.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - sos 13@DarcProxy
-      - SAS12@DarcProxy
+      - "@DarcProxy tarkib 1"
+      - "@DarcProxy tarkib 2\ufeff`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - sos 13@DarcProxy
-      - SAS12@DarcProxy
+      - "@DarcProxy tarkib 1"
+      - "@DarcProxy tarkib 2\ufeff`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - sos 13@DarcProxy
-      - SAS12@DarcProxy
+      - "@DarcProxy tarkib 1"
+      - "@DarcProxy tarkib 2\ufeff`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - sos 13@DarcProxy
-      - SAS12@DarcProxy
+      - "@DarcProxy tarkib 1"
+      - "@DarcProxy tarkib 2\ufeff`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - sos 13@DarcProxy
-      - SAS12@DarcProxy
+      - "@DarcProxy tarkib 1"
+      - "@DarcProxy tarkib 2\ufeff`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - sos 13@DarcProxy
-      - SAS12@DarcProxy
+      - "@DarcProxy tarkib 1"
+      - "@DarcProxy tarkib 2\ufeff`"
   - name: دانلود منیجر 📥
     type: select
     proxies:
