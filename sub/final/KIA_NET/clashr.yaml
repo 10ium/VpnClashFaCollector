@@ -5,53 +5,46 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "[🇨🇦]", server: 104.20.6.134, port: 443, type: trojan, password: 8r%3C%5B9%27l6hAO%238ZQi, sni: Koma-YT.PAGeS.Dev, skip-cert-verify: false, network: ws, ws-opts: {path: /tr, headers: {Host: Koma-YT.PAGeS.Dev}}, udp: true, tfo: false}
-  - {name: "[🇨🇦]`", server: 104.19.229.21, port: 443, type: trojan, password: humanity, sni: www.creationlong.org, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org}}, udp: true, tfo: false}
+  - {name: "@Slip_Net  چنل`", server: 185.143.233.122, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: c09816d1-9b53-4e0d-85a8-9def477121ab, network: ws, ws-opts: {path: /ws, headers: {Host: cdnisfucka.drnimaamini.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "[🇨🇦]"
-      - "[🇨🇦]`"
+      - "@Slip_Net  چنل`"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "[🇨🇦]"
-      - "[🇨🇦]`"
+      - "@Slip_Net  چنل`"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "[🇨🇦]"
-      - "[🇨🇦]`"
+      - "@Slip_Net  چنل`"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "[🇨🇦]"
-      - "[🇨🇦]`"
+      - "@Slip_Net  چنل`"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "[🇨🇦]"
-      - "[🇨🇦]`"
+      - "@Slip_Net  چنل`"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "[🇨🇦]"
-      - "[🇨🇦]`"
+      - "@Slip_Net  چنل`"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -79,8 +72,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "[🇨🇦]"
-      - "[🇨🇦]`"
+      - "@Slip_Net  چنل`"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

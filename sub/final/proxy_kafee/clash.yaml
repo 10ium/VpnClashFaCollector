@@ -465,16 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@proxy_kafee1 | ترکیب با سایفون", server: 45.81.19.251, port: 443, type: hysteria2, ports: 443, password: DBUklcvOyH, sni: web.bale.ai, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee2", server: 45.81.19.251, port: 443, type: hysteria2, ports: 443, password: DBUklcvOyH, sni: web.bale.ai, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee3`", server: 45.81.19.251, port: 443, type: hysteria2, ports: 443, password: DBUklcvOyH, sni: web.bale.ai, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee1", server: x.kishonline.online, port: 443, type: hysteria2, ports: 443, password: Fa3JN012u2, obfs: salamander, obfs-password: kish-data, sni: x.kishonline.online, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: proxy_kafee50`, server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 0407e456-1ada-43dd-afb4-78fc6b4a99e7, network: ws, ws-opts: {path: "/?ed=2080", headers: {Host: 1.jojo.avenflow.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee`", server: 185.143.234.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 469b6631-f0ab-4ad7-93af-869dd32535e3, network: ws, ws-opts: {path: /, headers: {Host: al1.apicallminecrafegame.online}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee", server: president.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 469b6631-f0ab-4ad7-93af-869dd32535e3, network: ws, ws-opts: {path: /, headers: {Host: al1.apicallminecrafegame.online}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee1 2", server: 216.24.57.1, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8c4604ef-749c-4b56-adf1-7da405002a21, servername: qyi.fqjd663.ggff.net, network: ws, ws-opts: {path: /, headers: {Host: qyi.fqjd663.ggff.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee2 | ترکیب با سایفون", server: 185.143.234.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: a3f3a69a-1468-43f3-9f7f-11c05d183dc6, network: ws, ws-opts: {path: /, headers: {Host: al1.apicallminecrafegame.online}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee | ترکیب با سایفون", server: i-love-iran.amlakayuni.ir, port: 2087, type: vless, tls: true, packet-encoding: xudp, uuid: eef82e78-5a10-ac23-747b-43569143c696, servername: i-love-iran.amlakayuni.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/?ed=2087", headers: {Host: i-love-iran.amlakayuni.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee2", server: vitallife.gg, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 1113d596-587f-4553-b276-0a288c88b6b9, servername: vitallife.gg, alpn: [http%2F1.1], network: ws, ws-opts: {path: /wp-content/cachecache, headers: {Host: vitallife.gg}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee3", server: vitallife.gg, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 1113d596-587f-4553-b276-0a288c88b6b9, servername: vitallife.gg, alpn: [http%2F1.1], network: ws, ws-opts: {path: /wp-content/cachecache, headers: {Host: vitallife.gg}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee3`", server: jobset.sigs.k8s.io, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: Telegram-Parsashonam, servername: jobset.sigs.k8s.io, alpn: [h2%2Chttp%2F1.1], host: jobset.sigs.k8s.io, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee1`", server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: c7784e78-ad09-4890-92b7-6feb6742b6b9, network: ws, ws-opts: {path: /ws-dl-echovps, headers: {Host: dl.echovps.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee", server: snapp.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: e05ad0d3-5bf0-463d-9ba2-817680c6f895, network: ws, ws-opts: {path: /, headers: {Host: simorgh.darerio.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -491,48 +486,33 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@proxy_kafee1 | ترکیب با سایفون"
       - "@proxy_kafee2"
+      - "@proxy_kafee3"
       - "@proxy_kafee3`"
-      - "@proxy_kafee1"
-      - proxy_kafee50`
-      - "@proxy_kafee`"
+      - "@proxy_kafee1`"
       - "@proxy_kafee"
-      - "@proxy_kafee1 2"
-      - "@proxy_kafee2 | ترکیب با سایفون"
-      - "@proxy_kafee | ترکیب با سایفون"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@proxy_kafee1 | ترکیب با سایفون"
       - "@proxy_kafee2"
+      - "@proxy_kafee3"
       - "@proxy_kafee3`"
-      - "@proxy_kafee1"
-      - proxy_kafee50`
-      - "@proxy_kafee`"
+      - "@proxy_kafee1`"
       - "@proxy_kafee"
-      - "@proxy_kafee1 2"
-      - "@proxy_kafee2 | ترکیب با سایفون"
-      - "@proxy_kafee | ترکیب با سایفون"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@proxy_kafee1 | ترکیب با سایفون"
       - "@proxy_kafee2"
+      - "@proxy_kafee3"
       - "@proxy_kafee3`"
-      - "@proxy_kafee1"
-      - proxy_kafee50`
-      - "@proxy_kafee`"
+      - "@proxy_kafee1`"
       - "@proxy_kafee"
-      - "@proxy_kafee1 2"
-      - "@proxy_kafee2 | ترکیب با سایفون"
-      - "@proxy_kafee | ترکیب با سایفون"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -548,48 +528,33 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@proxy_kafee1 | ترکیب با سایفون"
       - "@proxy_kafee2"
+      - "@proxy_kafee3"
       - "@proxy_kafee3`"
-      - "@proxy_kafee1"
-      - proxy_kafee50`
-      - "@proxy_kafee`"
+      - "@proxy_kafee1`"
       - "@proxy_kafee"
-      - "@proxy_kafee1 2"
-      - "@proxy_kafee2 | ترکیب با سایفون"
-      - "@proxy_kafee | ترکیب با سایفون"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@proxy_kafee1 | ترکیب با سایفون"
       - "@proxy_kafee2"
+      - "@proxy_kafee3"
       - "@proxy_kafee3`"
-      - "@proxy_kafee1"
-      - proxy_kafee50`
-      - "@proxy_kafee`"
+      - "@proxy_kafee1`"
       - "@proxy_kafee"
-      - "@proxy_kafee1 2"
-      - "@proxy_kafee2 | ترکیب با سایفون"
-      - "@proxy_kafee | ترکیب با سایفون"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@proxy_kafee1 | ترکیب با سایفون"
       - "@proxy_kafee2"
+      - "@proxy_kafee3"
       - "@proxy_kafee3`"
-      - "@proxy_kafee1"
-      - proxy_kafee50`
-      - "@proxy_kafee`"
+      - "@proxy_kafee1`"
       - "@proxy_kafee"
-      - "@proxy_kafee1 2"
-      - "@proxy_kafee2 | ترکیب با سایفون"
-      - "@proxy_kafee | ترکیب با سایفون"
   - name: دانلود منیجر 📥
     type: select
     proxies:

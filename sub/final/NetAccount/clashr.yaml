@@ -5,13 +5,17 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: NetAccount`, server: 13.35.196.67, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 78e1c47b-d2d2-4908-ad59-687d4e638ad0, servername: atoll.pashmparty.fun, alpn: [http%2F1.1], network: ws, ws-opts: {path: /zaou8XGhXp3dJkOw9QJ1mxpndqC, headers: {Host: atoll.pashmparty.fun}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "Telegram: @@NetAccount ⚡ JOIN`", server: vitallife.gg, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 1113d596-587f-4553-b276-0a288c88b6b9, servername: vitallife.gg, alpn: [http%2F1.1], network: ws, ws-opts: {path: /wp-content/cachecache, headers: {Host: vitallife.gg}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: NetAccount, server: 185.143.233.5, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: 9f6979f5-fec9-4f40-b5f9-15dde47c6b91, network: ws, ws-opts: {path: /, headers: {Host: cdn.sesrsa.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: NetAccount`, server: 185.143.233.122, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: c09816d1-9b53-4e0d-85a8-9def477121ab, network: ws, ws-opts: {path: /ws, headers: {Host: cdnisfucka.drnimaamini.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - "Telegram: @@NetAccount ⚡ JOIN`"
+      - NetAccount
       - NetAccount`
   - name: ♻️ 自动选择
     type: url-test
@@ -19,6 +23,8 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - "Telegram: @@NetAccount ⚡ JOIN`"
+      - NetAccount
       - NetAccount`
   - name: 🌍 国外媒体
     type: select
@@ -26,24 +32,32 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - "Telegram: @@NetAccount ⚡ JOIN`"
+      - NetAccount
       - NetAccount`
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - "Telegram: @@NetAccount ⚡ JOIN`"
+      - NetAccount
       - NetAccount`
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - "Telegram: @@NetAccount ⚡ JOIN`"
+      - NetAccount
       - NetAccount`
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - "Telegram: @@NetAccount ⚡ JOIN`"
+      - NetAccount
       - NetAccount`
   - name: 🎯 全球直连
     type: select
@@ -72,6 +86,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - "Telegram: @@NetAccount ⚡ JOIN`"
+      - NetAccount
       - NetAccount`
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连

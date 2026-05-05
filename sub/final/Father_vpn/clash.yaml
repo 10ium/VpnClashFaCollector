@@ -465,9 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: TEL;Father_vpn`, server: Ikco.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 5b472cca-4187-43bd-855b-d7a9428df8e6, network: ws, ws-opts: {path: /cdn, headers: {Host: cp.movizdl.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: TEL;Father_vpn` 2, server: Ikco.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 73805cfb-4535-4797-9ad4-9e13c8dd5b3d, network: ws, ws-opts: {path: /cdn, headers: {Host: cp.movizdl.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: TEL;Father_vpn` 3, server: Ikco.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 7b99dbaf-8259-4e95-97ee-17ea6e085ded, network: ws, ws-opts: {path: /cdn, headers: {Host: cp.movizdl.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: TEL;Father_vpn`, server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 20d78284-fe65-4a9c-921c-a50138380f16, network: ws, ws-opts: {path: /FIRELINKKVPN, headers: {Host: firelinkk.arian-go-internet.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,8 +483,6 @@ proxy-groups:
     type: select
     proxies:
       - TEL;Father_vpn`
-      - TEL;Father_vpn` 2
-      - TEL;Father_vpn` 3
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -494,8 +490,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - TEL;Father_vpn`
-      - TEL;Father_vpn` 2
-      - TEL;Father_vpn` 3
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -503,8 +497,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - TEL;Father_vpn`
-      - TEL;Father_vpn` 2
-      - TEL;Father_vpn` 3
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -521,8 +513,6 @@ proxy-groups:
     interval: 600
     proxies:
       - TEL;Father_vpn`
-      - TEL;Father_vpn` 2
-      - TEL;Father_vpn` 3
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -530,8 +520,6 @@ proxy-groups:
     interval: 600
     proxies:
       - TEL;Father_vpn`
-      - TEL;Father_vpn` 2
-      - TEL;Father_vpn` 3
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -539,8 +527,6 @@ proxy-groups:
     interval: 600
     proxies:
       - TEL;Father_vpn`
-      - TEL;Father_vpn` 2
-      - TEL;Father_vpn` 3
   - name: دانلود منیجر 📥
     type: select
     proxies:

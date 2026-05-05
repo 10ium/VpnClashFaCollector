@@ -465,8 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: meli.masterdadeh.ir:80, server: meli.masterdadeh.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 37c23ba9-1123-b1fc-978d-2ae157af8902, servername: 185.226.94.198, network: ws, ws-opts: {path: /, headers: {Host: 185.226.94.198}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Masyakata", server: game.khodavand.shop, port: 3031, type: vless, tls: true, packet-encoding: xudp, uuid: 8e7c005a-b90b-4b76-84ae-99bfeda2705f, host: game.khodavand.shop, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "`", server: snapp.ir, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 87d3524b-e7dd-42da-8785-cecb5e8193f2, network: ws, ws-opts: {path: /elctro, headers: {Host: clud.extra-tm.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: varzesh3.com:2082, server: varzesh3.com, port: 2082, type: vless, tls: true, packet-encoding: xudp, uuid: bc6dd5e1-5e3a-408d-a936-f6d64bac65c1, network: ws, ws-opts: {path: /, headers: {Host: snappp.khanumjan.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - meli.masterdadeh.ir:80
-      - "@Masyakata"
+      - "`"
+      - varzesh3.com:2082
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - meli.masterdadeh.ir:80
-      - "@Masyakata"
+      - "`"
+      - varzesh3.com:2082
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - meli.masterdadeh.ir:80
-      - "@Masyakata"
+      - "`"
+      - varzesh3.com:2082
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - meli.masterdadeh.ir:80
-      - "@Masyakata"
+      - "`"
+      - varzesh3.com:2082
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - meli.masterdadeh.ir:80
-      - "@Masyakata"
+      - "`"
+      - varzesh3.com:2082
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - meli.masterdadeh.ir:80
-      - "@Masyakata"
+      - "`"
+      - varzesh3.com:2082
   - name: دانلود منیجر 📥
     type: select
     proxies:
