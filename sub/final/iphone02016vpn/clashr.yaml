@@ -5,88 +5,67 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 1, server: iran.mamad-imnix.ir, port: 3946, type: ss, cipher: 2022-blake3-aes-256-gcm, password: mZyz5qeFwZ4TWi5MMHwZ9Yd8xDJ/IolUVW+yn0dcDrU=:eYJ7RrEpxyevcG6rPMxuD1+VMJCJU6poLiwyJvLPamM=, udp: true, tfo: false}
-  - {name: "@iphone02016vpn", server: admin.c1.havij.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 1kVr0KATIJI7mwOF, udp: true, tfo: false}
-  - {name: "@iphone02016vpn 2", server: v1.dabache.top, port: 443, type: trojan, password: humanity, sni: www.multiplydose.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.multiplydose.com}}, udp: true, tfo: false}
-  - {name: 2, server: 185.228.236.226, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 0bbdd35b-d7b5-42df-b93d-140ec600a3dc, network: ws, ws-opts: {path: /preply, headers: {Host: app.gplance.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 3, server: gr1.mizbanertebatfarda.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 62547f84-56b6-490c-a5b8-403698c9fdf6, network: ws, ws-opts: {path: /, headers: {Host: gr1.mizbanertebatfarda.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: meli.masterdadeh.ir:80, server: meli.masterdadeh.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: c594ca1b-9523-641f-ba12-76b130c6d52f, network: ws, ws-opts: {path: /`, headers: {Host: meli.masterdadeh.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@xixv2ray گراف دو", server: 185.236.38.44, port: 19946, type: vmess, uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: phone02016vpn8, server: 45.81.19.251, port: 443, type: hysteria2, ports: 443, password: DBUklcvOyH, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 9, server: 45.81.19.251, port: 443, type: hysteria2, ports: 443, password: DBUklcvOyH, sni: "%60", skip-cert-verify: false, udp: true, tfo: false}
+  - {name: phone02016vpn9`, server: 45.81.19.251, port: 443, type: hysteria2, ports: 443, password: DBUklcvOyH, sni: "%60", skip-cert-verify: false, udp: true, tfo: false}
+  - {name: phone02016vpn7, server: 45.81.19.251, port: 443, type: hysteria2, ports: 443, password: DBUklcvOyH, sni: web.bale.ai, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 1
-      - "@iphone02016vpn"
-      - "@iphone02016vpn 2"
-      - 2
-      - 3
-      - meli.masterdadeh.ir:80
-      - "@xixv2ray گراف دو"
+      - phone02016vpn8
+      - 9
+      - phone02016vpn9`
+      - phone02016vpn7
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 1
-      - "@iphone02016vpn"
-      - "@iphone02016vpn 2"
-      - 2
-      - 3
-      - meli.masterdadeh.ir:80
-      - "@xixv2ray گراف دو"
+      - phone02016vpn8
+      - 9
+      - phone02016vpn9`
+      - phone02016vpn7
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 1
-      - "@iphone02016vpn"
-      - "@iphone02016vpn 2"
-      - 2
-      - 3
-      - meli.masterdadeh.ir:80
-      - "@xixv2ray گراف دو"
+      - phone02016vpn8
+      - 9
+      - phone02016vpn9`
+      - phone02016vpn7
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 1
-      - "@iphone02016vpn"
-      - "@iphone02016vpn 2"
-      - 2
-      - 3
-      - meli.masterdadeh.ir:80
-      - "@xixv2ray گراف دو"
+      - phone02016vpn8
+      - 9
+      - phone02016vpn9`
+      - phone02016vpn7
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 1
-      - "@iphone02016vpn"
-      - "@iphone02016vpn 2"
-      - 2
-      - 3
-      - meli.masterdadeh.ir:80
-      - "@xixv2ray گراف دو"
+      - phone02016vpn8
+      - 9
+      - phone02016vpn9`
+      - phone02016vpn7
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 1
-      - "@iphone02016vpn"
-      - "@iphone02016vpn 2"
-      - 2
-      - 3
-      - meli.masterdadeh.ir:80
-      - "@xixv2ray گراف دو"
+      - phone02016vpn8
+      - 9
+      - phone02016vpn9`
+      - phone02016vpn7
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -114,13 +93,10 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 1
-      - "@iphone02016vpn"
-      - "@iphone02016vpn 2"
-      - 2
-      - 3
-      - meli.masterdadeh.ir:80
-      - "@xixv2ray گراف دو"
+      - phone02016vpn8
+      - 9
+      - phone02016vpn9`
+      - phone02016vpn7
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
