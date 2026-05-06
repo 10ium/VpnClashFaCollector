@@ -465,7 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: varzesh3.com:2082, server: varzesh3.com, port: 2082, type: vless, tls: true, packet-encoding: xudp, uuid: bc6dd5e1-5e3a-408d-a936-f6d64bac65c1, network: ws, ws-opts: {path: /, headers: {Host: snappp.khanumjan.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 185.143.233.5:80, server: 185.143.233.5, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 0d84cdbd-c0fb-47c6-ab5d-a25587df2a4a, network: ws, ws-opts: {path: /xray, headers: {Host: bot.vipiranian.de}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Masyakata, server: 185.143.233.5, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 0d84cdbd-c0fb-47c6-ab5d-a25587df2a4a, network: ws, ws-opts: {path: /xray, headers: {Host: bot.vipiranian.de}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - varzesh3.com:2082
+      - 185.143.233.5:80
+      - Masyakata
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - varzesh3.com:2082
+      - 185.143.233.5:80
+      - Masyakata
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - varzesh3.com:2082
+      - 185.143.233.5:80
+      - Masyakata
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - varzesh3.com:2082
+      - 185.143.233.5:80
+      - Masyakata
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - varzesh3.com:2082
+      - 185.143.233.5:80
+      - Masyakata
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - varzesh3.com:2082
+      - 185.143.233.5:80
+      - Masyakata
   - name: دانلود منیجر 📥
     type: select
     proxies:

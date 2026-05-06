@@ -8,8 +8,7 @@ proxies:
   - {name: NetAccount`, server: sr.novatechsapr.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 255b8da7-01c7-4cf9-a8e2-3313f73d0b8a, network: ws, ws-opts: {path: /, headers: {Host: sr.novatechsapr.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: NetAccount` 2, server: hostioko.online, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4522a3f7-c12e-430c-b428-d59dcb5de811, servername: hostioko.online, alpn: [http%2F1.1], network: ws, ws-opts: {path: "/W8IFdbZXc92UUldb1MBYzCwQif0uaX9DL3o?ed=2560", headers: {Host: hostioko.online}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: NetAccount` 3, server: anten.ir, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: 96930f31-8e68-4186-a101-5593f0b2b274, network: ws, ws-opts: {path: /, headers: {Host: new.nanoline.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: NetAccount` 4, server: 185.143.233.122, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: c09816d1-9b53-4e0d-85a8-9def477121ab, network: ws, ws-opts: {path: /ws, headers: {Host: cdnisfucka.drnimaamini.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: NetAccount` 5, server: 185.213.165.81, port: 48660, type: vless, tls: true, packet-encoding: xudp, uuid: dc4dccda-55c9-480a-9bc1-8edd8e2ccf69, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: NetAccount` 4, server: 185.213.165.81, port: 48660, type: vless, tls: true, packet-encoding: xudp, uuid: dc4dccda-55c9-480a-9bc1-8edd8e2ccf69, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -20,7 +19,6 @@ proxy-groups:
       - NetAccount` 2
       - NetAccount` 3
       - NetAccount` 4
-      - NetAccount` 5
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -31,7 +29,6 @@ proxy-groups:
       - NetAccount` 2
       - NetAccount` 3
       - NetAccount` 4
-      - NetAccount` 5
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -42,7 +39,6 @@ proxy-groups:
       - NetAccount` 2
       - NetAccount` 3
       - NetAccount` 4
-      - NetAccount` 5
   - name: 📲 电报信息
     type: select
     proxies:
@@ -52,7 +48,6 @@ proxy-groups:
       - NetAccount` 2
       - NetAccount` 3
       - NetAccount` 4
-      - NetAccount` 5
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -62,7 +57,6 @@ proxy-groups:
       - NetAccount` 2
       - NetAccount` 3
       - NetAccount` 4
-      - NetAccount` 5
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -72,7 +66,6 @@ proxy-groups:
       - NetAccount` 2
       - NetAccount` 3
       - NetAccount` 4
-      - NetAccount` 5
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -104,7 +97,6 @@ proxy-groups:
       - NetAccount` 2
       - NetAccount` 3
       - NetAccount` 4
-      - NetAccount` 5
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

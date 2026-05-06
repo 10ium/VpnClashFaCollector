@@ -6,6 +6,10 @@ log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
   - {name: "☑➜چنلمون: Express_freevpn@`", server: anten.ir, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: 96930f31-8e68-4186-a101-5593f0b2b274, network: ws, ws-opts: {path: /, headers: {Host: new.nanoline.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "☑➜چنلمون: Express_freevpn@", server: 185.143.233.5, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d4f4e8f5-4f17-4c60-bbd9-a02ebb7c3e80, servername: alaedin4.8lack.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/@alaedin?ed=128", headers: {Host: alaedin4.8lack.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "☑➜چنلمون: Express_freevpn@ 2", server: 185.143.233.5, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e896ad6e-72e2-4ceb-b1d7-f0d22fa3c783, servername: alaedin2.8lack.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/@alaedin?ed=128", headers: {Host: alaedin2.8lack.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "☑➜چنلمون: Express_freevpn@` 2", server: 185.143.233.5, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f6acca5f-48b9-4cf1-9ab5-6ab1fc9c2d2f, servername: alaedin6.8lack.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/@alaedin?ed=128", headers: {Host: alaedin6.8lack.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "☑➜چنلمون: Express_freevpn@ 3", server: 185.143.233.5, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: feefdcc7-9ec8-40d4-84ea-600175b2efad, servername: alaedin5.8lack.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/@alaedin?ed=128", headers: {Host: alaedin5.8lack.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -13,6 +17,10 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - "☑➜چنلمون: Express_freevpn@`"
+      - "☑➜چنلمون: Express_freevpn@"
+      - "☑➜چنلمون: Express_freevpn@ 2"
+      - "☑➜چنلمون: Express_freevpn@` 2"
+      - "☑➜چنلمون: Express_freevpn@ 3"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -20,6 +28,10 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "☑➜چنلمون: Express_freevpn@`"
+      - "☑➜چنلمون: Express_freevpn@"
+      - "☑➜چنلمون: Express_freevpn@ 2"
+      - "☑➜چنلمون: Express_freevpn@` 2"
+      - "☑➜چنلمون: Express_freevpn@ 3"
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -27,24 +39,40 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - "☑➜چنلمون: Express_freevpn@`"
+      - "☑➜چنلمون: Express_freevpn@"
+      - "☑➜چنلمون: Express_freevpn@ 2"
+      - "☑➜چنلمون: Express_freevpn@` 2"
+      - "☑➜چنلمون: Express_freevpn@ 3"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "☑➜چنلمون: Express_freevpn@`"
+      - "☑➜چنلمون: Express_freevpn@"
+      - "☑➜چنلمون: Express_freevpn@ 2"
+      - "☑➜چنلمون: Express_freevpn@` 2"
+      - "☑➜چنلمون: Express_freevpn@ 3"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - "☑➜چنلمون: Express_freevpn@`"
+      - "☑➜چنلمون: Express_freevpn@"
+      - "☑➜چنلمون: Express_freevpn@ 2"
+      - "☑➜چنلمون: Express_freevpn@` 2"
+      - "☑➜چنلمون: Express_freevpn@ 3"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "☑➜چنلمون: Express_freevpn@`"
+      - "☑➜چنلمون: Express_freevpn@"
+      - "☑➜چنلمون: Express_freevpn@ 2"
+      - "☑➜چنلمون: Express_freevpn@` 2"
+      - "☑➜چنلمون: Express_freevpn@ 3"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -73,6 +101,10 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - "☑➜چنلمون: Express_freevpn@`"
+      - "☑➜چنلمون: Express_freevpn@"
+      - "☑➜چنلمون: Express_freevpn@ 2"
+      - "☑➜چنلمون: Express_freevpn@` 2"
+      - "☑➜چنلمون: Express_freevpn@ 3"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
