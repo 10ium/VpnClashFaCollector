@@ -466,6 +466,7 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: TEL;Father_vpn`, server: Tapsi.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 9f4c3a72-a88e-4ee3-bee8-40901085a352, network: ws, ws-opts: {path: /cdn, headers: {Host: Zp.movizdl.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: TEL;Father_vpn` 2, server: camp.nahidapp.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: bdffa6a0-8da1-4f6a-aede-bcda4daa6c1f, network: ws, ws-opts: {path: /IF_VPN_Bot, headers: {Host: camp.nahidapp.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,6 +484,7 @@ proxy-groups:
     type: select
     proxies:
       - TEL;Father_vpn`
+      - TEL;Father_vpn` 2
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -490,6 +492,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - TEL;Father_vpn`
+      - TEL;Father_vpn` 2
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -497,6 +500,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - TEL;Father_vpn`
+      - TEL;Father_vpn` 2
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -513,6 +517,7 @@ proxy-groups:
     interval: 600
     proxies:
       - TEL;Father_vpn`
+      - TEL;Father_vpn` 2
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -520,6 +525,7 @@ proxy-groups:
     interval: 600
     proxies:
       - TEL;Father_vpn`
+      - TEL;Father_vpn` 2
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -527,6 +533,7 @@ proxy-groups:
     interval: 600
     proxies:
       - TEL;Father_vpn`
+      - TEL;Father_vpn` 2
   - name: دانلود منیجر 📥
     type: select
     proxies:
