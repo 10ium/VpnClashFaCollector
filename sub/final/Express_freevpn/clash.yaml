@@ -465,10 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "☑➜چنلمون: Express_freevpn@`", server: anten.ir, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: 96930f31-8e68-4186-a101-5593f0b2b274, network: ws, ws-opts: {path: /, headers: {Host: new.nanoline.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "☑➜چنلمون: Express_freevpn@", server: 185.143.233.5, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d4f4e8f5-4f17-4c60-bbd9-a02ebb7c3e80, servername: alaedin4.8lack.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/@alaedin?ed=128", headers: {Host: alaedin4.8lack.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "☑➜چنلمون: Express_freevpn@ 2", server: 185.143.233.5, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e896ad6e-72e2-4ceb-b1d7-f0d22fa3c783, servername: alaedin2.8lack.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/@alaedin?ed=128", headers: {Host: alaedin2.8lack.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "☑➜چنلمون: Express_freevpn@` 2", server: 185.143.233.5, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f6acca5f-48b9-4cf1-9ab5-6ab1fc9c2d2f, servername: alaedin6.8lack.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/@alaedin?ed=128", headers: {Host: alaedin6.8lack.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "☑➜چنلمون: Express_freevpn@`", server: 185.143.233.5, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f6acca5f-48b9-4cf1-9ab5-6ab1fc9c2d2f, servername: alaedin6.8lack.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/@alaedin?ed=128", headers: {Host: alaedin6.8lack.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "☑➜چنلمون: Express_freevpn@ 3", server: 185.143.233.5, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: feefdcc7-9ec8-40d4-84ea-600175b2efad, servername: alaedin5.8lack.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/@alaedin?ed=128", headers: {Host: alaedin5.8lack.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -486,10 +485,9 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "☑➜چنلمون: Express_freevpn@`"
       - "☑➜چنلمون: Express_freevpn@"
       - "☑➜چنلمون: Express_freevpn@ 2"
-      - "☑➜چنلمون: Express_freevpn@` 2"
+      - "☑➜چنلمون: Express_freevpn@`"
       - "☑➜چنلمون: Express_freevpn@ 3"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -497,10 +495,9 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - "☑➜چنلمون: Express_freevpn@`"
       - "☑➜چنلمون: Express_freevpn@"
       - "☑➜چنلمون: Express_freevpn@ 2"
-      - "☑➜چنلمون: Express_freevpn@` 2"
+      - "☑➜چنلمون: Express_freevpn@`"
       - "☑➜چنلمون: Express_freevpn@ 3"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -508,10 +505,9 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - "☑➜چنلمون: Express_freevpn@`"
       - "☑➜چنلمون: Express_freevpn@"
       - "☑➜چنلمون: Express_freevpn@ 2"
-      - "☑➜چنلمون: Express_freevpn@` 2"
+      - "☑➜چنلمون: Express_freevpn@`"
       - "☑➜چنلمون: Express_freevpn@ 3"
   - name: اتصال پایدار 🔗
     type: url-test
@@ -528,10 +524,9 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "☑➜چنلمون: Express_freevpn@`"
       - "☑➜چنلمون: Express_freevpn@"
       - "☑➜چنلمون: Express_freevpn@ 2"
-      - "☑➜چنلمون: Express_freevpn@` 2"
+      - "☑➜چنلمون: Express_freevpn@`"
       - "☑➜چنلمون: Express_freevpn@ 3"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -539,10 +534,9 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "☑➜چنلمون: Express_freevpn@`"
       - "☑➜چنلمون: Express_freevpn@"
       - "☑➜چنلمون: Express_freevpn@ 2"
-      - "☑➜چنلمون: Express_freevpn@` 2"
+      - "☑➜چنلمون: Express_freevpn@`"
       - "☑➜چنلمون: Express_freevpn@ 3"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -550,10 +544,9 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "☑➜چنلمون: Express_freevpn@`"
       - "☑➜چنلمون: Express_freevpn@"
       - "☑➜چنلمون: Express_freevpn@ 2"
-      - "☑➜چنلمون: Express_freevpn@` 2"
+      - "☑➜چنلمون: Express_freevpn@`"
       - "☑➜چنلمون: Express_freevpn@ 3"
   - name: دانلود منیجر 📥
     type: select
