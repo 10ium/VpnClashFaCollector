@@ -5,67 +5,60 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@vasl_bashim`", server: sr.novatechsapr.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 255b8da7-01c7-4cf9-a8e2-3313f73d0b8a, network: ws, ws-opts: {path: /, headers: {Host: sr.novatechsapr.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@vasl_bashim", server: faraaa.darakio.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 30e35bd7-6ce7-4c0c-8fbd-cec03071852f, network: ws, ws-opts: {path: /, headers: {Host: faraaa.darakio.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@vasl_bashim 2", server: snapp.ir, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: dae2ddc6-a892-495f-a001-181cec56ad12, network: ws, ws-opts: {path: /, headers: {Host: p1.razstar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim` 2", server: snapp.ir, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: dae2ddc6-a892-495f-a001-181cec56ad12, network: ws, ws-opts: {path: /, headers: {Host: p1.razstar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim`", server: snapp.ir, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: dae2ddc6-a892-495f-a001-181cec56ad12, network: ws, ws-opts: {path: /, headers: {Host: p1.razstar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@vasl_bashim`"
       - "@vasl_bashim"
       - "@vasl_bashim 2"
-      - "@vasl_bashim` 2"
+      - "@vasl_bashim`"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@vasl_bashim`"
       - "@vasl_bashim"
       - "@vasl_bashim 2"
-      - "@vasl_bashim` 2"
+      - "@vasl_bashim`"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@vasl_bashim`"
       - "@vasl_bashim"
       - "@vasl_bashim 2"
-      - "@vasl_bashim` 2"
+      - "@vasl_bashim`"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@vasl_bashim`"
       - "@vasl_bashim"
       - "@vasl_bashim 2"
-      - "@vasl_bashim` 2"
+      - "@vasl_bashim`"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@vasl_bashim`"
       - "@vasl_bashim"
       - "@vasl_bashim 2"
-      - "@vasl_bashim` 2"
+      - "@vasl_bashim`"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@vasl_bashim`"
       - "@vasl_bashim"
       - "@vasl_bashim 2"
-      - "@vasl_bashim` 2"
+      - "@vasl_bashim`"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -93,10 +86,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@vasl_bashim`"
       - "@vasl_bashim"
       - "@vasl_bashim 2"
-      - "@vasl_bashim` 2"
+      - "@vasl_bashim`"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

@@ -467,6 +467,7 @@ rule-providers:
 proxies:
   - {name: 185.143.233.5:80, server: 185.143.233.5, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 0d84cdbd-c0fb-47c6-ab5d-a25587df2a4a, network: ws, ws-opts: {path: /xray, headers: {Host: bot.vipiranian.de}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: Masyakata, server: 185.143.233.5, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 0d84cdbd-c0fb-47c6-ab5d-a25587df2a4a, network: ws, ws-opts: {path: /xray, headers: {Host: bot.vipiranian.de}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Tapsi.ir:8080, server: Tapsi.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: f937e9ea-ab6f-4a1b-8212-c469a42f7839, network: ws, ws-opts: {path: /cdn, headers: {Host: Zp.movizdl.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,6 +486,7 @@ proxy-groups:
     proxies:
       - 185.143.233.5:80
       - Masyakata
+      - Tapsi.ir:8080
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -493,6 +495,7 @@ proxy-groups:
     proxies:
       - 185.143.233.5:80
       - Masyakata
+      - Tapsi.ir:8080
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -501,6 +504,7 @@ proxy-groups:
     proxies:
       - 185.143.233.5:80
       - Masyakata
+      - Tapsi.ir:8080
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -518,6 +522,7 @@ proxy-groups:
     proxies:
       - 185.143.233.5:80
       - Masyakata
+      - Tapsi.ir:8080
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -526,6 +531,7 @@ proxy-groups:
     proxies:
       - 185.143.233.5:80
       - Masyakata
+      - Tapsi.ir:8080
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -534,6 +540,7 @@ proxy-groups:
     proxies:
       - 185.143.233.5:80
       - Masyakata
+      - Tapsi.ir:8080
   - name: دانلود منیجر 📥
     type: select
     proxies:

@@ -466,11 +466,11 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: "@proxy_kafee | ترکیبی`", server: 185.143.233.5, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 0d84cdbd-c0fb-47c6-ab5d-a25587df2a4a, network: ws, ws-opts: {path: /xray, headers: {Host: bot.vipiranian.de}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee", server: sr.novatechsapr.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 255b8da7-01c7-4cf9-a8e2-3313f73d0b8a, network: ws, ws-opts: {path: /, headers: {Host: sr.novatechsapr.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee`", server: sr.novatechsapr.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 255b8da7-01c7-4cf9-a8e2-3313f73d0b8a, network: ws, ws-opts: {path: /, headers: {Host: sr.novatechsapr.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee | ترکیبی", server: faraaa.darakio.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 30e35bd7-6ce7-4c0c-8fbd-cec03071852f, network: ws, ws-opts: {path: /, headers: {Host: faraaa.darakio.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee` 2", server: red.nahidapp.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6b5a5b5a-e909-4fdf-812d-cd2a4063121f, servername: red.nahidapp.com, network: ws, ws-opts: {path: /red/, headers: {Host: red.nahidapp.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee`", server: red.nahidapp.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6b5a5b5a-e909-4fdf-812d-cd2a4063121f, servername: red.nahidapp.com, network: ws, ws-opts: {path: /red/, headers: {Host: red.nahidapp.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee", server: 45.90.75.168, port: 2015, type: vless, tls: true, packet-encoding: xudp, uuid: 9692c29e-f714-44a5-abef-430d1169635a, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee | ترکیبی 2", server: snapp.ir, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: dae2ddc6-a892-495f-a001-181cec56ad12, network: ws, ws-opts: {path: /, headers: {Host: p1.razstar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee  کانال تلگرامی ما", server: 185.236.38.44, port: 19946, type: vmess, uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -488,11 +488,11 @@ proxy-groups:
     type: select
     proxies:
       - "@proxy_kafee | ترکیبی`"
-      - "@proxy_kafee"
-      - "@proxy_kafee`"
       - "@proxy_kafee | ترکیبی"
-      - "@proxy_kafee` 2"
+      - "@proxy_kafee`"
+      - "@proxy_kafee"
       - "@proxy_kafee | ترکیبی 2"
+      - "@proxy_kafee  کانال تلگرامی ما"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -500,11 +500,11 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@proxy_kafee | ترکیبی`"
-      - "@proxy_kafee"
-      - "@proxy_kafee`"
       - "@proxy_kafee | ترکیبی"
-      - "@proxy_kafee` 2"
+      - "@proxy_kafee`"
+      - "@proxy_kafee"
       - "@proxy_kafee | ترکیبی 2"
+      - "@proxy_kafee  کانال تلگرامی ما"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -512,11 +512,11 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@proxy_kafee | ترکیبی`"
-      - "@proxy_kafee"
-      - "@proxy_kafee`"
       - "@proxy_kafee | ترکیبی"
-      - "@proxy_kafee` 2"
+      - "@proxy_kafee`"
+      - "@proxy_kafee"
       - "@proxy_kafee | ترکیبی 2"
+      - "@proxy_kafee  کانال تلگرامی ما"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -533,11 +533,11 @@ proxy-groups:
     interval: 600
     proxies:
       - "@proxy_kafee | ترکیبی`"
-      - "@proxy_kafee"
-      - "@proxy_kafee`"
       - "@proxy_kafee | ترکیبی"
-      - "@proxy_kafee` 2"
+      - "@proxy_kafee`"
+      - "@proxy_kafee"
       - "@proxy_kafee | ترکیبی 2"
+      - "@proxy_kafee  کانال تلگرامی ما"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -545,11 +545,11 @@ proxy-groups:
     interval: 600
     proxies:
       - "@proxy_kafee | ترکیبی`"
-      - "@proxy_kafee"
-      - "@proxy_kafee`"
       - "@proxy_kafee | ترکیبی"
-      - "@proxy_kafee` 2"
+      - "@proxy_kafee`"
+      - "@proxy_kafee"
       - "@proxy_kafee | ترکیبی 2"
+      - "@proxy_kafee  کانال تلگرامی ما"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -557,11 +557,11 @@ proxy-groups:
     interval: 600
     proxies:
       - "@proxy_kafee | ترکیبی`"
-      - "@proxy_kafee"
-      - "@proxy_kafee`"
       - "@proxy_kafee | ترکیبی"
-      - "@proxy_kafee` 2"
+      - "@proxy_kafee`"
+      - "@proxy_kafee"
       - "@proxy_kafee | ترکیبی 2"
+      - "@proxy_kafee  کانال تلگرامی ما"
   - name: دانلود منیجر 📥
     type: select
     proxies:
