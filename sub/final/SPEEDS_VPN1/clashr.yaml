@@ -5,88 +5,67 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "***🌪***-@SPEEDS_VPN1", server: 185.143.233.5, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: 20827161-ba63-447c-a4a9-7dc6c21b2296, network: ws, ws-opts: {path: /, headers: {Host: cdn.sesrsa.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "***🐦‍🔥***-@SPEEDS_VPN", server: red.nahidapp.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5cc82925-6741-4b9a-8d9e-54445b99e5d9, servername: red.nahidapp.com, network: ws, ws-opts: {path: /red/, headers: {Host: red.nahidapp.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "***🐦‍🔥***-@SPEEDS_VPN 2", server: nobitex.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 65516d23-41dc-4865-84c8-4aebe20dd0a9, network: ws, ws-opts: {path: /, headers: {Host: sayanstoree.tel.goleij.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "***🐦‍🔥***-@SPEEDS_VPN 3", server: nobitex.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 65516d23-41dc-4865-84c8-4aebe20dd0a9, network: ws, ws-opts: {path: /, headers: {Host: sayanstoree.tel.goleij.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "***🐦‍🔥***-@SPEEDS_VPN`", server: javid.purples.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 73ee5d1d-e2aa-409c-bace-757a7b774d76, network: ws, ws-opts: {path: /, headers: {Host: javid-2.toraniq.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "***🌪***-@SPEEDS_VPN1`", server: arvancloud.ir, port: 2086, type: vless, tls: true, packet-encoding: xudp, uuid: af889c4a-7ea9-45e9-abe4-6ade499a77b1, network: ws, ws-opts: {path: /code, headers: {Host: newt.yeksanpower.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: d3db44da-fbd2-4592-bc01-fa7995ee0434, network: ws, ws-opts: {path: /, headers: {Host: bl.varyonet.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN`", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 61c05fb8-3f71-43fb-b498-77826dede5b8, network: ws, ws-opts: {path: /, headers: {Host: doost.victoriya.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`", server: ger1bot-ws.headerip.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 7b048a03-a987-4957-9171-4475094dc7d6, network: ws, ws-opts: {path: /, headers: {Host: ger1.mv5.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***🐦‍🔥***-@SPEEDS_VPN` 2", server: 2.144.4.245, port: 23176, type: vless, tls: true, packet-encoding: xudp, uuid: 9d0b7f4e-b0fe-42bf-a550-31b7ecb0e053, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید` 2", server: snapp.ir, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: dae2ddc6-a892-495f-a001-181cec56ad12, network: ws, ws-opts: {path: /, headers: {Host: p1.razstar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "***🌪***-@SPEEDS_VPN1"
-      - "***🐦‍🔥***-@SPEEDS_VPN"
-      - "***🐦‍🔥***-@SPEEDS_VPN 2"
-      - "***🐦‍🔥***-@SPEEDS_VPN 3"
       - "***🐦‍🔥***-@SPEEDS_VPN`"
-      - "***🌪***-@SPEEDS_VPN1`"
       - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 2"
+      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید` 2"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "***🌪***-@SPEEDS_VPN1"
-      - "***🐦‍🔥***-@SPEEDS_VPN"
-      - "***🐦‍🔥***-@SPEEDS_VPN 2"
-      - "***🐦‍🔥***-@SPEEDS_VPN 3"
       - "***🐦‍🔥***-@SPEEDS_VPN`"
-      - "***🌪***-@SPEEDS_VPN1`"
       - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 2"
+      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید` 2"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "***🌪***-@SPEEDS_VPN1"
-      - "***🐦‍🔥***-@SPEEDS_VPN"
-      - "***🐦‍🔥***-@SPEEDS_VPN 2"
-      - "***🐦‍🔥***-@SPEEDS_VPN 3"
       - "***🐦‍🔥***-@SPEEDS_VPN`"
-      - "***🌪***-@SPEEDS_VPN1`"
       - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 2"
+      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید` 2"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "***🌪***-@SPEEDS_VPN1"
-      - "***🐦‍🔥***-@SPEEDS_VPN"
-      - "***🐦‍🔥***-@SPEEDS_VPN 2"
-      - "***🐦‍🔥***-@SPEEDS_VPN 3"
       - "***🐦‍🔥***-@SPEEDS_VPN`"
-      - "***🌪***-@SPEEDS_VPN1`"
       - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 2"
+      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید` 2"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "***🌪***-@SPEEDS_VPN1"
-      - "***🐦‍🔥***-@SPEEDS_VPN"
-      - "***🐦‍🔥***-@SPEEDS_VPN 2"
-      - "***🐦‍🔥***-@SPEEDS_VPN 3"
       - "***🐦‍🔥***-@SPEEDS_VPN`"
-      - "***🌪***-@SPEEDS_VPN1`"
       - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 2"
+      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید` 2"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "***🌪***-@SPEEDS_VPN1"
-      - "***🐦‍🔥***-@SPEEDS_VPN"
-      - "***🐦‍🔥***-@SPEEDS_VPN 2"
-      - "***🐦‍🔥***-@SPEEDS_VPN 3"
       - "***🐦‍🔥***-@SPEEDS_VPN`"
-      - "***🌪***-@SPEEDS_VPN1`"
       - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 2"
+      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید` 2"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -114,13 +93,10 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "***🌪***-@SPEEDS_VPN1"
-      - "***🐦‍🔥***-@SPEEDS_VPN"
-      - "***🐦‍🔥***-@SPEEDS_VPN 2"
-      - "***🐦‍🔥***-@SPEEDS_VPN 3"
       - "***🐦‍🔥***-@SPEEDS_VPN`"
-      - "***🌪***-@SPEEDS_VPN1`"
       - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید`"
+      - "***🐦‍🔥***-@SPEEDS_VPN` 2"
+      - "@SPEEDS_VPN-کانال-پشتیبان-حتما-جوین-بشید` 2"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

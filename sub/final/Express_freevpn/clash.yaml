@@ -465,12 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "☑➜چنلمون: Express_freevpn@`", server: sr.novatechsapr.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 255b8da7-01c7-4cf9-a8e2-3313f73d0b8a, network: ws, ws-opts: {path: /, headers: {Host: sr.novatechsapr.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "☑➜چنلمون: Express_freevpn@", server: zir.alihapps3.aghanami.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 6f78685c-5d8f-49d3-b2fa-4bc9852a2872, network: ws, ws-opts: {path: /, headers: {Host: zir.alihapps3.aghanami.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "☑➜چنلمون: Express_freevpn@ 2", server: red.nahidapp.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 94dc5204-c5a9-4856-9fd6-67264ba499c1, servername: red.nahidapp.com, network: ws, ws-opts: {path: /red/, headers: {Host: red.nahidapp.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "☑➜چنلمون: Express_freevpn@ 3", server: zir.alihapps3.aghanami.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 96e5b04f-4592-437e-9aba-0060e69a9c2c, network: ws, ws-opts: {path: /, headers: {Host: zir.alihapps3.aghanami.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "☑➜چنلمون: Express_freevpn@ 4", server: javid.purples.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: d9e3ba92-6429-45aa-9383-bc8cece5bea7, network: ws, ws-opts: {path: /, headers: {Host: javid-2.toraniq.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "☑➜چنلمون: Express_freevpn@ 5", server: zir.alihapps3.aghanami.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: e9aa4a15-33f7-449a-87ae-31026abc4d41, network: ws, ws-opts: {path: /, headers: {Host: zir.alihapps3.aghanami.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "☑➜چنلمون: Express_freevpn@", server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf, port: 21103, type: vmess, uuid: 9ab0f866-d3aa-4985-8168-711f16640af9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,36 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "☑➜چنلمون: Express_freevpn@`"
       - "☑➜چنلمون: Express_freevpn@"
-      - "☑➜چنلمون: Express_freevpn@ 2"
-      - "☑➜چنلمون: Express_freevpn@ 3"
-      - "☑➜چنلمون: Express_freevpn@ 4"
-      - "☑➜چنلمون: Express_freevpn@ 5"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "☑➜چنلمون: Express_freevpn@`"
       - "☑➜چنلمون: Express_freevpn@"
-      - "☑➜چنلمون: Express_freevpn@ 2"
-      - "☑➜چنلمون: Express_freevpn@ 3"
-      - "☑➜چنلمون: Express_freevpn@ 4"
-      - "☑➜چنلمون: Express_freevpn@ 5"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "☑➜چنلمون: Express_freevpn@`"
       - "☑➜چنلمون: Express_freevpn@"
-      - "☑➜چنلمون: Express_freevpn@ 2"
-      - "☑➜چنلمون: Express_freevpn@ 3"
-      - "☑➜چنلمون: Express_freevpn@ 4"
-      - "☑➜چنلمون: Express_freevpn@ 5"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -532,36 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "☑➜چنلمون: Express_freevpn@`"
       - "☑➜چنلمون: Express_freevpn@"
-      - "☑➜چنلمون: Express_freevpn@ 2"
-      - "☑➜چنلمون: Express_freevpn@ 3"
-      - "☑➜چنلمون: Express_freevpn@ 4"
-      - "☑➜چنلمون: Express_freevpn@ 5"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "☑➜چنلمون: Express_freevpn@`"
       - "☑➜چنلمون: Express_freevpn@"
-      - "☑➜چنلمون: Express_freevpn@ 2"
-      - "☑➜چنلمون: Express_freevpn@ 3"
-      - "☑➜چنلمون: Express_freevpn@ 4"
-      - "☑➜چنلمون: Express_freevpn@ 5"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "☑➜چنلمون: Express_freevpn@`"
       - "☑➜چنلمون: Express_freevpn@"
-      - "☑➜چنلمون: Express_freevpn@ 2"
-      - "☑➜چنلمون: Express_freevpn@ 3"
-      - "☑➜چنلمون: Express_freevpn@ 4"
-      - "☑➜چنلمون: Express_freevpn@ 5"
   - name: دانلود منیجر 📥
     type: select
     proxies:

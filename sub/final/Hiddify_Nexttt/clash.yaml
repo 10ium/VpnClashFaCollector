@@ -465,7 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Hiddify_Nexttt 👈🎴 کانال تلگرامی ما`", server: 45.90.75.168, port: 2015, type: vless, tls: true, packet-encoding: xudp, uuid: 9692c29e-f714-44a5-abef-430d1169635a, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Hiddify_Nexttt 👈🏤 کانال تلگرامی ما`", server: snapp.ir, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 0ed63d7f-ba30-4ec6-b539-d3fd9260f597, network: ws, ws-opts: {path: /api, headers: {Host: ryzo.px-ir.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@Hiddify_Nexttt 👈🎴 کانال تلگرامی ما`"
+      - "@Hiddify_Nexttt 👈🏤 کانال تلگرامی ما`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@Hiddify_Nexttt 👈🎴 کانال تلگرامی ما`"
+      - "@Hiddify_Nexttt 👈🏤 کانال تلگرامی ما`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@Hiddify_Nexttt 👈🎴 کانال تلگرامی ما`"
+      - "@Hiddify_Nexttt 👈🏤 کانال تلگرامی ما`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Hiddify_Nexttt 👈🎴 کانال تلگرامی ما`"
+      - "@Hiddify_Nexttt 👈🏤 کانال تلگرامی ما`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Hiddify_Nexttt 👈🎴 کانال تلگرامی ما`"
+      - "@Hiddify_Nexttt 👈🏤 کانال تلگرامی ما`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Hiddify_Nexttt 👈🎴 کانال تلگرامی ما`"
+      - "@Hiddify_Nexttt 👈🏤 کانال تلگرامی ما`"
   - name: دانلود منیجر 📥
     type: select
     proxies:
