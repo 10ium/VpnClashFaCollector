@@ -465,9 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@vasl_bashim", server: faraaa.darakio.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 30e35bd7-6ce7-4c0c-8fbd-cec03071852f, network: ws, ws-opts: {path: /, headers: {Host: faraaa.darakio.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim 2", server: snapp.ir, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: dae2ddc6-a892-495f-a001-181cec56ad12, network: ws, ws-opts: {path: /, headers: {Host: p1.razstar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim`", server: snapp.ir, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: dae2ddc6-a892-495f-a001-181cec56ad12, network: ws, ws-opts: {path: /, headers: {Host: p1.razstar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim`", server: 185.8.172.182, port: 20249, type: vless, tls: true, packet-encoding: xudp, uuid: 41c9e6be-cd11-4511-996c-7db798d38540, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,8 +482,6 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@vasl_bashim"
-      - "@vasl_bashim 2"
       - "@vasl_bashim`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -493,8 +489,6 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - "@vasl_bashim"
-      - "@vasl_bashim 2"
       - "@vasl_bashim`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -502,8 +496,6 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - "@vasl_bashim"
-      - "@vasl_bashim 2"
       - "@vasl_bashim`"
   - name: اتصال پایدار 🔗
     type: url-test
@@ -520,8 +512,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@vasl_bashim"
-      - "@vasl_bashim 2"
       - "@vasl_bashim`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -529,8 +519,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@vasl_bashim"
-      - "@vasl_bashim 2"
       - "@vasl_bashim`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -538,8 +526,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@vasl_bashim"
-      - "@vasl_bashim 2"
       - "@vasl_bashim`"
   - name: دانلود منیجر 📥
     type: select

@@ -5,7 +5,10 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: "@proxy_kafee2", server: srm.kishonline.online, port: 443, type: hysteria2, ports: 443, password: Kz0JGcGICb, obfs: salamander, obfs-password: kish-data-center, sni: srm.kishonline.online, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee3`", server: meli.masterdadeh.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 7fc9a955-4910-5b53-f516-0af48ec30de0, network: ws, ws-opts: {path: /, headers: {Host: meli.masterdadeh.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee", server: 45.90.75.168, port: 2015, type: vless, tls: true, packet-encoding: xudp, uuid: 9692c29e-f714-44a5-abef-430d1169635a, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee 2", server: 2.144.4.245, port: 23176, type: vless, tls: true, packet-encoding: xudp, uuid: 9d0b7f4e-b0fe-42bf-a550-31b7ecb0e053, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee  کانال تلگرامی ما", server: 185.236.38.44, port: 19946, type: vmess, uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
@@ -13,7 +16,10 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - "@proxy_kafee2"
+      - "@proxy_kafee3`"
       - "@proxy_kafee"
+      - "@proxy_kafee 2"
       - "@proxy_kafee  کانال تلگرامی ما"
   - name: ♻️ 自动选择
     type: url-test
@@ -21,7 +27,10 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - "@proxy_kafee2"
+      - "@proxy_kafee3`"
       - "@proxy_kafee"
+      - "@proxy_kafee 2"
       - "@proxy_kafee  کانال تلگرامی ما"
   - name: 🌍 国外媒体
     type: select
@@ -29,28 +38,40 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - "@proxy_kafee2"
+      - "@proxy_kafee3`"
       - "@proxy_kafee"
+      - "@proxy_kafee 2"
       - "@proxy_kafee  کانال تلگرامی ما"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - "@proxy_kafee2"
+      - "@proxy_kafee3`"
       - "@proxy_kafee"
+      - "@proxy_kafee 2"
       - "@proxy_kafee  کانال تلگرامی ما"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - "@proxy_kafee2"
+      - "@proxy_kafee3`"
       - "@proxy_kafee"
+      - "@proxy_kafee 2"
       - "@proxy_kafee  کانال تلگرامی ما"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - "@proxy_kafee2"
+      - "@proxy_kafee3`"
       - "@proxy_kafee"
+      - "@proxy_kafee 2"
       - "@proxy_kafee  کانال تلگرامی ما"
   - name: 🎯 全球直连
     type: select
@@ -79,7 +100,10 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - "@proxy_kafee2"
+      - "@proxy_kafee3`"
       - "@proxy_kafee"
+      - "@proxy_kafee 2"
       - "@proxy_kafee  کانال تلگرامی ما"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连

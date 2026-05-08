@@ -465,7 +465,10 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: "@proxy_kafee2", server: srm.kishonline.online, port: 443, type: hysteria2, ports: 443, password: Kz0JGcGICb, obfs: salamander, obfs-password: kish-data-center, sni: srm.kishonline.online, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee3`", server: meli.masterdadeh.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 7fc9a955-4910-5b53-f516-0af48ec30de0, network: ws, ws-opts: {path: /, headers: {Host: meli.masterdadeh.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee", server: 45.90.75.168, port: 2015, type: vless, tls: true, packet-encoding: xudp, uuid: 9692c29e-f714-44a5-abef-430d1169635a, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee 2", server: 2.144.4.245, port: 23176, type: vless, tls: true, packet-encoding: xudp, uuid: 9d0b7f4e-b0fe-42bf-a550-31b7ecb0e053, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee  کانال تلگرامی ما", server: 185.236.38.44, port: 19946, type: vmess, uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -483,7 +486,10 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - "@proxy_kafee2"
+      - "@proxy_kafee3`"
       - "@proxy_kafee"
+      - "@proxy_kafee 2"
       - "@proxy_kafee  کانال تلگرامی ما"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -491,7 +497,10 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - "@proxy_kafee2"
+      - "@proxy_kafee3`"
       - "@proxy_kafee"
+      - "@proxy_kafee 2"
       - "@proxy_kafee  کانال تلگرامی ما"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -499,7 +508,10 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - "@proxy_kafee2"
+      - "@proxy_kafee3`"
       - "@proxy_kafee"
+      - "@proxy_kafee 2"
       - "@proxy_kafee  کانال تلگرامی ما"
   - name: اتصال پایدار 🔗
     type: url-test
@@ -516,7 +528,10 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@proxy_kafee2"
+      - "@proxy_kafee3`"
       - "@proxy_kafee"
+      - "@proxy_kafee 2"
       - "@proxy_kafee  کانال تلگرامی ما"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -524,7 +539,10 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@proxy_kafee2"
+      - "@proxy_kafee3`"
       - "@proxy_kafee"
+      - "@proxy_kafee 2"
       - "@proxy_kafee  کانال تلگرامی ما"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -532,7 +550,10 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@proxy_kafee2"
+      - "@proxy_kafee3`"
       - "@proxy_kafee"
+      - "@proxy_kafee 2"
       - "@proxy_kafee  کانال تلگرامی ما"
   - name: دانلود منیجر 📥
     type: select
