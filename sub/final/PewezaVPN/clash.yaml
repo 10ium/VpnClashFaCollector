@@ -465,11 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@PewezaVPN (تلگرام)`", server: bop.ghoststeven.site, port: 442, type: vless, tls: true, packet-encoding: xudp, uuid: 34c4aa70-2a68-4754-b74e-5a336877af6e, servername: bop.ghoststeven.site, alpn: [h2%2Chttp%2F1.1], network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: aparat-stream}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@PewezaVPN (تلگرام)` 2", server: 62.60.147.73, port: 20020, type: vless, tls: true, packet-encoding: xudp, uuid: 60de7f07-71b7-4b37-a04c-db5d769ec130, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@PewezaVPN (تلگرام)` 3", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: a2aa9012-57c4-4e7f-9a1d-018ed0292f2b, network: ws, ws-opts: {path: /, headers: {Host: trx.noventa.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@PewezaVPN (تلگرام)` 4", server: arvan1.un1ty.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: be0bff33-a095-4f82-9edb-9073c3ba08af, network: ws, ws-opts: {path: /jesuschrist, headers: {Host: arvan1.un1ty.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@PewezaVPN (تلگرام)` 5", server: 185.143.233.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: ca683ff2-5d4b-4d3a-8802-a3f790801604, network: ws, ws-opts: {path: /, headers: {Host: d.nsa03.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@PewezaVPN(تلگرام)`", server: xiaomandapple4certificate.ikco.ir.soserverbot.shop, port: 15152, type: ss, cipher: chacha20-ietf-poly1305, password: vxNw5diZYN3srq8uCfmQR98vYc39ect4, udp: true, tfo: false}
+  - {name: "@PewezaVPN(تلگرام)` 2", server: 185.8.172.182, port: 20249, type: vless, tls: true, packet-encoding: xudp, uuid: 41c9e6be-cd11-4511-996c-7db798d38540, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,33 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@PewezaVPN (تلگرام)`"
-      - "@PewezaVPN (تلگرام)` 2"
-      - "@PewezaVPN (تلگرام)` 3"
-      - "@PewezaVPN (تلگرام)` 4"
-      - "@PewezaVPN (تلگرام)` 5"
+      - "@PewezaVPN(تلگرام)`"
+      - "@PewezaVPN(تلگرام)` 2"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@PewezaVPN (تلگرام)`"
-      - "@PewezaVPN (تلگرام)` 2"
-      - "@PewezaVPN (تلگرام)` 3"
-      - "@PewezaVPN (تلگرام)` 4"
-      - "@PewezaVPN (تلگرام)` 5"
+      - "@PewezaVPN(تلگرام)`"
+      - "@PewezaVPN(تلگرام)` 2"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@PewezaVPN (تلگرام)`"
-      - "@PewezaVPN (تلگرام)` 2"
-      - "@PewezaVPN (تلگرام)` 3"
-      - "@PewezaVPN (تلگرام)` 4"
-      - "@PewezaVPN (تلگرام)` 5"
+      - "@PewezaVPN(تلگرام)`"
+      - "@PewezaVPN(تلگرام)` 2"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -528,33 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@PewezaVPN (تلگرام)`"
-      - "@PewezaVPN (تلگرام)` 2"
-      - "@PewezaVPN (تلگرام)` 3"
-      - "@PewezaVPN (تلگرام)` 4"
-      - "@PewezaVPN (تلگرام)` 5"
+      - "@PewezaVPN(تلگرام)`"
+      - "@PewezaVPN(تلگرام)` 2"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@PewezaVPN (تلگرام)`"
-      - "@PewezaVPN (تلگرام)` 2"
-      - "@PewezaVPN (تلگرام)` 3"
-      - "@PewezaVPN (تلگرام)` 4"
-      - "@PewezaVPN (تلگرام)` 5"
+      - "@PewezaVPN(تلگرام)`"
+      - "@PewezaVPN(تلگرام)` 2"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@PewezaVPN (تلگرام)`"
-      - "@PewezaVPN (تلگرام)` 2"
-      - "@PewezaVPN (تلگرام)` 3"
-      - "@PewezaVPN (تلگرام)` 4"
-      - "@PewezaVPN (تلگرام)` 5"
+      - "@PewezaVPN(تلگرام)`"
+      - "@PewezaVPN(تلگرام)` 2"
   - name: دانلود منیجر 📥
     type: select
     proxies:

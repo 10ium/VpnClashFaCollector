@@ -6,9 +6,10 @@ log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
   - {name: TEL;Father_vpn³`, server: srm.kishonline.online, port: 443, type: hysteria2, ports: 443, password: Kz0JGcGICb, obfs: salamander, obfs-password: kish-data-center, sni: srm.kishonline.online, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: TEL;Father_vpn`, server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 606252cc-1c04-4e09-b5b1-f537dbcf5f58, network: ws, ws-opts: {path: /, headers: {Host: firelinkk.arian-go-internet.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: TEL;Father_vpn², server: 2.144.4.245, port: 23176, type: vless, tls: true, packet-encoding: xudp, uuid: 9d0b7f4e-b0fe-42bf-a550-31b7ecb0e053, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: TEL;Father_vpn`, server: Tapsi.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 9f4c3a72-a88e-4ee3-bee8-40901085a352, network: ws, ws-opts: {path: /cdn, headers: {Host: Zp.movizdl.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: TEL;Father_vpn` 2, server: camp.nahidapp.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: bdffa6a0-8da1-4f6a-aede-bcda4daa6c1f, network: ws, ws-opts: {path: /IF_VPN_Bot, headers: {Host: camp.nahidapp.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: TEL;Father_vpn` 3, server: snapp.ir, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: dae2ddc6-a892-495f-a001-181cec56ad12, network: ws, ws-opts: {path: /, headers: {Host: p1.razstar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -16,9 +17,10 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - TEL;Father_vpn³`
-      - TEL;Father_vpn²
       - TEL;Father_vpn`
+      - TEL;Father_vpn²
       - TEL;Father_vpn` 2
+      - TEL;Father_vpn` 3
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -26,9 +28,10 @@ proxy-groups:
     tolerance: 50
     proxies:
       - TEL;Father_vpn³`
-      - TEL;Father_vpn²
       - TEL;Father_vpn`
+      - TEL;Father_vpn²
       - TEL;Father_vpn` 2
+      - TEL;Father_vpn` 3
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -36,36 +39,40 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - TEL;Father_vpn³`
-      - TEL;Father_vpn²
       - TEL;Father_vpn`
+      - TEL;Father_vpn²
       - TEL;Father_vpn` 2
+      - TEL;Father_vpn` 3
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - TEL;Father_vpn³`
-      - TEL;Father_vpn²
       - TEL;Father_vpn`
+      - TEL;Father_vpn²
       - TEL;Father_vpn` 2
+      - TEL;Father_vpn` 3
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - TEL;Father_vpn³`
-      - TEL;Father_vpn²
       - TEL;Father_vpn`
+      - TEL;Father_vpn²
       - TEL;Father_vpn` 2
+      - TEL;Father_vpn` 3
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - TEL;Father_vpn³`
-      - TEL;Father_vpn²
       - TEL;Father_vpn`
+      - TEL;Father_vpn²
       - TEL;Father_vpn` 2
+      - TEL;Father_vpn` 3
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -94,9 +101,10 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - TEL;Father_vpn³`
-      - TEL;Father_vpn²
       - TEL;Father_vpn`
+      - TEL;Father_vpn²
       - TEL;Father_vpn` 2
+      - TEL;Father_vpn` 3
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
