@@ -465,10 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: TEL;Father_vpn³`, server: srm.kishonline.online, port: 443, type: hysteria2, ports: 443, password: Kz0JGcGICb, obfs: salamander, obfs-password: kish-data-center, sni: srm.kishonline.online, skip-cert-verify: false, udp: true, tfo: false}
   - {name: TEL;Father_vpn`, server: arvan.servermeli.xyz, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 515fa878-1381-4b2e-877a-7394d7135d5c, network: ws, ws-opts: {path: /, headers: {Host: conf1.chitav2.com}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: TEL;Father_vpn` 2, server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 606252cc-1c04-4e09-b5b1-f537dbcf5f58, network: ws, ws-opts: {path: /, headers: {Host: firelinkk.arian-go-internet.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: TEL;Father_vpn², server: 2.144.4.245, port: 23176, type: vless, tls: true, packet-encoding: xudp, uuid: 9d0b7f4e-b0fe-42bf-a550-31b7ecb0e053, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: TEL;Father_vpn` 3, server: snapp.ir, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: dae2ddc6-a892-495f-a001-181cec56ad12, network: ws, ws-opts: {path: /, headers: {Host: p1.razstar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -486,10 +484,8 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - TEL;Father_vpn³`
       - TEL;Father_vpn`
       - TEL;Father_vpn` 2
-      - TEL;Father_vpn²
       - TEL;Father_vpn` 3
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -497,10 +493,8 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - TEL;Father_vpn³`
       - TEL;Father_vpn`
       - TEL;Father_vpn` 2
-      - TEL;Father_vpn²
       - TEL;Father_vpn` 3
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -508,10 +502,8 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - TEL;Father_vpn³`
       - TEL;Father_vpn`
       - TEL;Father_vpn` 2
-      - TEL;Father_vpn²
       - TEL;Father_vpn` 3
   - name: اتصال پایدار 🔗
     type: url-test
@@ -528,10 +520,8 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - TEL;Father_vpn³`
       - TEL;Father_vpn`
       - TEL;Father_vpn` 2
-      - TEL;Father_vpn²
       - TEL;Father_vpn` 3
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -539,10 +529,8 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - TEL;Father_vpn³`
       - TEL;Father_vpn`
       - TEL;Father_vpn` 2
-      - TEL;Father_vpn²
       - TEL;Father_vpn` 3
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -550,10 +538,8 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - TEL;Father_vpn³`
       - TEL;Father_vpn`
       - TEL;Father_vpn` 2
-      - TEL;Father_vpn²
       - TEL;Father_vpn` 3
   - name: دانلود منیجر 📥
     type: select
