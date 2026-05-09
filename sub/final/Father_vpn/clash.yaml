@@ -466,8 +466,7 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: TEL;Father_vpn`, server: arvan.servermeli.xyz, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 515fa878-1381-4b2e-877a-7394d7135d5c, network: ws, ws-opts: {path: /, headers: {Host: conf1.chitav2.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: TEL;Father_vpn` 2, server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 606252cc-1c04-4e09-b5b1-f537dbcf5f58, network: ws, ws-opts: {path: /, headers: {Host: firelinkk.arian-go-internet.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: TEL;Father_vpn` 3, server: snapp.ir, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: dae2ddc6-a892-495f-a001-181cec56ad12, network: ws, ws-opts: {path: /, headers: {Host: p1.razstar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: TEL;Father_vpn` 2, server: snapp.ir, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: dae2ddc6-a892-495f-a001-181cec56ad12, network: ws, ws-opts: {path: /, headers: {Host: p1.razstar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,7 +485,6 @@ proxy-groups:
     proxies:
       - TEL;Father_vpn`
       - TEL;Father_vpn` 2
-      - TEL;Father_vpn` 3
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -495,7 +493,6 @@ proxy-groups:
     proxies:
       - TEL;Father_vpn`
       - TEL;Father_vpn` 2
-      - TEL;Father_vpn` 3
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -504,7 +501,6 @@ proxy-groups:
     proxies:
       - TEL;Father_vpn`
       - TEL;Father_vpn` 2
-      - TEL;Father_vpn` 3
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -522,7 +518,6 @@ proxy-groups:
     proxies:
       - TEL;Father_vpn`
       - TEL;Father_vpn` 2
-      - TEL;Father_vpn` 3
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -531,7 +526,6 @@ proxy-groups:
     proxies:
       - TEL;Father_vpn`
       - TEL;Father_vpn` 2
-      - TEL;Father_vpn` 3
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -540,7 +534,6 @@ proxy-groups:
     proxies:
       - TEL;Father_vpn`
       - TEL;Father_vpn` 2
-      - TEL;Father_vpn` 3
   - name: دانلود منیجر 📥
     type: select
     proxies:

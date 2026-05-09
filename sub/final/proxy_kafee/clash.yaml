@@ -466,8 +466,6 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: "@proxy_kafee2", server: SNApp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 054be705-6bbf-42cd-9970-acfc325a34ca, network: ws, ws-opts: {path: /Hoseisecu, headers: {Host: MMW.abanservers.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee1", server: 94.182.157.70, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 7ef9fbc7-0fd8-475b-8a84-1c87e7d37dd1, network: ws, ws-opts: {path: /, headers: {Host: s11.mn-g.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee`", server: snapp.ir, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: dae2ddc6-a892-495f-a001-181cec56ad12, network: ws, ws-opts: {path: /, headers: {Host: p1.razstar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,8 +483,6 @@ proxy-groups:
     type: select
     proxies:
       - "@proxy_kafee2"
-      - "@proxy_kafee1"
-      - "@proxy_kafee`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -494,8 +490,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@proxy_kafee2"
-      - "@proxy_kafee1"
-      - "@proxy_kafee`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -503,8 +497,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@proxy_kafee2"
-      - "@proxy_kafee1"
-      - "@proxy_kafee`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -521,8 +513,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@proxy_kafee2"
-      - "@proxy_kafee1"
-      - "@proxy_kafee`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -530,8 +520,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@proxy_kafee2"
-      - "@proxy_kafee1"
-      - "@proxy_kafee`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -539,8 +527,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@proxy_kafee2"
-      - "@proxy_kafee1"
-      - "@proxy_kafee`"
   - name: دانلود منیجر 📥
     type: select
     proxies:

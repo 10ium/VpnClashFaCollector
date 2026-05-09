@@ -466,6 +466,7 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: "@i10VPN - Psiphon 63`", server: snapp.ir, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 0ed63d7f-ba30-4ec6-b539-d3fd9260f597, network: ws, ws-opts: {path: /api, headers: {Host: ryzo.px-ir.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@i10VPN - Psiphon 66`", server: food.hotelghooo.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 9ce3e802-d077-4d4c-87ca-f53b1febfd74, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: do.hotelghooo.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@i10VPN - Psiphon 64", server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf, port: 21103, type: vmess, uuid: 9ab0f866-d3aa-4985-8168-711f16640af9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -484,6 +485,7 @@ proxy-groups:
     type: select
     proxies:
       - "@i10VPN - Psiphon 63`"
+      - "@i10VPN - Psiphon 66`"
       - "@i10VPN - Psiphon 64"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -492,6 +494,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@i10VPN - Psiphon 63`"
+      - "@i10VPN - Psiphon 66`"
       - "@i10VPN - Psiphon 64"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -500,6 +503,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@i10VPN - Psiphon 63`"
+      - "@i10VPN - Psiphon 66`"
       - "@i10VPN - Psiphon 64"
   - name: اتصال پایدار 🔗
     type: url-test
@@ -517,6 +521,7 @@ proxy-groups:
     interval: 600
     proxies:
       - "@i10VPN - Psiphon 63`"
+      - "@i10VPN - Psiphon 66`"
       - "@i10VPN - Psiphon 64"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -525,6 +530,7 @@ proxy-groups:
     interval: 600
     proxies:
       - "@i10VPN - Psiphon 63`"
+      - "@i10VPN - Psiphon 66`"
       - "@i10VPN - Psiphon 64"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -533,6 +539,7 @@ proxy-groups:
     interval: 600
     proxies:
       - "@i10VPN - Psiphon 63`"
+      - "@i10VPN - Psiphon 66`"
       - "@i10VPN - Psiphon 64"
   - name: دانلود منیجر 📥
     type: select

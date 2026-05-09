@@ -5,6 +5,7 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: "☑➜چنلمون: Express_freevpn@`", server: th.gostargate.top, port: 49961, type: vless, tls: true, packet-encoding: xudp, uuid: 2cdadfd7-62b1-4f92-ae5b-54c05ec21cc2, host: th.gostargate.top, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "☑➜چنلمون: Express_freevpn@", server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf, port: 21103, type: vmess, uuid: 9ab0f866-d3aa-4985-8168-711f16640af9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
@@ -12,6 +13,7 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - "☑➜چنلمون: Express_freevpn@`"
       - "☑➜چنلمون: Express_freevpn@"
   - name: ♻️ 自动选择
     type: url-test
@@ -19,6 +21,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - "☑➜چنلمون: Express_freevpn@`"
       - "☑➜چنلمون: Express_freevpn@"
   - name: 🌍 国外媒体
     type: select
@@ -26,24 +29,28 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - "☑➜چنلمون: Express_freevpn@`"
       - "☑➜چنلمون: Express_freevpn@"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - "☑➜چنلمون: Express_freevpn@`"
       - "☑➜چنلمون: Express_freevpn@"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - "☑➜چنلمون: Express_freevpn@`"
       - "☑➜چنلمون: Express_freevpn@"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - "☑➜چنلمون: Express_freevpn@`"
       - "☑➜چنلمون: Express_freevpn@"
   - name: 🎯 全球直连
     type: select
@@ -72,6 +79,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - "☑➜چنلمون: Express_freevpn@`"
       - "☑➜چنلمون: Express_freevpn@"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
