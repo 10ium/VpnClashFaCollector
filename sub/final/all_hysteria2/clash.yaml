@@ -465,10 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@SiNAVM کانال تلگرامی`", server: srm.kishonline.online, port: 443, type: hysteria2, ports: 443, password: Kz0JGcGICb, obfs: salamander, obfs-password: kish-data-center, sni: srm.kishonline.online, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad`", server: srm.kishonline.online, port: 443, type: hysteria2, ports: 443, password: Kz0JGcGICb, obfs: salamander, obfs-password: kish-data-center, sni: srm.kishonline.online, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee2", server: srm.kishonline.online, port: 443, type: hysteria2, ports: 443, password: Kz0JGcGICb, obfs: salamander, obfs-password: kish-data-center, sni: srm.kishonline.online, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: TEL;Father_vpn³`, server: srm.kishonline.online, port: 443, type: hysteria2, ports: 443, password: Kz0JGcGICb, obfs: salamander, obfs-password: kish-data-center, sni: srm.kishonline.online, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad`", server: srm.kishonline.online, port: 443, type: hysteria2, ports: 443, password: vFy042zmin, obfs: salamander, obfs-password: kish-data-center, sni: srm.kishonline.online, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,30 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@SiNAVM کانال تلگرامی`"
       - "@filembad`"
-      - "@proxy_kafee2"
-      - TEL;Father_vpn³`
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@SiNAVM کانال تلگرامی`"
       - "@filembad`"
-      - "@proxy_kafee2"
-      - TEL;Father_vpn³`
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@SiNAVM کانال تلگرامی`"
       - "@filembad`"
-      - "@proxy_kafee2"
-      - TEL;Father_vpn³`
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -524,30 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@SiNAVM کانال تلگرامی`"
       - "@filembad`"
-      - "@proxy_kafee2"
-      - TEL;Father_vpn³`
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@SiNAVM کانال تلگرامی`"
       - "@filembad`"
-      - "@proxy_kafee2"
-      - TEL;Father_vpn³`
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@SiNAVM کانال تلگرامی`"
       - "@filembad`"
-      - "@proxy_kafee2"
-      - TEL;Father_vpn³`
   - name: دانلود منیجر 📥
     type: select
     proxies:

@@ -5,53 +5,53 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: TEL;Father_vpn`, server: arvan.servermeli.xyz, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 515fa878-1381-4b2e-877a-7394d7135d5c, network: ws, ws-opts: {path: /, headers: {Host: conf1.chitav2.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: TEL;Father_vpn` 2, server: snapp.ir, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: dae2ddc6-a892-495f-a001-181cec56ad12, network: ws, ws-opts: {path: /, headers: {Host: p1.razstar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: TEL;Father_vpn, server: camp.nahidapp.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 799f939b-964b-4416-84ac-18a6ace7fe70, network: ws, ws-opts: {path: /IF_VPN_Bot, headers: {Host: camp.nahidapp.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: TEL;Father_vpn 2, server: 185.236.38.44, port: 19946, type: vmess, uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - TEL;Father_vpn`
-      - TEL;Father_vpn` 2
+      - TEL;Father_vpn
+      - TEL;Father_vpn 2
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - TEL;Father_vpn`
-      - TEL;Father_vpn` 2
+      - TEL;Father_vpn
+      - TEL;Father_vpn 2
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - TEL;Father_vpn`
-      - TEL;Father_vpn` 2
+      - TEL;Father_vpn
+      - TEL;Father_vpn 2
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - TEL;Father_vpn`
-      - TEL;Father_vpn` 2
+      - TEL;Father_vpn
+      - TEL;Father_vpn 2
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - TEL;Father_vpn`
-      - TEL;Father_vpn` 2
+      - TEL;Father_vpn
+      - TEL;Father_vpn 2
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - TEL;Father_vpn`
-      - TEL;Father_vpn` 2
+      - TEL;Father_vpn
+      - TEL;Father_vpn 2
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -79,8 +79,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - TEL;Father_vpn`
-      - TEL;Father_vpn` 2
+      - TEL;Father_vpn
+      - TEL;Father_vpn 2
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

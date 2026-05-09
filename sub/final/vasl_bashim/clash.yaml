@@ -465,9 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@vasl_bashim`", server: snapp.ir, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 0ed63d7f-ba30-4ec6-b539-d3fd9260f597, network: ws, ws-opts: {path: /api, headers: {Host: ryzo.px-ir.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: vasl_bashim`, server: snapp.ir, port: 2082, type: vless, tls: true, packet-encoding: xudp, uuid: 15d05a66-e5cd-4173-8bac-185c74aa5267, network: ws, ws-opts: {path: /path, headers: {Host: cdn.linoxa.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: th.gostargate.top:49961, server: th.gostargate.top, port: 49961, type: vless, tls: true, packet-encoding: xudp, uuid: 2cdadfd7-62b1-4f92-ae5b-54c05ec21cc2, host: th.gostargate.top, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: t.me/vasl_bashim`, server: 91.216.171.60, port: 34776, type: vless, tls: true, packet-encoding: xudp, uuid: 65343f5e-d71d-439c-8c03-ca41f4683e7a, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim`", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 35431605-610b-4e20-9c0d-25c3616ff05b, network: ws, ws-opts: {path: /API/superip, headers: {Host: brand2.bi6x.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim` 2", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: d9ae4879-27cf-4fed-90aa-3a606eaab4bc, network: ws, ws-opts: {path: /, headers: {Host: arvanabr-iran.followon.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: vasl_bashim, server: 185.236.38.44, port: 19946, type: vmess, uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,27 +486,33 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@vasl_bashim`"
+      - vasl_bashim`
       - th.gostargate.top:49961
-      - t.me/vasl_bashim`
+      - "@vasl_bashim`"
+      - "@vasl_bashim` 2"
+      - vasl_bashim
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@vasl_bashim`"
+      - vasl_bashim`
       - th.gostargate.top:49961
-      - t.me/vasl_bashim`
+      - "@vasl_bashim`"
+      - "@vasl_bashim` 2"
+      - vasl_bashim
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@vasl_bashim`"
+      - vasl_bashim`
       - th.gostargate.top:49961
-      - t.me/vasl_bashim`
+      - "@vasl_bashim`"
+      - "@vasl_bashim` 2"
+      - vasl_bashim
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -520,27 +528,33 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@vasl_bashim`"
+      - vasl_bashim`
       - th.gostargate.top:49961
-      - t.me/vasl_bashim`
+      - "@vasl_bashim`"
+      - "@vasl_bashim` 2"
+      - vasl_bashim
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@vasl_bashim`"
+      - vasl_bashim`
       - th.gostargate.top:49961
-      - t.me/vasl_bashim`
+      - "@vasl_bashim`"
+      - "@vasl_bashim` 2"
+      - vasl_bashim
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@vasl_bashim`"
+      - vasl_bashim`
       - th.gostargate.top:49961
-      - t.me/vasl_bashim`
+      - "@vasl_bashim`"
+      - "@vasl_bashim` 2"
+      - vasl_bashim
   - name: دانلود منیجر 📥
     type: select
     proxies:

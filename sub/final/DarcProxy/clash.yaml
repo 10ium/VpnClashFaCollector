@@ -465,7 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 📊, server: w.kelimanjaro.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 59ab713f-0662-47da-99f0-2c5cc4acc59d, network: ws, ws-opts: {path: /, headers: {Host: w.kelimanjaro.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: https://t.me/DarcProxy`, server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: b0ec6286-0e0f-4ff3-8a07-af5b1a06954f, network: ws, ws-opts: {path: "/?ed=2080", headers: {Host: 1.jojo.avenflow.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 📊
+      - https://t.me/DarcProxy`
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 📊
+      - https://t.me/DarcProxy`
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 📊
+      - https://t.me/DarcProxy`
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 📊
+      - https://t.me/DarcProxy`
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 📊
+      - https://t.me/DarcProxy`
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 📊
+      - https://t.me/DarcProxy`
   - name: دانلود منیجر 📥
     type: select
     proxies:

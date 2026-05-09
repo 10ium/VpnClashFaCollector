@@ -5,46 +5,46 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 📊, server: w.kelimanjaro.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 59ab713f-0662-47da-99f0-2c5cc4acc59d, network: ws, ws-opts: {path: /, headers: {Host: w.kelimanjaro.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: https://t.me/DarcProxy`, server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: b0ec6286-0e0f-4ff3-8a07-af5b1a06954f, network: ws, ws-opts: {path: "/?ed=2080", headers: {Host: 1.jojo.avenflow.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 📊
+      - https://t.me/DarcProxy`
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 📊
+      - https://t.me/DarcProxy`
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 📊
+      - https://t.me/DarcProxy`
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 📊
+      - https://t.me/DarcProxy`
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 📊
+      - https://t.me/DarcProxy`
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 📊
+      - https://t.me/DarcProxy`
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +72,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 📊
+      - https://t.me/DarcProxy`
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
