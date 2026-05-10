@@ -466,6 +466,8 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: "☑➜چنلمون: Express_freevpn@`", server: th.gostargate.top, port: 49961, type: vless, tls: true, packet-encoding: xudp, uuid: 2cdadfd7-62b1-4f92-ae5b-54c05ec21cc2, host: th.gostargate.top, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "☑➜چنلمون: Express_freevpn@", server: ads.restaurantplusy.ir, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: 72aba962-4f2d-459e-89a2-c8b2f89433d6, network: ws, ws-opts: {path: /, headers: {Host: ads.restaurantplusy.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "☑➜چنلمون: Express_freevpn@` 2", server: 185.143.233.200, port: 2086, type: vless, tls: true, packet-encoding: xudp, uuid: 7cd11ffb-1ebe-4ec8-ae1d-08b36f17e87d, network: ws, ws-opts: {path: /, headers: {Host: nima.hayalco.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,6 +485,8 @@ proxy-groups:
     type: select
     proxies:
       - "☑➜چنلمون: Express_freevpn@`"
+      - "☑➜چنلمون: Express_freevpn@"
+      - "☑➜چنلمون: Express_freevpn@` 2"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -490,6 +494,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "☑➜چنلمون: Express_freevpn@`"
+      - "☑➜چنلمون: Express_freevpn@"
+      - "☑➜چنلمون: Express_freevpn@` 2"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -497,6 +503,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "☑➜چنلمون: Express_freevpn@`"
+      - "☑➜چنلمون: Express_freevpn@"
+      - "☑➜چنلمون: Express_freevpn@` 2"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -513,6 +521,8 @@ proxy-groups:
     interval: 600
     proxies:
       - "☑➜چنلمون: Express_freevpn@`"
+      - "☑➜چنلمون: Express_freevpn@"
+      - "☑➜چنلمون: Express_freevpn@` 2"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -520,6 +530,8 @@ proxy-groups:
     interval: 600
     proxies:
       - "☑➜چنلمون: Express_freevpn@`"
+      - "☑➜چنلمون: Express_freevpn@"
+      - "☑➜چنلمون: Express_freevpn@` 2"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -527,6 +539,8 @@ proxy-groups:
     interval: 600
     proxies:
       - "☑➜چنلمون: Express_freevpn@`"
+      - "☑➜چنلمون: Express_freevpn@"
+      - "☑➜چنلمون: Express_freevpn@` 2"
   - name: دانلود منیجر 📥
     type: select
     proxies:
