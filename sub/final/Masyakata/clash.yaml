@@ -466,6 +466,7 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: "@free_v2ray_npv عمو ممد بیا چنل", server: free.jibjob.mom, port: 8546, type: vless, tls: true, packet-encoding: xudp, uuid: af51f262-5c26-47ff-8e58-0f7e828f4f2c, network: ws, ws-opts: {path: /, headers: {Host: free.jibjob.mom}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@oxnet_ir | ترکیب 19", server: iman.neticoapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: d11402f2-af49-484e-9f60-6acaa7e67ace, network: ws, ws-opts: {path: /, headers: {Host: iman.neticoapp.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,6 +484,7 @@ proxy-groups:
     type: select
     proxies:
       - "@free_v2ray_npv عمو ممد بیا چنل"
+      - "@oxnet_ir | ترکیب 19"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -490,6 +492,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@free_v2ray_npv عمو ممد بیا چنل"
+      - "@oxnet_ir | ترکیب 19"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -497,6 +500,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@free_v2ray_npv عمو ممد بیا چنل"
+      - "@oxnet_ir | ترکیب 19"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -513,6 +517,7 @@ proxy-groups:
     interval: 600
     proxies:
       - "@free_v2ray_npv عمو ممد بیا چنل"
+      - "@oxnet_ir | ترکیب 19"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -520,6 +525,7 @@ proxy-groups:
     interval: 600
     proxies:
       - "@free_v2ray_npv عمو ممد بیا چنل"
+      - "@oxnet_ir | ترکیب 19"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -527,6 +533,7 @@ proxy-groups:
     interval: 600
     proxies:
       - "@free_v2ray_npv عمو ممد بیا چنل"
+      - "@oxnet_ir | ترکیب 19"
   - name: دانلود منیجر 📥
     type: select
     proxies:
