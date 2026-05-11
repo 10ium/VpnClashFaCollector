@@ -465,7 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "Telegram : @SocksProxy 🍃", server: xiaomandapple4certificate.ikco.ir.soserverbot.shop, port: 15152, type: ss, cipher: chacha20-ietf-poly1305, password: vxNw5diZYN3srq8uCfmQR98vYc39ect4, udp: true, tfo: false}
+  - {name: "@oxnet_ir | ترکیب 20`", server: vpnxvpn.nazincup.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 4e3f6a5b-acd3-4566-8349-bc71602b99c1, network: ws, ws-opts: {path: /api, headers: {Host: vpnxvpn.nazincup.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "Telegram : @SocksProxy 🍃"
+      - "@oxnet_ir | ترکیب 20`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "Telegram : @SocksProxy 🍃"
+      - "@oxnet_ir | ترکیب 20`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "Telegram : @SocksProxy 🍃"
+      - "@oxnet_ir | ترکیب 20`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "Telegram : @SocksProxy 🍃"
+      - "@oxnet_ir | ترکیب 20`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "Telegram : @SocksProxy 🍃"
+      - "@oxnet_ir | ترکیب 20`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "Telegram : @SocksProxy 🍃"
+      - "@oxnet_ir | ترکیب 20`"
   - name: دانلود منیجر 📥
     type: select
     proxies:
