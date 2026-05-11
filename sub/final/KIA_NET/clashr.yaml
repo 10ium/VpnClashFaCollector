@@ -5,46 +5,67 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@Slip_Net  چنل`", server: 185.143.233.122, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: c09816d1-9b53-4e0d-85a8-9def477121ab, network: ws, ws-opts: {path: /ws, headers: {Host: cdnisfucka.drnimaamini.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "CDN☁️-🇬🇧-1.42TB📊-2D,2H⏳", server: 50.7.4.106, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d6ef4a50-ea08-4f35-ba27-b58a86487dd0, servername: wro.u3er1.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /ws, headers: {Host: wro.u3er1.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "CDN☁️-🇬🇧-1.42TB📊-2D,2H⏳`", server: 50.7.4.106, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d6ef4a50-ea08-4f35-ba27-b58a86487dd0, servername: wro.u3er1.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /ws, headers: {Host: wro.u3er1.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "CDN☁️--1.42TB📊-2D,2H⏳", server: 91.217.177.48, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d6ef4a50-ea08-4f35-ba27-b58a86487dd0, servername: wro.u3er1.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /ws, headers: {Host: wro.u3er1.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Slip_Net", server: 185.236.38.44, port: 19946, type: vmess, uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@Slip_Net  چنل`"
+      - CDN☁️-🇬🇧-1.42TB📊-2D,2H⏳
+      - CDN☁️-🇬🇧-1.42TB📊-2D,2H⏳`
+      - CDN☁️--1.42TB📊-2D,2H⏳
+      - "@Slip_Net"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@Slip_Net  چنل`"
+      - CDN☁️-🇬🇧-1.42TB📊-2D,2H⏳
+      - CDN☁️-🇬🇧-1.42TB📊-2D,2H⏳`
+      - CDN☁️--1.42TB📊-2D,2H⏳
+      - "@Slip_Net"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@Slip_Net  چنل`"
+      - CDN☁️-🇬🇧-1.42TB📊-2D,2H⏳
+      - CDN☁️-🇬🇧-1.42TB📊-2D,2H⏳`
+      - CDN☁️--1.42TB📊-2D,2H⏳
+      - "@Slip_Net"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@Slip_Net  چنل`"
+      - CDN☁️-🇬🇧-1.42TB📊-2D,2H⏳
+      - CDN☁️-🇬🇧-1.42TB📊-2D,2H⏳`
+      - CDN☁️--1.42TB📊-2D,2H⏳
+      - "@Slip_Net"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@Slip_Net  چنل`"
+      - CDN☁️-🇬🇧-1.42TB📊-2D,2H⏳
+      - CDN☁️-🇬🇧-1.42TB📊-2D,2H⏳`
+      - CDN☁️--1.42TB📊-2D,2H⏳
+      - "@Slip_Net"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@Slip_Net  چنل`"
+      - CDN☁️-🇬🇧-1.42TB📊-2D,2H⏳
+      - CDN☁️-🇬🇧-1.42TB📊-2D,2H⏳`
+      - CDN☁️--1.42TB📊-2D,2H⏳
+      - "@Slip_Net"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +93,10 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@Slip_Net  چنل`"
+      - CDN☁️-🇬🇧-1.42TB📊-2D,2H⏳
+      - CDN☁️-🇬🇧-1.42TB📊-2D,2H⏳`
+      - CDN☁️--1.42TB📊-2D,2H⏳
+      - "@Slip_Net"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

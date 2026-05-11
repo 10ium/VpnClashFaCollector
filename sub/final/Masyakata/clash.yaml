@@ -466,7 +466,6 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: "@oxnet_ir | ترکیب 20", server: vpnxvpn.nazincup.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 4e3f6a5b-acd3-4566-8349-bc71602b99c1, network: ws, ws-opts: {path: /api, headers: {Host: vpnxvpn.nazincup.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@oxnet_ir | ترکیب 19", server: iman.neticoapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: d11402f2-af49-484e-9f60-6acaa7e67ace, network: ws, ws-opts: {path: /, headers: {Host: iman.neticoapp.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,7 +483,6 @@ proxy-groups:
     type: select
     proxies:
       - "@oxnet_ir | ترکیب 20"
-      - "@oxnet_ir | ترکیب 19"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -492,7 +490,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@oxnet_ir | ترکیب 20"
-      - "@oxnet_ir | ترکیب 19"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -500,7 +497,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@oxnet_ir | ترکیب 20"
-      - "@oxnet_ir | ترکیب 19"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -517,7 +513,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@oxnet_ir | ترکیب 20"
-      - "@oxnet_ir | ترکیب 19"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -525,7 +520,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@oxnet_ir | ترکیب 20"
-      - "@oxnet_ir | ترکیب 19"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -533,7 +527,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@oxnet_ir | ترکیب 20"
-      - "@oxnet_ir | ترکیب 19"
   - name: دانلود منیجر 📥
     type: select
     proxies:

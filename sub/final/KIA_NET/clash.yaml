@@ -465,7 +465,10 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Slip_Net  چنل`", server: 185.143.233.122, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: c09816d1-9b53-4e0d-85a8-9def477121ab, network: ws, ws-opts: {path: /ws, headers: {Host: cdnisfucka.drnimaamini.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "CDN☁️-🇬🇧-1.42TB📊-2D,2H⏳", server: 50.7.4.106, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d6ef4a50-ea08-4f35-ba27-b58a86487dd0, servername: wro.u3er1.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /ws, headers: {Host: wro.u3er1.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "CDN☁️-🇬🇧-1.42TB📊-2D,2H⏳`", server: 50.7.4.106, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d6ef4a50-ea08-4f35-ba27-b58a86487dd0, servername: wro.u3er1.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /ws, headers: {Host: wro.u3er1.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "CDN☁️--1.42TB📊-2D,2H⏳", server: 91.217.177.48, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d6ef4a50-ea08-4f35-ba27-b58a86487dd0, servername: wro.u3er1.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /ws, headers: {Host: wro.u3er1.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Slip_Net", server: 185.236.38.44, port: 19946, type: vmess, uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +485,30 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@Slip_Net  چنل`"
+      - CDN☁️-🇬🇧-1.42TB📊-2D,2H⏳
+      - CDN☁️-🇬🇧-1.42TB📊-2D,2H⏳`
+      - CDN☁️--1.42TB📊-2D,2H⏳
+      - "@Slip_Net"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@Slip_Net  چنل`"
+      - CDN☁️-🇬🇧-1.42TB📊-2D,2H⏳
+      - CDN☁️-🇬🇧-1.42TB📊-2D,2H⏳`
+      - CDN☁️--1.42TB📊-2D,2H⏳
+      - "@Slip_Net"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@Slip_Net  چنل`"
+      - CDN☁️-🇬🇧-1.42TB📊-2D,2H⏳
+      - CDN☁️-🇬🇧-1.42TB📊-2D,2H⏳`
+      - CDN☁️--1.42TB📊-2D,2H⏳
+      - "@Slip_Net"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +524,30 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Slip_Net  چنل`"
+      - CDN☁️-🇬🇧-1.42TB📊-2D,2H⏳
+      - CDN☁️-🇬🇧-1.42TB📊-2D,2H⏳`
+      - CDN☁️--1.42TB📊-2D,2H⏳
+      - "@Slip_Net"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Slip_Net  چنل`"
+      - CDN☁️-🇬🇧-1.42TB📊-2D,2H⏳
+      - CDN☁️-🇬🇧-1.42TB📊-2D,2H⏳`
+      - CDN☁️--1.42TB📊-2D,2H⏳
+      - "@Slip_Net"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Slip_Net  چنل`"
+      - CDN☁️-🇬🇧-1.42TB📊-2D,2H⏳
+      - CDN☁️-🇬🇧-1.42TB📊-2D,2H⏳`
+      - CDN☁️--1.42TB📊-2D,2H⏳
+      - "@Slip_Net"
   - name: دانلود منیجر 📥
     type: select
     proxies:
