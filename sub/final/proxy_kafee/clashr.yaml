@@ -5,67 +5,46 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@proxy_kafee", server: digipay.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 09ba8308-c50b-4fdc-adf7-cfe0d7ed00f3, network: ws, ws-opts: {path: /, headers: {Host: asd.pixserver.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee`", server: adler-1g.adelshoop.net, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 59bc19e5-9384-45ea-99c6-0fc412975eee, network: ws, ws-opts: {path: /, headers: {Host: adler-1g.adelshoop.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee` 2", server: digipay.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 6f4ab6cf-807e-4050-afcb-9d7003646e87, network: ws, ws-opts: {path: /, headers: {Host: asd.pixserver.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee 2", server: 185.143.233.200, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 9d4b39cc-1cd7-48b3-85da-9e4cdedf43ff, network: ws, ws-opts: {path: /, headers: {Host: nima.hayalco.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@proxy_kafee"
       - "@proxy_kafee`"
-      - "@proxy_kafee` 2"
-      - "@proxy_kafee 2"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@proxy_kafee"
       - "@proxy_kafee`"
-      - "@proxy_kafee` 2"
-      - "@proxy_kafee 2"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@proxy_kafee"
       - "@proxy_kafee`"
-      - "@proxy_kafee` 2"
-      - "@proxy_kafee 2"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@proxy_kafee"
       - "@proxy_kafee`"
-      - "@proxy_kafee` 2"
-      - "@proxy_kafee 2"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@proxy_kafee"
       - "@proxy_kafee`"
-      - "@proxy_kafee` 2"
-      - "@proxy_kafee 2"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@proxy_kafee"
       - "@proxy_kafee`"
-      - "@proxy_kafee` 2"
-      - "@proxy_kafee 2"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -93,10 +72,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@proxy_kafee"
       - "@proxy_kafee`"
-      - "@proxy_kafee` 2"
-      - "@proxy_kafee 2"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
