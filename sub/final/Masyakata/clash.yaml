@@ -465,7 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@oxnet_ir | ترکیب 20", server: vpnxvpn.nazincup.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 4e3f6a5b-acd3-4566-8349-bc71602b99c1, network: ws, ws-opts: {path: /api, headers: {Host: vpnxvpn.nazincup.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Masyakata", server: 185.143.233.232, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 244f43cb-3e03-4f00-8a27-9422b7259e46, network: ws, ws-opts: {path: /, headers: {Host: api.angrydevs.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@`", server: 185.143.233.200, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 2daf1396-0383-4276-a054-baded537c6b3, network: ws, ws-opts: {path: /, headers: {Host: nima.hayalco.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: https://t.me/Masyakata, server: protectnet.cloudinohost.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 45cd71df-7b23-4568-8677-fdc4a0daa76e, servername: protectnet.cloudinohost.com, alpn: ["h2,http/1.1"], network: ws, ws-opts: {path: /, headers: {Host: protectnet.cloudinohost.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Masyakata`", server: aparatrat1.info, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: 7ed47b2b-3654-436e-8b34-7bdf03854164, host: aparatrat1.info, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Masyakata, server: 13.249.2.122, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: telegram-dickiriptorbot, servername: 3.173.21.63, network: ws, ws-opts: {path: /, headers: {Host: 3.173.21.63}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +486,33 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@oxnet_ir | ترکیب 20"
+      - "@Masyakata"
+      - "@`"
+      - https://t.me/Masyakata
+      - "@Masyakata`"
+      - Masyakata
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@oxnet_ir | ترکیب 20"
+      - "@Masyakata"
+      - "@`"
+      - https://t.me/Masyakata
+      - "@Masyakata`"
+      - Masyakata
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@oxnet_ir | ترکیب 20"
+      - "@Masyakata"
+      - "@`"
+      - https://t.me/Masyakata
+      - "@Masyakata`"
+      - Masyakata
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +528,33 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@oxnet_ir | ترکیب 20"
+      - "@Masyakata"
+      - "@`"
+      - https://t.me/Masyakata
+      - "@Masyakata`"
+      - Masyakata
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@oxnet_ir | ترکیب 20"
+      - "@Masyakata"
+      - "@`"
+      - https://t.me/Masyakata
+      - "@Masyakata`"
+      - Masyakata
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@oxnet_ir | ترکیب 20"
+      - "@Masyakata"
+      - "@`"
+      - https://t.me/Masyakata
+      - "@Masyakata`"
+      - Masyakata
   - name: دانلود منیجر 📥
     type: select
     proxies:
