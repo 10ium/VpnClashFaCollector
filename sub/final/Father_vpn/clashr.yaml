@@ -5,53 +5,46 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: TEL;Father_vpn`, server: adler-1g.adelshoop.net, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 59bc19e5-9384-45ea-99c6-0fc412975eee, network: ws, ws-opts: {path: /, headers: {Host: adler-1g.adelshoop.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: TEL;Father_vpn` 2, server: 91.217.177.48, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.jpmj.dev, network: ws, ws-opts: {path: /, headers: {Host: sni.jpmj.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: TEL;Father_vpn, server: 185.143.235.20, port: 2086, type: vless, tls: true, packet-encoding: xudp, uuid: 7ab405fa-7fad-4e50-a133-a1437712c0dc, network: ws, ws-opts: {path: /path, headers: {Host: tr-st2.ge9.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - TEL;Father_vpn`
-      - TEL;Father_vpn` 2
+      - TEL;Father_vpn
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - TEL;Father_vpn`
-      - TEL;Father_vpn` 2
+      - TEL;Father_vpn
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - TEL;Father_vpn`
-      - TEL;Father_vpn` 2
+      - TEL;Father_vpn
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - TEL;Father_vpn`
-      - TEL;Father_vpn` 2
+      - TEL;Father_vpn
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - TEL;Father_vpn`
-      - TEL;Father_vpn` 2
+      - TEL;Father_vpn
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - TEL;Father_vpn`
-      - TEL;Father_vpn` 2
+      - TEL;Father_vpn
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -79,8 +72,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - TEL;Father_vpn`
-      - TEL;Father_vpn` 2
+      - TEL;Father_vpn
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
