@@ -465,12 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: r3mrcg001287h3p.cybervena.com:50099, server: r3mrcg001287h3p.cybervena.com, port: 50099, type: ss, cipher: chacha20-ietf-poly1305, password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4, udp: true, tfo: false}
   - {name: gw.lydwan.com:35603, server: gw.lydwan.com, port: 35603, type: ss, cipher: chacha20-ietf-poly1305, password: 889e7055-e174-43a2-9004-a8f55f5d9784, udp: true, tfo: false}
   - {name: admin.c1.havij.co:443, server: admin.c1.havij.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 1kVr0KATIJI7mwOF, udp: true, tfo: false}
   - {name: 144.31.96.174:8388, server: 144.31.96.174, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: VEFFUGZkNtbTGAGde4vUQjqnGST-bgTP, udp: true, tfo: false}
   - {name: 23.169.184.190:51243, server: 23.169.184.190, port: 51243, type: trojan, password: a3f617e4-448f-4d95-b56f-99026dfbe699, sni: 23.169.184.190, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇬🇧 nl.kp7mx3.uk:47615, server: nl.kp7mx3.uk, port: 47615, type: vless, tls: true, packet-encoding: xudp, uuid: 6f7ed352-71f5-451a-91b2-0ccb992bc63d, servername: m.ok.ru, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, reality-opts: {public-key: 1cG3PyMCH78rEm4inPwKxxrnVkFlK8bxj3KZ_8EPOX0, short-id: ba8068688563}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "🇯🇵 [openproxylist.com] vmess-JP", server: hk26.998998.best, port: 443, type: vmess, uuid: 9c851606-9722-42fc-a1c1-175c3c82a7ae, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: server11.9966338.xyz, network: ws, ws-opts: {path: "/ieusrdgfhteuirgfiuws?ed=2560", headers: {Host: server11.9966338.xyz}}, udp: true, tfo: false}
   - {name: "[openproxylist.com] vmess-TH", server: 117.18.125.183, port: 57460, type: vmess, uuid: 8c99e6bf-a701-4534-cdde-abecd1d6826f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "🇮🇳 [openproxylist.com] vmess-IN", server: 172.232.103.186, port: 22324, type: vmess, uuid: 04621bae-ab36-11ec-b909-0242ac120002, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
@@ -489,12 +488,11 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - r3mrcg001287h3p.cybervena.com:50099
       - gw.lydwan.com:35603
       - admin.c1.havij.co:443
       - 144.31.96.174:8388
       - 23.169.184.190:51243
-      - 🇬🇧 nl.kp7mx3.uk:47615
-      - 🇯🇵 [openproxylist.com] vmess-JP
       - "[openproxylist.com] vmess-TH"
       - 🇮🇳 [openproxylist.com] vmess-IN
   - name: خودکار (بهترین پینگ) 🤖
@@ -503,12 +501,11 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - r3mrcg001287h3p.cybervena.com:50099
       - gw.lydwan.com:35603
       - admin.c1.havij.co:443
       - 144.31.96.174:8388
       - 23.169.184.190:51243
-      - 🇬🇧 nl.kp7mx3.uk:47615
-      - 🇯🇵 [openproxylist.com] vmess-JP
       - "[openproxylist.com] vmess-TH"
       - 🇮🇳 [openproxylist.com] vmess-IN
   - name: پشتیبان (در صورت قطعی) 🧯
@@ -517,12 +514,11 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - r3mrcg001287h3p.cybervena.com:50099
       - gw.lydwan.com:35603
       - admin.c1.havij.co:443
       - 144.31.96.174:8388
       - 23.169.184.190:51243
-      - 🇬🇧 nl.kp7mx3.uk:47615
-      - 🇯🇵 [openproxylist.com] vmess-JP
       - "[openproxylist.com] vmess-TH"
       - 🇮🇳 [openproxylist.com] vmess-IN
   - name: اتصال پایدار 🔗
@@ -540,12 +536,11 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - r3mrcg001287h3p.cybervena.com:50099
       - gw.lydwan.com:35603
       - admin.c1.havij.co:443
       - 144.31.96.174:8388
       - 23.169.184.190:51243
-      - 🇬🇧 nl.kp7mx3.uk:47615
-      - 🇯🇵 [openproxylist.com] vmess-JP
       - "[openproxylist.com] vmess-TH"
       - 🇮🇳 [openproxylist.com] vmess-IN
   - name: توزیع بار (گردشی) 🔁
@@ -554,12 +549,11 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - r3mrcg001287h3p.cybervena.com:50099
       - gw.lydwan.com:35603
       - admin.c1.havij.co:443
       - 144.31.96.174:8388
       - 23.169.184.190:51243
-      - 🇬🇧 nl.kp7mx3.uk:47615
-      - 🇯🇵 [openproxylist.com] vmess-JP
       - "[openproxylist.com] vmess-TH"
       - 🇮🇳 [openproxylist.com] vmess-IN
   - name: توزیع بار (موقت) ⏳
@@ -568,12 +562,11 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - r3mrcg001287h3p.cybervena.com:50099
       - gw.lydwan.com:35603
       - admin.c1.havij.co:443
       - 144.31.96.174:8388
       - 23.169.184.190:51243
-      - 🇬🇧 nl.kp7mx3.uk:47615
-      - 🇯🇵 [openproxylist.com] vmess-JP
       - "[openproxylist.com] vmess-TH"
       - 🇮🇳 [openproxylist.com] vmess-IN
   - name: دانلود منیجر 📥
