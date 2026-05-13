@@ -465,13 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@proxy_kafee | ترکیبی`", server: 79.127.82.170, port: 443, type: trojan, password: 2a599135-886f-4359-bf68-0993baa990f1, sni: wow-game-server-gb-nb-d.world-of-warcraft-game-server.cfd, skip-cert-verify: false, network: ws, ws-opts: {path: /1000/10/b449693f-1869-4379-946d-279f2ad95021, headers: {Host: wow-game-server-gb-nb-d.world-of-warcraft-game-server.cfd}}, udp: true, tfo: false}
-  - {name: "@proxy_kafee | ترکیبی", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 0f72c0c3-7bcd-4e26-b75e-3e5f4b3416ea, network: ws, ws-opts: {path: /, headers: {Host: iranfuture.musicritmic.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee | ترکیبی 2", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 22e60128-48d5-47e0-9d6c-8eea01c9dc32, network: ws, ws-opts: {path: /, headers: {Host: iranfuture.musicritmic.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee | ترکیبی 3", server: www.varzesh3.com, port: 2082, type: vless, tls: true, packet-encoding: xudp, uuid: 272d7c53-64f9-4eee-a7d3-4616d15ebd78, network: ws, ws-opts: {path: /, headers: {Host: server1.mizbanertebatfarda.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee | ترکیبی 4", server: aparatrat1.info, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: 7ed47b2b-3654-436e-8b34-7bdf03854164, host: aparatrat1.info, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee | ترکیبی 5", server: snapppay.ir, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: b4515f21-e551-40af-9f6f-6af378b01759, servername: salamiran.shomalnojm.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: salamiran.shomalnojm.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee | ترکیبی 6", server: 185.143.232.122, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: bb7b12d2-8d39-4eb0-b0c9-94a0853ee945, network: ws, ws-opts: {path: /news, headers: {Host: out3.sublink.store}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee (تلگرام)", server: 185.143.233.232, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 244f43cb-3e03-4f00-8a27-9422b7259e46, network: ws, ws-opts: {path: /, headers: {Host: api.angrydevs.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee (تلگرام) 2", server: snapp.ir, port: 2095, type: vless, tls: true, packet-encoding: xudp, uuid: 7848e733-3d58-43d0-8d6e-78fcd6281157, network: ws, ws-opts: {path: /uiux, headers: {Host: srv.mihandex.site}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee (تلگرام) 3", server: atro.partners.nexmon.online, port: 32099, type: vless, tls: true, packet-encoding: xudp, uuid: ef11d753-e6dd-4751-b972-cea4bd08e210, host: atro.partners.nexmon.online, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -488,39 +484,27 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@proxy_kafee | ترکیبی`"
-      - "@proxy_kafee | ترکیبی"
-      - "@proxy_kafee | ترکیبی 2"
-      - "@proxy_kafee | ترکیبی 3"
-      - "@proxy_kafee | ترکیبی 4"
-      - "@proxy_kafee | ترکیبی 5"
-      - "@proxy_kafee | ترکیبی 6"
+      - "@proxy_kafee (تلگرام)"
+      - "@proxy_kafee (تلگرام) 2"
+      - "@proxy_kafee (تلگرام) 3"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@proxy_kafee | ترکیبی`"
-      - "@proxy_kafee | ترکیبی"
-      - "@proxy_kafee | ترکیبی 2"
-      - "@proxy_kafee | ترکیبی 3"
-      - "@proxy_kafee | ترکیبی 4"
-      - "@proxy_kafee | ترکیبی 5"
-      - "@proxy_kafee | ترکیبی 6"
+      - "@proxy_kafee (تلگرام)"
+      - "@proxy_kafee (تلگرام) 2"
+      - "@proxy_kafee (تلگرام) 3"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@proxy_kafee | ترکیبی`"
-      - "@proxy_kafee | ترکیبی"
-      - "@proxy_kafee | ترکیبی 2"
-      - "@proxy_kafee | ترکیبی 3"
-      - "@proxy_kafee | ترکیبی 4"
-      - "@proxy_kafee | ترکیبی 5"
-      - "@proxy_kafee | ترکیبی 6"
+      - "@proxy_kafee (تلگرام)"
+      - "@proxy_kafee (تلگرام) 2"
+      - "@proxy_kafee (تلگرام) 3"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -536,39 +520,27 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@proxy_kafee | ترکیبی`"
-      - "@proxy_kafee | ترکیبی"
-      - "@proxy_kafee | ترکیبی 2"
-      - "@proxy_kafee | ترکیبی 3"
-      - "@proxy_kafee | ترکیبی 4"
-      - "@proxy_kafee | ترکیبی 5"
-      - "@proxy_kafee | ترکیبی 6"
+      - "@proxy_kafee (تلگرام)"
+      - "@proxy_kafee (تلگرام) 2"
+      - "@proxy_kafee (تلگرام) 3"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@proxy_kafee | ترکیبی`"
-      - "@proxy_kafee | ترکیبی"
-      - "@proxy_kafee | ترکیبی 2"
-      - "@proxy_kafee | ترکیبی 3"
-      - "@proxy_kafee | ترکیبی 4"
-      - "@proxy_kafee | ترکیبی 5"
-      - "@proxy_kafee | ترکیبی 6"
+      - "@proxy_kafee (تلگرام)"
+      - "@proxy_kafee (تلگرام) 2"
+      - "@proxy_kafee (تلگرام) 3"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@proxy_kafee | ترکیبی`"
-      - "@proxy_kafee | ترکیبی"
-      - "@proxy_kafee | ترکیبی 2"
-      - "@proxy_kafee | ترکیبی 3"
-      - "@proxy_kafee | ترکیبی 4"
-      - "@proxy_kafee | ترکیبی 5"
-      - "@proxy_kafee | ترکیبی 6"
+      - "@proxy_kafee (تلگرام)"
+      - "@proxy_kafee (تلگرام) 2"
+      - "@proxy_kafee (تلگرام) 3"
   - name: دانلود منیجر 📥
     type: select
     proxies:
