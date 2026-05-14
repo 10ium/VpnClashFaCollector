@@ -465,16 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@vasl_bashim`", server: 185.143.234.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 006e4730-9370-48fa-a7be-98e49833ca6e, network: ws, ws-opts: {path: /, headers: {Host: felorida4.newcallapphelper.online}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@vasl_bashim", server: 185.221.239.67, port: 2222, type: vless, tls: true, packet-encoding: xudp, uuid: 04738fc0-2279-4e80-a641-5e99485a1367, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim` 2", server: 185.143.233.5, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: 086ea932-23ce-402d-969c-8ac02325ce42, servername: sub.sesrsa.com, network: ws, ws-opts: {path: /, headers: {Host: sub.sesrsa.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim` 3", server: aparatrat1.info, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: 3b71be10-6c10-45e9-95e6-e469f7a0ae63, host: aparatrat1.info, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim`", server: 185.143.233.5, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: 086ea932-23ce-402d-969c-8ac02325ce42, servername: sub.sesrsa.com, network: ws, ws-opts: {path: /, headers: {Host: sub.sesrsa.com}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@vasl_bashim 2", server: speed6630csf.sismonifarangi.shop, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5d5e2bf6-c92e-4c75-914f-6aa14d1988e3, servername: SpeeD6630CSf.sismonifarangi.shop, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /leonvpn, headers: {Host: SpeeD6630CSf.sismonifarangi.shop}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@vasl_bashim 3", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 6a2405d9-61e2-4c74-a638-b2e2899e1995, network: ws, ws-opts: {path: /, headers: {Host: pa1.ghostantaniehh.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim 4", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 6a2405d9-61e2-4c74-a638-b2e2899e1995, network: ws, ws-opts: {path: /, headers: {Host: pa1.ghostantaniehh.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: vasl_bashim`, server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 6a2405d9-61e2-4c74-a638-b2e2899e1995, network: ws, ws-opts: {path: /, headers: {Host: pa1.ghostantaniehh.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim 5", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 97aaeab2-f8a7-4ec7-b9e2-c5cac9559083, host: snapp.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim 6", server: dl4.paycollection.lol, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: dc7b8019-893f-4583-b95c-044b1f9696f4, network: ws, ws-opts: {path: /flutter, headers: {Host: dl4.paycollection.lol}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim 4", server: dl4.paycollection.lol, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: dc7b8019-893f-4583-b95c-044b1f9696f4, network: ws, ws-opts: {path: /flutter, headers: {Host: dl4.paycollection.lol}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -491,48 +486,33 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@vasl_bashim`"
       - "@vasl_bashim"
-      - "@vasl_bashim` 2"
-      - "@vasl_bashim` 3"
+      - "@vasl_bashim`"
       - "@vasl_bashim 2"
       - "@vasl_bashim 3"
       - "@vasl_bashim 4"
-      - vasl_bashim`
-      - "@vasl_bashim 5"
-      - "@vasl_bashim 6"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@vasl_bashim`"
       - "@vasl_bashim"
-      - "@vasl_bashim` 2"
-      - "@vasl_bashim` 3"
+      - "@vasl_bashim`"
       - "@vasl_bashim 2"
       - "@vasl_bashim 3"
       - "@vasl_bashim 4"
-      - vasl_bashim`
-      - "@vasl_bashim 5"
-      - "@vasl_bashim 6"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@vasl_bashim`"
       - "@vasl_bashim"
-      - "@vasl_bashim` 2"
-      - "@vasl_bashim` 3"
+      - "@vasl_bashim`"
       - "@vasl_bashim 2"
       - "@vasl_bashim 3"
       - "@vasl_bashim 4"
-      - vasl_bashim`
-      - "@vasl_bashim 5"
-      - "@vasl_bashim 6"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -548,48 +528,33 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@vasl_bashim`"
       - "@vasl_bashim"
-      - "@vasl_bashim` 2"
-      - "@vasl_bashim` 3"
+      - "@vasl_bashim`"
       - "@vasl_bashim 2"
       - "@vasl_bashim 3"
       - "@vasl_bashim 4"
-      - vasl_bashim`
-      - "@vasl_bashim 5"
-      - "@vasl_bashim 6"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@vasl_bashim`"
       - "@vasl_bashim"
-      - "@vasl_bashim` 2"
-      - "@vasl_bashim` 3"
+      - "@vasl_bashim`"
       - "@vasl_bashim 2"
       - "@vasl_bashim 3"
       - "@vasl_bashim 4"
-      - vasl_bashim`
-      - "@vasl_bashim 5"
-      - "@vasl_bashim 6"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@vasl_bashim`"
       - "@vasl_bashim"
-      - "@vasl_bashim` 2"
-      - "@vasl_bashim` 3"
+      - "@vasl_bashim`"
       - "@vasl_bashim 2"
       - "@vasl_bashim 3"
       - "@vasl_bashim 4"
-      - vasl_bashim`
-      - "@vasl_bashim 5"
-      - "@vasl_bashim 6"
   - name: دانلود منیجر 📥
     type: select
     proxies:

@@ -465,9 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@saministamm", server: org17.okala.click, port: 55017, type: vless, tls: true, packet-encoding: xudp, uuid: 6bbccb5c-97bb-4856-a0a2-032f632bc66e, servername: www.digikala.com, host: www.digikala.com, path: /, reality-opts: {public-key: vxdmULi_cO7dha2aQnsjSViARO15hvI9HWyo0pVPlkQ, short-id: c385}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: saministamm📊-0M⏳, server: Snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 9365476e-75f4-4dab-93aa-e2b8918a9ba1, network: ws, ws-opts: {path: /, headers: {Host: down.speedtell.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: saministamm, server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 9ea9e54b-d4da-4773-855a-e5371e4da946, network: ws, ws-opts: {path: /, headers: {Host: hubfile.zpax.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: snapp.ir:80, server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 9ea9e54b-d4da-4773-855a-e5371e4da946, network: ws, ws-opts: {path: /, headers: {Host: hubfile.zpax.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@saministamm`", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 9ea9e54b-d4da-4773-855a-e5371e4da946, network: ws, ws-opts: {path: /, headers: {Host: hubfile.zpax.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -485,9 +484,8 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@saministamm"
-      - saministamm📊-0M⏳
       - saministamm
+      - snapp.ir:80
       - "@saministamm`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -495,9 +493,8 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - "@saministamm"
-      - saministamm📊-0M⏳
       - saministamm
+      - snapp.ir:80
       - "@saministamm`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -505,9 +502,8 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - "@saministamm"
-      - saministamm📊-0M⏳
       - saministamm
+      - snapp.ir:80
       - "@saministamm`"
   - name: اتصال پایدار 🔗
     type: url-test
@@ -524,9 +520,8 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@saministamm"
-      - saministamm📊-0M⏳
       - saministamm
+      - snapp.ir:80
       - "@saministamm`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -534,9 +529,8 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@saministamm"
-      - saministamm📊-0M⏳
       - saministamm
+      - snapp.ir:80
       - "@saministamm`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -544,9 +538,8 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@saministamm"
-      - saministamm📊-0M⏳
       - saministamm
+      - snapp.ir:80
       - "@saministamm`"
   - name: دانلود منیجر 📥
     type: select
