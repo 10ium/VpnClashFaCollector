@@ -5,8 +5,11 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: 3 @proxy_kafee, server: 185.221.239.67, port: 2222, type: vless, tls: true, packet-encoding: xudp, uuid: 04738fc0-2279-4e80-a641-5e99485a1367, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee (تلگرام)", server: 185.143.233.232, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 244f43cb-3e03-4f00-8a27-9422b7259e46, network: ws, ws-opts: {path: /, headers: {Host: api.angrydevs.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 4 @proxy_kafee, server: SpeeD6630CSf.sismonifarangi.shop, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5d5e2bf6-c92e-4c75-914f-6aa14d1988e3, servername: SpeeD6630CSf.sismonifarangi.shop, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /leonvpn, headers: {Host: SpeeD6630CSf.sismonifarangi.shop}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee (تلگرام) 2", server: snapp.ir, port: 2095, type: vless, tls: true, packet-encoding: xudp, uuid: 7848e733-3d58-43d0-8d6e-78fcd6281157, network: ws, ws-opts: {path: /uiux, headers: {Host: srv.mihandex.site}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 6 @proxy_kafee, server: dl4.paycollection.lol, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: dc7b8019-893f-4583-b95c-044b1f9696f4, network: ws, ws-opts: {path: /flutter, headers: {Host: dl4.paycollection.lol}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee (تلگرام) 3", server: atro.partners.nexmon.online, port: 32099, type: vless, tls: true, packet-encoding: xudp, uuid: ef11d753-e6dd-4751-b972-cea4bd08e210, host: atro.partners.nexmon.online, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
@@ -14,8 +17,11 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - 3 @proxy_kafee
       - "@proxy_kafee (تلگرام)"
+      - 4 @proxy_kafee
       - "@proxy_kafee (تلگرام) 2"
+      - 6 @proxy_kafee
       - "@proxy_kafee (تلگرام) 3"
   - name: ♻️ 自动选择
     type: url-test
@@ -23,8 +29,11 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - 3 @proxy_kafee
       - "@proxy_kafee (تلگرام)"
+      - 4 @proxy_kafee
       - "@proxy_kafee (تلگرام) 2"
+      - 6 @proxy_kafee
       - "@proxy_kafee (تلگرام) 3"
   - name: 🌍 国外媒体
     type: select
@@ -32,32 +41,44 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 3 @proxy_kafee
       - "@proxy_kafee (تلگرام)"
+      - 4 @proxy_kafee
       - "@proxy_kafee (تلگرام) 2"
+      - 6 @proxy_kafee
       - "@proxy_kafee (تلگرام) 3"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 3 @proxy_kafee
       - "@proxy_kafee (تلگرام)"
+      - 4 @proxy_kafee
       - "@proxy_kafee (تلگرام) 2"
+      - 6 @proxy_kafee
       - "@proxy_kafee (تلگرام) 3"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - 3 @proxy_kafee
       - "@proxy_kafee (تلگرام)"
+      - 4 @proxy_kafee
       - "@proxy_kafee (تلگرام) 2"
+      - 6 @proxy_kafee
       - "@proxy_kafee (تلگرام) 3"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 3 @proxy_kafee
       - "@proxy_kafee (تلگرام)"
+      - 4 @proxy_kafee
       - "@proxy_kafee (تلگرام) 2"
+      - 6 @proxy_kafee
       - "@proxy_kafee (تلگرام) 3"
   - name: 🎯 全球直连
     type: select
@@ -86,8 +107,11 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 3 @proxy_kafee
       - "@proxy_kafee (تلگرام)"
+      - 4 @proxy_kafee
       - "@proxy_kafee (تلگرام) 2"
+      - 6 @proxy_kafee
       - "@proxy_kafee (تلگرام) 3"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
