@@ -465,7 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@v2FreeHub 🇷🇺`", server: ru.safepass.click, port: 442, type: ss, cipher: aes-128-gcm, password: 6784aee2-0dfe-474f-8446-480259ff9918, udp: true, tfo: false}
+  - {name: 🇳🇱 Netherlands (@v2FreeHub) SS`, server: 144.31.200.56, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: VEFFUGZkNtbTGAGde4vUQjqnGST-bgTP, udp: true, tfo: false}
+  - {name: 🇳🇱 Netherlands (@v2FreeHub) Vless`, server: 144.31.200.56, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6946cf76-2c1e-4fbc-a28a-e2beeb7c29cb, servername: ya.ru, host: ya.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: nPcUKydxoRI66O3tT9O4QCZpLjOBvkGsiXG7pDX1BBw, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@v2FreeHub 🇷🇺`"
+      - 🇳🇱 Netherlands (@v2FreeHub) SS`
+      - 🇳🇱 Netherlands (@v2FreeHub) Vless`
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@v2FreeHub 🇷🇺`"
+      - 🇳🇱 Netherlands (@v2FreeHub) SS`
+      - 🇳🇱 Netherlands (@v2FreeHub) Vless`
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@v2FreeHub 🇷🇺`"
+      - 🇳🇱 Netherlands (@v2FreeHub) SS`
+      - 🇳🇱 Netherlands (@v2FreeHub) Vless`
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2FreeHub 🇷🇺`"
+      - 🇳🇱 Netherlands (@v2FreeHub) SS`
+      - 🇳🇱 Netherlands (@v2FreeHub) Vless`
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2FreeHub 🇷🇺`"
+      - 🇳🇱 Netherlands (@v2FreeHub) SS`
+      - 🇳🇱 Netherlands (@v2FreeHub) Vless`
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2FreeHub 🇷🇺`"
+      - 🇳🇱 Netherlands (@v2FreeHub) SS`
+      - 🇳🇱 Netherlands (@v2FreeHub) Vless`
   - name: دانلود منیجر 📥
     type: select
     proxies:

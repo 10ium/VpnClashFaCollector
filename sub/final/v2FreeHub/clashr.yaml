@@ -5,46 +5,53 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@v2FreeHub 🇷🇺`", server: ru.safepass.click, port: 442, type: ss, cipher: aes-128-gcm, password: 6784aee2-0dfe-474f-8446-480259ff9918, udp: true, tfo: false}
+  - {name: 🇳🇱 Netherlands (@v2FreeHub) SS`, server: 144.31.200.56, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: VEFFUGZkNtbTGAGde4vUQjqnGST-bgTP, udp: true, tfo: false}
+  - {name: 🇳🇱 Netherlands (@v2FreeHub) Vless`, server: 144.31.200.56, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6946cf76-2c1e-4fbc-a28a-e2beeb7c29cb, servername: ya.ru, host: ya.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: nPcUKydxoRI66O3tT9O4QCZpLjOBvkGsiXG7pDX1BBw, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@v2FreeHub 🇷🇺`"
+      - 🇳🇱 Netherlands (@v2FreeHub) SS`
+      - 🇳🇱 Netherlands (@v2FreeHub) Vless`
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@v2FreeHub 🇷🇺`"
+      - 🇳🇱 Netherlands (@v2FreeHub) SS`
+      - 🇳🇱 Netherlands (@v2FreeHub) Vless`
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@v2FreeHub 🇷🇺`"
+      - 🇳🇱 Netherlands (@v2FreeHub) SS`
+      - 🇳🇱 Netherlands (@v2FreeHub) Vless`
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@v2FreeHub 🇷🇺`"
+      - 🇳🇱 Netherlands (@v2FreeHub) SS`
+      - 🇳🇱 Netherlands (@v2FreeHub) Vless`
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@v2FreeHub 🇷🇺`"
+      - 🇳🇱 Netherlands (@v2FreeHub) SS`
+      - 🇳🇱 Netherlands (@v2FreeHub) Vless`
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@v2FreeHub 🇷🇺`"
+      - 🇳🇱 Netherlands (@v2FreeHub) SS`
+      - 🇳🇱 Netherlands (@v2FreeHub) Vless`
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +79,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@v2FreeHub 🇷🇺`"
+      - 🇳🇱 Netherlands (@v2FreeHub) SS`
+      - 🇳🇱 Netherlands (@v2FreeHub) Vless`
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

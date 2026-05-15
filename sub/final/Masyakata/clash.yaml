@@ -465,7 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: https://t.me/Masyakata…, server: protectnet.cloudinohost.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 45cd71df-7b23-4568-8677-fdc4a0daa76e, servername: protectnet.cloudinohost.com, alpn: ["h2,http/1.1"], network: ws, ws-opts: {path: /, headers: {Host: protectnet.cloudinohost.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 51.44.198.68:22222, server: 51.44.198.68, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - https://t.me/Masyakata…
+      - 51.44.198.68:22222
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - https://t.me/Masyakata…
+      - 51.44.198.68:22222
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - https://t.me/Masyakata…
+      - 51.44.198.68:22222
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - https://t.me/Masyakata…
+      - 51.44.198.68:22222
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - https://t.me/Masyakata…
+      - 51.44.198.68:22222
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - https://t.me/Masyakata…
+      - 51.44.198.68:22222
   - name: دانلود منیجر 📥
     type: select
     proxies:

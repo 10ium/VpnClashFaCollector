@@ -465,14 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: ❗ @DarcProxy ❗`, server: snapp.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 2ca2b07b-2758-462f-b859-0dcefd15f479, network: ws, ws-opts: {path: /, headers: {Host: ts.programming-coding.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@DarcProxy  2`", server: varzesh3.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 4424cd2f-6244-4089-bf8f-67df02709d55, network: ws, ws-opts: {path: /, headers: {Host: proto.helexm.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@DarcProxy  1`", server: snapp.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 713a7c97-2976-441b-8a6f-773740100b7a, network: ws, ws-opts: {path: /, headers: {Host: ts.programming-coding.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@DarcProxy 🔆`", server: snapp.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: c33ca2ad-50c3-4c76-ba59-ac55fc1802e7, network: ws, ws-opts: {path: /, headers: {Host: ts.programming-coding.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@DarcProxy __3`", server: varzesh3.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: ce370e2c-0bc4-4416-a1ad-e0ef05e8d3fa, network: ws, ws-opts: {path: /, headers: {Host: proto.helexm.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@DarcProxy 🍓`", server: snapp.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: e54fe3bf-25c9-41e3-8ba0-a3dd8ee3825c, network: ws, ws-opts: {path: /, headers: {Host: ts.programming-coding.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: https://t.me/Gp_DARK_PROXY`, server: varzesh3.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: ee156bda-40f2-4352-8d1d-63bf79b269c3, network: ws, ws-opts: {path: /, headers: {Host: proto.helexm.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ♨ @DarcProxy ♨`, server: snapp.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: f02fc969-4e79-4e5a-abe9-8177cca52d12, network: ws, ws-opts: {path: /, headers: {Host: ts.programming-coding.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -489,42 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - ❗ @DarcProxy ❗`
-      - "@DarcProxy  2`"
-      - "@DarcProxy  1`"
-      - "@DarcProxy 🔆`"
-      - "@DarcProxy __3`"
-      - "@DarcProxy 🍓`"
       - https://t.me/Gp_DARK_PROXY`
-      - ♨ @DarcProxy ♨`
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - ❗ @DarcProxy ❗`
-      - "@DarcProxy  2`"
-      - "@DarcProxy  1`"
-      - "@DarcProxy 🔆`"
-      - "@DarcProxy __3`"
-      - "@DarcProxy 🍓`"
       - https://t.me/Gp_DARK_PROXY`
-      - ♨ @DarcProxy ♨`
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - ❗ @DarcProxy ❗`
-      - "@DarcProxy  2`"
-      - "@DarcProxy  1`"
-      - "@DarcProxy 🔆`"
-      - "@DarcProxy __3`"
-      - "@DarcProxy 🍓`"
       - https://t.me/Gp_DARK_PROXY`
-      - ♨ @DarcProxy ♨`
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -540,42 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - ❗ @DarcProxy ❗`
-      - "@DarcProxy  2`"
-      - "@DarcProxy  1`"
-      - "@DarcProxy 🔆`"
-      - "@DarcProxy __3`"
-      - "@DarcProxy 🍓`"
       - https://t.me/Gp_DARK_PROXY`
-      - ♨ @DarcProxy ♨`
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - ❗ @DarcProxy ❗`
-      - "@DarcProxy  2`"
-      - "@DarcProxy  1`"
-      - "@DarcProxy 🔆`"
-      - "@DarcProxy __3`"
-      - "@DarcProxy 🍓`"
       - https://t.me/Gp_DARK_PROXY`
-      - ♨ @DarcProxy ♨`
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - ❗ @DarcProxy ❗`
-      - "@DarcProxy  2`"
-      - "@DarcProxy  1`"
-      - "@DarcProxy 🔆`"
-      - "@DarcProxy __3`"
-      - "@DarcProxy 🍓`"
       - https://t.me/Gp_DARK_PROXY`
-      - ♨ @DarcProxy ♨`
   - name: دانلود منیجر 📥
     type: select
     proxies:
