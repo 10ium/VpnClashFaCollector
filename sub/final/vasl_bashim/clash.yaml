@@ -465,9 +465,13 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@vasl_bashim`", server: 2.144.21.44, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 538c7c92-9bb6-4294-8250-b224fb95fc78, servername: roncomi.pages.dev, alpn: [h2], network: ws, ws-opts: {path: "/city/setting?ed=2560", headers: {Host: roncomi.pages.dev}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim", server: 2.144.21.240, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.jpmj.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: sni.jpmj.dev}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim` 2", server: adler-1g.adelshoop.net, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: bbc68258-173b-4f0f-b126-f7aac6bb2db3, network: ws, ws-opts: {path: /, headers: {Host: adler-1g.adelshoop.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim`", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 27dff45e-8217-4837-917f-ff7dc518779c, network: ws, ws-opts: {path: "/?ed=2080", headers: {Host: 1.jojo.avenflow.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim` 2", server: 2.144.21.44, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 538c7c92-9bb6-4294-8250-b224fb95fc78, servername: roncomi.pages.dev, alpn: [h2], network: ws, ws-opts: {path: "/city/setting?ed=2560", headers: {Host: roncomi.pages.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim", server: 2.144.21.44, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 538c7c92-9bb6-4294-8250-b224fb95fc78, servername: roncomi.pages.dev, alpn: [h2], network: ws, ws-opts: {path: "/city/setting?ed=2560", headers: {Host: roncomi.pages.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim 2", server: 2.144.21.240, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.jpmj.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: sni.jpmj.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim 3", server: 2.144.21.240, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.jpmj.dev, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: sni.jpmj.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim` 3", server: ir-frankfurt.samanpy.ir, port: 19785, type: vless, tls: true, packet-encoding: xudp, uuid: 8e5cd658-cde6-48d3-8ab5-2c9ca1b194d2, host: ir-frankfurt.samanpy.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim` 4", server: adler-1g.adelshoop.net, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: bbc68258-173b-4f0f-b126-f7aac6bb2db3, network: ws, ws-opts: {path: /, headers: {Host: adler-1g.adelshoop.net}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,8 +489,12 @@ proxy-groups:
     type: select
     proxies:
       - "@vasl_bashim`"
-      - "@vasl_bashim"
       - "@vasl_bashim` 2"
+      - "@vasl_bashim"
+      - "@vasl_bashim 2"
+      - "@vasl_bashim 3"
+      - "@vasl_bashim` 3"
+      - "@vasl_bashim` 4"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -494,8 +502,12 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@vasl_bashim`"
-      - "@vasl_bashim"
       - "@vasl_bashim` 2"
+      - "@vasl_bashim"
+      - "@vasl_bashim 2"
+      - "@vasl_bashim 3"
+      - "@vasl_bashim` 3"
+      - "@vasl_bashim` 4"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -503,8 +515,12 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@vasl_bashim`"
-      - "@vasl_bashim"
       - "@vasl_bashim` 2"
+      - "@vasl_bashim"
+      - "@vasl_bashim 2"
+      - "@vasl_bashim 3"
+      - "@vasl_bashim` 3"
+      - "@vasl_bashim` 4"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -521,8 +537,12 @@ proxy-groups:
     interval: 600
     proxies:
       - "@vasl_bashim`"
-      - "@vasl_bashim"
       - "@vasl_bashim` 2"
+      - "@vasl_bashim"
+      - "@vasl_bashim 2"
+      - "@vasl_bashim 3"
+      - "@vasl_bashim` 3"
+      - "@vasl_bashim` 4"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -530,8 +550,12 @@ proxy-groups:
     interval: 600
     proxies:
       - "@vasl_bashim`"
-      - "@vasl_bashim"
       - "@vasl_bashim` 2"
+      - "@vasl_bashim"
+      - "@vasl_bashim 2"
+      - "@vasl_bashim 3"
+      - "@vasl_bashim` 3"
+      - "@vasl_bashim` 4"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -539,8 +563,12 @@ proxy-groups:
     interval: 600
     proxies:
       - "@vasl_bashim`"
-      - "@vasl_bashim"
       - "@vasl_bashim` 2"
+      - "@vasl_bashim"
+      - "@vasl_bashim 2"
+      - "@vasl_bashim 3"
+      - "@vasl_bashim` 3"
+      - "@vasl_bashim` 4"
   - name: دانلود منیجر 📥
     type: select
     proxies:

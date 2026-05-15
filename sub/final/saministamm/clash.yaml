@@ -465,7 +465,6 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: snapp.ir:80, server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 9ea9e54b-d4da-4773-855a-e5371e4da946, network: ws, ws-opts: {path: /, headers: {Host: hubfile.zpax.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: adler-1g.adelshoop.net:80, server: adler-1g.adelshoop.net, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: bbc68258-173b-4f0f-b126-f7aac6bb2db3, network: ws, ws-opts: {path: /, headers: {Host: adler-1g.adelshoop.net}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -483,7 +482,6 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - snapp.ir:80
       - adler-1g.adelshoop.net:80
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -491,7 +489,6 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - snapp.ir:80
       - adler-1g.adelshoop.net:80
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -499,7 +496,6 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - snapp.ir:80
       - adler-1g.adelshoop.net:80
   - name: اتصال پایدار 🔗
     type: url-test
@@ -516,7 +512,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - snapp.ir:80
       - adler-1g.adelshoop.net:80
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -524,7 +519,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - snapp.ir:80
       - adler-1g.adelshoop.net:80
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -532,7 +526,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - snapp.ir:80
       - adler-1g.adelshoop.net:80
   - name: دانلود منیجر 📥
     type: select

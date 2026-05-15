@@ -465,7 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: https://t.me/Gp_DARK_PROXY`, server: varzesh3.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: ee156bda-40f2-4352-8d1d-63bf79b269c3, network: ws, ws-opts: {path: /, headers: {Host: proto.helexm.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@DarcProxy - Service", server: Tapsi.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: d54214cb-ebac-4f19-b637-adf72599c335, network: ws, ws-opts: {path: /cdn, headers: {Host: Za.movizdl.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@DarcProxy - Service`", server: Tapsi.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: d54214cb-ebac-4f19-b637-adf72599c335, network: ws, ws-opts: {path: /cdn, headers: {Host: Za.movizdl.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - https://t.me/Gp_DARK_PROXY`
+      - "@DarcProxy - Service"
+      - "@DarcProxy - Service`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - https://t.me/Gp_DARK_PROXY`
+      - "@DarcProxy - Service"
+      - "@DarcProxy - Service`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - https://t.me/Gp_DARK_PROXY`
+      - "@DarcProxy - Service"
+      - "@DarcProxy - Service`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - https://t.me/Gp_DARK_PROXY`
+      - "@DarcProxy - Service"
+      - "@DarcProxy - Service`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - https://t.me/Gp_DARK_PROXY`
+      - "@DarcProxy - Service"
+      - "@DarcProxy - Service`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - https://t.me/Gp_DARK_PROXY`
+      - "@DarcProxy - Service"
+      - "@DarcProxy - Service`"
   - name: دانلود منیجر 📥
     type: select
     proxies:
