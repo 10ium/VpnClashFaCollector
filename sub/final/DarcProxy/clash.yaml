@@ -465,7 +465,12 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@DarcProxy - Service`", server: Tapsi.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: d54214cb-ebac-4f19-b637-adf72599c335, network: ws, ws-opts: {path: /cdn, headers: {Host: Za.movizdl.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@DarcProxy-7702`", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 00bf495b-dd17-450f-87ef-508fbd39d0ba, network: ws, ws-opts: {path: /, headers: {Host: derakhshan.molvliafor.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@DarcProxy-7701`", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 21d97119-bc83-4774-ac66-6a6f59e04441, network: ws, ws-opts: {path: /, headers: {Host: derakhshan.molvliafor.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@DarcProxy-7703`", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 4a94d3a6-c819-465a-8ff8-ce46900fbf5d, network: ws, ws-opts: {path: /, headers: {Host: derakhshan.molvliafor.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@DarcProxy-7705`", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: aa1d228c-b1ad-4153-8b48-64710c303361, network: ws, ws-opts: {path: /, headers: {Host: derakhshan.molvliafor.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@DarcProxy-7706`", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: b2555194-ab23-4968-b44b-ecb08ae31d1c, network: ws, ws-opts: {path: /, headers: {Host: derakhshan.molvliafor.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@DarcProxy-7704`", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: bd3846c2-e383-42e8-a1d8-0a934f78beef, network: ws, ws-opts: {path: /, headers: {Host: derakhshan.molvliafor.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +487,36 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@DarcProxy - Service`"
+      - "@DarcProxy-7702`"
+      - "@DarcProxy-7701`"
+      - "@DarcProxy-7703`"
+      - "@DarcProxy-7705`"
+      - "@DarcProxy-7706`"
+      - "@DarcProxy-7704`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@DarcProxy - Service`"
+      - "@DarcProxy-7702`"
+      - "@DarcProxy-7701`"
+      - "@DarcProxy-7703`"
+      - "@DarcProxy-7705`"
+      - "@DarcProxy-7706`"
+      - "@DarcProxy-7704`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@DarcProxy - Service`"
+      - "@DarcProxy-7702`"
+      - "@DarcProxy-7701`"
+      - "@DarcProxy-7703`"
+      - "@DarcProxy-7705`"
+      - "@DarcProxy-7706`"
+      - "@DarcProxy-7704`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +532,36 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@DarcProxy - Service`"
+      - "@DarcProxy-7702`"
+      - "@DarcProxy-7701`"
+      - "@DarcProxy-7703`"
+      - "@DarcProxy-7705`"
+      - "@DarcProxy-7706`"
+      - "@DarcProxy-7704`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@DarcProxy - Service`"
+      - "@DarcProxy-7702`"
+      - "@DarcProxy-7701`"
+      - "@DarcProxy-7703`"
+      - "@DarcProxy-7705`"
+      - "@DarcProxy-7706`"
+      - "@DarcProxy-7704`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@DarcProxy - Service`"
+      - "@DarcProxy-7702`"
+      - "@DarcProxy-7701`"
+      - "@DarcProxy-7703`"
+      - "@DarcProxy-7705`"
+      - "@DarcProxy-7706`"
+      - "@DarcProxy-7704`"
   - name: دانلود منیجر 📥
     type: select
     proxies:

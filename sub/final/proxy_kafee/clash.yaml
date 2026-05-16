@@ -465,9 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 3 @proxy_kafee, server: 185.221.239.67, port: 2222, type: vless, tls: true, packet-encoding: xudp, uuid: 04738fc0-2279-4e80-a641-5e99485a1367, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 4 @proxy_kafee, server: SpeeD6630CSf.sismonifarangi.shop, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5d5e2bf6-c92e-4c75-914f-6aa14d1988e3, servername: SpeeD6630CSf.sismonifarangi.shop, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /leonvpn, headers: {Host: SpeeD6630CSf.sismonifarangi.shop}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 6 @proxy_kafee, server: dl4.paycollection.lol, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: dc7b8019-893f-4583-b95c-044b1f9696f4, network: ws, ws-opts: {path: /flutter, headers: {Host: dl4.paycollection.lol}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee", server: snapp.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 0a47ab98-b50b-4b92-baec-6e16af930dde, network: ws, ws-opts: {path: /Embestpro1, headers: {Host: Cyrus.zomavo.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee`", server: snapp.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 0a47ab98-b50b-4b92-baec-6e16af930dde, network: ws, ws-opts: {path: /Embestpro1, headers: {Host: Cyrus.zomavo.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,27 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 3 @proxy_kafee
-      - 4 @proxy_kafee
-      - 6 @proxy_kafee
+      - "@proxy_kafee"
+      - "@proxy_kafee`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 3 @proxy_kafee
-      - 4 @proxy_kafee
-      - 6 @proxy_kafee
+      - "@proxy_kafee"
+      - "@proxy_kafee`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 3 @proxy_kafee
-      - 4 @proxy_kafee
-      - 6 @proxy_kafee
+      - "@proxy_kafee"
+      - "@proxy_kafee`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -520,27 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 3 @proxy_kafee
-      - 4 @proxy_kafee
-      - 6 @proxy_kafee
+      - "@proxy_kafee"
+      - "@proxy_kafee`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 3 @proxy_kafee
-      - 4 @proxy_kafee
-      - 6 @proxy_kafee
+      - "@proxy_kafee"
+      - "@proxy_kafee`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 3 @proxy_kafee
-      - 4 @proxy_kafee
-      - 6 @proxy_kafee
+      - "@proxy_kafee"
+      - "@proxy_kafee`"
   - name: دانلود منیجر 📥
     type: select
     proxies:
