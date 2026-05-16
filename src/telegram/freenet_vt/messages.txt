@@ -1,5 +1,103 @@
 # آرشیو کانال: @freenet_vt
-بروزرسانی: 2026-05-16 01:54:59 UTC
+بروزرسانی: 2026-05-16 10:59:42 UTC
+
+### 🕒 2026-05-16 10:22:40 UTC
+راستی پورت dnst بتغییر بدید به  1088 اصلا یادم نبود
+
+---
+
+### 🕒 2026-05-16 10:20:31 UTC
+می تونید پورت اونا رو ردی این کانفیگ ها تنطیم کنید پورت 1088و پورت 10886
+
+---
+
+### 🕒 2026-05-16 10:18:39 UTC
+با این متود تلگرامتون هیچ وقت قطع نمیشه  کافیه یه دی ان اس سرور  وصل بشه با این میاد بالا  خیلی راحت
+
+---
+
+### 🕒 2026-05-16 10:05:35 UTC
+نمونه کانفیگ ها پخش نکنید تا کپی نکنن از روش
+
+---
+
+### 🕒 2026-05-16 10:04:24 UTC
+`{  "dns": {    "hosts": {      "domain:googleapis.cn": "googleapis.com",      "dns.alidns.com": [        "223.5.5.5",        "223.6.6.6",        "2400:3200::1",        "2400:3200:baba::1"      ],      "one.one.one.one": [        "1.1.1.1",        "1.0.0.1",        "2606:4700:4700::1111",        "2606:4700:4700::1001"      ],      "dns.cloudflare.com": [        "104.16.132.229",        "104.16.133.229",        "2606:4700::6810:84e5",        "2606:4700::6810:85e5"      ],      "cloudflare-dns.com": [        "104.16.248.249",        "104.16.249.249",        "2606:4700::6810:f8f9",        "2606:4700::6810:f9f9"      ],      "dot.pub": [        "1.12.12.12",        "120.53.53.53"      ],      "dns.google": [        "8.8.8.8",        "8.8.4.4",        "2001:4860:4860::8888",        "2001:4860:4860::8844"      ],      "dns.quad9.net": [        "9.9.9.9",        "149.112.112.112",        "2620:fe::fe",        "2620:fe::9"      ],      "common.dot.dns.yandex.net": [        "77.88.8.8",        "77.88.8.1",        "2a02:6b8::feed:0ff",        "2a02:6b8:0:1::feed:0ff"      ]    },    "servers": [      "1.1.1.1"    ],    "tag": "dns-module"  },  "inbounds": [    {      "listen": "127.0.0.1",      "port": 10808,      "protocol": "socks",      "settings": {        "auth": "noauth",        "udp": true,        "userLevel": 8      },      "sniffing": {        "destOverride": [],        "enabled": false,        "routeOnly": false      },      "tag": "socks"    }  ],  "log": {    "loglevel": "warning"  },  "outbounds": [    {      "mux": {        "concurrency": -1,        "enabled": false      },      "protocol": "socks",      "settings": {        "servers": [          {            "address": "127.0.0.1",            "level": 8,            "ota": false,            "port": 1088          }        ]      },      "streamSettings": {        "network": "tcp"      },      "tag": "proxy"    },    {      "protocol": "freedom",      "settings": {        "domainStrategy": "UseIP"      },      "tag": "direct"    },    {      "protocol": "blackhole",      "settings": {        "response": {          "type": "http"        }      },      "tag": "block"    }  ],  "remarks": "",  "routing": {    "domainStrategy": "AsIs",    "rules": [      {        "network": "udp",        "outboundTag": "block",        "port": "443",        "type": "field"      },      {        "ip": [          "geoip:private"        ],        "outboundTag": "direct",        "type": "field"      },      {        "domain": [          "geosite:private"        ],        "outboundTag": "direct",        "type": "field"      },      {        "outboundTag": "proxy",        "port": "0-65535",        "type": "field"      },      {        "inboundTag": [          "domestic-dns"        ],        "outboundTag": "direct",        "type": "field"      },      {        "inboundTag": [          "dns-module"        ],        "outboundTag": "proxy",        "type": "field"      }    ]  }}`
+
+---
+
+### 🕒 2026-05-16 10:03:54 UTC
+دیشب تا صبح تیم کانفیگ ها آماده کردم
+
+---
+
+### 🕒 2026-05-16 09:06:56 UTC
+ابن پروفایل وصله هنور
+
+---
+
+### 🕒 2026-05-16 09:06:13 UTC
+پیان های تلگرام کانل لود بشه دیگه dnst قطع نمیشه  یوی دوبار قطع وصل کنی ثابت میشه
+
+---
+
+### 🕒 2026-05-16 09:05:04 UTC
+هر وقت وایساد فقط  dnst یه قطع و وصل کنید سرعتش بهتره تلگرام مث آب خوردن بلز میکنه
+
+---
+
+### 🕒 2026-05-16 09:03:49 UTC
+اینم کانفیگ dnst تنظیماتش همونه
+
+---
+
+### 🕒 2026-05-16 09:01:44 UTC
+با dnst هم سرعتش خوبه
+
+---
+
+### 🕒 2026-05-16 09:01:13 UTC
+این تیک هم بزنید
+
+---
+
+### 🕒 2026-05-16 09:00:18 UTC
+تنظیمات dns
+
+---
+
+### 🕒 2026-05-16 09:00:04 UTC
+`https://0.0.0.0/dns-query`
+1
+`https://109.69.8.51/dns-query`
+
+---
+
+### 🕒 2026-05-16 08:58:24 UTC
+تنظیمات ت pet procu
+
+---
+
+### 🕒 2026-05-16 08:35:18 UTC
+وایت دی ان اس  وصل بشید تنظیمات  نپستر اسکرین میدم
+
+---
+
+### 🕒 2026-05-16 08:34:24 UTC
+آیین کانفیگ و بزنید توی  نپستر
+
+---
+
+### 🕒 2026-05-16 06:30:15 UTC
+پورت و پروکسی سلیفون
+
+---
+
+### 🕒 2026-05-16 06:30:15 UTC
+`37.202.232.125`
+1080
+
+---
 
 ### 🕒 2026-05-15 18:51:00 UTC
 راحت بااین فایل htmlک در مرورگرتون بازش کنید میشه آیپیهای cdn ک پیدامیکنید یا میدیدش، اسکن کنه سالمهارو دربیارید بدون نیاز به چیزدیگه ای
@@ -111,62 +209,6 @@ Encryption Key: a337e9fa75161c44bebe7d717da36afc
 
 ### 🕒 2026-05-15 14:52:00 UTC
 یه چیزی امروز متوجه شدم، از امروز صبح وقتی با دیتای موبایل آیپی اسکن می‌کنید یا حتی وقتی آیپی‌های زیادی وارد شیر و خورشید می‌کنید و شیر و خورشید اسکن میکنه و دنبال اتصال می‌گرده اپراتور شبکه می‌فهمه و آیپی شمارو بلاک می‌کنه! وقتی این اتفاق بیوفته بعدش شما حتی به اینترنت ملی هم نمی‌تونید وصل بشید! باید چند بار حالت پرواز بزنید تا آیپی‌تون عوض بشه تا دوباره ارتباط برقرار بشه. به‌نظرم با اینترنت موبایل نه از طریق ترموکس نه هیچ روش دیگه ای اسکن نکنید. فقط با وای‌فای و ویندوز انجام بدید.
-
----
-
-### 🕒 2026-05-15 09:08:38 UTC
-***👌***
-**آموزش ترکیب وایت دی ان اس توی حالت پروکسی با اپ  نکباکس4️⃣ **
-[NekoBox v8a ](https://dl.toolschi.com/view.php?f=08e134a18824a43a.zip)
-**● **
-[NekoBox v7a](https://dl.toolschi.com/view.php?f=f25ae8518482070b.zip)
-** 1.4.2✔️بعد از وصل شدن به وایت دی ان اس توی حالت پروکسی میتونید این کارو انجام بدید تا اینستا و بقیه اپ ها هم بالا بیاد**
-***❤️***
-**کانفیگاش:**
-`http://127.0.0.1:10887/#freenet-vt socks5://127.0.0.1:10886/#freenet-vt`
- 
-***✉️***
-freenet-vt
-
----
-
-### 🕒 2026-05-15 08:55:49 UTC
-پک دو هزار تایی dnsمخصوص وایت دی ان اس و مستر
-
----
-
-### 🕒 2026-05-15 08:55:08 UTC
-پرو فایل جدید وایت dns قبلی ها پاک کنید کلا اینا رو وارد کنید
-
----
-
-### 🕒 2026-05-15 08:54:19 UTC
-stormdns://eyJzY2hlbWEiOiJ3aGl0ZWRucy5wcm9maWxlIiwidmVyc2lvbiI6MSwicHJvZmlsZSI6eyJuYW1lIjoiZnJlZW5ldC12dCA5Iiwic2VydmVyIjp7ImRvbWFpbiI6InYxLm1hc2lyLXNlZmlkLTEuc2hvcCIsImVuY3J5cHRpb25fa2V5IjoiVGVsZWdyYW0tQ2hhbm5lbC0tLT5ATWFzaXJfU2VmaWQiLCJlbmNyeXB0aW9uX21ldGhvZCI6MX19fQ
-stormdns://eyJzY2hlbWEiOiJ3aGl0ZWRucy5wcm9maWxlIiwidmVyc2lvbiI6MSwicHJvZmlsZSI6eyJuYW1lIjoiZnJlZW5ldC12dCA4Iiwic2VydmVyIjp7ImRvbWFpbiI6InYzLm1hc2lyLXNlZmlkLTEuc2hvcCIsImVuY3J5cHRpb25fa2V5IjoiVGVsZWdyYW0tQ2hhbm5lbC0tLT5ATWFzaXJfU2VmaWQiLCJlbmNyeXB0aW9uX21ldGhvZCI6MX19fQ
-stormdns://eyJzY2hlbWEiOiJ3aGl0ZWRucy5wcm9maWxlIiwidmVyc2lvbiI6MSwicHJvZmlsZSI6eyJuYW1lIjoiZnJlZW5ldC12dCA3Iiwic2VydmVyIjp7ImRvbWFpbiI6InYyLm1hc2lyLXNlZmlkLTEuc2hvcCIsImVuY3J5cHRpb25fa2V5IjoiVGVsZWdyYW0tQ2hhbm5lbC0tLT5ATWFzaXJfU2VmaWQiLCJlbmNyeXB0aW9uX21ldGhvZCI6MX19fQ
-stormdns://eyJzY2hlbWEiOiJ3aGl0ZWRucy5wcm9maWxlIiwidmVyc2lvbiI6MSwicHJvZmlsZSI6eyJuYW1lIjoiZnJlZW5ldC12dCA0Iiwic2VydmVyIjp7ImRvbWFpbiI6InYxLm1hc2lyLXNlZmlkLTEuc2hvcCIsImVuY3J5cHRpb25fa2V5IjoiVGVsZWdyYW0tQ2hhbm5lbC0tLT5ATWFzaXJfU2VmaWQiLCJlbmNyeXB0aW9uX21ldGhvZCI6MX19fQ
-stormdns://eyJzY2hlbWEiOiJ3aGl0ZWRucy5wcm9maWxlIiwidmVyc2lvbiI6MSwicHJvZmlsZSI6eyJuYW1lIjoiZnJlZW5ldC12dCAzIiwic2VydmVyIjp7ImRvbWFpbiI6InYyLm1hc2lyLXNlZmlkLTEuc2hvcCIsImVuY3J5cHRpb25fa2V5IjoiVGVsZWdyYW0tQ2hhbm5lbC0tLT5ATWFzaXJfU2VmaWQiLCJlbmNyeXB0aW9uX21ldGhvZCI6MX19fQ
-stormdns://eyJzY2hlbWEiOiJ3aGl0ZWRucy5wcm9maWxlIiwidmVyc2lvbiI6MSwicHJvZmlsZSI6eyJuYW1lIjoiZnJlZW5ldC12dCA1Iiwic2VydmVyIjp7ImRvbWFpbiI6InY0Lm1hc2lyLXNlZmlkLTEuc2hvcCIsImVuY3J5cHRpb25fa2V5IjoiVGVsZWdyYW0tQ2hhbm5lbC0tLT5ATWFzaXJfU2VmaWQiLCJlbmNyeXB0aW9uX21ldGhvZCI6MX19fQ
-stormdns://eyJzY2hlbWEiOiJ3aGl0ZWRucy5wcm9maWxlIiwidmVyc2lvbiI6MSwicHJvZmlsZSI6eyJuYW1lIjoiZnJlZW5ldC12dCAgMSIsInNlcnZlciI6eyJkb21haW4iOiJ2NC5tYXNpci1zZWZpZC0xLnNob3AiLCJlbmNyeXB0aW9uX2tleSI6IlRlbGVncmFtLUNoYW5uZWwtLS0-QE1hc2lyX1NlZmlkIiwiZW5jcnlwdGlvbl9tZXRob2QiOjF9fX0
-stormdns://eyJzY2hlbWEiOiJ3aGl0ZWRucy5wcm9maWxlIiwidmVyc2lvbiI6MSwicHJvZmlsZSI6eyJuYW1lIjoiZnJlZW5ldC12dCA2Iiwic2VydmVyIjp7ImRvbWFpbiI6InY1Lm1hc2lyLXNlZmlkLTEuc2hvcCIsImVuY3J5cHRpb25fa2V5IjoiVGVsZWdyYW0tQ2hhbm5lbC0tLT5ATWFzaXJfU2VmaWQiLCJlbmNyeXB0aW9uX21ldGhvZCI6MX19fQ
-stormdns://eyJzY2hlbWEiOiJ3aGl0ZWRucy5wcm9maWxlIiwidmVyc2lvbiI6MSwicHJvZmlsZSI6eyJuYW1lIjoiZnJlZW5ldC12dCIsInNlcnZlciI6eyJkb21haW4iOiJ2NS5tYXNpci1zZWZpZC0xLnNob3AiLCJlbmNyeXB0aW9uX2tleSI6IlRlbGVncmFtLUNoYW5uZWwtLS0-QE1hc2lyX1NlZmlkIiwiZW5jcnlwdGlvbl9tZXRob2QiOjF9fX0
-stormdns://eyJzY2hlbWEiOiJ3aGl0ZWRucy5wcm9maWxlIiwidmVyc2lvbiI6MSwicHJvZmlsZSI6eyJuYW1lIjoiZnJlZW5ldC12dCAyIiwic2VydmVyIjp7ImRvbWFpbiI6InYzLm1hc2lyLXNlZmlkLTEuc2hvcCIsImVuY3J5cHRpb25fa2V5IjoiVGVsZWdyYW0tQ2hhbm5lbC0tLT5ATWFzaXJfU2VmaWQiLCJlbmNyeXB0aW9uX21ldGhvZCI6MX19fQ
-
----
-
-### 🕒 2026-05-15 08:53:08 UTC
-حتما اپدیت کنید  نسخه جدید خیلی خفن شده
-
----
-
-### 🕒 2026-05-15 08:53:05 UTC
-[https://dl.toolschi.com/view.php?f=9135dd79fe8bf02b.zip](https://dl.toolschi.com/view.php?f=9135dd79fe8bf02b.zip)
-نسخه جدید WhiteDNS
-
----
-
-### 🕒 2026-05-15 08:51:01 UTC
-دنیا و حصرت اسلیپ پث گرگ کار میکنه
 
 ---
 

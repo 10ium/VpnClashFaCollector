@@ -466,14 +466,19 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: 13.38.241.41:22222, server: 13.38.241.41, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 15.236.127.239:22222, server: 15.236.127.239, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 15.237.55.229:22222, server: 15.237.55.229, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 51.44.198.68:22222, server: 51.44.198.68, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 52.28.27.2:22222, server: 52.28.27.2, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 63.183.179.231:22222, server: 63.183.179.231, port: 22222, type: trojan, password: telegram-id-privatevpns, sni: trojan.burgerip.co.uk, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@config_free2", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 20c33382-9f5a-4fe3-998b-1af9719f260a, network: ws, ws-opts: {path: /, headers: {Host: M1.snllshop.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@V2ray_confiig", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 3095e475-e511-42d3-b009-0f7ccdcf4a23, network: ws, ws-opts: {path: /, headers: {Host: sv1.vexnetvps.site}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: برای اتصال دائمی جوین شو🗾 prrofile_purple@, server: Snapp.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 59bb1fa4-8c04-44af-bffb-efff394b75c2, network: ws, ws-opts: {path: /, headers: {Host: ir2.kokomokiyoo.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@V2ray_confiig 2", server: trex.docos.tech, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5de0e612-c9f3-4a0e-95f5-0827c624719c, servername: trex.docos.tech, network: ws, ws-opts: {path: /vless-ws, headers: {Host: trex.docos.tech}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@config_free2 2", server: trex.docos.tech, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 69ab00e0-9230-424b-b1be-eaf9ec776ce8, servername: trex.docos.tech, network: ws, ws-opts: {path: /vless-ws, headers: {Host: trex.docos.tech}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@V2ray_confiig 3", server: snapp.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 6ab94022-1895-4620-b06c-5f437f83908e, network: ws, ws-opts: {path: /Embestpro1, headers: {Host: Cyrus.zomavo.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: برای اتصال دائمی جوین شو🗾 prrofile_purple@ 2, server: 185.143.234.235, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 7a9d10c8-db5e-446d-ba95-61c2f54e0bc9, network: ws, ws-opts: {path: /, headers: {Host: felorida2.azmabekaraziz.shop}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@electvpn0", server: men2.gafe-lorbad.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 92b93f5d-af24-420e-95fb-0120f55b4481, network: ws, ws-opts: {path: /, headers: {Host: s2.fasrrapido.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@V2ray_confiig 4", server: twt.ghapol.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: e1dc29a6-c301-4562-a139-34aa3e4ef2a9, network: ws, ws-opts: {path: /, headers: {Host: botp.bexora.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -491,14 +496,19 @@ proxy-groups:
     type: select
     proxies:
       - 13.38.241.41:22222
+      - 15.236.127.239:22222
       - 15.237.55.229:22222
       - 51.44.198.68:22222
-      - 52.28.27.2:22222
+      - 63.183.179.231:22222
       - "@config_free2"
+      - "@V2ray_confiig"
       - برای اتصال دائمی جوین شو🗾 prrofile_purple@
+      - "@V2ray_confiig 2"
       - "@config_free2 2"
+      - "@V2ray_confiig 3"
       - برای اتصال دائمی جوین شو🗾 prrofile_purple@ 2
       - "@electvpn0"
+      - "@V2ray_confiig 4"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -506,14 +516,19 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 13.38.241.41:22222
+      - 15.236.127.239:22222
       - 15.237.55.229:22222
       - 51.44.198.68:22222
-      - 52.28.27.2:22222
+      - 63.183.179.231:22222
       - "@config_free2"
+      - "@V2ray_confiig"
       - برای اتصال دائمی جوین شو🗾 prrofile_purple@
+      - "@V2ray_confiig 2"
       - "@config_free2 2"
+      - "@V2ray_confiig 3"
       - برای اتصال دائمی جوین شو🗾 prrofile_purple@ 2
       - "@electvpn0"
+      - "@V2ray_confiig 4"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -521,14 +536,19 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 13.38.241.41:22222
+      - 15.236.127.239:22222
       - 15.237.55.229:22222
       - 51.44.198.68:22222
-      - 52.28.27.2:22222
+      - 63.183.179.231:22222
       - "@config_free2"
+      - "@V2ray_confiig"
       - برای اتصال دائمی جوین شو🗾 prrofile_purple@
+      - "@V2ray_confiig 2"
       - "@config_free2 2"
+      - "@V2ray_confiig 3"
       - برای اتصال دائمی جوین شو🗾 prrofile_purple@ 2
       - "@electvpn0"
+      - "@V2ray_confiig 4"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -545,14 +565,19 @@ proxy-groups:
     interval: 600
     proxies:
       - 13.38.241.41:22222
+      - 15.236.127.239:22222
       - 15.237.55.229:22222
       - 51.44.198.68:22222
-      - 52.28.27.2:22222
+      - 63.183.179.231:22222
       - "@config_free2"
+      - "@V2ray_confiig"
       - برای اتصال دائمی جوین شو🗾 prrofile_purple@
+      - "@V2ray_confiig 2"
       - "@config_free2 2"
+      - "@V2ray_confiig 3"
       - برای اتصال دائمی جوین شو🗾 prrofile_purple@ 2
       - "@electvpn0"
+      - "@V2ray_confiig 4"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -560,14 +585,19 @@ proxy-groups:
     interval: 600
     proxies:
       - 13.38.241.41:22222
+      - 15.236.127.239:22222
       - 15.237.55.229:22222
       - 51.44.198.68:22222
-      - 52.28.27.2:22222
+      - 63.183.179.231:22222
       - "@config_free2"
+      - "@V2ray_confiig"
       - برای اتصال دائمی جوین شو🗾 prrofile_purple@
+      - "@V2ray_confiig 2"
       - "@config_free2 2"
+      - "@V2ray_confiig 3"
       - برای اتصال دائمی جوین شو🗾 prrofile_purple@ 2
       - "@electvpn0"
+      - "@V2ray_confiig 4"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -575,14 +605,19 @@ proxy-groups:
     interval: 600
     proxies:
       - 13.38.241.41:22222
+      - 15.236.127.239:22222
       - 15.237.55.229:22222
       - 51.44.198.68:22222
-      - 52.28.27.2:22222
+      - 63.183.179.231:22222
       - "@config_free2"
+      - "@V2ray_confiig"
       - برای اتصال دائمی جوین شو🗾 prrofile_purple@
+      - "@V2ray_confiig 2"
       - "@config_free2 2"
+      - "@V2ray_confiig 3"
       - برای اتصال دائمی جوین شو🗾 prrofile_purple@ 2
       - "@electvpn0"
+      - "@V2ray_confiig 4"
   - name: دانلود منیجر 📥
     type: select
     proxies:

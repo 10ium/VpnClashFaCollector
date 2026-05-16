@@ -465,7 +465,6 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@DarcProxy - Service", server: Tapsi.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: d54214cb-ebac-4f19-b637-adf72599c335, network: ws, ws-opts: {path: /cdn, headers: {Host: Za.movizdl.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@DarcProxy - Service`", server: Tapsi.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: d54214cb-ebac-4f19-b637-adf72599c335, network: ws, ws-opts: {path: /cdn, headers: {Host: Za.movizdl.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -483,7 +482,6 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@DarcProxy - Service"
       - "@DarcProxy - Service`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -491,7 +489,6 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - "@DarcProxy - Service"
       - "@DarcProxy - Service`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -499,7 +496,6 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - "@DarcProxy - Service"
       - "@DarcProxy - Service`"
   - name: اتصال پایدار 🔗
     type: url-test
@@ -516,7 +512,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@DarcProxy - Service"
       - "@DarcProxy - Service`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -524,7 +519,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@DarcProxy - Service"
       - "@DarcProxy - Service`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -532,7 +526,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@DarcProxy - Service"
       - "@DarcProxy - Service`"
   - name: دانلود منیجر 📥
     type: select
