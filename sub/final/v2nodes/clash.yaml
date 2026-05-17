@@ -467,7 +467,7 @@ rule-providers:
 proxies:
   - {name: 72.56.247.198:443, server: 72.56.247.198, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5b2fc182-a497-4fbe-aeb8-1841dae99022, servername: eh.vk.com, host: eh.vk.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 74.48.173.150:28906, server: 74.48.173.150, port: 28906, type: vless, tls: true, packet-encoding: xudp, uuid: d09c384b-384b-4d9a-85c6-07d3dce8ae5b, servername: www.suffolk.edu, host: www.suffolk.edu, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: wi1nGPSt-wF8rJIwpMTZI_5QG1qnkuzRyAWFEtgnBS0, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 141.193.213.21:80, server: 141.193.213.21, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: fac62eac-1eec-4260-a991-0cac2f8745a3, network: ws, ws-opts: {path: /@Tech_Sonic, headers: {Host: free-server.techsonic.ggff.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇺🇸 [openproxylist.com] vmess-US", server: 84.17.41.2, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,7 +486,7 @@ proxy-groups:
     proxies:
       - 72.56.247.198:443
       - 74.48.173.150:28906
-      - 141.193.213.21:80
+      - 🇺🇸 [openproxylist.com] vmess-US
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -495,7 +495,7 @@ proxy-groups:
     proxies:
       - 72.56.247.198:443
       - 74.48.173.150:28906
-      - 141.193.213.21:80
+      - 🇺🇸 [openproxylist.com] vmess-US
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -504,7 +504,7 @@ proxy-groups:
     proxies:
       - 72.56.247.198:443
       - 74.48.173.150:28906
-      - 141.193.213.21:80
+      - 🇺🇸 [openproxylist.com] vmess-US
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -522,7 +522,7 @@ proxy-groups:
     proxies:
       - 72.56.247.198:443
       - 74.48.173.150:28906
-      - 141.193.213.21:80
+      - 🇺🇸 [openproxylist.com] vmess-US
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -531,7 +531,7 @@ proxy-groups:
     proxies:
       - 72.56.247.198:443
       - 74.48.173.150:28906
-      - 141.193.213.21:80
+      - 🇺🇸 [openproxylist.com] vmess-US
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -540,7 +540,7 @@ proxy-groups:
     proxies:
       - 72.56.247.198:443
       - 74.48.173.150:28906
-      - 141.193.213.21:80
+      - 🇺🇸 [openproxylist.com] vmess-US
   - name: دانلود منیجر 📥
     type: select
     proxies:
