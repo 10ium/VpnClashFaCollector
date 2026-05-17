@@ -465,8 +465,13 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: Pro 8 @Outline_Vpn, server: 104.129.166.138, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.indevs.in, network: ws, ws-opts: {path: /, headers: {Host: sni.111000.indevs.in}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Pro 7 @Outline_Vpn, server: 104.18.32.47, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.indevs.in, network: ws, ws-opts: {path: "/?ed", headers: {Host: sni.111000.indevs.in}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: Pro 3 @Outline_Vpn, server: 167.68.42.191, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.my111000.tech, network: ws, ws-opts: {path: /, headers: {Host: sni.my111000.tech}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Pro 9 @Outline_Vpn, server: 172.64.147.223, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.dynv6.net, alpn: [http%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: sni.111000.dynv6.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Pro 6 @Outline_Vpn, server: 213.182.199.138, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.indevs.in, network: ws, ws-opts: {path: /, headers: {Host: sni.111000.indevs.in}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: Pro 5 @Outline_Vpn`, server: 25.129.197.191, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.my111000.tech, network: ws, ws-opts: {path: /, headers: {Host: sni.my111000.tech}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Pro 10 @Outline_Vpn`, server: 31.185.108.138, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.indevs.in, network: ws, ws-opts: {path: /, headers: {Host: sni.111000.indevs.in}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: Pro 4 @Outline_Vpn, server: 104.18.189.153, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ae0dd58e-e222-40bf-84ae-365a97532737, servername: pagescm.freen3.cc.cd, network: ws, ws-opts: {path: /pdf/servicesfp=chrome, headers: {Host: pagescm.freen3.cc.cd}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: Pro 2 @Outline_Vpn, server: 104.19.56.154, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ae0dd58e-e222-40bf-84ae-365a97532737, servername: pagescm.freen8.cc.cd, network: ws, ws-opts: {path: /resource/linksfp=chrome, headers: {Host: pagescm.freen8.cc.cd}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: Pro 1 @Outline_Vpn, server: 162.159.153.235, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: b818576e-951a-4a9c-879a-d32611b977ad, servername: cocobaby.pages.dev, network: ws, ws-opts: {path: /fp=chrome, headers: {Host: cocobaby.pages.dev}}, skip-cert-verify: false, udp: true, tfo: false}
@@ -486,8 +491,13 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - Pro 8 @Outline_Vpn
+      - Pro 7 @Outline_Vpn
       - Pro 3 @Outline_Vpn
+      - Pro 9 @Outline_Vpn
+      - Pro 6 @Outline_Vpn
       - Pro 5 @Outline_Vpn`
+      - Pro 10 @Outline_Vpn`
       - Pro 4 @Outline_Vpn
       - Pro 2 @Outline_Vpn
       - Pro 1 @Outline_Vpn
@@ -497,8 +507,13 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - Pro 8 @Outline_Vpn
+      - Pro 7 @Outline_Vpn
       - Pro 3 @Outline_Vpn
+      - Pro 9 @Outline_Vpn
+      - Pro 6 @Outline_Vpn
       - Pro 5 @Outline_Vpn`
+      - Pro 10 @Outline_Vpn`
       - Pro 4 @Outline_Vpn
       - Pro 2 @Outline_Vpn
       - Pro 1 @Outline_Vpn
@@ -508,8 +523,13 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - Pro 8 @Outline_Vpn
+      - Pro 7 @Outline_Vpn
       - Pro 3 @Outline_Vpn
+      - Pro 9 @Outline_Vpn
+      - Pro 6 @Outline_Vpn
       - Pro 5 @Outline_Vpn`
+      - Pro 10 @Outline_Vpn`
       - Pro 4 @Outline_Vpn
       - Pro 2 @Outline_Vpn
       - Pro 1 @Outline_Vpn
@@ -528,8 +548,13 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - Pro 8 @Outline_Vpn
+      - Pro 7 @Outline_Vpn
       - Pro 3 @Outline_Vpn
+      - Pro 9 @Outline_Vpn
+      - Pro 6 @Outline_Vpn
       - Pro 5 @Outline_Vpn`
+      - Pro 10 @Outline_Vpn`
       - Pro 4 @Outline_Vpn
       - Pro 2 @Outline_Vpn
       - Pro 1 @Outline_Vpn
@@ -539,8 +564,13 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - Pro 8 @Outline_Vpn
+      - Pro 7 @Outline_Vpn
       - Pro 3 @Outline_Vpn
+      - Pro 9 @Outline_Vpn
+      - Pro 6 @Outline_Vpn
       - Pro 5 @Outline_Vpn`
+      - Pro 10 @Outline_Vpn`
       - Pro 4 @Outline_Vpn
       - Pro 2 @Outline_Vpn
       - Pro 1 @Outline_Vpn
@@ -550,8 +580,13 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - Pro 8 @Outline_Vpn
+      - Pro 7 @Outline_Vpn
       - Pro 3 @Outline_Vpn
+      - Pro 9 @Outline_Vpn
+      - Pro 6 @Outline_Vpn
       - Pro 5 @Outline_Vpn`
+      - Pro 10 @Outline_Vpn`
       - Pro 4 @Outline_Vpn
       - Pro 2 @Outline_Vpn
       - Pro 1 @Outline_Vpn
