@@ -465,7 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: s4.tehranionliine.ir:80, server: s4.tehranionliine.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 93ad8297-fad9-46e7-a0ca-6b91fcf36c10, network: ws, ws-opts: {path: /, headers: {Host: s4.tehranionliine.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hamedvpns, server: 104.19.229.21, port: 443, type: trojan, password: humanity, sni: www.creationlong.org, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org}}, udp: true, tfo: false}
+  - {name: hamedvpns 2, server: 104.19.229.21, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.indevs.in, network: ws, ws-opts: {path: /, headers: {Host: sni.111000.indevs.in}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Aman_vpn***❤️‍🔥***hamed`, server: s4.tehranionliine.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: c7f87ac7-a783-4cac-ac0e-90a12ada85e9, network: ws, ws-opts: {path: /, headers: {Host: s4.tehranionliine.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +484,27 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - s4.tehranionliine.ir:80
+      - hamedvpns
+      - hamedvpns 2
+      - Aman_vpn***❤️‍🔥***hamed`
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - s4.tehranionliine.ir:80
+      - hamedvpns
+      - hamedvpns 2
+      - Aman_vpn***❤️‍🔥***hamed`
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - s4.tehranionliine.ir:80
+      - hamedvpns
+      - hamedvpns 2
+      - Aman_vpn***❤️‍🔥***hamed`
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +520,27 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - s4.tehranionliine.ir:80
+      - hamedvpns
+      - hamedvpns 2
+      - Aman_vpn***❤️‍🔥***hamed`
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - s4.tehranionliine.ir:80
+      - hamedvpns
+      - hamedvpns 2
+      - Aman_vpn***❤️‍🔥***hamed`
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - s4.tehranionliine.ir:80
+      - hamedvpns
+      - hamedvpns 2
+      - Aman_vpn***❤️‍🔥***hamed`
   - name: دانلود منیجر 📥
     type: select
     proxies:

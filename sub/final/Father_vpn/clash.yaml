@@ -465,7 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: TEL;Father_vpn`, server: snapp.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 0a47ab98-b50b-4b92-baec-6e16af930dde, network: ws, ws-opts: {path: /Embestpro1, headers: {Host: Cyrus.zomavo.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: TEL;Father_vpn`, server: anten.ir, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: 98e2a7aa-2f22-4829-893a-7c8f7e8ba8ce, network: ws, ws-opts: {path: /cdn, headers: {Host: i.asaasa.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: TEL;Father_vpn` 2, server: www.varzesh3.com, port: 2095, type: vless, tls: true, packet-encoding: xudp, uuid: 9f5a8dee-efe9-4c5a-9f96-8d3e632586b6, network: ws, ws-opts: {path: "/chat?ed=128", headers: {Host: dl2.mizbanertebatfarda.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,6 +484,7 @@ proxy-groups:
     type: select
     proxies:
       - TEL;Father_vpn`
+      - TEL;Father_vpn` 2
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -490,6 +492,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - TEL;Father_vpn`
+      - TEL;Father_vpn` 2
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -497,6 +500,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - TEL;Father_vpn`
+      - TEL;Father_vpn` 2
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -513,6 +517,7 @@ proxy-groups:
     interval: 600
     proxies:
       - TEL;Father_vpn`
+      - TEL;Father_vpn` 2
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -520,6 +525,7 @@ proxy-groups:
     interval: 600
     proxies:
       - TEL;Father_vpn`
+      - TEL;Father_vpn` 2
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -527,6 +533,7 @@ proxy-groups:
     interval: 600
     proxies:
       - TEL;Father_vpn`
+      - TEL;Father_vpn` 2
   - name: دانلود منیجر 📥
     type: select
     proxies:

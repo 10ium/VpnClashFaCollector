@@ -465,7 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: https://t.me/saministamm`, server: varzesh3.com, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 97b36571-ffdc-5bdb-7bc4-bbcf8f3debb4, network: ws, ws-opts: {path: /, headers: {Host: cdn-665e-o0g.fars-rehan.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@saministamm`", server: varzesh3.com, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 413f4a86-cb33-4cf6-b3d4-cfc06fac6a68, network: ws, ws-opts: {path: /aban, headers: {Host: tlite.abanservers.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: join➪ ꧁ ‌⃟•• @saministamm, server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 4888fea3-24f9-416d-acec-1b63613bb6ee, network: ws, ws-opts: {path: /PahlaviTeam, headers: {Host: amyrax.x2n2.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - https://t.me/saministamm`
+      - "@saministamm`"
+      - join➪ ꧁ ‌⃟•• @saministamm
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - https://t.me/saministamm`
+      - "@saministamm`"
+      - join➪ ꧁ ‌⃟•• @saministamm
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - https://t.me/saministamm`
+      - "@saministamm`"
+      - join➪ ꧁ ‌⃟•• @saministamm
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - https://t.me/saministamm`
+      - "@saministamm`"
+      - join➪ ꧁ ‌⃟•• @saministamm
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - https://t.me/saministamm`
+      - "@saministamm`"
+      - join➪ ꧁ ‌⃟•• @saministamm
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - https://t.me/saministamm`
+      - "@saministamm`"
+      - join➪ ꧁ ‌⃟•• @saministamm
   - name: دانلود منیجر 📥
     type: select
     proxies:
