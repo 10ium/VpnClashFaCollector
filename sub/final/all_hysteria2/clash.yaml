@@ -465,13 +465,14 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 3@oneclickvpnkeys, server: 167.17.178.128, port: 10086, type: hysteria2, ports: 10086, password: 2545ab46-6306-4f2b-badd-5531f384d55f, obfs: salamander, obfs-password: T%40T*FP7uq%3D%21t, sni: fr1.xiaoliyu.cyou, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 1@oneclickvpnkeys, server: 185.228.139.247, port: 4433, type: hysteria2, ports: 4433, password: 2545ab46-6306-4f2b-badd-5531f384d55f, sni: de2.xiaoliyu.cyou, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 2@oneclickvpnkeys, server: 202.61.205.86, port: 4433, type: hysteria2, ports: 4433, password: 2545ab46-6306-4f2b-badd-5531f384d55f, sni: de1.xiaoliyu.cyou, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 5@oneclickvpnkeys, server: 212.192.13.242, port: 4433, type: hysteria2, ports: 4433, password: 2545ab46-6306-4f2b-badd-5531f384d55f, sni: hk1.xiaoliyu.cyou, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 6@oneclickvpnkeys, server: 68.233.103.254, port: 4433, type: hysteria2, ports: 4433, password: 2545ab46-6306-4f2b-badd-5531f384d55f, sni: ln4.xiaoliyu.cyou, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 4@oneclickvpnkeys, server: 166.88.142.205, port: 2056, type: hysteria2, ports: 2056, password: 4d092122-268a-4a1a-b23f-83931c5abc3a, sni: mg6.mangshe.xyz, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 7@oneclickvpnkeys`, server: 193.123.78.85, port: 2056, type: hysteria2, ports: 2056, password: 4d092122-268a-4a1a-b23f-83931c5abc3a, sni: db1.mangshe.xyz, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 88@oneclickvpnkeys, server: gb1.xiaoliyu.cyou, port: 10086, type: hysteria2, ports: 10086, password: 2545ab46-6306-4f2b-badd-5531f384d55f, obfs: salamander, obfs-password: T%24rMIL_%28dd%28%24Ydfz, sni: gb1.xiaoliyu.cyou, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 62@oneclickvpnkeys, server: flkf2.mangshe.xyz, port: 2056, type: hysteria2, ports: 2056, password: 4d092122-268a-4a1a-b23f-83931c5abc3a, sni: flkf2.mangshe.xyz, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 61@oneclickvpnkeys, server: flkf3.mangshe.xyz, port: 2056, type: hysteria2, ports: 2056, password: 4d092122-268a-4a1a-b23f-83931c5abc3a, sni: flkf3.mangshe.xyz, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 67@oneclickvpnkeys, server: hl1.mangshe.xyz, port: 2056, type: hysteria2, ports: 2056, password: 4d092122-268a-4a1a-b23f-83931c5abc3a, sni: hl1.mangshe.xyz, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 66@oneclickvpnkeys, server: nlb1.mangshe.xyz, port: 2056, type: hysteria2, ports: 2056, password: 4d092122-268a-4a1a-b23f-83931c5abc3a, sni: nlb1.mangshe.xyz, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 65@oneclickvpnkeys, server: nlb3.mangshe.xyz, port: 2056, type: hysteria2, ports: 2056, password: 4d092122-268a-4a1a-b23f-83931c5abc3a, sni: nlb3.mangshe.xyz, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 68@oneclickvpnkeys, server: nlb4.mangshe.xyz, port: 2056, type: hysteria2, ports: 2056, password: 4d092122-268a-4a1a-b23f-83931c5abc3a, sni: nlb4.mangshe.xyz, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 59@oneclickvpnkeys, server: 138.124.182.202, port: 8443, type: hysteria2, ports: 8443, password: jOIItw1h4D, sni: latviyaotpusk1.home.kg, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -488,39 +489,42 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 3@oneclickvpnkeys
-      - 1@oneclickvpnkeys
-      - 2@oneclickvpnkeys
-      - 5@oneclickvpnkeys
-      - 6@oneclickvpnkeys
-      - 4@oneclickvpnkeys
-      - 7@oneclickvpnkeys`
+      - 88@oneclickvpnkeys
+      - 62@oneclickvpnkeys
+      - 61@oneclickvpnkeys
+      - 67@oneclickvpnkeys
+      - 66@oneclickvpnkeys
+      - 65@oneclickvpnkeys
+      - 68@oneclickvpnkeys
+      - 59@oneclickvpnkeys
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 3@oneclickvpnkeys
-      - 1@oneclickvpnkeys
-      - 2@oneclickvpnkeys
-      - 5@oneclickvpnkeys
-      - 6@oneclickvpnkeys
-      - 4@oneclickvpnkeys
-      - 7@oneclickvpnkeys`
+      - 88@oneclickvpnkeys
+      - 62@oneclickvpnkeys
+      - 61@oneclickvpnkeys
+      - 67@oneclickvpnkeys
+      - 66@oneclickvpnkeys
+      - 65@oneclickvpnkeys
+      - 68@oneclickvpnkeys
+      - 59@oneclickvpnkeys
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 3@oneclickvpnkeys
-      - 1@oneclickvpnkeys
-      - 2@oneclickvpnkeys
-      - 5@oneclickvpnkeys
-      - 6@oneclickvpnkeys
-      - 4@oneclickvpnkeys
-      - 7@oneclickvpnkeys`
+      - 88@oneclickvpnkeys
+      - 62@oneclickvpnkeys
+      - 61@oneclickvpnkeys
+      - 67@oneclickvpnkeys
+      - 66@oneclickvpnkeys
+      - 65@oneclickvpnkeys
+      - 68@oneclickvpnkeys
+      - 59@oneclickvpnkeys
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -536,39 +540,42 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 3@oneclickvpnkeys
-      - 1@oneclickvpnkeys
-      - 2@oneclickvpnkeys
-      - 5@oneclickvpnkeys
-      - 6@oneclickvpnkeys
-      - 4@oneclickvpnkeys
-      - 7@oneclickvpnkeys`
+      - 88@oneclickvpnkeys
+      - 62@oneclickvpnkeys
+      - 61@oneclickvpnkeys
+      - 67@oneclickvpnkeys
+      - 66@oneclickvpnkeys
+      - 65@oneclickvpnkeys
+      - 68@oneclickvpnkeys
+      - 59@oneclickvpnkeys
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 3@oneclickvpnkeys
-      - 1@oneclickvpnkeys
-      - 2@oneclickvpnkeys
-      - 5@oneclickvpnkeys
-      - 6@oneclickvpnkeys
-      - 4@oneclickvpnkeys
-      - 7@oneclickvpnkeys`
+      - 88@oneclickvpnkeys
+      - 62@oneclickvpnkeys
+      - 61@oneclickvpnkeys
+      - 67@oneclickvpnkeys
+      - 66@oneclickvpnkeys
+      - 65@oneclickvpnkeys
+      - 68@oneclickvpnkeys
+      - 59@oneclickvpnkeys
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 3@oneclickvpnkeys
-      - 1@oneclickvpnkeys
-      - 2@oneclickvpnkeys
-      - 5@oneclickvpnkeys
-      - 6@oneclickvpnkeys
-      - 4@oneclickvpnkeys
-      - 7@oneclickvpnkeys`
+      - 88@oneclickvpnkeys
+      - 62@oneclickvpnkeys
+      - 61@oneclickvpnkeys
+      - 67@oneclickvpnkeys
+      - 66@oneclickvpnkeys
+      - 65@oneclickvpnkeys
+      - 68@oneclickvpnkeys
+      - 59@oneclickvpnkeys
   - name: دانلود منیجر 📥
     type: select
     proxies:

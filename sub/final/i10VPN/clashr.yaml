@@ -5,60 +5,67 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@i10VPN - Psiphon 79", server: 79.127.82.170, port: 443, type: trojan, password: 2a599135-886f-4359-bf68-0993baa990f1, sni: wow-game-server-gb-nb-d.world-of-warcraft-game-server.cfd, skip-cert-verify: false, network: ws, ws-opts: {path: /1000/10/b449693f-1869-4379-946d-279f2ad95021, headers: {Host: wow-game-server-gb-nb-d.world-of-warcraft-game-server.cfd}}, udp: true, tfo: false}
-  - {name: "@i10VPN - Psiphon 78`", server: camp.nahidapp.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 799f939b-964b-4416-84ac-18a6ace7fe70, servername: camp.nahidapp.com, network: ws, ws-opts: {path: /IF_VPN_Bot, headers: {Host: camp.nahidapp.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@i10VPN - Psiphon 80`", server: 13.249.2.122, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: telegram-dickiriptorbot, servername: 3.173.21.63, network: ws, ws-opts: {path: /, headers: {Host: 3.173.21.63}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@i10VPN - Psiphon 84`", server: 193.151.152.73, port: 40443, type: trojan, password: humanity, sni: www.ignitelimit.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.ignitelimit.com}}, udp: true, tfo: false}
+  - {name: "@i10VPN - Psiphon 83`", server: varzesh3.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 23a62d8e-0a67-17f1-338f-786ef2974f50, servername: cdn-reb-aaa.fasrgobar.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: cdn-reb-aaa.fasrgobar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@i10VPN - Psiphon 86`", server: 18.157.213.215, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: badc7a4a-073f-30e3-2e61-8b089a068c36, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@i10VPN - Psiphon 85", server: 18.192.95.247, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: badc7a4a-073f-30e3-2e61-8b089a068c36, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@i10VPN - Psiphon 79"
-      - "@i10VPN - Psiphon 78`"
-      - "@i10VPN - Psiphon 80`"
+      - "@i10VPN - Psiphon 84`"
+      - "@i10VPN - Psiphon 83`"
+      - "@i10VPN - Psiphon 86`"
+      - "@i10VPN - Psiphon 85"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@i10VPN - Psiphon 79"
-      - "@i10VPN - Psiphon 78`"
-      - "@i10VPN - Psiphon 80`"
+      - "@i10VPN - Psiphon 84`"
+      - "@i10VPN - Psiphon 83`"
+      - "@i10VPN - Psiphon 86`"
+      - "@i10VPN - Psiphon 85"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@i10VPN - Psiphon 79"
-      - "@i10VPN - Psiphon 78`"
-      - "@i10VPN - Psiphon 80`"
+      - "@i10VPN - Psiphon 84`"
+      - "@i10VPN - Psiphon 83`"
+      - "@i10VPN - Psiphon 86`"
+      - "@i10VPN - Psiphon 85"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@i10VPN - Psiphon 79"
-      - "@i10VPN - Psiphon 78`"
-      - "@i10VPN - Psiphon 80`"
+      - "@i10VPN - Psiphon 84`"
+      - "@i10VPN - Psiphon 83`"
+      - "@i10VPN - Psiphon 86`"
+      - "@i10VPN - Psiphon 85"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@i10VPN - Psiphon 79"
-      - "@i10VPN - Psiphon 78`"
-      - "@i10VPN - Psiphon 80`"
+      - "@i10VPN - Psiphon 84`"
+      - "@i10VPN - Psiphon 83`"
+      - "@i10VPN - Psiphon 86`"
+      - "@i10VPN - Psiphon 85"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@i10VPN - Psiphon 79"
-      - "@i10VPN - Psiphon 78`"
-      - "@i10VPN - Psiphon 80`"
+      - "@i10VPN - Psiphon 84`"
+      - "@i10VPN - Psiphon 83`"
+      - "@i10VPN - Psiphon 86`"
+      - "@i10VPN - Psiphon 85"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -86,9 +93,10 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@i10VPN - Psiphon 79"
-      - "@i10VPN - Psiphon 78`"
-      - "@i10VPN - Psiphon 80`"
+      - "@i10VPN - Psiphon 84`"
+      - "@i10VPN - Psiphon 83`"
+      - "@i10VPN - Psiphon 86`"
+      - "@i10VPN - Psiphon 85"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

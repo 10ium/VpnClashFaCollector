@@ -465,8 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@saministamm`", server: varzesh3.com, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 413f4a86-cb33-4cf6-b3d4-cfc06fac6a68, network: ws, ws-opts: {path: /aban, headers: {Host: tlite.abanservers.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: join➪ ꧁ ‌⃟•• @saministamm, server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 4888fea3-24f9-416d-acec-1b63613bb6ee, network: ws, ws-opts: {path: /PahlaviTeam, headers: {Host: amyrax.x2n2.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@saministamm`", server: 85.198.20.177, port: 40443, type: trojan, password: humanity, sni: www.ignitelimit.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.ignitelimit.com}}, udp: true, tfo: false}
+  - {name: "@saministamm", server: varzesh3.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 23a62d8e-0a67-17f1-338f-786ef2974f50, servername: cdn-reb-aaa.fasrgobar.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: cdn-reb-aaa.fasrgobar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MelliNet_NpV باگ", server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf, port: 22156, type: vmess, uuid: e0d72f4b-f759-4bed-addf-3a34a36ba983, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,7 +485,8 @@ proxy-groups:
     type: select
     proxies:
       - "@saministamm`"
-      - join➪ ꧁ ‌⃟•• @saministamm
+      - "@saministamm"
+      - "@MelliNet_NpV باگ"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -492,7 +494,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@saministamm`"
-      - join➪ ꧁ ‌⃟•• @saministamm
+      - "@saministamm"
+      - "@MelliNet_NpV باگ"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -500,7 +503,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@saministamm`"
-      - join➪ ꧁ ‌⃟•• @saministamm
+      - "@saministamm"
+      - "@MelliNet_NpV باگ"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -517,7 +521,8 @@ proxy-groups:
     interval: 600
     proxies:
       - "@saministamm`"
-      - join➪ ꧁ ‌⃟•• @saministamm
+      - "@saministamm"
+      - "@MelliNet_NpV باگ"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -525,7 +530,8 @@ proxy-groups:
     interval: 600
     proxies:
       - "@saministamm`"
-      - join➪ ꧁ ‌⃟•• @saministamm
+      - "@saministamm"
+      - "@MelliNet_NpV باگ"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -533,7 +539,8 @@ proxy-groups:
     interval: 600
     proxies:
       - "@saministamm`"
-      - join➪ ꧁ ‌⃟•• @saministamm
+      - "@saministamm"
+      - "@MelliNet_NpV باگ"
   - name: دانلود منیجر 📥
     type: select
     proxies:
