@@ -5,6 +5,7 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: "@DarcProxy`", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 82ddc1c1-b508-4151-99ca-bb8b684ac24f, network: ws, ws-opts: {path: /, headers: {Host: derakhshan.molvliafor.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 🇬🇧 1 GB (×10) 📊, server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: dd142bb4-4407-4137-ab6f-a00ded3d6a3f, network: ws, ws-opts: {path: /, headers: {Host: derakhshan.molvliafor.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
@@ -12,6 +13,7 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - "@DarcProxy`"
       - 🇬🇧 1 GB (×10) 📊
   - name: ♻️ 自动选择
     type: url-test
@@ -19,6 +21,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - "@DarcProxy`"
       - 🇬🇧 1 GB (×10) 📊
   - name: 🌍 国外媒体
     type: select
@@ -26,24 +29,28 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - "@DarcProxy`"
       - 🇬🇧 1 GB (×10) 📊
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - "@DarcProxy`"
       - 🇬🇧 1 GB (×10) 📊
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - "@DarcProxy`"
       - 🇬🇧 1 GB (×10) 📊
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - "@DarcProxy`"
       - 🇬🇧 1 GB (×10) 📊
   - name: 🎯 全球直连
     type: select
@@ -72,6 +79,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - "@DarcProxy`"
       - 🇬🇧 1 GB (×10) 📊
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连

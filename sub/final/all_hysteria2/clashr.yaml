@@ -5,109 +5,53 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 88@oneclickvpnkeys, server: gb1.xiaoliyu.cyou, port: 10086, type: hysteria2, ports: 10086, password: 2545ab46-6306-4f2b-badd-5531f384d55f, obfs: salamander, obfs-password: T%24rMIL_%28dd%28%24Ydfz, sni: gb1.xiaoliyu.cyou, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 62@oneclickvpnkeys, server: flkf2.mangshe.xyz, port: 2056, type: hysteria2, ports: 2056, password: 4d092122-268a-4a1a-b23f-83931c5abc3a, sni: flkf2.mangshe.xyz, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 61@oneclickvpnkeys, server: flkf3.mangshe.xyz, port: 2056, type: hysteria2, ports: 2056, password: 4d092122-268a-4a1a-b23f-83931c5abc3a, sni: flkf3.mangshe.xyz, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 67@oneclickvpnkeys, server: hl1.mangshe.xyz, port: 2056, type: hysteria2, ports: 2056, password: 4d092122-268a-4a1a-b23f-83931c5abc3a, sni: hl1.mangshe.xyz, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 66@oneclickvpnkeys, server: nlb1.mangshe.xyz, port: 2056, type: hysteria2, ports: 2056, password: 4d092122-268a-4a1a-b23f-83931c5abc3a, sni: nlb1.mangshe.xyz, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 65@oneclickvpnkeys, server: nlb3.mangshe.xyz, port: 2056, type: hysteria2, ports: 2056, password: 4d092122-268a-4a1a-b23f-83931c5abc3a, sni: nlb3.mangshe.xyz, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 68@oneclickvpnkeys, server: nlb4.mangshe.xyz, port: 2056, type: hysteria2, ports: 2056, password: 4d092122-268a-4a1a-b23f-83931c5abc3a, sni: nlb4.mangshe.xyz, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@filembad`", server: srm.kishonline.online, port: 443, type: hysteria2, ports: 443, password: cZ5R384SxB, obfs: salamander, obfs-password: kish-data-center, sni: srm.kishonline.online, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 26743 | ⚡️Telegram - t.me/SOSkeyNET, server: srm.kishonline.online, port: 443, type: hysteria2, ports: 443, password: cZ5R384SxB, obfs: salamander, obfs-password: kish-data-center, sni: srm.kishonline.online, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 59@oneclickvpnkeys, server: 138.124.182.202, port: 8443, type: hysteria2, ports: 8443, password: jOIItw1h4D, sni: latviyaotpusk1.home.kg, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 88@oneclickvpnkeys
-      - 62@oneclickvpnkeys
-      - 61@oneclickvpnkeys
-      - 67@oneclickvpnkeys
-      - 66@oneclickvpnkeys
-      - 65@oneclickvpnkeys
-      - 68@oneclickvpnkeys
       - "@filembad`"
       - 26743 | ⚡️Telegram - t.me/SOSkeyNET
-      - 59@oneclickvpnkeys
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 88@oneclickvpnkeys
-      - 62@oneclickvpnkeys
-      - 61@oneclickvpnkeys
-      - 67@oneclickvpnkeys
-      - 66@oneclickvpnkeys
-      - 65@oneclickvpnkeys
-      - 68@oneclickvpnkeys
       - "@filembad`"
       - 26743 | ⚡️Telegram - t.me/SOSkeyNET
-      - 59@oneclickvpnkeys
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 88@oneclickvpnkeys
-      - 62@oneclickvpnkeys
-      - 61@oneclickvpnkeys
-      - 67@oneclickvpnkeys
-      - 66@oneclickvpnkeys
-      - 65@oneclickvpnkeys
-      - 68@oneclickvpnkeys
       - "@filembad`"
       - 26743 | ⚡️Telegram - t.me/SOSkeyNET
-      - 59@oneclickvpnkeys
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 88@oneclickvpnkeys
-      - 62@oneclickvpnkeys
-      - 61@oneclickvpnkeys
-      - 67@oneclickvpnkeys
-      - 66@oneclickvpnkeys
-      - 65@oneclickvpnkeys
-      - 68@oneclickvpnkeys
       - "@filembad`"
       - 26743 | ⚡️Telegram - t.me/SOSkeyNET
-      - 59@oneclickvpnkeys
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 88@oneclickvpnkeys
-      - 62@oneclickvpnkeys
-      - 61@oneclickvpnkeys
-      - 67@oneclickvpnkeys
-      - 66@oneclickvpnkeys
-      - 65@oneclickvpnkeys
-      - 68@oneclickvpnkeys
       - "@filembad`"
       - 26743 | ⚡️Telegram - t.me/SOSkeyNET
-      - 59@oneclickvpnkeys
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 88@oneclickvpnkeys
-      - 62@oneclickvpnkeys
-      - 61@oneclickvpnkeys
-      - 67@oneclickvpnkeys
-      - 66@oneclickvpnkeys
-      - 65@oneclickvpnkeys
-      - 68@oneclickvpnkeys
       - "@filembad`"
       - 26743 | ⚡️Telegram - t.me/SOSkeyNET
-      - 59@oneclickvpnkeys
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -135,16 +79,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 88@oneclickvpnkeys
-      - 62@oneclickvpnkeys
-      - 61@oneclickvpnkeys
-      - 67@oneclickvpnkeys
-      - 66@oneclickvpnkeys
-      - 65@oneclickvpnkeys
-      - 68@oneclickvpnkeys
       - "@filembad`"
       - 26743 | ⚡️Telegram - t.me/SOSkeyNET
-      - 59@oneclickvpnkeys
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

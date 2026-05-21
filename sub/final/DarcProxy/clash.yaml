@@ -465,6 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: "@DarcProxy`", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 82ddc1c1-b508-4151-99ca-bb8b684ac24f, network: ws, ws-opts: {path: /, headers: {Host: derakhshan.molvliafor.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 🇬🇧 1 GB (×10) 📊, server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: dd142bb4-4407-4137-ab6f-a00ded3d6a3f, network: ws, ws-opts: {path: /, headers: {Host: derakhshan.molvliafor.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -482,6 +483,7 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - "@DarcProxy`"
       - 🇬🇧 1 GB (×10) 📊
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -489,6 +491,7 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - "@DarcProxy`"
       - 🇬🇧 1 GB (×10) 📊
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -496,6 +499,7 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - "@DarcProxy`"
       - 🇬🇧 1 GB (×10) 📊
   - name: اتصال پایدار 🔗
     type: url-test
@@ -512,6 +516,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@DarcProxy`"
       - 🇬🇧 1 GB (×10) 📊
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -519,6 +524,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@DarcProxy`"
       - 🇬🇧 1 GB (×10) 📊
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -526,6 +532,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@DarcProxy`"
       - 🇬🇧 1 GB (×10) 📊
   - name: دانلود منیجر 📥
     type: select
