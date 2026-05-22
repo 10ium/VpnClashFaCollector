@@ -465,12 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@saministamm", server: arvancloud.ir, port: 2095, type: vless, tls: true, packet-encoding: xudp, uuid: 2a1b78b6-2e62-41e9-86c9-0828b4b85fcf, network: ws, ws-opts: {path: /stream, headers: {Host: god.flash-net.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@saministamm 2", server: 185.143.233.235, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 447bc252-43fa-4cb1-b280-337ed5e60548, network: ws, ws-opts: {path: /, headers: {Host: s7.gorsfa.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@saministamm 3", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 61a302fb-c328-4d55-bf64-db8cb87020ad, network: ws, ws-opts: {path: /, headers: {Host: derakhshan.molvliafor.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@saministamm 4", server: 185.143.232.201, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 64673f1a-74d5-456b-bddf-0aac37ed01e4, servername: g1.podro.store, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/chat?ed=127", headers: {Host: g1.podro.store}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@saministamm 5", server: f.pvnet.ir, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 94ddf414-d779-4267-9c1a-4c7043e7aec7, network: ws, ws-opts: {path: /, headers: {Host: f.pvnet.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@saministamm 6", server: arvancloud.ir, port: 2095, type: vless, tls: true, packet-encoding: xudp, uuid: d9387b9c-fead-4e6f-8fd5-26893509d515, network: ws, ws-opts: {path: /stream, headers: {Host: god.flash-net.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@saministamm", server: 185.143.233.235, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 447bc252-43fa-4cb1-b280-337ed5e60548, network: ws, ws-opts: {path: /, headers: {Host: s7.gorsfa.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@saministamm 2", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 61a302fb-c328-4d55-bf64-db8cb87020ad, network: ws, ws-opts: {path: /, headers: {Host: derakhshan.molvliafor.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@saministamm 3", server: arvancloud.ir, port: 2095, type: vless, tls: true, packet-encoding: xudp, uuid: d9387b9c-fead-4e6f-8fd5-26893509d515, network: ws, ws-opts: {path: /stream, headers: {Host: god.flash-net.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -490,9 +487,6 @@ proxy-groups:
       - "@saministamm"
       - "@saministamm 2"
       - "@saministamm 3"
-      - "@saministamm 4"
-      - "@saministamm 5"
-      - "@saministamm 6"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -502,9 +496,6 @@ proxy-groups:
       - "@saministamm"
       - "@saministamm 2"
       - "@saministamm 3"
-      - "@saministamm 4"
-      - "@saministamm 5"
-      - "@saministamm 6"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -514,9 +505,6 @@ proxy-groups:
       - "@saministamm"
       - "@saministamm 2"
       - "@saministamm 3"
-      - "@saministamm 4"
-      - "@saministamm 5"
-      - "@saministamm 6"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -535,9 +523,6 @@ proxy-groups:
       - "@saministamm"
       - "@saministamm 2"
       - "@saministamm 3"
-      - "@saministamm 4"
-      - "@saministamm 5"
-      - "@saministamm 6"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -547,9 +532,6 @@ proxy-groups:
       - "@saministamm"
       - "@saministamm 2"
       - "@saministamm 3"
-      - "@saministamm 4"
-      - "@saministamm 5"
-      - "@saministamm 6"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -559,9 +541,6 @@ proxy-groups:
       - "@saministamm"
       - "@saministamm 2"
       - "@saministamm 3"
-      - "@saministamm 4"
-      - "@saministamm 5"
-      - "@saministamm 6"
   - name: دانلود منیجر 📥
     type: select
     proxies:

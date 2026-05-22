@@ -465,10 +465,10 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 🇩🇪 @antimeli-DE-Power🇩🇪`, server: 104.19.229.21, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 362c9957-6a94-4ee8-a5f9-4cf5b6618541, servername: iran3.kingantimeli.shop, network: ws, ws-opts: {path: /, headers: {Host: iran3.kingantimeli.shop}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇩🇪 @antimeli-DE-Power🇩🇪` 2, server: 185.143.234.235, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 362c9957-6a94-4ee8-a5f9-4cf5b6618541, servername: iran3.kingantimeli.shop, network: ws, ws-opts: {path: /, headers: {Host: iran3.kingantimeli.shop}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇩🇪 @antimeli-DE-Power🇩🇪` 3, server: 5.239.245.250, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 362c9957-6a94-4ee8-a5f9-4cf5b6618541, servername: iran3.kingantimeli.shop, network: ws, ws-opts: {path: /, headers: {Host: iran3.kingantimeli.shop}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇩🇪 @antimeli-DE-Power🇩🇪` 4, server: 8.6.112.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 362c9957-6a94-4ee8-a5f9-4cf5b6618541, servername: iran3.kingantimeli.shop, network: ws, ws-opts: {path: /, headers: {Host: iran3.kingantimeli.shop}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@`", server: 85.133.145.139, port: 13841, type: vless, tls: true, packet-encoding: xudp, uuid: 23006e9e-0ca0-4b2b-b6e7-94e218b48294, host: irancell.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@` 2", server: snapp.ir, port: 2086, type: vless, tls: true, packet-encoding: xudp, uuid: 64bcd838-04aa-4949-85a5-d427fc55fcd5, network: ws, ws-opts: {path: /, headers: {Host: sv1.nopp.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@` 3", server: pisronovin.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 96e64869-fc38-48f8-bff5-ef2a27f9b863, network: ws, ws-opts: {path: /, headers: {Host: pisronovin.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@` 4", server: varzesh3.com, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: d6dca3ac-22aa-4bc3-83be-abccc8ec2f2a, network: ws, ws-opts: {path: /api, headers: {Host: fast.lezzatnova.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,30 +485,30 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 🇩🇪 @antimeli-DE-Power🇩🇪`
-      - 🇩🇪 @antimeli-DE-Power🇩🇪` 2
-      - 🇩🇪 @antimeli-DE-Power🇩🇪` 3
-      - 🇩🇪 @antimeli-DE-Power🇩🇪` 4
+      - "@`"
+      - "@` 2"
+      - "@` 3"
+      - "@` 4"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 🇩🇪 @antimeli-DE-Power🇩🇪`
-      - 🇩🇪 @antimeli-DE-Power🇩🇪` 2
-      - 🇩🇪 @antimeli-DE-Power🇩🇪` 3
-      - 🇩🇪 @antimeli-DE-Power🇩🇪` 4
+      - "@`"
+      - "@` 2"
+      - "@` 3"
+      - "@` 4"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 🇩🇪 @antimeli-DE-Power🇩🇪`
-      - 🇩🇪 @antimeli-DE-Power🇩🇪` 2
-      - 🇩🇪 @antimeli-DE-Power🇩🇪` 3
-      - 🇩🇪 @antimeli-DE-Power🇩🇪` 4
+      - "@`"
+      - "@` 2"
+      - "@` 3"
+      - "@` 4"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -524,30 +524,30 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇩🇪 @antimeli-DE-Power🇩🇪`
-      - 🇩🇪 @antimeli-DE-Power🇩🇪` 2
-      - 🇩🇪 @antimeli-DE-Power🇩🇪` 3
-      - 🇩🇪 @antimeli-DE-Power🇩🇪` 4
+      - "@`"
+      - "@` 2"
+      - "@` 3"
+      - "@` 4"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇩🇪 @antimeli-DE-Power🇩🇪`
-      - 🇩🇪 @antimeli-DE-Power🇩🇪` 2
-      - 🇩🇪 @antimeli-DE-Power🇩🇪` 3
-      - 🇩🇪 @antimeli-DE-Power🇩🇪` 4
+      - "@`"
+      - "@` 2"
+      - "@` 3"
+      - "@` 4"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇩🇪 @antimeli-DE-Power🇩🇪`
-      - 🇩🇪 @antimeli-DE-Power🇩🇪` 2
-      - 🇩🇪 @antimeli-DE-Power🇩🇪` 3
-      - 🇩🇪 @antimeli-DE-Power🇩🇪` 4
+      - "@`"
+      - "@` 2"
+      - "@` 3"
+      - "@` 4"
   - name: دانلود منیجر 📥
     type: select
     proxies:

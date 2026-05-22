@@ -465,7 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: freenet-vt `, server: 185.143.235.200, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f4b852e6-d3ac-42f3-a4b1-54bf32d97008, servername: my.hgpanel.com, host: my.hgpanel.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: freenet-vt `, server: 2.144.2.245, port: 40443, type: trojan, password: humanity, sni: www.ignitelimit.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.ignitelimit.com}}, udp: true, tfo: false}
+  - {name: freenet-vt ` 2, server: 185.143.235.200, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f4b852e6-d3ac-42f3-a4b1-54bf32d97008, servername: my.hgpanel.com, host: my.hgpanel.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,6 +484,7 @@ proxy-groups:
     type: select
     proxies:
       - freenet-vt `
+      - freenet-vt ` 2
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -490,6 +492,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - freenet-vt `
+      - freenet-vt ` 2
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -497,6 +500,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - freenet-vt `
+      - freenet-vt ` 2
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -513,6 +517,7 @@ proxy-groups:
     interval: 600
     proxies:
       - freenet-vt `
+      - freenet-vt ` 2
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -520,6 +525,7 @@ proxy-groups:
     interval: 600
     proxies:
       - freenet-vt `
+      - freenet-vt ` 2
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -527,6 +533,7 @@ proxy-groups:
     interval: 600
     proxies:
       - freenet-vt `
+      - freenet-vt ` 2
   - name: دانلود منیجر 📥
     type: select
     proxies:
