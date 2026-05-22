@@ -465,9 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@saministamm", server: 185.143.233.235, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 447bc252-43fa-4cb1-b280-337ed5e60548, network: ws, ws-opts: {path: /, headers: {Host: s7.gorsfa.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@saministamm 2", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 61a302fb-c328-4d55-bf64-db8cb87020ad, network: ws, ws-opts: {path: /, headers: {Host: derakhshan.molvliafor.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@saministamm 3", server: arvancloud.ir, port: 2095, type: vless, tls: true, packet-encoding: xudp, uuid: d9387b9c-fead-4e6f-8fd5-26893509d515, network: ws, ws-opts: {path: /stream, headers: {Host: god.flash-net.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@saministamm", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 61a302fb-c328-4d55-bf64-db8cb87020ad, network: ws, ws-opts: {path: /, headers: {Host: derakhshan.molvliafor.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@saministamm 2", server: arvancloud.ir, port: 2095, type: vless, tls: true, packet-encoding: xudp, uuid: d9387b9c-fead-4e6f-8fd5-26893509d515, network: ws, ws-opts: {path: /stream, headers: {Host: god.flash-net.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,7 +485,6 @@ proxy-groups:
     proxies:
       - "@saministamm"
       - "@saministamm 2"
-      - "@saministamm 3"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -495,7 +493,6 @@ proxy-groups:
     proxies:
       - "@saministamm"
       - "@saministamm 2"
-      - "@saministamm 3"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -504,7 +501,6 @@ proxy-groups:
     proxies:
       - "@saministamm"
       - "@saministamm 2"
-      - "@saministamm 3"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -522,7 +518,6 @@ proxy-groups:
     proxies:
       - "@saministamm"
       - "@saministamm 2"
-      - "@saministamm 3"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -531,7 +526,6 @@ proxy-groups:
     proxies:
       - "@saministamm"
       - "@saministamm 2"
-      - "@saministamm 3"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -540,7 +534,6 @@ proxy-groups:
     proxies:
       - "@saministamm"
       - "@saministamm 2"
-      - "@saministamm 3"
   - name: دانلود منیجر 📥
     type: select
     proxies:

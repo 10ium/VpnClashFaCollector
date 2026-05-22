@@ -465,12 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@filembad", server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf, port: 22401, type: vmess, uuid: 903a1676-a232-491a-bfd8-9e34d96c2c03, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad", server: 185.236.38.44, port: 19946, type: vmess, uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@filembad 2", server: 185.236.38.44, port: 19946, type: vmess, uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 3", server: 185.236.38.44, port: 19946, type: vmess, uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 4", server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf, port: 22401, type: vmess, uuid: 903a1676-a232-491a-bfd8-9e34d96c2c03, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 5", server: client.cloudafra.top, port: 4356, type: vmess, uuid: 0c9dc39b-47d9-47d8-8dab-c3cce76e3099, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 6", server: cp.vigidl.site, port: 19376, type: vmess, uuid: 2f25d6f1-5e5b-45bf-991e-690ca6f0cae6, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 3", server: client.cloudafra.top, port: 4356, type: vmess, uuid: 0c9dc39b-47d9-47d8-8dab-c3cce76e3099, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -490,9 +487,6 @@ proxy-groups:
       - "@filembad"
       - "@filembad 2"
       - "@filembad 3"
-      - "@filembad 4"
-      - "@filembad 5"
-      - "@filembad 6"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -502,9 +496,6 @@ proxy-groups:
       - "@filembad"
       - "@filembad 2"
       - "@filembad 3"
-      - "@filembad 4"
-      - "@filembad 5"
-      - "@filembad 6"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -514,9 +505,6 @@ proxy-groups:
       - "@filembad"
       - "@filembad 2"
       - "@filembad 3"
-      - "@filembad 4"
-      - "@filembad 5"
-      - "@filembad 6"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -535,9 +523,6 @@ proxy-groups:
       - "@filembad"
       - "@filembad 2"
       - "@filembad 3"
-      - "@filembad 4"
-      - "@filembad 5"
-      - "@filembad 6"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -547,9 +532,6 @@ proxy-groups:
       - "@filembad"
       - "@filembad 2"
       - "@filembad 3"
-      - "@filembad 4"
-      - "@filembad 5"
-      - "@filembad 6"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -559,9 +541,6 @@ proxy-groups:
       - "@filembad"
       - "@filembad 2"
       - "@filembad 3"
-      - "@filembad 4"
-      - "@filembad 5"
-      - "@filembad 6"
   - name: دانلود منیجر 📥
     type: select
     proxies:

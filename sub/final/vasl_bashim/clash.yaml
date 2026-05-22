@@ -465,7 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@vasl_bashim`", server: 185.143.234.235, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: f9aeba2c-4c68-11f1-8d30-2ddfba49052f, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: sv-1.jservices.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim`", server: 185.143.234.235, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: f9aeba2c-4c68-11f1-8d30-2ddfba49052f, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: sv-1.jservices.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim", server: 185.143.234.235, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: f9aeba2c-4c68-11f1-8d30-2ddfba49052f, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: sv-1.jservices.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim` 2", server: 185.143.234.235, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: f9aeba2c-4c68-11f1-8d30-2ddfba49052f, network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: sv-1.jservices.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,6 +485,8 @@ proxy-groups:
     type: select
     proxies:
       - "@vasl_bashim`"
+      - "@vasl_bashim"
+      - "@vasl_bashim` 2"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -490,6 +494,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@vasl_bashim`"
+      - "@vasl_bashim"
+      - "@vasl_bashim` 2"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -497,6 +503,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@vasl_bashim`"
+      - "@vasl_bashim"
+      - "@vasl_bashim` 2"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -513,6 +521,8 @@ proxy-groups:
     interval: 600
     proxies:
       - "@vasl_bashim`"
+      - "@vasl_bashim"
+      - "@vasl_bashim` 2"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -520,6 +530,8 @@ proxy-groups:
     interval: 600
     proxies:
       - "@vasl_bashim`"
+      - "@vasl_bashim"
+      - "@vasl_bashim` 2"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -527,6 +539,8 @@ proxy-groups:
     interval: 600
     proxies:
       - "@vasl_bashim`"
+      - "@vasl_bashim"
+      - "@vasl_bashim` 2"
   - name: دانلود منیجر 📥
     type: select
     proxies:

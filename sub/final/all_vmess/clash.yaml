@@ -465,9 +465,14 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@filembad", server: 185.236.38.44, port: 19946, type: vmess, uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 2", server: 185.236.38.44, port: 19946, type: vmess, uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 3", server: client.cloudafra.top, port: 4356, type: vmess, uuid: 0c9dc39b-47d9-47d8-8dab-c3cce76e3099, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad", server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf, port: 22407, type: vmess, uuid: 1618aecc-1567-4d1c-8bf6-f123353b3451, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 2", server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf, port: 22408, type: vmess, uuid: 20fb49c6-c4f5-4432-bc3f-f9e4a9dc696d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 3", server: 85.9.123.224, port: 900, type: vmess, uuid: cae8967c09d5c8c5eba736f9767b9e64, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: aparat.com}}, udp: true, tfo: false}
+  - {name: "@filembad 4", server: 185.236.38.44, port: 19946, type: vmess, uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 5", server: 185.236.38.44, port: 19946, type: vmess, uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 6", server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf, port: 22408, type: vmess, uuid: 9a690b42-cb36-4ec0-9e62-b0aba1323a4f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 7", server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf, port: 22408, type: vmess, uuid: b926b7ae-bdcc-4892-897d-877992aa7f9d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 8", server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf, port: 22408, type: vmess, uuid: cc8beb1e-94ed-42e4-9985-45c80d2c59a9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,6 +492,11 @@ proxy-groups:
       - "@filembad"
       - "@filembad 2"
       - "@filembad 3"
+      - "@filembad 4"
+      - "@filembad 5"
+      - "@filembad 6"
+      - "@filembad 7"
+      - "@filembad 8"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -496,6 +506,11 @@ proxy-groups:
       - "@filembad"
       - "@filembad 2"
       - "@filembad 3"
+      - "@filembad 4"
+      - "@filembad 5"
+      - "@filembad 6"
+      - "@filembad 7"
+      - "@filembad 8"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -505,6 +520,11 @@ proxy-groups:
       - "@filembad"
       - "@filembad 2"
       - "@filembad 3"
+      - "@filembad 4"
+      - "@filembad 5"
+      - "@filembad 6"
+      - "@filembad 7"
+      - "@filembad 8"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -523,6 +543,11 @@ proxy-groups:
       - "@filembad"
       - "@filembad 2"
       - "@filembad 3"
+      - "@filembad 4"
+      - "@filembad 5"
+      - "@filembad 6"
+      - "@filembad 7"
+      - "@filembad 8"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -532,6 +557,11 @@ proxy-groups:
       - "@filembad"
       - "@filembad 2"
       - "@filembad 3"
+      - "@filembad 4"
+      - "@filembad 5"
+      - "@filembad 6"
+      - "@filembad 7"
+      - "@filembad 8"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -541,6 +571,11 @@ proxy-groups:
       - "@filembad"
       - "@filembad 2"
       - "@filembad 3"
+      - "@filembad 4"
+      - "@filembad 5"
+      - "@filembad 6"
+      - "@filembad 7"
+      - "@filembad 8"
   - name: دانلود منیجر 📥
     type: select
     proxies:

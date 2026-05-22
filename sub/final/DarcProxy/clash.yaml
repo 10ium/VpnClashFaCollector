@@ -466,7 +466,8 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: "@DarcProxy`", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 82ddc1c1-b508-4151-99ca-bb8b684ac24f, network: ws, ws-opts: {path: /, headers: {Host: derakhshan.molvliafor.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇬🇧 1 GB (×10) 📊, server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: dd142bb4-4407-4137-ab6f-a00ded3d6a3f, network: ws, ws-opts: {path: /, headers: {Host: derakhshan.molvliafor.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇬🇧 @DarcProxy  1 GB📊`, server: thany.tech, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b2d3a784-550c-4796-8082-253721aa5358, servername: cloudinohost.com, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: cloudinohost.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@DarcProxy` 2", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: c1f71173-219e-4a7c-8eda-755443d4ade7, network: ws, ws-opts: {path: /, headers: {Host: derakhshan.molvliafor.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,7 +485,8 @@ proxy-groups:
     type: select
     proxies:
       - "@DarcProxy`"
-      - 🇬🇧 1 GB (×10) 📊
+      - 🇬🇧 @DarcProxy  1 GB📊`
+      - "@DarcProxy` 2"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -492,7 +494,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@DarcProxy`"
-      - 🇬🇧 1 GB (×10) 📊
+      - 🇬🇧 @DarcProxy  1 GB📊`
+      - "@DarcProxy` 2"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -500,7 +503,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@DarcProxy`"
-      - 🇬🇧 1 GB (×10) 📊
+      - 🇬🇧 @DarcProxy  1 GB📊`
+      - "@DarcProxy` 2"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -517,7 +521,8 @@ proxy-groups:
     interval: 600
     proxies:
       - "@DarcProxy`"
-      - 🇬🇧 1 GB (×10) 📊
+      - 🇬🇧 @DarcProxy  1 GB📊`
+      - "@DarcProxy` 2"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -525,7 +530,8 @@ proxy-groups:
     interval: 600
     proxies:
       - "@DarcProxy`"
-      - 🇬🇧 1 GB (×10) 📊
+      - 🇬🇧 @DarcProxy  1 GB📊`
+      - "@DarcProxy` 2"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -533,7 +539,8 @@ proxy-groups:
     interval: 600
     proxies:
       - "@DarcProxy`"
-      - 🇬🇧 1 GB (×10) 📊
+      - 🇬🇧 @DarcProxy  1 GB📊`
+      - "@DarcProxy` 2"
   - name: دانلود منیجر 📥
     type: select
     proxies:
