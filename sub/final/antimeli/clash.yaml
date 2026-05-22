@@ -468,7 +468,9 @@ proxies:
   - {name: "@`", server: 85.133.145.139, port: 13841, type: vless, tls: true, packet-encoding: xudp, uuid: 23006e9e-0ca0-4b2b-b6e7-94e218b48294, host: irancell.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@` 2", server: snapp.ir, port: 2086, type: vless, tls: true, packet-encoding: xudp, uuid: 64bcd838-04aa-4949-85a5-d427fc55fcd5, network: ws, ws-opts: {path: /, headers: {Host: sv1.nopp.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@` 3", server: pisronovin.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 96e64869-fc38-48f8-bff5-ef2a27f9b863, network: ws, ws-opts: {path: /, headers: {Host: pisronovin.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@` 4", server: varzesh3.com, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: d6dca3ac-22aa-4bc3-83be-abccc8ec2f2a, network: ws, ws-opts: {path: /api, headers: {Host: fast.lezzatnova.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@` 4", server: 185.143.232.201, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: d5d36002-2c49-4a16-9cb2-8e240156dfd1, network: ws, ws-opts: {path: /, headers: {Host: down.speedtell.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@` 5", server: varzesh3.com, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: d6dca3ac-22aa-4bc3-83be-abccc8ec2f2a, network: ws, ws-opts: {path: /api, headers: {Host: fast.lezzatnova.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@` 6", server: sls.llimitlles.site, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: f0e5af1f-824b-42db-bcd4-57c92ccb484c, network: ws, ws-opts: {path: /ll2ll, headers: {Host: sl.llimitlles.site}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -489,6 +491,8 @@ proxy-groups:
       - "@` 2"
       - "@` 3"
       - "@` 4"
+      - "@` 5"
+      - "@` 6"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -499,6 +503,8 @@ proxy-groups:
       - "@` 2"
       - "@` 3"
       - "@` 4"
+      - "@` 5"
+      - "@` 6"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -509,6 +515,8 @@ proxy-groups:
       - "@` 2"
       - "@` 3"
       - "@` 4"
+      - "@` 5"
+      - "@` 6"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -528,6 +536,8 @@ proxy-groups:
       - "@` 2"
       - "@` 3"
       - "@` 4"
+      - "@` 5"
+      - "@` 6"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -538,6 +548,8 @@ proxy-groups:
       - "@` 2"
       - "@` 3"
       - "@` 4"
+      - "@` 5"
+      - "@` 6"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -548,6 +560,8 @@ proxy-groups:
       - "@` 2"
       - "@` 3"
       - "@` 4"
+      - "@` 5"
+      - "@` 6"
   - name: دانلود منیجر 📥
     type: select
     proxies:
