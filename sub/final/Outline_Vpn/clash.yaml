@@ -465,11 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: Pro 19 @Outline_Vpn, server: 104.17.101.139, port: 443, type: trojan, password: 6202b230-417c-4d8e-b624-0f71afa9c75d, sni: sni.111000.dynv6.net, skip-cert-verify: false, network: ws, ws-opts: {path: "/?proxyip=ip.111000.de5.net%3A443", headers: {Host: sni.111000.dynv6.net}}, udp: true, tfo: false}
-  - {name: Pro 20 @Outline_Vpn`, server: 195.181.173.199, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 394f6981-a782-4779-9a85-e6cf22935d93, servername: ams1.fromblancwithlove.com, alpn: [h2], host: ams1.fromblancwithlove.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Pro 16 @Outline_Vpn, server: 162.159.36.5, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 478cc26d-16b3-4fdd-be64-60d5a58c1622, network: ws, ws-opts: {path: /, headers: {Host: tt.andishehparenting.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Pro 17 @Outline_Vpn, server: 104.18.13.149, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.indevs.in, network: ws, ws-opts: {path: /, headers: {Host: sni.111000.indevs.in}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Pro 18 @Outline_Vpn, server: 135.84.64.66, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.dynv6.net, network: ws, ws-opts: {path: "/?Telegram🇨🇳@WangCai2=", headers: {Host: sni.111000.dynv6.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Pro 24 @Outline_Vpn, server: 212.34.146.229, port: 8443, type: trojan, password: 8r%3C%5B9%27l6hAO%238ZQi, sni: Koma-YT.PAGeS.Dev, skip-cert-verify: false, network: ws, ws-opts: {path: /trTelegram🇨🇳+@WangCai2, headers: {Host: Koma-YT.PAGeS.Dev}}, udp: true, tfo: false}
+  - {name: Pro 22 @Outline_Vpn, server: 213.176.113.98, port: 2053, type: trojan, password: 8r%3C%5B9%27l6hAO%238ZQi, sni: Koma-YT.PAGeS.Dev, skip-cert-verify: false, network: ws, ws-opts: {path: /trTelegram🇨🇳+@WangCai2, headers: {Host: Koma-YT.PAGeS.Dev}}, udp: true, tfo: false}
+  - {name: Pro 23 @Outline_Vpn, server: 159.65.125.162, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.latonyamadeline.ndjp.net, network: ws, ws-opts: {path: "/?https://t.me/WangCai2🇨🇳=", headers: {Host: sni.latonyamadeline.ndjp.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Pro 21 @Outline_Vpn, server: 176.124.223.238, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.jpmj.dev, network: ws, ws-opts: {path: /, headers: {Host: sni.jpmj.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Pro 25 @Outline_Vpn`, server: 185.162.230.138, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.indevs.in, network: ws, ws-opts: {path: /, headers: {Host: sni.111000.indevs.in}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,33 +486,33 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - Pro 19 @Outline_Vpn
-      - Pro 20 @Outline_Vpn`
-      - Pro 16 @Outline_Vpn
-      - Pro 17 @Outline_Vpn
-      - Pro 18 @Outline_Vpn
+      - Pro 24 @Outline_Vpn
+      - Pro 22 @Outline_Vpn
+      - Pro 23 @Outline_Vpn
+      - Pro 21 @Outline_Vpn
+      - Pro 25 @Outline_Vpn`
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - Pro 19 @Outline_Vpn
-      - Pro 20 @Outline_Vpn`
-      - Pro 16 @Outline_Vpn
-      - Pro 17 @Outline_Vpn
-      - Pro 18 @Outline_Vpn
+      - Pro 24 @Outline_Vpn
+      - Pro 22 @Outline_Vpn
+      - Pro 23 @Outline_Vpn
+      - Pro 21 @Outline_Vpn
+      - Pro 25 @Outline_Vpn`
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - Pro 19 @Outline_Vpn
-      - Pro 20 @Outline_Vpn`
-      - Pro 16 @Outline_Vpn
-      - Pro 17 @Outline_Vpn
-      - Pro 18 @Outline_Vpn
+      - Pro 24 @Outline_Vpn
+      - Pro 22 @Outline_Vpn
+      - Pro 23 @Outline_Vpn
+      - Pro 21 @Outline_Vpn
+      - Pro 25 @Outline_Vpn`
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -528,33 +528,33 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Pro 19 @Outline_Vpn
-      - Pro 20 @Outline_Vpn`
-      - Pro 16 @Outline_Vpn
-      - Pro 17 @Outline_Vpn
-      - Pro 18 @Outline_Vpn
+      - Pro 24 @Outline_Vpn
+      - Pro 22 @Outline_Vpn
+      - Pro 23 @Outline_Vpn
+      - Pro 21 @Outline_Vpn
+      - Pro 25 @Outline_Vpn`
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Pro 19 @Outline_Vpn
-      - Pro 20 @Outline_Vpn`
-      - Pro 16 @Outline_Vpn
-      - Pro 17 @Outline_Vpn
-      - Pro 18 @Outline_Vpn
+      - Pro 24 @Outline_Vpn
+      - Pro 22 @Outline_Vpn
+      - Pro 23 @Outline_Vpn
+      - Pro 21 @Outline_Vpn
+      - Pro 25 @Outline_Vpn`
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Pro 19 @Outline_Vpn
-      - Pro 20 @Outline_Vpn`
-      - Pro 16 @Outline_Vpn
-      - Pro 17 @Outline_Vpn
-      - Pro 18 @Outline_Vpn
+      - Pro 24 @Outline_Vpn
+      - Pro 22 @Outline_Vpn
+      - Pro 23 @Outline_Vpn
+      - Pro 21 @Outline_Vpn
+      - Pro 25 @Outline_Vpn`
   - name: دانلود منیجر 📥
     type: select
     proxies:

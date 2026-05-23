@@ -465,7 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@BliitzUp | ترکیبی", server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf, port: 22157, type: vmess, uuid: 27c7f7db-b35e-4bde-b3d3-14f5a2d778ab, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "`", server: newgen.lightxpro.shop, port: 1001, type: vless, tls: true, packet-encoding: xudp, uuid: 5d2fe71b-e259-4762-96ce-7db1b723be90, host: newgen.lightxpro.shop, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@BliitzUp | ترکیبی"
+      - "`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@BliitzUp | ترکیبی"
+      - "`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@BliitzUp | ترکیبی"
+      - "`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@BliitzUp | ترکیبی"
+      - "`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@BliitzUp | ترکیبی"
+      - "`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@BliitzUp | ترکیبی"
+      - "`"
   - name: دانلود منیجر 📥
     type: select
     proxies:

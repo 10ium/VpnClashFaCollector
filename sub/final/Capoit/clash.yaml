@@ -465,7 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: adler-1g.adelshoop.net:80, server: adler-1g.adelshoop.net, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 59bc19e5-9384-45ea-99c6-0fc412975eee, network: ws, ws-opts: {path: /, headers: {Host: adler-1g.adelshoop.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit`", server: snappfood.ir, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: 482e8925-e7e5-46b8-9e9e-f759b872c2e6, network: ws, ws-opts: {path: /ws, headers: {Host: cdnisfucka.drnimaamini.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - adler-1g.adelshoop.net:80
+      - "@Capoit`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - adler-1g.adelshoop.net:80
+      - "@Capoit`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - adler-1g.adelshoop.net:80
+      - "@Capoit`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - adler-1g.adelshoop.net:80
+      - "@Capoit`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - adler-1g.adelshoop.net:80
+      - "@Capoit`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - adler-1g.adelshoop.net:80
+      - "@Capoit`"
   - name: دانلود منیجر 📥
     type: select
     proxies:
