@@ -6,7 +6,6 @@ log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
   - {name: snappfood.ir:2052, server: snappfood.ir, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: 482e8925-e7e5-46b8-9e9e-f759b872c2e6, network: ws, ws-opts: {path: /ws, headers: {Host: cdnisfucka.drnimaamini.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: تلگرام  @irconfi روبیکا  @saministamm, server: varzesh3.com, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 7eac8a88-fea3-40d2-8a6a-e0dd4e8ac6e6, network: ws, ws-opts: {path: /cdn, headers: {Host: Za.movizdl.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -14,7 +13,6 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - snappfood.ir:2052
-      - تلگرام  @irconfi روبیکا  @saministamm
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -22,7 +20,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - snappfood.ir:2052
-      - تلگرام  @irconfi روبیکا  @saministamm
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -30,28 +27,24 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - snappfood.ir:2052
-      - تلگرام  @irconfi روبیکا  @saministamm
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - snappfood.ir:2052
-      - تلگرام  @irconfi روبیکا  @saministamm
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - snappfood.ir:2052
-      - تلگرام  @irconfi روبیکا  @saministamm
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - snappfood.ir:2052
-      - تلگرام  @irconfi روبیکا  @saministamm
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -80,7 +73,6 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - snappfood.ir:2052
-      - تلگرام  @irconfi روبیکا  @saministamm
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

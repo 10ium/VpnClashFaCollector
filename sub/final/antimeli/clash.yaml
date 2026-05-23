@@ -466,8 +466,6 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: reality`, server: 194.59.215.153, port: 13276, type: vless, tls: true, packet-encoding: xudp, uuid: 734d37dd-f0f3-4786-af4c-561d124463cd, servername: www.speedtest.net, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: xyz}, reality-opts: {public-key: lZhnPs3mM0yaBLd2jWaQoX3DVaXz4l-t9SdKr0vUy1U, short-id: fb8e0edb66000f28}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@`", server: 185.143.232.201, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: d5d36002-2c49-4a16-9cb2-8e240156dfd1, network: ws, ws-opts: {path: /, headers: {Host: down.speedtell.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@` 2", server: sls.llimitlles.site, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: f0e5af1f-824b-42db-bcd4-57c92ccb484c, network: ws, ws-opts: {path: /ll2ll, headers: {Host: sl.llimitlles.site}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,8 +483,6 @@ proxy-groups:
     type: select
     proxies:
       - reality`
-      - "@`"
-      - "@` 2"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -494,8 +490,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - reality`
-      - "@`"
-      - "@` 2"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -503,8 +497,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - reality`
-      - "@`"
-      - "@` 2"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -521,8 +513,6 @@ proxy-groups:
     interval: 600
     proxies:
       - reality`
-      - "@`"
-      - "@` 2"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -530,8 +520,6 @@ proxy-groups:
     interval: 600
     proxies:
       - reality`
-      - "@`"
-      - "@` 2"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -539,8 +527,6 @@ proxy-groups:
     interval: 600
     proxies:
       - reality`
-      - "@`"
-      - "@` 2"
   - name: دانلود منیجر 📥
     type: select
     proxies:

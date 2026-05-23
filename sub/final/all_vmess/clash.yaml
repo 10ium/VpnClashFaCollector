@@ -465,17 +465,13 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@filembad", server: 185.236.38.44, port: 19946, type: vmess, uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 2", server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf, port: 22416, type: vmess, uuid: 1c405d07-d6c3-42b5-9500-2812a963c1c2, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad", server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf, port: 22431, type: vmess, uuid: 4d134e4b-299e-4922-be0e-b8e0812a2b62, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "🇭🇰 [openproxylist.com] vmess-HK", server: world.t.51guangtaobao.com, port: 9002, type: vmess, uuid: 1d3d868e-ae7b-3762-b9d9-a7f267494c7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "🇯🇵 [openproxylist.com] vmess-JP", server: t.tizi001.com, port: 32117, type: vmess, uuid: 7456253f-6d63-46a2-a1ed-9d37cae32811, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "🇨🇳 [openproxylist.com] vmess-TW", server: world.t.51guangtaobao.com, port: 2512, type: vmess, uuid: 1d3d868e-ae7b-3762-b9d9-a7f267494c7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@vasl_bashim", server: 185.236.38.44, port: 19946, type: vmess, uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 3", server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf, port: 22411, type: vmess, uuid: 1cf4847e-9782-4b18-b64a-4e10a65622b9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 4", server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf, port: 22408, type: vmess, uuid: 6ffea2a0-1210-45cd-8276-900be7c7578e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@i10VPN - Psiphon 87", server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf, port: 22408, type: vmess, uuid: 6ffea2a0-1210-45cd-8276-900be7c7578e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 5", server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf, port: 21103, type: vmess, uuid: 9ab0f866-d3aa-4985-8168-711f16640af9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇮🇷@oneclickvpnkeys², server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf, port: 22408, type: vmess, uuid: cc8beb1e-94ed-42e4-9985-45c80d2c59a9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 2", server: 185.236.38.44, port: 19946, type: vmess, uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 3", server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf, port: 21103, type: vmess, uuid: 9ab0f866-d3aa-4985-8168-711f16640af9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -493,16 +489,12 @@ proxy-groups:
     type: select
     proxies:
       - "@filembad"
-      - "@filembad 2"
       - 🇭🇰 [openproxylist.com] vmess-HK
       - 🇯🇵 [openproxylist.com] vmess-JP
       - 🇨🇳 [openproxylist.com] vmess-TW
       - "@vasl_bashim"
+      - "@filembad 2"
       - "@filembad 3"
-      - "@filembad 4"
-      - "@i10VPN - Psiphon 87"
-      - "@filembad 5"
-      - 🇮🇷@oneclickvpnkeys²
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -510,16 +502,12 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@filembad"
-      - "@filembad 2"
       - 🇭🇰 [openproxylist.com] vmess-HK
       - 🇯🇵 [openproxylist.com] vmess-JP
       - 🇨🇳 [openproxylist.com] vmess-TW
       - "@vasl_bashim"
+      - "@filembad 2"
       - "@filembad 3"
-      - "@filembad 4"
-      - "@i10VPN - Psiphon 87"
-      - "@filembad 5"
-      - 🇮🇷@oneclickvpnkeys²
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -527,16 +515,12 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@filembad"
-      - "@filembad 2"
       - 🇭🇰 [openproxylist.com] vmess-HK
       - 🇯🇵 [openproxylist.com] vmess-JP
       - 🇨🇳 [openproxylist.com] vmess-TW
       - "@vasl_bashim"
+      - "@filembad 2"
       - "@filembad 3"
-      - "@filembad 4"
-      - "@i10VPN - Psiphon 87"
-      - "@filembad 5"
-      - 🇮🇷@oneclickvpnkeys²
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -553,16 +537,12 @@ proxy-groups:
     interval: 600
     proxies:
       - "@filembad"
-      - "@filembad 2"
       - 🇭🇰 [openproxylist.com] vmess-HK
       - 🇯🇵 [openproxylist.com] vmess-JP
       - 🇨🇳 [openproxylist.com] vmess-TW
       - "@vasl_bashim"
+      - "@filembad 2"
       - "@filembad 3"
-      - "@filembad 4"
-      - "@i10VPN - Psiphon 87"
-      - "@filembad 5"
-      - 🇮🇷@oneclickvpnkeys²
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -570,16 +550,12 @@ proxy-groups:
     interval: 600
     proxies:
       - "@filembad"
-      - "@filembad 2"
       - 🇭🇰 [openproxylist.com] vmess-HK
       - 🇯🇵 [openproxylist.com] vmess-JP
       - 🇨🇳 [openproxylist.com] vmess-TW
       - "@vasl_bashim"
+      - "@filembad 2"
       - "@filembad 3"
-      - "@filembad 4"
-      - "@i10VPN - Psiphon 87"
-      - "@filembad 5"
-      - 🇮🇷@oneclickvpnkeys²
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -587,16 +563,12 @@ proxy-groups:
     interval: 600
     proxies:
       - "@filembad"
-      - "@filembad 2"
       - 🇭🇰 [openproxylist.com] vmess-HK
       - 🇯🇵 [openproxylist.com] vmess-JP
       - 🇨🇳 [openproxylist.com] vmess-TW
       - "@vasl_bashim"
+      - "@filembad 2"
       - "@filembad 3"
-      - "@filembad 4"
-      - "@i10VPN - Psiphon 87"
-      - "@filembad 5"
-      - 🇮🇷@oneclickvpnkeys²
   - name: دانلود منیجر 📥
     type: select
     proxies:
