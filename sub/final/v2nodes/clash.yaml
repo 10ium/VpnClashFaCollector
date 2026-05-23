@@ -465,7 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: tr1.datatowers.net:64534, server: tr1.datatowers.net, port: 64534, type: vless, tls: true, packet-encoding: xudp, uuid: b43a13be-150c-4a6a-8501-b71c1b6476fb, host: tr1.datatowers.net, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇭🇰 [openproxylist.com] vmess-HK", server: world.t.51guangtaobao.com, port: 9002, type: vmess, uuid: 1d3d868e-ae7b-3762-b9d9-a7f267494c7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇯🇵 [openproxylist.com] vmess-JP", server: t.tizi001.com, port: 32117, type: vmess, uuid: 7456253f-6d63-46a2-a1ed-9d37cae32811, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇨🇳 [openproxylist.com] vmess-TW", server: world.t.51guangtaobao.com, port: 2512, type: vmess, uuid: 1d3d868e-ae7b-3762-b9d9-a7f267494c7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +484,27 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - tr1.datatowers.net:64534
+      - 🇭🇰 [openproxylist.com] vmess-HK
+      - 🇯🇵 [openproxylist.com] vmess-JP
+      - 🇨🇳 [openproxylist.com] vmess-TW
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - tr1.datatowers.net:64534
+      - 🇭🇰 [openproxylist.com] vmess-HK
+      - 🇯🇵 [openproxylist.com] vmess-JP
+      - 🇨🇳 [openproxylist.com] vmess-TW
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - tr1.datatowers.net:64534
+      - 🇭🇰 [openproxylist.com] vmess-HK
+      - 🇯🇵 [openproxylist.com] vmess-JP
+      - 🇨🇳 [openproxylist.com] vmess-TW
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +520,27 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - tr1.datatowers.net:64534
+      - 🇭🇰 [openproxylist.com] vmess-HK
+      - 🇯🇵 [openproxylist.com] vmess-JP
+      - 🇨🇳 [openproxylist.com] vmess-TW
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - tr1.datatowers.net:64534
+      - 🇭🇰 [openproxylist.com] vmess-HK
+      - 🇯🇵 [openproxylist.com] vmess-JP
+      - 🇨🇳 [openproxylist.com] vmess-TW
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - tr1.datatowers.net:64534
+      - 🇭🇰 [openproxylist.com] vmess-HK
+      - 🇯🇵 [openproxylist.com] vmess-JP
+      - 🇨🇳 [openproxylist.com] vmess-TW
   - name: دانلود منیجر 📥
     type: select
     proxies:
