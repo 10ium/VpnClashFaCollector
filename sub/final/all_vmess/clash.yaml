@@ -466,8 +466,9 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: "@filembad", server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf, port: 22901, type: vmess, uuid: 3dd452fb-1438-4e11-b138-1a0295e96181, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 2", server: 185.236.38.44, port: 19946, type: vmess, uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 3", server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf, port: 22450, type: vmess, uuid: a46c6c8a-9f2e-47b8-8832-41e256ab7b56, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 2", server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf, port: 22902, type: vmess, uuid: 6de0b22c-09b2-4a97-82ad-345b8e5b7461, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 3", server: 185.236.38.44, port: 19946, type: vmess, uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz | ترکیبی", server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf, port: 22903, type: vmess, uuid: 14cab9ec-8a1a-44d9-b2c9-0c5ee8ce3a8c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,6 +488,7 @@ proxy-groups:
       - "@filembad"
       - "@filembad 2"
       - "@filembad 3"
+      - "@vpnbaz | ترکیبی"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -496,6 +498,7 @@ proxy-groups:
       - "@filembad"
       - "@filembad 2"
       - "@filembad 3"
+      - "@vpnbaz | ترکیبی"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -505,6 +508,7 @@ proxy-groups:
       - "@filembad"
       - "@filembad 2"
       - "@filembad 3"
+      - "@vpnbaz | ترکیبی"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -523,6 +527,7 @@ proxy-groups:
       - "@filembad"
       - "@filembad 2"
       - "@filembad 3"
+      - "@vpnbaz | ترکیبی"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -532,6 +537,7 @@ proxy-groups:
       - "@filembad"
       - "@filembad 2"
       - "@filembad 3"
+      - "@vpnbaz | ترکیبی"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -541,6 +547,7 @@ proxy-groups:
       - "@filembad"
       - "@filembad 2"
       - "@filembad 3"
+      - "@vpnbaz | ترکیبی"
   - name: دانلود منیجر 📥
     type: select
     proxies:

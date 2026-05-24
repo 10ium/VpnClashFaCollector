@@ -5,46 +5,74 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: "@saministamm", server: f.pvnet.ir, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 17574dcf-0fa4-4693-ba3e-5dda6894f507, network: ws, ws-opts: {path: /, headers: {Host: f.pvnet.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: https://t.me/saministamm, server: snapp.ir, port: 2095, type: vless, tls: true, packet-encoding: xudp, uuid: 5bc4971a-e0b6-4723-985c-801b1c80f23a, network: ws, ws-opts: {path: /wskhan, headers: {Host: mdproxyi.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: t.me/saministamm❄💎`, server: 62.220.120.123, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5ce600a8-9be9-4d10-9a6b-09c4569ebb2c, servername: o21.netsecureteam10.ir, alpn: [h2%2Chttp%2F1.1], host: o21.netsecureteam10.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@saministamm`", server: f.pvnet.ir, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 5d875dbe-926b-45f7-96a6-8e6a125c14c3, network: ws, ws-opts: {path: /, headers: {Host: f.pvnet.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@saministamm` 2", server: panel.shahriareiran.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: ba5b5ba4-d951-4d73-91be-2775a7e3705a, network: ws, ws-opts: {path: /, headers: {Host: down.speedtell.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - "@saministamm"
       - https://t.me/saministamm
+      - t.me/saministamm❄💎`
+      - "@saministamm`"
+      - "@saministamm` 2"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - "@saministamm"
       - https://t.me/saministamm
+      - t.me/saministamm❄💎`
+      - "@saministamm`"
+      - "@saministamm` 2"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - "@saministamm"
       - https://t.me/saministamm
+      - t.me/saministamm❄💎`
+      - "@saministamm`"
+      - "@saministamm` 2"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - "@saministamm"
       - https://t.me/saministamm
+      - t.me/saministamm❄💎`
+      - "@saministamm`"
+      - "@saministamm` 2"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - "@saministamm"
       - https://t.me/saministamm
+      - t.me/saministamm❄💎`
+      - "@saministamm`"
+      - "@saministamm` 2"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - "@saministamm"
       - https://t.me/saministamm
+      - t.me/saministamm❄💎`
+      - "@saministamm`"
+      - "@saministamm` 2"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +100,11 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - "@saministamm"
       - https://t.me/saministamm
+      - t.me/saministamm❄💎`
+      - "@saministamm`"
+      - "@saministamm` 2"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

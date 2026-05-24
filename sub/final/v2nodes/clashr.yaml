@@ -5,67 +5,81 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: 13.114.188.23:8359, server: 13.114.188.23, port: 8359, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 13.230.159.214:3285, server: 13.230.159.214, port: 3285, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: xxxmg1.xiaoliebao.club:4433, server: xxxmg1.xiaoliebao.club, port: 4433, type: trojan, password: I0shjZ, sni: xxxmg1.xiaoliebao.club, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 213.142.132.75:443, server: 213.142.132.75, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 53353c51-ab85-4f1d-b81c-d855a0cdeeba, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 103.112.69.234:443, server: 103.112.69.234, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 69a2af58-d74a-44ca-864a-e09b493f4274, servername: api-maps.yandex.ru, host: api-maps.yandex.ru, path: /, reality-opts: {public-key: egwErhlyJ9EW_XDHj4WlPZux80d6Qc6E4vZHYf4QMC8, short-id: 1f1fe6}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 144.31.233.236:7443, server: 144.31.233.236, port: 7443, type: vless, tls: true, packet-encoding: xudp, uuid: b54d36d1-43c3-4b8f-a5f8-cf6504db0562, servername: apple.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, reality-opts: {public-key: MbYR2O0XBSeG74gGYpFIofXsILcf5lG2gc36GyURBXQ, short-id: 0199436dd359351b}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: frnl.locklance.lol:443, server: frnl.locklance.lol, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: be0e7d89-9c35-4950-a460-d3bf5aae5f91, servername: frnl.locklance.lol, host: frnl.locklance.lol, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: OduZo3TA4hyCu8FUh06W1_bNtIHjLEpyFJzGUsr2fzU, short-id: 1368eab8bfaf0127}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - 13.114.188.23:8359
       - 13.230.159.214:3285
-      - xxxmg1.xiaoliebao.club:4433
       - 213.142.132.75:443
       - 103.112.69.234:443
+      - 144.31.233.236:7443
+      - frnl.locklance.lol:443
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - 13.114.188.23:8359
       - 13.230.159.214:3285
-      - xxxmg1.xiaoliebao.club:4433
       - 213.142.132.75:443
       - 103.112.69.234:443
+      - 144.31.233.236:7443
+      - frnl.locklance.lol:443
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 13.114.188.23:8359
       - 13.230.159.214:3285
-      - xxxmg1.xiaoliebao.club:4433
       - 213.142.132.75:443
       - 103.112.69.234:443
+      - 144.31.233.236:7443
+      - frnl.locklance.lol:443
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 13.114.188.23:8359
       - 13.230.159.214:3285
-      - xxxmg1.xiaoliebao.club:4433
       - 213.142.132.75:443
       - 103.112.69.234:443
+      - 144.31.233.236:7443
+      - frnl.locklance.lol:443
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - 13.114.188.23:8359
       - 13.230.159.214:3285
-      - xxxmg1.xiaoliebao.club:4433
       - 213.142.132.75:443
       - 103.112.69.234:443
+      - 144.31.233.236:7443
+      - frnl.locklance.lol:443
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 13.114.188.23:8359
       - 13.230.159.214:3285
-      - xxxmg1.xiaoliebao.club:4433
       - 213.142.132.75:443
       - 103.112.69.234:443
+      - 144.31.233.236:7443
+      - frnl.locklance.lol:443
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -93,10 +107,12 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 13.114.188.23:8359
       - 13.230.159.214:3285
-      - xxxmg1.xiaoliebao.club:4433
       - 213.142.132.75:443
       - 103.112.69.234:443
+      - 144.31.233.236:7443
+      - frnl.locklance.lol:443
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

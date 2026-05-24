@@ -465,7 +465,15 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: "@vasl_bashim", server: 104.20.42.250, port: 443, type: trojan, password: humanity, sni: www.calmloud.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmloud.com}}, udp: true, tfo: false}
   - {name: "@vasl_bashim`", server: meli.masterdadeh.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 5b34187f-f811-58b1-7e68-3cc63df5df3b, network: ws, ws-opts: {path: /, headers: {Host: meli.masterdadeh.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim 2", server: snapp.ir, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: b8718a25-e3ad-43b1-b4ef-0bcc4732f381, network: ws, ws-opts: {path: /, headers: {Host: weed2.torkonlineshop.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim` 2", server: panel.shahriareiran.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: ba5b5ba4-d951-4d73-91be-2775a7e3705a, network: ws, ws-opts: {path: /, headers: {Host: down.speedtell.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim` 3", server: sabz8.sabztarash.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: be4c79f7-642a-4e62-9d0f-78d805df1366, network: ws, ws-opts: {path: /, headers: {Host: sabz8.sabztarash.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: https://t.me/vasl_bashim`, server: sabz8.sabztarash.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: be4c79f7-642a-4e62-9d0f-78d805df1366, network: ws, ws-opts: {path: /, headers: {Host: sabz8.sabztarash.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ٪40vasl_bashim, server: sabz8.sabztarash.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: be4c79f7-642a-4e62-9d0f-78d805df1366, network: ws, ws-opts: {path: /, headers: {Host: sabz8.sabztarash.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ٪40vasl_bashim`, server: sabz8.sabztarash.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: be4c79f7-642a-4e62-9d0f-78d805df1366, network: ws, ws-opts: {path: /, headers: {Host: sabz8.sabztarash.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim` 4", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: df3d1819-1fc2-40e4-b968-25b5ca5ec604, network: ws, ws-opts: {path: "/graphql?ed=2560", headers: {Host: ss11.limitless-cloud.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +490,45 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - "@vasl_bashim"
       - "@vasl_bashim`"
+      - "@vasl_bashim 2"
+      - "@vasl_bashim` 2"
+      - "@vasl_bashim` 3"
+      - https://t.me/vasl_bashim`
+      - ٪40vasl_bashim
+      - ٪40vasl_bashim`
+      - "@vasl_bashim` 4"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
+      - "@vasl_bashim"
       - "@vasl_bashim`"
+      - "@vasl_bashim 2"
+      - "@vasl_bashim` 2"
+      - "@vasl_bashim` 3"
+      - https://t.me/vasl_bashim`
+      - ٪40vasl_bashim
+      - ٪40vasl_bashim`
+      - "@vasl_bashim` 4"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
+      - "@vasl_bashim"
       - "@vasl_bashim`"
+      - "@vasl_bashim 2"
+      - "@vasl_bashim` 2"
+      - "@vasl_bashim` 3"
+      - https://t.me/vasl_bashim`
+      - ٪40vasl_bashim
+      - ٪40vasl_bashim`
+      - "@vasl_bashim` 4"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +544,45 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@vasl_bashim"
       - "@vasl_bashim`"
+      - "@vasl_bashim 2"
+      - "@vasl_bashim` 2"
+      - "@vasl_bashim` 3"
+      - https://t.me/vasl_bashim`
+      - ٪40vasl_bashim
+      - ٪40vasl_bashim`
+      - "@vasl_bashim` 4"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@vasl_bashim"
       - "@vasl_bashim`"
+      - "@vasl_bashim 2"
+      - "@vasl_bashim` 2"
+      - "@vasl_bashim` 3"
+      - https://t.me/vasl_bashim`
+      - ٪40vasl_bashim
+      - ٪40vasl_bashim`
+      - "@vasl_bashim` 4"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@vasl_bashim"
       - "@vasl_bashim`"
+      - "@vasl_bashim 2"
+      - "@vasl_bashim` 2"
+      - "@vasl_bashim` 3"
+      - https://t.me/vasl_bashim`
+      - ٪40vasl_bashim
+      - ٪40vasl_bashim`
+      - "@vasl_bashim` 4"
   - name: دانلود منیجر 📥
     type: select
     proxies:

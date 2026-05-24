@@ -465,10 +465,10 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: hp71-3, server: 2.144.2.62, port: 40443, type: trojan, password: humanity, sni: www.ignitelimit.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.ignitelimit.com}}, udp: true, tfo: false}
-  - {name: hp71-2, server: 2.144.20.145, port: 40443, type: trojan, password: humanity, sni: www.ignitelimit.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.ignitelimit.com}}, udp: true, tfo: false}
-  - {name: hp71-4, server: 2.144.7.102, port: 40443, type: trojan, password: humanity, sni: www.ignitelimit.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.ignitelimit.com}}, udp: true, tfo: false}
-  - {name: hp71-1, server: 5.160.58.129, port: 50019, type: vless, tls: true, packet-encoding: xudp, uuid: d226c04c-8391-00e4-4234-fc46d4416d15, servername: alabama-tigr.info, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /true, headers: {Host: alabama-tigr.info}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 2, server: 185.113.9.240, port: 443, type: trojan, password: humanity, sni: www.creationlong.org, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org}}, udp: true, tfo: false}
+  - {name: 3, server: 185.208.79.107, port: 443, type: trojan, password: humanity, sni: www.creationlong.org, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org}}, udp: true, tfo: false}
+  - {name: hamedvpns, server: 185.208.79.62, port: 443, type: trojan, password: humanity, sni: www.creationlong.org, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org}}, udp: true, tfo: false}
+  - {name: hp71, server: meli.masterdadeh.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 5b34187f-f811-58b1-7e68-3cc63df5df3b, network: ws, ws-opts: {path: /, headers: {Host: meli.masterdadeh.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,30 +485,30 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - hp71-3
-      - hp71-2
-      - hp71-4
-      - hp71-1
+      - 2
+      - 3
+      - hamedvpns
+      - hp71
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - hp71-3
-      - hp71-2
-      - hp71-4
-      - hp71-1
+      - 2
+      - 3
+      - hamedvpns
+      - hp71
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - hp71-3
-      - hp71-2
-      - hp71-4
-      - hp71-1
+      - 2
+      - 3
+      - hamedvpns
+      - hp71
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -524,30 +524,30 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - hp71-3
-      - hp71-2
-      - hp71-4
-      - hp71-1
+      - 2
+      - 3
+      - hamedvpns
+      - hp71
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - hp71-3
-      - hp71-2
-      - hp71-4
-      - hp71-1
+      - 2
+      - 3
+      - hamedvpns
+      - hp71
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - hp71-3
-      - hp71-2
-      - hp71-4
-      - hp71-1
+      - 2
+      - 3
+      - hamedvpns
+      - hp71
   - name: دانلود منیجر 📥
     type: select
     proxies:
