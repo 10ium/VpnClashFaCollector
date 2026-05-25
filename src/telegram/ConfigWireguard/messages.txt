@@ -1,5 +1,163 @@
 # آرشیو کانال: @ConfigWireguard
-بروزرسانی: 2026-05-25 12:57:36 UTC
+بروزرسانی: 2026-05-25 20:58:58 UTC
+
+### 🕒 2026-05-25 19:46:13 UTC
+CDN IPs ایرانسل 
+`23.58.222.13623.73.2.148 92.122.166.175 172.237.127.6 104.81.104.13 96.17.207.137 92.123.112.7 96.16.122.75 96.17.207.142 96.17.207.143 92.122.166.182 104.109.128.153 104.96.143.134 23.73.2.141 104.83.5.202 23.67.136.200 23.67.136.202 23.65.119.52 96.16.122.70 92.122.166.236 92.122.166.234 92.122.166.237 104.110.138.190 173.222.200.5 184.51.252.36 184.51.252.38 104.83.5.208 96.16.122.146 96.17.206.214 92.122.166.197 104.94.100.73 104.83.15.66 88.221.213.81 172.239.57.117 104.117.76.40 184.51.252.4 96.17.207.30 96.16.122.83 96.16.122.150 23.73.207.11 96.16.122.77 96.17.207.155 92.123.189.82 96.16.122.82 96.16.122.66 96.7.218.219 96.16.122.137 184.51.252.157 92.123.189.41 184.86.251.12 96.16.122.154 96.16.122.157 184.51.252.152 96.17.207.12 23.79.48.162 96.16.122.74 104.109.250.232 92.123.104.7 104.110.191.57 184.51.233.146 173.222.201.77 96.16.53.134 96.16.122.140 184.51.252.135 172.234.24.211 96.16.122.149 104.122.213.129 104.103.72.97 104.103.65.5 104.83.5.210 104.117.76.152 104.83.5.176 184.86.251.26 96.16.122.133 96.16.53.152 96.16.53.147 96.16.122.152 104.126.37.162 23.73.0.64 96.16.122.141 104.117.76.10 96.16.53.158 92.123.157.46`
+CDN IPs ایرانسل ، مخابرات 
+`185.208.174.167185.50.37.52185.50.37.52164.138.17.12278.157.41.60185.88.178.196185.255.91.60185.208.175.228109.72.197.15.160.13.8550.7.4.24450.7.4.10750.7.4.24350.7.5.8546.32.31.30`
+
+---
+
+### 🕒 2026-05-25 19:12:36 UTC
+کانفیگا بالا رو داخل V2rayNg بزنید و مود پروکسی روشن کنید 
+با سایفون ترکیب کنید 
+پورت داخل Psiphon و V2rayNg  رو حتما یکی باشه 
+دیفالت پورت V2rayNg 10808 هستش
+V2Ray:
+***▫️***
+ Settings → Mode رو روی Proxy only بذارید
+***▫️***
+ port: 10808
+Psiphon:
+***▫️***
+ Settings → Connect through an HTTP Proxy 
+***✅***
+***▫️***
+ Host Address: 
+[127.0.0.1](http://127.0.0.1/)
+***▫️***
+ Port: 10808
+***▫️***
+حالا اول V2rayNg روشن کنید برید بزنید سایفون استارت بشه
+
+---
+
+### 🕒 2026-05-25 19:10:49 UTC
+> ↪️ **Forwarded**
+
+{
+"_comment": {
+"remark": "APPXA"
+},
+"log": {
+"access": "",
+"error": "",
+"loglevel": "info",
+"dnsLog": false
+},
+"inbounds": [
+{
+"tag": "in_proxy",
+"port": 1080,
+"protocol": "socks",
+"listen": "0.0.0.0",
+"settings": {
+"auth": "noauth",
+"udp": true,
+"userLevel": 8
+},
+"sniffing": {
+"enabled": false
+}
+},
+{
+"tag": "http-in",
+"port": 10808,
+"listen": "::",
+"protocol": "http"
+}
+],
+"outbounds": [
+{
+"tag": "proxy",
+"protocol": "trojan",
+"settings": {
+"servers": [
+{
+"address": "141.193.213.11",
+"method": "chacha20-poly1305",
+"ota": false,
+"password": "humanity",
+"port": 443,
+"level": 8,
+"flow": ""
+}
+]
+},
+"streamSettings": {
+"network": "ws",
+"security": "tls",
+"wsSettings": {
+"path": "/assignment",
+"headers": {
+"Host": "www.calmloud.com"
+}
+},
+"tlsSettings": {
+"allowInsecure": true,
+"serverName": "www.calmloud.com",
+"alpn": [
+"http/1.1"
+],
+"fingerprint": "ios",
+"show": false
+},
+"sockopt": {
+"dialerProxy": "fragment",
+"tcpKeepAliveIdle": 100,
+"tcpNoDelay": true
+}
+},
+"mux": {
+"enabled": false,
+"concurrency": 8
+}
+},
+{
+"tag": "fragment",
+"protocol": "freedom",
+"settings": {
+"domainStrategy": "AsIs",
+"fragment": {
+"packets": "tlshello",
+"length": "100-200",
+"interval": "10-20"
+}
+},
+"streamSettings": {
+"sockopt": {
+"tcpKeepAliveIdle": 100,
+"tcpNoDelay": true
+}
+}
+},
+{
+"tag": "direct",
+"protocol": "freedom",
+"settings": {
+"domainStrategy": "UseIp"
+}
+},
+{
+"tag": "blackhole",
+"protocol": "blackhole",
+"settings": {}
+}
+],
+"dns": {
+"servers": [
+"8.8.8.8"
+]
+},
+"routing": {
+"domainStrategy": "UseIp",
+"rules": [],
+"balancers": []
+}
+}
+
+---
 
 ### 🕒 2026-05-25 09:15:03 UTC
 سوالی داشتید داخل کانالش کامنت بذارید ج میده
@@ -129,90 +287,6 @@ Shir o Khorshid ایرانسل
 
 ### 🕒 2026-05-24 22:31:40 UTC
 **خدا چون بزرگه بزرگ بگامون میده 😂**
-
----
-
-### 🕒 2026-05-24 18:15:56 UTC
-CDN IPs
-[185.255.91.60](http://185.255.91.60/)
-[78.157.41.60](http://78.157.41.60/)
-[185.208.175.228](http://185.208.175.228/)
-[95.101.22.225](http://95.101.22.225/)
-[109.72.197.1](http://109.72.197.1/)
-[78.39.234.140](http://78.39.234.140/)
-[23.58.95.138](http://23.58.95.138/)
-[5.160.13.85](http://5.160.13.85/)
-[78.157.41.60](http://78.157.41.60/)
-[80.191.243.226](http://80.191.243.226/)
-
----
-
-### 🕒 2026-05-24 18:04:54 UTC
-نسخه جدید 
-[RM SNI Spoofer](https://github.com/rm-rfd/sni-spoofing-gui)
-  منتشر شد.
-توی این نسخه رابط کاربری بهبود پیدا کرده
-**کاربردها (Use Cases)**
-**دور زدن محدودیت‌های مبتنی بر DPI**
-: اصلی‌ترین کاربرد، فریب سیستم‌های نظارتی است که صرفاً به SNI در握手 TLS نگاه می‌کنند.
-**استفاده با پروکسی‌های TLS (VLESS، Trojan)**
-:
-برای کار کردن با لینک‌های اشتراک vless:// یا trojan:// که روی 
-**پورت 443**
- هستند طراحی شده است.
-در حالت GUI، می‌توان این لینک‌ها را导入 کرد، یکی را فعال (Active) نمود و ترافیک پروکسی را از طریق رله هدایت کرد.
-**اجرای بدون GUI (Headless)**
-: برای استفاده در خط فرمان یا سیستم‌های بدون رابط کاربری با گزینه --headless.
-**تست اتصال**
-: با استفاده از دکمه Test Delay می‌توان تأخیر و وضعیت اتصال پروفایل‌های مختلف را بدون قطع کردن رله اصلی بررسی کرد.
-**ساخت فایل EXE قابل حمل**
-: اسکریپت 
-[build.py](http://build.py/)
- یک فایل اجرایی مستقل به همراه تنظیمات و xray.exe می‌سازد.
-[https://github.com/rm-rfd/sni-spoofing-gui/releases/download/v0.0.5/RM.SNI.Spoofer-v0.0.5.zip](https://github.com/rm-rfd/sni-spoofing-gui/releases/download/v0.0.5/RM.SNI.Spoofer-v0.0.5.zip)
-
----
-
-### 🕒 2026-05-24 17:04:45 UTC
-خب رفقا.
-بات دانلودر که میتونید ویدئو ها رو سریع دانلود کنید از یوتیوب یا اینستا یا در صورتی که بخوایی میتونید روش زیرنویس بذارید، صدای خالص دانلود کنید و یا کیفیت ویدئوی دانلودی رو تعیین کنید.
-با دستور /help راهنمایی بگیرید.
-[@AliTMYOUtube_downloader_bot](https://t.me/AliTMYOUtube_downloader_bot)
-آپدیت شد، الان حین دانلود و آپلود درصد نشون میده براتون که چقدر دانلود یا آپلود شده چون توی ویدئو های بزرگ آزار دهنده بود که نشون نمیداد، بازم اگه هر پیشنهاد قابلیت یا انتقادی دارید بگید حتما پیاده سازی میکنم اگه باگی دیدین بگین فیکس کنم حتما.
-و بات دوم که رونمایی میکنم و ساختم، این بات برای شرایطی که به سختی به تلگرام متصل شدین (حالا با اسلیپ نت یا هر چی) و امکان ندارین مستقیم با هر روشی به سرور خودتون SSH بزنید، میتونید از طریق این ربات من به سرورتون از داخل تلگرام SSH بزنید و بهش دستور بدید و پاسخ بگیرید
-[@itsalics_ssh_bot](https://t.me/itsalics_ssh_bot)
-با دستور /help میتونید راهنمایی رو ببینید.
-بازم هر باگی دیدین بگین اوکی کنم، پیشنهاد قابلیتی چیزی دارین بگین توی کامنت ها تا حتما اد کنم توش.
-امیدوارم به دردتون بخوره 
-***😁***
-***❤️***
-ریکشن بزنید انرژی بگیرم مخلص همتون 
-***❤️***
-[@itsalicsminds](https://t.me/itsalicsminds)
-
----
-
-### 🕒 2026-05-24 17:03:44 UTC
-**Config Sni Spoof**
-`vless://6202b230-417c-4d8e-b624-0f71afa9c75d@127.0.0.1:40443?encryption=none&security=tls&sni=sni.111000.indevs.in&insecure=0&allowInsecure=0&type=ws&host=sni.111000.indevs.in&path=%2F#%F0%9F%94%A5Join%2BTelegram%3A%40Farah_VPN%F0%9F%9F%A3vless://6202b230-417c-4d8e-b624-0f71afa9c75d@127.0.0.1:40443?encryption=none&security=tls&sni=sni.111000.indevs.in&insecure=1&allowInsecure=1&type=ws&host=sni.111000.indevs.in&path=%2F#%F0%9F%94%A5Join%2BTelegram%3A%40Farah_VPN%F0%9F%9F%A3vless://6202b230-417c-4d8e-b624-0f71afa9c75d@127.0.0.1:40443?encryption=none&security=tls&sni=sni.111000.indevs.in&insecure=1&allowInsecure=1&type=ws&host=sni.111000.indevs.in&path=%2F%3FTelegram%F0%9F%87%A8%F0%9F%87%B3%2B%40WangCai2%3D#%F0%9F%94%A5Join%2BTelegram%3A%40Farah_VPN%F0%9F%9F%A3trojan://humanity@127.0.0.1:40443?security=tls&sni=www.creationlong.org&fp=chrome&insecure=1&allowInsecure=1&type=ws&host=www.creationlong.org&path=%2Fassignment#spoooof`
-
----
-
-### 🕒 2026-05-24 13:52:21 UTC
-روش SNISpoof دوباره باز شده    {   "LISTEN_HOST": "0.0.0.0",   "LISTEN_PORT": 40443,   "CONNECT_IP": "104.19.229.21",    "CONNECT_PORT": 443,   "FAKE_SNI": "www.hcaptcha.com" }
-
----
-
-### 🕒 2026-05-24 13:33:04 UTC
-روش SNISpoof دوباره باز شده 
- 
-{
-  "LISTEN_HOST": "0.0.0.0",
-  "LISTEN_PORT": 40443,
-  "CONNECT_IP": "104.19.229.21", 
-  "CONNECT_PORT": 443,
-  "FAKE_SNI": "www.hcaptcha.com"
-}
 
 ---
 

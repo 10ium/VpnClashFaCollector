@@ -465,10 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@filembad", server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf, port: 22901, type: vmess, uuid: 3dd452fb-1438-4e11-b138-1a0295e96181, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 2", server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf, port: 22902, type: vmess, uuid: 6de0b22c-09b2-4a97-82ad-345b8e5b7461, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 3", server: 185.236.38.44, port: 19946, type: vmess, uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@freenet-vt", server: 185.236.38.44, port: 19946, type: vmess, uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: ترکیبی, server: 185.236.38.44, port: 19946, type: vmess, uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: t.me/vasl_bashim, server: ak.reata.ir, port: 16482, type: vmess, uuid: 1acd9c7c-2ae7-4c22-876e-23d6b416b6b7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@vpnbaz | ترکیبی", server: b51d64cb-c5d6-4791-8ecf-0a6d8d71c717.wtf, port: 22903, type: vmess, uuid: 14cab9ec-8a1a-44d9-b2c9-0c5ee8ce3a8c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -486,10 +485,9 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@filembad"
-      - "@filembad 2"
-      - "@filembad 3"
+      - "@freenet-vt"
       - ترکیبی
+      - t.me/vasl_bashim
       - "@vpnbaz | ترکیبی"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -497,10 +495,9 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - "@filembad"
-      - "@filembad 2"
-      - "@filembad 3"
+      - "@freenet-vt"
       - ترکیبی
+      - t.me/vasl_bashim
       - "@vpnbaz | ترکیبی"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -508,10 +505,9 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - "@filembad"
-      - "@filembad 2"
-      - "@filembad 3"
+      - "@freenet-vt"
       - ترکیبی
+      - t.me/vasl_bashim
       - "@vpnbaz | ترکیبی"
   - name: اتصال پایدار 🔗
     type: url-test
@@ -528,10 +524,9 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@filembad"
-      - "@filembad 2"
-      - "@filembad 3"
+      - "@freenet-vt"
       - ترکیبی
+      - t.me/vasl_bashim
       - "@vpnbaz | ترکیبی"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -539,10 +534,9 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@filembad"
-      - "@filembad 2"
-      - "@filembad 3"
+      - "@freenet-vt"
       - ترکیبی
+      - t.me/vasl_bashim
       - "@vpnbaz | ترکیبی"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -550,10 +544,9 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@filembad"
-      - "@filembad 2"
-      - "@filembad 3"
+      - "@freenet-vt"
       - ترکیبی
+      - t.me/vasl_bashim
       - "@vpnbaz | ترکیبی"
   - name: دانلود منیجر 📥
     type: select
