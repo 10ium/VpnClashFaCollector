@@ -467,11 +467,10 @@ rule-providers:
 proxies:
   - {name: 102.129.229.85:31700, server: 102.129.229.85, port: 31700, type: ss, cipher: chacha20-ietf-poly1305, password: d7zh2lMrXNH5+8+8pKzlxiCU9NN022ih+uAyxj5d4qo=, udp: true, tfo: false}
   - {name: 13.114.188.23:8359, server: 13.114.188.23, port: 8359, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 13.230.159.214:3285, server: 13.230.159.214, port: 3285, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 213.142.132.75:443, server: 213.142.132.75, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 53353c51-ab85-4f1d-b81c-d855a0cdeeba, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 103.112.69.234:443, server: 103.112.69.234, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 69a2af58-d74a-44ca-864a-e09b493f4274, servername: api-maps.yandex.ru, host: api-maps.yandex.ru, path: /, reality-opts: {public-key: egwErhlyJ9EW_XDHj4WlPZux80d6Qc6E4vZHYf4QMC8, short-id: 1f1fe6}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 3.106.214.88:31318, server: 3.106.214.88, port: 31318, type: vless, tls: true, packet-encoding: xudp, uuid: 3c7961e6-6ce7-4e55-8b8a-01a5d663efd4, servername: www.tesla.com, host: www.tesla.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: uAhNpK_fDxgKKNtYtUs2uB79V28pjFv1-Mh7D4PTaW8, short-id: 1b665f78655294}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇷🇺 lv-geo.dataload-cdn.ru:8443, server: lv-geo.dataload-cdn.ru, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 69a2af58-d74a-44ca-864a-e09b493f4274, servername: www.vk.com, host: www.vk.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: mgIiNnujl3pahea0WW3bCFqmdwofldk85e9XD3rQcQc, short-id: d8d900}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: r1.mizulina.top:22231, server: r1.mizulina.top, port: 22231, type: vless, tls: true, packet-encoding: xudp, uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8, servername: r1.mizulina.top, host: r1.mizulina.top, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 144.31.233.236:7443, server: 144.31.233.236, port: 7443, type: vless, tls: true, packet-encoding: xudp, uuid: b54d36d1-43c3-4b8f-a5f8-cf6504db0562, servername: apple.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, reality-opts: {public-key: MbYR2O0XBSeG74gGYpFIofXsILcf5lG2gc36GyURBXQ, short-id: 0199436dd359351b}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: frnl.locklance.lol:443, server: frnl.locklance.lol, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: be0e7d89-9c35-4950-a460-d3bf5aae5f91, servername: frnl.locklance.lol, host: frnl.locklance.lol, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: OduZo3TA4hyCu8FUh06W1_bNtIHjLEpyFJzGUsr2fzU, short-id: 1368eab8bfaf0127}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -490,11 +489,10 @@ proxy-groups:
     proxies:
       - 102.129.229.85:31700
       - 13.114.188.23:8359
-      - 13.230.159.214:3285
-      - 213.142.132.75:443
-      - 103.112.69.234:443
+      - 3.106.214.88:31318
+      - 🇷🇺 lv-geo.dataload-cdn.ru:8443
+      - r1.mizulina.top:22231
       - 144.31.233.236:7443
-      - frnl.locklance.lol:443
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -503,11 +501,10 @@ proxy-groups:
     proxies:
       - 102.129.229.85:31700
       - 13.114.188.23:8359
-      - 13.230.159.214:3285
-      - 213.142.132.75:443
-      - 103.112.69.234:443
+      - 3.106.214.88:31318
+      - 🇷🇺 lv-geo.dataload-cdn.ru:8443
+      - r1.mizulina.top:22231
       - 144.31.233.236:7443
-      - frnl.locklance.lol:443
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -516,11 +513,10 @@ proxy-groups:
     proxies:
       - 102.129.229.85:31700
       - 13.114.188.23:8359
-      - 13.230.159.214:3285
-      - 213.142.132.75:443
-      - 103.112.69.234:443
+      - 3.106.214.88:31318
+      - 🇷🇺 lv-geo.dataload-cdn.ru:8443
+      - r1.mizulina.top:22231
       - 144.31.233.236:7443
-      - frnl.locklance.lol:443
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -538,11 +534,10 @@ proxy-groups:
     proxies:
       - 102.129.229.85:31700
       - 13.114.188.23:8359
-      - 13.230.159.214:3285
-      - 213.142.132.75:443
-      - 103.112.69.234:443
+      - 3.106.214.88:31318
+      - 🇷🇺 lv-geo.dataload-cdn.ru:8443
+      - r1.mizulina.top:22231
       - 144.31.233.236:7443
-      - frnl.locklance.lol:443
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -551,11 +546,10 @@ proxy-groups:
     proxies:
       - 102.129.229.85:31700
       - 13.114.188.23:8359
-      - 13.230.159.214:3285
-      - 213.142.132.75:443
-      - 103.112.69.234:443
+      - 3.106.214.88:31318
+      - 🇷🇺 lv-geo.dataload-cdn.ru:8443
+      - r1.mizulina.top:22231
       - 144.31.233.236:7443
-      - frnl.locklance.lol:443
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -564,11 +558,10 @@ proxy-groups:
     proxies:
       - 102.129.229.85:31700
       - 13.114.188.23:8359
-      - 13.230.159.214:3285
-      - 213.142.132.75:443
-      - 103.112.69.234:443
+      - 3.106.214.88:31318
+      - 🇷🇺 lv-geo.dataload-cdn.ru:8443
+      - r1.mizulina.top:22231
       - 144.31.233.236:7443
-      - frnl.locklance.lol:443
   - name: دانلود منیجر 📥
     type: select
     proxies:

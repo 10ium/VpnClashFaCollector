@@ -5,60 +5,116 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: freenet-vt, server: 185.226.119.96, port: 8082, type: ss, cipher: chacha20-ietf-poly1305, password: eI-mHmYodzH2aGXorqp8pA, udp: true, tfo: false}
   - {name: "@freenet-vt", server: 193.151.132.136, port: 40443, type: trojan, password: humanity, sni: www.ignitelimit.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.ignitelimit.com}}, udp: true, tfo: false}
+  - {name: "@freenet-vt ❤️", server: 198.169.2.1, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 411e540f-d455-4fb8-aef8-a3926c2fc49d, servername: amonext-eta.vercel.app, alpn: [h2], host: amonext-eta.vercel.app, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@freenet-vt ❤️ 2", server: 198.169.2.1, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 411e540f-d455-4fb8-aef8-a3926c2fc49d, servername: amonext-hffjededf-amonextt.vercel.app, alpn: [h2], host: amonext-hffjededf-amonextt.vercel.app, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@freenet-vt ❤️ 3", server: 198.169.2.1, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 411e540f-d455-4fb8-aef8-a3926c2fc49d, servername: amonext-pearl.vercel.app, alpn: [h2], host: amonext-pearl.vercel.app, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: freenet-vt`, server: snapp.ir, port: 2095, type: vless, tls: true, packet-encoding: xudp, uuid: 5bc4971a-e0b6-4723-985c-801b1c80f23a, network: ws, ws-opts: {path: /wskhan, headers: {Host: mdproxyi.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: freenet-vt, server: 185.143.233.5, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 70a1790b-a635-46f1-b473-e2ed1b4b491f, network: ws, ws-opts: {path: /, headers: {Host: p1.sesrsa.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: freenet-vt 2, server: 185.143.232.32, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 63626365-3534-4138-b731-346165303366, network: ws, ws-opts: {path: "/l/w/aXD2QyDdS6vRQpxs?ed=2047", headers: {Host: dl.tgmovie.bond}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: freenet-vt 3, server: 185.143.233.5, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 70a1790b-a635-46f1-b473-e2ed1b4b491f, network: ws, ws-opts: {path: /, headers: {Host: p1.sesrsa.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: freenet-vt ❄3, server: 185.143.233.122, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: be95dc05-f84a-4a4d-80ad-4b7a80177b7f, network: ws, ws-opts: {path: /, headers: {Host: line2.gymplusplus.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@freenet-vt 2", server: 188.121.109.125, port: 52187, type: vless, tls: true, packet-encoding: xudp, uuid: c508d0e6-6d8a-4b67-8379-f613c2a24bc4, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@freenet-vt 3", server: 185.236.38.44, port: 19946, type: vmess, uuid: c9e42537-8652-4a4c-85d3-0d36abf38f88, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@freenet-vt"
-      - freenet-vt`
       - freenet-vt
+      - "@freenet-vt"
+      - "@freenet-vt ❤️"
+      - "@freenet-vt ❤️ 2"
+      - "@freenet-vt ❤️ 3"
+      - freenet-vt`
+      - freenet-vt 2
+      - freenet-vt 3
+      - freenet-vt ❄3
+      - "@freenet-vt 2"
+      - "@freenet-vt 3"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@freenet-vt"
-      - freenet-vt`
       - freenet-vt
+      - "@freenet-vt"
+      - "@freenet-vt ❤️"
+      - "@freenet-vt ❤️ 2"
+      - "@freenet-vt ❤️ 3"
+      - freenet-vt`
+      - freenet-vt 2
+      - freenet-vt 3
+      - freenet-vt ❄3
+      - "@freenet-vt 2"
+      - "@freenet-vt 3"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@freenet-vt"
-      - freenet-vt`
       - freenet-vt
+      - "@freenet-vt"
+      - "@freenet-vt ❤️"
+      - "@freenet-vt ❤️ 2"
+      - "@freenet-vt ❤️ 3"
+      - freenet-vt`
+      - freenet-vt 2
+      - freenet-vt 3
+      - freenet-vt ❄3
+      - "@freenet-vt 2"
+      - "@freenet-vt 3"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@freenet-vt"
-      - freenet-vt`
       - freenet-vt
+      - "@freenet-vt"
+      - "@freenet-vt ❤️"
+      - "@freenet-vt ❤️ 2"
+      - "@freenet-vt ❤️ 3"
+      - freenet-vt`
+      - freenet-vt 2
+      - freenet-vt 3
+      - freenet-vt ❄3
+      - "@freenet-vt 2"
+      - "@freenet-vt 3"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@freenet-vt"
-      - freenet-vt`
       - freenet-vt
+      - "@freenet-vt"
+      - "@freenet-vt ❤️"
+      - "@freenet-vt ❤️ 2"
+      - "@freenet-vt ❤️ 3"
+      - freenet-vt`
+      - freenet-vt 2
+      - freenet-vt 3
+      - freenet-vt ❄3
+      - "@freenet-vt 2"
+      - "@freenet-vt 3"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@freenet-vt"
-      - freenet-vt`
       - freenet-vt
+      - "@freenet-vt"
+      - "@freenet-vt ❤️"
+      - "@freenet-vt ❤️ 2"
+      - "@freenet-vt ❤️ 3"
+      - freenet-vt`
+      - freenet-vt 2
+      - freenet-vt 3
+      - freenet-vt ❄3
+      - "@freenet-vt 2"
+      - "@freenet-vt 3"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -86,9 +142,17 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@freenet-vt"
-      - freenet-vt`
       - freenet-vt
+      - "@freenet-vt"
+      - "@freenet-vt ❤️"
+      - "@freenet-vt ❤️ 2"
+      - "@freenet-vt ❤️ 3"
+      - freenet-vt`
+      - freenet-vt 2
+      - freenet-vt 3
+      - freenet-vt ❄3
+      - "@freenet-vt 2"
+      - "@freenet-vt 3"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
