@@ -6,7 +6,6 @@ log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
   - {name: "@DarcProxy (1)", server: 185.143.233.235, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 0c90a995-d377-4cec-b1b1-7ed004474ba2, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: New1.legendperm.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ⏳ @DarcProxy`, server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 61437316-081f-47f7-96b7-f0e43143eadc, network: ws, ws-opts: {path: /, headers: {Host: derakhshan.molvliafor.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@DarcProxy (2)", server: 185.143.233.235, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 6a7095c8-550f-428f-a694-86b19e4a5fd4, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: New1.legendperm.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
@@ -15,7 +14,6 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - "@DarcProxy (1)"
-      - ⏳ @DarcProxy`
       - "@DarcProxy (2)"
   - name: ♻️ 自动选择
     type: url-test
@@ -24,7 +22,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@DarcProxy (1)"
-      - ⏳ @DarcProxy`
       - "@DarcProxy (2)"
   - name: 🌍 国外媒体
     type: select
@@ -33,7 +30,6 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - "@DarcProxy (1)"
-      - ⏳ @DarcProxy`
       - "@DarcProxy (2)"
   - name: 📲 电报信息
     type: select
@@ -41,7 +37,6 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@DarcProxy (1)"
-      - ⏳ @DarcProxy`
       - "@DarcProxy (2)"
   - name: Ⓜ️ 微软服务
     type: select
@@ -49,7 +44,6 @@ proxy-groups:
       - 🎯 全球直连
       - 🚀 节点选择
       - "@DarcProxy (1)"
-      - ⏳ @DarcProxy`
       - "@DarcProxy (2)"
   - name: 🍎 苹果服务
     type: select
@@ -57,7 +51,6 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@DarcProxy (1)"
-      - ⏳ @DarcProxy`
       - "@DarcProxy (2)"
   - name: 🎯 全球直连
     type: select
@@ -87,7 +80,6 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - "@DarcProxy (1)"
-      - ⏳ @DarcProxy`
       - "@DarcProxy (2)"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连

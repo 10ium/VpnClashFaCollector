@@ -466,6 +466,7 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: "@freenet-vt", server: 193.151.132.136, port: 40443, type: trojan, password: humanity, sni: www.ignitelimit.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.ignitelimit.com}}, udp: true, tfo: false}
+  - {name: freenet-vt`, server: snapp.ir, port: 2095, type: vless, tls: true, packet-encoding: xudp, uuid: 5bc4971a-e0b6-4723-985c-801b1c80f23a, network: ws, ws-opts: {path: /wskhan, headers: {Host: mdproxyi.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: freenet-vt, server: 185.143.233.5, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 70a1790b-a635-46f1-b473-e2ed1b4b491f, network: ws, ws-opts: {path: /, headers: {Host: p1.sesrsa.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -484,6 +485,7 @@ proxy-groups:
     type: select
     proxies:
       - "@freenet-vt"
+      - freenet-vt`
       - freenet-vt
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -492,6 +494,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@freenet-vt"
+      - freenet-vt`
       - freenet-vt
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -500,6 +503,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@freenet-vt"
+      - freenet-vt`
       - freenet-vt
   - name: اتصال پایدار 🔗
     type: url-test
@@ -517,6 +521,7 @@ proxy-groups:
     interval: 600
     proxies:
       - "@freenet-vt"
+      - freenet-vt`
       - freenet-vt
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -525,6 +530,7 @@ proxy-groups:
     interval: 600
     proxies:
       - "@freenet-vt"
+      - freenet-vt`
       - freenet-vt
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -533,6 +539,7 @@ proxy-groups:
     interval: 600
     proxies:
       - "@freenet-vt"
+      - freenet-vt`
       - freenet-vt
   - name: دانلود منیجر 📥
     type: select
