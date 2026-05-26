@@ -7,6 +7,7 @@ external-controller: 127.0.0.1:9090
 proxies:
   - {name: NetAccount`, server: 104.17.72.206, port: 443, type: trojan, password: humanity, sni: www.calmloud.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmloud.com}}, udp: true, tfo: false}
   - {name: NetAccount` 2, server: 141.193.213.11, port: 443, type: trojan, password: humanity, sni: www.calmloud.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmloud.com}}, udp: true, tfo: false}
+  - {name: NetAccount` 3, server: 185.143.233.5, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4a5ee365-2414-47e8-9285-9d57ff7cf66e, servername: apolodiscount.johnmorgan.ir, network: ws, ws-opts: {path: /, headers: {Host: apolodiscount.johnmorgan.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -15,6 +16,7 @@ proxy-groups:
       - DIRECT
       - NetAccount`
       - NetAccount` 2
+      - NetAccount` 3
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -23,6 +25,7 @@ proxy-groups:
     proxies:
       - NetAccount`
       - NetAccount` 2
+      - NetAccount` 3
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -31,6 +34,7 @@ proxy-groups:
       - 🎯 全球直连
       - NetAccount`
       - NetAccount` 2
+      - NetAccount` 3
   - name: 📲 电报信息
     type: select
     proxies:
@@ -38,6 +42,7 @@ proxy-groups:
       - 🎯 全球直连
       - NetAccount`
       - NetAccount` 2
+      - NetAccount` 3
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -45,6 +50,7 @@ proxy-groups:
       - 🚀 节点选择
       - NetAccount`
       - NetAccount` 2
+      - NetAccount` 3
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -52,6 +58,7 @@ proxy-groups:
       - 🎯 全球直连
       - NetAccount`
       - NetAccount` 2
+      - NetAccount` 3
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -81,6 +88,7 @@ proxy-groups:
       - ♻️ 自动选择
       - NetAccount`
       - NetAccount` 2
+      - NetAccount` 3
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
