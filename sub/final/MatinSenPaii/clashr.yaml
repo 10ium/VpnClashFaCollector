@@ -5,88 +5,53 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: T.me/MiTiVPN 5, server: 104.20.6.134, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 06ef598c-1555-4887-b3f9-08214a2f6792, servername: 2026.hhhhh.eu.org, alpn: [http%2F1.1], network: ws, ws-opts: {path: /222.167.202.31:7443, headers: {Host: 2026.hhhhh.eu.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: T.me/MiTiVPN 2, server: 104.20.6.134, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 388a6c57-87e7-420b-afe2-b3eb670fd7da, network: ws, ws-opts: {path: /, headers: {Host: vip.yaml7.ggff.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@MiTiVPN -3", server: 104.20.6.134, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.indevs.in, network: ws, ws-opts: {path: /, headers: {Host: sni.111000.indevs.in}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@MiTiVPN  🇸🇨", server: 104.20.6.134, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.indevs.in, network: ws, ws-opts: {path: /, headers: {Host: sni.111000.indevs.in}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: .T.me/MiTiVPN 3, server: 104.20.6.134, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.jpmj.dev, alpn: [http%2F1.1], network: ws, ws-opts: {path: "/?Telegram🇨🇳@WangCai2=", headers: {Host: sni.jpmj.dev}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@MiTiVPN 🇳🇱", server: 104.20.6.134, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.jpmj.dev, network: ws, ws-opts: {path: /, headers: {Host: sni.jpmj.dev}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: T.me/MiTiVPN 4, server: 104.20.6.134, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: 8c4604ef-749c-4b56-adf1-7da405002a21, servername: qyi.fqjd663.ggff.net, alpn: [http%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: qyi.fqjd663.ggff.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Humanity 1, server: 104.16.7.70, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.indevs.in, network: ws, ws-opts: {path: /, headers: {Host: sni.111000.indevs.in}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Humanity 2, server: 104.21.7.21, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.indevs.in, network: ws, ws-opts: {path: /, headers: {Host: sni.111000.indevs.in}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - T.me/MiTiVPN 5
-      - T.me/MiTiVPN 2
-      - "@MiTiVPN -3"
-      - "@MiTiVPN  🇸🇨"
-      - .T.me/MiTiVPN 3
-      - "@MiTiVPN 🇳🇱"
-      - T.me/MiTiVPN 4
+      - Humanity 1
+      - Humanity 2
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - T.me/MiTiVPN 5
-      - T.me/MiTiVPN 2
-      - "@MiTiVPN -3"
-      - "@MiTiVPN  🇸🇨"
-      - .T.me/MiTiVPN 3
-      - "@MiTiVPN 🇳🇱"
-      - T.me/MiTiVPN 4
+      - Humanity 1
+      - Humanity 2
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - T.me/MiTiVPN 5
-      - T.me/MiTiVPN 2
-      - "@MiTiVPN -3"
-      - "@MiTiVPN  🇸🇨"
-      - .T.me/MiTiVPN 3
-      - "@MiTiVPN 🇳🇱"
-      - T.me/MiTiVPN 4
+      - Humanity 1
+      - Humanity 2
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - T.me/MiTiVPN 5
-      - T.me/MiTiVPN 2
-      - "@MiTiVPN -3"
-      - "@MiTiVPN  🇸🇨"
-      - .T.me/MiTiVPN 3
-      - "@MiTiVPN 🇳🇱"
-      - T.me/MiTiVPN 4
+      - Humanity 1
+      - Humanity 2
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - T.me/MiTiVPN 5
-      - T.me/MiTiVPN 2
-      - "@MiTiVPN -3"
-      - "@MiTiVPN  🇸🇨"
-      - .T.me/MiTiVPN 3
-      - "@MiTiVPN 🇳🇱"
-      - T.me/MiTiVPN 4
+      - Humanity 1
+      - Humanity 2
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - T.me/MiTiVPN 5
-      - T.me/MiTiVPN 2
-      - "@MiTiVPN -3"
-      - "@MiTiVPN  🇸🇨"
-      - .T.me/MiTiVPN 3
-      - "@MiTiVPN 🇳🇱"
-      - T.me/MiTiVPN 4
+      - Humanity 1
+      - Humanity 2
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -114,13 +79,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - T.me/MiTiVPN 5
-      - T.me/MiTiVPN 2
-      - "@MiTiVPN -3"
-      - "@MiTiVPN  🇸🇨"
-      - .T.me/MiTiVPN 3
-      - "@MiTiVPN 🇳🇱"
-      - T.me/MiTiVPN 4
+      - Humanity 1
+      - Humanity 2
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

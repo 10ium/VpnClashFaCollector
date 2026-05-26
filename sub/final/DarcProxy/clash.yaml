@@ -465,7 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: ⭐ @DarcProxy ⭐, server: 185.143.233.5, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: 9d3df6e1-35b8-454c-a56c-dece09b0f14d, network: ws, ws-opts: {path: "/login?ed=128", headers: {Host: rollsroycecullinane.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@DarcProxy  (نامحدود) اختصاصی", server: 45.38.23.87, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 6af5890f-5267-40ed-bc60-1bd3ee31a88b, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@DarcProxy 🎁`", server: 185.143.233.5, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: c2b22725-9f0c-4fb0-896e-56233a49ab06, network: ws, ws-opts: {path: "/login?ed=128", headers: {Host: rollsroycecullinane.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - ⭐ @DarcProxy ⭐
+      - "@DarcProxy  (نامحدود) اختصاصی"
+      - "@DarcProxy 🎁`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - ⭐ @DarcProxy ⭐
+      - "@DarcProxy  (نامحدود) اختصاصی"
+      - "@DarcProxy 🎁`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - ⭐ @DarcProxy ⭐
+      - "@DarcProxy  (نامحدود) اختصاصی"
+      - "@DarcProxy 🎁`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - ⭐ @DarcProxy ⭐
+      - "@DarcProxy  (نامحدود) اختصاصی"
+      - "@DarcProxy 🎁`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - ⭐ @DarcProxy ⭐
+      - "@DarcProxy  (نامحدود) اختصاصی"
+      - "@DarcProxy 🎁`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - ⭐ @DarcProxy ⭐
+      - "@DarcProxy  (نامحدود) اختصاصی"
+      - "@DarcProxy 🎁`"
   - name: دانلود منیجر 📥
     type: select
     proxies:

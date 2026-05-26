@@ -5,46 +5,67 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@VPN_SKY✅️🌎20.00GB`", server: 185.143.233.5, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e27c8070-c7d9-44b5-86fe-f898fdba1425, servername: gn.8lack.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/chat?ed=128", headers: {Host: gn.8lack.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Sky`", server: 104.16.7.70, port: 443, type: trojan, password: 8r%3C%5B9%27l6hAO%238ZQi, sni: Koma-YT.PAGeS.Dev, skip-cert-verify: false, network: ws, ws-opts: {path: /tr, headers: {Host: Koma-YT.PAGeS.Dev}}, udp: true, tfo: false}
+  - {name: "@Vpn_Sky` 2", server: 172.67.158.125, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 252272d5-74df-4e86-b603-5894e9b06ef5, servername: PrO.nImBaHa.InFo, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: PrO.nImBaHa.InFo}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Sky` 3", server: 104.16.7.70, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.jpmj.dev, network: ws, ws-opts: {path: "/?Telegram🇨🇳@WangCai2=", headers: {Host: sni.jpmj.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Sky", server: 104.16.7.70, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.dynv6.net, network: ws, ws-opts: {path: "/?Telegram🇨🇳+@APPXA", headers: {Host: sni.111000.dynv6.net}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@VPN_SKY✅️🌎20.00GB`"
+      - "@Vpn_Sky`"
+      - "@Vpn_Sky` 2"
+      - "@Vpn_Sky` 3"
+      - "@Vpn_Sky"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@VPN_SKY✅️🌎20.00GB`"
+      - "@Vpn_Sky`"
+      - "@Vpn_Sky` 2"
+      - "@Vpn_Sky` 3"
+      - "@Vpn_Sky"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@VPN_SKY✅️🌎20.00GB`"
+      - "@Vpn_Sky`"
+      - "@Vpn_Sky` 2"
+      - "@Vpn_Sky` 3"
+      - "@Vpn_Sky"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@VPN_SKY✅️🌎20.00GB`"
+      - "@Vpn_Sky`"
+      - "@Vpn_Sky` 2"
+      - "@Vpn_Sky` 3"
+      - "@Vpn_Sky"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@VPN_SKY✅️🌎20.00GB`"
+      - "@Vpn_Sky`"
+      - "@Vpn_Sky` 2"
+      - "@Vpn_Sky` 3"
+      - "@Vpn_Sky"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@VPN_SKY✅️🌎20.00GB`"
+      - "@Vpn_Sky`"
+      - "@Vpn_Sky` 2"
+      - "@Vpn_Sky` 3"
+      - "@Vpn_Sky"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +93,10 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@VPN_SKY✅️🌎20.00GB`"
+      - "@Vpn_Sky`"
+      - "@Vpn_Sky` 2"
+      - "@Vpn_Sky` 3"
+      - "@Vpn_Sky"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

@@ -465,7 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "☑➜چنلمون: Express_freevpn@`", server: 8.6.112.0, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 388a6c57-87e7-420b-afe2-b3eb670fd7da, network: ws, ws-opts: {path: /+@ProxyVPN11, headers: {Host: vip.yaml7.ggff.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "☑➜چنلمون: Express_freevpn@`", server: 104.18.139.67, port: 443, type: trojan, password: humanity, sni: www.multiplydose.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.multiplydose.com}}, udp: true, tfo: false}
+  - {name: "☑➜چنلمون: Express_freevpn@` 2", server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.calmloud.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmloud.com}}, udp: true, tfo: false}
+  - {name: "☑➜چنلمون: Express_freevpn@", server: 172.66.47.69, port: 443, type: trojan, password: humanity, sni: www.multiplydose.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.multiplydose.com}}, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,6 +485,8 @@ proxy-groups:
     type: select
     proxies:
       - "☑➜چنلمون: Express_freevpn@`"
+      - "☑➜چنلمون: Express_freevpn@` 2"
+      - "☑➜چنلمون: Express_freevpn@"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -490,6 +494,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "☑➜چنلمون: Express_freevpn@`"
+      - "☑➜چنلمون: Express_freevpn@` 2"
+      - "☑➜چنلمون: Express_freevpn@"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -497,6 +503,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "☑➜چنلمون: Express_freevpn@`"
+      - "☑➜چنلمون: Express_freevpn@` 2"
+      - "☑➜چنلمون: Express_freevpn@"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -513,6 +521,8 @@ proxy-groups:
     interval: 600
     proxies:
       - "☑➜چنلمون: Express_freevpn@`"
+      - "☑➜چنلمون: Express_freevpn@` 2"
+      - "☑➜چنلمون: Express_freevpn@"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -520,6 +530,8 @@ proxy-groups:
     interval: 600
     proxies:
       - "☑➜چنلمون: Express_freevpn@`"
+      - "☑➜چنلمون: Express_freevpn@` 2"
+      - "☑➜چنلمون: Express_freevpn@"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -527,6 +539,8 @@ proxy-groups:
     interval: 600
     proxies:
       - "☑➜چنلمون: Express_freevpn@`"
+      - "☑➜چنلمون: Express_freevpn@` 2"
+      - "☑➜چنلمون: Express_freevpn@"
   - name: دانلود منیجر 📥
     type: select
     proxies:

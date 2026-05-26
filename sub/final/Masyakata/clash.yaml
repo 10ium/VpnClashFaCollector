@@ -465,7 +465,15 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "`", server: newgen.lightxpro.shop, port: 1001, type: vless, tls: true, packet-encoding: xudp, uuid: 5d2fe71b-e259-4762-96ce-7db1b723be90, host: newgen.lightxpro.shop, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: https://t.me/Masyakata, server: 185.60.137.65, port: 16541, type: ss, cipher: aes-256-gcm, password: qw2Bweqwe3P697G2er, udp: true, tfo: false}
+  - {name: "@oxnet_ir 1", server: 104.16.7.70, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true, tfo: false}
+  - {name: "@`", server: 172.66.47.69, port: 443, type: trojan, password: humanity, sni: www.multiplydose.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.multiplydose.com}}, udp: true, tfo: false}
+  - {name: دکتر نیک, server: 172.66.47.69, port: 443, type: trojan, password: humanity, sni: www.multiplydose.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.multiplydose.com}}, udp: true, tfo: false}
+  - {name: https://t.me/Masyakata 2, server: 8.6.112.6, port: 443, type: trojan, password: humanity, sni: www.calmloud.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmloud.com}}, udp: true, tfo: false}
+  - {name: "@canfigm جوین چنل شید قطع نشید", server: 46.101.188.66, port: 23450, type: vless, tls: true, packet-encoding: xudp, uuid: 06503959-0237-475e-a838-4068a97d5714, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@oxnet_ir 2", server: 104.16.7.70, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 66536c94-e57b-4590-9e20-56e42d4cc929, servername: dash.emrafhadnii.cfd, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /w1, headers: {Host: dash.emrafhadnii.cfd}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@` 2", server: de-1.shadowhub.cc, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e3da803c-9c04-4ffb-a0f2-32cda93dd868, servername: static.gcore.pro, host: static.gcore.pro, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@canfigm جوین چنل شید قطع نشید 2", server: 32.196.233.17, port: 10792, type: vless, tls: true, packet-encoding: xudp, uuid: e5110f15-4240-45b7-9d63-9e3050876366, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +490,45 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "`"
+      - https://t.me/Masyakata
+      - "@oxnet_ir 1"
+      - "@`"
+      - دکتر نیک
+      - https://t.me/Masyakata 2
+      - "@canfigm جوین چنل شید قطع نشید"
+      - "@oxnet_ir 2"
+      - "@` 2"
+      - "@canfigm جوین چنل شید قطع نشید 2"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "`"
+      - https://t.me/Masyakata
+      - "@oxnet_ir 1"
+      - "@`"
+      - دکتر نیک
+      - https://t.me/Masyakata 2
+      - "@canfigm جوین چنل شید قطع نشید"
+      - "@oxnet_ir 2"
+      - "@` 2"
+      - "@canfigm جوین چنل شید قطع نشید 2"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "`"
+      - https://t.me/Masyakata
+      - "@oxnet_ir 1"
+      - "@`"
+      - دکتر نیک
+      - https://t.me/Masyakata 2
+      - "@canfigm جوین چنل شید قطع نشید"
+      - "@oxnet_ir 2"
+      - "@` 2"
+      - "@canfigm جوین چنل شید قطع نشید 2"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +544,45 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "`"
+      - https://t.me/Masyakata
+      - "@oxnet_ir 1"
+      - "@`"
+      - دکتر نیک
+      - https://t.me/Masyakata 2
+      - "@canfigm جوین چنل شید قطع نشید"
+      - "@oxnet_ir 2"
+      - "@` 2"
+      - "@canfigm جوین چنل شید قطع نشید 2"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "`"
+      - https://t.me/Masyakata
+      - "@oxnet_ir 1"
+      - "@`"
+      - دکتر نیک
+      - https://t.me/Masyakata 2
+      - "@canfigm جوین چنل شید قطع نشید"
+      - "@oxnet_ir 2"
+      - "@` 2"
+      - "@canfigm جوین چنل شید قطع نشید 2"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "`"
+      - https://t.me/Masyakata
+      - "@oxnet_ir 1"
+      - "@`"
+      - دکتر نیک
+      - https://t.me/Masyakata 2
+      - "@canfigm جوین چنل شید قطع نشید"
+      - "@oxnet_ir 2"
+      - "@` 2"
+      - "@canfigm جوین چنل شید قطع نشید 2"
   - name: دانلود منیجر 📥
     type: select
     proxies:
