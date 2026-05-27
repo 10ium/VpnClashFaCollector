@@ -5,46 +5,60 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@proxy_kafee - Psiphon 24", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: MerlinVPN-480q68sz`, server: 185.143.234.235, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: 4106328d-9bc4-4e07-be57-e43db1b5a245, servername: dl.lexwill.site, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "?ed=2048", headers: {Host: dl.lexwill.site}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: tst-@MerlinVPN-990.00GB📊, server: 138.124.115.134, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 4cc55b53-c144-4890-ba79-68a89e883843, servername: yahoo.com, host: yahoo.com, path: /, reality-opts: {public-key: G4Bc0Q8ynWYT-5fGxuCw7qUYp6ayRuQGtSaynzt85FQ, short-id: 1fb0b1a7}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: MerlinVPN 🇬🇧, server: 77.75.199.43, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.cc.cd, network: ws, ws-opts: {path: /, headers: {Host: sni.111000.cc.cd}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@proxy_kafee - Psiphon 24"
+      - MerlinVPN-480q68sz`
+      - tst-@MerlinVPN-990.00GB📊
+      - MerlinVPN 🇬🇧
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@proxy_kafee - Psiphon 24"
+      - MerlinVPN-480q68sz`
+      - tst-@MerlinVPN-990.00GB📊
+      - MerlinVPN 🇬🇧
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@proxy_kafee - Psiphon 24"
+      - MerlinVPN-480q68sz`
+      - tst-@MerlinVPN-990.00GB📊
+      - MerlinVPN 🇬🇧
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@proxy_kafee - Psiphon 24"
+      - MerlinVPN-480q68sz`
+      - tst-@MerlinVPN-990.00GB📊
+      - MerlinVPN 🇬🇧
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@proxy_kafee - Psiphon 24"
+      - MerlinVPN-480q68sz`
+      - tst-@MerlinVPN-990.00GB📊
+      - MerlinVPN 🇬🇧
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@proxy_kafee - Psiphon 24"
+      - MerlinVPN-480q68sz`
+      - tst-@MerlinVPN-990.00GB📊
+      - MerlinVPN 🇬🇧
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +86,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@proxy_kafee - Psiphon 24"
+      - MerlinVPN-480q68sz`
+      - tst-@MerlinVPN-990.00GB📊
+      - MerlinVPN 🇬🇧
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

@@ -465,7 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@proxy_kafee - Psiphon 24", server: 185.11.89.38, port: 12809, type: vmess, uuid: aeddbbbd-ad95-49e8-ee31-7cacc7ede117, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: MerlinVPN-480q68sz`, server: 185.143.234.235, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: 4106328d-9bc4-4e07-be57-e43db1b5a245, servername: dl.lexwill.site, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "?ed=2048", headers: {Host: dl.lexwill.site}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: tst-@MerlinVPN-990.00GB📊, server: 138.124.115.134, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 4cc55b53-c144-4890-ba79-68a89e883843, servername: yahoo.com, host: yahoo.com, path: /, reality-opts: {public-key: G4Bc0Q8ynWYT-5fGxuCw7qUYp6ayRuQGtSaynzt85FQ, short-id: 1fb0b1a7}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: MerlinVPN 🇬🇧, server: 77.75.199.43, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.cc.cd, network: ws, ws-opts: {path: /, headers: {Host: sni.111000.cc.cd}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +484,27 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@proxy_kafee - Psiphon 24"
+      - MerlinVPN-480q68sz`
+      - tst-@MerlinVPN-990.00GB📊
+      - MerlinVPN 🇬🇧
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@proxy_kafee - Psiphon 24"
+      - MerlinVPN-480q68sz`
+      - tst-@MerlinVPN-990.00GB📊
+      - MerlinVPN 🇬🇧
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@proxy_kafee - Psiphon 24"
+      - MerlinVPN-480q68sz`
+      - tst-@MerlinVPN-990.00GB📊
+      - MerlinVPN 🇬🇧
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +520,27 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@proxy_kafee - Psiphon 24"
+      - MerlinVPN-480q68sz`
+      - tst-@MerlinVPN-990.00GB📊
+      - MerlinVPN 🇬🇧
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@proxy_kafee - Psiphon 24"
+      - MerlinVPN-480q68sz`
+      - tst-@MerlinVPN-990.00GB📊
+      - MerlinVPN 🇬🇧
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@proxy_kafee - Psiphon 24"
+      - MerlinVPN-480q68sz`
+      - tst-@MerlinVPN-990.00GB📊
+      - MerlinVPN 🇬🇧
   - name: دانلود منیجر 📥
     type: select
     proxies:
