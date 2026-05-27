@@ -5,60 +5,88 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: MerlinVpn, server: 152.233.28.196, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 394f6981-a782-4779-9a85-e6cf22935d93, servername: uk1.fromblancwithlove.com, host: uk1.fromblancwithlove.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@`", server: 152.233.28.198, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 394f6981-a782-4779-9a85-e6cf22935d93, servername: uk1.fromblancwithlove.com, alpn: [h2], host: uk1.fromblancwithlove.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MerlinVpn", server: uk1.fromblancwithlove.com, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 394f6981-a782-4779-9a85-e6cf22935d93, host: uk1.fromblancwithlove.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: MerlinVPN-480q68sz`, server: 185.143.234.235, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: 4106328d-9bc4-4e07-be57-e43db1b5a245, servername: dl.lexwill.site, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "?ed=2048", headers: {Host: dl.lexwill.site}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: tst-@MerlinVPN-990.00GB📊, server: 138.124.115.134, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 4cc55b53-c144-4890-ba79-68a89e883843, servername: yahoo.com, host: yahoo.com, path: /, reality-opts: {public-key: G4Bc0Q8ynWYT-5fGxuCw7qUYp6ayRuQGtSaynzt85FQ, short-id: 1fb0b1a7}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: MerlinVPN 🇬🇧, server: 77.75.199.43, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.cc.cd, network: ws, ws-opts: {path: /, headers: {Host: sni.111000.cc.cd}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MerlinVpn🍓", server: 83.228.249.188, port: 16603, type: vless, tls: true, packet-encoding: xudp, uuid: 72aead3f-8d51-49d0-90e8-310d6fd57aca, host: Nobitex.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - MerlinVpn
+      - "@`"
+      - "@MerlinVpn"
       - MerlinVPN-480q68sz`
       - tst-@MerlinVPN-990.00GB📊
       - MerlinVPN 🇬🇧
+      - "@MerlinVpn🍓"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - MerlinVpn
+      - "@`"
+      - "@MerlinVpn"
       - MerlinVPN-480q68sz`
       - tst-@MerlinVPN-990.00GB📊
       - MerlinVPN 🇬🇧
+      - "@MerlinVpn🍓"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - MerlinVpn
+      - "@`"
+      - "@MerlinVpn"
       - MerlinVPN-480q68sz`
       - tst-@MerlinVPN-990.00GB📊
       - MerlinVPN 🇬🇧
+      - "@MerlinVpn🍓"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - MerlinVpn
+      - "@`"
+      - "@MerlinVpn"
       - MerlinVPN-480q68sz`
       - tst-@MerlinVPN-990.00GB📊
       - MerlinVPN 🇬🇧
+      - "@MerlinVpn🍓"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - MerlinVpn
+      - "@`"
+      - "@MerlinVpn"
       - MerlinVPN-480q68sz`
       - tst-@MerlinVPN-990.00GB📊
       - MerlinVPN 🇬🇧
+      - "@MerlinVpn🍓"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - MerlinVpn
+      - "@`"
+      - "@MerlinVpn"
       - MerlinVPN-480q68sz`
       - tst-@MerlinVPN-990.00GB📊
       - MerlinVPN 🇬🇧
+      - "@MerlinVpn🍓"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -86,9 +114,13 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - MerlinVpn
+      - "@`"
+      - "@MerlinVpn"
       - MerlinVPN-480q68sz`
       - tst-@MerlinVPN-990.00GB📊
       - MerlinVPN 🇬🇧
+      - "@MerlinVpn🍓"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

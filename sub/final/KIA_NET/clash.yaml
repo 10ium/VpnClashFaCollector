@@ -465,7 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Kia_Net👈چنل+تلگرام`", server: 5.160.58.129, port: 50019, type: vless, tls: true, packet-encoding: xudp, uuid: d226c04c-8391-00e4-4234-fc46d4416d15, servername: alabama-tigr.info, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /true, headers: {Host: alabama-tigr.info}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "[🇨🇦]kia_net", server: 173.245.59.191, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: aeec50e6-f176-4f87-9f46-0610a0e76435, servername: interim.adaspoloandco.com, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /RoBeRt, headers: {Host: interim.adaspoloandco.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "[🇮🇷]kia_net تانل متصل حجم محدود", server: bmi.ir, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: dfd6799a-6e6b-4f3f-999d-4d34a9e04ef0, servername: seattle3.shahvip.lol, network: ws, ws-opts: {path: /api/update, headers: {Host: seattle3.shahvip.lol}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@Kia_Net👈چنل+تلگرام`"
+      - "[🇨🇦]kia_net"
+      - "[🇮🇷]kia_net تانل متصل حجم محدود"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@Kia_Net👈چنل+تلگرام`"
+      - "[🇨🇦]kia_net"
+      - "[🇮🇷]kia_net تانل متصل حجم محدود"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@Kia_Net👈چنل+تلگرام`"
+      - "[🇨🇦]kia_net"
+      - "[🇮🇷]kia_net تانل متصل حجم محدود"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Kia_Net👈چنل+تلگرام`"
+      - "[🇨🇦]kia_net"
+      - "[🇮🇷]kia_net تانل متصل حجم محدود"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Kia_Net👈چنل+تلگرام`"
+      - "[🇨🇦]kia_net"
+      - "[🇮🇷]kia_net تانل متصل حجم محدود"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Kia_Net👈چنل+تلگرام`"
+      - "[🇨🇦]kia_net"
+      - "[🇮🇷]kia_net تانل متصل حجم محدود"
   - name: دانلود منیجر 📥
     type: select
     proxies:

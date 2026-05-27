@@ -465,10 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Vpn_Sky`", server: 104.16.7.70, port: 443, type: trojan, password: 8r%3C%5B9%27l6hAO%238ZQi, sni: Koma-YT.PAGeS.Dev, skip-cert-verify: false, network: ws, ws-opts: {path: /tr, headers: {Host: Koma-YT.PAGeS.Dev}}, udp: true, tfo: false}
-  - {name: "@Vpn_Sky` 2", server: 172.67.158.125, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 252272d5-74df-4e86-b603-5894e9b06ef5, servername: PrO.nImBaHa.InFo, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: PrO.nImBaHa.InFo}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Vpn_Sky` 3", server: 104.16.7.70, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.jpmj.dev, network: ws, ws-opts: {path: "/?Telegram🇨🇳@WangCai2=", headers: {Host: sni.jpmj.dev}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Vpn_Sky", server: 104.16.7.70, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.dynv6.net, network: ws, ws-opts: {path: "/?Telegram🇨🇳+@APPXA", headers: {Host: sni.111000.dynv6.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Sky`", server: 172.67.158.125, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 252272d5-74df-4e86-b603-5894e9b06ef5, servername: PrO.nImBaHa.InFo, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: PrO.nImBaHa.InFo}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Vpn_Sky`, server: 95.38.176.140, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 58934b35-01e4-4cbd-839d-b3f165eb3458, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,9 +484,7 @@ proxy-groups:
     type: select
     proxies:
       - "@Vpn_Sky`"
-      - "@Vpn_Sky` 2"
-      - "@Vpn_Sky` 3"
-      - "@Vpn_Sky"
+      - Vpn_Sky`
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -496,9 +492,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Vpn_Sky`"
-      - "@Vpn_Sky` 2"
-      - "@Vpn_Sky` 3"
-      - "@Vpn_Sky"
+      - Vpn_Sky`
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -506,9 +500,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Vpn_Sky`"
-      - "@Vpn_Sky` 2"
-      - "@Vpn_Sky` 3"
-      - "@Vpn_Sky"
+      - Vpn_Sky`
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -525,9 +517,7 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Vpn_Sky`"
-      - "@Vpn_Sky` 2"
-      - "@Vpn_Sky` 3"
-      - "@Vpn_Sky"
+      - Vpn_Sky`
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -535,9 +525,7 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Vpn_Sky`"
-      - "@Vpn_Sky` 2"
-      - "@Vpn_Sky` 3"
-      - "@Vpn_Sky"
+      - Vpn_Sky`
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -545,9 +533,7 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Vpn_Sky`"
-      - "@Vpn_Sky` 2"
-      - "@Vpn_Sky` 3"
-      - "@Vpn_Sky"
+      - Vpn_Sky`
   - name: دانلود منیجر 📥
     type: select
     proxies:

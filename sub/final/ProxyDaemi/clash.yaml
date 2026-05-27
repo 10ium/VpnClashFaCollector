@@ -467,6 +467,7 @@ rule-providers:
 proxies:
   - {name: PMTV NEWS 🦁☀️, server: 104.253.134.125, port: 21685, type: vless, tls: true, packet-encoding: xudp, uuid: b0f0bd25-1ff4-4644-827d-5f9675d6c5b6, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: Pmtv, server: 185.143.234.235, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: f479f518-b927-4516-9723-52b27012aebd, servername: dl.lexwill.site, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "?ed=2048", headers: {Host: dl.lexwill.site}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: PMTV NEWS 🦁☀️ 2, server: 212.87.198.79, port: 45255, type: vmess, uuid: dd5ffd23-cef5-44dd-a143-658bd7f3943a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,6 +486,7 @@ proxy-groups:
     proxies:
       - PMTV NEWS 🦁☀️
       - Pmtv
+      - PMTV NEWS 🦁☀️ 2
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -493,6 +495,7 @@ proxy-groups:
     proxies:
       - PMTV NEWS 🦁☀️
       - Pmtv
+      - PMTV NEWS 🦁☀️ 2
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -501,6 +504,7 @@ proxy-groups:
     proxies:
       - PMTV NEWS 🦁☀️
       - Pmtv
+      - PMTV NEWS 🦁☀️ 2
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -518,6 +522,7 @@ proxy-groups:
     proxies:
       - PMTV NEWS 🦁☀️
       - Pmtv
+      - PMTV NEWS 🦁☀️ 2
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -526,6 +531,7 @@ proxy-groups:
     proxies:
       - PMTV NEWS 🦁☀️
       - Pmtv
+      - PMTV NEWS 🦁☀️ 2
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -534,6 +540,7 @@ proxy-groups:
     proxies:
       - PMTV NEWS 🦁☀️
       - Pmtv
+      - PMTV NEWS 🦁☀️ 2
   - name: دانلود منیجر 📥
     type: select
     proxies:

@@ -465,10 +465,15 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 43.207.110.128:5224, server: 43.207.110.128, port: 5224, type: trojan, password: f6d3aa07a52dbcedcb4731029e2fb6ae, sni: www.nintendogames.net, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 193.163.203.76:50580, server: 193.163.203.76, port: 50580, type: vless, tls: true, packet-encoding: xudp, uuid: 3af11c26-c589-4a9c-b811-f068d741a877, servername: kinopoisk.ru, host: kinopoisk.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: ot_qLvMZOPCyVWFt0w8pC-nZT9RRzkdqNFtRtGpB220, short-id: 93290645e01c92f4}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: swed.o4ka-internet.com:443, server: swed.o4ka-internet.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 42ba03da-78cf-413e-9e79-1128ee6ddb30, servername: swed.o4ka-internet.com, host: swed.o4ka-internet.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: V2JprbR_aJkS7uX6anyU3nrswGxdvDQT2HpY4WnzuC8, short-id: 5629431325884ff0}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 91.107.181.212:20620, server: 91.107.181.212, port: 20620, type: vless, tls: true, packet-encoding: xudp, uuid: 93fd443d-52b1-4f6a-b78f-2908b7c16fc0, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 31.59.40.53:52729, server: 31.59.40.53, port: 52729, type: vless, tls: true, packet-encoding: xudp, uuid: e0a98968-eb18-417a-87e7-c8933aac5f13, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇬🇧 [openproxylist.com] vmess-GB", server: world.t.51guangtaobao.com, port: 6009, type: vmess, uuid: 1d3d868e-ae7b-3762-b9d9-a7f267494c7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "🇭🇰 [openproxylist.com] vmess-HK", server: gtm-sg-cc54q7d1q01.365cloud0285.com, port: 6001, type: vmess, uuid: a030842a-d29a-4ea9-a776-14fc4b9e102d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇸🇬 [openproxylist.com] vmess-SG", server: gtm-sg-cc54q7d1q01.365cloud0285.com, port: 6004, type: vmess, uuid: a030842a-d29a-4ea9-a776-14fc4b9e102d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇸🇬 [openproxylist.com] vmess-SG 2", server: world.t.51guangtaobao.com, port: 2504, type: vmess, uuid: 1d3d868e-ae7b-3762-b9d9-a7f267494c7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇰🇷 [openproxylist.com] vmess-KR", server: world.t.51guangtaobao.com, port: 9020, type: vmess, uuid: 1d3d868e-ae7b-3762-b9d9-a7f267494c7e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇺🇸 [openproxylist.com] vmess-US", server: 129.146.77.248, port: 39495, type: vmess, uuid: f836c736-87fc-4fde-aabc-00857ecdff3e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13.m3u8}, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,30 +490,45 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 43.207.110.128:5224
       - 193.163.203.76:50580
-      - swed.o4ka-internet.com:443
+      - 91.107.181.212:20620
+      - 31.59.40.53:52729
+      - 🇬🇧 [openproxylist.com] vmess-GB
       - 🇭🇰 [openproxylist.com] vmess-HK
+      - 🇸🇬 [openproxylist.com] vmess-SG
+      - 🇸🇬 [openproxylist.com] vmess-SG 2
+      - 🇰🇷 [openproxylist.com] vmess-KR
+      - 🇺🇸 [openproxylist.com] vmess-US
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 43.207.110.128:5224
       - 193.163.203.76:50580
-      - swed.o4ka-internet.com:443
+      - 91.107.181.212:20620
+      - 31.59.40.53:52729
+      - 🇬🇧 [openproxylist.com] vmess-GB
       - 🇭🇰 [openproxylist.com] vmess-HK
+      - 🇸🇬 [openproxylist.com] vmess-SG
+      - 🇸🇬 [openproxylist.com] vmess-SG 2
+      - 🇰🇷 [openproxylist.com] vmess-KR
+      - 🇺🇸 [openproxylist.com] vmess-US
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 43.207.110.128:5224
       - 193.163.203.76:50580
-      - swed.o4ka-internet.com:443
+      - 91.107.181.212:20620
+      - 31.59.40.53:52729
+      - 🇬🇧 [openproxylist.com] vmess-GB
       - 🇭🇰 [openproxylist.com] vmess-HK
+      - 🇸🇬 [openproxylist.com] vmess-SG
+      - 🇸🇬 [openproxylist.com] vmess-SG 2
+      - 🇰🇷 [openproxylist.com] vmess-KR
+      - 🇺🇸 [openproxylist.com] vmess-US
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -524,30 +544,45 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 43.207.110.128:5224
       - 193.163.203.76:50580
-      - swed.o4ka-internet.com:443
+      - 91.107.181.212:20620
+      - 31.59.40.53:52729
+      - 🇬🇧 [openproxylist.com] vmess-GB
       - 🇭🇰 [openproxylist.com] vmess-HK
+      - 🇸🇬 [openproxylist.com] vmess-SG
+      - 🇸🇬 [openproxylist.com] vmess-SG 2
+      - 🇰🇷 [openproxylist.com] vmess-KR
+      - 🇺🇸 [openproxylist.com] vmess-US
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 43.207.110.128:5224
       - 193.163.203.76:50580
-      - swed.o4ka-internet.com:443
+      - 91.107.181.212:20620
+      - 31.59.40.53:52729
+      - 🇬🇧 [openproxylist.com] vmess-GB
       - 🇭🇰 [openproxylist.com] vmess-HK
+      - 🇸🇬 [openproxylist.com] vmess-SG
+      - 🇸🇬 [openproxylist.com] vmess-SG 2
+      - 🇰🇷 [openproxylist.com] vmess-KR
+      - 🇺🇸 [openproxylist.com] vmess-US
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 43.207.110.128:5224
       - 193.163.203.76:50580
-      - swed.o4ka-internet.com:443
+      - 91.107.181.212:20620
+      - 31.59.40.53:52729
+      - 🇬🇧 [openproxylist.com] vmess-GB
       - 🇭🇰 [openproxylist.com] vmess-HK
+      - 🇸🇬 [openproxylist.com] vmess-SG
+      - 🇸🇬 [openproxylist.com] vmess-SG 2
+      - 🇰🇷 [openproxylist.com] vmess-KR
+      - 🇺🇸 [openproxylist.com] vmess-US
   - name: دانلود منیجر 📥
     type: select
     proxies:

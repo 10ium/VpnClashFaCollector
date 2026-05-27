@@ -5,53 +5,74 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@v2FreeHub 🇷🇺", server: 62.113.36.219, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: zp2mYfQjtBsyUhCeKQwHHg, udp: true, tfo: false}
-  - {name: "@v2FreeHub 🇳🇱`", server: 195.93.253.245, port: 49137, type: ss, cipher: chacha20-ietf-poly1305, password: FDeCHSu4lt8qflCS5zDOy8, udp: true, tfo: false}
+  - {name: "@v2FreeHub 🇩🇪", server: 57.129.121.230, port: 10443, type: ss, cipher: chacha20-ietf-poly1305, password: uROuEqsL8IUMMVb4wDwnGU, udp: true, tfo: false}
+  - {name: "@v2FreeHub 🇸🇪`", server: 78.40.117.161, port: 34633, type: ss, cipher: chacha20-ietf-poly1305, password: CZjvepQLlrEC9sVxkFfnlK, udp: true, tfo: false}
+  - {name: "@v2FreeHub 🇹🇷", server: 62.60.233.226, port: 62763, type: ss, cipher: chacha20-ietf-poly1305, password: ER2xCcJkmR1pftmN300CNJ, udp: true, tfo: false}
+  - {name: "@v2FreeHub 🇺🇸", server: 92.118.112.125, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: YdELsVTdkjabcv7UjvRA8K, udp: true, tfo: false}
+  - {name: "@v2FreeHub 🇸🇮", server: 45.83.130.97, port: 53292, type: ss, cipher: chacha20-ietf-poly1305, password: hfSE3thwAQqvSIac5xLpUD, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@v2FreeHub 🇷🇺"
-      - "@v2FreeHub 🇳🇱`"
+      - "@v2FreeHub 🇩🇪"
+      - "@v2FreeHub 🇸🇪`"
+      - "@v2FreeHub 🇹🇷"
+      - "@v2FreeHub 🇺🇸"
+      - "@v2FreeHub 🇸🇮"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@v2FreeHub 🇷🇺"
-      - "@v2FreeHub 🇳🇱`"
+      - "@v2FreeHub 🇩🇪"
+      - "@v2FreeHub 🇸🇪`"
+      - "@v2FreeHub 🇹🇷"
+      - "@v2FreeHub 🇺🇸"
+      - "@v2FreeHub 🇸🇮"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@v2FreeHub 🇷🇺"
-      - "@v2FreeHub 🇳🇱`"
+      - "@v2FreeHub 🇩🇪"
+      - "@v2FreeHub 🇸🇪`"
+      - "@v2FreeHub 🇹🇷"
+      - "@v2FreeHub 🇺🇸"
+      - "@v2FreeHub 🇸🇮"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@v2FreeHub 🇷🇺"
-      - "@v2FreeHub 🇳🇱`"
+      - "@v2FreeHub 🇩🇪"
+      - "@v2FreeHub 🇸🇪`"
+      - "@v2FreeHub 🇹🇷"
+      - "@v2FreeHub 🇺🇸"
+      - "@v2FreeHub 🇸🇮"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@v2FreeHub 🇷🇺"
-      - "@v2FreeHub 🇳🇱`"
+      - "@v2FreeHub 🇩🇪"
+      - "@v2FreeHub 🇸🇪`"
+      - "@v2FreeHub 🇹🇷"
+      - "@v2FreeHub 🇺🇸"
+      - "@v2FreeHub 🇸🇮"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@v2FreeHub 🇷🇺"
-      - "@v2FreeHub 🇳🇱`"
+      - "@v2FreeHub 🇩🇪"
+      - "@v2FreeHub 🇸🇪`"
+      - "@v2FreeHub 🇹🇷"
+      - "@v2FreeHub 🇺🇸"
+      - "@v2FreeHub 🇸🇮"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -79,8 +100,11 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@v2FreeHub 🇷🇺"
-      - "@v2FreeHub 🇳🇱`"
+      - "@v2FreeHub 🇩🇪"
+      - "@v2FreeHub 🇸🇪`"
+      - "@v2FreeHub 🇹🇷"
+      - "@v2FreeHub 🇺🇸"
+      - "@v2FreeHub 🇸🇮"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

@@ -465,8 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@v2FreeHub 🇷🇺", server: 62.113.36.219, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: zp2mYfQjtBsyUhCeKQwHHg, udp: true, tfo: false}
-  - {name: "@v2FreeHub 🇳🇱`", server: 195.93.253.245, port: 49137, type: ss, cipher: chacha20-ietf-poly1305, password: FDeCHSu4lt8qflCS5zDOy8, udp: true, tfo: false}
+  - {name: "@v2FreeHub 🇩🇪", server: 57.129.121.230, port: 10443, type: ss, cipher: chacha20-ietf-poly1305, password: uROuEqsL8IUMMVb4wDwnGU, udp: true, tfo: false}
+  - {name: "@v2FreeHub 🇸🇪`", server: 78.40.117.161, port: 34633, type: ss, cipher: chacha20-ietf-poly1305, password: CZjvepQLlrEC9sVxkFfnlK, udp: true, tfo: false}
+  - {name: "@v2FreeHub 🇹🇷", server: 62.60.233.226, port: 62763, type: ss, cipher: chacha20-ietf-poly1305, password: ER2xCcJkmR1pftmN300CNJ, udp: true, tfo: false}
+  - {name: "@v2FreeHub 🇺🇸", server: 92.118.112.125, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: YdELsVTdkjabcv7UjvRA8K, udp: true, tfo: false}
+  - {name: "@v2FreeHub 🇸🇮", server: 45.83.130.97, port: 53292, type: ss, cipher: chacha20-ietf-poly1305, password: hfSE3thwAQqvSIac5xLpUD, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +486,33 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@v2FreeHub 🇷🇺"
-      - "@v2FreeHub 🇳🇱`"
+      - "@v2FreeHub 🇩🇪"
+      - "@v2FreeHub 🇸🇪`"
+      - "@v2FreeHub 🇹🇷"
+      - "@v2FreeHub 🇺🇸"
+      - "@v2FreeHub 🇸🇮"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@v2FreeHub 🇷🇺"
-      - "@v2FreeHub 🇳🇱`"
+      - "@v2FreeHub 🇩🇪"
+      - "@v2FreeHub 🇸🇪`"
+      - "@v2FreeHub 🇹🇷"
+      - "@v2FreeHub 🇺🇸"
+      - "@v2FreeHub 🇸🇮"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@v2FreeHub 🇷🇺"
-      - "@v2FreeHub 🇳🇱`"
+      - "@v2FreeHub 🇩🇪"
+      - "@v2FreeHub 🇸🇪`"
+      - "@v2FreeHub 🇹🇷"
+      - "@v2FreeHub 🇺🇸"
+      - "@v2FreeHub 🇸🇮"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +528,33 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2FreeHub 🇷🇺"
-      - "@v2FreeHub 🇳🇱`"
+      - "@v2FreeHub 🇩🇪"
+      - "@v2FreeHub 🇸🇪`"
+      - "@v2FreeHub 🇹🇷"
+      - "@v2FreeHub 🇺🇸"
+      - "@v2FreeHub 🇸🇮"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2FreeHub 🇷🇺"
-      - "@v2FreeHub 🇳🇱`"
+      - "@v2FreeHub 🇩🇪"
+      - "@v2FreeHub 🇸🇪`"
+      - "@v2FreeHub 🇹🇷"
+      - "@v2FreeHub 🇺🇸"
+      - "@v2FreeHub 🇸🇮"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2FreeHub 🇷🇺"
-      - "@v2FreeHub 🇳🇱`"
+      - "@v2FreeHub 🇩🇪"
+      - "@v2FreeHub 🇸🇪`"
+      - "@v2FreeHub 🇹🇷"
+      - "@v2FreeHub 🇺🇸"
+      - "@v2FreeHub 🇸🇮"
   - name: دانلود منیجر 📥
     type: select
     proxies:

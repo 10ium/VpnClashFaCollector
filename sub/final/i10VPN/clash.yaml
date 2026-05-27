@@ -466,13 +466,8 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: "@i10VPN - Psiphon 96", server: 104.16.89.120, port: 2096, type: trojan, password: 8r%3C%5B9%27l6hAO%238ZQi, sni: Koma-YT.PAGeS.Dev, skip-cert-verify: false, network: ws, ws-opts: {path: /tr, headers: {Host: Koma-YT.PAGeS.Dev}}, udp: true, tfo: false}
-  - {name: "@i10VPN - Psiphon 93", server: 185.206.93.154, port: 40443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.indevs.in, network: ws, ws-opts: {path: /, headers: {Host: sni.111000.indevs.in}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@i10VPN - Psiphon 97", server: 185.226.117.245, port: 40443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.indevs.in, network: ws, ws-opts: {path: /, headers: {Host: sni.111000.indevs.in}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@i10VPN - Psiphon 95`", server: 185.226.117.9, port: 40443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.indevs.in, network: ws, ws-opts: {path: /, headers: {Host: sni.111000.indevs.in}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@i10VPN - Psiphon 94", server: 185.226.119.190, port: 40443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.indevs.in, network: ws, ws-opts: {path: /, headers: {Host: sni.111000.indevs.in}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@i10VPN - Psiphon 92", server: 188.121.124.223, port: 40443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.indevs.in, network: ws, ws-opts: {path: /, headers: {Host: sni.111000.indevs.in}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@i10VPN - Psiphon 98`", server: 188.213.196.237, port: 40443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.indevs.in, network: ws, ws-opts: {path: /, headers: {Host: sni.111000.indevs.in}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@i10VPN - Psiphon 91", server: 188.213.197.52, port: 40443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.indevs.in, network: ws, ws-opts: {path: /, headers: {Host: sni.111000.indevs.in}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -490,13 +485,8 @@ proxy-groups:
     type: select
     proxies:
       - "@i10VPN - Psiphon 96"
-      - "@i10VPN - Psiphon 93"
       - "@i10VPN - Psiphon 97"
-      - "@i10VPN - Psiphon 95`"
-      - "@i10VPN - Psiphon 94"
-      - "@i10VPN - Psiphon 92"
       - "@i10VPN - Psiphon 98`"
-      - "@i10VPN - Psiphon 91"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -504,13 +494,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@i10VPN - Psiphon 96"
-      - "@i10VPN - Psiphon 93"
       - "@i10VPN - Psiphon 97"
-      - "@i10VPN - Psiphon 95`"
-      - "@i10VPN - Psiphon 94"
-      - "@i10VPN - Psiphon 92"
       - "@i10VPN - Psiphon 98`"
-      - "@i10VPN - Psiphon 91"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -518,13 +503,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@i10VPN - Psiphon 96"
-      - "@i10VPN - Psiphon 93"
       - "@i10VPN - Psiphon 97"
-      - "@i10VPN - Psiphon 95`"
-      - "@i10VPN - Psiphon 94"
-      - "@i10VPN - Psiphon 92"
       - "@i10VPN - Psiphon 98`"
-      - "@i10VPN - Psiphon 91"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -541,13 +521,8 @@ proxy-groups:
     interval: 600
     proxies:
       - "@i10VPN - Psiphon 96"
-      - "@i10VPN - Psiphon 93"
       - "@i10VPN - Psiphon 97"
-      - "@i10VPN - Psiphon 95`"
-      - "@i10VPN - Psiphon 94"
-      - "@i10VPN - Psiphon 92"
       - "@i10VPN - Psiphon 98`"
-      - "@i10VPN - Psiphon 91"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -555,13 +530,8 @@ proxy-groups:
     interval: 600
     proxies:
       - "@i10VPN - Psiphon 96"
-      - "@i10VPN - Psiphon 93"
       - "@i10VPN - Psiphon 97"
-      - "@i10VPN - Psiphon 95`"
-      - "@i10VPN - Psiphon 94"
-      - "@i10VPN - Psiphon 92"
       - "@i10VPN - Psiphon 98`"
-      - "@i10VPN - Psiphon 91"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -569,13 +539,8 @@ proxy-groups:
     interval: 600
     proxies:
       - "@i10VPN - Psiphon 96"
-      - "@i10VPN - Psiphon 93"
       - "@i10VPN - Psiphon 97"
-      - "@i10VPN - Psiphon 95`"
-      - "@i10VPN - Psiphon 94"
-      - "@i10VPN - Psiphon 92"
       - "@i10VPN - Psiphon 98`"
-      - "@i10VPN - Psiphon 91"
   - name: دانلود منیجر 📥
     type: select
     proxies:

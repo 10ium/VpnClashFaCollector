@@ -5,46 +5,53 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@Kia_Net👈چنل+تلگرام`", server: 5.160.58.129, port: 50019, type: vless, tls: true, packet-encoding: xudp, uuid: d226c04c-8391-00e4-4234-fc46d4416d15, servername: alabama-tigr.info, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /true, headers: {Host: alabama-tigr.info}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "[🇨🇦]kia_net", server: 173.245.59.191, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: aeec50e6-f176-4f87-9f46-0610a0e76435, servername: interim.adaspoloandco.com, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /RoBeRt, headers: {Host: interim.adaspoloandco.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "[🇮🇷]kia_net تانل متصل حجم محدود", server: bmi.ir, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: dfd6799a-6e6b-4f3f-999d-4d34a9e04ef0, servername: seattle3.shahvip.lol, network: ws, ws-opts: {path: /api/update, headers: {Host: seattle3.shahvip.lol}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@Kia_Net👈چنل+تلگرام`"
+      - "[🇨🇦]kia_net"
+      - "[🇮🇷]kia_net تانل متصل حجم محدود"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@Kia_Net👈چنل+تلگرام`"
+      - "[🇨🇦]kia_net"
+      - "[🇮🇷]kia_net تانل متصل حجم محدود"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@Kia_Net👈چنل+تلگرام`"
+      - "[🇨🇦]kia_net"
+      - "[🇮🇷]kia_net تانل متصل حجم محدود"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@Kia_Net👈چنل+تلگرام`"
+      - "[🇨🇦]kia_net"
+      - "[🇮🇷]kia_net تانل متصل حجم محدود"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@Kia_Net👈چنل+تلگرام`"
+      - "[🇨🇦]kia_net"
+      - "[🇮🇷]kia_net تانل متصل حجم محدود"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@Kia_Net👈چنل+تلگرام`"
+      - "[🇨🇦]kia_net"
+      - "[🇮🇷]kia_net تانل متصل حجم محدود"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +79,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@Kia_Net👈چنل+تلگرام`"
+      - "[🇨🇦]kia_net"
+      - "[🇮🇷]kia_net تانل متصل حجم محدود"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
