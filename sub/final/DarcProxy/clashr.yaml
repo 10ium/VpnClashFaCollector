@@ -5,74 +5,60 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@DarcProxy  (نامحدود) اختصاصی", server: 45.38.23.87, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 6af5890f-5267-40ed-bc60-1bd3ee31a88b, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 🇬🇧 @DarcProxy vip 5 GB, server: 185.143.233.122, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: cae97ef0-236b-4ace-ac7a-78ce5a0bd45b, network: ws, ws-opts: {path: /, headers: {Host: penhoon-ref.morvaridvps.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 🇬🇧 @DarcProxy vip 5 GB 2, server: snapp.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: cae97ef0-236b-4ace-ac7a-78ce5a0bd45b, network: ws, ws-opts: {path: /, headers: {Host: penhoon-ref.morvaridvps.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@DarcProxy ⭐️-1GB📊`", server: emergency.wizardxray.shop, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ef2b99b0-8888-4e37-b4d1-c4bfa174e283, servername: api-sub.wizardxray.net, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: api-sub.wizardxray.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@DarcProxy ⭐️-1GB📊…", server: emergency.wizardxray.shop, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ef2b99b0-8888-4e37-b4d1-c4bfa174e283, servername: api-sub.wizardxray.net, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: api-sub.wizardxray.net}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@DarcProxy  (نامحدود) اختصاصی"
       - 🇬🇧 @DarcProxy vip 5 GB
       - 🇬🇧 @DarcProxy vip 5 GB 2
       - "@DarcProxy ⭐️-1GB📊`"
-      - "@DarcProxy ⭐️-1GB📊…"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@DarcProxy  (نامحدود) اختصاصی"
       - 🇬🇧 @DarcProxy vip 5 GB
       - 🇬🇧 @DarcProxy vip 5 GB 2
       - "@DarcProxy ⭐️-1GB📊`"
-      - "@DarcProxy ⭐️-1GB📊…"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@DarcProxy  (نامحدود) اختصاصی"
       - 🇬🇧 @DarcProxy vip 5 GB
       - 🇬🇧 @DarcProxy vip 5 GB 2
       - "@DarcProxy ⭐️-1GB📊`"
-      - "@DarcProxy ⭐️-1GB📊…"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@DarcProxy  (نامحدود) اختصاصی"
       - 🇬🇧 @DarcProxy vip 5 GB
       - 🇬🇧 @DarcProxy vip 5 GB 2
       - "@DarcProxy ⭐️-1GB📊`"
-      - "@DarcProxy ⭐️-1GB📊…"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@DarcProxy  (نامحدود) اختصاصی"
       - 🇬🇧 @DarcProxy vip 5 GB
       - 🇬🇧 @DarcProxy vip 5 GB 2
       - "@DarcProxy ⭐️-1GB📊`"
-      - "@DarcProxy ⭐️-1GB📊…"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@DarcProxy  (نامحدود) اختصاصی"
       - 🇬🇧 @DarcProxy vip 5 GB
       - 🇬🇧 @DarcProxy vip 5 GB 2
       - "@DarcProxy ⭐️-1GB📊`"
-      - "@DarcProxy ⭐️-1GB📊…"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -100,11 +86,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@DarcProxy  (نامحدود) اختصاصی"
       - 🇬🇧 @DarcProxy vip 5 GB
       - 🇬🇧 @DarcProxy vip 5 GB 2
       - "@DarcProxy ⭐️-1GB📊`"
-      - "@DarcProxy ⭐️-1GB📊…"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

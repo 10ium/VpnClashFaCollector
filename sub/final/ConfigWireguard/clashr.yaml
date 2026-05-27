@@ -5,109 +5,60 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 104.16.80.73:443, server: 104.16.80.73, port: 443, type: trojan, password: humanity, sni: www.gossipglove.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.gossipglove.com}}, udp: true, tfo: false}
-  - {name: 104.16.80.73:443 2, server: 104.16.80.73, port: 443, type: trojan, password: humanity, sni: www.gossipglove.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.gossipglove.com}}, udp: true, tfo: false}
-  - {name: APPXA-ALL, server: 104.16.89.120, port: 443, type: trojan, password: humanity, sni: www.multiplydose.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.multiplydose.com}}, udp: true, tfo: false}
-  - {name: 104.16.7.70:8443, server: 104.16.7.70, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.dynv6.net, network: ws, ws-opts: {path: "/?Telegram🇨🇳+@WangCai2", headers: {Host: sni.111000.dynv6.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 104.16.80.73:2096, server: 104.16.80.73, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.jpmj.dev, network: ws, ws-opts: {path: "/?Telegram🇨🇳@WangCai2=", headers: {Host: sni.jpmj.dev}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 104.16.89.120:443, server: 104.16.89.120, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.v6.navy, network: ws, ws-opts: {path: "/?Telegram%F0%9F%87%A8%F0%9F%87%B3+%40WangCai2=", headers: {Host: sni.111000.v6.navy}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 104.16.7.70:2053, server: 104.16.7.70, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: 8c4604ef-749c-4b56-adf1-7da405002a21, servername: qyi.fqjd663.ggff.net, network: ws, ws-opts: {path: /, headers: {Host: qyi.fqjd663.ggff.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 104.16.7.70:2053 2, server: 104.16.7.70, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: 8c4604ef-749c-4b56-adf1-7da405002a21, servername: qyi.fqjd663.ggff.net, network: ws, ws-opts: {path: /, headers: {Host: qyi.fqjd663.ggff.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 104.16.89.120:2053, server: 104.16.89.120, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: 8c4604ef-749c-4b56-adf1-7da405002a21, servername: qyi.fqjd663.ggff.net`, network: ws, ws-opts: {path: /, headers: {Host: qyi.fqjd663.ggff.net`}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 104.16.80.73:2053, server: 104.16.80.73, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: d37a75db-76b6-4db8-b213-0d5b044d138d, servername: hio-awx.pages.dev, network: ws, ws-opts: {path: /fast, headers: {Host: hio-awx.pages.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 93.126.32.96:80, server: 93.126.32.96, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 52e7c530-acf3-479f-bff7-644b91edd341, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@VpnMaan", server: chatgpt.com, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: 6a719f2b-b629-462d-975a-9c0daa3edb75, servername: rAviDdD.paGEs.DEv, network: ws, ws-opts: {path: /, headers: {Host: rAviDdD.paGEs.DEv}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@VpnMaan`", server: chatgpt.com, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: 6a719f2b-b629-462d-975a-9c0daa3edb75, servername: rAviDdD.paGEs.DEv, network: ws, ws-opts: {path: /, headers: {Host: rAviDdD.paGEs.DEv}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 104.16.80.73:443
-      - 104.16.80.73:443 2
-      - APPXA-ALL
-      - 104.16.7.70:8443
-      - 104.16.80.73:2096
-      - 104.16.89.120:443
-      - 104.16.7.70:2053
-      - 104.16.7.70:2053 2
-      - 104.16.89.120:2053
-      - 104.16.80.73:2053
+      - 93.126.32.96:80
+      - "@VpnMaan"
+      - "@VpnMaan`"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 104.16.80.73:443
-      - 104.16.80.73:443 2
-      - APPXA-ALL
-      - 104.16.7.70:8443
-      - 104.16.80.73:2096
-      - 104.16.89.120:443
-      - 104.16.7.70:2053
-      - 104.16.7.70:2053 2
-      - 104.16.89.120:2053
-      - 104.16.80.73:2053
+      - 93.126.32.96:80
+      - "@VpnMaan"
+      - "@VpnMaan`"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 104.16.80.73:443
-      - 104.16.80.73:443 2
-      - APPXA-ALL
-      - 104.16.7.70:8443
-      - 104.16.80.73:2096
-      - 104.16.89.120:443
-      - 104.16.7.70:2053
-      - 104.16.7.70:2053 2
-      - 104.16.89.120:2053
-      - 104.16.80.73:2053
+      - 93.126.32.96:80
+      - "@VpnMaan"
+      - "@VpnMaan`"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 104.16.80.73:443
-      - 104.16.80.73:443 2
-      - APPXA-ALL
-      - 104.16.7.70:8443
-      - 104.16.80.73:2096
-      - 104.16.89.120:443
-      - 104.16.7.70:2053
-      - 104.16.7.70:2053 2
-      - 104.16.89.120:2053
-      - 104.16.80.73:2053
+      - 93.126.32.96:80
+      - "@VpnMaan"
+      - "@VpnMaan`"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 104.16.80.73:443
-      - 104.16.80.73:443 2
-      - APPXA-ALL
-      - 104.16.7.70:8443
-      - 104.16.80.73:2096
-      - 104.16.89.120:443
-      - 104.16.7.70:2053
-      - 104.16.7.70:2053 2
-      - 104.16.89.120:2053
-      - 104.16.80.73:2053
+      - 93.126.32.96:80
+      - "@VpnMaan"
+      - "@VpnMaan`"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 104.16.80.73:443
-      - 104.16.80.73:443 2
-      - APPXA-ALL
-      - 104.16.7.70:8443
-      - 104.16.80.73:2096
-      - 104.16.89.120:443
-      - 104.16.7.70:2053
-      - 104.16.7.70:2053 2
-      - 104.16.89.120:2053
-      - 104.16.80.73:2053
+      - 93.126.32.96:80
+      - "@VpnMaan"
+      - "@VpnMaan`"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -135,16 +86,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 104.16.80.73:443
-      - 104.16.80.73:443 2
-      - APPXA-ALL
-      - 104.16.7.70:8443
-      - 104.16.80.73:2096
-      - 104.16.89.120:443
-      - 104.16.7.70:2053
-      - 104.16.7.70:2053 2
-      - 104.16.89.120:2053
-      - 104.16.80.73:2053
+      - 93.126.32.96:80
+      - "@VpnMaan"
+      - "@VpnMaan`"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

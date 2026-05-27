@@ -465,13 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: hamedp71::🇲🇩, server: 45.154.204.7, port: 990, type: ss, cipher: chacha20-ietf-poly1305, password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=, udp: true, tfo: false}
-  - {name: hamedp71-32-🇫🇲, server: 109.201.152.181, port: 443, type: ss, cipher: aes-128-cfb, password: shadowsocks, udp: true, tfo: false}
-  - {name: tr, server: 188.114.97.25, port: 443, type: trojan, password: NISHIKUITAN222, skip-cert-verify: false, udp: true, tfo: false}
   - {name: hamedvpns, server: 104.16.7.70, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true, tfo: false}
   - {name: "28 - VLESS - Clean IP : 8443", server: 104.18.32.47, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 40b66927-2f62-4a7b-8b75-1be2b45bd9ad, servername: mInA2-1Hf.PaGeS.dev, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: "/UI7fh2CARuUJjLEj?ed=2560", headers: {Host: mInA2-1Hf.PaGeS.dev}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: hamedvpns 2, server: 104.16.89.120, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 48d1cb9d-bbd4-4444-b833-6720619a117e, servername: nl8.bioritalin.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: nl8.bioritalin.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: hamedvpns😉, server: botdyqs.samanidempire.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 685a45bb-1d14-4ae8-8d39-007f707b79d9, alpn: [http%2F1.1], network: ws, ws-opts: {path: /14dcc7e1, headers: {Host: botdyqs.samanidempire.org}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -488,39 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - hamedp71::🇲🇩
-      - hamedp71-32-🇫🇲
-      - tr
       - hamedvpns
       - "28 - VLESS - Clean IP : 8443"
-      - hamedvpns 2
-      - hamedvpns😉
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - hamedp71::🇲🇩
-      - hamedp71-32-🇫🇲
-      - tr
       - hamedvpns
       - "28 - VLESS - Clean IP : 8443"
-      - hamedvpns 2
-      - hamedvpns😉
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - hamedp71::🇲🇩
-      - hamedp71-32-🇫🇲
-      - tr
       - hamedvpns
       - "28 - VLESS - Clean IP : 8443"
-      - hamedvpns 2
-      - hamedvpns😉
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -536,39 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - hamedp71::🇲🇩
-      - hamedp71-32-🇫🇲
-      - tr
       - hamedvpns
       - "28 - VLESS - Clean IP : 8443"
-      - hamedvpns 2
-      - hamedvpns😉
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - hamedp71::🇲🇩
-      - hamedp71-32-🇫🇲
-      - tr
       - hamedvpns
       - "28 - VLESS - Clean IP : 8443"
-      - hamedvpns 2
-      - hamedvpns😉
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - hamedp71::🇲🇩
-      - hamedp71-32-🇫🇲
-      - tr
       - hamedvpns
       - "28 - VLESS - Clean IP : 8443"
-      - hamedvpns 2
-      - hamedvpns😉
   - name: دانلود منیجر 📥
     type: select
     proxies:

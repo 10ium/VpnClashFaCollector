@@ -467,6 +467,10 @@ rule-providers:
 proxies:
   - {name: "[🇨🇦]kia_net", server: 173.245.59.191, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: aeec50e6-f176-4f87-9f46-0610a0e76435, servername: interim.adaspoloandco.com, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /RoBeRt, headers: {Host: interim.adaspoloandco.com}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "[🇮🇷]kia_net تانل متصل حجم محدود", server: bmi.ir, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: dfd6799a-6e6b-4f3f-999d-4d34a9e04ef0, servername: seattle3.shahvip.lol, network: ws, ws-opts: {path: /api/update, headers: {Host: seattle3.shahvip.lol}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇮🇹 Italy | Basic, server: 45.92.70.236, port: 22324, type: vmess, uuid: 04621bae-ab36-11ec-b909-0242ac120002, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇬🇧 UK | Basic, server: 66.163.117.58, port: 22324, type: vmess, uuid: 04621bae-ab36-11ec-b909-0242ac120002, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇺🇸 USA | Basic, server: 38.91.107.49, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇺🇸 USA | Basic 2, server: 38.114.123.42, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,6 +489,10 @@ proxy-groups:
     proxies:
       - "[🇨🇦]kia_net"
       - "[🇮🇷]kia_net تانل متصل حجم محدود"
+      - 🇮🇹 Italy | Basic
+      - 🇬🇧 UK | Basic
+      - 🇺🇸 USA | Basic
+      - 🇺🇸 USA | Basic 2
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -493,6 +501,10 @@ proxy-groups:
     proxies:
       - "[🇨🇦]kia_net"
       - "[🇮🇷]kia_net تانل متصل حجم محدود"
+      - 🇮🇹 Italy | Basic
+      - 🇬🇧 UK | Basic
+      - 🇺🇸 USA | Basic
+      - 🇺🇸 USA | Basic 2
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -501,6 +513,10 @@ proxy-groups:
     proxies:
       - "[🇨🇦]kia_net"
       - "[🇮🇷]kia_net تانل متصل حجم محدود"
+      - 🇮🇹 Italy | Basic
+      - 🇬🇧 UK | Basic
+      - 🇺🇸 USA | Basic
+      - 🇺🇸 USA | Basic 2
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -518,6 +534,10 @@ proxy-groups:
     proxies:
       - "[🇨🇦]kia_net"
       - "[🇮🇷]kia_net تانل متصل حجم محدود"
+      - 🇮🇹 Italy | Basic
+      - 🇬🇧 UK | Basic
+      - 🇺🇸 USA | Basic
+      - 🇺🇸 USA | Basic 2
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -526,6 +546,10 @@ proxy-groups:
     proxies:
       - "[🇨🇦]kia_net"
       - "[🇮🇷]kia_net تانل متصل حجم محدود"
+      - 🇮🇹 Italy | Basic
+      - 🇬🇧 UK | Basic
+      - 🇺🇸 USA | Basic
+      - 🇺🇸 USA | Basic 2
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -534,6 +558,10 @@ proxy-groups:
     proxies:
       - "[🇨🇦]kia_net"
       - "[🇮🇷]kia_net تانل متصل حجم محدود"
+      - 🇮🇹 Italy | Basic
+      - 🇬🇧 UK | Basic
+      - 🇺🇸 USA | Basic
+      - 🇺🇸 USA | Basic 2
   - name: دانلود منیجر 📥
     type: select
     proxies:

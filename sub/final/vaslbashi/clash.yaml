@@ -467,8 +467,6 @@ rule-providers:
 proxies:
   - {name: Vaslbashi, server: 66.81.247.63, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: "%40Vaslbashi", network: ws, ws-opts: {path: /, headers: {Host: enquiries-commands-div-medal.trycloudflare.com}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: Vaslbashi2, server: 66.81.247.63, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: "%40Vaslbashi", network: ws, ws-opts: {path: /, headers: {Host: gave-background-neighbor-giving.trycloudflare.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Vaslbashi 2, server: pipi.runawaygablo.site, port: 46104, type: vless, tls: true, packet-encoding: xudp, uuid: "%40Vaslbashi", network: ws, ws-opts: {path: /, headers: {Host: pipi.runawaygablo.site}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Salamaleykom|Mokhaberat, server: 194.53.53.174, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c168fde7-9306-4c71-b1c7-a31b255df61e, network: ws, ws-opts: {path: /bslife, headers: {Host: employer-procurement-professional-tips.trycloudflare.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,8 +485,6 @@ proxy-groups:
     proxies:
       - Vaslbashi
       - Vaslbashi2
-      - Vaslbashi 2
-      - Salamaleykom|Mokhaberat
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -497,8 +493,6 @@ proxy-groups:
     proxies:
       - Vaslbashi
       - Vaslbashi2
-      - Vaslbashi 2
-      - Salamaleykom|Mokhaberat
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -507,8 +501,6 @@ proxy-groups:
     proxies:
       - Vaslbashi
       - Vaslbashi2
-      - Vaslbashi 2
-      - Salamaleykom|Mokhaberat
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -526,8 +518,6 @@ proxy-groups:
     proxies:
       - Vaslbashi
       - Vaslbashi2
-      - Vaslbashi 2
-      - Salamaleykom|Mokhaberat
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -536,8 +526,6 @@ proxy-groups:
     proxies:
       - Vaslbashi
       - Vaslbashi2
-      - Vaslbashi 2
-      - Salamaleykom|Mokhaberat
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -546,8 +534,6 @@ proxy-groups:
     proxies:
       - Vaslbashi
       - Vaslbashi2
-      - Vaslbashi 2
-      - Salamaleykom|Mokhaberat
   - name: دانلود منیجر 📥
     type: select
     proxies:

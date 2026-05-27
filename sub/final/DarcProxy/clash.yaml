@@ -465,11 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@DarcProxy  (نامحدود) اختصاصی", server: 45.38.23.87, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 6af5890f-5267-40ed-bc60-1bd3ee31a88b, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 🇬🇧 @DarcProxy vip 5 GB, server: 185.143.233.122, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: cae97ef0-236b-4ace-ac7a-78ce5a0bd45b, network: ws, ws-opts: {path: /, headers: {Host: penhoon-ref.morvaridvps.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 🇬🇧 @DarcProxy vip 5 GB 2, server: snapp.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: cae97ef0-236b-4ace-ac7a-78ce5a0bd45b, network: ws, ws-opts: {path: /, headers: {Host: penhoon-ref.morvaridvps.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@DarcProxy ⭐️-1GB📊`", server: emergency.wizardxray.shop, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ef2b99b0-8888-4e37-b4d1-c4bfa174e283, servername: api-sub.wizardxray.net, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: api-sub.wizardxray.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@DarcProxy ⭐️-1GB📊…", server: emergency.wizardxray.shop, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ef2b99b0-8888-4e37-b4d1-c4bfa174e283, servername: api-sub.wizardxray.net, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: api-sub.wizardxray.net}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,33 +484,27 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@DarcProxy  (نامحدود) اختصاصی"
       - 🇬🇧 @DarcProxy vip 5 GB
       - 🇬🇧 @DarcProxy vip 5 GB 2
       - "@DarcProxy ⭐️-1GB📊`"
-      - "@DarcProxy ⭐️-1GB📊…"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@DarcProxy  (نامحدود) اختصاصی"
       - 🇬🇧 @DarcProxy vip 5 GB
       - 🇬🇧 @DarcProxy vip 5 GB 2
       - "@DarcProxy ⭐️-1GB📊`"
-      - "@DarcProxy ⭐️-1GB📊…"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@DarcProxy  (نامحدود) اختصاصی"
       - 🇬🇧 @DarcProxy vip 5 GB
       - 🇬🇧 @DarcProxy vip 5 GB 2
       - "@DarcProxy ⭐️-1GB📊`"
-      - "@DarcProxy ⭐️-1GB📊…"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -528,33 +520,27 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@DarcProxy  (نامحدود) اختصاصی"
       - 🇬🇧 @DarcProxy vip 5 GB
       - 🇬🇧 @DarcProxy vip 5 GB 2
       - "@DarcProxy ⭐️-1GB📊`"
-      - "@DarcProxy ⭐️-1GB📊…"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@DarcProxy  (نامحدود) اختصاصی"
       - 🇬🇧 @DarcProxy vip 5 GB
       - 🇬🇧 @DarcProxy vip 5 GB 2
       - "@DarcProxy ⭐️-1GB📊`"
-      - "@DarcProxy ⭐️-1GB📊…"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@DarcProxy  (نامحدود) اختصاصی"
       - 🇬🇧 @DarcProxy vip 5 GB
       - 🇬🇧 @DarcProxy vip 5 GB 2
       - "@DarcProxy ⭐️-1GB📊`"
-      - "@DarcProxy ⭐️-1GB📊…"
   - name: دانلود منیجر 📥
     type: select
     proxies:
