@@ -465,12 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@v2FreeHub 🇳🇱", server: 195.93.253.240, port: 14130, type: ss, cipher: chacha20-ietf-poly1305, password: zfRwdreLaBOGwUzCaWmvIN, udp: true, tfo: false}
-  - {name: "@v2FreeHub 🇲🇩`", server: 185.235.243.140, port: 5061, type: ss, cipher: chacha20-ietf-poly1305, password: N5ytsBQlKlkvdD7YQq1CQS, udp: true, tfo: false}
-  - {name: "@v2FreeHub 🇳🇱 2", server: 5.253.59.156, port: 32140, type: ss, cipher: chacha20-ietf-poly1305, password: RNYRfU1LsnP2TV4q0bT4KJ, udp: true, tfo: false}
-  - {name: "@v2FreeHub 🇺🇸", server: 71.19.148.74, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: gqkUCvmeOTghYJXF1YIuk5, udp: true, tfo: false}
-  - {name: "@v2FreeHub 🇳🇱 3", server: 195.93.253.245, port: 49137, type: ss, cipher: chacha20-ietf-poly1305, password: oTi4WDiXKVyQeOGmnXSMgh, udp: true, tfo: false}
-  - {name: "@v2FreeHub 🇫🇮", server: 195.133.2.2, port: 34898, type: ss, cipher: chacha20-ietf-poly1305, password: sbJZP5jEcWVgNfVG6sH76z, udp: true, tfo: false}
+  - {name: "@v2FreeHub 🇩🇪", server: 5.230.184.16, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 453u6Gcei04NyXbrWLKa0M, udp: true, tfo: false}
+  - {name: "@v2FreeHub 🇷🇺", server: 45.93.201.73, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: --U6itO-CXQ6wjd8JMQfog, udp: true, tfo: false}
+  - {name: "@v2FreeHub 🇺🇸", server: 149.104.109.74, port: 21273, type: ss, cipher: chacha20-ietf-poly1305, password: Ll6cYfXM5DzQbdtMMb72A_jqVnNljU3yqe, udp: true, tfo: false}
+  - {name: "@v2FreeHub 🇹🇷", server: 62.133.63.167, port: 61377, type: ss, cipher: chacha20-ietf-poly1305, password: mdwpIC3T8Em2guwnUYbUK8, udp: true, tfo: false}
+  - {name: "@v2FreeHub 🇳🇱`", server: 5.253.59.156, port: 32140, type: ss, cipher: chacha20-ietf-poly1305, password: nKsu0GHsQTpehBu2kkFzvz, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,36 +486,33 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@v2FreeHub 🇳🇱"
-      - "@v2FreeHub 🇲🇩`"
-      - "@v2FreeHub 🇳🇱 2"
+      - "@v2FreeHub 🇩🇪"
+      - "@v2FreeHub 🇷🇺"
       - "@v2FreeHub 🇺🇸"
-      - "@v2FreeHub 🇳🇱 3"
-      - "@v2FreeHub 🇫🇮"
+      - "@v2FreeHub 🇹🇷"
+      - "@v2FreeHub 🇳🇱`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@v2FreeHub 🇳🇱"
-      - "@v2FreeHub 🇲🇩`"
-      - "@v2FreeHub 🇳🇱 2"
+      - "@v2FreeHub 🇩🇪"
+      - "@v2FreeHub 🇷🇺"
       - "@v2FreeHub 🇺🇸"
-      - "@v2FreeHub 🇳🇱 3"
-      - "@v2FreeHub 🇫🇮"
+      - "@v2FreeHub 🇹🇷"
+      - "@v2FreeHub 🇳🇱`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@v2FreeHub 🇳🇱"
-      - "@v2FreeHub 🇲🇩`"
-      - "@v2FreeHub 🇳🇱 2"
+      - "@v2FreeHub 🇩🇪"
+      - "@v2FreeHub 🇷🇺"
       - "@v2FreeHub 🇺🇸"
-      - "@v2FreeHub 🇳🇱 3"
-      - "@v2FreeHub 🇫🇮"
+      - "@v2FreeHub 🇹🇷"
+      - "@v2FreeHub 🇳🇱`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -532,36 +528,33 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2FreeHub 🇳🇱"
-      - "@v2FreeHub 🇲🇩`"
-      - "@v2FreeHub 🇳🇱 2"
+      - "@v2FreeHub 🇩🇪"
+      - "@v2FreeHub 🇷🇺"
       - "@v2FreeHub 🇺🇸"
-      - "@v2FreeHub 🇳🇱 3"
-      - "@v2FreeHub 🇫🇮"
+      - "@v2FreeHub 🇹🇷"
+      - "@v2FreeHub 🇳🇱`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2FreeHub 🇳🇱"
-      - "@v2FreeHub 🇲🇩`"
-      - "@v2FreeHub 🇳🇱 2"
+      - "@v2FreeHub 🇩🇪"
+      - "@v2FreeHub 🇷🇺"
       - "@v2FreeHub 🇺🇸"
-      - "@v2FreeHub 🇳🇱 3"
-      - "@v2FreeHub 🇫🇮"
+      - "@v2FreeHub 🇹🇷"
+      - "@v2FreeHub 🇳🇱`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2FreeHub 🇳🇱"
-      - "@v2FreeHub 🇲🇩`"
-      - "@v2FreeHub 🇳🇱 2"
+      - "@v2FreeHub 🇩🇪"
+      - "@v2FreeHub 🇷🇺"
       - "@v2FreeHub 🇺🇸"
-      - "@v2FreeHub 🇳🇱 3"
-      - "@v2FreeHub 🇫🇮"
+      - "@v2FreeHub 🇹🇷"
+      - "@v2FreeHub 🇳🇱`"
   - name: دانلود منیجر 📥
     type: select
     proxies:

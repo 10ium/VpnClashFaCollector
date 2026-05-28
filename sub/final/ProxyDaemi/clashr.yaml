@@ -5,13 +5,15 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: PMTV NEWS 🦁☀️, server: 45.76.83.35, port: 54985, type: vless, tls: true, packet-encoding: xudp, uuid: 76bc8e3d-0e6b-4a35-b1a7-7f5158042666, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: PMTV NEWS🦁☀️, server: 162.159.36.5, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 478cc26d-16b3-4fdd-be64-60d5a58c1622, network: ws, ws-opts: {path: /, headers: {Host: tt.andishehparenting.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: PMTV NEWS 🦁☀️, server: 50.62.198.124, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e258977b-e413-4718-a3af-02d75492c349, servername: jp.aniua.qzz.io, network: ws, ws-opts: {path: /, headers: {Host: jp.aniua.qzz.io}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - PMTV NEWS🦁☀️
       - PMTV NEWS 🦁☀️
   - name: ♻️ 自动选择
     type: url-test
@@ -19,6 +21,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - PMTV NEWS🦁☀️
       - PMTV NEWS 🦁☀️
   - name: 🌍 国外媒体
     type: select
@@ -26,24 +29,28 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - PMTV NEWS🦁☀️
       - PMTV NEWS 🦁☀️
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - PMTV NEWS🦁☀️
       - PMTV NEWS 🦁☀️
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - PMTV NEWS🦁☀️
       - PMTV NEWS 🦁☀️
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - PMTV NEWS🦁☀️
       - PMTV NEWS 🦁☀️
   - name: 🎯 全球直连
     type: select
@@ -72,6 +79,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - PMTV NEWS🦁☀️
       - PMTV NEWS 🦁☀️
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
