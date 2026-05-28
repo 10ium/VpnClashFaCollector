@@ -466,7 +466,6 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: 172.64.152.23:443, server: 172.64.152.23, port: 443, type: trojan, password: 2238e2f3-1a01-485e-8c22-24b65764c68b, sni: gzjx.dpdns.org, skip-cert-verify: false, network: ws, ws-opts: {path: /51.91.253.83, headers: {Host: gzjx.dpdns.org}}, udp: true, tfo: false}
-  - {name: Masyakata, server: 147.45.145.127, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 534cbbe2-cc36-4f2d-8fb0-90410e7148c9, servername: yahoo.com, host: yahoo.com, path: /, reality-opts: {public-key: tWRR3W8jBAQKBUujLzL7Xri3WXy3F08OxHYrkSOnlAc, short-id: 52a6}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: haj rezam, server: 185.226.95.155, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: a4b4dbc4-c9c5-4360-9e9c-d6019118e318, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -485,7 +484,6 @@ proxy-groups:
     type: select
     proxies:
       - 172.64.152.23:443
-      - Masyakata
       - haj rezam
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -494,7 +492,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 172.64.152.23:443
-      - Masyakata
       - haj rezam
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -503,7 +500,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 172.64.152.23:443
-      - Masyakata
       - haj rezam
   - name: اتصال پایدار 🔗
     type: url-test
@@ -521,7 +517,6 @@ proxy-groups:
     interval: 600
     proxies:
       - 172.64.152.23:443
-      - Masyakata
       - haj rezam
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -530,7 +525,6 @@ proxy-groups:
     interval: 600
     proxies:
       - 172.64.152.23:443
-      - Masyakata
       - haj rezam
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -539,7 +533,6 @@ proxy-groups:
     interval: 600
     proxies:
       - 172.64.152.23:443
-      - Masyakata
       - haj rezam
   - name: دانلود منیجر 📥
     type: select

@@ -6,7 +6,6 @@ log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
   - {name: 172.64.152.23:443, server: 172.64.152.23, port: 443, type: trojan, password: 2238e2f3-1a01-485e-8c22-24b65764c68b, sni: gzjx.dpdns.org, skip-cert-verify: false, network: ws, ws-opts: {path: /51.91.253.83, headers: {Host: gzjx.dpdns.org}}, udp: true, tfo: false}
-  - {name: Masyakata, server: 147.45.145.127, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 534cbbe2-cc36-4f2d-8fb0-90410e7148c9, servername: yahoo.com, host: yahoo.com, path: /, reality-opts: {public-key: tWRR3W8jBAQKBUujLzL7Xri3WXy3F08OxHYrkSOnlAc, short-id: 52a6}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: haj rezam, server: 185.226.95.155, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: a4b4dbc4-c9c5-4360-9e9c-d6019118e318, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
@@ -15,7 +14,6 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - 172.64.152.23:443
-      - Masyakata
       - haj rezam
   - name: ♻️ 自动选择
     type: url-test
@@ -24,7 +22,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 172.64.152.23:443
-      - Masyakata
       - haj rezam
   - name: 🌍 国外媒体
     type: select
@@ -33,7 +30,6 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - 172.64.152.23:443
-      - Masyakata
       - haj rezam
   - name: 📲 电报信息
     type: select
@@ -41,7 +37,6 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - 172.64.152.23:443
-      - Masyakata
       - haj rezam
   - name: Ⓜ️ 微软服务
     type: select
@@ -49,7 +44,6 @@ proxy-groups:
       - 🎯 全球直连
       - 🚀 节点选择
       - 172.64.152.23:443
-      - Masyakata
       - haj rezam
   - name: 🍎 苹果服务
     type: select
@@ -57,7 +51,6 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - 172.64.152.23:443
-      - Masyakata
       - haj rezam
   - name: 🎯 全球直连
     type: select
@@ -87,7 +80,6 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - 172.64.152.23:443
-      - Masyakata
       - haj rezam
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连

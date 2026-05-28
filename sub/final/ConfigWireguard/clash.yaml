@@ -468,6 +468,8 @@ proxies:
   - {name: 93.126.32.96:80, server: 93.126.32.96, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 52e7c530-acf3-479f-bff7-644b91edd341, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@VpnMaan", server: chatgpt.com, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: 6a719f2b-b629-462d-975a-9c0daa3edb75, servername: rAviDdD.paGEs.DEv, network: ws, ws-opts: {path: /, headers: {Host: rAviDdD.paGEs.DEv}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@VpnMaan`", server: chatgpt.com, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: 6a719f2b-b629-462d-975a-9c0daa3edb75, servername: rAviDdD.paGEs.DEv, network: ws, ws-opts: {path: /, headers: {Host: rAviDdD.paGEs.DEv}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ws-cl-alhuaqy2, server: 104.17.121.71, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: arshiacomplus, servername: nm.acp.us.ci, alpn: [http%2F1.1], network: ws, ws-opts: {path: /DarlisCore, headers: {Host: nm.acp.us.ci}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 185.143.233.122:8080, server: 185.143.233.122, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: e7798dd4-cadc-43e2-933c-7a3ee236c164, network: ws, ws-opts: {path: /, headers: {Host: penhoon-ref.morvaridvps.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,6 +489,8 @@ proxy-groups:
       - 93.126.32.96:80
       - "@VpnMaan"
       - "@VpnMaan`"
+      - ws-cl-alhuaqy2
+      - 185.143.233.122:8080
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -496,6 +500,8 @@ proxy-groups:
       - 93.126.32.96:80
       - "@VpnMaan"
       - "@VpnMaan`"
+      - ws-cl-alhuaqy2
+      - 185.143.233.122:8080
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -505,6 +511,8 @@ proxy-groups:
       - 93.126.32.96:80
       - "@VpnMaan"
       - "@VpnMaan`"
+      - ws-cl-alhuaqy2
+      - 185.143.233.122:8080
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -523,6 +531,8 @@ proxy-groups:
       - 93.126.32.96:80
       - "@VpnMaan"
       - "@VpnMaan`"
+      - ws-cl-alhuaqy2
+      - 185.143.233.122:8080
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -532,6 +542,8 @@ proxy-groups:
       - 93.126.32.96:80
       - "@VpnMaan"
       - "@VpnMaan`"
+      - ws-cl-alhuaqy2
+      - 185.143.233.122:8080
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -541,6 +553,8 @@ proxy-groups:
       - 93.126.32.96:80
       - "@VpnMaan"
       - "@VpnMaan`"
+      - ws-cl-alhuaqy2
+      - 185.143.233.122:8080
   - name: دانلود منیجر 📥
     type: select
     proxies:
