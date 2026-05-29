@@ -465,10 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: MerlinVpn, server: 152.233.28.196, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 394f6981-a782-4779-9a85-e6cf22935d93, servername: uk1.fromblancwithlove.com, host: uk1.fromblancwithlove.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@`", server: 152.233.28.198, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 394f6981-a782-4779-9a85-e6cf22935d93, servername: uk1.fromblancwithlove.com, alpn: [h2], host: uk1.fromblancwithlove.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@MerlinVpn", server: uk1.fromblancwithlove.com, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 394f6981-a782-4779-9a85-e6cf22935d93, host: uk1.fromblancwithlove.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@MerlinVpn🍓", server: 83.228.249.188, port: 16603, type: vless, tls: true, packet-encoding: xudp, uuid: 72aead3f-8d51-49d0-90e8-310d6fd57aca, host: Nobitex.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇺🇸 @MerlinVpn | US | TROJAN`, server: 199.195.2.254.136, port: 27427, type: trojan, password: f7J0Sli5s1m25DJbfulPtXAu, skip-cert-verify: false, network: ws, ws-opts: {path: /ws}, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,30 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - MerlinVpn
-      - "@`"
-      - "@MerlinVpn"
-      - "@MerlinVpn🍓"
+      - 🇺🇸 @MerlinVpn | US | TROJAN`
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - MerlinVpn
-      - "@`"
-      - "@MerlinVpn"
-      - "@MerlinVpn🍓"
+      - 🇺🇸 @MerlinVpn | US | TROJAN`
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - MerlinVpn
-      - "@`"
-      - "@MerlinVpn"
-      - "@MerlinVpn🍓"
+      - 🇺🇸 @MerlinVpn | US | TROJAN`
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -524,30 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - MerlinVpn
-      - "@`"
-      - "@MerlinVpn"
-      - "@MerlinVpn🍓"
+      - 🇺🇸 @MerlinVpn | US | TROJAN`
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - MerlinVpn
-      - "@`"
-      - "@MerlinVpn"
-      - "@MerlinVpn🍓"
+      - 🇺🇸 @MerlinVpn | US | TROJAN`
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - MerlinVpn
-      - "@`"
-      - "@MerlinVpn"
-      - "@MerlinVpn🍓"
+      - 🇺🇸 @MerlinVpn | US | TROJAN`
   - name: دانلود منیجر 📥
     type: select
     proxies:
