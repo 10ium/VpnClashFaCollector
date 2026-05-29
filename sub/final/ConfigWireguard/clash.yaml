@@ -465,8 +465,15 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: xhttp -cf-z3whq4gu, server: 104.17.121.71, port: 2083, type: trojan, password: arshiacomplus, sni: oof.acp.us.ci, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 51.75.168.50:26179, server: 51.75.168.50, port: 26179, type: ss, cipher: chacha20-ietf-poly1305, password: 78b6e93e54225803, udp: true, tfo: false}
+  - {name: 216.24.57.6:443, server: 216.24.57.6, port: 443, type: trojan, password: Mitivpn, sni: dash.hitgram.ir, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: dash.hitgram.ir}}, udp: true, tfo: false}
+  - {name: "@v2reya88`", server: 152.233.28.198, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 394f6981-a782-4779-9a85-e6cf22935d93, servername: uk1.fromblancwithlove.com, alpn: [h2], host: uk1.fromblancwithlove.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: panel.panel.pythash.tr:443, server: panel.panel.pythash.tr, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 68f91cc2-4ef2-46fd-932a-2d0350f682c8, servername: www.yahoo.com, host: www.yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: MbVEbNu2iMIDhD5ziJFLKVfV0lBY7tGGpklBrwqVCyg, short-id: 61ad}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: Германия gRPC  ✅ Active, server: de1.hopen.online, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: 8a68d5a2-63b7-4170-9928-1f9d17cfdfb8, servername: apple.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: grpcservice}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Configwireguard, server: spb.connectv.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a3798125-5413-0002-a8eb-267708c85be8, servername: spb.connectv.net, host: spb.connectv.net, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Configwireguard 2, server: ee.connectv.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a3798125-5413-4768-a8eb-267708c85be8, servername: ee.connectv.net, host: ee.connectv.net, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 50G, server: cloudfip.kafshinoshop.shop, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: b7f8c7a6-0947-4d80-960b-c7169df47125, servername: panelyou.kafshinoshop.shop, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: panelyou.kafshinoshop.shop}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: متصل شو, server: 179.237.72.235, port: 56391, type: vless, tls: true, packet-encoding: xudp, uuid: b94194df-c343-4d77-96be-ab530f1b06ec, host: my.mci.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +490,45 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - xhttp -cf-z3whq4gu
+      - 51.75.168.50:26179
+      - 216.24.57.6:443
+      - "@v2reya88`"
+      - panel.panel.pythash.tr:443
       - Германия gRPC  ✅ Active
+      - Configwireguard
+      - Configwireguard 2
+      - 50G
+      - متصل شو
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - xhttp -cf-z3whq4gu
+      - 51.75.168.50:26179
+      - 216.24.57.6:443
+      - "@v2reya88`"
+      - panel.panel.pythash.tr:443
       - Германия gRPC  ✅ Active
+      - Configwireguard
+      - Configwireguard 2
+      - 50G
+      - متصل شو
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - xhttp -cf-z3whq4gu
+      - 51.75.168.50:26179
+      - 216.24.57.6:443
+      - "@v2reya88`"
+      - panel.panel.pythash.tr:443
       - Германия gRPC  ✅ Active
+      - Configwireguard
+      - Configwireguard 2
+      - 50G
+      - متصل شو
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +544,45 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - xhttp -cf-z3whq4gu
+      - 51.75.168.50:26179
+      - 216.24.57.6:443
+      - "@v2reya88`"
+      - panel.panel.pythash.tr:443
       - Германия gRPC  ✅ Active
+      - Configwireguard
+      - Configwireguard 2
+      - 50G
+      - متصل شو
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - xhttp -cf-z3whq4gu
+      - 51.75.168.50:26179
+      - 216.24.57.6:443
+      - "@v2reya88`"
+      - panel.panel.pythash.tr:443
       - Германия gRPC  ✅ Active
+      - Configwireguard
+      - Configwireguard 2
+      - 50G
+      - متصل شو
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - xhttp -cf-z3whq4gu
+      - 51.75.168.50:26179
+      - 216.24.57.6:443
+      - "@v2reya88`"
+      - panel.panel.pythash.tr:443
       - Германия gRPC  ✅ Active
+      - Configwireguard
+      - Configwireguard 2
+      - 50G
+      - متصل شو
   - name: دانلود منیجر 📥
     type: select
     proxies:

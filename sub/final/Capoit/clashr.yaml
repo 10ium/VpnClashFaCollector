@@ -5,7 +5,11 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@Capoit`", server: 104.16.7.70, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 71962e3f-4c2c-49c6-889d-2a6eb3d5ddfa, servername: TRM.xuiprospeed.ir, network: grpc, grpc-opts: {grpc-mode: multi, grpc-service-name: vless}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit`", server: 172.64.147.255, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 478cc26d-16b3-4fdd-be64-60d5a58c1622, network: ws, ws-opts: {path: /, headers: {Host: tt.andishehparenting.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 2", server: 108.61.190.45, port: 10896, type: vless, tls: true, packet-encoding: xudp, uuid: a2da0ad8-449b-4924-af4d-8fba19dca975, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 3", server: 31.43.179.111, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: de8b874f-0b15-440c-b257-ce68852ffad0, servername: eb4e5e9e1e70a46c.hozheen.ir, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: eb4e5e9e1e70a46c.hozheen.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit", server: 45.81.58.159, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: de8b874f-0b15-440c-b257-ce68852ffad0, servername: 8ddb416cd7e662d1.hozheen.ir, network: ws, ws-opts: {path: "/ws?ed=2560", headers: {Host: 8ddb416cd7e662d1.hozheen.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit 2", server: forssa.libenet.ir, port: 2003, type: vless, tls: true, packet-encoding: xudp, uuid: de8b874f-0b15-440c-b257-ce68852ffad0, servername: play.google.com, host: play.google.com, path: /, reality-opts: {public-key: 0nGh9GsPqY366E57yOAAfkD1F-YfxAtuLV6VHU9BA1s, short-id: 2418ed47b875e923}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -13,6 +17,10 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - "@Capoit`"
+      - "@Capoit` 2"
+      - "@Capoit` 3"
+      - "@Capoit"
+      - "@Capoit 2"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -20,6 +28,10 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Capoit`"
+      - "@Capoit` 2"
+      - "@Capoit` 3"
+      - "@Capoit"
+      - "@Capoit 2"
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -27,24 +39,40 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - "@Capoit`"
+      - "@Capoit` 2"
+      - "@Capoit` 3"
+      - "@Capoit"
+      - "@Capoit 2"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@Capoit`"
+      - "@Capoit` 2"
+      - "@Capoit` 3"
+      - "@Capoit"
+      - "@Capoit 2"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - "@Capoit`"
+      - "@Capoit` 2"
+      - "@Capoit` 3"
+      - "@Capoit"
+      - "@Capoit 2"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@Capoit`"
+      - "@Capoit` 2"
+      - "@Capoit` 3"
+      - "@Capoit"
+      - "@Capoit 2"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -73,6 +101,10 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - "@Capoit`"
+      - "@Capoit` 2"
+      - "@Capoit` 3"
+      - "@Capoit"
+      - "@Capoit 2"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
