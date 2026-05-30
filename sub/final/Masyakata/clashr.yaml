@@ -5,53 +5,46 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 172.64.152.23:443, server: 172.64.152.23, port: 443, type: trojan, password: 2238e2f3-1a01-485e-8c22-24b65764c68b, sni: gzjx.dpdns.org, skip-cert-verify: false, network: ws, ws-opts: {path: /51.91.253.83, headers: {Host: gzjx.dpdns.org}}, udp: true, tfo: false}
-  - {name: haj rezam, server: 185.226.95.155, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: a4b4dbc4-c9c5-4360-9e9c-d6019118e318, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 98.64.210.121:26260, server: 98.64.210.121, port: 26260, type: vless, tls: true, packet-encoding: xudp, uuid: da33b359-1ccf-4975-8eba-25b101838a83, servername: www.apple.com, network: grpc, grpc-opts: {grpc-mode: multi, grpc-service-name: mci.ir}, reality-opts: {public-key: q6qNBR9PQoZOPUjW1tatG5s5JHYiOMRqC7Ptg97V1Ww, short-id: 1c}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 172.64.152.23:443
-      - haj rezam
+      - 98.64.210.121:26260
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 172.64.152.23:443
-      - haj rezam
+      - 98.64.210.121:26260
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 172.64.152.23:443
-      - haj rezam
+      - 98.64.210.121:26260
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 172.64.152.23:443
-      - haj rezam
+      - 98.64.210.121:26260
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 172.64.152.23:443
-      - haj rezam
+      - 98.64.210.121:26260
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 172.64.152.23:443
-      - haj rezam
+      - 98.64.210.121:26260
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -79,8 +72,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 172.64.152.23:443
-      - haj rezam
+      - 98.64.210.121:26260
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

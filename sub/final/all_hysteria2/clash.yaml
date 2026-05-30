@@ -465,8 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 44@oneclickvpnkeys, server: speedtest.mozit.site, port: 46425, type: hysteria2, ports: 46425, password: BMmGlfFVF7, obfs: salamander, obfs-password: welovegod, sni: mci.ir, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 35975 | ⚡️Telegram - t.me/SOSkeyNET, server: hy2.123266.xyz, port: 33333, type: hysteria2, ports: 33333, password: bce6c821-200d-421f-bf3d-7159e5246ea0, sni: hy2.123266.xyz, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad`", server: hy2.123266.xyz, port: 33333, type: hysteria2, ports: 33333, password: bce6c821-200d-421f-bf3d-7159e5246ea0, sni: hy2.123266.xyz, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 44@oneclickvpnkeys
-      - 35975 | ⚡️Telegram - t.me/SOSkeyNET
+      - "@filembad`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 44@oneclickvpnkeys
-      - 35975 | ⚡️Telegram - t.me/SOSkeyNET
+      - "@filembad`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 44@oneclickvpnkeys
-      - 35975 | ⚡️Telegram - t.me/SOSkeyNET
+      - "@filembad`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 44@oneclickvpnkeys
-      - 35975 | ⚡️Telegram - t.me/SOSkeyNET
+      - "@filembad`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 44@oneclickvpnkeys
-      - 35975 | ⚡️Telegram - t.me/SOSkeyNET
+      - "@filembad`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 44@oneclickvpnkeys
-      - 35975 | ⚡️Telegram - t.me/SOSkeyNET
+      - "@filembad`"
   - name: دانلود منیجر 📥
     type: select
     proxies:

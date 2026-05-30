@@ -465,8 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 172.64.152.23:443, server: 172.64.152.23, port: 443, type: trojan, password: 2238e2f3-1a01-485e-8c22-24b65764c68b, sni: gzjx.dpdns.org, skip-cert-verify: false, network: ws, ws-opts: {path: /51.91.253.83, headers: {Host: gzjx.dpdns.org}}, udp: true, tfo: false}
-  - {name: haj rezam, server: 185.226.95.155, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: a4b4dbc4-c9c5-4360-9e9c-d6019118e318, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 98.64.210.121:26260, server: 98.64.210.121, port: 26260, type: vless, tls: true, packet-encoding: xudp, uuid: da33b359-1ccf-4975-8eba-25b101838a83, servername: www.apple.com, network: grpc, grpc-opts: {grpc-mode: multi, grpc-service-name: mci.ir}, reality-opts: {public-key: q6qNBR9PQoZOPUjW1tatG5s5JHYiOMRqC7Ptg97V1Ww, short-id: 1c}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 172.64.152.23:443
-      - haj rezam
+      - 98.64.210.121:26260
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 172.64.152.23:443
-      - haj rezam
+      - 98.64.210.121:26260
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 172.64.152.23:443
-      - haj rezam
+      - 98.64.210.121:26260
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 172.64.152.23:443
-      - haj rezam
+      - 98.64.210.121:26260
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 172.64.152.23:443
-      - haj rezam
+      - 98.64.210.121:26260
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 172.64.152.23:443
-      - haj rezam
+      - 98.64.210.121:26260
   - name: دانلود منیجر 📥
     type: select
     proxies:
