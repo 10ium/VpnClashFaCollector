@@ -465,7 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: Vaslbashi-TR, server: 104.17.23.34, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: "%40Vaslbashi", network: ws, ws-opts: {path: /, headers: {Host: involves-soccer-lifetime-sector.trycloudflare.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Vaslbashi-TR2, server: 147.185.161.100, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: "%40Vaslbashi", network: ws, ws-opts: {path: /, headers: {Host: itself-neil-triangle-beauty.trycloudflare.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - Vaslbashi-TR
+      - Vaslbashi-TR2
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - Vaslbashi-TR
+      - Vaslbashi-TR2
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - Vaslbashi-TR
+      - Vaslbashi-TR2
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Vaslbashi-TR
+      - Vaslbashi-TR2
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Vaslbashi-TR
+      - Vaslbashi-TR2
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Vaslbashi-TR
+      - Vaslbashi-TR2
   - name: دانلود منیجر 📥
     type: select
     proxies:

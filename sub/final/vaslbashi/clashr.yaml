@@ -5,46 +5,46 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: Vaslbashi-TR, server: 104.17.23.34, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: "%40Vaslbashi", network: ws, ws-opts: {path: /, headers: {Host: involves-soccer-lifetime-sector.trycloudflare.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Vaslbashi-TR2, server: 147.185.161.100, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: "%40Vaslbashi", network: ws, ws-opts: {path: /, headers: {Host: itself-neil-triangle-beauty.trycloudflare.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - Vaslbashi-TR
+      - Vaslbashi-TR2
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - Vaslbashi-TR
+      - Vaslbashi-TR2
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - Vaslbashi-TR
+      - Vaslbashi-TR2
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - Vaslbashi-TR
+      - Vaslbashi-TR2
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - Vaslbashi-TR
+      - Vaslbashi-TR2
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - Vaslbashi-TR
+      - Vaslbashi-TR2
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +72,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - Vaslbashi-TR
+      - Vaslbashi-TR2
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
