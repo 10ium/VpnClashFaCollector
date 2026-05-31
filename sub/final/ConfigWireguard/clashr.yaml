@@ -5,109 +5,60 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: ², server: 57.129.121.230, port: 10443, type: ss, cipher: chacha20-ietf-poly1305, password: uROuEqsL8IUMMVb4wDwnGU, udp: true, tfo: false}
-  - {name: ⁰, server: 4.168.201.246, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: XEnZedp2mkTbT1qC, udp: true, tfo: false}
-  - {name: ⁸, server: 18.166.59.84, port: 7484, type: trojan, password: BxceQaOe, sni: t.me%252Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ⁹, server: 18.163.128.27, port: 2663, type: trojan, password: f6d3aa07a52dbcedcb4731029e2fb6ae, sni: www.nintendogames.net, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ² 2, server: 104.17.121.71, port: 443, type: trojan, password: humanity, sni: www.multiplydose.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.multiplydose.com}}, udp: true, tfo: false}
-  - {name: ¹, server: 45.130.125.69, port: 443, type: trojan, password: humanity, sni: www.calmloud.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmloud.com}}, udp: true, tfo: false}
-  - {name: ⁶, server: downlod.musicribvar.com, port: 45029, type: vless, tls: true, packet-encoding: xudp, uuid: 01ef96b4-e7ec-4218-8ffe-a59e1cdfd836, host: downlod.musicribvar.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ³, server: germany.samanidempire.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 21f1af13-f6e9-4483-8a17-a521a665b335, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /reteweef, headers: {Host: germany.samanidempire.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ¹ 2, server: 87.120.93.244, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 91e120bc-159a-4390-b4e1-197b19602ea0, servername: sub.sbrf-cdn342.ru, host: sub.sbrf-cdn342.ru, path: /, flow: xtls-rprx-vision-udp443, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ⁷, server: 193.233.23.121, port: 40611, type: vless, tls: true, packet-encoding: xudp, uuid: f5a25ee5-ff24-41b0-80e8-ccafdc866614, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Ta-NTG, server: connect.nyxserver.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 18287f51-6b16-49cd-b09b-484c00e77849, network: ws, ws-opts: {path: /arvan-tuel, headers: {Host: connect.nyxserver.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ², server: spb.connectv.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 477535ff-7878-0003-a614-5bb0e4b80959, servername: spb.connectv.net, host: spb.connectv.net, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ¹, server: fi.connectv.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 477535ff-7878-439f-a614-5bb0e4b80959, servername: fi.connectv.net, host: fi.connectv.net, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - Ta-NTG
       - ²
-      - ⁰
-      - ⁸
-      - ⁹
-      - ² 2
       - ¹
-      - ⁶
-      - ³
-      - ¹ 2
-      - ⁷
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - Ta-NTG
       - ²
-      - ⁰
-      - ⁸
-      - ⁹
-      - ² 2
       - ¹
-      - ⁶
-      - ³
-      - ¹ 2
-      - ⁷
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - Ta-NTG
       - ²
-      - ⁰
-      - ⁸
-      - ⁹
-      - ² 2
       - ¹
-      - ⁶
-      - ³
-      - ¹ 2
-      - ⁷
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - Ta-NTG
       - ²
-      - ⁰
-      - ⁸
-      - ⁹
-      - ² 2
       - ¹
-      - ⁶
-      - ³
-      - ¹ 2
-      - ⁷
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - Ta-NTG
       - ²
-      - ⁰
-      - ⁸
-      - ⁹
-      - ² 2
       - ¹
-      - ⁶
-      - ³
-      - ¹ 2
-      - ⁷
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - Ta-NTG
       - ²
-      - ⁰
-      - ⁸
-      - ⁹
-      - ² 2
       - ¹
-      - ⁶
-      - ³
-      - ¹ 2
-      - ⁷
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -135,16 +86,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - Ta-NTG
       - ²
-      - ⁰
-      - ⁸
-      - ⁹
-      - ² 2
       - ¹
-      - ⁶
-      - ³
-      - ¹ 2
-      - ⁷
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

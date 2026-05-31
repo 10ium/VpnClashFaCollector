@@ -5,46 +5,53 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: Vpn_Sky`, server: 95.38.176.140, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 58934b35-01e4-4cbd-839d-b3f165eb3458, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Sky`", server: 217.198.190.233, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: cc933214-2707-4f44-81b5-0913368aec6b, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Sky` 2", server: varzesh3.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: d7f99f17-bea9-4118-a20b-98dec2855beb, network: ws, ws-opts: {path: /, headers: {Host: panel.pydeveloper.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - Vpn_Sky`
+      - "@Vpn_Sky`"
+      - "@Vpn_Sky` 2"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - Vpn_Sky`
+      - "@Vpn_Sky`"
+      - "@Vpn_Sky` 2"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - Vpn_Sky`
+      - "@Vpn_Sky`"
+      - "@Vpn_Sky` 2"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - Vpn_Sky`
+      - "@Vpn_Sky`"
+      - "@Vpn_Sky` 2"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - Vpn_Sky`
+      - "@Vpn_Sky`"
+      - "@Vpn_Sky` 2"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - Vpn_Sky`
+      - "@Vpn_Sky`"
+      - "@Vpn_Sky` 2"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +79,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - Vpn_Sky`
+      - "@Vpn_Sky`"
+      - "@Vpn_Sky` 2"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

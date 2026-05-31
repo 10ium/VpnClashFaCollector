@@ -465,7 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Dickiriptorbot", server: 50.85.80.187, port: 4004, type: vless, tls: true, packet-encoding: xudp, uuid: ea484535-0170-4ec8-bb3c-a9dbaa7412d7, servername: sun6-21.userapi.com, host: sun6-21.userapi.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: D3bNJPmy4YJqhWQ3Xv1Fu3Z1danrTzswShytnkkG9Q4, short-id: 876caa38807c88e2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: CPI_3, server: germany3.samanidempire.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 038a0cfe-d210-4b67-baa6-e3ba15046693, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /SDFDSerTeddgwete, headers: {Host: germany3.samanidempire.org}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: CPI_2, server: germany2.samanidempire.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 54327070-1d45-42ac-9ebb-8dffcb343c93, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /hZvWArgsaxqa, headers: {Host: germany2.samanidempire.org}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: CPI_1, server: germany.samanidempire.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c1e03394-9258-4717-9065-d353f484de82, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /reteweef, headers: {Host: germany.samanidempire.org}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +484,27 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@Dickiriptorbot"
+      - CPI_3
+      - CPI_2
+      - CPI_1
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@Dickiriptorbot"
+      - CPI_3
+      - CPI_2
+      - CPI_1
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@Dickiriptorbot"
+      - CPI_3
+      - CPI_2
+      - CPI_1
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +520,27 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Dickiriptorbot"
+      - CPI_3
+      - CPI_2
+      - CPI_1
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Dickiriptorbot"
+      - CPI_3
+      - CPI_2
+      - CPI_1
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Dickiriptorbot"
+      - CPI_3
+      - CPI_2
+      - CPI_1
   - name: دانلود منیجر 📥
     type: select
     proxies:

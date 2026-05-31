@@ -11,7 +11,6 @@ proxies:
   - {name: 172.235.63.252:443, server: 172.235.63.252, port: 443, type: trojan, password: bX_lNHWoW6ywq82mI=KUr+8i__VSp0Hs_E, sni: 172.235.63.252, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 54.178.81.79:3842, server: 54.178.81.79, port: 3842, type: trojan, password: f6d3aa07a52dbcedcb4731029e2fb6ae, sni: www.nintendogames.net, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 172.236.220.10:443, server: 172.236.220.10, port: 443, type: trojan, password: s_WEN9lMmufG+qDIsn-4C7JOVAnDdbS3Ui, sni: 172.236.220.10, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 185.14.46.20:443, server: 185.14.46.20, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a1b19834-a5e3-4d49-9301-aaa3fb248f49, servername: 185.14.46.20.blanesik.space, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: "%2Fsequre%2Fgrpc"}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 45.130.125.206:443, server: 45.130.125.206, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f9fa9ed3-1381-441c-8672-588cbedd012d, servername: r.bibak.bz, network: ws, ws-opts: {path: /, headers: {Host: r.bibak.bz}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
@@ -25,7 +24,6 @@ proxy-groups:
       - 172.235.63.252:443
       - 54.178.81.79:3842
       - 172.236.220.10:443
-      - 185.14.46.20:443
       - 45.130.125.206:443
   - name: ♻️ 自动选择
     type: url-test
@@ -39,7 +37,6 @@ proxy-groups:
       - 172.235.63.252:443
       - 54.178.81.79:3842
       - 172.236.220.10:443
-      - 185.14.46.20:443
       - 45.130.125.206:443
   - name: 🌍 国外媒体
     type: select
@@ -53,7 +50,6 @@ proxy-groups:
       - 172.235.63.252:443
       - 54.178.81.79:3842
       - 172.236.220.10:443
-      - 185.14.46.20:443
       - 45.130.125.206:443
   - name: 📲 电报信息
     type: select
@@ -66,7 +62,6 @@ proxy-groups:
       - 172.235.63.252:443
       - 54.178.81.79:3842
       - 172.236.220.10:443
-      - 185.14.46.20:443
       - 45.130.125.206:443
   - name: Ⓜ️ 微软服务
     type: select
@@ -79,7 +74,6 @@ proxy-groups:
       - 172.235.63.252:443
       - 54.178.81.79:3842
       - 172.236.220.10:443
-      - 185.14.46.20:443
       - 45.130.125.206:443
   - name: 🍎 苹果服务
     type: select
@@ -92,7 +86,6 @@ proxy-groups:
       - 172.235.63.252:443
       - 54.178.81.79:3842
       - 172.236.220.10:443
-      - 185.14.46.20:443
       - 45.130.125.206:443
   - name: 🎯 全球直连
     type: select
@@ -127,7 +120,6 @@ proxy-groups:
       - 172.235.63.252:443
       - 54.178.81.79:3842
       - 172.236.220.10:443
-      - 185.14.46.20:443
       - 45.130.125.206:443
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连

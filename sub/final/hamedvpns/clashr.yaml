@@ -5,46 +5,60 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@Dickiriptorbot", server: 50.85.80.187, port: 4004, type: vless, tls: true, packet-encoding: xudp, uuid: ea484535-0170-4ec8-bb3c-a9dbaa7412d7, servername: sun6-21.userapi.com, host: sun6-21.userapi.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: D3bNJPmy4YJqhWQ3Xv1Fu3Z1danrTzswShytnkkG9Q4, short-id: 876caa38807c88e2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: CPI_3, server: germany3.samanidempire.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 038a0cfe-d210-4b67-baa6-e3ba15046693, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /SDFDSerTeddgwete, headers: {Host: germany3.samanidempire.org}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: CPI_2, server: germany2.samanidempire.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 54327070-1d45-42ac-9ebb-8dffcb343c93, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /hZvWArgsaxqa, headers: {Host: germany2.samanidempire.org}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: CPI_1, server: germany.samanidempire.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c1e03394-9258-4717-9065-d353f484de82, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /reteweef, headers: {Host: germany.samanidempire.org}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@Dickiriptorbot"
+      - CPI_3
+      - CPI_2
+      - CPI_1
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@Dickiriptorbot"
+      - CPI_3
+      - CPI_2
+      - CPI_1
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@Dickiriptorbot"
+      - CPI_3
+      - CPI_2
+      - CPI_1
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@Dickiriptorbot"
+      - CPI_3
+      - CPI_2
+      - CPI_1
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@Dickiriptorbot"
+      - CPI_3
+      - CPI_2
+      - CPI_1
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@Dickiriptorbot"
+      - CPI_3
+      - CPI_2
+      - CPI_1
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +86,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@Dickiriptorbot"
+      - CPI_3
+      - CPI_2
+      - CPI_1
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
