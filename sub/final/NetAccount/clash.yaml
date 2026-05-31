@@ -465,11 +465,10 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: NetAccount`, server: snapp.ir, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 20d46aed-54c2-49f7-8e1e-b87eeb36168c, network: ws, ws-opts: {path: /, headers: {Host: beraghsa1ontop.markob.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: NetAccount` 2, server: 45.90.12.239, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 360045e9-30d9-4f13-b9d6-9c57f6baab1d, servername: apple.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: xyz}, reality-opts: {public-key: fviTlCtkzpbYhTpHObiVtlgCaAT8LytP9eWUoa6Jfy4, short-id: 66f80bb224a5065a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: NetAccount` 3, server: 54.253.37.164, port: 23951, type: vless, tls: true, packet-encoding: xudp, uuid: 3e62a6f1-f8cb-40eb-9c33-fc4ed39a080e, servername: www.tesla.com, host: www.tesla.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: FGnWfD70nPQhiMZUQETB_mKaR-J_2DonpOpy9eqQ_F0, short-id: 8c4907b7884b31}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: NetAccount` 4, server: 62.113.36.13, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5c85fce0-cbb9-45b0-8bdc-c30b2f55315c, servername: cool.fasssst.online, host: cool.fasssst.online, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: rRGxdvq2Jr4fi2H0mHp9Jal_S5TsM2aj53R1IPtbuXU, short-id: 278cb8c01b2dca}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: NetAccount` 5, server: 176.122.25.12, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b6991657-4257-4b34-a8c3-a3290d23c05b, servername: max.ru, host: max.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: z-Ov6K0L43xnjJ6RoZHRIa02pL4A6FRsEF8tqAKMnC0, short-id: 1a01c00ca256f6}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: NetAccount`, server: 188.114.97.6, port: 443, type: trojan, password: ypa8jqVoqQ, sni: ssss2.avaaal.ir, skip-cert-verify: false, network: ws, ws-opts: {path: /720f09dba195249b423f771661162528/workers/services/view/Avaal/production/settings, headers: {Host: ssss2.avaaal.ir}}, udp: true, tfo: false}
+  - {name: NetAccount` 2, server: 95.38.161.190, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 21e6b7ff-4333-45dd-b5fd-ec987b686edf, servername: www.aparat.com, host: www.aparat.com, path: /, reality-opts: {public-key: zCHug4d7pR7SRXnmkbMbZpQSzXtdZ6cbckZzgFXqnwc, short-id: a26922}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: NetAccount` 3, server: 195.181.173.199, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 394f6981-a782-4779-9a85-e6cf22935d93, servername: ams1.fromblancwithlove.com, alpn: [h2], host: ams1.fromblancwithlove.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: NetAccount` 4, server: 107.161.174.68, port: 7443, type: vless, tls: true, packet-encoding: xudp, uuid: e4ec0319-a924-42eb-84a5-9bff93d91d60, servername: www.microsoft.com, host: www.microsoft.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 5QAO98ot2U7TcGs_f6EEaQjCzNOJLNHqPf6smYsdFVI, short-id: be0ce047}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -490,7 +489,6 @@ proxy-groups:
       - NetAccount` 2
       - NetAccount` 3
       - NetAccount` 4
-      - NetAccount` 5
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -501,7 +499,6 @@ proxy-groups:
       - NetAccount` 2
       - NetAccount` 3
       - NetAccount` 4
-      - NetAccount` 5
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -512,7 +509,6 @@ proxy-groups:
       - NetAccount` 2
       - NetAccount` 3
       - NetAccount` 4
-      - NetAccount` 5
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -532,7 +528,6 @@ proxy-groups:
       - NetAccount` 2
       - NetAccount` 3
       - NetAccount` 4
-      - NetAccount` 5
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -543,7 +538,6 @@ proxy-groups:
       - NetAccount` 2
       - NetAccount` 3
       - NetAccount` 4
-      - NetAccount` 5
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -554,7 +548,6 @@ proxy-groups:
       - NetAccount` 2
       - NetAccount` 3
       - NetAccount` 4
-      - NetAccount` 5
   - name: دانلود منیجر 📥
     type: select
     proxies:
