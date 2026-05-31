@@ -5,7 +5,6 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 202.91.33.175:8443, server: 202.91.33.175, port: 8443, type: trojan, password: 8f3a2b1c9d4e5f6a7b8c9d0e1f2a3b4c, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 23.227.193.173:443, server: 23.227.193.173, port: 443, type: trojan, password: AZWY=WAZk5TeVYmMUudr2xmeb00I3ymeMQ, sni: www.dataset-logger.click, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 13.231.192.34:50712, server: 13.231.192.34, port: 50712, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 13.231.192.34:53307, server: 13.231.192.34, port: 53307, type: trojan, password: BxceQaOe, sni: t.me%252Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
@@ -20,10 +19,7 @@ proxies:
   - {name: 154.205.145.79:8443, server: 154.205.145.79, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 20df9a62-5948-11f1-bf0f-5254eff7fba9, servername: cloudflare.com, host: cloudflare.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: bQrdBuhZRuvqaYIKIT1mRcDipJmqLZPKTzE2HkLZ_j4, short-id: 2046e176b80e8278}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 155.117.127.137:443, server: 155.117.127.137, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5a20b5d0-3a98-4792-9559-95f4e24277ec, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 185.14.46.20:443, server: 185.14.46.20, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a1b19834-a5e3-4d49-9301-aaa3fb248f49, servername: 185.14.46.20.blanesik.space, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: "%2Fsequre%2Fgrpc"}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 82.40.62.106:2052, server: 82.40.62.106, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: b5bd7d6d-5ab9-4965-bccc-32acdbc4f714, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 217.179.6.84:443, server: 217.179.6.84, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d78c12c4-6927-40b8-8550-ed9be00334da, servername: France1cxc.chickenkiller.com, host: France1cxc.chickenkiller.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: UJSYKOEr3a3V1P_obd9zNBq4Pr3Vbd_a2nHE7-rstRk, short-id: 6089640857a72237}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 212.100.171.194:48862, server: 212.100.171.194, port: 48862, type: vless, tls: true, packet-encoding: xudp, uuid: da9f6ce2-aaba-47dd-be50-5afd17331fd9, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 104.194.135.175:31570, server: 104.194.135.175, port: 31570, type: vless, tls: true, packet-encoding: xudp, uuid: dfa6f07e-84d4-4d2b-8ba1-48d47dccba60, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "🇩🇪 [openproxylist.com] vmess-DE", server: de5.taskflowhub.org, port: 2053, type: vmess, uuid: ca58b165-0f7d-49aa-9fae-a017e8a0f884, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
@@ -31,7 +27,6 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 202.91.33.175:8443
       - 23.227.193.173:443
       - 13.231.192.34:50712
       - 13.231.192.34:53307
@@ -46,10 +41,7 @@ proxy-groups:
       - 154.205.145.79:8443
       - 155.117.127.137:443
       - 185.14.46.20:443
-      - 82.40.62.106:2052
       - 217.179.6.84:443
-      - 212.100.171.194:48862
-      - 104.194.135.175:31570
       - 🇩🇪 [openproxylist.com] vmess-DE
   - name: ♻️ 自动选择
     type: url-test
@@ -57,7 +49,6 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 202.91.33.175:8443
       - 23.227.193.173:443
       - 13.231.192.34:50712
       - 13.231.192.34:53307
@@ -72,10 +63,7 @@ proxy-groups:
       - 154.205.145.79:8443
       - 155.117.127.137:443
       - 185.14.46.20:443
-      - 82.40.62.106:2052
       - 217.179.6.84:443
-      - 212.100.171.194:48862
-      - 104.194.135.175:31570
       - 🇩🇪 [openproxylist.com] vmess-DE
   - name: 🌍 国外媒体
     type: select
@@ -83,7 +71,6 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 202.91.33.175:8443
       - 23.227.193.173:443
       - 13.231.192.34:50712
       - 13.231.192.34:53307
@@ -98,17 +85,13 @@ proxy-groups:
       - 154.205.145.79:8443
       - 155.117.127.137:443
       - 185.14.46.20:443
-      - 82.40.62.106:2052
       - 217.179.6.84:443
-      - 212.100.171.194:48862
-      - 104.194.135.175:31570
       - 🇩🇪 [openproxylist.com] vmess-DE
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 202.91.33.175:8443
       - 23.227.193.173:443
       - 13.231.192.34:50712
       - 13.231.192.34:53307
@@ -123,17 +106,13 @@ proxy-groups:
       - 154.205.145.79:8443
       - 155.117.127.137:443
       - 185.14.46.20:443
-      - 82.40.62.106:2052
       - 217.179.6.84:443
-      - 212.100.171.194:48862
-      - 104.194.135.175:31570
       - 🇩🇪 [openproxylist.com] vmess-DE
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 202.91.33.175:8443
       - 23.227.193.173:443
       - 13.231.192.34:50712
       - 13.231.192.34:53307
@@ -148,17 +127,13 @@ proxy-groups:
       - 154.205.145.79:8443
       - 155.117.127.137:443
       - 185.14.46.20:443
-      - 82.40.62.106:2052
       - 217.179.6.84:443
-      - 212.100.171.194:48862
-      - 104.194.135.175:31570
       - 🇩🇪 [openproxylist.com] vmess-DE
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 202.91.33.175:8443
       - 23.227.193.173:443
       - 13.231.192.34:50712
       - 13.231.192.34:53307
@@ -173,10 +148,7 @@ proxy-groups:
       - 154.205.145.79:8443
       - 155.117.127.137:443
       - 185.14.46.20:443
-      - 82.40.62.106:2052
       - 217.179.6.84:443
-      - 212.100.171.194:48862
-      - 104.194.135.175:31570
       - 🇩🇪 [openproxylist.com] vmess-DE
   - name: 🎯 全球直连
     type: select
@@ -205,7 +177,6 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 202.91.33.175:8443
       - 23.227.193.173:443
       - 13.231.192.34:50712
       - 13.231.192.34:53307
@@ -220,10 +191,7 @@ proxy-groups:
       - 154.205.145.79:8443
       - 155.117.127.137:443
       - 185.14.46.20:443
-      - 82.40.62.106:2052
       - 217.179.6.84:443
-      - 212.100.171.194:48862
-      - 104.194.135.175:31570
       - 🇩🇪 [openproxylist.com] vmess-DE
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
