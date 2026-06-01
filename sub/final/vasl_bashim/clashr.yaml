@@ -5,116 +5,53 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@vasl_", server: 5.230.184.171, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: Fh0TVw64B57wDPoJ2VLsog, udp: true, tfo: false}
-  - {name: "@vasl_bashim", server: 172.67.158.125, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 252272d5-74df-4e86-b603-5894e9b06ef5, servername: PrO.nImBaHa.InFo, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: PrO.nImBaHa.InFo}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim`", server: 172.64.147.165, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 478cc26d-16b3-4fdd-be64-60d5a58c1622, network: ws, ws-opts: {path: /, headers: {Host: tt.andishehparenting.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim` 2", server: 104.16.89.120, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 48d1cb9d-bbd4-4444-b833-6720619a117e, servername: nl8.bioritalin.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: nl8.bioritalin.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim 2", server: 104.26.6.159, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 48d1cb9d-bbd4-4444-b833-6720619a117e, servername: nl8.bioritalin.ir, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: nl8.bioritalin.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim 3", server: 8.39.125.31, port: 2087, type: vless, tls: true, packet-encoding: xudp, uuid: 4f4ea352-6e04-4953-8980-224ed2ea909d, servername: heydari-9ln.pages.dev, network: ws, ws-opts: {path: /, headers: {Host: heydari-9ln.pages.dev}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim` 3", server: 188.213.199.211, port: 40443, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, servername: sni.111000.indevs.in, network: ws, ws-opts: {path: /, headers: {Host: sni.111000.indevs.in}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim` 4", server: 185.143.234.235, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: b355ee8d-ef99-4a81-83be-edabfe6113a3, network: ws, ws-opts: {path: /, headers: {Host: vip.az99x.info}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim` 5", server: 95.182.116.21, port: 43046, type: vless, tls: true, packet-encoding: xudp, uuid: d8d3f562-f62c-431b-84f3-2161805bd01a, network: ws, ws-opts: {path: /mmad, headers: {Host: www.speedtest.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: vasl_bashim, server: de-1.shadowhub.cc, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e3da803c-9c04-4ffb-a0f2-32cda93dd868, servername: static.gcore.pro, host: static.gcore.pro, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim 4", server: 185.224.3.41, port: 10443, type: vless, tls: true, packet-encoding: xudp, uuid: f6431ff1-dec0-4a6c-be4a-ce917913b589, servername: www.cloudflare.com, host: www.cloudflare.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 188.114.97.6:443, server: 188.114.97.6, port: 443, type: trojan, password: cf3d48cf-750c-4f18-89a7-f81d2e153fbe, sni: blog.webex.com.cyylr.eu.cc, skip-cert-verify: false, network: ws, ws-opts: {path: /in-do, headers: {Host: blog.webex.com.cyylr.eu.cc}}, udp: true, tfo: false}
+  - {name: cyylr.eu.cc:443, server: cyylr.eu.cc, port: 443, type: trojan, password: cf3d48cf-750c-4f18-89a7-f81d2e153fbe, sni: blog.webex.com.cyylr.eu.cc, skip-cert-verify: false, network: ws, ws-opts: {path: /in-do, headers: {Host: blog.webex.com.cyylr.eu.cc}}, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@vasl_"
-      - "@vasl_bashim"
-      - "@vasl_bashim`"
-      - "@vasl_bashim` 2"
-      - "@vasl_bashim 2"
-      - "@vasl_bashim 3"
-      - "@vasl_bashim` 3"
-      - "@vasl_bashim` 4"
-      - "@vasl_bashim` 5"
-      - vasl_bashim
-      - "@vasl_bashim 4"
+      - 188.114.97.6:443
+      - cyylr.eu.cc:443
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@vasl_"
-      - "@vasl_bashim"
-      - "@vasl_bashim`"
-      - "@vasl_bashim` 2"
-      - "@vasl_bashim 2"
-      - "@vasl_bashim 3"
-      - "@vasl_bashim` 3"
-      - "@vasl_bashim` 4"
-      - "@vasl_bashim` 5"
-      - vasl_bashim
-      - "@vasl_bashim 4"
+      - 188.114.97.6:443
+      - cyylr.eu.cc:443
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@vasl_"
-      - "@vasl_bashim"
-      - "@vasl_bashim`"
-      - "@vasl_bashim` 2"
-      - "@vasl_bashim 2"
-      - "@vasl_bashim 3"
-      - "@vasl_bashim` 3"
-      - "@vasl_bashim` 4"
-      - "@vasl_bashim` 5"
-      - vasl_bashim
-      - "@vasl_bashim 4"
+      - 188.114.97.6:443
+      - cyylr.eu.cc:443
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@vasl_"
-      - "@vasl_bashim"
-      - "@vasl_bashim`"
-      - "@vasl_bashim` 2"
-      - "@vasl_bashim 2"
-      - "@vasl_bashim 3"
-      - "@vasl_bashim` 3"
-      - "@vasl_bashim` 4"
-      - "@vasl_bashim` 5"
-      - vasl_bashim
-      - "@vasl_bashim 4"
+      - 188.114.97.6:443
+      - cyylr.eu.cc:443
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@vasl_"
-      - "@vasl_bashim"
-      - "@vasl_bashim`"
-      - "@vasl_bashim` 2"
-      - "@vasl_bashim 2"
-      - "@vasl_bashim 3"
-      - "@vasl_bashim` 3"
-      - "@vasl_bashim` 4"
-      - "@vasl_bashim` 5"
-      - vasl_bashim
-      - "@vasl_bashim 4"
+      - 188.114.97.6:443
+      - cyylr.eu.cc:443
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@vasl_"
-      - "@vasl_bashim"
-      - "@vasl_bashim`"
-      - "@vasl_bashim` 2"
-      - "@vasl_bashim 2"
-      - "@vasl_bashim 3"
-      - "@vasl_bashim` 3"
-      - "@vasl_bashim` 4"
-      - "@vasl_bashim` 5"
-      - vasl_bashim
-      - "@vasl_bashim 4"
+      - 188.114.97.6:443
+      - cyylr.eu.cc:443
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -142,17 +79,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@vasl_"
-      - "@vasl_bashim"
-      - "@vasl_bashim`"
-      - "@vasl_bashim` 2"
-      - "@vasl_bashim 2"
-      - "@vasl_bashim 3"
-      - "@vasl_bashim` 3"
-      - "@vasl_bashim` 4"
-      - "@vasl_bashim` 5"
-      - vasl_bashim
-      - "@vasl_bashim 4"
+      - 188.114.97.6:443
+      - cyylr.eu.cc:443
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

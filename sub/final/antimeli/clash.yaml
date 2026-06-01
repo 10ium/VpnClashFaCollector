@@ -465,11 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "CH: @antimeli", server: 104.17.121.37, port: 443, type: trojan, password: humanity, sni: www.gossipglove.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.gossipglove.com}}, udp: true, tfo: false}
-  - {name: "CH: @antimeli 2", server: 104.17.121.71, port: 443, type: trojan, password: humanity, sni: www.creationlong.org, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org}}, udp: true, tfo: false}
-  - {name: "CH: @antimeli 3", server: 104.17.121.9, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true, tfo: false}
-  - {name: "CH: @antimeli`", server: 216.24.57.6, port: 443, type: trojan, password: humanity, sni: www.creationlong.org, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org}}, udp: true, tfo: false}
-  - {name: "CH: @antimeli 4", server: 45.130.125.76, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true, tfo: false}
+  - {name: "***💎***CH:", server: 95.38.234.52, port: 35439, type: vless, tls: true, packet-encoding: xudp, uuid: 931e8012-bf23-4c0d-9732-829ee23f6cac, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "***💎***CH: 2", server: hungary.cloudpath.live, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a1fbffe9-8e5a-5a0e-9333-045d32eccd59, servername: microsoft.com, host: microsoft.com, path: /, reality-opts: {public-key: qa6dtExYCAVoxRNSfoyuz9JRM9nq475NbuW-P6aJyS0, short-id: d0c2ffdf}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,33 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "CH: @antimeli"
-      - "CH: @antimeli 2"
-      - "CH: @antimeli 3"
-      - "CH: @antimeli`"
-      - "CH: @antimeli 4"
+      - "***💎***CH:"
+      - "***💎***CH: 2"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "CH: @antimeli"
-      - "CH: @antimeli 2"
-      - "CH: @antimeli 3"
-      - "CH: @antimeli`"
-      - "CH: @antimeli 4"
+      - "***💎***CH:"
+      - "***💎***CH: 2"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "CH: @antimeli"
-      - "CH: @antimeli 2"
-      - "CH: @antimeli 3"
-      - "CH: @antimeli`"
-      - "CH: @antimeli 4"
+      - "***💎***CH:"
+      - "***💎***CH: 2"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -528,33 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "CH: @antimeli"
-      - "CH: @antimeli 2"
-      - "CH: @antimeli 3"
-      - "CH: @antimeli`"
-      - "CH: @antimeli 4"
+      - "***💎***CH:"
+      - "***💎***CH: 2"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "CH: @antimeli"
-      - "CH: @antimeli 2"
-      - "CH: @antimeli 3"
-      - "CH: @antimeli`"
-      - "CH: @antimeli 4"
+      - "***💎***CH:"
+      - "***💎***CH: 2"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "CH: @antimeli"
-      - "CH: @antimeli 2"
-      - "CH: @antimeli 3"
-      - "CH: @antimeli`"
-      - "CH: @antimeli 4"
+      - "***💎***CH:"
+      - "***💎***CH: 2"
   - name: دانلود منیجر 📥
     type: select
     proxies:
