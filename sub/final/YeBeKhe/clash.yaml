@@ -465,9 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@pythash and @xsfilterrnet", server: panel.panel.pythash.tr, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 68f91cc2-4ef2-46fd-932a-2d0350f682c8, servername: www.yahoo.com, host: www.yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: MbVEbNu2iMIDhD5ziJFLKVfV0lBY7tGGpklBrwqVCyg, short-id: 61ad}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Configwireguard, server: spb.connectv.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a3798125-5413-0002-a8eb-267708c85be8, servername: spb.connectv.net, host: spb.connectv.net, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Configwireguard 2, server: ee.connectv.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a3798125-5413-4768-a8eb-267708c85be8, servername: ee.connectv.net, host: ee.connectv.net, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ¹, server: spb.connectv.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 477535ff-7878-0003-a614-5bb0e4b80959, servername: spb.connectv.net, host: spb.connectv.net, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ², server: fi.connectv.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 477535ff-7878-439f-a614-5bb0e4b80959, servername: fi.connectv.net, host: fi.connectv.net, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,27 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@pythash and @xsfilterrnet"
-      - Configwireguard
-      - Configwireguard 2
+      - ¹
+      - ²
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@pythash and @xsfilterrnet"
-      - Configwireguard
-      - Configwireguard 2
+      - ¹
+      - ²
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@pythash and @xsfilterrnet"
-      - Configwireguard
-      - Configwireguard 2
+      - ¹
+      - ²
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -520,27 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@pythash and @xsfilterrnet"
-      - Configwireguard
-      - Configwireguard 2
+      - ¹
+      - ²
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@pythash and @xsfilterrnet"
-      - Configwireguard
-      - Configwireguard 2
+      - ¹
+      - ²
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@pythash and @xsfilterrnet"
-      - Configwireguard
-      - Configwireguard 2
+      - ¹
+      - ²
   - name: دانلود منیجر 📥
     type: select
     proxies:

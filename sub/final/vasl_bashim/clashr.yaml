@@ -7,6 +7,7 @@ external-controller: 127.0.0.1:9090
 proxies:
   - {name: 188.114.97.6:443, server: 188.114.97.6, port: 443, type: trojan, password: cf3d48cf-750c-4f18-89a7-f81d2e153fbe, sni: blog.webex.com.cyylr.eu.cc, skip-cert-verify: false, network: ws, ws-opts: {path: /in-do, headers: {Host: blog.webex.com.cyylr.eu.cc}}, udp: true, tfo: false}
   - {name: cyylr.eu.cc:443, server: cyylr.eu.cc, port: 443, type: trojan, password: cf3d48cf-750c-4f18-89a7-f81d2e153fbe, sni: blog.webex.com.cyylr.eu.cc, skip-cert-verify: false, network: ws, ws-opts: {path: /in-do, headers: {Host: blog.webex.com.cyylr.eu.cc}}, udp: true, tfo: false}
+  - {name: "@vasl_bashim`", server: 2.24.13.118, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f7040199-3768-4c1b-ae1b-78d904fc2412, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -15,6 +16,7 @@ proxy-groups:
       - DIRECT
       - 188.114.97.6:443
       - cyylr.eu.cc:443
+      - "@vasl_bashim`"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -23,6 +25,7 @@ proxy-groups:
     proxies:
       - 188.114.97.6:443
       - cyylr.eu.cc:443
+      - "@vasl_bashim`"
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -31,6 +34,7 @@ proxy-groups:
       - 🎯 全球直连
       - 188.114.97.6:443
       - cyylr.eu.cc:443
+      - "@vasl_bashim`"
   - name: 📲 电报信息
     type: select
     proxies:
@@ -38,6 +42,7 @@ proxy-groups:
       - 🎯 全球直连
       - 188.114.97.6:443
       - cyylr.eu.cc:443
+      - "@vasl_bashim`"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -45,6 +50,7 @@ proxy-groups:
       - 🚀 节点选择
       - 188.114.97.6:443
       - cyylr.eu.cc:443
+      - "@vasl_bashim`"
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -52,6 +58,7 @@ proxy-groups:
       - 🎯 全球直连
       - 188.114.97.6:443
       - cyylr.eu.cc:443
+      - "@vasl_bashim`"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -81,6 +88,7 @@ proxy-groups:
       - ♻️ 自动选择
       - 188.114.97.6:443
       - cyylr.eu.cc:443
+      - "@vasl_bashim`"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

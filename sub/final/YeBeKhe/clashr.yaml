@@ -5,60 +5,53 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@pythash and @xsfilterrnet", server: panel.panel.pythash.tr, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 68f91cc2-4ef2-46fd-932a-2d0350f682c8, servername: www.yahoo.com, host: www.yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: MbVEbNu2iMIDhD5ziJFLKVfV0lBY7tGGpklBrwqVCyg, short-id: 61ad}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Configwireguard, server: spb.connectv.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a3798125-5413-0002-a8eb-267708c85be8, servername: spb.connectv.net, host: spb.connectv.net, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Configwireguard 2, server: ee.connectv.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a3798125-5413-4768-a8eb-267708c85be8, servername: ee.connectv.net, host: ee.connectv.net, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ¹, server: spb.connectv.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 477535ff-7878-0003-a614-5bb0e4b80959, servername: spb.connectv.net, host: spb.connectv.net, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ², server: fi.connectv.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 477535ff-7878-439f-a614-5bb0e4b80959, servername: fi.connectv.net, host: fi.connectv.net, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@pythash and @xsfilterrnet"
-      - Configwireguard
-      - Configwireguard 2
+      - ¹
+      - ²
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@pythash and @xsfilterrnet"
-      - Configwireguard
-      - Configwireguard 2
+      - ¹
+      - ²
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@pythash and @xsfilterrnet"
-      - Configwireguard
-      - Configwireguard 2
+      - ¹
+      - ²
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@pythash and @xsfilterrnet"
-      - Configwireguard
-      - Configwireguard 2
+      - ¹
+      - ²
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@pythash and @xsfilterrnet"
-      - Configwireguard
-      - Configwireguard 2
+      - ¹
+      - ²
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@pythash and @xsfilterrnet"
-      - Configwireguard
-      - Configwireguard 2
+      - ¹
+      - ²
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -86,9 +79,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@pythash and @xsfilterrnet"
-      - Configwireguard
-      - Configwireguard 2
+      - ¹
+      - ²
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

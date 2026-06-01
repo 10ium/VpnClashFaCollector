@@ -465,10 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Kia_Net 3", server: 162.159.253.41, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 9d7708f1-fb7f-4d02-8dd3-532b9caf8495, servername: vip.xvon.in, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: vip.xvon.in}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Kia_Net 1", server: snapp.ir, port: 2095, type: vless, tls: true, packet-encoding: xudp, uuid: c88b8e5a-13da-462c-860b-1ad78e1e606c, network: ws, ws-opts: {path: /rat, headers: {Host: rat.skycmd.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Kia_Net 4", server: snapp.ir, port: 2095, type: vless, tls: true, packet-encoding: xudp, uuid: c88b8e5a-13da-462c-860b-1ad78e1e606c, network: ws, ws-opts: {path: /rat, headers: {Host: rat.skycmd.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Kia_Net 2", server: Tamland.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: d55a56b0-3130-45f3-828c-c602cf6a6b6f, network: ws, ws-opts: {path: /, headers: {Host: cc.lithiumhost.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: متصل همراه اول @Kia_Net`, server: 18.159.66.5, port: 443, type: hysteria2, ports: 443, password: Masir_Sefid, obfs: salamander, obfs-password: Masir_Sefid, sni: qus.masir-sefid.shop, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,30 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@Kia_Net 3"
-      - "@Kia_Net 1"
-      - "@Kia_Net 4"
-      - "@Kia_Net 2"
+      - متصل همراه اول @Kia_Net`
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@Kia_Net 3"
-      - "@Kia_Net 1"
-      - "@Kia_Net 4"
-      - "@Kia_Net 2"
+      - متصل همراه اول @Kia_Net`
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@Kia_Net 3"
-      - "@Kia_Net 1"
-      - "@Kia_Net 4"
-      - "@Kia_Net 2"
+      - متصل همراه اول @Kia_Net`
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -524,30 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Kia_Net 3"
-      - "@Kia_Net 1"
-      - "@Kia_Net 4"
-      - "@Kia_Net 2"
+      - متصل همراه اول @Kia_Net`
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Kia_Net 3"
-      - "@Kia_Net 1"
-      - "@Kia_Net 4"
-      - "@Kia_Net 2"
+      - متصل همراه اول @Kia_Net`
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Kia_Net 3"
-      - "@Kia_Net 1"
-      - "@Kia_Net 4"
-      - "@Kia_Net 2"
+      - متصل همراه اول @Kia_Net`
   - name: دانلود منیجر 📥
     type: select
     proxies:

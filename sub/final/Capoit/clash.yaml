@@ -466,9 +466,7 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: "@Capoit`", server: 188.114.97.6, port: 443, type: trojan, password: mitivpn, sni: cdn.linkman1.ir, skip-cert-verify: false, network: ws, ws-opts: {path: /720f09dba195249b423f771661162528/workers/services/view/mitivpn/production/settings, headers: {Host: cdn.linkman1.ir}}, udp: true, tfo: false}
-  - {name: "@Capoit` 2", server: 188.114.97.6, port: 443, type: trojan, password: mitivpn, sni: www.linkman1.ir, skip-cert-verify: false, network: ws, ws-opts: {path: /720f09dba195249b423f771661162528/workers/services/view/mitivpn/production/settings, headers: {Host: www.linkman1.ir}}, udp: true, tfo: false}
-  - {name: "@Capoit` 3", server: 152.233.28.198, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 394f6981-a782-4779-9a85-e6cf22935d93, servername: uk1.fromblancwithlove.com, alpn: [h2], host: uk1.fromblancwithlove.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 4", server: 172.64.147.255, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 478cc26d-16b3-4fdd-be64-60d5a58c1622, network: ws, ws-opts: {path: /, headers: {Host: tt.andishehparenting.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 2", server: 152.233.28.198, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 394f6981-a782-4779-9a85-e6cf22935d93, servername: uk1.fromblancwithlove.com, alpn: [h2], host: uk1.fromblancwithlove.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,8 +485,6 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
-      - "@Capoit` 3"
-      - "@Capoit` 4"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -497,8 +493,6 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
-      - "@Capoit` 3"
-      - "@Capoit` 4"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -507,8 +501,6 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
-      - "@Capoit` 3"
-      - "@Capoit` 4"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -526,8 +518,6 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
-      - "@Capoit` 3"
-      - "@Capoit` 4"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -536,8 +526,6 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
-      - "@Capoit` 3"
-      - "@Capoit` 4"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -546,8 +534,6 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
-      - "@Capoit` 3"
-      - "@Capoit` 4"
   - name: دانلود منیجر 📥
     type: select
     proxies:
