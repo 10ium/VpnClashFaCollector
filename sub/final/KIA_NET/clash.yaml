@@ -465,7 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: متصل همراه اول @Kia_Net`, server: 18.159.66.5, port: 443, type: hysteria2, ports: 443, password: Masir_Sefid, obfs: salamander, obfs-password: Masir_Sefid, sni: qus.masir-sefid.shop, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Kia_Net", server: 104.19.229.21, port: 443, type: trojan, password: aa710f78-eddb-45b4-bd32-1f8692a754e5, sni: s.blibli.com.cyylr.eu.cc, skip-cert-verify: false, network: ws, ws-opts: {path: /ae-bo, headers: {Host: s.blibli.com.cyylr.eu.cc}}, udp: true, tfo: false}
+  - {name: "@Kia_Net 2", server: panel.dibaux.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 79475016-7b3c-414d-9110-9b9faac6922d, network: ws, ws-opts: {path: /stream, headers: {Host: panel.dibaux.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Kia_Net`", server: 104.19.229.21, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: cc752a3e-1537-4e86-bb50-1b897bf7b33c, servername: cyylr.eu.cc, network: ws, ws-opts: {path: /sg-melbi, headers: {Host: cyylr.eu.cc}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +484,27 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - متصل همراه اول @Kia_Net`
+      - "@Kia_Net"
+      - "@Kia_Net 2"
+      - "@Kia_Net`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - متصل همراه اول @Kia_Net`
+      - "@Kia_Net"
+      - "@Kia_Net 2"
+      - "@Kia_Net`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - متصل همراه اول @Kia_Net`
+      - "@Kia_Net"
+      - "@Kia_Net 2"
+      - "@Kia_Net`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +520,27 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - متصل همراه اول @Kia_Net`
+      - "@Kia_Net"
+      - "@Kia_Net 2"
+      - "@Kia_Net`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - متصل همراه اول @Kia_Net`
+      - "@Kia_Net"
+      - "@Kia_Net 2"
+      - "@Kia_Net`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - متصل همراه اول @Kia_Net`
+      - "@Kia_Net"
+      - "@Kia_Net 2"
+      - "@Kia_Net`"
   - name: دانلود منیجر 📥
     type: select
     proxies:

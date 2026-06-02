@@ -5,46 +5,60 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: متصل همراه اول @Kia_Net`, server: 18.159.66.5, port: 443, type: hysteria2, ports: 443, password: Masir_Sefid, obfs: salamander, obfs-password: Masir_Sefid, sni: qus.masir-sefid.shop, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Kia_Net", server: 104.19.229.21, port: 443, type: trojan, password: aa710f78-eddb-45b4-bd32-1f8692a754e5, sni: s.blibli.com.cyylr.eu.cc, skip-cert-verify: false, network: ws, ws-opts: {path: /ae-bo, headers: {Host: s.blibli.com.cyylr.eu.cc}}, udp: true, tfo: false}
+  - {name: "@Kia_Net 2", server: panel.dibaux.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 79475016-7b3c-414d-9110-9b9faac6922d, network: ws, ws-opts: {path: /stream, headers: {Host: panel.dibaux.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Kia_Net`", server: 104.19.229.21, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: cc752a3e-1537-4e86-bb50-1b897bf7b33c, servername: cyylr.eu.cc, network: ws, ws-opts: {path: /sg-melbi, headers: {Host: cyylr.eu.cc}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - متصل همراه اول @Kia_Net`
+      - "@Kia_Net"
+      - "@Kia_Net 2"
+      - "@Kia_Net`"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - متصل همراه اول @Kia_Net`
+      - "@Kia_Net"
+      - "@Kia_Net 2"
+      - "@Kia_Net`"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - متصل همراه اول @Kia_Net`
+      - "@Kia_Net"
+      - "@Kia_Net 2"
+      - "@Kia_Net`"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - متصل همراه اول @Kia_Net`
+      - "@Kia_Net"
+      - "@Kia_Net 2"
+      - "@Kia_Net`"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - متصل همراه اول @Kia_Net`
+      - "@Kia_Net"
+      - "@Kia_Net 2"
+      - "@Kia_Net`"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - متصل همراه اول @Kia_Net`
+      - "@Kia_Net"
+      - "@Kia_Net 2"
+      - "@Kia_Net`"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +86,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - متصل همراه اول @Kia_Net`
+      - "@Kia_Net"
+      - "@Kia_Net 2"
+      - "@Kia_Net`"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

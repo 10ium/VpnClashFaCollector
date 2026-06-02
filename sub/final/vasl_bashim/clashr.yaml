@@ -5,14 +5,16 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: vasl_bashim2`, server: kz-1.nodes.ac, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 593f4d6c-aff1-4832-87a7-b5d8e71584ea, servername: kz-1.nodes.ac, host: kz-1.nodes.ac, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: uz1Lb_2451iPvrwWCZ-4I9_WHdYm7ML0yjeJAZwBk3E, short-id: 73b4306eb38fe3d6}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: vasl_bashim1, server: 91.107.255.167, port: 24391, type: vless, tls: true, packet-encoding: xudp, uuid: 7d8584e3-410b-4667-a9b3-9a6465d4f999, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim`", server: 2.24.13.118, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f7040199-3768-4c1b-ae1b-78d904fc2412, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim`", server: areal1.greewebservices.ir, port: 2425, type: vless, tls: true, packet-encoding: xudp, uuid: b9dccdab-0f77-4fb7-8949-4d378e92df5c, servername: yahoo.com, host: yahoo.com, path: /, reality-opts: {public-key: xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8, short-id: 9b60d3}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - vasl_bashim2`
       - vasl_bashim1
       - "@vasl_bashim`"
   - name: ♻️ 自动选择
@@ -21,6 +23,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - vasl_bashim2`
       - vasl_bashim1
       - "@vasl_bashim`"
   - name: 🌍 国外媒体
@@ -29,6 +32,7 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - vasl_bashim2`
       - vasl_bashim1
       - "@vasl_bashim`"
   - name: 📲 电报信息
@@ -36,6 +40,7 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - vasl_bashim2`
       - vasl_bashim1
       - "@vasl_bashim`"
   - name: Ⓜ️ 微软服务
@@ -43,6 +48,7 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - vasl_bashim2`
       - vasl_bashim1
       - "@vasl_bashim`"
   - name: 🍎 苹果服务
@@ -50,6 +56,7 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - vasl_bashim2`
       - vasl_bashim1
       - "@vasl_bashim`"
   - name: 🎯 全球直连
@@ -79,6 +86,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - vasl_bashim2`
       - vasl_bashim1
       - "@vasl_bashim`"
 rules:
