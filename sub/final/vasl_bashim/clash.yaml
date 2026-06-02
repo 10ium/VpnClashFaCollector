@@ -465,8 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 188.114.97.6:443, server: 188.114.97.6, port: 443, type: trojan, password: cf3d48cf-750c-4f18-89a7-f81d2e153fbe, sni: blog.webex.com.cyylr.eu.cc, skip-cert-verify: false, network: ws, ws-opts: {path: /in-do, headers: {Host: blog.webex.com.cyylr.eu.cc}}, udp: true, tfo: false}
-  - {name: cyylr.eu.cc:443, server: cyylr.eu.cc, port: 443, type: trojan, password: cf3d48cf-750c-4f18-89a7-f81d2e153fbe, sni: blog.webex.com.cyylr.eu.cc, skip-cert-verify: false, network: ws, ws-opts: {path: /in-do, headers: {Host: blog.webex.com.cyylr.eu.cc}}, udp: true, tfo: false}
+  - {name: vasl_bashim1, server: 91.107.255.167, port: 24391, type: vless, tls: true, packet-encoding: xudp, uuid: 7d8584e3-410b-4667-a9b3-9a6465d4f999, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@vasl_bashim`", server: 2.24.13.118, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f7040199-3768-4c1b-ae1b-78d904fc2412, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -484,8 +483,7 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 188.114.97.6:443
-      - cyylr.eu.cc:443
+      - vasl_bashim1
       - "@vasl_bashim`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -493,8 +491,7 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - 188.114.97.6:443
-      - cyylr.eu.cc:443
+      - vasl_bashim1
       - "@vasl_bashim`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -502,8 +499,7 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - 188.114.97.6:443
-      - cyylr.eu.cc:443
+      - vasl_bashim1
       - "@vasl_bashim`"
   - name: اتصال پایدار 🔗
     type: url-test
@@ -520,8 +516,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 188.114.97.6:443
-      - cyylr.eu.cc:443
+      - vasl_bashim1
       - "@vasl_bashim`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -529,8 +524,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 188.114.97.6:443
-      - cyylr.eu.cc:443
+      - vasl_bashim1
       - "@vasl_bashim`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -538,8 +532,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 188.114.97.6:443
-      - cyylr.eu.cc:443
+      - vasl_bashim1
       - "@vasl_bashim`"
   - name: دانلود منیجر 📥
     type: select

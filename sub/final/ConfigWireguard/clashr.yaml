@@ -5,137 +5,284 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: V2 - 2, server: 82.38.31.149, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
+  - {name: V2 - 19, server: 172.235.63.252, port: 443, type: trojan, password: bX_lNHWoW6ywq82mI%3DKUr%2B8i__VSp0Hs_E, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: V2 - 18, server: 172.235.63.252, port: 443, type: trojan, password: bX_lNHWoW6ywq82mI%3DKUr%2B8i__VSp0Hs_E, sni: 172.235.63.252, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@alitexelc", server: cdn.linkman1.ir, port: 443, type: trojan, password: mitivpn, sni: cdn.linkman1.ir, skip-cert-verify: false, network: ws, ws-opts: {path: /720f09dba195249b423f771661162528/workers/services/view/mitivpn/production/settings, headers: {Host: cdn.linkman1.ir}}, udp: true, tfo: false}
+  - {name: V2 - 14, server: 172.238.120.124, port: 443, type: trojan, password: r-_YbwF.j0TtHVewoFIppramjAnmSfqYzJ, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@alitexelc 2", server: 172.236.220.10, port: 443, type: trojan, password: s_WEN9lMmufG%2BqDIsn-4C7JOVAnDdbS3Ui, sni: 172.236.220.10, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: V2 - 9, server: germany3.samanidempire.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 038a0cfe-d210-4b67-baa6-e3ba15046693, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /SDFDSerTeddgwete, headers: {Host: germany3.samanidempire.org}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: V2 - 8, server: 212.100.171.194, port: 17567, type: vless, tls: true, packet-encoding: xudp, uuid: 04b6249e-7375-4263-b47c-6a9e7ad01b54, servername: www.speedtest.net, host: www.speedtest.net, path: /, reality-opts: {public-key: 4aKrDEJaWz_lNRA02ltvjqzh1GvI5wzB-ZPhANYYYU8, short-id: 9891d7}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@alitexelc 3", server: blit3.hamrahcore.ir, port: 719, type: vless, tls: true, packet-encoding: xudp, uuid: 258dc62e-e7fe-4993-9b73-3203b47998ea, network: ws, ws-opts: {path: "/api/v2/xtrnwqjbkr?ed=2560", headers: {Host: play.google.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: V2 - 20`, server: 188.114.97.6, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 27302727-9dfa-4975-990e-88c7a63747cd, servername: tc.amoovictor.cc.cd, alpn: [http%2F1.1], network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: tc.amoovictor.cc.cd}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@alitexelc 4", server: 88.218.120.60, port: 4443, type: vless, tls: true, packet-encoding: xudp, uuid: 41b903e0-7d0a-45d0-9b29-83086024a88b, servername: sni4.streisand.lt, host: sni4.streisand.lt, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: -psPIZaOXQOuX1O1BpZ0_zyXEvx1YwW6ouBIkYGb2Dg, short-id: 612d8fa72c}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: ¹, server: spb.connectv.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 477535ff-7878-0003-a614-5bb0e4b80959, servername: spb.connectv.net, host: spb.connectv.net, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
   - {name: ², server: fi.connectv.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 477535ff-7878-439f-a614-5bb0e4b80959, servername: fi.connectv.net, host: fi.connectv.net, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: V2 - 7, server: germany2.samanidempire.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 54327070-1d45-42ac-9ebb-8dffcb343c93, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /hZvWArgsaxqa, headers: {Host: germany2.samanidempire.org}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: V2 - 13, server: 5.75.252.191, port: 27620, type: vless, tls: true, packet-encoding: xudp, uuid: 7d309744-800a-4fb4-813b-e6a8ab28c4f6, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@alitexelc 5", server: 91.107.255.167, port: 24391, type: vless, tls: true, packet-encoding: xudp, uuid: 7d8584e3-410b-4667-a9b3-9a6465d4f999, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@alitexelc 6", server: sca13.myfymain.com, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: V2 - 6, server: 87.120.93.244, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 91e120bc-159a-4390-b4e1-197b19602ea0, servername: sub.sbrf-cdn342.ru, host: sub.sbrf-cdn342.ru, path: /, flow: xtls-rprx-vision-udp443, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@alitexelc 7", server: 83.228.226.72, port: 18921, type: vless, tls: true, packet-encoding: xudp, uuid: a1ee1f7f-deb9-48e4-9a97-6f565949817d, servername: www.booking.com, host: www.booking.com, path: /, reality-opts: {public-key: 1-7zKj1-3VrO684UVOk4FxaNzyPexU_tszVXRCmYX1I, short-id: 4be126c9c5b32ff6}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@alitexelc 8", server: 83.228.226.72, port: 34129, type: vless, tls: true, packet-encoding: xudp, uuid: a1ee1f7f-deb9-48e4-9a97-6f565949817d, servername: www.nvidia.com, host: www.nvidia.com, path: /, reality-opts: {public-key: iQnJ9plqBA9JIc8tnQGYaiuE3EnhOxl9jWGnVyJTWV0, short-id: 5d9b8a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@alitexelc 9", server: 83.228.226.72, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a1ee1f7f-deb9-48e4-9a97-6f565949817d, host: uplod.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@alitexelc 10", server: 83.228.226.72, port: 52717, type: vless, tls: true, packet-encoding: xudp, uuid: a1ee1f7f-deb9-48e4-9a97-6f565949817d, servername: www.aparat.com, host: www.aparat.com, path: /, reality-opts: {public-key: MQBlL0jqkNr2Hn0oZgD9AVqOidqwRRY6-BaIiOcpzw4, short-id: e2b970e593}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ¹ 2, server: spb.connectv.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b48e0e3b-6595-0001-a554-a8b6a6d442aa, servername: spb.connectv.net, host: spb.connectv.net, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ² 2, server: uk.connectv.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b48e0e3b-6595-4b5f-a554-a8b6a6d442aa, servername: uk.connectv.net, host: uk.connectv.net, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: V2 - 5, server: germany.samanidempire.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c1e03394-9258-4717-9065-d353f484de82, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /reteweef, headers: {Host: germany.samanidempire.org}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@alitexelc 11", server: 213.165.42.40, port: 36985, type: vless, tls: true, packet-encoding: xudp, uuid: c5028183-96af-4b40-b362-12d46527c823, servername: www.yahoo.com, host: www.yahoo.com, path: /, reality-opts: {public-key: CgnlqjbaLZhDiGsk69nT8k7HzOCxtVTEnLViz3AfD2c, short-id: 0a41bdaa}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: V2 - 1, server: ctt.phantom.direct, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d1aa0bc6-8b4f-45a8-8917-4664b3cab074, servername: yandex.ru, host: yandex.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: MvulKIGlZrkM65ni5qzHCtoECLxj1vqbKHA5831RGnk, short-id: f83fd840aa1e1bc6}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: V2 - 16, server: 162.217.249.72, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d78c12c4-6927-40b8-8550-ed9be00334da, servername: nether1cxc.chickenkiller.com, host: nether1cxc.chickenkiller.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: MFedImeNi-4keZx_rkV8WL6jjY6sLncSaXgNjpUBPGo, short-id: 8917bfb9900788d5}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@alitexelc 12", server: 151.101.110.219, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d87234a4-2a6c-4f0c-87f0-300942338207, servername: speedtest.net, network: ws, ws-opts: {path: /, headers: {Host: speedtest.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: V2 - 15, server: 45.130.125.206, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f9fa9ed3-1381-441c-8672-588cbedd012d, servername: r.bibak.bz, network: ws, ws-opts: {path: /, headers: {Host: r.bibak.bz}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: V2 - 10, server: 57.129.117.234, port: 14501, type: vless, tls: true, packet-encoding: xudp, uuid: fd1df366-31db-4ac1-87e1-b55cd025c74a, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: V2 - 3, server: 51.195.235.71, port: 2052, type: vmess, uuid: 59e28f78-c31b-4613-9d9f-1e6732a31f46, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: V2 - 17, server: 57.151.100.27, port: 10086, type: vmess, uuid: 550e8400-e29b-41d4-a716-446655440000, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: V2 - 4, server: de5.taskflowhub.org, port: 2053, type: vmess, uuid: ca58b165-0f7d-49aa-9fae-a017e8a0f884, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: V2 - 11, server: de5.taskflowhub.org, port: 2053, type: vmess, uuid: ca58b165-0f7d-49aa-9fae-a017e8a0f884, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - V2 - 2
+      - V2 - 19
+      - V2 - 18
       - "@alitexelc"
+      - V2 - 14
       - "@alitexelc 2"
+      - V2 - 9
+      - V2 - 8
       - "@alitexelc 3"
+      - V2 - 20`
       - "@alitexelc 4"
       - ¹
       - ²
+      - V2 - 7
+      - V2 - 13
       - "@alitexelc 5"
       - "@alitexelc 6"
+      - V2 - 6
       - "@alitexelc 7"
       - "@alitexelc 8"
       - "@alitexelc 9"
       - "@alitexelc 10"
+      - ¹ 2
+      - ² 2
+      - V2 - 5
       - "@alitexelc 11"
+      - V2 - 1
+      - V2 - 16
       - "@alitexelc 12"
+      - V2 - 15
+      - V2 - 10
+      - V2 - 3
+      - V2 - 17
+      - V2 - 4
+      - V2 - 11
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - V2 - 2
+      - V2 - 19
+      - V2 - 18
       - "@alitexelc"
+      - V2 - 14
       - "@alitexelc 2"
+      - V2 - 9
+      - V2 - 8
       - "@alitexelc 3"
+      - V2 - 20`
       - "@alitexelc 4"
       - ¹
       - ²
+      - V2 - 7
+      - V2 - 13
       - "@alitexelc 5"
       - "@alitexelc 6"
+      - V2 - 6
       - "@alitexelc 7"
       - "@alitexelc 8"
       - "@alitexelc 9"
       - "@alitexelc 10"
+      - ¹ 2
+      - ² 2
+      - V2 - 5
       - "@alitexelc 11"
+      - V2 - 1
+      - V2 - 16
       - "@alitexelc 12"
+      - V2 - 15
+      - V2 - 10
+      - V2 - 3
+      - V2 - 17
+      - V2 - 4
+      - V2 - 11
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - V2 - 2
+      - V2 - 19
+      - V2 - 18
       - "@alitexelc"
+      - V2 - 14
       - "@alitexelc 2"
+      - V2 - 9
+      - V2 - 8
       - "@alitexelc 3"
+      - V2 - 20`
       - "@alitexelc 4"
       - ¹
       - ²
+      - V2 - 7
+      - V2 - 13
       - "@alitexelc 5"
       - "@alitexelc 6"
+      - V2 - 6
       - "@alitexelc 7"
       - "@alitexelc 8"
       - "@alitexelc 9"
       - "@alitexelc 10"
+      - ¹ 2
+      - ² 2
+      - V2 - 5
       - "@alitexelc 11"
+      - V2 - 1
+      - V2 - 16
       - "@alitexelc 12"
+      - V2 - 15
+      - V2 - 10
+      - V2 - 3
+      - V2 - 17
+      - V2 - 4
+      - V2 - 11
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - V2 - 2
+      - V2 - 19
+      - V2 - 18
       - "@alitexelc"
+      - V2 - 14
       - "@alitexelc 2"
+      - V2 - 9
+      - V2 - 8
       - "@alitexelc 3"
+      - V2 - 20`
       - "@alitexelc 4"
       - ¹
       - ²
+      - V2 - 7
+      - V2 - 13
       - "@alitexelc 5"
       - "@alitexelc 6"
+      - V2 - 6
       - "@alitexelc 7"
       - "@alitexelc 8"
       - "@alitexelc 9"
       - "@alitexelc 10"
+      - ¹ 2
+      - ² 2
+      - V2 - 5
       - "@alitexelc 11"
+      - V2 - 1
+      - V2 - 16
       - "@alitexelc 12"
+      - V2 - 15
+      - V2 - 10
+      - V2 - 3
+      - V2 - 17
+      - V2 - 4
+      - V2 - 11
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - V2 - 2
+      - V2 - 19
+      - V2 - 18
       - "@alitexelc"
+      - V2 - 14
       - "@alitexelc 2"
+      - V2 - 9
+      - V2 - 8
       - "@alitexelc 3"
+      - V2 - 20`
       - "@alitexelc 4"
       - ¹
       - ²
+      - V2 - 7
+      - V2 - 13
       - "@alitexelc 5"
       - "@alitexelc 6"
+      - V2 - 6
       - "@alitexelc 7"
       - "@alitexelc 8"
       - "@alitexelc 9"
       - "@alitexelc 10"
+      - ¹ 2
+      - ² 2
+      - V2 - 5
       - "@alitexelc 11"
+      - V2 - 1
+      - V2 - 16
       - "@alitexelc 12"
+      - V2 - 15
+      - V2 - 10
+      - V2 - 3
+      - V2 - 17
+      - V2 - 4
+      - V2 - 11
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - V2 - 2
+      - V2 - 19
+      - V2 - 18
       - "@alitexelc"
+      - V2 - 14
       - "@alitexelc 2"
+      - V2 - 9
+      - V2 - 8
       - "@alitexelc 3"
+      - V2 - 20`
       - "@alitexelc 4"
       - ¹
       - ²
+      - V2 - 7
+      - V2 - 13
       - "@alitexelc 5"
       - "@alitexelc 6"
+      - V2 - 6
       - "@alitexelc 7"
       - "@alitexelc 8"
       - "@alitexelc 9"
       - "@alitexelc 10"
+      - ¹ 2
+      - ² 2
+      - V2 - 5
       - "@alitexelc 11"
+      - V2 - 1
+      - V2 - 16
       - "@alitexelc 12"
+      - V2 - 15
+      - V2 - 10
+      - V2 - 3
+      - V2 - 17
+      - V2 - 4
+      - V2 - 11
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -163,20 +310,41 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - V2 - 2
+      - V2 - 19
+      - V2 - 18
       - "@alitexelc"
+      - V2 - 14
       - "@alitexelc 2"
+      - V2 - 9
+      - V2 - 8
       - "@alitexelc 3"
+      - V2 - 20`
       - "@alitexelc 4"
       - ¹
       - ²
+      - V2 - 7
+      - V2 - 13
       - "@alitexelc 5"
       - "@alitexelc 6"
+      - V2 - 6
       - "@alitexelc 7"
       - "@alitexelc 8"
       - "@alitexelc 9"
       - "@alitexelc 10"
+      - ¹ 2
+      - ² 2
+      - V2 - 5
       - "@alitexelc 11"
+      - V2 - 1
+      - V2 - 16
       - "@alitexelc 12"
+      - V2 - 15
+      - V2 - 10
+      - V2 - 3
+      - V2 - 17
+      - V2 - 4
+      - V2 - 11
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

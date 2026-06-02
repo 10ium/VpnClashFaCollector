@@ -465,7 +465,10 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: Vaslbashi-TR2, server: 147.185.161.100, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: "%40Vaslbashi", network: ws, ws-opts: {path: /, headers: {Host: itself-neil-triangle-beauty.trycloudflare.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇬🇧 Vaslbashi-UK1, server: 147.185.161.100, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: "%40Vaslbashi", network: ws, ws-opts: {path: /, headers: {Host: concentrations-anna-replies-asp.trycloudflare.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇬🇧 Vaslbashi-UK4, server: 45.131.211.87, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: "%40Vaslbashi", network: ws, ws-opts: {path: /, headers: {Host: concentrations-anna-replies-asp.trycloudflare.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇬🇧 Vaslbashi-UK3, server: 66.81.247.63, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: "%40Vaslbashi", network: ws, ws-opts: {path: /, headers: {Host: concentrations-anna-replies-asp.trycloudflare.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇬🇧 Vaslbashi-UK2, server: ww.speedtest.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: "%40Vaslbashi", network: ws, ws-opts: {path: /, headers: {Host: concentrations-anna-replies-asp.trycloudflare.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +485,30 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - Vaslbashi-TR2
+      - 🇬🇧 Vaslbashi-UK1
+      - 🇬🇧 Vaslbashi-UK4
+      - 🇬🇧 Vaslbashi-UK3
+      - 🇬🇧 Vaslbashi-UK2
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - Vaslbashi-TR2
+      - 🇬🇧 Vaslbashi-UK1
+      - 🇬🇧 Vaslbashi-UK4
+      - 🇬🇧 Vaslbashi-UK3
+      - 🇬🇧 Vaslbashi-UK2
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - Vaslbashi-TR2
+      - 🇬🇧 Vaslbashi-UK1
+      - 🇬🇧 Vaslbashi-UK4
+      - 🇬🇧 Vaslbashi-UK3
+      - 🇬🇧 Vaslbashi-UK2
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +524,30 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Vaslbashi-TR2
+      - 🇬🇧 Vaslbashi-UK1
+      - 🇬🇧 Vaslbashi-UK4
+      - 🇬🇧 Vaslbashi-UK3
+      - 🇬🇧 Vaslbashi-UK2
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Vaslbashi-TR2
+      - 🇬🇧 Vaslbashi-UK1
+      - 🇬🇧 Vaslbashi-UK4
+      - 🇬🇧 Vaslbashi-UK3
+      - 🇬🇧 Vaslbashi-UK2
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Vaslbashi-TR2
+      - 🇬🇧 Vaslbashi-UK1
+      - 🇬🇧 Vaslbashi-UK4
+      - 🇬🇧 Vaslbashi-UK3
+      - 🇬🇧 Vaslbashi-UK2
   - name: دانلود منیجر 📥
     type: select
     proxies:

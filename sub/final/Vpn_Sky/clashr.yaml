@@ -5,53 +5,109 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@Vpn_Sky`", server: 217.198.190.233, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: cc933214-2707-4f44-81b5-0913368aec6b, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Vpn_Sky` 2", server: varzesh3.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: d7f99f17-bea9-4118-a20b-98dec2855beb, network: ws, ws-opts: {path: /, headers: {Host: panel.pydeveloper.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ♛ @Vpn_Sky | پرسرعت 2, server: 18.157.205.223, port: 15, type: hysteria2, ports: 15, password: Masir_Sefid, obfs: salamander, obfs-password: Masir_Sefid, sni: qus.masir-sefid.shop, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ♛ @Vpn_Sky | پرسرعت 6, server: 18.157.205.223, port: 2083, type: hysteria2, ports: 2083, password: Masir_Sefid, obfs: salamander, obfs-password: Masir_Sefid, sni: qus.masir-sefid.shop, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ♛ @Vpn_Sky | پرسرعت 8, server: 18.157.205.223, port: 4040, type: hysteria2, ports: 4040, password: Masir_Sefid, obfs: salamander, obfs-password: Masir_Sefid, sni: qus.masir-sefid.shop, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ♛ @Vpn_Sky | پرسرعت 5, server: 18.157.205.223, port: 44044, type: hysteria2, ports: 44044, password: Masir_Sefid, obfs: salamander, obfs-password: Masir_Sefid, sni: qus.masir-sefid.shop, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ♛ @Vpn_Sky | پرسرعت 9`, server: 18.157.205.223, port: 4784, type: hysteria2, ports: 4784, password: Masir_Sefid, obfs: salamander, obfs-password: Masir_Sefid, sni: qus.masir-sefid.shop, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ♛ @Vpn_Sky | پرسرعت 7, server: 18.157.205.223, port: 48, type: hysteria2, ports: 48, password: Masir_Sefid, obfs: salamander, obfs-password: Masir_Sefid, sni: qus.masir-sefid.shop, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ♛ @Vpn_Sky | پرسرعت 3, server: 18.157.205.223, port: 52848, type: hysteria2, ports: 52848, password: Masir_Sefid, obfs: salamander, obfs-password: Masir_Sefid, sni: qus.masir-sefid.shop, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ♛ @Vpn_Sky | پرسرعت 4, server: 18.157.205.223, port: 59826, type: hysteria2, ports: 59826, password: Masir_Sefid, obfs: salamander, obfs-password: Masir_Sefid, sni: qus.masir-sefid.shop, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ♛ @Vpn_Sky | پرسرعت 1, server: 18.157.205.223, port: 8443, type: hysteria2, ports: 8443, password: Masir_Sefid, obfs: salamander, obfs-password: Masir_Sefid, sni: qus.masir-sefid.shop, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Sky`", server: sca20.myfymain.com, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - ♛ @Vpn_Sky | پرسرعت 2
+      - ♛ @Vpn_Sky | پرسرعت 6
+      - ♛ @Vpn_Sky | پرسرعت 8
+      - ♛ @Vpn_Sky | پرسرعت 5
+      - ♛ @Vpn_Sky | پرسرعت 9`
+      - ♛ @Vpn_Sky | پرسرعت 7
+      - ♛ @Vpn_Sky | پرسرعت 3
+      - ♛ @Vpn_Sky | پرسرعت 4
+      - ♛ @Vpn_Sky | پرسرعت 1
       - "@Vpn_Sky`"
-      - "@Vpn_Sky` 2"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - ♛ @Vpn_Sky | پرسرعت 2
+      - ♛ @Vpn_Sky | پرسرعت 6
+      - ♛ @Vpn_Sky | پرسرعت 8
+      - ♛ @Vpn_Sky | پرسرعت 5
+      - ♛ @Vpn_Sky | پرسرعت 9`
+      - ♛ @Vpn_Sky | پرسرعت 7
+      - ♛ @Vpn_Sky | پرسرعت 3
+      - ♛ @Vpn_Sky | پرسرعت 4
+      - ♛ @Vpn_Sky | پرسرعت 1
       - "@Vpn_Sky`"
-      - "@Vpn_Sky` 2"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - ♛ @Vpn_Sky | پرسرعت 2
+      - ♛ @Vpn_Sky | پرسرعت 6
+      - ♛ @Vpn_Sky | پرسرعت 8
+      - ♛ @Vpn_Sky | پرسرعت 5
+      - ♛ @Vpn_Sky | پرسرعت 9`
+      - ♛ @Vpn_Sky | پرسرعت 7
+      - ♛ @Vpn_Sky | پرسرعت 3
+      - ♛ @Vpn_Sky | پرسرعت 4
+      - ♛ @Vpn_Sky | پرسرعت 1
       - "@Vpn_Sky`"
-      - "@Vpn_Sky` 2"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - ♛ @Vpn_Sky | پرسرعت 2
+      - ♛ @Vpn_Sky | پرسرعت 6
+      - ♛ @Vpn_Sky | پرسرعت 8
+      - ♛ @Vpn_Sky | پرسرعت 5
+      - ♛ @Vpn_Sky | پرسرعت 9`
+      - ♛ @Vpn_Sky | پرسرعت 7
+      - ♛ @Vpn_Sky | پرسرعت 3
+      - ♛ @Vpn_Sky | پرسرعت 4
+      - ♛ @Vpn_Sky | پرسرعت 1
       - "@Vpn_Sky`"
-      - "@Vpn_Sky` 2"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - ♛ @Vpn_Sky | پرسرعت 2
+      - ♛ @Vpn_Sky | پرسرعت 6
+      - ♛ @Vpn_Sky | پرسرعت 8
+      - ♛ @Vpn_Sky | پرسرعت 5
+      - ♛ @Vpn_Sky | پرسرعت 9`
+      - ♛ @Vpn_Sky | پرسرعت 7
+      - ♛ @Vpn_Sky | پرسرعت 3
+      - ♛ @Vpn_Sky | پرسرعت 4
+      - ♛ @Vpn_Sky | پرسرعت 1
       - "@Vpn_Sky`"
-      - "@Vpn_Sky` 2"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - ♛ @Vpn_Sky | پرسرعت 2
+      - ♛ @Vpn_Sky | پرسرعت 6
+      - ♛ @Vpn_Sky | پرسرعت 8
+      - ♛ @Vpn_Sky | پرسرعت 5
+      - ♛ @Vpn_Sky | پرسرعت 9`
+      - ♛ @Vpn_Sky | پرسرعت 7
+      - ♛ @Vpn_Sky | پرسرعت 3
+      - ♛ @Vpn_Sky | پرسرعت 4
+      - ♛ @Vpn_Sky | پرسرعت 1
       - "@Vpn_Sky`"
-      - "@Vpn_Sky` 2"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -79,8 +135,16 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - ♛ @Vpn_Sky | پرسرعت 2
+      - ♛ @Vpn_Sky | پرسرعت 6
+      - ♛ @Vpn_Sky | پرسرعت 8
+      - ♛ @Vpn_Sky | پرسرعت 5
+      - ♛ @Vpn_Sky | پرسرعت 9`
+      - ♛ @Vpn_Sky | پرسرعت 7
+      - ♛ @Vpn_Sky | پرسرعت 3
+      - ♛ @Vpn_Sky | پرسرعت 4
+      - ♛ @Vpn_Sky | پرسرعت 1
       - "@Vpn_Sky`"
-      - "@Vpn_Sky` 2"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
