@@ -465,7 +465,14 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: "🇳🇱 [Kia_Net] 🇳🇱 NL-632", server: 82.38.31.199, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
   - {name: "@Kia_Net", server: 104.19.229.21, port: 443, type: trojan, password: aa710f78-eddb-45b4-bd32-1f8692a754e5, sni: s.blibli.com.cyylr.eu.cc, skip-cert-verify: false, network: ws, ws-opts: {path: /ae-bo, headers: {Host: s.blibli.com.cyylr.eu.cc}}, udp: true, tfo: false}
+  - {name: "🇫🇷 [Kia_Net] 🇫🇷 FR-513", server: 152.228.162.19, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 25f86cb1-2140-4085-abcb-c3a0ea7a4be0, network: ws, ws-opts: {path: /vless/}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇫🇷 [Kia_Net] 🇫🇷 FR-489`", server: OV-France1.09vpn.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 25f86cb1-2140-4085-abcb-c3a0ea7a4be0, network: ws, ws-opts: {path: /vless/, headers: {Host: OV-France1.09vpn.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇺🇸 [Kia_Net] 🇺🇸 US-9871", server: 15.204.97.197, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇺🇸 [Kia_Net] 🇺🇸 US-11399", server: 15.204.97.216, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇺🇸 [Kia_Net] 🇺🇸 US-11398`", server: 15.204.97.219, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇫🇷 [Kia_Net] 🇫🇷 FR-507", server: 152.228.162.19, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 5ce84688-f535-46ad-a512-37b17becf6ea, network: ws, ws-opts: {path: /vless/, headers: {Host: akamaized.net}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@Kia_Net 2", server: panel.dibaux.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 79475016-7b3c-414d-9110-9b9faac6922d, network: ws, ws-opts: {path: /stream, headers: {Host: panel.dibaux.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@Kia_Net`", server: 104.19.229.21, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: cc752a3e-1537-4e86-bb50-1b897bf7b33c, servername: cyylr.eu.cc, network: ws, ws-opts: {path: /sg-melbi, headers: {Host: cyylr.eu.cc}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
@@ -484,7 +491,14 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - 🇳🇱 [Kia_Net] 🇳🇱 NL-632
       - "@Kia_Net"
+      - 🇫🇷 [Kia_Net] 🇫🇷 FR-513
+      - 🇫🇷 [Kia_Net] 🇫🇷 FR-489`
+      - 🇺🇸 [Kia_Net] 🇺🇸 US-9871
+      - 🇺🇸 [Kia_Net] 🇺🇸 US-11399
+      - 🇺🇸 [Kia_Net] 🇺🇸 US-11398`
+      - 🇫🇷 [Kia_Net] 🇫🇷 FR-507
       - "@Kia_Net 2"
       - "@Kia_Net`"
   - name: خودکار (بهترین پینگ) 🤖
@@ -493,7 +507,14 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - 🇳🇱 [Kia_Net] 🇳🇱 NL-632
       - "@Kia_Net"
+      - 🇫🇷 [Kia_Net] 🇫🇷 FR-513
+      - 🇫🇷 [Kia_Net] 🇫🇷 FR-489`
+      - 🇺🇸 [Kia_Net] 🇺🇸 US-9871
+      - 🇺🇸 [Kia_Net] 🇺🇸 US-11399
+      - 🇺🇸 [Kia_Net] 🇺🇸 US-11398`
+      - 🇫🇷 [Kia_Net] 🇫🇷 FR-507
       - "@Kia_Net 2"
       - "@Kia_Net`"
   - name: پشتیبان (در صورت قطعی) 🧯
@@ -502,7 +523,14 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - 🇳🇱 [Kia_Net] 🇳🇱 NL-632
       - "@Kia_Net"
+      - 🇫🇷 [Kia_Net] 🇫🇷 FR-513
+      - 🇫🇷 [Kia_Net] 🇫🇷 FR-489`
+      - 🇺🇸 [Kia_Net] 🇺🇸 US-9871
+      - 🇺🇸 [Kia_Net] 🇺🇸 US-11399
+      - 🇺🇸 [Kia_Net] 🇺🇸 US-11398`
+      - 🇫🇷 [Kia_Net] 🇫🇷 FR-507
       - "@Kia_Net 2"
       - "@Kia_Net`"
   - name: اتصال پایدار 🔗
@@ -520,7 +548,14 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 🇳🇱 [Kia_Net] 🇳🇱 NL-632
       - "@Kia_Net"
+      - 🇫🇷 [Kia_Net] 🇫🇷 FR-513
+      - 🇫🇷 [Kia_Net] 🇫🇷 FR-489`
+      - 🇺🇸 [Kia_Net] 🇺🇸 US-9871
+      - 🇺🇸 [Kia_Net] 🇺🇸 US-11399
+      - 🇺🇸 [Kia_Net] 🇺🇸 US-11398`
+      - 🇫🇷 [Kia_Net] 🇫🇷 FR-507
       - "@Kia_Net 2"
       - "@Kia_Net`"
   - name: توزیع بار (گردشی) 🔁
@@ -529,7 +564,14 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 🇳🇱 [Kia_Net] 🇳🇱 NL-632
       - "@Kia_Net"
+      - 🇫🇷 [Kia_Net] 🇫🇷 FR-513
+      - 🇫🇷 [Kia_Net] 🇫🇷 FR-489`
+      - 🇺🇸 [Kia_Net] 🇺🇸 US-9871
+      - 🇺🇸 [Kia_Net] 🇺🇸 US-11399
+      - 🇺🇸 [Kia_Net] 🇺🇸 US-11398`
+      - 🇫🇷 [Kia_Net] 🇫🇷 FR-507
       - "@Kia_Net 2"
       - "@Kia_Net`"
   - name: توزیع بار (موقت) ⏳
@@ -538,7 +580,14 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 🇳🇱 [Kia_Net] 🇳🇱 NL-632
       - "@Kia_Net"
+      - 🇫🇷 [Kia_Net] 🇫🇷 FR-513
+      - 🇫🇷 [Kia_Net] 🇫🇷 FR-489`
+      - 🇺🇸 [Kia_Net] 🇺🇸 US-9871
+      - 🇺🇸 [Kia_Net] 🇺🇸 US-11399
+      - 🇺🇸 [Kia_Net] 🇺🇸 US-11398`
+      - 🇫🇷 [Kia_Net] 🇫🇷 FR-507
       - "@Kia_Net 2"
       - "@Kia_Net`"
   - name: دانلود منیجر 📥

@@ -465,9 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: CPI_3, server: germany3.samanidempire.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 038a0cfe-d210-4b67-baa6-e3ba15046693, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /SDFDSerTeddgwete, headers: {Host: germany3.samanidempire.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: CPI_2, server: germany2.samanidempire.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 54327070-1d45-42ac-9ebb-8dffcb343c93, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /hZvWArgsaxqa, headers: {Host: germany2.samanidempire.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: CPI_1, server: germany.samanidempire.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c1e03394-9258-4717-9065-d353f484de82, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /reteweef, headers: {Host: germany.samanidempire.org}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hamedp71::🇦🇲, server: 77.91.68.70, port: 55983, type: vless, tls: true, packet-encoding: xudp, uuid: f667a096-5231-4cfb-8759-92bb32473139, servername: yahoo.com, host: yahoo.com, path: /, reality-opts: {public-key: nWQ7b9l9X6N3PrXLgIzOvMM8iSYrqjVHEb9ikWxqYSg, short-id: 0e}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,27 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - CPI_3
-      - CPI_2
-      - CPI_1
+      - hamedp71::🇦🇲
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - CPI_3
-      - CPI_2
-      - CPI_1
+      - hamedp71::🇦🇲
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - CPI_3
-      - CPI_2
-      - CPI_1
+      - hamedp71::🇦🇲
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -520,27 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - CPI_3
-      - CPI_2
-      - CPI_1
+      - hamedp71::🇦🇲
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - CPI_3
-      - CPI_2
-      - CPI_1
+      - hamedp71::🇦🇲
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - CPI_3
-      - CPI_2
-      - CPI_1
+      - hamedp71::🇦🇲
   - name: دانلود منیجر 📥
     type: select
     proxies:

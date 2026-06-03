@@ -1,5 +1,33 @@
 # آرشیو کانال: @freenet_vt
-بروزرسانی: 2026-06-03 02:42:13 UTC
+بروزرسانی: 2026-06-03 14:27:28 UTC
+
+### 🕒 2026-06-03 09:04:40 UTC
+اسکربیت اسکن سرور های sstp با ترموکس
+
+---
+
+### 🕒 2026-06-03 09:03:52 UTC
+`#!/usr/bin/env bash# Hamid Scanner Menu: SSTP + DoH# ColorsRED="\033[31m"; GREEN="\033[32m"; PURPLE="\033[35m"; CYAN="\033[36m"; MAGENTA="\033[35m"; RESET="\033[0m"TAG="${PURPLE}┌────────────────────┐\n│ t.me/freenet_vt    │\n└────────────────────┘${RESET}"# ----------------------------------------------------------# Option 1 — SSTP Scanner# ----------------------------------------------------------scan_sstp() {    PAGE_URL="https://ipspeed.info/free-sstp.php"    echo "[*] Fetching SSTP servers..."    HTML="$(curl -fsSL "$PAGE_URL")" || { echo "[!] Fetch failed"; return; }    mapfile -t RAW_HOSTS < <(echo "$HTML" | grep -Eo '[a-zA-Z0-9.-]+\.[a-z]{2,6}:[0-9]{2,5}')    if [[ ${#RAW_HOSTS[@]} -eq 0 ]]; then      echo "[!] No hosts found"      return    fi    echo "[*] Testing servers..."    for item in "${RAW_HOSTS[@]}"; do      host="${item%%:*}"      port="${item##*:}"      [[ "$host" == "$port" ]] && port=443      if timeout 5 bash -c "echo > /dev/tcp/${host}/${port}" 2>/dev/null; then        echo -e "${GREEN}[OPEN] ${host}:${port}${RESET}\n$TAG"      else        echo -e "${RED}[CLOSED] ${host}:${port}${RESET}\n$TAG"      fi    done}# ----------------------------------------------------------# Option 2 — DoH Scanner (Fast + Progress % + Single Best)# ----------------------------------------------------------scan_doh_dns() {    LIST_URL="https://raw.githubusercontent.com/10ium/Public-DNS-Collector/main/lists/doh.txt"    TEST_DOMAIN="example.com"    TIMEOUT=1    PARALLEL=35    echo -e "${MAGENTA}Downloading DoH list...${RESET}"    LIST=$(curl -fsS "$LIST_URL") || { echo "Error downloading list"; return; }    LIST=$(echo "$LIST" | grep -v '^$')    TOTAL=$(echo "$LIST" | wc -l)    echo "Total: $TOTAL servers"    TMP=$(mktemp)    current=0    test_one() {        base="$1"        if [[ "$base" == *"dns-query"* ]]; then            URL="$base?name=$TEST_DOMAIN&type=A"        else            URL="${base%/}/dns-query?name=$TEST_DOMAIN&type=A"        fi        RESULT=$(curl -s -H "accept: application/dns-json" --max-time $TIMEOUT -w "\n%{time_total}" "$URL")        EXIT=$?        [[ $EXIT -ne 0 ]] && return        TIME=$(echo "$RESULT" | tail -n1)        BODY=$(echo "$RESULT" | sed '$d')        STATUS=$(echo "$BODY" | jq -r '.Status // 1' 2>/dev/null)        [[ "$STATUS" == "0" ]] && echo "$TIME $URL" >> "$TMP"    }    for base in $LIST; do        ((current++))        PERCENT=$(( current * 100 / TOTAL ))        echo -ne "Progress: $PERCENT%   \r"        test_one "$base" &        while (( $(jobs -r | wc -l) >= PARALLEL )); do            sleep 0.05        done    done    wait    echo -e "\nDone.\n"    BEST=$(sort -n "$TMP" | head -n1)    rm -f "$TMP"    if [[ -n "$BEST" ]]; then        BEST_TIME=$(echo "$BEST" | awk '{print $1}')        BEST_URL=$(echo "$BEST" | awk '{print $2}')        echo -e "${GREEN}Fastest DoH:${RESET}"        echo -e "${GREEN}$BEST_URL${RESET}"        echo -e "${GREEN}Latency: $BEST_TIME sec${RESET}"        echo        echo "curl -H 'accept: application/dns-json' \"$BEST_URL\""    else        echo "No working DoH found."    fi}# ----------------------------------------------------------# MENU# ----------------------------------------------------------while true; do    clear    echo -e "${MAGENTA}======================================${RESET}"    echo -e "${MAGENTA}        t.me/freenet_vt Menu         ${RESET}"    echo -e "${MAGENTA}======================================${RESET}"    echo    echo -e "${CYAN}1) Scan SSTP${RESET}"    echo -e "${CYAN}2) Scan DoH DNS${RESET}"    echo -e "${CYAN}0) Exit${RESET}"    echo    read -p "Choose option: " opt    case $opt in        1) scan_sstp; read -p "Press Enter...";;        2) scan_doh_dns; read -p "Press Enter...";;        0) exit ;;        *) echo "Invalid choice"; sleep 1 ;;    esacdone`
+
+---
+
+### 🕒 2026-06-03 08:57:19 UTC
+> ↪️ **Forwarded**
+
+اموزش استفاده از سرورهای sstp سایت vpngate
+لینک دانلود ترموکس از  github
+[https://github.com/termux/termux-app/releases](https://github.com/termux/termux-app/releases)
+اسوربیت مورد نیاز
+` `
+دانلود نرم افزهر zedpass
+[https://github.com/CluvexStudio/ZedPass/releases](https://github.com/CluvexStudio/ZedPass/releases)
+
+---
+
+### 🕒 2026-06-03 07:43:39 UTC
+نپستر تست شده با ايرانسل
+
+---
 
 ### 🕒 2026-06-02 23:40:21 UTC
 Sing box
@@ -143,138 +171,6 @@ Sing box
 
 ### 🕒 2026-06-02 15:15:33 UTC
 bdnet://4f0736163106065a0a120f33554835466241005f0b02347d1c1779467441185f1f073f3c50076a467a4f4a4d071e233c5340725e7a41441c0e042329161f72342d0f045b02497c7f444a22107a594a08565b6070051c695d6141441c020424355b56244662414a124406352e474437017a594a7d131824325905041…
-
----
-
-### 🕒 2026-06-02 13:03:19 UTC
-یه موضوعی که بد نیست بدونید اینه که از هر هزار تا کانال VPN، شاید فقط ۱۰ تا کانال واقعاً کانفیگ عمومی تولید کنن 
-اکثر کانال‌ها کانفیگ‌های ساخته‌شده توسط دیگران رو جمع‌آوری می‌کنن و داخل کانال خودشون قرار میدن؛ درست مثل بعضی از کانفیگ‌هایی که ما هم با عنوان «پابلیک» منتشر می‌کنیم
-معمولاً کانال‌های سازنده رو میشه راحت تشخیص داد؛ چون به‌صورت مداوم کانفیگ جدید تولید می‌کنن و پشت این کار، زمان، دانش فنی و هزینه‌ وجود داره
-اگر این‌ها نباشن، عملاً کانفیگی هم نیست که بقیه کانال‌ها بخوان منتشر کنن!
-
----
-
-### 🕒 2026-06-02 12:21:35 UTC
-کانفیگ open vpn
-
----
-
-### 🕒 2026-06-02 12:04:15 UTC
-`slipnet-enc://AQ3LFCK0MNyY56MeL3iDS1fmDsOcMEJEpho4PmQLrCp00aDQBbSjCu1ai1EzT01x7VtIpoz7twT03oIEUGkGP77u7+pnwFB3DS8eDutgrZVGxaiD9WgVHzb/v55gJYkRAS22yOBGDM8/2LMx+9BoXiIsjrFBHxEcVbWzqbzn1ow7+UYSEaeIfw0aSvJ28yTT95xy4DsB+95+6pdIAZTJRRB5ys2ybcIuf+kZC7xKT8YPEq8GLJ5hj8zSXLrYCEBjLKvZUpJ7x/YpOJkwx6ytKZqh0oMYlZBpYfxG/pPHB6/JYRgYmNNG59Y/bKOmw7pjHgmUo6HSkEkyBMPZMnZ2YZYRnXJ548+IpMmd/2d5032O9zvTp1ZarduUCIjhasCL+0lo4ezXbZd+hugyB4CxQy3XiVrUKuZPm4X9xgDN8mISFfZLQR2VGv8Gyu/7miw8B69dk9qQzYXSMQpcBFSBbqir4DGr5wdDLY+zhLGrQPMQRMaxheJQaBVMVvteBhACwikzjwD4JSKPotGpf1ArzzL4orsOTFOR+v4E2LIYYwgxkchtP3hdaivVwNeJKzpaPidZGM+1kjz50wAZ72FjWaWXU9x7aHK4NPPZEbyUsPsfDsSFLrtissf9oTRi8VF3kMqBQur3qJQAfOhnsbSxDL5saLScsZcktvI9NzsQuFESQNr8D0mOKkYflFuzn6mh+/MmepVhoAkEAVZJR91vMHbsJQ==`
-
----
-
-### 🕒 2026-06-02 12:02:07 UTC
-سبک کانفیگ های قبلی
-
----
-
-### 🕒 2026-06-02 12:01:44 UTC
-`slipnet-enc://ASrRDiUUzY1r/sgZJcssyxSgW9jHTN1DJZ2/v8/sZ7PTLXfFCpvnNVTj6N3dQzl2MBpUaUaGAtwpUZk8oQ/TUAEf4QeYotMpGRA5GbC+x8GIkPLzr2HKH72hQNZOn0h5UZLFk6xtgBG15dwo4YtQ4PyNy6Q8sJ7XUGk9TzHaAOBpj5u1zCHoxeFyWq+hxcU8u+jredDxvnploM2qD4RkwnlSjXvJGbxaA+5CCvbvMXvuwd4nqZd//puUqoOeSuFkB8/Ku92ftQp3g2jycrjVapnzBsmSAWqYMRHpj8NkziCKBnkJaZRnZdvYt39J/bmuGLtwD53vPB9eH58F0PQ6neh2qFXKMDErz9Gx7ey6w7TztuCvOD7uyGegEXfZ036NeAx0Tf1WFnpmo+tr4F1bqyEwOUXHL1qCvCLLSCZrKlj2SVTW4lIXiPwRoVlKhRSIUtTHvguzOrKBerYiKzKjgV3vmDdBeL+sGV/TF0VWJTV6KeOnh3mr4i4L4508pVP5LSGFVlbQ7gVLvB6RajEMrkjYTMyheUZz8uTVKfqWjg3Omn1IH307KF5RQ3vaWvxEwCEQ3X8cVCuiB3R9aumog9QBHcFlVpYcmBeEve4Pl0HMYvn0VXufQrcPEY8KBCHmhbN2sGbvrFmuKjnmGq+tDyL/Ngq8X+Zq6JzGo9p2GNs7SDVT3yzVfvfzvdozgHx5tYN6BZLtpGL7I22sU3YclVetR6+M06gzp6k=`
-
----
-
-### 🕒 2026-06-02 11:54:17 UTC
-slipnet-enc://AfcGjjgFsXQkvl/zhGOL2EKiv2z1EkNUWGoDDDpJwjQ8eLLW2duf9S5VSRpyLxCx816gzfe1etl8CzcCYSAE9W+4CWcomL4+2JBX7IUrGxYlLJmQvgqmNFtA4eYlBTZNjDwluOpQUuXq7NtcJvv58oF9ZWmyGRkaBel+kflbDFnfocuNGTKZOVzermNmyFBn1GQN9w60J6LbUz8MuJvuM01VBhA09T8W43P/+h2hzLIf9bvsQKQI/D3WLwG6BaT/HRGCQo974N1nplaHwOmLm3Jky5QgafXC6M6k/oYVmAx2y6RPJuMtDFy+5QRwZHnjarjf630khCbrpD4qrFYXsPyRS3rVdledfOl9bZD28FK05rHjvU5bB/BllqOTC44IJaz/GY1ZcRgjrfT97xV164cdo1aOZVZA1QNL7scn7w2h2CG8EHiXfdyhq8ymVybwElIkDIzmYyA5tK3QpCtSMLa9yCz5ZWu9+krZzWZTLAlvv6NITSmFGN0I3LJvCebNDbWJPzo/83riIyoib7rBuxu7moFZ6uNiXcbk1e1byZSrpyHSzc4=
-
----
-
-### 🕒 2026-06-02 11:53:48 UTC
-واسه خودمم بعضی موقع پینگ خوب ولی هیچی بلز نمی کنه کلا باگ می گیره چند بلر از تل خاج بشید باز میکنید هر بار یه دقیقه صبرش بدید معمولا هنداونه بار اول بلز میشه
-
----
-
-### 🕒 2026-06-02 11:50:15 UTC
-هنش روی ایرانسل  تست کردم نت همراهم قطع شده
-
----
-
-### 🕒 2026-06-02 11:49:35 UTC
-بخاطر اختلال ممکن هست وصل نشه وصل بشه چیزی بالا نیاد سرورها سرعتشون خفنه تو این جور مواقع با یه قطع و وصل کردن یا حالت پرواز درست میشه وصل شدی دو سه دقیقه طول میکشه تا دیتا بده
-
----
-
-### 🕒 2026-06-02 11:47:32 UTC
-`slipnet-enc://Addg/8uL4WDqCWyI7PKLKbsDvrQSpfPUvoX6t7rtFi47sajDJtb915I+k537BrIbMqclDGrieOWBGIj7eJ/W0gYjWCaCygT3iJopfjOKCmTDTT+5gJcnh/sX9frhW+9Smr57WQov6SxLC1BgD0Q6Kv8oc8D8AaSGRpHaAng9wbP/SSEu4v6Iukpyqy0grA/S1fuR570Hnq0TtMoMHms5TKITWzsv8mLVJKHtRoZ/f4rLpS43muZTwZTJ1QfpBTPDcet+Lj+MetRqCFgF1Dgt/4l3UW6K4FcvqchyUn7eWin3DKZVQACOKw0HmkMgRgdEshSNeToljcl5ZeRMwsOjwZJM7tNKgbcdUK8fB8vpuA9JOcOwCzW9kz9+sLCQJ+6nVDCNj1EbOXN1KVzjQ9ixQAWOLFr4dqFAF3WTgDobY7ZK0qk1t2iNLv0NuLJGvHCjYxUeELf+fKslGYDmnjegQIZM5683WCwKa5s8u+rZ/gYdb8iC75TaguGbRX2dSb7uJy7hGBC6Anl3qyxFbYYA6gZCYTQ6XMY=`
-
----
-
-### 🕒 2026-06-02 09:51:50 UTC
-باهاش تو تلگرام فیلم ۵ مگابایتی تو ۳۰ ثانیه دانلود کن
-
----
-
-### 🕒 2026-06-02 09:51:07 UTC
-`slipnet-enc://AY6cHzeQeR1g7oLFsyn1xD3CsJAsfpIdxmbKfa/TxswOlsGk0VH5PqznhyXreYEbTeQS2omefCEU+zOqnxMdEDNBrFr4Qi1fbvaCDnjfDoHz1FPJ3vQ8AnnR7C7Zuac4f5wJqymki5GKUrKVCjC0FbmXs6RJ+NgZJWEg2P1RqcqGVuAxPi+O/wyYciiI4Kvm7pZ2qmeTy+lz1sEJewjKH7NXZFHAqvYe3xMlQGqB/P0dR4sU5Lqp7uKt9WZo0/f/0hZSla54/PopFUIVJERoHvtxj5fk3iEfSOM77g1WHME75mMp7aHiSqYvxI9y/DFrJxcJiYSvKdlfUVae/dyEtWbWb8Jk1LMK2PWJykWcRSwQWRAbgc/Vi5KkEflyPXnrFXjQ/UOJE3e9Iep0xY9PE8R7NVOD+UdfOva4/l2ghxopseCKTMQOZFPIouU91tKyUmGVGHeb3pxhPAgPVaI5AQ3DNBWyp0T2GDWaTJ48sQyRP/Z5QlIyihXqj8JMfpoVGHdFbuLJrII6IvxR2KWNhUNbySHfQ0AJEieJfA==`
-
----
-
-### 🕒 2026-06-02 09:36:28 UTC
-`slipnet-enc://AY+82C1IK7aXepcZcxr47jOtmW+xiz9xHD15FYZjiK7eUJwTCEfPoLRq3J3wHxYbfEideBlrsiE0Q78kWYw1miwid7v8Ayr5CiNOEjgFZM942k/nv2vOisVVei37ASDbFprcHffYMpVmQvbVTDNKbaN/UqODxYGcJN8v6qxAFUxB/L4blB7tAfZc80UxVNdq9rAIi7+5RYGA+LKSJ0M4OISQHlGRQq84ayAWmB/D06s1iW4nUgcF/pjhtqxBo6z4/h/zD2hLuSU7k7IKpXJGz3CPwHKLUunZoZvcCNl0ToK3OWK99ABNim3YQcODlt1qcfQXm9nIhqWWkdhoagnj2u+YptkyMh40SBi5xTvUCi1CtPZhn2m4qMCYOfnZ/sI+PlROKNtNUc6EdqSfRWbRXPKmojpLmT4H15i0vyHnpo9muqaCfiUz9D6uHAsjBos4DfY208uz+NOCfTZoeeGpLfvfZb2IhYN6Q1tOe5eTGEC1rilTUBcaDwjenTv/RYM7Gr4k3wka6Vl9SaQ2WEDE6ZKAst+zZqd+eeD5GyN6D7k=`
-
----
-
-### 🕒 2026-06-02 09:34:02 UTC
-وصل  دو دقیق صبر کنید دیتا میدا تا ۵ دقیقه طول میکشه سرعتش عالی میشه
-
----
-
-### 🕒 2026-06-02 09:14:08 UTC
-slipnet
-
----
-
-### 🕒 2026-06-02 09:13:57 UTC
-`slipnet-enc://AafVKCybVq8/hiXtu5EWCkF42B6tWC4jf4L2nwM31s2yCNmX0QxUmShmPx3pMOsfIuGcvDH/nP69+IfheQKBM5O7InZKbc/c23lboyqmwDmBDeCEIEi8T4lYiMiSCv5siymX5tDP4cc2/bD9OKHsTX5GgFxoZ7n+GTBGfobsBRaEW/MEqnoJID/Faw7D2k+OTpTPPAbWwn0K+JJ/uicWVJTta5RyRMFGo4t9hGBnRF4WlTZa0LBw+UWh5gbplkLBfYB6OG/s+FwgUsk83h4i41xc1jpAxr6/H7rsLzWYkcbsgwxCpaVMcy4hwiog1ujUxBYqvh+o688Tzk+BzfvsD1c5eDSl9Zxn7OYz69vMeeITn6Q10oL3OUaQ8WWw/sD9tnZ3587rB+ZHoP9mQalatr44AHDGVpur67vyTSKuIdcxq/s8zOkkOmMRCYlHh/uV3+mgPP6D9pHY6y0p8UhwrR9Sazwp0CSFLK8dCZ1ievNROUmJxQl54p2xIOyhlAvjBTjytnF/e046GYGiAZOQ4FxFRQ5TQ/xWKqFLYW3BD2E=`
-
----
-
-### 🕒 2026-06-02 06:35:26 UTC
-مخصوص دانلود
-
----
-
-### 🕒 2026-06-02 06:34:59 UTC
-پروکسی تلگرام متصل با ایرانسل بقیه اپراتورها تست کنید
-
----
-
-### 🕒 2026-06-02 06:34:28 UTC
-[https://t.me/socks?server=170.64.170.204&port=1080&user=freenet-vt+&pass=freenet-vt+](https://t.me/socks?server=170.64.170.204&port=1080&user=freenet-vt+&pass=freenet-vt+)
-
----
-
-### 🕒 2026-06-02 05:50:26 UTC
-توی ویتوری هم اول test ping بگیرید بعد تاخیر واقعی  کانفیگ ها
-
----
-
-### 🕒 2026-06-02 05:48:46 UTC
-آموزش  وارد کردن ساب توی نکوباکس و نحوه استفاده از سرورها
-
----
-
-### 🕒 2026-06-02 05:18:37 UTC
-توی هر کلاینت که دوست دارید استفاده کنید کلاینت پیشنهادی من nekobox هست
-
----
-
-### 🕒 2026-06-02 05:17:30 UTC
-`https://drive.google.com/uc?id=1LE4SSBycM1F09RtwwTwk4ZdH0eXnu6gA`
-V2ray  sub
-
----
-
-### 🕒 2026-06-02 04:32:25 UTC
-یه ساب دیگه اضافه شد  همراه اول  هم وصله ساب دوم
-
----
-
-### 🕒 2026-06-02 04:00:25 UTC
-`https://drive.google.com/uc?id=1bJ9Uo5JwK8SZDL-fXMp3MrtyCURbT3Vz`
-`https://drive.google.com/uc?id=1KWoRTMhk5EEvjZKMVaKm5Bv_qtI_vVEs`
-Sub hidify 
-متصل با ایرانسل و مخابرات
 
 ---
 
