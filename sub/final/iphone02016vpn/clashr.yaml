@@ -5,88 +5,74 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@iphone02016vpn`", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 1ab11215-31b8-4438-9193-122ae16f54ff, network: ws, ws-opts: {path: /, headers: {Host: simorgh.garfar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@iphone02016vpn-4`", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 3aa50218-bc82-4bb7-b32a-aeebbe9cb436, network: ws, ws-opts: {path: /, headers: {Host: simorgh.garfar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@iphone02016vpn-II", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 75eb577a-6fcf-4fb3-8428-dec16f50711d, network: ws, ws-opts: {path: /, headers: {Host: simorgh.garfar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@iphone02016vpn` 2", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 8241ae9b-f2ac-4402-a661-5b6e1e2ca9af, network: ws, ws-opts: {path: /, headers: {Host: simorgh.garfar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@iphone02016vpn` 3", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 982df749-38dc-4bf8-a967-45e0c9c7088a, network: ws, ws-opts: {path: /, headers: {Host: simorgh.garfar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@iphone02016vpn-5`", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 9e01f179-e0fd-4a34-98b5-b7735b8b6335, network: ws, ws-opts: {path: /, headers: {Host: simorgh.garfar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@iphone02016vpnـII`", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: c4cb9eaf-cbd3-44c2-a29f-8aaf144b311b, network: ws, ws-opts: {path: /, headers: {Host: simorgh.garfar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@iphone02016vpn", server: 45.130.125.160, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 201fb22f-a720-4d56-bb46-c4d180d8c28b, servername: tl.thebestgamei.org, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /iman, headers: {Host: tl.thebestgamei.org}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@iphone02016vpn 2", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 53a54925-2c9b-4c9b-b981-530a2f74ca08, network: ws, ws-opts: {path: /, headers: {Host: simorgh.garfar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@iphone02016vpn\ufeff`", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 53a54925-2c9b-4c9b-b981-530a2f74ca08, network: ws, ws-opts: {path: /, headers: {Host: simorgh.garfar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@iphone02016vpn 3", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: fd09f9b6-25b0-4490-a035-bc2ae4502683, network: ws, ws-opts: {path: /, headers: {Host: simorgh.garfar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@iphone02016vpn`", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: fd09f9b6-25b0-4490-a035-bc2ae4502683, network: ws, ws-opts: {path: /, headers: {Host: simorgh.garfar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - "@iphone02016vpn"
+      - "@iphone02016vpn 2"
+      - "@iphone02016vpn\ufeff`"
+      - "@iphone02016vpn 3"
       - "@iphone02016vpn`"
-      - "@iphone02016vpn-4`"
-      - "@iphone02016vpn-II"
-      - "@iphone02016vpn` 2"
-      - "@iphone02016vpn` 3"
-      - "@iphone02016vpn-5`"
-      - "@iphone02016vpnـII`"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - "@iphone02016vpn"
+      - "@iphone02016vpn 2"
+      - "@iphone02016vpn\ufeff`"
+      - "@iphone02016vpn 3"
       - "@iphone02016vpn`"
-      - "@iphone02016vpn-4`"
-      - "@iphone02016vpn-II"
-      - "@iphone02016vpn` 2"
-      - "@iphone02016vpn` 3"
-      - "@iphone02016vpn-5`"
-      - "@iphone02016vpnـII`"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - "@iphone02016vpn"
+      - "@iphone02016vpn 2"
+      - "@iphone02016vpn\ufeff`"
+      - "@iphone02016vpn 3"
       - "@iphone02016vpn`"
-      - "@iphone02016vpn-4`"
-      - "@iphone02016vpn-II"
-      - "@iphone02016vpn` 2"
-      - "@iphone02016vpn` 3"
-      - "@iphone02016vpn-5`"
-      - "@iphone02016vpnـII`"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - "@iphone02016vpn"
+      - "@iphone02016vpn 2"
+      - "@iphone02016vpn\ufeff`"
+      - "@iphone02016vpn 3"
       - "@iphone02016vpn`"
-      - "@iphone02016vpn-4`"
-      - "@iphone02016vpn-II"
-      - "@iphone02016vpn` 2"
-      - "@iphone02016vpn` 3"
-      - "@iphone02016vpn-5`"
-      - "@iphone02016vpnـII`"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - "@iphone02016vpn"
+      - "@iphone02016vpn 2"
+      - "@iphone02016vpn\ufeff`"
+      - "@iphone02016vpn 3"
       - "@iphone02016vpn`"
-      - "@iphone02016vpn-4`"
-      - "@iphone02016vpn-II"
-      - "@iphone02016vpn` 2"
-      - "@iphone02016vpn` 3"
-      - "@iphone02016vpn-5`"
-      - "@iphone02016vpnـII`"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - "@iphone02016vpn"
+      - "@iphone02016vpn 2"
+      - "@iphone02016vpn\ufeff`"
+      - "@iphone02016vpn 3"
       - "@iphone02016vpn`"
-      - "@iphone02016vpn-4`"
-      - "@iphone02016vpn-II"
-      - "@iphone02016vpn` 2"
-      - "@iphone02016vpn` 3"
-      - "@iphone02016vpn-5`"
-      - "@iphone02016vpnـII`"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -114,13 +100,11 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - "@iphone02016vpn"
+      - "@iphone02016vpn 2"
+      - "@iphone02016vpn\ufeff`"
+      - "@iphone02016vpn 3"
       - "@iphone02016vpn`"
-      - "@iphone02016vpn-4`"
-      - "@iphone02016vpn-II"
-      - "@iphone02016vpn` 2"
-      - "@iphone02016vpn` 3"
-      - "@iphone02016vpn-5`"
-      - "@iphone02016vpnـII`"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
