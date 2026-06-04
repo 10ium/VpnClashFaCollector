@@ -5,74 +5,53 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "CH: @antimeli", server: 95.179.208.194, port: 17568, type: vless, tls: true, packet-encoding: xudp, uuid: e3ac9d1b-4311-4f6c-8642-035acd3507a8, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "CH: @antimeli 2", server: 95.179.208.194, port: 29908, type: vless, tls: true, packet-encoding: xudp, uuid: e3ac9d1b-4311-4f6c-8642-035acd3507a8, servername: www.sony.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, reality-opts: {public-key: _jFx-gwCyUsFm28MDETUeYsh50yebKm_6dIwVckQ4Go, short-id: 0d}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "CH: @antimeli 3", server: 95.179.208.194, port: 41657, type: vless, tls: true, packet-encoding: xudp, uuid: e3ac9d1b-4311-4f6c-8642-035acd3507a8, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "CH: @antimeli`", server: 95.179.208.194, port: 47220, type: vless, tls: true, packet-encoding: xudp, uuid: e3ac9d1b-4311-4f6c-8642-035acd3507a8, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "CH: @antimeli 4", server: 95.179.208.194, port: 38422, type: vmess, uuid: e3ac9d1b-4311-4f6c-8642-035acd3507a8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: openvpn-ssh.com-Farouq40486m17x, server: de2.niekotin.de, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: f9558e6a-0447-48a0-94e9-cd69fc638d73, network: ws, ws-opts: {path: /vless, headers: {Host: de2.niekotin.de}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: openvpn-ssh.com-Farouq40486m17x`, server: de2.niekotin.de, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: f9558e6a-0447-48a0-94e9-cd69fc638d73, network: ws, ws-opts: {path: /vless, headers: {Host: de2.niekotin.de}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "CH: @antimeli"
-      - "CH: @antimeli 2"
-      - "CH: @antimeli 3"
-      - "CH: @antimeli`"
-      - "CH: @antimeli 4"
+      - openvpn-ssh.com-Farouq40486m17x
+      - openvpn-ssh.com-Farouq40486m17x`
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "CH: @antimeli"
-      - "CH: @antimeli 2"
-      - "CH: @antimeli 3"
-      - "CH: @antimeli`"
-      - "CH: @antimeli 4"
+      - openvpn-ssh.com-Farouq40486m17x
+      - openvpn-ssh.com-Farouq40486m17x`
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "CH: @antimeli"
-      - "CH: @antimeli 2"
-      - "CH: @antimeli 3"
-      - "CH: @antimeli`"
-      - "CH: @antimeli 4"
+      - openvpn-ssh.com-Farouq40486m17x
+      - openvpn-ssh.com-Farouq40486m17x`
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "CH: @antimeli"
-      - "CH: @antimeli 2"
-      - "CH: @antimeli 3"
-      - "CH: @antimeli`"
-      - "CH: @antimeli 4"
+      - openvpn-ssh.com-Farouq40486m17x
+      - openvpn-ssh.com-Farouq40486m17x`
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "CH: @antimeli"
-      - "CH: @antimeli 2"
-      - "CH: @antimeli 3"
-      - "CH: @antimeli`"
-      - "CH: @antimeli 4"
+      - openvpn-ssh.com-Farouq40486m17x
+      - openvpn-ssh.com-Farouq40486m17x`
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "CH: @antimeli"
-      - "CH: @antimeli 2"
-      - "CH: @antimeli 3"
-      - "CH: @antimeli`"
-      - "CH: @antimeli 4"
+      - openvpn-ssh.com-Farouq40486m17x
+      - openvpn-ssh.com-Farouq40486m17x`
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -100,11 +79,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "CH: @antimeli"
-      - "CH: @antimeli 2"
-      - "CH: @antimeli 3"
-      - "CH: @antimeli`"
-      - "CH: @antimeli 4"
+      - openvpn-ssh.com-Farouq40486m17x
+      - openvpn-ssh.com-Farouq40486m17x`
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
