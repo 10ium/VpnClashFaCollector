@@ -5,102 +5,60 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "- 10", server: transparency.cloud-it.appcore.org, port: 34754, type: vless, tls: true, packet-encoding: xudp, uuid: 35762c02-ff2b-4526-b41b-e96e5d99528b, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: eMijZKuJlNEciXbhyzdbewk-ot_JLMZVaA42bxKFcBM, short-id: 43b3b1}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- 11", server: transparency.cloud.appcore.org, port: 34754, type: vless, tls: true, packet-encoding: xudp, uuid: 35762c02-ff2b-4526-b41b-e96e5d99528b, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: MNw8WI6R7SDlWC71MClNgpxNGUa-nYN4nGHn9pG62Ss, short-id: 81}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- 6", server: 195.181.173.199, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 394f6981-a782-4779-9a85-e6cf22935d93, servername: ams1.fromblancwithlove.com, alpn: [h2], host: ams1.fromblancwithlove.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- 7", server: 195.181.173.199, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 394f6981-a782-4779-9a85-e6cf22935d93, servername: ams1.fromblancwithlove.com, alpn: [h2], host: ams1.fromblancwithlove.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- 8", server: 188.114.97.6, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 429f43ca-087a-4fbc-9d88-9d9007bf30bc, servername: unnes.ac.id.cyylr.eu.cc, network: ws, ws-opts: {path: /my-wbv, headers: {Host: unnes.ac.id.cyylr.eu.cc}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- 1", server: 79.127.196.11, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 55f7d143-a594-4a91-b030-f227039f85ef, servername: cdg-1.fromblancwithlove.com, alpn: [h2], host: cdg-1.fromblancwithlove.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- 3", server: 79.127.196.11, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 55f7d143-a594-4a91-b030-f227039f85ef, servername: cdg-1.fromblancwithlove.com, alpn: [h2], host: cdg-1.fromblancwithlove.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- 5", server: sca11.myfymain.com, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- 9", server: 188.114.97.6, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fc965ad9-bdd7-4815-ad71-b39ec5972dc1, servername: octopusss4.com, alpn: [h3%2Ch2%2Chttp%2F1.1], network: ws, ws-opts: {path: /tsghdws, headers: {Host: octopusss4.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ², server: spb.connectv.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c4c9bfd7-4bdc-0002-ae64-185ffb553ae6, servername: spb.connectv.net, host: spb.connectv.net, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ¹, server: b02.connectv.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c4c9bfd7-4bdc-0007-ae64-185ffb553ae6, servername: b02.connectv.net, host: b02.connectv.net, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ³, server: ee.connectv.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c4c9bfd7-4bdc-4078-ae64-185ffb553ae6, servername: ee.connectv.net, host: ee.connectv.net, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "- 10"
-      - "- 11"
-      - "- 6"
-      - "- 7"
-      - "- 8"
-      - "- 1"
-      - "- 3"
-      - "- 5"
-      - "- 9"
+      - ²
+      - ¹
+      - ³
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "- 10"
-      - "- 11"
-      - "- 6"
-      - "- 7"
-      - "- 8"
-      - "- 1"
-      - "- 3"
-      - "- 5"
-      - "- 9"
+      - ²
+      - ¹
+      - ³
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "- 10"
-      - "- 11"
-      - "- 6"
-      - "- 7"
-      - "- 8"
-      - "- 1"
-      - "- 3"
-      - "- 5"
-      - "- 9"
+      - ²
+      - ¹
+      - ³
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "- 10"
-      - "- 11"
-      - "- 6"
-      - "- 7"
-      - "- 8"
-      - "- 1"
-      - "- 3"
-      - "- 5"
-      - "- 9"
+      - ²
+      - ¹
+      - ³
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "- 10"
-      - "- 11"
-      - "- 6"
-      - "- 7"
-      - "- 8"
-      - "- 1"
-      - "- 3"
-      - "- 5"
-      - "- 9"
+      - ²
+      - ¹
+      - ³
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "- 10"
-      - "- 11"
-      - "- 6"
-      - "- 7"
-      - "- 8"
-      - "- 1"
-      - "- 3"
-      - "- 5"
-      - "- 9"
+      - ²
+      - ¹
+      - ³
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -128,15 +86,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "- 10"
-      - "- 11"
-      - "- 6"
-      - "- 7"
-      - "- 8"
-      - "- 1"
-      - "- 3"
-      - "- 5"
-      - "- 9"
+      - ²
+      - ¹
+      - ³
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
