@@ -465,9 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@iphone02016vpn", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 53a54925-2c9b-4c9b-b981-530a2f74ca08, network: ws, ws-opts: {path: /, headers: {Host: simorgh.garfar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: snapp.ir:80, server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 8bff132a-96c1-42e6-af74-b5cde42792f5, network: ws, ws-opts: {path: /, headers: {Host: simorgh.garfar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@iphone02016vpn 2", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 8bff132a-96c1-42e6-af74-b5cde42792f5, network: ws, ws-opts: {path: /, headers: {Host: simorgh.garfar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@iphone02016vpn", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 8bff132a-96c1-42e6-af74-b5cde42792f5, network: ws, ws-opts: {path: /, headers: {Host: simorgh.garfar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: snapp.ir:80 2, server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 9be513db-dd90-4d30-9ab0-952bc2f0e3e4, network: ws, ws-opts: {path: /, headers: {Host: simorgh.garfar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -485,9 +484,8 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@iphone02016vpn"
       - snapp.ir:80
-      - "@iphone02016vpn 2"
+      - "@iphone02016vpn"
       - snapp.ir:80 2
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -495,9 +493,8 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - "@iphone02016vpn"
       - snapp.ir:80
-      - "@iphone02016vpn 2"
+      - "@iphone02016vpn"
       - snapp.ir:80 2
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -505,9 +502,8 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - "@iphone02016vpn"
       - snapp.ir:80
-      - "@iphone02016vpn 2"
+      - "@iphone02016vpn"
       - snapp.ir:80 2
   - name: اتصال پایدار 🔗
     type: url-test
@@ -524,9 +520,8 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@iphone02016vpn"
       - snapp.ir:80
-      - "@iphone02016vpn 2"
+      - "@iphone02016vpn"
       - snapp.ir:80 2
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -534,9 +529,8 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@iphone02016vpn"
       - snapp.ir:80
-      - "@iphone02016vpn 2"
+      - "@iphone02016vpn"
       - snapp.ir:80 2
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -544,9 +538,8 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@iphone02016vpn"
       - snapp.ir:80
-      - "@iphone02016vpn 2"
+      - "@iphone02016vpn"
       - snapp.ir:80 2
   - name: دانلود منیجر 📥
     type: select
