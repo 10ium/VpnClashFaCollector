@@ -5,74 +5,46 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: hamedp71::🏴‍☠️, server: 208.103.161.170, port: 443, type: trojan, password: 386bd471-4e29-4e79-9a3c-6bc6076ce4b6, sni: edu.ruangguru.com.cyylr.eu.cc, skip-cert-verify: false, network: ws, ws-opts: {path: /id-tksi, headers: {Host: edu.ruangguru.com.cyylr.eu.cc}}, udp: true, tfo: false}
-  - {name: hamedp71::🇩🇪, server: ws-1.hysteria.ltd, port: 9443, type: trojan, password: LYaEYwjN8LjWTRJdCCTzW7V6gK7atJVu, sni: ws-1.hysteria.ltd, skip-cert-verify: false, network: ws, ws-opts: {path: /ws, headers: {Host: ws-1.hysteria.ltd}}, udp: true, tfo: false}
-  - {name: hamedvpns, server: small-resonance-1353.mrlolyeradbn.workers.dev, port: 2052, type: trojan, password: "Y%28Z%5E&%7Cdg%7DeW$WCjF", skip-cert-verify: false, network: ws, ws-opts: {path: /eyJqdW5rIjoiNk9oTllzV2EiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6WyJuaW1hLm5zY2wuaXIiXX0=}, udp: true, tfo: false}
-  - {name: "@paperboy", server: cdn3-87.vk-cdnvideo.com, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 931729a8-3c20-4841-89a1-f18dc9ce0a6f, host: cdn3-87.vk-cdnvideo.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: hamedvpns 💎, server: 178.62.87.183, port: 27774, type: vless, tls: true, packet-encoding: xudp, uuid: c83014e0-ad3e-4ebd-9e8f-8f7a1f6088d6, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hamedp71::🇺🇸, server: 216.106.183.35, port: 22324, type: vmess, uuid: 04621bae-ab36-11ec-b909-0242ac120002, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - hamedp71::🏴‍☠️
-      - hamedp71::🇩🇪
-      - hamedvpns
-      - "@paperboy"
-      - hamedvpns 💎
+      - hamedp71::🇺🇸
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - hamedp71::🏴‍☠️
-      - hamedp71::🇩🇪
-      - hamedvpns
-      - "@paperboy"
-      - hamedvpns 💎
+      - hamedp71::🇺🇸
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - hamedp71::🏴‍☠️
-      - hamedp71::🇩🇪
-      - hamedvpns
-      - "@paperboy"
-      - hamedvpns 💎
+      - hamedp71::🇺🇸
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - hamedp71::🏴‍☠️
-      - hamedp71::🇩🇪
-      - hamedvpns
-      - "@paperboy"
-      - hamedvpns 💎
+      - hamedp71::🇺🇸
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - hamedp71::🏴‍☠️
-      - hamedp71::🇩🇪
-      - hamedvpns
-      - "@paperboy"
-      - hamedvpns 💎
+      - hamedp71::🇺🇸
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - hamedp71::🏴‍☠️
-      - hamedp71::🇩🇪
-      - hamedvpns
-      - "@paperboy"
-      - hamedvpns 💎
+      - hamedp71::🇺🇸
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -100,11 +72,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - hamedp71::🏴‍☠️
-      - hamedp71::🇩🇪
-      - hamedvpns
-      - "@paperboy"
-      - hamedvpns 💎
+      - hamedp71::🇺🇸
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

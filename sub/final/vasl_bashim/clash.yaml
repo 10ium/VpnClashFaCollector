@@ -466,7 +466,6 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: "@vasl_bashim2.`", server: 82.38.31.15, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
-  - {name: Alien-VaslBashim-20.00GB📊`, server: 163.5.94.245, port: 50308, type: vless, tls: true, packet-encoding: xudp, uuid: 9086ecaf-da47-4b80-b71f-4da7701196e6, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@vasl_bashim1.", server: 141.193.213.11, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 9232a847-8f7d-4548-a23a-a8b3550e0f15, servername: grabacademyportal.grab.com.cyylr.eu.cc, network: ws, ws-opts: {path: /id-tksi, headers: {Host: grabacademyportal.grab.com.cyylr.eu.cc}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -485,7 +484,6 @@ proxy-groups:
     type: select
     proxies:
       - "@vasl_bashim2.`"
-      - Alien-VaslBashim-20.00GB📊`
       - "@vasl_bashim1."
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -494,7 +492,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@vasl_bashim2.`"
-      - Alien-VaslBashim-20.00GB📊`
       - "@vasl_bashim1."
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -503,7 +500,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@vasl_bashim2.`"
-      - Alien-VaslBashim-20.00GB📊`
       - "@vasl_bashim1."
   - name: اتصال پایدار 🔗
     type: url-test
@@ -521,7 +517,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@vasl_bashim2.`"
-      - Alien-VaslBashim-20.00GB📊`
       - "@vasl_bashim1."
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -530,7 +525,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@vasl_bashim2.`"
-      - Alien-VaslBashim-20.00GB📊`
       - "@vasl_bashim1."
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -539,7 +533,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@vasl_bashim2.`"
-      - Alien-VaslBashim-20.00GB📊`
       - "@vasl_bashim1."
   - name: دانلود منیجر 📥
     type: select
