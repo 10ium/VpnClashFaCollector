@@ -466,7 +466,13 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: 🇩🇪 de-1.hysteria.ltd:9443, server: de-1.hysteria.ltd, port: 9443, type: trojan, password: LYaEYwjN8LjWTRJdCCTzW7V6gK7atJVu, sni: de-1.hysteria.ltd, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: transparency.cloud.appcore.org:34754, server: transparency.cloud.appcore.org, port: 34754, type: vless, tls: true, packet-encoding: xudp, uuid: 35762c02-ff2b-4526-b41b-e96e5d99528b, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: MNw8WI6R7SDlWC71MClNgpxNGUa-nYN4nGHn9pG62Ss, short-id: 81}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 45.92.219.119:7443, server: 45.92.219.119, port: 7443, type: vless, tls: true, packet-encoding: xudp, uuid: 0b0f0f45-b79a-4647-b466-d7879cd4aeea, servername: www.microsoft.com, host: www.microsoft.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 5QAO98ot2U7TcGs_f6EEaQjCzNOJLNHqPf6smYsdFVI, short-id: d82fb387}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇷🇺 ru01.goodmaximum.com:443, server: ru01.goodmaximum.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 906a8afb-0508-001e-8926-7a754dd62db5, servername: ru-cloud.221131513.xyz, host: ru-cloud.221131513.xyz, path: /, reality-opts: {public-key: fPSR5GZpxhOV6Rh7VzMtS4AeRN7ipyNX4waG9JzJzxQ, short-id: 31181028b56c8704}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: probabblynot.fazelextremeisreal.com:18034, server: probabblynot.fazelextremeisreal.com, port: 18034, type: vless, tls: true, packet-encoding: xudp, uuid: 927164c0-0fde-5540-b4ce-96fa12a53aec, servername: refersion.com, host: refersion.com, path: /, reality-opts: {public-key: ph_rbwXTPE724CilY2K21PHfgfj32QL2oApFve6s1nQ, short-id: ef6a0ec24e7f}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 64.188.91.26:443, server: 64.188.91.26, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a06565e7-b96a-41f0-91af-dea4dab20e54, servername: addons.mozilla.org, host: addons.mozilla.org, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇳🇱 nld02.helpbot.click:443, server: nld02.helpbot.click, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b95e6017-d54e-4016-b651-91c86aeaa463, servername: nld02.helpbot.click, host: nld02.helpbot.click, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: M1a5zeQ6Ckoo1UybbRYD8696xaWb-fRcCY-7iaQ4wCA, short-id: fd3f0f2bce8083fe}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 31.76.113.111:443, server: 31.76.113.111, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de, servername: it.s3-cloud.xyz, host: it.s3-cloud.xyz, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: zPi2L9vrl2hkaCTT3lZTzBna-qz6JrteRjDz1i-DsxY, short-id: 7a3f9e2b1c8d4f6a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 31.76.91.12:443, server: 31.76.91.12, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de, servername: jp.s3-cloud.org, host: jp.s3-cloud.org, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: QVkd5uoSbUA7rHVLtIoJB4iRp4l0zuw0H9qzQBh3lHs, short-id: 7a3f9e2b1c8d4f6a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,7 +490,13 @@ proxy-groups:
     type: select
     proxies:
       - 🇩🇪 de-1.hysteria.ltd:9443
-      - transparency.cloud.appcore.org:34754
+      - 45.92.219.119:7443
+      - 🇷🇺 ru01.goodmaximum.com:443
+      - probabblynot.fazelextremeisreal.com:18034
+      - 64.188.91.26:443
+      - 🇳🇱 nld02.helpbot.click:443
+      - 31.76.113.111:443
+      - 31.76.91.12:443
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -492,7 +504,13 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 🇩🇪 de-1.hysteria.ltd:9443
-      - transparency.cloud.appcore.org:34754
+      - 45.92.219.119:7443
+      - 🇷🇺 ru01.goodmaximum.com:443
+      - probabblynot.fazelextremeisreal.com:18034
+      - 64.188.91.26:443
+      - 🇳🇱 nld02.helpbot.click:443
+      - 31.76.113.111:443
+      - 31.76.91.12:443
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -500,7 +518,13 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 🇩🇪 de-1.hysteria.ltd:9443
-      - transparency.cloud.appcore.org:34754
+      - 45.92.219.119:7443
+      - 🇷🇺 ru01.goodmaximum.com:443
+      - probabblynot.fazelextremeisreal.com:18034
+      - 64.188.91.26:443
+      - 🇳🇱 nld02.helpbot.click:443
+      - 31.76.113.111:443
+      - 31.76.91.12:443
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -517,7 +541,13 @@ proxy-groups:
     interval: 600
     proxies:
       - 🇩🇪 de-1.hysteria.ltd:9443
-      - transparency.cloud.appcore.org:34754
+      - 45.92.219.119:7443
+      - 🇷🇺 ru01.goodmaximum.com:443
+      - probabblynot.fazelextremeisreal.com:18034
+      - 64.188.91.26:443
+      - 🇳🇱 nld02.helpbot.click:443
+      - 31.76.113.111:443
+      - 31.76.91.12:443
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -525,7 +555,13 @@ proxy-groups:
     interval: 600
     proxies:
       - 🇩🇪 de-1.hysteria.ltd:9443
-      - transparency.cloud.appcore.org:34754
+      - 45.92.219.119:7443
+      - 🇷🇺 ru01.goodmaximum.com:443
+      - probabblynot.fazelextremeisreal.com:18034
+      - 64.188.91.26:443
+      - 🇳🇱 nld02.helpbot.click:443
+      - 31.76.113.111:443
+      - 31.76.91.12:443
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -533,7 +569,13 @@ proxy-groups:
     interval: 600
     proxies:
       - 🇩🇪 de-1.hysteria.ltd:9443
-      - transparency.cloud.appcore.org:34754
+      - 45.92.219.119:7443
+      - 🇷🇺 ru01.goodmaximum.com:443
+      - probabblynot.fazelextremeisreal.com:18034
+      - 64.188.91.26:443
+      - 🇳🇱 nld02.helpbot.click:443
+      - 31.76.113.111:443
+      - 31.76.91.12:443
   - name: دانلود منیجر 📥
     type: select
     proxies:
