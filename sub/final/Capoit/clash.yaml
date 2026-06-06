@@ -466,10 +466,12 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: "@Capoit`", server: 188.114.97.6, port: 8443, type: trojan, password: oyytdJjj0M, sni: hamincharkhooo.rafachita.ir, skip-cert-verify: false, network: ws, ws-opts: {path: /720f09dba195249b423f771661162528/workers/services/view/best/production/settings, headers: {Host: hamincharkhooo.rafachita.ir}}, udp: true, tfo: false}
-  - {name: "@Capoit` 2", server: iranfuture.xyz, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: ada2c821-5c83-4dba-96ec-a5174e54ae4d, servername: www.yahoo.com, host: www.yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: FMlzIKco2rBLro2OaFKjaKSC1PQnlvFRJBsiVJ_bB0s, short-id: 82d7}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 2", server: Q5.bolzia.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 7f5a647a-4270-499f-9e76-dc10e991d3f3, network: ws, ws-opts: {path: /, headers: {Host: Q5.bolzia.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 3", server: 151.115.164.120, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 4", server: iranfuture.xyz, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: ada2c821-5c83-4dba-96ec-a5174e54ae4d, servername: www.yahoo.com, host: www.yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: FMlzIKco2rBLro2OaFKjaKSC1PQnlvFRJBsiVJ_bB0s, short-id: 82d7}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@Capoit", server: nl01.goodmaximum.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: db95b766-43a8-000a-9b5d-5ca6f2735188, servername: files.nimhogoa.com, host: files.nimhogoa.com, path: /, reality-opts: {public-key: fPSR5GZpxhOV6Rh7VzMtS4AeRN7ipyNX4waG9JzJzxQ, short-id: 77778028b56c8704}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@Capoit 2", server: nl01.goodmaximum.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: db95b766-43a8-000a-9b5d-5ca6f2735188, servername: nimhogoa.com, host: nimhogoa.com, path: /, reality-opts: {public-key: fPSR5GZpxhOV6Rh7VzMtS4AeRN7ipyNX4waG9JzJzxQ, short-id: 31181028b56c8704}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 3", server: se01.goodmaximum.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: db95b766-43a8-0029-9b5d-5ca6f2735188, servername: forms.sablefrost.com, host: forms.sablefrost.com, path: /, reality-opts: {public-key: fPSR5GZpxhOV6Rh7VzMtS4AeRN7ipyNX4waG9JzJzxQ, short-id: 31181028b56c8704}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 5", server: se01.goodmaximum.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: db95b766-43a8-0029-9b5d-5ca6f2735188, servername: forms.sablefrost.com, host: forms.sablefrost.com, path: /, reality-opts: {public-key: fPSR5GZpxhOV6Rh7VzMtS4AeRN7ipyNX4waG9JzJzxQ, short-id: 31181028b56c8704}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -488,9 +490,11 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
+      - "@Capoit` 3"
+      - "@Capoit` 4"
       - "@Capoit"
       - "@Capoit 2"
-      - "@Capoit` 3"
+      - "@Capoit` 5"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -499,9 +503,11 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
+      - "@Capoit` 3"
+      - "@Capoit` 4"
       - "@Capoit"
       - "@Capoit 2"
-      - "@Capoit` 3"
+      - "@Capoit` 5"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -510,9 +516,11 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
+      - "@Capoit` 3"
+      - "@Capoit` 4"
       - "@Capoit"
       - "@Capoit 2"
-      - "@Capoit` 3"
+      - "@Capoit` 5"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -530,9 +538,11 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
+      - "@Capoit` 3"
+      - "@Capoit` 4"
       - "@Capoit"
       - "@Capoit 2"
-      - "@Capoit` 3"
+      - "@Capoit` 5"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -541,9 +551,11 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
+      - "@Capoit` 3"
+      - "@Capoit` 4"
       - "@Capoit"
       - "@Capoit 2"
-      - "@Capoit` 3"
+      - "@Capoit` 5"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -552,9 +564,11 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
+      - "@Capoit` 3"
+      - "@Capoit` 4"
       - "@Capoit"
       - "@Capoit 2"
-      - "@Capoit` 3"
+      - "@Capoit` 5"
   - name: دانلود منیجر 📥
     type: select
     proxies:
