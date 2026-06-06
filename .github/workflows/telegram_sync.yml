@@ -20,6 +20,11 @@ on:
         required: true
         type: boolean
         default: true
+      run_country_splitter:
+        description: 'Run Country Splitter?'
+        required: true
+        type: boolean
+        default: true
       run_generator:
         description: 'Run Sub Generator?'
         required: true
@@ -65,15 +70,19 @@ jobs:
         if: github.event_name == 'schedule' || inputs.run_tester == true
         run: python src/config_tester.py
 
-      - name: 4. Run Sub Generator
+      - name: 4. Run Country Splitter
+        if: github.event_name == 'schedule' || inputs.run_country_splitter == true
+        run: python src/country_splitter.py
+
+      - name: 5. Run Sub Generator
         if: github.event_name == 'schedule' || inputs.run_generator == true
         run: python src/sub_generator.py
 
-      - name: 5. Run Web Panel Generator
+      - name: 6. Run Web Panel Generator
         if: github.event_name == 'schedule' || inputs.run_web == true
         run: python src/web_generator.py
 
-      - name: 6. Fast Static Page Setup
+      - name: 7. Fast Static Page Setup
         run: |
           touch .nojekyll
 
