@@ -465,7 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Vpn_Sky`", server: 1.qpworld.shop, port: 31218, type: vless, tls: true, packet-encoding: xudp, uuid: f17874f4-43c7-4040-9a41-1b05e58950cb, network: ws, ws-opts: {path: /, headers: {Host: 1.qpworld.shop}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Sky", server: 18.195.94.102, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 805aec0a-32db-4eaa-8b5e-10a6651471d1, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Sky 2", server: sca20.myfymain.com, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Sky 3", server: 83.228.250.76, port: 1040, type: vless, tls: true, packet-encoding: xudp, uuid: a1e34e93-e9cc-46fb-89c5-d3f371172ad6, servername: store.steampowered.com, host: store.steampowered.com, path: /, reality-opts: {public-key: eOjZPPwVsKO4Icq3kN5WYZV39wWdTsoBMe5v0ZImlzI, short-id: a076}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +484,27 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@Vpn_Sky`"
+      - "@Vpn_Sky"
+      - "@Vpn_Sky 2"
+      - "@Vpn_Sky 3"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@Vpn_Sky`"
+      - "@Vpn_Sky"
+      - "@Vpn_Sky 2"
+      - "@Vpn_Sky 3"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@Vpn_Sky`"
+      - "@Vpn_Sky"
+      - "@Vpn_Sky 2"
+      - "@Vpn_Sky 3"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +520,27 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Vpn_Sky`"
+      - "@Vpn_Sky"
+      - "@Vpn_Sky 2"
+      - "@Vpn_Sky 3"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Vpn_Sky`"
+      - "@Vpn_Sky"
+      - "@Vpn_Sky 2"
+      - "@Vpn_Sky 3"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Vpn_Sky`"
+      - "@Vpn_Sky"
+      - "@Vpn_Sky 2"
+      - "@Vpn_Sky 3"
   - name: دانلود منیجر 📥
     type: select
     proxies:

@@ -5,46 +5,60 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@Vpn_Sky`", server: 1.qpworld.shop, port: 31218, type: vless, tls: true, packet-encoding: xudp, uuid: f17874f4-43c7-4040-9a41-1b05e58950cb, network: ws, ws-opts: {path: /, headers: {Host: 1.qpworld.shop}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Sky", server: 18.195.94.102, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 805aec0a-32db-4eaa-8b5e-10a6651471d1, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Sky 2", server: sca20.myfymain.com, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Sky 3", server: 83.228.250.76, port: 1040, type: vless, tls: true, packet-encoding: xudp, uuid: a1e34e93-e9cc-46fb-89c5-d3f371172ad6, servername: store.steampowered.com, host: store.steampowered.com, path: /, reality-opts: {public-key: eOjZPPwVsKO4Icq3kN5WYZV39wWdTsoBMe5v0ZImlzI, short-id: a076}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@Vpn_Sky`"
+      - "@Vpn_Sky"
+      - "@Vpn_Sky 2"
+      - "@Vpn_Sky 3"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@Vpn_Sky`"
+      - "@Vpn_Sky"
+      - "@Vpn_Sky 2"
+      - "@Vpn_Sky 3"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@Vpn_Sky`"
+      - "@Vpn_Sky"
+      - "@Vpn_Sky 2"
+      - "@Vpn_Sky 3"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@Vpn_Sky`"
+      - "@Vpn_Sky"
+      - "@Vpn_Sky 2"
+      - "@Vpn_Sky 3"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@Vpn_Sky`"
+      - "@Vpn_Sky"
+      - "@Vpn_Sky 2"
+      - "@Vpn_Sky 3"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@Vpn_Sky`"
+      - "@Vpn_Sky"
+      - "@Vpn_Sky 2"
+      - "@Vpn_Sky 3"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +86,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@Vpn_Sky`"
+      - "@Vpn_Sky"
+      - "@Vpn_Sky 2"
+      - "@Vpn_Sky 3"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
