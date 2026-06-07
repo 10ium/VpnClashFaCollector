@@ -5,60 +5,74 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: snapp.ir:80, server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 6a0b0795-ecbf-4e88-b7b5-5578e757d35b, network: ws, ws-opts: {path: /, headers: {Host: simorgh.garfar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@iphone02016vpn`", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 7b76f2fa-04e8-429e-badb-a6ef85f96ce8, network: ws, ws-opts: {path: /, headers: {Host: simorgh.garfar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@iphone02016vpn`", server: bot-ep-gp5pha.samanidempire.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 3065f0af-3840-452b-af62-c71359b03581, alpn: [http%2F1.1], network: ws, ws-opts: {path: /a098c2e0, headers: {Host: bot-ep-gp5pha.samanidempire.org}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: iphone02016vpn هلند`, server: 104.18.155.229, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 6ea3b3f2-8c96-4a65-856c-0da753e7046e, servername: INsIGhtfuL-deParTmENtw4UEVj6Xq5.SAmSUngOvens.Ir, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: tasnimnews.com.financialtribune.com.yjc.ir.yjc.ir.tabnak.ir.mizanonline.com.tasnimnews.com}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: iphone02016vpn هلند, server: 188.114.97.6, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 8f272779-8983-4b96-aeaf-65616ff3bb07, servername: MAgICaL-MEDiciNeiU7eB306g4.SaMSunGOVeNS.ir, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: iribnews.ir.irdiplomacy.ir.farsnews.ir.hamshahrionline.ir.mizanonline.com.kayhan.ir.presstv.ir}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: iphone02016vpn`, server: 188.114.97.6, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: Telegram-Parsashonam-12, servername: cdn.limoo.blog, alpn: [http%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: cdn.limoo.blog}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@iphone02016vpn` 2", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: fd769e3c-7951-42ce-acb1-d69c96982fb5, network: ws, ws-opts: {path: /, headers: {Host: simorgh.garfar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - snapp.ir:80
       - "@iphone02016vpn`"
+      - iphone02016vpn هلند`
+      - iphone02016vpn هلند
       - iphone02016vpn`
+      - "@iphone02016vpn` 2"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - snapp.ir:80
       - "@iphone02016vpn`"
+      - iphone02016vpn هلند`
+      - iphone02016vpn هلند
       - iphone02016vpn`
+      - "@iphone02016vpn` 2"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - snapp.ir:80
       - "@iphone02016vpn`"
+      - iphone02016vpn هلند`
+      - iphone02016vpn هلند
       - iphone02016vpn`
+      - "@iphone02016vpn` 2"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - snapp.ir:80
       - "@iphone02016vpn`"
+      - iphone02016vpn هلند`
+      - iphone02016vpn هلند
       - iphone02016vpn`
+      - "@iphone02016vpn` 2"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - snapp.ir:80
       - "@iphone02016vpn`"
+      - iphone02016vpn هلند`
+      - iphone02016vpn هلند
       - iphone02016vpn`
+      - "@iphone02016vpn` 2"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - snapp.ir:80
       - "@iphone02016vpn`"
+      - iphone02016vpn هلند`
+      - iphone02016vpn هلند
       - iphone02016vpn`
+      - "@iphone02016vpn` 2"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -86,9 +100,11 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - snapp.ir:80
       - "@iphone02016vpn`"
+      - iphone02016vpn هلند`
+      - iphone02016vpn هلند
       - iphone02016vpn`
+      - "@iphone02016vpn` 2"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

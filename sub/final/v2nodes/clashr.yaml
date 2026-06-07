@@ -7,14 +7,9 @@ external-controller: 127.0.0.1:9090
 proxies:
   - {name: 149.104.87.182:443, server: 149.104.87.182, port: 443, type: trojan, password: PtRV8to08i8FMsY.Uw7=yMuIaR3eVTGmvA, sni: www.jewelapp.click, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 93.114.194.131:443, server: 93.114.194.131, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 146eb6cf-a99c-4022-85ca-022cf81502dc, servername: web.max.ru, host: web.max.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 7ReQIe2kMtP4rCrptgH5glkOM-JGcSAPzHNxOED-Z0s, short-id: 247fd6dab1a34a48}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 122.8.44.3:993, server: 122.8.44.3, port: 993, type: vless, tls: true, packet-encoding: xudp, uuid: 2703cda8-5cf4-019d-c4bd-6cf0c2261946, servername: dl.google.com, host: dl.google.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇷🇺 as.pink-perfect.ru:443, server: as.pink-perfect.ru, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5d8fcd24-9634-4dd7-845c-3dc2d6291942, servername: as.pink-perfect.ru, host: as.pink-perfect.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: DS9mX6cMb5wvwFzga8yN2NLbs7soXM7038_P23yPKwk, short-id: 8ffa160e608bf539}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 130.12.242.102:7443, server: 130.12.242.102, port: 7443, type: vless, tls: true, packet-encoding: xudp, uuid: 6ca8ea5b-e47f-4c19-adee-365456e1e87c, servername: www.microsoft.com, host: www.microsoft.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 5QAO98ot2U7TcGs_f6EEaQjCzNOJLNHqPf6smYsdFVI, short-id: d82fb387}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 193.178.226.177.blanesik.space:443, server: 193.178.226.177.blanesik.space, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ab268dc7-510f-4fb9-ace4-b7305a59c7bb, servername: 193.178.226.177.blanesik.space, alpn: [h2], network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: "%2Fsequre%2Fgrpc"}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 167.104.223.57:7443, server: 167.104.223.57, port: 7443, type: vless, tls: true, packet-encoding: xudp, uuid: adea61c0-0bb2-4ad3-8dba-7766eebd50f8, servername: www.microsoft.com, host: www.microsoft.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 5QAO98ot2U7TcGs_f6EEaQjCzNOJLNHqPf6smYsdFVI, short-id: d82fb387}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 31.76.113.34:443, server: 31.76.113.34, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de, servername: it.s3-cloud.xyz, host: it.s3-cloud.xyz, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: zPi2L9vrl2hkaCTT3lZTzBna-qz6JrteRjDz1i-DsxY, short-id: 7a3f9e2b1c8d4f6a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 🇵🇱 pl-1.illusion-vpn.ru:443, server: pl-1.illusion-vpn.ru, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e19966ec-7628-5252-89d2-43b5d4e51264, servername: pl-1.illusion-vpn.ru, host: pl-1.illusion-vpn.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: ExcIQDzOvrpzbDgbLufmt33F-ObNGHXx6rjEvzn76jI, short-id: 2e83619c7975b870}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 172.67.211.74:80, server: 172.67.211.74, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: e84064cc-617f-4ba8-aa6f-13e920fd2610, network: ws, ws-opts: {path: /, headers: {Host: main.boobie.eu.cc}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -23,14 +18,9 @@ proxy-groups:
       - DIRECT
       - 149.104.87.182:443
       - 93.114.194.131:443
-      - 122.8.44.3:993
-      - 🇷🇺 as.pink-perfect.ru:443
       - 130.12.242.102:7443
-      - 193.178.226.177.blanesik.space:443
       - 167.104.223.57:7443
-      - 31.76.113.34:443
       - 🇵🇱 pl-1.illusion-vpn.ru:443
-      - 172.67.211.74:80
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -39,14 +29,9 @@ proxy-groups:
     proxies:
       - 149.104.87.182:443
       - 93.114.194.131:443
-      - 122.8.44.3:993
-      - 🇷🇺 as.pink-perfect.ru:443
       - 130.12.242.102:7443
-      - 193.178.226.177.blanesik.space:443
       - 167.104.223.57:7443
-      - 31.76.113.34:443
       - 🇵🇱 pl-1.illusion-vpn.ru:443
-      - 172.67.211.74:80
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -55,14 +40,9 @@ proxy-groups:
       - 🎯 全球直连
       - 149.104.87.182:443
       - 93.114.194.131:443
-      - 122.8.44.3:993
-      - 🇷🇺 as.pink-perfect.ru:443
       - 130.12.242.102:7443
-      - 193.178.226.177.blanesik.space:443
       - 167.104.223.57:7443
-      - 31.76.113.34:443
       - 🇵🇱 pl-1.illusion-vpn.ru:443
-      - 172.67.211.74:80
   - name: 📲 电报信息
     type: select
     proxies:
@@ -70,14 +50,9 @@ proxy-groups:
       - 🎯 全球直连
       - 149.104.87.182:443
       - 93.114.194.131:443
-      - 122.8.44.3:993
-      - 🇷🇺 as.pink-perfect.ru:443
       - 130.12.242.102:7443
-      - 193.178.226.177.blanesik.space:443
       - 167.104.223.57:7443
-      - 31.76.113.34:443
       - 🇵🇱 pl-1.illusion-vpn.ru:443
-      - 172.67.211.74:80
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -85,14 +60,9 @@ proxy-groups:
       - 🚀 节点选择
       - 149.104.87.182:443
       - 93.114.194.131:443
-      - 122.8.44.3:993
-      - 🇷🇺 as.pink-perfect.ru:443
       - 130.12.242.102:7443
-      - 193.178.226.177.blanesik.space:443
       - 167.104.223.57:7443
-      - 31.76.113.34:443
       - 🇵🇱 pl-1.illusion-vpn.ru:443
-      - 172.67.211.74:80
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -100,14 +70,9 @@ proxy-groups:
       - 🎯 全球直连
       - 149.104.87.182:443
       - 93.114.194.131:443
-      - 122.8.44.3:993
-      - 🇷🇺 as.pink-perfect.ru:443
       - 130.12.242.102:7443
-      - 193.178.226.177.blanesik.space:443
       - 167.104.223.57:7443
-      - 31.76.113.34:443
       - 🇵🇱 pl-1.illusion-vpn.ru:443
-      - 172.67.211.74:80
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -137,14 +102,9 @@ proxy-groups:
       - ♻️ 自动选择
       - 149.104.87.182:443
       - 93.114.194.131:443
-      - 122.8.44.3:993
-      - 🇷🇺 as.pink-perfect.ru:443
       - 130.12.242.102:7443
-      - 193.178.226.177.blanesik.space:443
       - 167.104.223.57:7443
-      - 31.76.113.34:443
       - 🇵🇱 pl-1.illusion-vpn.ru:443
-      - 172.67.211.74:80
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
