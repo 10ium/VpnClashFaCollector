@@ -5,53 +5,60 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 🇫🇷 France (@v2FreeHub) SS, server: 45.95.233.82, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: cAqbBYBB0f9CAmpU_mc_7FyvvLCcwzt0, udp: true, tfo: false}
-  - {name: 🇫🇷 France (@v2FreeHub) Vless`, server: 45.95.233.82, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b6f29f8d-016e-4f30-b57f-c0cdafab2a40, servername: ya.ru, host: ya.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: nPcUKydxoRI66O3tT9O4QCZpLjOBvkGsiXG7pDX1BBw, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2FreeHub 🇫🇮`", server: 85.192.49.149, port: 51523, type: ss, cipher: chacha20-ietf-poly1305, password: dM-uYbTS84AzBKfoSStX0U5_q6YJXqH3, udp: true, tfo: false}
+  - {name: "@v2FreeHub 🇬🇧", server: 57.128.174.124, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 407f838f-5fae-47b4-81eb-ec6af7da480e, alpn: [h2%2Chttp%2F1.1], path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2FreeHub 🇩🇪", server: 51.75.69.164, port: 2053, type: vmess, uuid: bf2c1d9b-864c-4503-8133-648487ac3bc9, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇫🇷 France (@v2FreeHub) SS
-      - 🇫🇷 France (@v2FreeHub) Vless`
+      - "@v2FreeHub 🇫🇮`"
+      - "@v2FreeHub 🇬🇧"
+      - "@v2FreeHub 🇩🇪"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 🇫🇷 France (@v2FreeHub) SS
-      - 🇫🇷 France (@v2FreeHub) Vless`
+      - "@v2FreeHub 🇫🇮`"
+      - "@v2FreeHub 🇬🇧"
+      - "@v2FreeHub 🇩🇪"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇫🇷 France (@v2FreeHub) SS
-      - 🇫🇷 France (@v2FreeHub) Vless`
+      - "@v2FreeHub 🇫🇮`"
+      - "@v2FreeHub 🇬🇧"
+      - "@v2FreeHub 🇩🇪"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇫🇷 France (@v2FreeHub) SS
-      - 🇫🇷 France (@v2FreeHub) Vless`
+      - "@v2FreeHub 🇫🇮`"
+      - "@v2FreeHub 🇬🇧"
+      - "@v2FreeHub 🇩🇪"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 🇫🇷 France (@v2FreeHub) SS
-      - 🇫🇷 France (@v2FreeHub) Vless`
+      - "@v2FreeHub 🇫🇮`"
+      - "@v2FreeHub 🇬🇧"
+      - "@v2FreeHub 🇩🇪"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇫🇷 France (@v2FreeHub) SS
-      - 🇫🇷 France (@v2FreeHub) Vless`
+      - "@v2FreeHub 🇫🇮`"
+      - "@v2FreeHub 🇬🇧"
+      - "@v2FreeHub 🇩🇪"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -79,8 +86,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇫🇷 France (@v2FreeHub) SS
-      - 🇫🇷 France (@v2FreeHub) Vless`
+      - "@v2FreeHub 🇫🇮`"
+      - "@v2FreeHub 🇬🇧"
+      - "@v2FreeHub 🇩🇪"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
