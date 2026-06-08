@@ -465,11 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@iphone02016vpn`", server: bot-ep-gp5pha.samanidempire.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 3065f0af-3840-452b-af62-c71359b03581, alpn: [http%2F1.1], network: ws, ws-opts: {path: /a098c2e0, headers: {Host: bot-ep-gp5pha.samanidempire.org}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: iphone02016vpn هلند`, server: 104.18.155.229, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 6ea3b3f2-8c96-4a65-856c-0da753e7046e, servername: INsIGhtfuL-deParTmENtw4UEVj6Xq5.SAmSUngOvens.Ir, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: tasnimnews.com.financialtribune.com.yjc.ir.yjc.ir.tabnak.ir.mizanonline.com.tasnimnews.com}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: iphone02016vpn هلند, server: 188.114.97.6, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 8f272779-8983-4b96-aeaf-65616ff3bb07, servername: MAgICaL-MEDiciNeiU7eB306g4.SaMSunGOVeNS.ir, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: iribnews.ir.irdiplomacy.ir.farsnews.ir.hamshahrionline.ir.mizanonline.com.kayhan.ir.presstv.ir}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: iphone02016vpn`, server: 188.114.97.6, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: Telegram-Parsashonam-12, servername: cdn.limoo.blog, alpn: [http%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: cdn.limoo.blog}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@iphone02016vpn` 2", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: fd769e3c-7951-42ce-acb1-d69c96982fb5, network: ws, ws-opts: {path: /, headers: {Host: simorgh.garfar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@iphone02016vpn`", server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: fd769e3c-7951-42ce-acb1-d69c96982fb5, network: ws, ws-opts: {path: /, headers: {Host: simorgh.garfar.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,33 +484,27 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@iphone02016vpn`"
       - iphone02016vpn هلند`
       - iphone02016vpn هلند
-      - iphone02016vpn`
-      - "@iphone02016vpn` 2"
+      - "@iphone02016vpn`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@iphone02016vpn`"
       - iphone02016vpn هلند`
       - iphone02016vpn هلند
-      - iphone02016vpn`
-      - "@iphone02016vpn` 2"
+      - "@iphone02016vpn`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@iphone02016vpn`"
       - iphone02016vpn هلند`
       - iphone02016vpn هلند
-      - iphone02016vpn`
-      - "@iphone02016vpn` 2"
+      - "@iphone02016vpn`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -528,33 +520,27 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@iphone02016vpn`"
       - iphone02016vpn هلند`
       - iphone02016vpn هلند
-      - iphone02016vpn`
-      - "@iphone02016vpn` 2"
+      - "@iphone02016vpn`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@iphone02016vpn`"
       - iphone02016vpn هلند`
       - iphone02016vpn هلند
-      - iphone02016vpn`
-      - "@iphone02016vpn` 2"
+      - "@iphone02016vpn`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@iphone02016vpn`"
       - iphone02016vpn هلند`
       - iphone02016vpn هلند
-      - iphone02016vpn`
-      - "@iphone02016vpn` 2"
+      - "@iphone02016vpn`"
   - name: دانلود منیجر 📥
     type: select
     proxies:

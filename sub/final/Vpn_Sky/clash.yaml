@@ -465,14 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Vpn_Sky", server: 45.130.125.160, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true, tfo: false}
-  - {name: "@Vpn_Sky 2", server: 130.94.92.144, port: 443, type: trojan, password: oUAfbL8z87q-mhgjZ6g7mWQobf9=b7ut_F, sni: www.node-finder.click, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Vpn_Sky 3", server: em-2.speedmizban.net, port: 2044, type: vless, tls: true, packet-encoding: xudp, uuid: 103571d2-d1c2-40d1-b156-c5ba2450b86c, host: varzesh3.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Vpn_Sky 4", server: 185.245.40.71, port: 7443, type: vless, tls: true, packet-encoding: xudp, uuid: 10484bee-8516-400a-9b1e-efb5144ad324, servername: stackoverflow.com, host: stackoverflow.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 5QAO98ot2U7TcGs_f6EEaQjCzNOJLNHqPf6smYsdFVI, short-id: d82fb387}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Vpn_Sky 5", server: 89.117.1.112, port: 4433, type: vless, tls: true, packet-encoding: xudp, uuid: 38608efb-885a-4bb3-a344-9724ae4402c0, servername: www.microsoft.com, host: www.microsoft.com, path: /, reality-opts: {public-key: BpqeBkdp8XDGn3L-f6PU-JzPT3Dqp_zS1XVaqnJj8nY, short-id: e504fceed114147b}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Vpn_Sky 6", server: 45.43.92.110, port: 7443, type: vless, tls: true, packet-encoding: xudp, uuid: adea61c0-0bb2-4ad3-8dba-7766eebd50f8, servername: www.microsoft.com, host: www.microsoft.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 5QAO98ot2U7TcGs_f6EEaQjCzNOJLNHqPf6smYsdFVI, short-id: d82fb387}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Vpn_Sky 7", server: 67.102.180.16, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b831381d-6324-4d53-ad4f-8cda48b30811, servername: www.microsoft.com, host: www.microsoft.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 3j9h81MFAlsEOQ4K1ey1XD0tz1aEVNaMGMoMjQwif1w, short-id: 16}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Vpn_Sky 8", server: cdn.esansid.xyz, port: 25950, type: vless, tls: true, packet-encoding: xudp, uuid: cad426c8-9e60-43e5-a5a0-5a9850803e42, servername: cdn.esansid.xyz, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: cdn.esansid.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Sky`", server: 213.165.45.14, port: 443, type: trojan, password: SoftNetConnect, sni: www.yahoo.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Sky", server: 213.165.45.14, port: 8443, type: trojan, password: SoftNetConnect, sni: www.yahoo.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Sky 2", server: 213.165.45.15, port: 8443, type: trojan, password: SoftNetConnect, sni: www.yahoo.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Sky 3", server: 199.232.78.159, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 984fac58-576e-42bd-ab99-83db7074a729, servername: default.ssl.fastly.net, network: ws, ws-opts: {path: /, headers: {Host: default.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Sky 4", server: 151.101.108.223, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 98c9f668-1f2f-4a6d-bd7a-606fab0ac035, servername: default.ssl.fastly.net, alpn: [h3], network: ws, ws-opts: {path: /, headers: {Host: default.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -489,42 +486,33 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - "@Vpn_Sky`"
       - "@Vpn_Sky"
       - "@Vpn_Sky 2"
       - "@Vpn_Sky 3"
       - "@Vpn_Sky 4"
-      - "@Vpn_Sky 5"
-      - "@Vpn_Sky 6"
-      - "@Vpn_Sky 7"
-      - "@Vpn_Sky 8"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
+      - "@Vpn_Sky`"
       - "@Vpn_Sky"
       - "@Vpn_Sky 2"
       - "@Vpn_Sky 3"
       - "@Vpn_Sky 4"
-      - "@Vpn_Sky 5"
-      - "@Vpn_Sky 6"
-      - "@Vpn_Sky 7"
-      - "@Vpn_Sky 8"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
+      - "@Vpn_Sky`"
       - "@Vpn_Sky"
       - "@Vpn_Sky 2"
       - "@Vpn_Sky 3"
       - "@Vpn_Sky 4"
-      - "@Vpn_Sky 5"
-      - "@Vpn_Sky 6"
-      - "@Vpn_Sky 7"
-      - "@Vpn_Sky 8"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -540,42 +528,33 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@Vpn_Sky`"
       - "@Vpn_Sky"
       - "@Vpn_Sky 2"
       - "@Vpn_Sky 3"
       - "@Vpn_Sky 4"
-      - "@Vpn_Sky 5"
-      - "@Vpn_Sky 6"
-      - "@Vpn_Sky 7"
-      - "@Vpn_Sky 8"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@Vpn_Sky`"
       - "@Vpn_Sky"
       - "@Vpn_Sky 2"
       - "@Vpn_Sky 3"
       - "@Vpn_Sky 4"
-      - "@Vpn_Sky 5"
-      - "@Vpn_Sky 6"
-      - "@Vpn_Sky 7"
-      - "@Vpn_Sky 8"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@Vpn_Sky`"
       - "@Vpn_Sky"
       - "@Vpn_Sky 2"
       - "@Vpn_Sky 3"
       - "@Vpn_Sky 4"
-      - "@Vpn_Sky 5"
-      - "@Vpn_Sky 6"
-      - "@Vpn_Sky 7"
-      - "@Vpn_Sky 8"
   - name: دانلود منیجر 📥
     type: select
     proxies:

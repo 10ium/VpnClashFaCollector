@@ -465,7 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: OXIN-paperboy, server: de01.goodmaximum.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a6b85643-3922-0014-a259-1251925f044b, servername: portal.glimmerhouse.com, host: portal.glimmerhouse.com, path: /, reality-opts: {public-key: fPSR5GZpxhOV6Rh7VzMtS4AeRN7ipyNX4waG9JzJzxQ, short-id: 77778028b56c8704}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hamedvpns, server: 18.157.222.169, port: 44044, type: hysteria2, ports: 44044, password: "%40Masir_Sefid", obfs: salamander, obfs-password: Masir_Sefid, sni: free.masir-sefid.shop, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - OXIN-paperboy
+      - hamedvpns
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - OXIN-paperboy
+      - hamedvpns
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - OXIN-paperboy
+      - hamedvpns
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - OXIN-paperboy
+      - hamedvpns
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - OXIN-paperboy
+      - hamedvpns
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - OXIN-paperboy
+      - hamedvpns
   - name: دانلود منیجر 📥
     type: select
     proxies:

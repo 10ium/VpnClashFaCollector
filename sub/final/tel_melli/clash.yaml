@@ -465,7 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 45622@Proxy_Chaneel1, server: www.speedtest24.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 63195e63-a545-42af-a544-a79f2ff3f4d1, servername: www.speedtest24.ir, alpn: [http%2F1.1], network: ws, ws-opts: {path: /apps/android, headers: {Host: www.speedtest24.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@`", server: fastly-ip80.visionow.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 7ebfea4b-81f2-4f42-9314-6a1816ab43b0, network: ws, ws-opts: {path: /, headers: {Host: cloudy.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 45622@Proxy_Chaneel1
+      - "@`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 45622@Proxy_Chaneel1
+      - "@`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 45622@Proxy_Chaneel1
+      - "@`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 45622@Proxy_Chaneel1
+      - "@`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 45622@Proxy_Chaneel1
+      - "@`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 45622@Proxy_Chaneel1
+      - "@`"
   - name: دانلود منیجر 📥
     type: select
     proxies:
