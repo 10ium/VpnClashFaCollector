@@ -470,6 +470,8 @@ proxies:
   - {name: "@Vpn_Sky 2", server: 213.165.45.15, port: 8443, type: trojan, password: SoftNetConnect, sni: www.yahoo.com, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@Vpn_Sky 3", server: 199.232.78.159, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 984fac58-576e-42bd-ab99-83db7074a729, servername: default.ssl.fastly.net, network: ws, ws-opts: {path: /, headers: {Host: default.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@Vpn_Sky 4", server: 151.101.108.223, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 98c9f668-1f2f-4a6d-bd7a-606fab0ac035, servername: default.ssl.fastly.net, alpn: [h3], network: ws, ws-opts: {path: /, headers: {Host: default.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Sky 🇵🇱 🇸🇬", server: panel.dibaux.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: c3117cc5-9528-4177-ac05-73b5e8ebcd23, network: ws, ws-opts: {path: /stream, headers: {Host: panel.dibaux.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Sky 🇨🇦 🇫🇮`", server: 185.18.250.252, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f77299ea-e13d-417d-8cdc-ce5566dfc94b, servername: edu.ruangguru.com.r3xxe.eu.cc, network: ws, ws-opts: {path: /nl-tw, headers: {Host: edu.ruangguru.com.r3xxe.eu.cc}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -491,6 +493,8 @@ proxy-groups:
       - "@Vpn_Sky 2"
       - "@Vpn_Sky 3"
       - "@Vpn_Sky 4"
+      - "@Vpn_Sky 🇵🇱 🇸🇬"
+      - "@Vpn_Sky 🇨🇦 🇫🇮`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -502,6 +506,8 @@ proxy-groups:
       - "@Vpn_Sky 2"
       - "@Vpn_Sky 3"
       - "@Vpn_Sky 4"
+      - "@Vpn_Sky 🇵🇱 🇸🇬"
+      - "@Vpn_Sky 🇨🇦 🇫🇮`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -513,6 +519,8 @@ proxy-groups:
       - "@Vpn_Sky 2"
       - "@Vpn_Sky 3"
       - "@Vpn_Sky 4"
+      - "@Vpn_Sky 🇵🇱 🇸🇬"
+      - "@Vpn_Sky 🇨🇦 🇫🇮`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -533,6 +541,8 @@ proxy-groups:
       - "@Vpn_Sky 2"
       - "@Vpn_Sky 3"
       - "@Vpn_Sky 4"
+      - "@Vpn_Sky 🇵🇱 🇸🇬"
+      - "@Vpn_Sky 🇨🇦 🇫🇮`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -544,6 +554,8 @@ proxy-groups:
       - "@Vpn_Sky 2"
       - "@Vpn_Sky 3"
       - "@Vpn_Sky 4"
+      - "@Vpn_Sky 🇵🇱 🇸🇬"
+      - "@Vpn_Sky 🇨🇦 🇫🇮`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -555,6 +567,8 @@ proxy-groups:
       - "@Vpn_Sky 2"
       - "@Vpn_Sky 3"
       - "@Vpn_Sky 4"
+      - "@Vpn_Sky 🇵🇱 🇸🇬"
+      - "@Vpn_Sky 🇨🇦 🇫🇮`"
   - name: دانلود منیجر 📥
     type: select
     proxies:
