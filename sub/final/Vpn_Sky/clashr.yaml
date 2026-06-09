@@ -5,13 +5,9 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@Vpn_Sky`", server: 213.165.45.14, port: 443, type: trojan, password: SoftNetConnect, sni: www.yahoo.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Vpn_Sky", server: 213.165.45.14, port: 8443, type: trojan, password: SoftNetConnect, sni: www.yahoo.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Vpn_Sky 2", server: 213.165.45.15, port: 8443, type: trojan, password: SoftNetConnect, sni: www.yahoo.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Vpn_Sky 3", server: 199.232.78.159, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 984fac58-576e-42bd-ab99-83db7074a729, servername: default.ssl.fastly.net, network: ws, ws-opts: {path: /, headers: {Host: default.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Vpn_Sky 4", server: 151.101.108.223, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 98c9f668-1f2f-4a6d-bd7a-606fab0ac035, servername: default.ssl.fastly.net, alpn: [h3], network: ws, ws-opts: {path: /, headers: {Host: default.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Vpn_Sky 🇵🇱 🇸🇬", server: panel.dibaux.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: c3117cc5-9528-4177-ac05-73b5e8ebcd23, network: ws, ws-opts: {path: /stream, headers: {Host: panel.dibaux.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Vpn_Sky 🇨🇦 🇫🇮`", server: 185.18.250.252, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f77299ea-e13d-417d-8cdc-ce5566dfc94b, servername: edu.ruangguru.com.r3xxe.eu.cc, network: ws, ws-opts: {path: /nl-tw, headers: {Host: edu.ruangguru.com.r3xxe.eu.cc}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Sky", server: 172.64.147.24, port: 443, type: trojan, password: humanity, sni: www.gossipglove.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.gossipglove.com}}, udp: true, tfo: false}
+  - {name: Vpn_Sky 🔮, server: finporkzov.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8361e3fc-479d-466f-9583-4971c2cf2d03, servername: finporkzov.com, host: finporkzov.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: _0N3gACBkKvGKTh0q5-dmt-XqSHB3xfEHSANRXu-U0I, short-id: f00f58383241c807}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Sky 2", server: 77.74.123.168, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 931729a8-3c20-4841-89a1-f18dc9ce0a6f, servername: cdn3-87.vk-cdnvideo.com, host: cdn3-87.vk-cdnvideo.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: Vpn_Sky`, server: haji.amod.site, port: 20713, type: vless, tls: true, packet-encoding: xudp, uuid: f969dcaf-2f06-475d-91eb-c1405cc5da25, host: haji.amod.site, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
@@ -19,13 +15,9 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@Vpn_Sky`"
       - "@Vpn_Sky"
+      - Vpn_Sky 🔮
       - "@Vpn_Sky 2"
-      - "@Vpn_Sky 3"
-      - "@Vpn_Sky 4"
-      - "@Vpn_Sky 🇵🇱 🇸🇬"
-      - "@Vpn_Sky 🇨🇦 🇫🇮`"
       - Vpn_Sky`
   - name: ♻️ 自动选择
     type: url-test
@@ -33,13 +25,9 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "@Vpn_Sky`"
       - "@Vpn_Sky"
+      - Vpn_Sky 🔮
       - "@Vpn_Sky 2"
-      - "@Vpn_Sky 3"
-      - "@Vpn_Sky 4"
-      - "@Vpn_Sky 🇵🇱 🇸🇬"
-      - "@Vpn_Sky 🇨🇦 🇫🇮`"
       - Vpn_Sky`
   - name: 🌍 国外媒体
     type: select
@@ -47,52 +35,36 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@Vpn_Sky`"
       - "@Vpn_Sky"
+      - Vpn_Sky 🔮
       - "@Vpn_Sky 2"
-      - "@Vpn_Sky 3"
-      - "@Vpn_Sky 4"
-      - "@Vpn_Sky 🇵🇱 🇸🇬"
-      - "@Vpn_Sky 🇨🇦 🇫🇮`"
       - Vpn_Sky`
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@Vpn_Sky`"
       - "@Vpn_Sky"
+      - Vpn_Sky 🔮
       - "@Vpn_Sky 2"
-      - "@Vpn_Sky 3"
-      - "@Vpn_Sky 4"
-      - "@Vpn_Sky 🇵🇱 🇸🇬"
-      - "@Vpn_Sky 🇨🇦 🇫🇮`"
       - Vpn_Sky`
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@Vpn_Sky`"
       - "@Vpn_Sky"
+      - Vpn_Sky 🔮
       - "@Vpn_Sky 2"
-      - "@Vpn_Sky 3"
-      - "@Vpn_Sky 4"
-      - "@Vpn_Sky 🇵🇱 🇸🇬"
-      - "@Vpn_Sky 🇨🇦 🇫🇮`"
       - Vpn_Sky`
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@Vpn_Sky`"
       - "@Vpn_Sky"
+      - Vpn_Sky 🔮
       - "@Vpn_Sky 2"
-      - "@Vpn_Sky 3"
-      - "@Vpn_Sky 4"
-      - "@Vpn_Sky 🇵🇱 🇸🇬"
-      - "@Vpn_Sky 🇨🇦 🇫🇮`"
       - Vpn_Sky`
   - name: 🎯 全球直连
     type: select
@@ -121,13 +93,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@Vpn_Sky`"
       - "@Vpn_Sky"
+      - Vpn_Sky 🔮
       - "@Vpn_Sky 2"
-      - "@Vpn_Sky 3"
-      - "@Vpn_Sky 4"
-      - "@Vpn_Sky 🇵🇱 🇸🇬"
-      - "@Vpn_Sky 🇨🇦 🇫🇮`"
       - Vpn_Sky`
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
