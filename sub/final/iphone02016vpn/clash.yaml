@@ -465,7 +465,20 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: "🇩🇪 Nuremberg, BY, Germany`", server: e1.cover20.ir, port: 51570, type: ss, cipher: chacha20-ietf-poly1305, password: ZDZZkA2r075XqZYEd2vGqZt+ohwwx7JB7VEK0jSgiFY=, udp: true, tfo: false}
+  - {name: "@Masir_Sefid", server: 195.15.253.72, port: 1040, type: trojan, password: Masir_Sefid, sni: store.steampowered.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Masir_Sefid 2", server: 195.15.253.72, port: 2053, type: trojan, password: Masir_Sefid, sni: store.steampowered.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Masir_Sefid 3", server: 195.15.253.72, port: 2083, type: trojan, password: Masir_Sefid, sni: store.steampowered.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Masir_Sefid 4", server: 195.15.253.72, port: 443, type: trojan, password: Masir_Sefid, sni: store.steampowered.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Masir_Sefid`", server: 84.234.31.111, port: 1040, type: trojan, password: Masir_Sefid, sni: store.steampowered.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Masir_Sefid 5", server: 84.234.31.111, port: 2053, type: trojan, password: Masir_Sefid, sni: store.steampowered.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Masir_Sefid 6", server: 84.234.31.111, port: 2083, type: trojan, password: Masir_Sefid, sni: store.steampowered.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Masir_Sefid 7", server: 84.234.31.111, port: 443, type: trojan, password: Masir_Sefid, sni: store.steampowered.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Masir_Sefid` 2", server: 83.228.228.72, port: 2424, type: trojan, password: masir_sefid, sni: ksharelink.com, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@NewsDarya`", server: snapp.ir, port: 2095, type: vless, tls: true, packet-encoding: xudp, uuid: 07dce2d7-9849-4e22-adb9-36d2763c3b89, network: ws, ws-opts: {path: /, headers: {Host: api.aramonlineshop.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: iphone02016vpn`, server: 185.128.139.11, port: 18244, type: vless, tls: true, packet-encoding: xudp, uuid: 0d543aed-4e30-4553-b5ac-211419bb0961, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: iphone02016vpn, server: 185.128.139.11, port: 18244, type: vless, tls: true, packet-encoding: xudp, uuid: 0d543aed-4e30-4553-b5ac-211419bb0961, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Masir_Sefid 8", server: 83.228.228.72, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: masir_sefid, servername: ksharelink.com, host: ksharelink.com, path: /, reality-opts: {public-key: QEI_buTEB0N04ppKk3Zi_6-Nyya65guhAU0qN7fziWI, short-id: 09fa9c02c9}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +495,60 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - 🇩🇪 Nuremberg, BY, Germany`
+      - "@Masir_Sefid"
+      - "@Masir_Sefid 2"
+      - "@Masir_Sefid 3"
+      - "@Masir_Sefid 4"
+      - "@Masir_Sefid`"
+      - "@Masir_Sefid 5"
+      - "@Masir_Sefid 6"
+      - "@Masir_Sefid 7"
+      - "@Masir_Sefid` 2"
       - "@NewsDarya`"
+      - iphone02016vpn`
+      - iphone02016vpn
+      - "@Masir_Sefid 8"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
+      - 🇩🇪 Nuremberg, BY, Germany`
+      - "@Masir_Sefid"
+      - "@Masir_Sefid 2"
+      - "@Masir_Sefid 3"
+      - "@Masir_Sefid 4"
+      - "@Masir_Sefid`"
+      - "@Masir_Sefid 5"
+      - "@Masir_Sefid 6"
+      - "@Masir_Sefid 7"
+      - "@Masir_Sefid` 2"
       - "@NewsDarya`"
+      - iphone02016vpn`
+      - iphone02016vpn
+      - "@Masir_Sefid 8"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
+      - 🇩🇪 Nuremberg, BY, Germany`
+      - "@Masir_Sefid"
+      - "@Masir_Sefid 2"
+      - "@Masir_Sefid 3"
+      - "@Masir_Sefid 4"
+      - "@Masir_Sefid`"
+      - "@Masir_Sefid 5"
+      - "@Masir_Sefid 6"
+      - "@Masir_Sefid 7"
+      - "@Masir_Sefid` 2"
       - "@NewsDarya`"
+      - iphone02016vpn`
+      - iphone02016vpn
+      - "@Masir_Sefid 8"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +564,60 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 🇩🇪 Nuremberg, BY, Germany`
+      - "@Masir_Sefid"
+      - "@Masir_Sefid 2"
+      - "@Masir_Sefid 3"
+      - "@Masir_Sefid 4"
+      - "@Masir_Sefid`"
+      - "@Masir_Sefid 5"
+      - "@Masir_Sefid 6"
+      - "@Masir_Sefid 7"
+      - "@Masir_Sefid` 2"
       - "@NewsDarya`"
+      - iphone02016vpn`
+      - iphone02016vpn
+      - "@Masir_Sefid 8"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 🇩🇪 Nuremberg, BY, Germany`
+      - "@Masir_Sefid"
+      - "@Masir_Sefid 2"
+      - "@Masir_Sefid 3"
+      - "@Masir_Sefid 4"
+      - "@Masir_Sefid`"
+      - "@Masir_Sefid 5"
+      - "@Masir_Sefid 6"
+      - "@Masir_Sefid 7"
+      - "@Masir_Sefid` 2"
       - "@NewsDarya`"
+      - iphone02016vpn`
+      - iphone02016vpn
+      - "@Masir_Sefid 8"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 🇩🇪 Nuremberg, BY, Germany`
+      - "@Masir_Sefid"
+      - "@Masir_Sefid 2"
+      - "@Masir_Sefid 3"
+      - "@Masir_Sefid 4"
+      - "@Masir_Sefid`"
+      - "@Masir_Sefid 5"
+      - "@Masir_Sefid 6"
+      - "@Masir_Sefid 7"
+      - "@Masir_Sefid` 2"
       - "@NewsDarya`"
+      - iphone02016vpn`
+      - iphone02016vpn
+      - "@Masir_Sefid 8"
   - name: دانلود منیجر 📥
     type: select
     proxies:

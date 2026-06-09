@@ -465,11 +465,14 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: moz-2-(@King_Network7), server: 141.11.250.208, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 01204ab3-b16f-4377-a5fe-ee12bfa685b3, servername: 141.11.250.208, alpn: [h2%2Chttp%2F1.1], host: 141.11.250.208, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: moz-1-(@King_Network7), server: cf1.melowashere.com, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 1cc09ba7-c09e-4717-bb6b-8cb008c64848, servername: bot.cloudi-host.ir, alpn: [http%2F1.1], network: ws, ws-opts: {path: /720f09dba195249b423f771661162528/workers/services/view/mitivpn/production/settings, headers: {Host: bot.cloudi-host.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: moz-5-(@King_Network7), server: cf2.melowashere.com, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 1cc09ba7-c09e-4717-bb6b-8cb008c64848, servername: bot.cloudi-host.ir, alpn: [http%2F1.1], network: ws, ws-opts: {path: /720f09dba195249b423f771661162528/workers/services/view/mitivpn/production/settings, headers: {Host: bot.cloudi-host.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: moz-3-(@King_Network7), server: 194.127.179.220, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 29f2e850-1551-48ba-9d68-1fb303d3ab6e, servername: web.max.ru, host: web.max.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 7ReQIe2kMtP4rCrptgH5glkOM-JGcSAPzHNxOED-Z0s, short-id: 247fd6dab1a34a48}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: moz-6-(@King_Network7), server: snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: db7f0ce3-c2e0-41e5-9353-dcc12a302ecf, network: ws, ws-opts: {path: /, headers: {Host: de1.kianorbit.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: moz-5-(@King_Network7), server: 188.114.97.6, port: 8443, type: trojan, password: Tl5Qu5x5Tn, sni: sv-free.n2buy.ir, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: moz-9-(@King_Network7), server: 104.18.26.90, port: 2087, type: vless, tls: true, packet-encoding: xudp, uuid: 045acec8-7d9e-4793-9917-c909a4a70887, servername: djdj.mobomb.ir, network: ws, ws-opts: {path: /, headers: {Host: djdj.mobomb.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: moz-2-(@King_Network7), server: snapp.ir, port: 2095, type: vless, tls: true, packet-encoding: xudp, uuid: 07dce2d7-9849-4e22-adb9-36d2763c3b89, network: ws, ws-opts: {path: /, headers: {Host: api.aramonlineshop.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: moz-8-(@King_Network7), server: 185.143.235.212, port: 2095, type: vless, tls: true, packet-encoding: xudp, uuid: 38bd90b7-60e6-4a31-8bc6-811836df965d, network: ws, ws-opts: {path: /wskhan, headers: {Host: dwn.budgetnet.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: moz-3-(@King_Network7), server: 188.114.97.6, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: Telegram-Parsashonam-12, servername: cdn.limoo.blog, alpn: [http%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: cdn.limoo.blog}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: moz-7-(@King_Network7), server: main.saforia.ru, port: 2086, type: vless, tls: true, packet-encoding: xudp, uuid: b8c51058-4378-46d3-b2c9-50b43b5715a0, network: ws, ws-opts: {path: /, headers: {Host: main.saforia.ru}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: moz-6-(@King_Network7), server: main.saforia.ru, port: 2086, type: vless, tls: true, packet-encoding: xudp, uuid: b8c51058-4378-46d3-b2c9-50b43b5715a0, network: ws, ws-opts: {path: /, headers: {Host: main.saforia.ru}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: moz-4-(@King_Network7), server: 18.183.94.154, port: 39611, type: vless, tls: true, packet-encoding: xudp, uuid: f032fd94-715d-4d37-835f-13959a63df14, servername: www.icloud.com, host: www.icloud.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: bffq0wpw2vUOczXypqTqoXzYEzwXAZQzhOut1fvFyWQ, short-id: d7627055cafc62}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,33 +489,42 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - moz-2-(@King_Network7)
-      - moz-1-(@King_Network7)
       - moz-5-(@King_Network7)
+      - moz-9-(@King_Network7)
+      - moz-2-(@King_Network7)
+      - moz-8-(@King_Network7)
       - moz-3-(@King_Network7)
+      - moz-7-(@King_Network7)
       - moz-6-(@King_Network7)
+      - moz-4-(@King_Network7)
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - moz-2-(@King_Network7)
-      - moz-1-(@King_Network7)
       - moz-5-(@King_Network7)
+      - moz-9-(@King_Network7)
+      - moz-2-(@King_Network7)
+      - moz-8-(@King_Network7)
       - moz-3-(@King_Network7)
+      - moz-7-(@King_Network7)
       - moz-6-(@King_Network7)
+      - moz-4-(@King_Network7)
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - moz-2-(@King_Network7)
-      - moz-1-(@King_Network7)
       - moz-5-(@King_Network7)
+      - moz-9-(@King_Network7)
+      - moz-2-(@King_Network7)
+      - moz-8-(@King_Network7)
       - moz-3-(@King_Network7)
+      - moz-7-(@King_Network7)
       - moz-6-(@King_Network7)
+      - moz-4-(@King_Network7)
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -528,33 +540,42 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - moz-2-(@King_Network7)
-      - moz-1-(@King_Network7)
       - moz-5-(@King_Network7)
+      - moz-9-(@King_Network7)
+      - moz-2-(@King_Network7)
+      - moz-8-(@King_Network7)
       - moz-3-(@King_Network7)
+      - moz-7-(@King_Network7)
       - moz-6-(@King_Network7)
+      - moz-4-(@King_Network7)
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - moz-2-(@King_Network7)
-      - moz-1-(@King_Network7)
       - moz-5-(@King_Network7)
+      - moz-9-(@King_Network7)
+      - moz-2-(@King_Network7)
+      - moz-8-(@King_Network7)
       - moz-3-(@King_Network7)
+      - moz-7-(@King_Network7)
       - moz-6-(@King_Network7)
+      - moz-4-(@King_Network7)
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - moz-2-(@King_Network7)
-      - moz-1-(@King_Network7)
       - moz-5-(@King_Network7)
+      - moz-9-(@King_Network7)
+      - moz-2-(@King_Network7)
+      - moz-8-(@King_Network7)
       - moz-3-(@King_Network7)
+      - moz-7-(@King_Network7)
       - moz-6-(@King_Network7)
+      - moz-4-(@King_Network7)
   - name: دانلود منیجر 📥
     type: select
     proxies:
