@@ -465,9 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: hamedvpns, server: series-a1.samanehha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: W74XFALLLuw6m5IA, udp: true, tfo: false}
-  - {name: hamedvpns 2, server: chatgpt.com, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: cabbfe13-038b-4dbb-9c45-5079c829abfa, network: ws, ws-opts: {path: /, headers: {Host: tr-cd.sublink-vip2.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: hamedvpns 3, server: 62.60.251.131, port: 45656, type: vless, tls: true, packet-encoding: xudp, uuid: d3d59da0-31a4-45da-bf9e-373c6ab140db, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 130.61.50.75:6443, server: 130.61.50.75, port: 6443, type: hysteria2, ports: 6443, password: zhangyang, sni: dash.cloudflare.com, skip-cert-verify: false, udp: true, tfo: false}
   - {name: hamedvpns 🇫🇮, server: chatgpt.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: e84064cc-617f-4ba8-aa6f-13e920fd2610, network: ws, ws-opts: {path: /, headers: {Host: main.boobie.eu.cc}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -485,9 +483,7 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - hamedvpns
-      - hamedvpns 2
-      - hamedvpns 3
+      - 130.61.50.75:6443
       - hamedvpns 🇫🇮
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -495,9 +491,7 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - hamedvpns
-      - hamedvpns 2
-      - hamedvpns 3
+      - 130.61.50.75:6443
       - hamedvpns 🇫🇮
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -505,9 +499,7 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - hamedvpns
-      - hamedvpns 2
-      - hamedvpns 3
+      - 130.61.50.75:6443
       - hamedvpns 🇫🇮
   - name: اتصال پایدار 🔗
     type: url-test
@@ -524,9 +516,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - hamedvpns
-      - hamedvpns 2
-      - hamedvpns 3
+      - 130.61.50.75:6443
       - hamedvpns 🇫🇮
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -534,9 +524,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - hamedvpns
-      - hamedvpns 2
-      - hamedvpns 3
+      - 130.61.50.75:6443
       - hamedvpns 🇫🇮
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -544,9 +532,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - hamedvpns
-      - hamedvpns 2
-      - hamedvpns 3
+      - 130.61.50.75:6443
       - hamedvpns 🇫🇮
   - name: دانلود منیجر 📥
     type: select

@@ -465,8 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@vasl_bashim2.`", server: 82.38.31.15, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
-  - {name: "@vasl_bashim1.", server: 141.193.213.11, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 9232a847-8f7d-4548-a23a-a8b3550e0f15, servername: grabacademyportal.grab.com.cyylr.eu.cc, network: ws, ws-opts: {path: /id-tksi, headers: {Host: grabacademyportal.grab.com.cyylr.eu.cc}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim2`", server: bypass.ch-gt-01.com, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 4fdec620-73bb-40a7-a8d5-2570a59f1832, servername: storage.yandex.net, host: storage.yandex.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 8qHRGcCezzSu4S-Cz9l19BNRLWm4MkaSwZV3dNrLEwc, short-id: d515d6cfdfe60b02}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim1", server: varzesh3.com, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: b082d7d9-f676-4cf6-9ebc-1301021b6486, servername: dl.pargame.ir, network: ws, ws-opts: {path: /, headers: {Host: dl.pargame.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@vasl_bashim2.`"
-      - "@vasl_bashim1."
+      - "@vasl_bashim2`"
+      - "@vasl_bashim1"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@vasl_bashim2.`"
-      - "@vasl_bashim1."
+      - "@vasl_bashim2`"
+      - "@vasl_bashim1"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@vasl_bashim2.`"
-      - "@vasl_bashim1."
+      - "@vasl_bashim2`"
+      - "@vasl_bashim1"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@vasl_bashim2.`"
-      - "@vasl_bashim1."
+      - "@vasl_bashim2`"
+      - "@vasl_bashim1"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@vasl_bashim2.`"
-      - "@vasl_bashim1."
+      - "@vasl_bashim2`"
+      - "@vasl_bashim1"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@vasl_bashim2.`"
-      - "@vasl_bashim1."
+      - "@vasl_bashim2`"
+      - "@vasl_bashim1"
   - name: دانلود منیجر 📥
     type: select
     proxies:

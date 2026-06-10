@@ -5,9 +5,7 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: hamedvpns, server: series-a1.samanehha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: W74XFALLLuw6m5IA, udp: true, tfo: false}
-  - {name: hamedvpns 2, server: chatgpt.com, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: cabbfe13-038b-4dbb-9c45-5079c829abfa, network: ws, ws-opts: {path: /, headers: {Host: tr-cd.sublink-vip2.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: hamedvpns 3, server: 62.60.251.131, port: 45656, type: vless, tls: true, packet-encoding: xudp, uuid: d3d59da0-31a4-45da-bf9e-373c6ab140db, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 130.61.50.75:6443, server: 130.61.50.75, port: 6443, type: hysteria2, ports: 6443, password: zhangyang, sni: dash.cloudflare.com, skip-cert-verify: false, udp: true, tfo: false}
   - {name: hamedvpns 🇫🇮, server: chatgpt.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: e84064cc-617f-4ba8-aa6f-13e920fd2610, network: ws, ws-opts: {path: /, headers: {Host: main.boobie.eu.cc}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
@@ -15,9 +13,7 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - hamedvpns
-      - hamedvpns 2
-      - hamedvpns 3
+      - 130.61.50.75:6443
       - hamedvpns 🇫🇮
   - name: ♻️ 自动选择
     type: url-test
@@ -25,9 +21,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - hamedvpns
-      - hamedvpns 2
-      - hamedvpns 3
+      - 130.61.50.75:6443
       - hamedvpns 🇫🇮
   - name: 🌍 国外媒体
     type: select
@@ -35,36 +29,28 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - hamedvpns
-      - hamedvpns 2
-      - hamedvpns 3
+      - 130.61.50.75:6443
       - hamedvpns 🇫🇮
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - hamedvpns
-      - hamedvpns 2
-      - hamedvpns 3
+      - 130.61.50.75:6443
       - hamedvpns 🇫🇮
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - hamedvpns
-      - hamedvpns 2
-      - hamedvpns 3
+      - 130.61.50.75:6443
       - hamedvpns 🇫🇮
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - hamedvpns
-      - hamedvpns 2
-      - hamedvpns 3
+      - 130.61.50.75:6443
       - hamedvpns 🇫🇮
   - name: 🎯 全球直连
     type: select
@@ -93,9 +79,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - hamedvpns
-      - hamedvpns 2
-      - hamedvpns 3
+      - 130.61.50.75:6443
       - hamedvpns 🇫🇮
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连

@@ -9,6 +9,7 @@ proxies:
   - {name: "@Capoit", server: 46.8.113.142, port: 443, type: trojan, password: LYaEYwjN8LjWTRJdCCTzW7V6gK7atJVu, sni: ch-2.bexum.fun, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@Capoit 2", server: 45.79.8.17, port: 443, type: trojan, password: rXyShM8Jni%2B5Sbq3k4gkyr5Lq0zOMRL2Uf, sni: 45.79.8.17, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@Capoit` 2", server: 199.232.197.131, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846, network: ws, ws-opts: {path: /, headers: {Host: max-gb1.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 3", server: 192.142.12.67, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 2aed6a64-0cf7-0003-acd5-b75774c8cfa3, servername: linkvault.fyi, host: linkvault.fyi, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -19,6 +20,7 @@ proxy-groups:
       - "@Capoit"
       - "@Capoit 2"
       - "@Capoit` 2"
+      - "@Capoit` 3"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -29,6 +31,7 @@ proxy-groups:
       - "@Capoit"
       - "@Capoit 2"
       - "@Capoit` 2"
+      - "@Capoit` 3"
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -39,6 +42,7 @@ proxy-groups:
       - "@Capoit"
       - "@Capoit 2"
       - "@Capoit` 2"
+      - "@Capoit` 3"
   - name: 📲 电报信息
     type: select
     proxies:
@@ -48,6 +52,7 @@ proxy-groups:
       - "@Capoit"
       - "@Capoit 2"
       - "@Capoit` 2"
+      - "@Capoit` 3"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -57,6 +62,7 @@ proxy-groups:
       - "@Capoit"
       - "@Capoit 2"
       - "@Capoit` 2"
+      - "@Capoit` 3"
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -66,6 +72,7 @@ proxy-groups:
       - "@Capoit"
       - "@Capoit 2"
       - "@Capoit` 2"
+      - "@Capoit` 3"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -97,6 +104,7 @@ proxy-groups:
       - "@Capoit"
       - "@Capoit 2"
       - "@Capoit` 2"
+      - "@Capoit` 3"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
