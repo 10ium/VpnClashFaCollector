@@ -466,10 +466,9 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: hamedvpns, server: series-a1.samanehha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: W74XFALLLuw6m5IA, udp: true, tfo: false}
-  - {name: hamedvpns 2, server: 185.126.236.44, port: 443, type: trojan, password: BSs5IAVMQdYuykvDsOYZoa6gNPSGBjAbLL, sni: www.mesaly.click, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: hamedvpns 3, server: 91.107.191.12, port: 29376, type: vless, tls: true, packet-encoding: xudp, uuid: 03bc875d-0d8e-49b6-9094-89a8159e65ee, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: hamedvpns 4, server: chatgpt.com, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: cabbfe13-038b-4dbb-9c45-5079c829abfa, network: ws, ws-opts: {path: /, headers: {Host: tr-cd.sublink-vip2.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: hamedvpns 5, server: 62.60.251.131, port: 45656, type: vless, tls: true, packet-encoding: xudp, uuid: d3d59da0-31a4-45da-bf9e-373c6ab140db, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hamedvpns 2, server: chatgpt.com, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: cabbfe13-038b-4dbb-9c45-5079c829abfa, network: ws, ws-opts: {path: /, headers: {Host: tr-cd.sublink-vip2.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hamedvpns 3, server: 62.60.251.131, port: 45656, type: vless, tls: true, packet-encoding: xudp, uuid: d3d59da0-31a4-45da-bf9e-373c6ab140db, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hamedvpns 🇫🇮, server: chatgpt.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: e84064cc-617f-4ba8-aa6f-13e920fd2610, network: ws, ws-opts: {path: /, headers: {Host: main.boobie.eu.cc}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -489,8 +488,7 @@ proxy-groups:
       - hamedvpns
       - hamedvpns 2
       - hamedvpns 3
-      - hamedvpns 4
-      - hamedvpns 5
+      - hamedvpns 🇫🇮
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -500,8 +498,7 @@ proxy-groups:
       - hamedvpns
       - hamedvpns 2
       - hamedvpns 3
-      - hamedvpns 4
-      - hamedvpns 5
+      - hamedvpns 🇫🇮
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -511,8 +508,7 @@ proxy-groups:
       - hamedvpns
       - hamedvpns 2
       - hamedvpns 3
-      - hamedvpns 4
-      - hamedvpns 5
+      - hamedvpns 🇫🇮
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -531,8 +527,7 @@ proxy-groups:
       - hamedvpns
       - hamedvpns 2
       - hamedvpns 3
-      - hamedvpns 4
-      - hamedvpns 5
+      - hamedvpns 🇫🇮
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -542,8 +537,7 @@ proxy-groups:
       - hamedvpns
       - hamedvpns 2
       - hamedvpns 3
-      - hamedvpns 4
-      - hamedvpns 5
+      - hamedvpns 🇫🇮
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -553,8 +547,7 @@ proxy-groups:
       - hamedvpns
       - hamedvpns 2
       - hamedvpns 3
-      - hamedvpns 4
-      - hamedvpns 5
+      - hamedvpns 🇫🇮
   - name: دانلود منیجر 📥
     type: select
     proxies:
