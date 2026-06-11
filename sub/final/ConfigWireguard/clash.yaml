@@ -465,7 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: hys-4m92j09qr0, server: n.acp.us.ci, port: 443, type: hysteria2, ports: 443, password: vlxjqoiauby22dvb, obfs: salamander, obfs-password: "%40arshiacomplus", sni: n.acp.us.ci, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ², server: spb.connectv.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a1c11603-aefe-0002-9df3-4856f085811a, servername: spb.connectv.net, host: spb.connectv.net, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ¹, server: b02.connectv.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a1c11603-aefe-0007-9df3-4856f085811a, servername: b02.connectv.net, host: b02.connectv.net, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ³, server: ee.connectv.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a1c11603-aefe-4b7a-9df3-4856f085811a, servername: ee.connectv.net, host: ee.connectv.net, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +484,27 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - hys-4m92j09qr0
+      - ²
+      - ¹
+      - ³
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - hys-4m92j09qr0
+      - ²
+      - ¹
+      - ³
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - hys-4m92j09qr0
+      - ²
+      - ¹
+      - ³
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +520,27 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - hys-4m92j09qr0
+      - ²
+      - ¹
+      - ³
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - hys-4m92j09qr0
+      - ²
+      - ¹
+      - ³
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - hys-4m92j09qr0
+      - ²
+      - ¹
+      - ³
   - name: دانلود منیجر 📥
     type: select
     proxies:
