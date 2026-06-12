@@ -5,15 +5,13 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@Capoit`", server: 104.16.0.0, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846, network: ws, ws-opts: {path: /, headers: {Host: tr-cd.sublink-vip2.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit", server: 167.82.0.1, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846, network: ws, ws-opts: {path: /, headers: {Host: max-gb1.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit", server: sca22.myfymain.com, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@Capoit`"
       - "@Capoit"
   - name: ♻️ 自动选择
     type: url-test
@@ -21,7 +19,6 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "@Capoit`"
       - "@Capoit"
   - name: 🌍 国外媒体
     type: select
@@ -29,28 +26,24 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@Capoit`"
       - "@Capoit"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@Capoit`"
       - "@Capoit"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@Capoit`"
       - "@Capoit"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@Capoit`"
       - "@Capoit"
   - name: 🎯 全球直连
     type: select
@@ -79,7 +72,6 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@Capoit`"
       - "@Capoit"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
