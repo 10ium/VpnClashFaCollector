@@ -466,7 +466,14 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: "@vasl_bashim.1", server: www.calmlunch.com, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true, tfo: false}
+  - {name: "@vasl_bashim`", server: 104.16.0.0, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846, network: ws, ws-opts: {path: /, headers: {Host: tr-cd.sublink-vip2.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim", server: 104.26.0.7, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 10a6b923-e349-4594-92bb-d81a6245aaec, servername: sertraline.adaspoloandco.com, network: ws, ws-opts: {path: /download.php, headers: {Host: sertraline.adaspoloandco.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim 2", server: 172.67.74.10, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 10a6b923-e349-4594-92bb-d81a6245aaec, servername: sertraline.adaspoloandco.com, network: ws, ws-opts: {path: /download.php, headers: {Host: sertraline.adaspoloandco.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim 3", server: 199.232.78.159, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 2e4798a9-d8e9-4a43-ad43-285d3ad5633c, servername: default.ssl.fastly.net, network: ws, ws-opts: {path: /, headers: {Host: default.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@vasl_bashim.2", server: 77.74.123.171, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 931729a8-3c20-4841-89a1-f18dc9ce0a6f, servername: cdn7-09.vk-cdnvideo.com, host: cdn7-09.vk-cdnvideo.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim 4", server: 89.169.39.55, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c61ec320-29f1-4e00-9272-8b676e6957b4, servername: max.ru, host: max.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: Lbug_wz0y9xgKeDK44D9kuUap0fXzNKyv_nMJxnZRzU, short-id: 08000000}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim 5", server: 89.169.39.55, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c61ec320-29f1-4e00-9272-8b676e6957b4, servername: max.ru, host: max.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: Lbug_wz0y9xgKeDK44D9kuUap0fXzNKyv_nMJxnZRzU, short-id: 28a059440d3d5ba1}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim 6", server: Snapp.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: e0e06ab7-a4e7-41cd-ab29-53063e4deeea, network: ws, ws-opts: {path: /, headers: {Host: Tetismobile.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,7 +491,14 @@ proxy-groups:
     type: select
     proxies:
       - "@vasl_bashim.1"
+      - "@vasl_bashim`"
+      - "@vasl_bashim"
+      - "@vasl_bashim 2"
+      - "@vasl_bashim 3"
       - "@vasl_bashim.2"
+      - "@vasl_bashim 4"
+      - "@vasl_bashim 5"
+      - "@vasl_bashim 6"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -492,7 +506,14 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@vasl_bashim.1"
+      - "@vasl_bashim`"
+      - "@vasl_bashim"
+      - "@vasl_bashim 2"
+      - "@vasl_bashim 3"
       - "@vasl_bashim.2"
+      - "@vasl_bashim 4"
+      - "@vasl_bashim 5"
+      - "@vasl_bashim 6"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -500,7 +521,14 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@vasl_bashim.1"
+      - "@vasl_bashim`"
+      - "@vasl_bashim"
+      - "@vasl_bashim 2"
+      - "@vasl_bashim 3"
       - "@vasl_bashim.2"
+      - "@vasl_bashim 4"
+      - "@vasl_bashim 5"
+      - "@vasl_bashim 6"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -517,7 +545,14 @@ proxy-groups:
     interval: 600
     proxies:
       - "@vasl_bashim.1"
+      - "@vasl_bashim`"
+      - "@vasl_bashim"
+      - "@vasl_bashim 2"
+      - "@vasl_bashim 3"
       - "@vasl_bashim.2"
+      - "@vasl_bashim 4"
+      - "@vasl_bashim 5"
+      - "@vasl_bashim 6"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -525,7 +560,14 @@ proxy-groups:
     interval: 600
     proxies:
       - "@vasl_bashim.1"
+      - "@vasl_bashim`"
+      - "@vasl_bashim"
+      - "@vasl_bashim 2"
+      - "@vasl_bashim 3"
       - "@vasl_bashim.2"
+      - "@vasl_bashim 4"
+      - "@vasl_bashim 5"
+      - "@vasl_bashim 6"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -533,7 +575,14 @@ proxy-groups:
     interval: 600
     proxies:
       - "@vasl_bashim.1"
+      - "@vasl_bashim`"
+      - "@vasl_bashim"
+      - "@vasl_bashim 2"
+      - "@vasl_bashim 3"
       - "@vasl_bashim.2"
+      - "@vasl_bashim 4"
+      - "@vasl_bashim 5"
+      - "@vasl_bashim 6"
   - name: دانلود منیجر 📥
     type: select
     proxies:
