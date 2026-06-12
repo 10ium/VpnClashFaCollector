@@ -5,74 +5,60 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: "@proxy_kafee - ❤️ 🇺🇲⚡`", server: 188.114.97.6, port: 443, type: trojan, password: mitivpn, sni: global.fastly.com.mitivpn-a.site, skip-cert-verify: false, network: ws, ws-opts: {path: /ed=mitivpn, headers: {Host: global.fastly.com.mitivpn-a.site}}, udp: true, tfo: false}
+  - {name: "@proxy_kafee - ❤️ 🇩🇪⚡", server: 188.114.97.6, port: 443, type: trojan, password: mitivpn, sni: global.fastly.com.mitivpn-a.site, skip-cert-verify: false, network: ws, ws-opts: {path: /ed=mitivpn, headers: {Host: global.fastly.com.mitivpn-a.site}}, udp: true, tfo: false}
   - {name: "@proxy_kafee ⚡🔷`", server: 151.101.194.219, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846, network: ws, ws-opts: {path: /, headers: {Host: max-gb1.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: New proxy_kafee 1`, server: 167.104.223.68, port: 7443, type: vless, tls: true, packet-encoding: xudp, uuid: 1c0277ad-bb4d-496f-bc0c-40ccee03fca5, servername: www.microsoft.com, host: www.microsoft.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 5QAO98ot2U7TcGs_f6EEaQjCzNOJLNHqPf6smYsdFVI, short-id: d82fb387}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: New proxy_kafee 2`, server: 195.184.247.252, port: 7443, type: vless, tls: true, packet-encoding: xudp, uuid: 1c0277ad-bb4d-496f-bc0c-40ccee03fca5, servername: www.microsoft.com, host: www.microsoft.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 5QAO98ot2U7TcGs_f6EEaQjCzNOJLNHqPf6smYsdFVI, short-id: d82fb387}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: New proxy_kafee 3`, server: 31.56.188.15, port: 7443, type: vless, tls: true, packet-encoding: xudp, uuid: 1c0277ad-bb4d-496f-bc0c-40ccee03fca5, servername: mi.com, host: mi.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 5QAO98ot2U7TcGs_f6EEaQjCzNOJLNHqPf6smYsdFVI, short-id: be0ce047}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee🇯🇵`", server: 188.114.97.6, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4311bd3f-4f66-4538-a624-221b87690b2c, servername: mjtbknetmkhremge.ordak.qzz.io, alpn: [http%2F1.1], network: ws, ws-opts: {path: "/fl?ed", headers: {Host: mjtbknetmkhremge.ordak.qzz.io}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - "@proxy_kafee - ❤️ 🇺🇲⚡`"
+      - "@proxy_kafee - ❤️ 🇩🇪⚡"
       - "@proxy_kafee ⚡🔷`"
-      - New proxy_kafee 1`
-      - New proxy_kafee 2`
-      - New proxy_kafee 3`
-      - "@proxy_kafee🇯🇵`"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - "@proxy_kafee - ❤️ 🇺🇲⚡`"
+      - "@proxy_kafee - ❤️ 🇩🇪⚡"
       - "@proxy_kafee ⚡🔷`"
-      - New proxy_kafee 1`
-      - New proxy_kafee 2`
-      - New proxy_kafee 3`
-      - "@proxy_kafee🇯🇵`"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - "@proxy_kafee - ❤️ 🇺🇲⚡`"
+      - "@proxy_kafee - ❤️ 🇩🇪⚡"
       - "@proxy_kafee ⚡🔷`"
-      - New proxy_kafee 1`
-      - New proxy_kafee 2`
-      - New proxy_kafee 3`
-      - "@proxy_kafee🇯🇵`"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - "@proxy_kafee - ❤️ 🇺🇲⚡`"
+      - "@proxy_kafee - ❤️ 🇩🇪⚡"
       - "@proxy_kafee ⚡🔷`"
-      - New proxy_kafee 1`
-      - New proxy_kafee 2`
-      - New proxy_kafee 3`
-      - "@proxy_kafee🇯🇵`"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - "@proxy_kafee - ❤️ 🇺🇲⚡`"
+      - "@proxy_kafee - ❤️ 🇩🇪⚡"
       - "@proxy_kafee ⚡🔷`"
-      - New proxy_kafee 1`
-      - New proxy_kafee 2`
-      - New proxy_kafee 3`
-      - "@proxy_kafee🇯🇵`"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - "@proxy_kafee - ❤️ 🇺🇲⚡`"
+      - "@proxy_kafee - ❤️ 🇩🇪⚡"
       - "@proxy_kafee ⚡🔷`"
-      - New proxy_kafee 1`
-      - New proxy_kafee 2`
-      - New proxy_kafee 3`
-      - "@proxy_kafee🇯🇵`"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -100,11 +86,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - "@proxy_kafee - ❤️ 🇺🇲⚡`"
+      - "@proxy_kafee - ❤️ 🇩🇪⚡"
       - "@proxy_kafee ⚡🔷`"
-      - New proxy_kafee 1`
-      - New proxy_kafee 2`
-      - New proxy_kafee 3`
-      - "@proxy_kafee🇯🇵`"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
