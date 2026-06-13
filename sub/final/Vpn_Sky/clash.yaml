@@ -465,9 +465,12 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Vpn_Sky", server: 203.18.98.248, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a5b51f6e-3637-47c4-ba6b-85e8355b9ad9, servername: chatgpt.com, host: chatgpt.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 2TrPdiGqUxSvsACQN1GDLTS2lAiuUGicwNqH9Byqx1o, short-id: 47174804ee8a1dae}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Vpn_Sky 2", server: speedtest.net, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: cabbfe13-038b-4dbb-9c45-5079c829abfa, network: ws, ws-opts: {path: /, headers: {Host: max-gb1.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Vpn_Sky 3", server: muihzxwtdd-19523160218-direct.irgame.co, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: muihzxwtdd, servername: muihzxwtdd-19523160218-direct.irgame.co, alpn: [h2%2Chttp%2F1.1], host: muihzxwtdd-19523160218-direct.irgame.co, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Sky", server: 91.107.166.66, port: 44728, type: vless, tls: true, packet-encoding: xudp, uuid: 13feb2c9-7fb6-4319-a406-83de2f05aaa7, servername: aws.amazon.com, host: aws.amazon.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: rOoltQhWKsF2PCZV4fIkxxsl7tg6-WUmQWMqJHEF6SM, short-id: dbb6ea0b}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Sky 2", server: 169.40.32.127, port: 28688, type: vless, tls: true, packet-encoding: xudp, uuid: 5da76c9b-2e7f-46f4-9392-83c651d03a55, path: /@napsternetv20, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Sky 3", server: 151.115.164.36, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Sky 4", server: sca16.myfymain.com, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Sky 5", server: 162.249.126.75, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 931729a8-3c20-4841-89a1-f18dc9ce0a6f, servername: cdn3-87.vk-cdnvideo.com, host: cdn3-87.vk-cdnvideo.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Sky 6", server: 46.225.155.159, port: 1006, type: vless, tls: true, packet-encoding: xudp, uuid: ad356e93-cc14-417d-9f4e-32376d03f5b7, servername: yahoo.com, host: yahoo.com, path: /, reality-opts: {public-key: 2iijxUyJsanFAkX0ctH6H4RTW1N4mQYnIsaP8qrbbS8, short-id: 0c3a409c2ba7d083}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,6 +490,9 @@ proxy-groups:
       - "@Vpn_Sky"
       - "@Vpn_Sky 2"
       - "@Vpn_Sky 3"
+      - "@Vpn_Sky 4"
+      - "@Vpn_Sky 5"
+      - "@Vpn_Sky 6"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -496,6 +502,9 @@ proxy-groups:
       - "@Vpn_Sky"
       - "@Vpn_Sky 2"
       - "@Vpn_Sky 3"
+      - "@Vpn_Sky 4"
+      - "@Vpn_Sky 5"
+      - "@Vpn_Sky 6"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -505,6 +514,9 @@ proxy-groups:
       - "@Vpn_Sky"
       - "@Vpn_Sky 2"
       - "@Vpn_Sky 3"
+      - "@Vpn_Sky 4"
+      - "@Vpn_Sky 5"
+      - "@Vpn_Sky 6"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -523,6 +535,9 @@ proxy-groups:
       - "@Vpn_Sky"
       - "@Vpn_Sky 2"
       - "@Vpn_Sky 3"
+      - "@Vpn_Sky 4"
+      - "@Vpn_Sky 5"
+      - "@Vpn_Sky 6"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -532,6 +547,9 @@ proxy-groups:
       - "@Vpn_Sky"
       - "@Vpn_Sky 2"
       - "@Vpn_Sky 3"
+      - "@Vpn_Sky 4"
+      - "@Vpn_Sky 5"
+      - "@Vpn_Sky 6"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -541,6 +559,9 @@ proxy-groups:
       - "@Vpn_Sky"
       - "@Vpn_Sky 2"
       - "@Vpn_Sky 3"
+      - "@Vpn_Sky 4"
+      - "@Vpn_Sky 5"
+      - "@Vpn_Sky 6"
   - name: دانلود منیجر 📥
     type: select
     proxies:

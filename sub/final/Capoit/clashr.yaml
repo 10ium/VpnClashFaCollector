@@ -6,7 +6,6 @@ log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
   - {name: "@Capoit`", server: p4.mmrknight.app, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 0e21f912-711b-49c7-a95d-f946f9cf4b5d, network: ws, ws-opts: {path: /telegram-Raiv2mmr, headers: {Host: play.google.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit", server: sca22.myfymain.com, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@Capoit` 2", server: ip.feywebsite.ir, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: ad356e93-cc14-417d-9f4e-32376d03f5b7, servername: 07e357aa7e747ca4.hOzHeEn.Ir, network: ws, ws-opts: {path: /ws, headers: {Host: 07e357aa7e747ca4.hOzHeEn.Ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
@@ -15,7 +14,6 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - "@Capoit`"
-      - "@Capoit"
       - "@Capoit` 2"
   - name: ♻️ 自动选择
     type: url-test
@@ -24,7 +22,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Capoit`"
-      - "@Capoit"
       - "@Capoit` 2"
   - name: 🌍 国外媒体
     type: select
@@ -33,7 +30,6 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - "@Capoit`"
-      - "@Capoit"
       - "@Capoit` 2"
   - name: 📲 电报信息
     type: select
@@ -41,7 +37,6 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@Capoit`"
-      - "@Capoit"
       - "@Capoit` 2"
   - name: Ⓜ️ 微软服务
     type: select
@@ -49,7 +44,6 @@ proxy-groups:
       - 🎯 全球直连
       - 🚀 节点选择
       - "@Capoit`"
-      - "@Capoit"
       - "@Capoit` 2"
   - name: 🍎 苹果服务
     type: select
@@ -57,7 +51,6 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@Capoit`"
-      - "@Capoit"
       - "@Capoit` 2"
   - name: 🎯 全球直连
     type: select
@@ -87,7 +80,6 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - "@Capoit`"
-      - "@Capoit"
       - "@Capoit` 2"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连

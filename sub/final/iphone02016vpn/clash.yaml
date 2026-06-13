@@ -473,6 +473,8 @@ proxies:
   - {name: 🇨🇳 iphone02016vpn|tw`, server: 185.189.160.105, port: 41632, type: ss, cipher: aes-256-cfb, password: qwerREWQ@@, udp: true, tfo: false}
   - {name: iphone02016vpn, server: 221.139.79.57, port: 13979, type: ss, cipher: aes-256-cfb, password: qwerREWQ@@, udp: true, tfo: false}
   - {name: iphone02016vpn` 3, server: 3.8.48.222, port: 80, type: ss, cipher: aes-256-gcm, password: dada1203, udp: true, tfo: false}
+  - {name: iphone02016vpn` 4, server: 151.101.109.223, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 05dde938-bb2d-41c3-b176-2a9d370489b4, servername: default.ssl.fastly.net, network: ws, ws-opts: {path: /, headers: {Host: default.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇫🇷 iphone02016vpn|fr`, server: 188.114.97.6, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: eba407c9-7c1f-477e-977c-ba5ed81a763a, servername: t1.tzteam.online, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: t1.tzteam.online}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -497,6 +499,8 @@ proxy-groups:
       - 🇨🇳 iphone02016vpn|tw`
       - iphone02016vpn
       - iphone02016vpn` 3
+      - iphone02016vpn` 4
+      - 🇫🇷 iphone02016vpn|fr`
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -511,6 +515,8 @@ proxy-groups:
       - 🇨🇳 iphone02016vpn|tw`
       - iphone02016vpn
       - iphone02016vpn` 3
+      - iphone02016vpn` 4
+      - 🇫🇷 iphone02016vpn|fr`
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -525,6 +531,8 @@ proxy-groups:
       - 🇨🇳 iphone02016vpn|tw`
       - iphone02016vpn
       - iphone02016vpn` 3
+      - iphone02016vpn` 4
+      - 🇫🇷 iphone02016vpn|fr`
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -548,6 +556,8 @@ proxy-groups:
       - 🇨🇳 iphone02016vpn|tw`
       - iphone02016vpn
       - iphone02016vpn` 3
+      - iphone02016vpn` 4
+      - 🇫🇷 iphone02016vpn|fr`
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -562,6 +572,8 @@ proxy-groups:
       - 🇨🇳 iphone02016vpn|tw`
       - iphone02016vpn
       - iphone02016vpn` 3
+      - iphone02016vpn` 4
+      - 🇫🇷 iphone02016vpn|fr`
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -576,6 +588,8 @@ proxy-groups:
       - 🇨🇳 iphone02016vpn|tw`
       - iphone02016vpn
       - iphone02016vpn` 3
+      - iphone02016vpn` 4
+      - 🇫🇷 iphone02016vpn|fr`
   - name: دانلود منیجر 📥
     type: select
     proxies:

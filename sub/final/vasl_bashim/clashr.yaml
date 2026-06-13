@@ -5,109 +5,53 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@vasl_bashim", server: 38.135.24.131, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: hbGrpfvNrJsUmKmPbR3iY2, udp: true, tfo: false}
-  - {name: "@vasl_bashim 2", server: 82.38.31.176, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
-  - {name: "@vasl_bashim 3", server: 82.38.31.190, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
-  - {name: "@vasl_bashim 4", server: 216.24.57.1, port: 443, type: trojan, password: humanity, sni: www.calmloud.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmloud.com}}, udp: true, tfo: false}
-  - {name: "@vasl_bashim`", server: 216.24.57.1, port: 443, type: trojan, password: humanity, sni: www.calmloud.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmloud.com}}, udp: true, tfo: false}
-  - {name: "@vasl_bashim 5", server: 172.67.74.10, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 10a6b923-e349-4594-92bb-d81a6245aaec, servername: sertraline.adaspoloandco.com, network: ws, ws-opts: {path: /download.php, headers: {Host: sertraline.adaspoloandco.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim` 2", server: 199.232.78.159, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 2e4798a9-d8e9-4a43-ad43-285d3ad5633c, servername: default.ssl.fastly.net, network: ws, ws-opts: {path: /, headers: {Host: default.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim 6", server: 104.16.6.70, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 627c3a7a-29a7-41d1-9d9e-9f809b690988, servername: sub.rfiksma.top, network: ws, ws-opts: {path: /, headers: {Host: sub.rfiksma.top}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim 7", server: 89.169.39.55, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c61ec320-29f1-4e00-9272-8b676e6957b4, servername: max.ru, host: max.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: Lbug_wz0y9xgKeDK44D9kuUap0fXzNKyv_nMJxnZRzU, short-id: 08000000}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim 8", server: 89.169.39.55, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c61ec320-29f1-4e00-9272-8b676e6957b4, servername: max.ru, host: max.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: Lbug_wz0y9xgKeDK44D9kuUap0fXzNKyv_nMJxnZRzU, short-id: 28a059440d3d5ba1}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim [mci]`", server: 216.24.57.1, port: 443, type: trojan, password: humanity, sni: www.calmloud.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmloud.com}}, udp: true, tfo: false}
+  - {name: "@vasl_bashim [mtn]", server: 188.114.97.6, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fc965ad9-bdd7-4815-ad71-b39ec5972dc1, servername: octopusss4.com, alpn: [h3%2Ch2%2Chttp%2F1.1], network: ws, ws-opts: {path: /tsghdws, headers: {Host: octopusss4.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@vasl_bashim"
-      - "@vasl_bashim 2"
-      - "@vasl_bashim 3"
-      - "@vasl_bashim 4"
-      - "@vasl_bashim`"
-      - "@vasl_bashim 5"
-      - "@vasl_bashim` 2"
-      - "@vasl_bashim 6"
-      - "@vasl_bashim 7"
-      - "@vasl_bashim 8"
+      - "@vasl_bashim [mci]`"
+      - "@vasl_bashim [mtn]"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@vasl_bashim"
-      - "@vasl_bashim 2"
-      - "@vasl_bashim 3"
-      - "@vasl_bashim 4"
-      - "@vasl_bashim`"
-      - "@vasl_bashim 5"
-      - "@vasl_bashim` 2"
-      - "@vasl_bashim 6"
-      - "@vasl_bashim 7"
-      - "@vasl_bashim 8"
+      - "@vasl_bashim [mci]`"
+      - "@vasl_bashim [mtn]"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@vasl_bashim"
-      - "@vasl_bashim 2"
-      - "@vasl_bashim 3"
-      - "@vasl_bashim 4"
-      - "@vasl_bashim`"
-      - "@vasl_bashim 5"
-      - "@vasl_bashim` 2"
-      - "@vasl_bashim 6"
-      - "@vasl_bashim 7"
-      - "@vasl_bashim 8"
+      - "@vasl_bashim [mci]`"
+      - "@vasl_bashim [mtn]"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@vasl_bashim"
-      - "@vasl_bashim 2"
-      - "@vasl_bashim 3"
-      - "@vasl_bashim 4"
-      - "@vasl_bashim`"
-      - "@vasl_bashim 5"
-      - "@vasl_bashim` 2"
-      - "@vasl_bashim 6"
-      - "@vasl_bashim 7"
-      - "@vasl_bashim 8"
+      - "@vasl_bashim [mci]`"
+      - "@vasl_bashim [mtn]"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@vasl_bashim"
-      - "@vasl_bashim 2"
-      - "@vasl_bashim 3"
-      - "@vasl_bashim 4"
-      - "@vasl_bashim`"
-      - "@vasl_bashim 5"
-      - "@vasl_bashim` 2"
-      - "@vasl_bashim 6"
-      - "@vasl_bashim 7"
-      - "@vasl_bashim 8"
+      - "@vasl_bashim [mci]`"
+      - "@vasl_bashim [mtn]"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@vasl_bashim"
-      - "@vasl_bashim 2"
-      - "@vasl_bashim 3"
-      - "@vasl_bashim 4"
-      - "@vasl_bashim`"
-      - "@vasl_bashim 5"
-      - "@vasl_bashim` 2"
-      - "@vasl_bashim 6"
-      - "@vasl_bashim 7"
-      - "@vasl_bashim 8"
+      - "@vasl_bashim [mci]`"
+      - "@vasl_bashim [mtn]"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -135,16 +79,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@vasl_bashim"
-      - "@vasl_bashim 2"
-      - "@vasl_bashim 3"
-      - "@vasl_bashim 4"
-      - "@vasl_bashim`"
-      - "@vasl_bashim 5"
-      - "@vasl_bashim` 2"
-      - "@vasl_bashim 6"
-      - "@vasl_bashim 7"
-      - "@vasl_bashim 8"
+      - "@vasl_bashim [mci]`"
+      - "@vasl_bashim [mtn]"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
