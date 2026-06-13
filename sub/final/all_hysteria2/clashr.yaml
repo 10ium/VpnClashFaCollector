@@ -5,67 +5,81 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: "@filembad`", server: 37.156.46.29, port: 443, type: hysteria2, ports: 443, password: Masir_Sefid, obfs: salamander, obfs-password: Masir_Sefid, sni: api.masir-sefid-1.my, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 65919 | ⚡️Telegram - t.me/SOSkeyNET, server: panel.cobalttoolsgithub.online, port: 54236, type: hysteria2, ports: 54236, password: Nrqyc1GkGr, obfs: salamander, obfs-password: gxXGwphUe6APbFFsWA, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 65918 | ⚡️Telegram - t.me/SOSkeyNET, server: panel.cobalttoolsgithub.online, port: 54236, type: hysteria2, ports: 54236, password: Nrqyc1GkGr, obfs: salamander, obfs-password: gxXGwphUe6APbFFsWA, sni: panel.cobalttoolsgithub.online, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 66996 | ⚡️Telegram - t.me/SOSkeyNET, server: 192.9.179.140, port: 51000, type: hysteria2, ports: 51000, password: d1db0080-669a-4357-ab9f-ab16719ed736, sni: cn.cremedelamer.com, skip-cert-verify: false, udp: true, tfo: false}
   - {name: hys-4m92j09qr0, server: n.acp.us.ci, port: 443, type: hysteria2, ports: 443, password: vlxjqoiauby22dvb, obfs: salamander, obfs-password: "%40arshiacomplus", sni: n.acp.us.ci, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 67375 | ⚡️Telegram - t.me/SOSkeyNET, server: 130.61.50.75, port: 6443, type: hysteria2, ports: 6443, password: zhangyang, sni: dash.cloudflare.com, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - "@filembad`"
       - 65919 | ⚡️Telegram - t.me/SOSkeyNET
       - 65918 | ⚡️Telegram - t.me/SOSkeyNET
       - 66996 | ⚡️Telegram - t.me/SOSkeyNET
       - hys-4m92j09qr0
+      - 67375 | ⚡️Telegram - t.me/SOSkeyNET
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - "@filembad`"
       - 65919 | ⚡️Telegram - t.me/SOSkeyNET
       - 65918 | ⚡️Telegram - t.me/SOSkeyNET
       - 66996 | ⚡️Telegram - t.me/SOSkeyNET
       - hys-4m92j09qr0
+      - 67375 | ⚡️Telegram - t.me/SOSkeyNET
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - "@filembad`"
       - 65919 | ⚡️Telegram - t.me/SOSkeyNET
       - 65918 | ⚡️Telegram - t.me/SOSkeyNET
       - 66996 | ⚡️Telegram - t.me/SOSkeyNET
       - hys-4m92j09qr0
+      - 67375 | ⚡️Telegram - t.me/SOSkeyNET
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - "@filembad`"
       - 65919 | ⚡️Telegram - t.me/SOSkeyNET
       - 65918 | ⚡️Telegram - t.me/SOSkeyNET
       - 66996 | ⚡️Telegram - t.me/SOSkeyNET
       - hys-4m92j09qr0
+      - 67375 | ⚡️Telegram - t.me/SOSkeyNET
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - "@filembad`"
       - 65919 | ⚡️Telegram - t.me/SOSkeyNET
       - 65918 | ⚡️Telegram - t.me/SOSkeyNET
       - 66996 | ⚡️Telegram - t.me/SOSkeyNET
       - hys-4m92j09qr0
+      - 67375 | ⚡️Telegram - t.me/SOSkeyNET
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - "@filembad`"
       - 65919 | ⚡️Telegram - t.me/SOSkeyNET
       - 65918 | ⚡️Telegram - t.me/SOSkeyNET
       - 66996 | ⚡️Telegram - t.me/SOSkeyNET
       - hys-4m92j09qr0
+      - 67375 | ⚡️Telegram - t.me/SOSkeyNET
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -93,10 +107,12 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - "@filembad`"
       - 65919 | ⚡️Telegram - t.me/SOSkeyNET
       - 65918 | ⚡️Telegram - t.me/SOSkeyNET
       - 66996 | ⚡️Telegram - t.me/SOSkeyNET
       - hys-4m92j09qr0
+      - 67375 | ⚡️Telegram - t.me/SOSkeyNET
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

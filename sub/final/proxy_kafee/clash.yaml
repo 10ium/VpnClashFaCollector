@@ -465,7 +465,12 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: "@proxy_kafee", server: 51.104.237.70, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 1kVr0KATIJI7mwOF, udp: true, tfo: false}
+  - {name: "@proxy_kafee 2", server: 51.104.237.70, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: W74XFALLLuw6m5IA, udp: true, tfo: false}
+  - {name: "@proxy_kafee 3", server: admin.c1.webramz.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: W74XFALLLuw6m5IA, udp: true, tfo: false}
+  - {name: "@proxy_kafee 4", server: series-a1.samanehha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: W74XFALLLuw6m5IA, udp: true, tfo: false}
   - {name: "@proxy_kafee - ❤️ 🇺🇲⚡`", server: 188.114.97.6, port: 443, type: trojan, password: mitivpn, sni: global.fastly.com.mitivpn-a.site, skip-cert-verify: false, network: ws, ws-opts: {path: /ed=mitivpn, headers: {Host: global.fastly.com.mitivpn-a.site}}, udp: true, tfo: false}
+  - {name: "@proxy_kafee 5", server: 188.114.97.6, port: 443, type: trojan, password: mitivpn, sni: global.fastly.com.mitivpn-a.site, skip-cert-verify: false, network: ws, ws-opts: {path: /ed=mitivpn, headers: {Host: global.fastly.com.mitivpn-a.site}}, udp: true, tfo: false}
   - {name: "@proxy_kafee - ❤️ 🇩🇪⚡", server: 188.114.97.6, port: 443, type: trojan, password: mitivpn, sni: global.fastly.com.mitivpn-a.site, skip-cert-verify: false, network: ws, ws-opts: {path: /ed=mitivpn, headers: {Host: global.fastly.com.mitivpn-a.site}}, udp: true, tfo: false}
   - {name: "@proxy_kafee ⚡🔷`", server: 151.101.194.219, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846, network: ws, ws-opts: {path: /, headers: {Host: max-gb1.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
@@ -484,7 +489,12 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - "@proxy_kafee"
+      - "@proxy_kafee 2"
+      - "@proxy_kafee 3"
+      - "@proxy_kafee 4"
       - "@proxy_kafee - ❤️ 🇺🇲⚡`"
+      - "@proxy_kafee 5"
       - "@proxy_kafee - ❤️ 🇩🇪⚡"
       - "@proxy_kafee ⚡🔷`"
   - name: خودکار (بهترین پینگ) 🤖
@@ -493,7 +503,12 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - "@proxy_kafee"
+      - "@proxy_kafee 2"
+      - "@proxy_kafee 3"
+      - "@proxy_kafee 4"
       - "@proxy_kafee - ❤️ 🇺🇲⚡`"
+      - "@proxy_kafee 5"
       - "@proxy_kafee - ❤️ 🇩🇪⚡"
       - "@proxy_kafee ⚡🔷`"
   - name: پشتیبان (در صورت قطعی) 🧯
@@ -502,7 +517,12 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - "@proxy_kafee"
+      - "@proxy_kafee 2"
+      - "@proxy_kafee 3"
+      - "@proxy_kafee 4"
       - "@proxy_kafee - ❤️ 🇺🇲⚡`"
+      - "@proxy_kafee 5"
       - "@proxy_kafee - ❤️ 🇩🇪⚡"
       - "@proxy_kafee ⚡🔷`"
   - name: اتصال پایدار 🔗
@@ -520,7 +540,12 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@proxy_kafee"
+      - "@proxy_kafee 2"
+      - "@proxy_kafee 3"
+      - "@proxy_kafee 4"
       - "@proxy_kafee - ❤️ 🇺🇲⚡`"
+      - "@proxy_kafee 5"
       - "@proxy_kafee - ❤️ 🇩🇪⚡"
       - "@proxy_kafee ⚡🔷`"
   - name: توزیع بار (گردشی) 🔁
@@ -529,7 +554,12 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@proxy_kafee"
+      - "@proxy_kafee 2"
+      - "@proxy_kafee 3"
+      - "@proxy_kafee 4"
       - "@proxy_kafee - ❤️ 🇺🇲⚡`"
+      - "@proxy_kafee 5"
       - "@proxy_kafee - ❤️ 🇩🇪⚡"
       - "@proxy_kafee ⚡🔷`"
   - name: توزیع بار (موقت) ⏳
@@ -538,7 +568,12 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@proxy_kafee"
+      - "@proxy_kafee 2"
+      - "@proxy_kafee 3"
+      - "@proxy_kafee 4"
       - "@proxy_kafee - ❤️ 🇺🇲⚡`"
+      - "@proxy_kafee 5"
       - "@proxy_kafee - ❤️ 🇩🇪⚡"
       - "@proxy_kafee ⚡🔷`"
   - name: دانلود منیجر 📥

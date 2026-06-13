@@ -5,123 +5,95 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "🇩🇪 Germany [cloud🔵4]", server: 104.16.0.0, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846, network: ws, ws-opts: {path: /, headers: {Host: tr-cd.sublink-vip2.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "🇩🇪 Germany [fast🟢4]", server: 151.101.0.1, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846, network: ws, ws-opts: {path: /, headers: {Host: max-gb1.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "🇩🇪 Germany [fast🟢1]", server: 151.101.109.223, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846, network: ws, ws-opts: {path: /, headers: {Host: max-gb1.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "name : rasad-unlimited", server: 151.101.109.223, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846, network: ws, ws-opts: {path: /, headers: {Host: max-gb1.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "🇩🇪 Germany [fast🟢3]", server: 167.82.0.1, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846, network: ws, ws-opts: {path: /, headers: {Host: max-gb1.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: grpc 🇩🇪, server: 51.89.47.37, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: vless}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "🇩🇪 Germany [direct🟣1]", server: fast-domain-gb.dhbhvfbhfbvhfbvhfbhv.shop, port: 2095, type: vless, tls: true, packet-encoding: xudp, uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846, servername: refersion.com, host: refersion.com, path: /, reality-opts: {public-key: 9nvQaypTgq2UZ_9wSUctYxStDRWNJqe3o9evmKc5UBE, short-id: bc348c28dbc7b9f5}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "🇩🇪 Germany [direct🟣2]", server: fast-domain-gb.dhbhvfbhfbvhfbvhfbhv.shop, port: 2095, type: vless, tls: true, packet-encoding: xudp, uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846, servername: www.speedtest.net, host: www.speedtest.net, path: /, reality-opts: {public-key: 9nvQaypTgq2UZ_9wSUctYxStDRWNJqe3o9evmKc5UBE, short-id: bc348c28dbc7b9f5}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "🇩🇪 Germany [cloud🔵1]", server: pishdad.org, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846, network: ws, ws-opts: {path: /, headers: {Host: tr-cd.sublink-vip2.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "🇩🇪 Germany [fast🟢2]", server: speedtest.net, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846, network: ws, ws-opts: {path: /, headers: {Host: max-gb1.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "🇩🇪 Germany [cloud🔵3]", server: www.parsvds.com, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846, network: ws, ws-opts: {path: /, headers: {Host: tr-cd.sublink-vip2.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "🇩🇪 Germany [cloud🔵2]", server: www.speedtest.org, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846, network: ws, ws-opts: {path: /, headers: {Host: tr-cd.sublink-vip2.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇺🇸 iphone02016vpn|usa`, server: 198.98.53.130, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: eDfN7SODQceIOmIAbtJJtK, udp: true, tfo: false}
+  - {name: iphone02016vpn`, server: 82.38.31.13, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
+  - {name: iphone02016vpn` 2, server: 158.173.24.73, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true, tfo: false}
+  - {name: 🇨🇦 iphone02016vpn|ca`, server: 3.96.152.83, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true, tfo: false}
+  - {name: 🇨🇦 iphone02016vpn|ca` 2, server: 52.60.99.199, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true, tfo: false}
+  - {name: 🇨🇳 iphone02016vpn|tw`, server: 185.189.160.105, port: 41632, type: ss, cipher: aes-256-cfb, password: qwerREWQ@@, udp: true, tfo: false}
+  - {name: iphone02016vpn, server: 221.139.79.57, port: 13979, type: ss, cipher: aes-256-cfb, password: qwerREWQ@@, udp: true, tfo: false}
+  - {name: iphone02016vpn` 3, server: 3.8.48.222, port: 80, type: ss, cipher: aes-256-gcm, password: dada1203, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇩🇪 Germany [cloud🔵4]
-      - 🇩🇪 Germany [fast🟢4]
-      - 🇩🇪 Germany [fast🟢1]
-      - "name : rasad-unlimited"
-      - 🇩🇪 Germany [fast🟢3]
-      - grpc 🇩🇪
-      - 🇩🇪 Germany [direct🟣1]
-      - 🇩🇪 Germany [direct🟣2]
-      - 🇩🇪 Germany [cloud🔵1]
-      - 🇩🇪 Germany [fast🟢2]
-      - 🇩🇪 Germany [cloud🔵3]
-      - 🇩🇪 Germany [cloud🔵2]
+      - 🇺🇸 iphone02016vpn|usa`
+      - iphone02016vpn`
+      - iphone02016vpn` 2
+      - 🇨🇦 iphone02016vpn|ca`
+      - 🇨🇦 iphone02016vpn|ca` 2
+      - 🇨🇳 iphone02016vpn|tw`
+      - iphone02016vpn
+      - iphone02016vpn` 3
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 🇩🇪 Germany [cloud🔵4]
-      - 🇩🇪 Germany [fast🟢4]
-      - 🇩🇪 Germany [fast🟢1]
-      - "name : rasad-unlimited"
-      - 🇩🇪 Germany [fast🟢3]
-      - grpc 🇩🇪
-      - 🇩🇪 Germany [direct🟣1]
-      - 🇩🇪 Germany [direct🟣2]
-      - 🇩🇪 Germany [cloud🔵1]
-      - 🇩🇪 Germany [fast🟢2]
-      - 🇩🇪 Germany [cloud🔵3]
-      - 🇩🇪 Germany [cloud🔵2]
+      - 🇺🇸 iphone02016vpn|usa`
+      - iphone02016vpn`
+      - iphone02016vpn` 2
+      - 🇨🇦 iphone02016vpn|ca`
+      - 🇨🇦 iphone02016vpn|ca` 2
+      - 🇨🇳 iphone02016vpn|tw`
+      - iphone02016vpn
+      - iphone02016vpn` 3
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇩🇪 Germany [cloud🔵4]
-      - 🇩🇪 Germany [fast🟢4]
-      - 🇩🇪 Germany [fast🟢1]
-      - "name : rasad-unlimited"
-      - 🇩🇪 Germany [fast🟢3]
-      - grpc 🇩🇪
-      - 🇩🇪 Germany [direct🟣1]
-      - 🇩🇪 Germany [direct🟣2]
-      - 🇩🇪 Germany [cloud🔵1]
-      - 🇩🇪 Germany [fast🟢2]
-      - 🇩🇪 Germany [cloud🔵3]
-      - 🇩🇪 Germany [cloud🔵2]
+      - 🇺🇸 iphone02016vpn|usa`
+      - iphone02016vpn`
+      - iphone02016vpn` 2
+      - 🇨🇦 iphone02016vpn|ca`
+      - 🇨🇦 iphone02016vpn|ca` 2
+      - 🇨🇳 iphone02016vpn|tw`
+      - iphone02016vpn
+      - iphone02016vpn` 3
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇩🇪 Germany [cloud🔵4]
-      - 🇩🇪 Germany [fast🟢4]
-      - 🇩🇪 Germany [fast🟢1]
-      - "name : rasad-unlimited"
-      - 🇩🇪 Germany [fast🟢3]
-      - grpc 🇩🇪
-      - 🇩🇪 Germany [direct🟣1]
-      - 🇩🇪 Germany [direct🟣2]
-      - 🇩🇪 Germany [cloud🔵1]
-      - 🇩🇪 Germany [fast🟢2]
-      - 🇩🇪 Germany [cloud🔵3]
-      - 🇩🇪 Germany [cloud🔵2]
+      - 🇺🇸 iphone02016vpn|usa`
+      - iphone02016vpn`
+      - iphone02016vpn` 2
+      - 🇨🇦 iphone02016vpn|ca`
+      - 🇨🇦 iphone02016vpn|ca` 2
+      - 🇨🇳 iphone02016vpn|tw`
+      - iphone02016vpn
+      - iphone02016vpn` 3
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 🇩🇪 Germany [cloud🔵4]
-      - 🇩🇪 Germany [fast🟢4]
-      - 🇩🇪 Germany [fast🟢1]
-      - "name : rasad-unlimited"
-      - 🇩🇪 Germany [fast🟢3]
-      - grpc 🇩🇪
-      - 🇩🇪 Germany [direct🟣1]
-      - 🇩🇪 Germany [direct🟣2]
-      - 🇩🇪 Germany [cloud🔵1]
-      - 🇩🇪 Germany [fast🟢2]
-      - 🇩🇪 Germany [cloud🔵3]
-      - 🇩🇪 Germany [cloud🔵2]
+      - 🇺🇸 iphone02016vpn|usa`
+      - iphone02016vpn`
+      - iphone02016vpn` 2
+      - 🇨🇦 iphone02016vpn|ca`
+      - 🇨🇦 iphone02016vpn|ca` 2
+      - 🇨🇳 iphone02016vpn|tw`
+      - iphone02016vpn
+      - iphone02016vpn` 3
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇩🇪 Germany [cloud🔵4]
-      - 🇩🇪 Germany [fast🟢4]
-      - 🇩🇪 Germany [fast🟢1]
-      - "name : rasad-unlimited"
-      - 🇩🇪 Germany [fast🟢3]
-      - grpc 🇩🇪
-      - 🇩🇪 Germany [direct🟣1]
-      - 🇩🇪 Germany [direct🟣2]
-      - 🇩🇪 Germany [cloud🔵1]
-      - 🇩🇪 Germany [fast🟢2]
-      - 🇩🇪 Germany [cloud🔵3]
-      - 🇩🇪 Germany [cloud🔵2]
+      - 🇺🇸 iphone02016vpn|usa`
+      - iphone02016vpn`
+      - iphone02016vpn` 2
+      - 🇨🇦 iphone02016vpn|ca`
+      - 🇨🇦 iphone02016vpn|ca` 2
+      - 🇨🇳 iphone02016vpn|tw`
+      - iphone02016vpn
+      - iphone02016vpn` 3
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -149,18 +121,14 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇩🇪 Germany [cloud🔵4]
-      - 🇩🇪 Germany [fast🟢4]
-      - 🇩🇪 Germany [fast🟢1]
-      - "name : rasad-unlimited"
-      - 🇩🇪 Germany [fast🟢3]
-      - grpc 🇩🇪
-      - 🇩🇪 Germany [direct🟣1]
-      - 🇩🇪 Germany [direct🟣2]
-      - 🇩🇪 Germany [cloud🔵1]
-      - 🇩🇪 Germany [fast🟢2]
-      - 🇩🇪 Germany [cloud🔵3]
-      - 🇩🇪 Germany [cloud🔵2]
+      - 🇺🇸 iphone02016vpn|usa`
+      - iphone02016vpn`
+      - iphone02016vpn` 2
+      - 🇨🇦 iphone02016vpn|ca`
+      - 🇨🇦 iphone02016vpn|ca` 2
+      - 🇨🇳 iphone02016vpn|tw`
+      - iphone02016vpn
+      - iphone02016vpn` 3
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

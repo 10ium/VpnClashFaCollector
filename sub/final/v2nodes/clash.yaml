@@ -465,12 +465,13 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 192.3.196.182:8416, server: 192.3.196.182, port: 8416, type: ss, cipher: 2022-blake3-aes-128-gcm, password: Z7+ihCahl4v8UUYCgPv93w==, udp: true, tfo: false}
+  - {name: 13.135.172.147:80, server: 13.135.172.147, port: 80, type: ss, cipher: aes-256-gcm, password: dada1203, udp: true, tfo: false}
+  - {name: 3.27.212.11:80, server: 3.27.212.11, port: 80, type: ss, cipher: aes-256-gcm, password: dada1203, udp: true, tfo: false}
+  - {name: 35.176.239.59:80, server: 35.176.239.59, port: 80, type: ss, cipher: aes-256-gcm, password: dada1203, udp: true, tfo: false}
   - {name: 95.40.19.84:1123, server: 95.40.19.84, port: 1123, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 3.9.115.249:1005, server: 3.9.115.249, port: 1005, type: vless, tls: true, packet-encoding: xudp, uuid: 196b18f8-9bcd-482c-9887-0dd8b220dd0a, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 193.149.185.17:41510, server: 193.149.185.17, port: 41510, type: vless, tls: true, packet-encoding: xudp, uuid: 0599ca07-cc1c-4e42-b637-6e286f43beb2, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 167.104.223.68:7443, server: 167.104.223.68, port: 7443, type: vless, tls: true, packet-encoding: xudp, uuid: 1c0277ad-bb4d-496f-bc0c-40ccee03fca5, servername: www.microsoft.com, host: www.microsoft.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 5QAO98ot2U7TcGs_f6EEaQjCzNOJLNHqPf6smYsdFVI, short-id: d82fb387}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 31.76.38.84:7443, server: 31.76.38.84, port: 7443, type: vless, tls: true, packet-encoding: xudp, uuid: 1c0277ad-bb4d-496f-bc0c-40ccee03fca5, servername: stackoverflow.com, host: stackoverflow.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 5QAO98ot2U7TcGs_f6EEaQjCzNOJLNHqPf6smYsdFVI, short-id: be0ce047}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 186.246.2.119:443, server: 186.246.2.119, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5729c1fc-c7cf-41b7-8c17-f9b5f59772da, servername: se.sellflow.org, host: se.sellflow.org, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 🇩🇪 de.pink-perfect.ru:443, server: de.pink-perfect.ru, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8ea0665e-dee3-418c-8822-1f70f350f2db, servername: yandex.net, host: yandex.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 2fgsbEAn-ALVpjnE4ZTPrzaZY70vVplYwldCnslInE0, short-id: 86b80f1e713a33ad}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 185.170.154.202:443, server: 185.170.154.202, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: df7a61b3-fcfb-4e88-aea6-460f83a32823, servername: nodg.me3op.site, host: nodg.me3op.site, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: T6p0Kn_9VfKQfBrDoBEuPoNZYNeY0VFrl6H6bmh3xhk, short-id: 3fa80f1d8a977c80}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 31.76.115.10:443, server: 31.76.115.10, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: df7a61b3-fcfb-4e88-aea6-460f83a32823, servername: help.me3op.site, host: help.me3op.site, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: AT8TNQB1qRljPMmLuTa2Rj765qAr8XbC3D9YpEpxkw0, short-id: abcdef12}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
@@ -491,12 +492,13 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 192.3.196.182:8416
+      - 13.135.172.147:80
+      - 3.27.212.11:80
+      - 35.176.239.59:80
       - 95.40.19.84:1123
-      - 3.9.115.249:1005
+      - 193.149.185.17:41510
       - 167.104.223.68:7443
       - 31.76.38.84:7443
-      - 186.246.2.119:443
       - 🇩🇪 de.pink-perfect.ru:443
       - 185.170.154.202:443
       - 31.76.115.10:443
@@ -507,12 +509,13 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - 192.3.196.182:8416
+      - 13.135.172.147:80
+      - 3.27.212.11:80
+      - 35.176.239.59:80
       - 95.40.19.84:1123
-      - 3.9.115.249:1005
+      - 193.149.185.17:41510
       - 167.104.223.68:7443
       - 31.76.38.84:7443
-      - 186.246.2.119:443
       - 🇩🇪 de.pink-perfect.ru:443
       - 185.170.154.202:443
       - 31.76.115.10:443
@@ -523,12 +526,13 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - 192.3.196.182:8416
+      - 13.135.172.147:80
+      - 3.27.212.11:80
+      - 35.176.239.59:80
       - 95.40.19.84:1123
-      - 3.9.115.249:1005
+      - 193.149.185.17:41510
       - 167.104.223.68:7443
       - 31.76.38.84:7443
-      - 186.246.2.119:443
       - 🇩🇪 de.pink-perfect.ru:443
       - 185.170.154.202:443
       - 31.76.115.10:443
@@ -548,12 +552,13 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 192.3.196.182:8416
+      - 13.135.172.147:80
+      - 3.27.212.11:80
+      - 35.176.239.59:80
       - 95.40.19.84:1123
-      - 3.9.115.249:1005
+      - 193.149.185.17:41510
       - 167.104.223.68:7443
       - 31.76.38.84:7443
-      - 186.246.2.119:443
       - 🇩🇪 de.pink-perfect.ru:443
       - 185.170.154.202:443
       - 31.76.115.10:443
@@ -564,12 +569,13 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 192.3.196.182:8416
+      - 13.135.172.147:80
+      - 3.27.212.11:80
+      - 35.176.239.59:80
       - 95.40.19.84:1123
-      - 3.9.115.249:1005
+      - 193.149.185.17:41510
       - 167.104.223.68:7443
       - 31.76.38.84:7443
-      - 186.246.2.119:443
       - 🇩🇪 de.pink-perfect.ru:443
       - 185.170.154.202:443
       - 31.76.115.10:443
@@ -580,12 +586,13 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 192.3.196.182:8416
+      - 13.135.172.147:80
+      - 3.27.212.11:80
+      - 35.176.239.59:80
       - 95.40.19.84:1123
-      - 3.9.115.249:1005
+      - 193.149.185.17:41510
       - 167.104.223.68:7443
       - 31.76.38.84:7443
-      - 186.246.2.119:443
       - 🇩🇪 de.pink-perfect.ru:443
       - 185.170.154.202:443
       - 31.76.115.10:443
