@@ -465,8 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Capoit`", server: p4.mmrknight.app, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 0e21f912-711b-49c7-a95d-f946f9cf4b5d, network: ws, ws-opts: {path: /telegram-Raiv2mmr, headers: {Host: play.google.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 2", server: ip.feywebsite.ir, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: ad356e93-cc14-417d-9f4e-32376d03f5b7, servername: 07e357aa7e747ca4.hOzHeEn.Ir, network: ws, ws-opts: {path: /ws, headers: {Host: 07e357aa7e747ca4.hOzHeEn.Ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit`", server: 188.114.97.6, port: 443, type: trojan, password: mitivpn, sni: www.ssl.global.digi.my.mitivpn.xyz, skip-cert-verify: false, network: ws, ws-opts: {path: /ed=mitivpn, headers: {Host: www.ssl.global.digi.my.mitivpn.xyz}}, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,7 +483,6 @@ proxy-groups:
     type: select
     proxies:
       - "@Capoit`"
-      - "@Capoit` 2"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -492,7 +490,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Capoit`"
-      - "@Capoit` 2"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -500,7 +497,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Capoit`"
-      - "@Capoit` 2"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -517,7 +513,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit`"
-      - "@Capoit` 2"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -525,7 +520,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit`"
-      - "@Capoit` 2"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -533,7 +527,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit`"
-      - "@Capoit` 2"
   - name: دانلود منیجر 📥
     type: select
     proxies:
