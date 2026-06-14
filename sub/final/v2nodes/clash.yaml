@@ -465,8 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 18.181.230.17:5408, server: 18.181.230.17, port: 5408, type: trojan, password: BxceQaOe, sni: t.me%252Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 207.211.214.42:8443, server: 207.211.214.42, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 394f6981-a782-4779-9a85-e6cf22935d93, servername: bru-be-01.fromblancwithlove.com, host: bru-be-01.fromblancwithlove.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 🇷🇺 sw.pink-perfect.ru:443, server: sw.pink-perfect.ru, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8ea0665e-dee3-418c-8822-1f70f350f2db, servername: yandex.net, host: yandex.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 2fgsbEAn-ALVpjnE4ZTPrzaZY70vVplYwldCnslInE0, short-id: 86b80f1e713a33ad}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇷🇺 top395200747.mwscdn.ru:80, server: top395200747.mwscdn.ru, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: e592c66c-7dda-4cbe-b26d-93a365b431c3, network: ws, ws-opts: {path: /zuuvpn, headers: {Host: top395200747.mwscdn.ru}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +484,27 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 18.181.230.17:5408
+      - 207.211.214.42:8443
       - 🇷🇺 sw.pink-perfect.ru:443
+      - 🇷🇺 top395200747.mwscdn.ru:80
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 18.181.230.17:5408
+      - 207.211.214.42:8443
       - 🇷🇺 sw.pink-perfect.ru:443
+      - 🇷🇺 top395200747.mwscdn.ru:80
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 18.181.230.17:5408
+      - 207.211.214.42:8443
       - 🇷🇺 sw.pink-perfect.ru:443
+      - 🇷🇺 top395200747.mwscdn.ru:80
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +520,27 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 18.181.230.17:5408
+      - 207.211.214.42:8443
       - 🇷🇺 sw.pink-perfect.ru:443
+      - 🇷🇺 top395200747.mwscdn.ru:80
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 18.181.230.17:5408
+      - 207.211.214.42:8443
       - 🇷🇺 sw.pink-perfect.ru:443
+      - 🇷🇺 top395200747.mwscdn.ru:80
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 18.181.230.17:5408
+      - 207.211.214.42:8443
       - 🇷🇺 sw.pink-perfect.ru:443
+      - 🇷🇺 top395200747.mwscdn.ru:80
   - name: دانلود منیجر 📥
     type: select
     proxies:

@@ -465,6 +465,10 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: hamedvpns, server: news.microsoft.com, port: 443, type: trojan, password: 672520e0-671e-11f1-9d9c-1239d0255272, sni: uk1.test3.net, skip-cert-verify: false, network: ws, ws-opts: {path: /howdy, headers: {Host: uk1.test3.net}}, udp: true, tfo: false}
+  - {name: hamedvpns 😉, server: hcaptcha.com, port: 443, type: trojan, password: 72e07880-67b8-11f1-af64-1239d0255272, sni: uk1.test3.net, skip-cert-verify: false, network: ws, ws-opts: {path: /howdy, headers: {Host: uk1.test3.net}}, udp: true, tfo: false}
+  - {name: soft98.ir:443/, server: soft98.ir, port: 443, type: trojan, password: 96088230-67bd-11f1-a421-1239d0255272, sni: uk1.test3.net, skip-cert-verify: false, network: ws, ws-opts: {path: /howdy, headers: {Host: uk1.test3.net}}, udp: true, tfo: false}
+  - {name: hamedvpns 🇬🇧, server: hcaptcha.com, port: 443, type: trojan, password: d272e730-67b2-11f1-9e71-1239d0255272, sni: uk1.test3.net, skip-cert-verify: false, network: ws, ws-opts: {path: /howdy, headers: {Host: uk1.test3.net}}, udp: true, tfo: false}
   - {name: hamedp71::🇫🇷, server: srv1.khatibirepair.ir, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -482,6 +486,10 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - hamedvpns
+      - hamedvpns 😉
+      - soft98.ir:443/
+      - hamedvpns 🇬🇧
       - hamedp71::🇫🇷
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -489,6 +497,10 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - hamedvpns
+      - hamedvpns 😉
+      - soft98.ir:443/
+      - hamedvpns 🇬🇧
       - hamedp71::🇫🇷
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -496,6 +508,10 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - hamedvpns
+      - hamedvpns 😉
+      - soft98.ir:443/
+      - hamedvpns 🇬🇧
       - hamedp71::🇫🇷
   - name: اتصال پایدار 🔗
     type: url-test
@@ -512,6 +528,10 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - hamedvpns
+      - hamedvpns 😉
+      - soft98.ir:443/
+      - hamedvpns 🇬🇧
       - hamedp71::🇫🇷
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -519,6 +539,10 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - hamedvpns
+      - hamedvpns 😉
+      - soft98.ir:443/
+      - hamedvpns 🇬🇧
       - hamedp71::🇫🇷
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -526,6 +550,10 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - hamedvpns
+      - hamedvpns 😉
+      - soft98.ir:443/
+      - hamedvpns 🇬🇧
       - hamedp71::🇫🇷
   - name: دانلود منیجر 📥
     type: select
