@@ -465,7 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@v2FreeHub 🇬🇧", server: 57.128.174.124, port: 2096, type: vmess, uuid: ae91113b-915f-4a56-b998-e52d8a12da39, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: grpc, servername: "", grpc-opts: {grpc-service-name: api}, udp: true, tfo: false}
+  - {name: "@v2FreeHub 🇪🇸", server: 141.227.188.221, port: 2053, type: vmess, uuid: 29b68204-4954-4130-b479-abde091a6e11, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@v2FreeHub 🇬🇧"
+      - "@v2FreeHub 🇪🇸"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@v2FreeHub 🇬🇧"
+      - "@v2FreeHub 🇪🇸"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@v2FreeHub 🇬🇧"
+      - "@v2FreeHub 🇪🇸"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2FreeHub 🇬🇧"
+      - "@v2FreeHub 🇪🇸"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2FreeHub 🇬🇧"
+      - "@v2FreeHub 🇪🇸"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2FreeHub 🇬🇧"
+      - "@v2FreeHub 🇪🇸"
   - name: دانلود منیجر 📥
     type: select
     proxies:

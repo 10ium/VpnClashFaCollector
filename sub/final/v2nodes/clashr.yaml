@@ -6,8 +6,8 @@ log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
   - {name: 207.211.214.42:8443, server: 207.211.214.42, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 394f6981-a782-4779-9a85-e6cf22935d93, servername: bru-be-01.fromblancwithlove.com, host: bru-be-01.fromblancwithlove.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇷🇺 sw.pink-perfect.ru:443, server: sw.pink-perfect.ru, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8ea0665e-dee3-418c-8822-1f70f350f2db, servername: yandex.net, host: yandex.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 2fgsbEAn-ALVpjnE4ZTPrzaZY70vVplYwldCnslInE0, short-id: 86b80f1e713a33ad}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 🇷🇺 top395200747.mwscdn.ru:80, server: top395200747.mwscdn.ru, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: e592c66c-7dda-4cbe-b26d-93a365b431c3, network: ws, ws-opts: {path: /zuuvpn, headers: {Host: top395200747.mwscdn.ru}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 188.114.97.3:443, server: 188.114.97.3, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fc965ad9-bdd7-4815-ad71-b39ec5972dc1, servername: octopusss4.com, network: ws, ws-opts: {path: /tsghdws, headers: {Host: octopusss4.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -15,8 +15,8 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - 207.211.214.42:8443
-      - 🇷🇺 sw.pink-perfect.ru:443
       - 🇷🇺 top395200747.mwscdn.ru:80
+      - 188.114.97.3:443
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -24,8 +24,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 207.211.214.42:8443
-      - 🇷🇺 sw.pink-perfect.ru:443
       - 🇷🇺 top395200747.mwscdn.ru:80
+      - 188.114.97.3:443
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -33,32 +33,32 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - 207.211.214.42:8443
-      - 🇷🇺 sw.pink-perfect.ru:443
       - 🇷🇺 top395200747.mwscdn.ru:80
+      - 188.114.97.3:443
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - 207.211.214.42:8443
-      - 🇷🇺 sw.pink-perfect.ru:443
       - 🇷🇺 top395200747.mwscdn.ru:80
+      - 188.114.97.3:443
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - 207.211.214.42:8443
-      - 🇷🇺 sw.pink-perfect.ru:443
       - 🇷🇺 top395200747.mwscdn.ru:80
+      - 188.114.97.3:443
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - 207.211.214.42:8443
-      - 🇷🇺 sw.pink-perfect.ru:443
       - 🇷🇺 top395200747.mwscdn.ru:80
+      - 188.114.97.3:443
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -87,8 +87,8 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - 207.211.214.42:8443
-      - 🇷🇺 sw.pink-perfect.ru:443
       - 🇷🇺 top395200747.mwscdn.ru:80
+      - 188.114.97.3:443
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
