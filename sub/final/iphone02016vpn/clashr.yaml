@@ -6,10 +6,8 @@ log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
   - {name: iphone02016vpn, server: 216.24.57.1, port: 443, type: trojan, password: humanity, sni: www.calmloud.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmloud.com}}, udp: true, tfo: false}
-  - {name: iphone02016vpn`, server: 151.101.109.223, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 05dde938-bb2d-41c3-b176-2a9d370489b4, servername: default.ssl.fastly.net, network: ws, ws-opts: {path: /, headers: {Host: default.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: iphone02016vpn` 2, server: vxc.galardoxtn.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5f65c1ae-9e7a-48ea-8ecf-6822365cd177, servername: speedtest.net, network: ws, ws-opts: {path: /, headers: {Host: speedtest.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: iphone02016vpn`, server: vxc.galardoxtn.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5f65c1ae-9e7a-48ea-8ecf-6822365cd177, servername: speedtest.net, network: ws, ws-opts: {path: /, headers: {Host: speedtest.net}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: YamYamProxy, server: 104.20.6.134, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: ad356e93-cc14-417d-9f4e-32376d03f5b7, servername: 4dcb0d80784f3081.hozheen.ir, network: ws, ws-opts: {path: "/ws?ed=#TELEGRAM-YamYamProxy_YamYamProxy_YamYamProxy_YamYamProxy_YamYamProxy?ed=2560", headers: {Host: 4dcb0d80784f3081.hozheen.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: iphone02016vpn 2, server: 104.20.6.134, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: ad356e93-cc14-417d-9f4e-32376d03f5b7, servername: 4dcb0d80784f3081.hozheen.ir, network: ws, ws-opts: {path: "/ws?ed=#TELEGRAM-YamYamProxy_YamYamProxy_YamYamProxy_YamYamProxy_YamYamProxy?ed=2560", headers: {Host: 4dcb0d80784f3081.hozheen.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -18,9 +16,7 @@ proxy-groups:
       - DIRECT
       - iphone02016vpn
       - iphone02016vpn`
-      - iphone02016vpn` 2
       - YamYamProxy
-      - iphone02016vpn 2
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -29,9 +25,7 @@ proxy-groups:
     proxies:
       - iphone02016vpn
       - iphone02016vpn`
-      - iphone02016vpn` 2
       - YamYamProxy
-      - iphone02016vpn 2
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -40,9 +34,7 @@ proxy-groups:
       - 🎯 全球直连
       - iphone02016vpn
       - iphone02016vpn`
-      - iphone02016vpn` 2
       - YamYamProxy
-      - iphone02016vpn 2
   - name: 📲 电报信息
     type: select
     proxies:
@@ -50,9 +42,7 @@ proxy-groups:
       - 🎯 全球直连
       - iphone02016vpn
       - iphone02016vpn`
-      - iphone02016vpn` 2
       - YamYamProxy
-      - iphone02016vpn 2
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -60,9 +50,7 @@ proxy-groups:
       - 🚀 节点选择
       - iphone02016vpn
       - iphone02016vpn`
-      - iphone02016vpn` 2
       - YamYamProxy
-      - iphone02016vpn 2
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -70,9 +58,7 @@ proxy-groups:
       - 🎯 全球直连
       - iphone02016vpn
       - iphone02016vpn`
-      - iphone02016vpn` 2
       - YamYamProxy
-      - iphone02016vpn 2
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -102,9 +88,7 @@ proxy-groups:
       - ♻️ 自动选择
       - iphone02016vpn
       - iphone02016vpn`
-      - iphone02016vpn` 2
       - YamYamProxy
-      - iphone02016vpn 2
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

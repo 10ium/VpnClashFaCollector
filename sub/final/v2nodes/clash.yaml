@@ -468,6 +468,7 @@ proxies:
   - {name: 207.211.214.42:8443, server: 207.211.214.42, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 394f6981-a782-4779-9a85-e6cf22935d93, servername: bru-be-01.fromblancwithlove.com, host: bru-be-01.fromblancwithlove.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 🇷🇺 top395200747.mwscdn.ru:80, server: top395200747.mwscdn.ru, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: e592c66c-7dda-4cbe-b26d-93a365b431c3, network: ws, ws-opts: {path: /zuuvpn, headers: {Host: top395200747.mwscdn.ru}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 188.114.97.3:443, server: 188.114.97.3, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fc965ad9-bdd7-4815-ad71-b39ec5972dc1, servername: octopusss4.com, network: ws, ws-opts: {path: /tsghdws, headers: {Host: octopusss4.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇯🇵 [openproxylist.com] vmess-JP", server: 8.211.149.30, port: 443, type: vmess, uuid: bc82b8e0-026b-4b7e-8fa7-69977b6d9dc0, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /ws/, headers: {Host: polartime.link}}, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,6 +488,7 @@ proxy-groups:
       - 207.211.214.42:8443
       - 🇷🇺 top395200747.mwscdn.ru:80
       - 188.114.97.3:443
+      - 🇯🇵 [openproxylist.com] vmess-JP
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -496,6 +498,7 @@ proxy-groups:
       - 207.211.214.42:8443
       - 🇷🇺 top395200747.mwscdn.ru:80
       - 188.114.97.3:443
+      - 🇯🇵 [openproxylist.com] vmess-JP
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -505,6 +508,7 @@ proxy-groups:
       - 207.211.214.42:8443
       - 🇷🇺 top395200747.mwscdn.ru:80
       - 188.114.97.3:443
+      - 🇯🇵 [openproxylist.com] vmess-JP
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -523,6 +527,7 @@ proxy-groups:
       - 207.211.214.42:8443
       - 🇷🇺 top395200747.mwscdn.ru:80
       - 188.114.97.3:443
+      - 🇯🇵 [openproxylist.com] vmess-JP
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -532,6 +537,7 @@ proxy-groups:
       - 207.211.214.42:8443
       - 🇷🇺 top395200747.mwscdn.ru:80
       - 188.114.97.3:443
+      - 🇯🇵 [openproxylist.com] vmess-JP
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -541,6 +547,7 @@ proxy-groups:
       - 207.211.214.42:8443
       - 🇷🇺 top395200747.mwscdn.ru:80
       - 188.114.97.3:443
+      - 🇯🇵 [openproxylist.com] vmess-JP
   - name: دانلود منیجر 📥
     type: select
     proxies:
