@@ -5,10 +5,15 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: TEL;Father_vpn, server: pishdad.org, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846, network: ws, ws-opts: {path: /, headers: {Host: tr-cd.sublink-vip2.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: TEL;Father_vpn 2, server: 13.51.238.84, port: 42316, type: vless, tls: true, packet-encoding: xudp, uuid: 4f160454-fbf5-4e61-9d83-78f6b6c25d80, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: TEL;Father_vpn 3, server: fin3.flotaw.ir, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 61e688aa-3e6f-4b74-bf6e-22362a2edb26, servername: api.flotaw.ir, network: ws, ws-opts: {path: /api, headers: {Host: api.flotaw.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: TEL;Father_vpn 4, server: 151.101.109.223, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c8541f02-4efd-401d-beb7-dc017b12ee94, servername: default.ssl.fastly.net, network: ws, ws-opts: {path: /, headers: {Host: default.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: TEL;Father_vpn, server: 104.16.72.70, port: 443, type: trojan, password: mitivpn, sni: gamingdll.ir, skip-cert-verify: false, network: ws, ws-opts: {path: /index.php/ed=mitivpn, headers: {Host: gamingdll.ir}}, udp: true, tfo: false}
+  - {name: TEL;Father_vpn 2, server: 27.50.48.49, port: 443, type: trojan, password: mitivpn, sni: gamingdll.ir, skip-cert-verify: false, network: ws, ws-opts: {path: /index.html/ed=mitivpn, headers: {Host: gamingdll.ir}}, udp: true, tfo: false}
+  - {name: TEL;Father_vpn 3, server: pishdad.org, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846, network: ws, ws-opts: {path: /, headers: {Host: tr-cd.sublink-vip2.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: TEL;Father_vpn 4, server: 13.51.238.84, port: 42316, type: vless, tls: true, packet-encoding: xudp, uuid: 4f160454-fbf5-4e61-9d83-78f6b6c25d80, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: TEL;Father_vpn 5, server: fin3.flotaw.ir, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 61e688aa-3e6f-4b74-bf6e-22362a2edb26, servername: api.flotaw.ir, network: ws, ws-opts: {path: /api, headers: {Host: api.flotaw.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: TEL;Father_vpn 6, server: sca14.myfymain.com, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: TEL;Father_vpn 7, server: sca37.myfymain.com, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: TEL;Father_vpn`, server: 199.232.78.159, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b813cbc9-dc15-4348-9765-b99dc76d4422, servername: default.ssl.fastly.net, network: ws, ws-opts: {path: /, headers: {Host: default.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: TEL;Father_vpn 8, server: 151.101.109.223, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c8541f02-4efd-401d-beb7-dc017b12ee94, servername: default.ssl.fastly.net, network: ws, ws-opts: {path: /, headers: {Host: default.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -19,6 +24,11 @@ proxy-groups:
       - TEL;Father_vpn 2
       - TEL;Father_vpn 3
       - TEL;Father_vpn 4
+      - TEL;Father_vpn 5
+      - TEL;Father_vpn 6
+      - TEL;Father_vpn 7
+      - TEL;Father_vpn`
+      - TEL;Father_vpn 8
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -29,6 +39,11 @@ proxy-groups:
       - TEL;Father_vpn 2
       - TEL;Father_vpn 3
       - TEL;Father_vpn 4
+      - TEL;Father_vpn 5
+      - TEL;Father_vpn 6
+      - TEL;Father_vpn 7
+      - TEL;Father_vpn`
+      - TEL;Father_vpn 8
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -39,6 +54,11 @@ proxy-groups:
       - TEL;Father_vpn 2
       - TEL;Father_vpn 3
       - TEL;Father_vpn 4
+      - TEL;Father_vpn 5
+      - TEL;Father_vpn 6
+      - TEL;Father_vpn 7
+      - TEL;Father_vpn`
+      - TEL;Father_vpn 8
   - name: 📲 电报信息
     type: select
     proxies:
@@ -48,6 +68,11 @@ proxy-groups:
       - TEL;Father_vpn 2
       - TEL;Father_vpn 3
       - TEL;Father_vpn 4
+      - TEL;Father_vpn 5
+      - TEL;Father_vpn 6
+      - TEL;Father_vpn 7
+      - TEL;Father_vpn`
+      - TEL;Father_vpn 8
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -57,6 +82,11 @@ proxy-groups:
       - TEL;Father_vpn 2
       - TEL;Father_vpn 3
       - TEL;Father_vpn 4
+      - TEL;Father_vpn 5
+      - TEL;Father_vpn 6
+      - TEL;Father_vpn 7
+      - TEL;Father_vpn`
+      - TEL;Father_vpn 8
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -66,6 +96,11 @@ proxy-groups:
       - TEL;Father_vpn 2
       - TEL;Father_vpn 3
       - TEL;Father_vpn 4
+      - TEL;Father_vpn 5
+      - TEL;Father_vpn 6
+      - TEL;Father_vpn 7
+      - TEL;Father_vpn`
+      - TEL;Father_vpn 8
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -97,6 +132,11 @@ proxy-groups:
       - TEL;Father_vpn 2
       - TEL;Father_vpn 3
       - TEL;Father_vpn 4
+      - TEL;Father_vpn 5
+      - TEL;Father_vpn 6
+      - TEL;Father_vpn 7
+      - TEL;Father_vpn`
+      - TEL;Father_vpn 8
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

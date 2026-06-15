@@ -465,9 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 207.211.214.42:8443, server: 207.211.214.42, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 394f6981-a782-4779-9a85-e6cf22935d93, servername: bru-be-01.fromblancwithlove.com, host: bru-be-01.fromblancwithlove.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇷🇺 top395200747.mwscdn.ru:80, server: top395200747.mwscdn.ru, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: e592c66c-7dda-4cbe-b26d-93a365b431c3, network: ws, ws-opts: {path: /zuuvpn, headers: {Host: top395200747.mwscdn.ru}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 81.177.212.231:1020, server: 81.177.212.231, port: 1020, type: vless, tls: true, packet-encoding: xudp, uuid: 42e0d02c-b75c-4b9d-bc15-773aa3cbe6bc, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: ULEKhRXed87x1kNaVVq4l8ANWDwmcoxetjclnShfhWM, short-id: 4374d295a4f9dd83}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 93.157.106.189:1020, server: 93.157.106.189, port: 1020, type: vless, tls: true, packet-encoding: xudp, uuid: 42e0d02c-b75c-4b9d-bc15-773aa3cbe6bc, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: ULEKhRXed87x1kNaVVq4l8ANWDwmcoxetjclnShfhWM, short-id: 4374d295a4f9dd83}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 31.57.225.201:40282, server: 31.57.225.201, port: 40282, type: vless, tls: true, packet-encoding: xudp, uuid: ecb092b3-040f-4b3c-b819-de9291c2f452, servername: yahoo.com, host: yahoo.com, path: /, reality-opts: {public-key: Oh_hH0LUAL7SHppzMjQ96NSW-qMBDvvogqU1eVxEr2Q, short-id: 390c3c575aa3ec48}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 188.114.97.3:443, server: 188.114.97.3, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fc965ad9-bdd7-4815-ad71-b39ec5972dc1, servername: octopusss4.com, network: ws, ws-opts: {path: /tsghdws, headers: {Host: octopusss4.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 109.236.57.139:443, server: 109.236.57.139, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ff19693c-11f3-4df9-8713-79a85a5ca090, servername: sellflow.org, host: sellflow.org, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "🇯🇵 [openproxylist.com] vmess-JP", server: 8.211.149.30, port: 443, type: vmess, uuid: bc82b8e0-026b-4b7e-8fa7-69977b6d9dc0, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /ws/, headers: {Host: polartime.link}}, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -485,9 +487,11 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 207.211.214.42:8443
-      - 🇷🇺 top395200747.mwscdn.ru:80
+      - 81.177.212.231:1020
+      - 93.157.106.189:1020
+      - 31.57.225.201:40282
       - 188.114.97.3:443
+      - 109.236.57.139:443
       - 🇯🇵 [openproxylist.com] vmess-JP
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -495,9 +499,11 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - 207.211.214.42:8443
-      - 🇷🇺 top395200747.mwscdn.ru:80
+      - 81.177.212.231:1020
+      - 93.157.106.189:1020
+      - 31.57.225.201:40282
       - 188.114.97.3:443
+      - 109.236.57.139:443
       - 🇯🇵 [openproxylist.com] vmess-JP
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -505,9 +511,11 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - 207.211.214.42:8443
-      - 🇷🇺 top395200747.mwscdn.ru:80
+      - 81.177.212.231:1020
+      - 93.157.106.189:1020
+      - 31.57.225.201:40282
       - 188.114.97.3:443
+      - 109.236.57.139:443
       - 🇯🇵 [openproxylist.com] vmess-JP
   - name: اتصال پایدار 🔗
     type: url-test
@@ -524,9 +532,11 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 207.211.214.42:8443
-      - 🇷🇺 top395200747.mwscdn.ru:80
+      - 81.177.212.231:1020
+      - 93.157.106.189:1020
+      - 31.57.225.201:40282
       - 188.114.97.3:443
+      - 109.236.57.139:443
       - 🇯🇵 [openproxylist.com] vmess-JP
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -534,9 +544,11 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 207.211.214.42:8443
-      - 🇷🇺 top395200747.mwscdn.ru:80
+      - 81.177.212.231:1020
+      - 93.157.106.189:1020
+      - 31.57.225.201:40282
       - 188.114.97.3:443
+      - 109.236.57.139:443
       - 🇯🇵 [openproxylist.com] vmess-JP
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -544,9 +556,11 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 207.211.214.42:8443
-      - 🇷🇺 top395200747.mwscdn.ru:80
+      - 81.177.212.231:1020
+      - 93.157.106.189:1020
+      - 31.57.225.201:40282
       - 188.114.97.3:443
+      - 109.236.57.139:443
       - 🇯🇵 [openproxylist.com] vmess-JP
   - name: دانلود منیجر 📥
     type: select

@@ -465,12 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: ², server: 82.38.31.181, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
-  - {name: ¹, server: 82.38.31.190, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
-  - {name: ⁵, server: 77.74.123.163, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 931729a8-3c20-4841-89a1-f18dc9ce0a6f, servername: cdn3-87.vk-cdnvideo.com, host: cdn3-87.vk-cdnvideo.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ⁶, server: host.rent-home-now.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 9c8bf6ca-5b56-4f0b-ba22-a2ecd0282daf, servername: aparat.com, host: aparat.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: gJjDGu05qCVpcJMcBJKwNmUgueWgr9-6SdTrZieuVwc, short-id: 6186}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ⁴, server: 62.220.122.178, port: 442, type: vless, tls: true, packet-encoding: xudp, uuid: a93df7ad-7ebf-4271-8183-31efc390cfe3, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ³, server: 62.220.122.147, port: 441, type: vless, tls: true, packet-encoding: xudp, uuid: c88507c7-d57c-4baf-bc71-e118a6ee4ea2, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇩🇪 @OracleVPN1-Germany-2TB-2.00TB📊`, server: 194.146.68.70, port: 8088, type: vless, tls: true, packet-encoding: xudp, uuid: 88e5e9f3-4929-4383-9ab8-20e3144ae5fe, servername: dl2.soft98.ir, host: dl2.soft98.ir, path: /, reality-opts: {public-key: cIWl2OMPg0y8eSBBAi6V3iltlvTueW0wnQvi4A_XIlk, short-id: 4411e5b0b9ee}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,36 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - ²
-      - ¹
-      - ⁵
-      - ⁶
-      - ⁴
-      - ³
+      - 🇩🇪 @OracleVPN1-Germany-2TB-2.00TB📊`
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - ²
-      - ¹
-      - ⁵
-      - ⁶
-      - ⁴
-      - ³
+      - 🇩🇪 @OracleVPN1-Germany-2TB-2.00TB📊`
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - ²
-      - ¹
-      - ⁵
-      - ⁶
-      - ⁴
-      - ³
+      - 🇩🇪 @OracleVPN1-Germany-2TB-2.00TB📊`
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -532,36 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - ²
-      - ¹
-      - ⁵
-      - ⁶
-      - ⁴
-      - ³
+      - 🇩🇪 @OracleVPN1-Germany-2TB-2.00TB📊`
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - ²
-      - ¹
-      - ⁵
-      - ⁶
-      - ⁴
-      - ³
+      - 🇩🇪 @OracleVPN1-Germany-2TB-2.00TB📊`
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - ²
-      - ¹
-      - ⁵
-      - ⁶
-      - ⁴
-      - ³
+      - 🇩🇪 @OracleVPN1-Germany-2TB-2.00TB📊`
   - name: دانلود منیجر 📥
     type: select
     proxies:
