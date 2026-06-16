@@ -466,7 +466,6 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: hamedp71::🇹🇷, server: 62.133.63.169, port: 37096, type: ss, cipher: chacha20-ietf-poly1305, password: KP6FQVmJhlXPgvPhrw2gnI, udp: true, tfo: false}
-  - {name: hamedvpns 🇹🇷, server: 62.133.63.169, port: 37096, type: ss, cipher: chacha20-ietf-poly1305, password: Y5EJZojVMENvkDVFYliEqE, udp: true, tfo: false}
   - {name: hamedp71::🏴‍☠️, server: 185.229.191.149, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 394f6981-a782-4779-9a85-e6cf22935d93, servername: ams1.fromblancwithlove.com, host: ams1.fromblancwithlove.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -485,7 +484,6 @@ proxy-groups:
     type: select
     proxies:
       - hamedp71::🇹🇷
-      - hamedvpns 🇹🇷
       - hamedp71::🏴‍☠️
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -494,7 +492,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - hamedp71::🇹🇷
-      - hamedvpns 🇹🇷
       - hamedp71::🏴‍☠️
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -503,7 +500,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - hamedp71::🇹🇷
-      - hamedvpns 🇹🇷
       - hamedp71::🏴‍☠️
   - name: اتصال پایدار 🔗
     type: url-test
@@ -521,7 +517,6 @@ proxy-groups:
     interval: 600
     proxies:
       - hamedp71::🇹🇷
-      - hamedvpns 🇹🇷
       - hamedp71::🏴‍☠️
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -530,7 +525,6 @@ proxy-groups:
     interval: 600
     proxies:
       - hamedp71::🇹🇷
-      - hamedvpns 🇹🇷
       - hamedp71::🏴‍☠️
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -539,7 +533,6 @@ proxy-groups:
     interval: 600
     proxies:
       - hamedp71::🇹🇷
-      - hamedvpns 🇹🇷
       - hamedp71::🏴‍☠️
   - name: دانلود منیجر 📥
     type: select

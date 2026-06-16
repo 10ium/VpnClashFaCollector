@@ -5,46 +5,53 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 🇩🇪 @OracleVPN1-Germany-2TB-2.00TB📊`, server: 194.146.68.70, port: 8088, type: vless, tls: true, packet-encoding: xudp, uuid: 88e5e9f3-4929-4383-9ab8-20e3144ae5fe, servername: dl2.soft98.ir, host: dl2.soft98.ir, path: /, reality-opts: {public-key: cIWl2OMPg0y8eSBBAi6V3iltlvTueW0wnQvi4A_XIlk, short-id: 4411e5b0b9ee}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: best_internet_iran, server: bot-prx-d6q3kz.samanidempire.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ab853e88-a702-44cc-8743-38d8da36f32b, alpn: [http%2F1.1], network: ws, ws-opts: {path: /28383775, headers: {Host: bot-prx-d6q3kz.samanidempire.org}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: test-pub, server: 144.172.115.130, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: free-fff-aaa, servername: play.google.com, host: play.google.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: J3weszJosPWej3BTBek01IxVKeLKZtRPiAiru_gCZQc, short-id: 09d6a64c2628b7ce}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇩🇪 @OracleVPN1-Germany-2TB-2.00TB📊`
+      - best_internet_iran
+      - test-pub
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 🇩🇪 @OracleVPN1-Germany-2TB-2.00TB📊`
+      - best_internet_iran
+      - test-pub
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇩🇪 @OracleVPN1-Germany-2TB-2.00TB📊`
+      - best_internet_iran
+      - test-pub
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇩🇪 @OracleVPN1-Germany-2TB-2.00TB📊`
+      - best_internet_iran
+      - test-pub
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 🇩🇪 @OracleVPN1-Germany-2TB-2.00TB📊`
+      - best_internet_iran
+      - test-pub
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇩🇪 @OracleVPN1-Germany-2TB-2.00TB📊`
+      - best_internet_iran
+      - test-pub
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +79,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇩🇪 @OracleVPN1-Germany-2TB-2.00TB📊`
+      - best_internet_iran
+      - test-pub
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
