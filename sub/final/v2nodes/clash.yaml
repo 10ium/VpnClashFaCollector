@@ -471,7 +471,6 @@ proxies:
   - {name: 172.64.32.75:443, server: 172.64.32.75, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fc965ad9-bdd7-4815-ad71-b39ec5972dc1, servername: octopusss4.com, network: ws, ws-opts: {path: /tsghdws, headers: {Host: octopusss4.com}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 109.236.57.139:443, server: 109.236.57.139, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ff19693c-11f3-4df9-8713-79a85a5ca090, servername: sellflow.org, host: sellflow.org, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "🇩🇪 [openproxylist.com] vmess-DE", server: nlt.reata.ir, port: 1020, type: vmess, uuid: 6244c41a-f4c1-4733-a654-c38f7729b13c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "🇯🇵 [openproxylist.com] vmess-JP", server: 8.211.149.30, port: 443, type: vmess, uuid: bc82b8e0-026b-4b7e-8fa7-69977b6d9dc0, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /ws/, headers: {Host: polartime.link}}, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -494,7 +493,6 @@ proxy-groups:
       - 172.64.32.75:443
       - 109.236.57.139:443
       - 🇩🇪 [openproxylist.com] vmess-DE
-      - 🇯🇵 [openproxylist.com] vmess-JP
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -507,7 +505,6 @@ proxy-groups:
       - 172.64.32.75:443
       - 109.236.57.139:443
       - 🇩🇪 [openproxylist.com] vmess-DE
-      - 🇯🇵 [openproxylist.com] vmess-JP
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -520,7 +517,6 @@ proxy-groups:
       - 172.64.32.75:443
       - 109.236.57.139:443
       - 🇩🇪 [openproxylist.com] vmess-DE
-      - 🇯🇵 [openproxylist.com] vmess-JP
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -542,7 +538,6 @@ proxy-groups:
       - 172.64.32.75:443
       - 109.236.57.139:443
       - 🇩🇪 [openproxylist.com] vmess-DE
-      - 🇯🇵 [openproxylist.com] vmess-JP
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -555,7 +550,6 @@ proxy-groups:
       - 172.64.32.75:443
       - 109.236.57.139:443
       - 🇩🇪 [openproxylist.com] vmess-DE
-      - 🇯🇵 [openproxylist.com] vmess-JP
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -568,7 +562,6 @@ proxy-groups:
       - 172.64.32.75:443
       - 109.236.57.139:443
       - 🇩🇪 [openproxylist.com] vmess-DE
-      - 🇯🇵 [openproxylist.com] vmess-JP
   - name: دانلود منیجر 📥
     type: select
     proxies:
