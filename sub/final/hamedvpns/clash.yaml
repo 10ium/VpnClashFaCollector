@@ -465,10 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: hamedvpns 😉, server: series-a1.samanehha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: W74XFALLLuw6m5IA, udp: true, tfo: false}
+  - {name: hamedp71::🇹🇷, server: 62.133.63.169, port: 37096, type: ss, cipher: chacha20-ietf-poly1305, password: KP6FQVmJhlXPgvPhrw2gnI, udp: true, tfo: false}
   - {name: hamedvpns 🇹🇷, server: 62.133.63.169, port: 37096, type: ss, cipher: chacha20-ietf-poly1305, password: Y5EJZojVMENvkDVFYliEqE, udp: true, tfo: false}
-  - {name: hamedvpns, server: www.parsvds.com, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: cabbfe13-038b-4dbb-9c45-5079c829abfa, network: ws, ws-opts: {path: /, headers: {Host: tr-cd.sublink-vip2.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: hamedvpns 🆕, server: node-fr.connectsuite.org, port: 2053, type: vmess, uuid: 2f4234f9-8f33-4c7f-952f-565ffa5f5fb7, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hamedp71::🏴‍☠️, server: 185.229.191.149, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 394f6981-a782-4779-9a85-e6cf22935d93, servername: ams1.fromblancwithlove.com, host: ams1.fromblancwithlove.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,30 +484,27 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - hamedvpns 😉
+      - hamedp71::🇹🇷
       - hamedvpns 🇹🇷
-      - hamedvpns
-      - hamedvpns 🆕
+      - hamedp71::🏴‍☠️
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - hamedvpns 😉
+      - hamedp71::🇹🇷
       - hamedvpns 🇹🇷
-      - hamedvpns
-      - hamedvpns 🆕
+      - hamedp71::🏴‍☠️
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - hamedvpns 😉
+      - hamedp71::🇹🇷
       - hamedvpns 🇹🇷
-      - hamedvpns
-      - hamedvpns 🆕
+      - hamedp71::🏴‍☠️
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -524,30 +520,27 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - hamedvpns 😉
+      - hamedp71::🇹🇷
       - hamedvpns 🇹🇷
-      - hamedvpns
-      - hamedvpns 🆕
+      - hamedp71::🏴‍☠️
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - hamedvpns 😉
+      - hamedp71::🇹🇷
       - hamedvpns 🇹🇷
-      - hamedvpns
-      - hamedvpns 🆕
+      - hamedp71::🏴‍☠️
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - hamedvpns 😉
+      - hamedp71::🇹🇷
       - hamedvpns 🇹🇷
-      - hamedvpns
-      - hamedvpns 🆕
+      - hamedp71::🏴‍☠️
   - name: دانلود منیجر 📥
     type: select
     proxies:
