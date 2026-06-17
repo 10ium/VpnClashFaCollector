@@ -5,221 +5,109 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: "| @proxy_kafee", server: www.ntu.edu.sg, port: 443, type: trojan, password: 4c3164ee-abcf-4091-abea-d1cd4937a68d, sni: jy.hhllfly.kdns.fr, skip-cert-verify: false, network: ws, ws-opts: {path: "/?ed=2048", headers: {Host: jy.hhllfly.kdns.fr}}, udp: true, tfo: false}
   - {name: "@proxy_kafee ( 🇩🇪3)", server: 185.204.168.149, port: 2087, type: trojan, password: SoftNetConnect, sni: www.yahoo.com, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee ( 🇩🇪4)", server: 185.204.168.149, port: 42549, type: trojan, password: SoftNetConnect, sni: www.speedtest.net, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@@proxy_kafee ( 🇩🇪2)", server: 185.204.168.149, port: 443, type: trojan, password: SoftNetConnect, sni: www.yahoo.com, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee ( 🇩🇪2)", server: 185.204.168.149, port: 443, type: trojan, password: SoftNetConnect, sni: www.yahoo.com, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee (🇩🇪1)", server: 185.204.168.149, port: 8443, type: trojan, password: SoftNetConnect, sni: www.yahoo.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee 48⚡", server: 104.16.72.70, port: 443, type: trojan, password: mitivpn, sni: linkkon-a.ir, skip-cert-verify: false, network: ws, ws-opts: {path: index.php%3Dmitivpn, headers: {Host: linkkon-a.ir}}, udp: true, tfo: false}
-  - {name: "@proxy_kafee 49⚡`", server: 45.130.125.220, port: 443, type: trojan, password: mitivpn, sni: linkkon-a.ir, skip-cert-verify: false, network: ws, ws-opts: {path: index.html%3Dmitivpn, headers: {Host: linkkon-a.ir}}, udp: true, tfo: false}
+  - {name: "| @proxy_kafee`", server: 188.114.97.6, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true, tfo: false}
   - {name: "@proxy_kafee (🇩🇪5)`", server: 185.204.168.149, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: 024c5ef7-e927-41a9-abdf-e628a3359411, servername: www.yahoo.com, host: www.yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: Ed5yexAbpTFkIr5a1OhlGUOj_JZGz3RZ4S3CdTYYoDs, short-id: 9cb5}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 5 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee, server: fi.avenpulse.ir, port: 2087, type: vless, tls: true, packet-encoding: xudp, uuid: 02c10b0d-7d5e-4df6-b8ad-18f0f6cc7422, host: play.google.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 1 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee, server: gr1.avenpulse.ir, port: 2087, type: vless, tls: true, packet-encoding: xudp, uuid: 02c10b0d-7d5e-4df6-b8ad-18f0f6cc7422, host: play.google.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 13@proxy_kafee, server: 152.233.35.228, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 394f6981-a782-4779-9a85-e6cf22935d93, servername: de1.fromblancwithlove.com, host: de1.fromblancwithlove.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 11@proxy_kafee, server: 89.23.107.137, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 612c872d-1370-4109-8644-f0755f97e33f, servername: www.samsung.com, host: www.samsung.com, path: /, reality-opts: {public-key: GzOdZG9TCQSrZV7ivcmOq9tKWUf37QnoTxSHf32OfAs, short-id: 16}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 14@oneclickvpnkeys, server: 45.131.7.30, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d, network: ws, ws-opts: {path: /, headers: {Host: vms.lifetime02.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 2@proxy_kafee, server: 103.112.71.228, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 665c11ef-4723-4396-a8a1-45d013e68e6b, servername: bootnl1.strangerwhale.fun, alpn: [h2%2Chttp%2F1.1], host: bootnl1.strangerwhale.fun, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 2 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee, server: 77.83.203.139, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 749af24e-7abb-4743-8821-3debf9d0146d, servername: www.icloud.com, host: www.icloud.com, path: /, reality-opts: {public-key: YzqTuPSCgvHL2zNInrRXQNtJNE0a1xiQsjNXV-SFrRE, short-id: 76}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 15@proxy_kafee`, server: 104.18.13.229, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 78c5b6bd-1cb6-463c-bcba-9f17ef70c85b, network: ws, ws-opts: {path: /, headers: {Host: square-frost-8d11.9660004.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 12@proxy_kafee, server: 104.18.23.4, port: 2095, type: vless, tls: true, packet-encoding: xudp, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40, network: ws, ws-opts: {path: /fp=randomized, headers: {Host: cnmfangbinxing.cnmfangbinxing.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 7@proxy_kafee, server: 46.229.243.140, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 931729a8-3c20-4841-89a1-f18dc9ce0a6f, servername: cdn3-87.vk-cdnvideo.com, host: cdn3-87.vk-cdnvideo.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 10@proxy_kafee, server: 82.25.63.100, port: 1443, type: vless, tls: true, packet-encoding: xudp, uuid: be5abe11-1c65-4289-b581-a5121a8719a1, servername: fr.snowfall.top, host: fr.snowfall.top, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: usZBWuWxqOoWtx36GJ0XUaDv2KgNsRzLW6uPXpHeEEg, short-id: 0441f3e34348cb45}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 4@proxy_kafee, server: 82.25.63.101, port: 1443, type: vless, tls: true, packet-encoding: xudp, uuid: be5abe11-1c65-4289-b581-a5121a8719a1, servername: fr.snowfall.top, host: fr.snowfall.top, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: usZBWuWxqOoWtx36GJ0XUaDv2KgNsRzLW6uPXpHeEEg, short-id: 0441f3e34348cb45}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 1@proxy_kafee, server: 154.222.9.48, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: befe7627-61aa-4b19-9f26-43923d89ebe5, servername: storage.yandex.net, host: storage.yandex.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: ISa-DZOI4LRRb9DHMFYm5oFqBXDjYzz0hVWUfWvzLmo, short-id: 8d3293f0066e129a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 6@proxy_kafee, server: 78.159.131.83, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f64cab0a-75a4-44f1-b2f6-8ecc6c73c249, servername: alb00.sidecloud.ru, host: alb00.sidecloud.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: ElEALiFaDTMj9lYwMPYaCVnbMkz22pvzD10dGW61kyc, short-id: d98613f3853a7c26}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 9@proxy_kafee, server: 104.18.35.15, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: fe273991-0514-4a16-8ec4-b15ae861c000, network: ws, ws-opts: {path: /, headers: {Host: zyzzzoao.xn--fiqv8j.eu.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 5@proxy_kafee, server: 104.18.43.174, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: fe273991-0514-4a16-8ec4-b15ae861c000, network: ws, ws-opts: {path: /, headers: {Host: zyzzzoao.xn--fiqv8j.eu.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 3@proxy_kafee, server: 172.64.146.198, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: fe273991-0514-4a16-8ec4-b15ae861c000, network: ws, ws-opts: {path: /, headers: {Host: zyzzzoao.xn--fiqv8j.eu.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 8@proxy_kafee, server: 172.64.147.52, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: fe273991-0514-4a16-8ec4-b15ae861c000, network: ws, ws-opts: {path: /, headers: {Host: zyzzzoao.xn--fiqv8j.eu.org}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "| @proxy_kafee 2", server: ger39.vlessgroup.com, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 245a420e-7811-4296-b347-59bf12bcfc5b, servername: ger39.vlessgroup.com, network: ws, ws-opts: {path: /images, headers: {Host: ger39.vlessgroup.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "| @proxy_kafee 3", server: 173.245.58.75, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4f013568-a58b-4b04-b5dd-4d52bf1c33a4, servername: amoosamiii.net, network: ws, ws-opts: {path: /poiuyws, headers: {Host: amoosamiii.net}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - "| @proxy_kafee"
       - "@proxy_kafee ( 🇩🇪3)"
       - "@proxy_kafee ( 🇩🇪4)"
       - "@@proxy_kafee ( 🇩🇪2)"
       - "@proxy_kafee ( 🇩🇪2)"
       - "@proxy_kafee (🇩🇪1)"
-      - "@proxy_kafee 48⚡"
-      - "@proxy_kafee 49⚡`"
+      - "| @proxy_kafee`"
       - "@proxy_kafee (🇩🇪5)`"
-      - 5 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee
-      - 1 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee
-      - 13@proxy_kafee
-      - 11@proxy_kafee
-      - 14@oneclickvpnkeys
-      - 2@proxy_kafee
-      - 2 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee
-      - 15@proxy_kafee`
-      - 12@proxy_kafee
-      - 7@proxy_kafee
-      - 10@proxy_kafee
-      - 4@proxy_kafee
-      - 1@proxy_kafee
-      - 6@proxy_kafee
-      - 9@proxy_kafee
-      - 5@proxy_kafee
-      - 3@proxy_kafee
-      - 8@proxy_kafee
+      - "| @proxy_kafee 2"
+      - "| @proxy_kafee 3"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - "| @proxy_kafee"
       - "@proxy_kafee ( 🇩🇪3)"
       - "@proxy_kafee ( 🇩🇪4)"
       - "@@proxy_kafee ( 🇩🇪2)"
       - "@proxy_kafee ( 🇩🇪2)"
       - "@proxy_kafee (🇩🇪1)"
-      - "@proxy_kafee 48⚡"
-      - "@proxy_kafee 49⚡`"
+      - "| @proxy_kafee`"
       - "@proxy_kafee (🇩🇪5)`"
-      - 5 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee
-      - 1 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee
-      - 13@proxy_kafee
-      - 11@proxy_kafee
-      - 14@oneclickvpnkeys
-      - 2@proxy_kafee
-      - 2 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee
-      - 15@proxy_kafee`
-      - 12@proxy_kafee
-      - 7@proxy_kafee
-      - 10@proxy_kafee
-      - 4@proxy_kafee
-      - 1@proxy_kafee
-      - 6@proxy_kafee
-      - 9@proxy_kafee
-      - 5@proxy_kafee
-      - 3@proxy_kafee
-      - 8@proxy_kafee
+      - "| @proxy_kafee 2"
+      - "| @proxy_kafee 3"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - "| @proxy_kafee"
       - "@proxy_kafee ( 🇩🇪3)"
       - "@proxy_kafee ( 🇩🇪4)"
       - "@@proxy_kafee ( 🇩🇪2)"
       - "@proxy_kafee ( 🇩🇪2)"
       - "@proxy_kafee (🇩🇪1)"
-      - "@proxy_kafee 48⚡"
-      - "@proxy_kafee 49⚡`"
+      - "| @proxy_kafee`"
       - "@proxy_kafee (🇩🇪5)`"
-      - 5 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee
-      - 1 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee
-      - 13@proxy_kafee
-      - 11@proxy_kafee
-      - 14@oneclickvpnkeys
-      - 2@proxy_kafee
-      - 2 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee
-      - 15@proxy_kafee`
-      - 12@proxy_kafee
-      - 7@proxy_kafee
-      - 10@proxy_kafee
-      - 4@proxy_kafee
-      - 1@proxy_kafee
-      - 6@proxy_kafee
-      - 9@proxy_kafee
-      - 5@proxy_kafee
-      - 3@proxy_kafee
-      - 8@proxy_kafee
+      - "| @proxy_kafee 2"
+      - "| @proxy_kafee 3"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - "| @proxy_kafee"
       - "@proxy_kafee ( 🇩🇪3)"
       - "@proxy_kafee ( 🇩🇪4)"
       - "@@proxy_kafee ( 🇩🇪2)"
       - "@proxy_kafee ( 🇩🇪2)"
       - "@proxy_kafee (🇩🇪1)"
-      - "@proxy_kafee 48⚡"
-      - "@proxy_kafee 49⚡`"
+      - "| @proxy_kafee`"
       - "@proxy_kafee (🇩🇪5)`"
-      - 5 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee
-      - 1 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee
-      - 13@proxy_kafee
-      - 11@proxy_kafee
-      - 14@oneclickvpnkeys
-      - 2@proxy_kafee
-      - 2 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee
-      - 15@proxy_kafee`
-      - 12@proxy_kafee
-      - 7@proxy_kafee
-      - 10@proxy_kafee
-      - 4@proxy_kafee
-      - 1@proxy_kafee
-      - 6@proxy_kafee
-      - 9@proxy_kafee
-      - 5@proxy_kafee
-      - 3@proxy_kafee
-      - 8@proxy_kafee
+      - "| @proxy_kafee 2"
+      - "| @proxy_kafee 3"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - "| @proxy_kafee"
       - "@proxy_kafee ( 🇩🇪3)"
       - "@proxy_kafee ( 🇩🇪4)"
       - "@@proxy_kafee ( 🇩🇪2)"
       - "@proxy_kafee ( 🇩🇪2)"
       - "@proxy_kafee (🇩🇪1)"
-      - "@proxy_kafee 48⚡"
-      - "@proxy_kafee 49⚡`"
+      - "| @proxy_kafee`"
       - "@proxy_kafee (🇩🇪5)`"
-      - 5 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee
-      - 1 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee
-      - 13@proxy_kafee
-      - 11@proxy_kafee
-      - 14@oneclickvpnkeys
-      - 2@proxy_kafee
-      - 2 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee
-      - 15@proxy_kafee`
-      - 12@proxy_kafee
-      - 7@proxy_kafee
-      - 10@proxy_kafee
-      - 4@proxy_kafee
-      - 1@proxy_kafee
-      - 6@proxy_kafee
-      - 9@proxy_kafee
-      - 5@proxy_kafee
-      - 3@proxy_kafee
-      - 8@proxy_kafee
+      - "| @proxy_kafee 2"
+      - "| @proxy_kafee 3"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - "| @proxy_kafee"
       - "@proxy_kafee ( 🇩🇪3)"
       - "@proxy_kafee ( 🇩🇪4)"
       - "@@proxy_kafee ( 🇩🇪2)"
       - "@proxy_kafee ( 🇩🇪2)"
       - "@proxy_kafee (🇩🇪1)"
-      - "@proxy_kafee 48⚡"
-      - "@proxy_kafee 49⚡`"
+      - "| @proxy_kafee`"
       - "@proxy_kafee (🇩🇪5)`"
-      - 5 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee
-      - 1 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee
-      - 13@proxy_kafee
-      - 11@proxy_kafee
-      - 14@oneclickvpnkeys
-      - 2@proxy_kafee
-      - 2 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee
-      - 15@proxy_kafee`
-      - 12@proxy_kafee
-      - 7@proxy_kafee
-      - 10@proxy_kafee
-      - 4@proxy_kafee
-      - 1@proxy_kafee
-      - 6@proxy_kafee
-      - 9@proxy_kafee
-      - 5@proxy_kafee
-      - 3@proxy_kafee
-      - 8@proxy_kafee
+      - "| @proxy_kafee 2"
+      - "| @proxy_kafee 3"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -247,32 +135,16 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - "| @proxy_kafee"
       - "@proxy_kafee ( 🇩🇪3)"
       - "@proxy_kafee ( 🇩🇪4)"
       - "@@proxy_kafee ( 🇩🇪2)"
       - "@proxy_kafee ( 🇩🇪2)"
       - "@proxy_kafee (🇩🇪1)"
-      - "@proxy_kafee 48⚡"
-      - "@proxy_kafee 49⚡`"
+      - "| @proxy_kafee`"
       - "@proxy_kafee (🇩🇪5)`"
-      - 5 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee
-      - 1 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee
-      - 13@proxy_kafee
-      - 11@proxy_kafee
-      - 14@oneclickvpnkeys
-      - 2@proxy_kafee
-      - 2 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee
-      - 15@proxy_kafee`
-      - 12@proxy_kafee
-      - 7@proxy_kafee
-      - 10@proxy_kafee
-      - 4@proxy_kafee
-      - 1@proxy_kafee
-      - 6@proxy_kafee
-      - 9@proxy_kafee
-      - 5@proxy_kafee
-      - 3@proxy_kafee
-      - 8@proxy_kafee
+      - "| @proxy_kafee 2"
+      - "| @proxy_kafee 3"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
