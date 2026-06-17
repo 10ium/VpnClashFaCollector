@@ -465,11 +465,13 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: ¹, server: series-a1.samanehha.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: W74XFALLLuw6m5IA, udp: true, tfo: false}
-  - {name: ³, server: 185.204.168.149, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: 024c5ef7-e927-41a9-abdf-e628a3359411, servername: www.yahoo.com, host: www.yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: Ed5yexAbpTFkIr5a1OhlGUOj_JZGz3RZ4S3CdTYYoDs, short-id: 9cb5}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ², server: 46.229.243.136, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 931729a8-3c20-4841-89a1-f18dc9ce0a6f, servername: cdn3-87.vk-cdnvideo.com, host: cdn3-87.vk-cdnvideo.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ⁴, server: 95.133.245.133, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 931729a8-3c20-4841-89a1-f18dc9ce0a6f, servername: cdn4-35.yahoo.com, host: cdn4-35.yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw, short-id: 7e77e7e2cf2b7a79}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "`", server: 83.228.225.29, port: 30781, type: vless, tls: true, packet-encoding: xudp, uuid: e6f9ad6e-4166-4b98-85c8-53d75ec3832f, servername: www.yahoo.com, host: www.yahoo.com, path: /, reality-opts: {public-key: FVbLgN2sj_1WrbMhsh_vltW1NOX84WNC6x8Ed_DQSB0, short-id: 94d8}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ¹, server: admin.c1.havij.co, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 1kVr0KATIJI7mwOF, udp: true, tfo: false}
+  - {name: ², server: 82.38.31.189, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
+  - {name: ³, server: 188.114.97.6, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true, tfo: false}
+  - {name: ⁵, server: 46.229.243.132, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 931729a8-3c20-4841-89a1-f18dc9ce0a6f, servername: cdn7-39.vk-cdnvideo.com, host: cdn7-39.vk-cdnvideo.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ⁷, server: 46.229.243.132, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 931729a8-3c20-4841-89a1-f18dc9ce0a6f, servername: cdn7-39.vk-cdnvideo.com, host: cdn7-39.vk-cdnvideo.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ⁴, server: 46.229.243.136, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 931729a8-3c20-4841-89a1-f18dc9ce0a6f, servername: cdn3-87.vk-cdnvideo.com, host: cdn3-87.vk-cdnvideo.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ⁶, server: host.rent-home-now.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 9c8bf6ca-5b56-4f0b-ba22-a2ecd0282daf, servername: aparat.com, host: aparat.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: gJjDGu05qCVpcJMcBJKwNmUgueWgr9-6SdTrZieuVwc, short-id: 6186}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,10 +489,12 @@ proxy-groups:
     type: select
     proxies:
       - ¹
-      - ³
       - ²
+      - ³
+      - ⁵
+      - ⁷
       - ⁴
-      - "`"
+      - ⁶
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -498,10 +502,12 @@ proxy-groups:
     tolerance: 50
     proxies:
       - ¹
-      - ³
       - ²
+      - ³
+      - ⁵
+      - ⁷
       - ⁴
-      - "`"
+      - ⁶
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -509,10 +515,12 @@ proxy-groups:
     tolerance: 50
     proxies:
       - ¹
-      - ³
       - ²
+      - ³
+      - ⁵
+      - ⁷
       - ⁴
-      - "`"
+      - ⁶
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -529,10 +537,12 @@ proxy-groups:
     interval: 600
     proxies:
       - ¹
-      - ³
       - ²
+      - ³
+      - ⁵
+      - ⁷
       - ⁴
-      - "`"
+      - ⁶
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -540,10 +550,12 @@ proxy-groups:
     interval: 600
     proxies:
       - ¹
-      - ³
       - ²
+      - ³
+      - ⁵
+      - ⁷
       - ⁴
-      - "`"
+      - ⁶
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -551,10 +563,12 @@ proxy-groups:
     interval: 600
     proxies:
       - ¹
-      - ³
       - ²
+      - ³
+      - ⁵
+      - ⁷
       - ⁴
-      - "`"
+      - ⁶
   - name: دانلود منیجر 📥
     type: select
     proxies:
