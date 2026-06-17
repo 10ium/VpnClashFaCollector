@@ -465,6 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: "@EarnMoney_arz | @xsfilterrnet", server: 203.202.232.11, port: 36068, type: vless, tls: true, packet-encoding: xudp, uuid: ZoRoVpN, network: ws, ws-opts: {path: /ZoRoVpn, headers: {Host: Play.google.com}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: best_internet_iran, server: bot-prx-d6q3kz.samanidempire.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ab853e88-a702-44cc-8743-38d8da36f32b, alpn: [http%2F1.1], network: ws, ws-opts: {path: /28383775, headers: {Host: bot-prx-d6q3kz.samanidempire.org}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: test-pub, server: 144.172.115.130, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: free-fff-aaa, servername: play.google.com, host: play.google.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: J3weszJosPWej3BTBek01IxVKeLKZtRPiAiru_gCZQc, short-id: 09d6a64c2628b7ce}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
@@ -483,6 +484,7 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - "@EarnMoney_arz | @xsfilterrnet"
       - best_internet_iran
       - test-pub
   - name: خودکار (بهترین پینگ) 🤖
@@ -491,6 +493,7 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - "@EarnMoney_arz | @xsfilterrnet"
       - best_internet_iran
       - test-pub
   - name: پشتیبان (در صورت قطعی) 🧯
@@ -499,6 +502,7 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - "@EarnMoney_arz | @xsfilterrnet"
       - best_internet_iran
       - test-pub
   - name: اتصال پایدار 🔗
@@ -516,6 +520,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@EarnMoney_arz | @xsfilterrnet"
       - best_internet_iran
       - test-pub
   - name: توزیع بار (گردشی) 🔁
@@ -524,6 +529,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@EarnMoney_arz | @xsfilterrnet"
       - best_internet_iran
       - test-pub
   - name: توزیع بار (موقت) ⏳
@@ -532,6 +538,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@EarnMoney_arz | @xsfilterrnet"
       - best_internet_iran
       - test-pub
   - name: دانلود منیجر 📥
