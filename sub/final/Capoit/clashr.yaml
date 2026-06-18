@@ -5,10 +5,8 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@Capoit`", server: cctvhikvision.center, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: 916911dd-530e-457d-8e71-3db3961fafeb, network: ws, ws-opts: {path: /api-v1, headers: {Host: pl.meeowww.qzz.io}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit", server: undef.network, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: 916911dd-530e-457d-8e71-3db3961fafeb, network: ws, ws-opts: {path: /api-v1, headers: {Host: pl.meeowww.qzz.io}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 2", server: fast.cd-tur4.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 9a1ca418-134f-4750-b97a-55ea81135742, servername: default.ssl.fastly.net, network: ws, ws-opts: {path: /, headers: {Host: default.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 3", server: client.jison.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: eeb20348-23b9-4f42-a7c8-ffc3fb9e4ab0, servername: fty.jison.ir, alpn: [h3%2Ch2%2Chttp%2F1.1], network: ws, ws-opts: {path: /ws, headers: {Host: fty.jison.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit`", server: fast.cd-tur4.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 9a1ca418-134f-4750-b97a-55ea81135742, servername: default.ssl.fastly.net, network: ws, ws-opts: {path: /, headers: {Host: default.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 2", server: client.jison.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: eeb20348-23b9-4f42-a7c8-ffc3fb9e4ab0, servername: fty.jison.ir, alpn: [h3%2Ch2%2Chttp%2F1.1], network: ws, ws-opts: {path: /ws, headers: {Host: fty.jison.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -16,9 +14,7 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - "@Capoit`"
-      - "@Capoit"
       - "@Capoit` 2"
-      - "@Capoit` 3"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -26,9 +22,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Capoit`"
-      - "@Capoit"
       - "@Capoit` 2"
-      - "@Capoit` 3"
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -36,36 +30,28 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - "@Capoit`"
-      - "@Capoit"
       - "@Capoit` 2"
-      - "@Capoit` 3"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@Capoit`"
-      - "@Capoit"
       - "@Capoit` 2"
-      - "@Capoit` 3"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - "@Capoit`"
-      - "@Capoit"
       - "@Capoit` 2"
-      - "@Capoit` 3"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@Capoit`"
-      - "@Capoit"
       - "@Capoit` 2"
-      - "@Capoit` 3"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -94,9 +80,7 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - "@Capoit`"
-      - "@Capoit"
       - "@Capoit` 2"
-      - "@Capoit` 3"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

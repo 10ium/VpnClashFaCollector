@@ -465,10 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Capoit`", server: cctvhikvision.center, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: 916911dd-530e-457d-8e71-3db3961fafeb, network: ws, ws-opts: {path: /api-v1, headers: {Host: pl.meeowww.qzz.io}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit", server: undef.network, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: 916911dd-530e-457d-8e71-3db3961fafeb, network: ws, ws-opts: {path: /api-v1, headers: {Host: pl.meeowww.qzz.io}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 2", server: fast.cd-tur4.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 9a1ca418-134f-4750-b97a-55ea81135742, servername: default.ssl.fastly.net, network: ws, ws-opts: {path: /, headers: {Host: default.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 3", server: client.jison.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: eeb20348-23b9-4f42-a7c8-ffc3fb9e4ab0, servername: fty.jison.ir, alpn: [h3%2Ch2%2Chttp%2F1.1], network: ws, ws-opts: {path: /ws, headers: {Host: fty.jison.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit`", server: fast.cd-tur4.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 9a1ca418-134f-4750-b97a-55ea81135742, servername: default.ssl.fastly.net, network: ws, ws-opts: {path: /, headers: {Host: default.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 2", server: client.jison.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: eeb20348-23b9-4f42-a7c8-ffc3fb9e4ab0, servername: fty.jison.ir, alpn: [h3%2Ch2%2Chttp%2F1.1], network: ws, ws-opts: {path: /ws, headers: {Host: fty.jison.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,9 +484,7 @@ proxy-groups:
     type: select
     proxies:
       - "@Capoit`"
-      - "@Capoit"
       - "@Capoit` 2"
-      - "@Capoit` 3"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -496,9 +492,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Capoit`"
-      - "@Capoit"
       - "@Capoit` 2"
-      - "@Capoit` 3"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -506,9 +500,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Capoit`"
-      - "@Capoit"
       - "@Capoit` 2"
-      - "@Capoit` 3"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -525,9 +517,7 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit`"
-      - "@Capoit"
       - "@Capoit` 2"
-      - "@Capoit` 3"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -535,9 +525,7 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit`"
-      - "@Capoit"
       - "@Capoit` 2"
-      - "@Capoit` 3"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -545,9 +533,7 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit`"
-      - "@Capoit"
       - "@Capoit` 2"
-      - "@Capoit` 3"
   - name: دانلود منیجر 📥
     type: select
     proxies:
