@@ -5,74 +5,102 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: "[🇹🇷]t.me/Kia_Net", server: 62.133.63.169, port: 37096, type: ss, cipher: chacha20-ietf-poly1305, password: KP6FQVmJhlXPgvPhrw2gnI, udp: true, tfo: false}
+  - {name: "[🇫🇮]t.me/Kia_Net", server: 185.5.38.111, port: 55988, type: ss, cipher: chacha20-ietf-poly1305, password: bZ87amPpdG7KuWM62bKtm1KHoowuVjnV8CKtq653ymHcg2dPYcPJfnaQ61stuAjr2ZiLDaqH56XpkxEYuwDzzRrMWieebWGt, udp: true, tfo: false}
+  - {name: "[🇫🇷]t.me/Kia_Net`", server: greb.loralden.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 2065a8c9-8b3d-4dba-b0ce-90d649aa3da7, servername: greb.loralden.com, host: greb.loralden.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: EUK_ePvEKUGcezQYHqgJ5P462XxLPXPm9CZWGLaL33k, short-id: 3620820fe66d6731}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "[🇹🇷]t.me/Kia_Net`", server: 87.120.106.101, port: 34634, type: vless, tls: true, packet-encoding: xudp, uuid: 4870e8e9-1afd-45be-9050-9d2fb2c0f6e0, network: ws, ws-opts: {path: /, headers: {Host: play.google.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "[🇳🇱]t.me/Kia_Net", server: cdn.netraidly.ru, port: 40443, type: vless, tls: true, packet-encoding: xudp, uuid: 4bf5a71c-d726-4585-b095-7396675706d5, servername: deepl.com, host: deepl.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: D_ks4Yyk4-osnWBxCFvd0_UEgohUXvR2zJoWQg1CACU, short-id: c84f}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "[🇵🇱]t.me/Kia_Net", server: panel.dibaux.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 69330ab9-eb51-4bb6-9c07-3f2401c476af, network: ws, ws-opts: {path: /stream, headers: {Host: panel.dibaux.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "[🇳🇱]t.me/Kia_Net", server: 85.234.114.53, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8, servername: r1.mizulina.top, host: r1.mizulina.top, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "[🇳🇱]t.me/Kia_Net 2", server: 85.234.114.53, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8, servername: r1.mizulina.top, host: r1.mizulina.top, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "[🇬🇧]t.me/Kia_Net", server: Mc3.azadbird.com, port: 719, type: vless, tls: true, packet-encoding: xudp, uuid: b92c29c4-a667-493b-b93b-5433b08f670c, network: ws, ws-opts: {path: "/api/v2/xtrnwqjbkr?ed", headers: {Host: play.google.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "[🇳🇱]t.me/Kia_Net 2", server: 89.106.86.101, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d23a1ce1-b6a6-4a58-b56b-1be6a1cd7d39, servername: nlxeon41x611.potatosubge20.org, alpn: [http%2F1.1], host: nlxeon41x611.potatosubge20.org, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "[🇳🇱]t.me/Kia_Net 3", server: 89.106.86.101, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d23a1ce1-b6a6-4a58-b56b-1be6a1cd7d39, servername: nlxeon41x611.potatosubge20.org, alpn: [http%2F1.1], host: nlxeon41x611.potatosubge20.org, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - "[🇹🇷]t.me/Kia_Net"
+      - "[🇫🇮]t.me/Kia_Net"
+      - "[🇫🇷]t.me/Kia_Net`"
       - "[🇹🇷]t.me/Kia_Net`"
-      - "[🇵🇱]t.me/Kia_Net"
       - "[🇳🇱]t.me/Kia_Net"
-      - "[🇬🇧]t.me/Kia_Net"
+      - "[🇵🇱]t.me/Kia_Net"
       - "[🇳🇱]t.me/Kia_Net 2"
+      - "[🇬🇧]t.me/Kia_Net"
+      - "[🇳🇱]t.me/Kia_Net 3"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - "[🇹🇷]t.me/Kia_Net"
+      - "[🇫🇮]t.me/Kia_Net"
+      - "[🇫🇷]t.me/Kia_Net`"
       - "[🇹🇷]t.me/Kia_Net`"
-      - "[🇵🇱]t.me/Kia_Net"
       - "[🇳🇱]t.me/Kia_Net"
-      - "[🇬🇧]t.me/Kia_Net"
+      - "[🇵🇱]t.me/Kia_Net"
       - "[🇳🇱]t.me/Kia_Net 2"
+      - "[🇬🇧]t.me/Kia_Net"
+      - "[🇳🇱]t.me/Kia_Net 3"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - "[🇹🇷]t.me/Kia_Net"
+      - "[🇫🇮]t.me/Kia_Net"
+      - "[🇫🇷]t.me/Kia_Net`"
       - "[🇹🇷]t.me/Kia_Net`"
-      - "[🇵🇱]t.me/Kia_Net"
       - "[🇳🇱]t.me/Kia_Net"
-      - "[🇬🇧]t.me/Kia_Net"
+      - "[🇵🇱]t.me/Kia_Net"
       - "[🇳🇱]t.me/Kia_Net 2"
+      - "[🇬🇧]t.me/Kia_Net"
+      - "[🇳🇱]t.me/Kia_Net 3"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - "[🇹🇷]t.me/Kia_Net"
+      - "[🇫🇮]t.me/Kia_Net"
+      - "[🇫🇷]t.me/Kia_Net`"
       - "[🇹🇷]t.me/Kia_Net`"
-      - "[🇵🇱]t.me/Kia_Net"
       - "[🇳🇱]t.me/Kia_Net"
-      - "[🇬🇧]t.me/Kia_Net"
+      - "[🇵🇱]t.me/Kia_Net"
       - "[🇳🇱]t.me/Kia_Net 2"
+      - "[🇬🇧]t.me/Kia_Net"
+      - "[🇳🇱]t.me/Kia_Net 3"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - "[🇹🇷]t.me/Kia_Net"
+      - "[🇫🇮]t.me/Kia_Net"
+      - "[🇫🇷]t.me/Kia_Net`"
       - "[🇹🇷]t.me/Kia_Net`"
-      - "[🇵🇱]t.me/Kia_Net"
       - "[🇳🇱]t.me/Kia_Net"
-      - "[🇬🇧]t.me/Kia_Net"
+      - "[🇵🇱]t.me/Kia_Net"
       - "[🇳🇱]t.me/Kia_Net 2"
+      - "[🇬🇧]t.me/Kia_Net"
+      - "[🇳🇱]t.me/Kia_Net 3"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - "[🇹🇷]t.me/Kia_Net"
+      - "[🇫🇮]t.me/Kia_Net"
+      - "[🇫🇷]t.me/Kia_Net`"
       - "[🇹🇷]t.me/Kia_Net`"
-      - "[🇵🇱]t.me/Kia_Net"
       - "[🇳🇱]t.me/Kia_Net"
-      - "[🇬🇧]t.me/Kia_Net"
+      - "[🇵🇱]t.me/Kia_Net"
       - "[🇳🇱]t.me/Kia_Net 2"
+      - "[🇬🇧]t.me/Kia_Net"
+      - "[🇳🇱]t.me/Kia_Net 3"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -100,11 +128,15 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - "[🇹🇷]t.me/Kia_Net"
+      - "[🇫🇮]t.me/Kia_Net"
+      - "[🇫🇷]t.me/Kia_Net`"
       - "[🇹🇷]t.me/Kia_Net`"
-      - "[🇵🇱]t.me/Kia_Net"
       - "[🇳🇱]t.me/Kia_Net"
-      - "[🇬🇧]t.me/Kia_Net"
+      - "[🇵🇱]t.me/Kia_Net"
       - "[🇳🇱]t.me/Kia_Net 2"
+      - "[🇬🇧]t.me/Kia_Net"
+      - "[🇳🇱]t.me/Kia_Net 3"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
