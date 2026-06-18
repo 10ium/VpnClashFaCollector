@@ -7,14 +7,17 @@ external-controller: 127.0.0.1:9090
 proxies:
   - {name: 148.253.208.76:3478, server: 148.253.208.76, port: 3478, type: ss, cipher: chacha20-ietf-poly1305, password: yu2XnSPWhmQjxn83iJA3DA, udp: true, tfo: false}
   - {name: 43.207.87.133:443, server: 43.207.87.133, port: 443, type: trojan, password: hV66LcSGyxUdHq2aAeqxmLfpBDQmRYxo8Wte43oZr8L379SS, sni: node2.bw8848.org, skip-cert-verify: false, network: ws, ws-opts: {path: /node2-node2-gu7bfd, headers: {Host: node2.bw8848.org}}, udp: true, tfo: false}
+  - {name: 2.144.5.90:8443, server: 2.144.5.90, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 21784e1c-392e-4c5f-b50a-9f8a49f87e9a, network: ws, ws-opts: {path: /Stream, headers: {Host: bama.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 169.150.215.78:8443, server: 169.150.215.78, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 394f6981-a782-4779-9a85-e6cf22935d93, servername: ams1.fromblancwithlove.com, host: ams1.fromblancwithlove.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 95.173.199.113:8443, server: 95.173.199.113, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 394f6981-a782-4779-9a85-e6cf22935d93, servername: ams1.fromblancwithlove.com, host: ams1.fromblancwithlove.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 95.173.199.86:8443, server: 95.173.199.86, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 394f6981-a782-4779-9a85-e6cf22935d93, servername: ams1.fromblancwithlove.com, host: ams1.fromblancwithlove.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 103.118.255.19:44058, server: 103.118.255.19, port: 44058, type: vless, tls: true, packet-encoding: xudp, uuid: 65498631-4e25-49ce-8789-b57547d8c261, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 144.31.171.249:443, server: 144.31.171.249, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 665c11ef-4723-4396-a8a1-45d013e68e6b, servername: bootpl1.strangerwhale.fun, alpn: ["h2,http/1.1"], host: bootpl1.strangerwhale.fun, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 87.120.104.81:1443, server: 87.120.104.81, port: 1443, type: vless, tls: true, packet-encoding: xudp, uuid: be5abe11-1c65-4289-b581-a5121a8719a1, servername: no.snowfall.top, host: no.snowfall.top, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: Yia0S6CECYzcz4e6kq0Gzhc_9i_PP--eM0FrEPdQ1WY, short-id: 73a7f33d0731e53c}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 207.174.133.169:10000, server: 207.174.133.169, port: 10000, type: vless, tls: true, packet-encoding: xudp, uuid: d26598cf-2cdf-4219-80d0-94646dff160d, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 81.29.146.82:443, server: 81.29.146.82, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: db9bbff2-224b-4017-b756-31dc7783a7be, servername: yahoo.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 191.44.118.101:443, server: 191.44.118.101, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: deecd21a-a24f-444d-b92a-2c8e41a6b05b, servername: www.microsoft.com, host: www.microsoft.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 69_I9Wm_vP5wQUbiQhdejWS9yLlNYLFjcnF59G-0GAU, short-id: 31e36d0ac3355472}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇺🇸 [openproxylist.com] vmess-US", server: 23.138.148.96, port: 25213, type: vmess, uuid: 17301584-89b6-4ce3-f0df-ada8184ff58e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "[openproxylist.com] vmess-FI", server: 65.109.221.245, port: 33366, type: vmess, uuid: 2ee7eb26-8118-4d0a-a300-8d0edcfde6e5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
@@ -24,14 +27,17 @@ proxy-groups:
       - DIRECT
       - 148.253.208.76:3478
       - 43.207.87.133:443
+      - 2.144.5.90:8443
       - 169.150.215.78:8443
       - 95.173.199.113:8443
       - 95.173.199.86:8443
+      - 103.118.255.19:44058
       - 144.31.171.249:443
       - 87.120.104.81:1443
       - 207.174.133.169:10000
       - 81.29.146.82:443
       - 191.44.118.101:443
+      - 🇺🇸 [openproxylist.com] vmess-US
       - "[openproxylist.com] vmess-FI"
   - name: ♻️ 自动选择
     type: url-test
@@ -41,14 +47,17 @@ proxy-groups:
     proxies:
       - 148.253.208.76:3478
       - 43.207.87.133:443
+      - 2.144.5.90:8443
       - 169.150.215.78:8443
       - 95.173.199.113:8443
       - 95.173.199.86:8443
+      - 103.118.255.19:44058
       - 144.31.171.249:443
       - 87.120.104.81:1443
       - 207.174.133.169:10000
       - 81.29.146.82:443
       - 191.44.118.101:443
+      - 🇺🇸 [openproxylist.com] vmess-US
       - "[openproxylist.com] vmess-FI"
   - name: 🌍 国外媒体
     type: select
@@ -58,14 +67,17 @@ proxy-groups:
       - 🎯 全球直连
       - 148.253.208.76:3478
       - 43.207.87.133:443
+      - 2.144.5.90:8443
       - 169.150.215.78:8443
       - 95.173.199.113:8443
       - 95.173.199.86:8443
+      - 103.118.255.19:44058
       - 144.31.171.249:443
       - 87.120.104.81:1443
       - 207.174.133.169:10000
       - 81.29.146.82:443
       - 191.44.118.101:443
+      - 🇺🇸 [openproxylist.com] vmess-US
       - "[openproxylist.com] vmess-FI"
   - name: 📲 电报信息
     type: select
@@ -74,14 +86,17 @@ proxy-groups:
       - 🎯 全球直连
       - 148.253.208.76:3478
       - 43.207.87.133:443
+      - 2.144.5.90:8443
       - 169.150.215.78:8443
       - 95.173.199.113:8443
       - 95.173.199.86:8443
+      - 103.118.255.19:44058
       - 144.31.171.249:443
       - 87.120.104.81:1443
       - 207.174.133.169:10000
       - 81.29.146.82:443
       - 191.44.118.101:443
+      - 🇺🇸 [openproxylist.com] vmess-US
       - "[openproxylist.com] vmess-FI"
   - name: Ⓜ️ 微软服务
     type: select
@@ -90,14 +105,17 @@ proxy-groups:
       - 🚀 节点选择
       - 148.253.208.76:3478
       - 43.207.87.133:443
+      - 2.144.5.90:8443
       - 169.150.215.78:8443
       - 95.173.199.113:8443
       - 95.173.199.86:8443
+      - 103.118.255.19:44058
       - 144.31.171.249:443
       - 87.120.104.81:1443
       - 207.174.133.169:10000
       - 81.29.146.82:443
       - 191.44.118.101:443
+      - 🇺🇸 [openproxylist.com] vmess-US
       - "[openproxylist.com] vmess-FI"
   - name: 🍎 苹果服务
     type: select
@@ -106,14 +124,17 @@ proxy-groups:
       - 🎯 全球直连
       - 148.253.208.76:3478
       - 43.207.87.133:443
+      - 2.144.5.90:8443
       - 169.150.215.78:8443
       - 95.173.199.113:8443
       - 95.173.199.86:8443
+      - 103.118.255.19:44058
       - 144.31.171.249:443
       - 87.120.104.81:1443
       - 207.174.133.169:10000
       - 81.29.146.82:443
       - 191.44.118.101:443
+      - 🇺🇸 [openproxylist.com] vmess-US
       - "[openproxylist.com] vmess-FI"
   - name: 🎯 全球直连
     type: select
@@ -144,14 +165,17 @@ proxy-groups:
       - ♻️ 自动选择
       - 148.253.208.76:3478
       - 43.207.87.133:443
+      - 2.144.5.90:8443
       - 169.150.215.78:8443
       - 95.173.199.113:8443
       - 95.173.199.86:8443
+      - 103.118.255.19:44058
       - 144.31.171.249:443
       - 87.120.104.81:1443
       - 207.174.133.169:10000
       - 81.29.146.82:443
       - 191.44.118.101:443
+      - 🇺🇸 [openproxylist.com] vmess-US
       - "[openproxylist.com] vmess-FI"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
