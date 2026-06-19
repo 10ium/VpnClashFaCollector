@@ -465,14 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: r3mrcg001286ek2.cybervena.com:50099, server: r3mrcg001286ek2.cybervena.com, port: 50099, type: ss, cipher: chacha20-ietf-poly1305, password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4, udp: true, tfo: false}
   - {name: 130.94.114.217:443, server: 130.94.114.217, port: 443, type: trojan, password: BhNAljna1sXjsY.Nqdl0ksXJ1VsGRqXz1V, sni: 130.94.114.217, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 18.181.208.41:28694, server: 18.181.208.41, port: 28694, type: trojan, password: BxceQaOe, sni: t.me%252Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 185.126.236.190:443, server: 185.126.236.190, port: 443, type: trojan, password: VGBzLm49=M_i02Az30tIeonkQw180t-edg, sni: 185.126.236.190, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 104.194.148.56:22263, server: 104.194.148.56, port: 22263, type: vless, tls: true, packet-encoding: xudp, uuid: 05671cd1-ab2f-4f64-a926-b655f199a23d, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 45.198.87.60:8443, server: 45.198.87.60, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 7896c501-248f-4068-bc2f-363c91ba5122, servername: storage.yandex.net, alpn: [networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-channel@.networld_vpn-], host: storage.yandex.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 7zd9mJilgjOrg_ohtw23Vmio-pdnYqeP_r-kiWt87Cg, short-id: 2715592069f36fe7}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: www.speedtest.org:443, server: www.speedtest.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 7e544a9d-7667-413b-bbb0-b3bb1aac6d77, servername: shegeftihaaa.net, network: ws, ws-opts: {path: /rsedgws, headers: {Host: shegeftihaaa.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 45.130.125.229:443, server: 45.130.125.229, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c35050ce-01ab-45a9-91b8-54cec637d0a8, servername: octopusss5.info, network: ws, ws-opts: {path: /udfyfws, headers: {Host: octopusss5.info}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 144.31.128.56:443, server: 144.31.128.56, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e8bf51de-efc9-42a4-be50-1a6bc3170c63, servername: 33432ews-topology-gslb-yccdn.ru, host: 33432ews-topology-gslb-yccdn.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: tSxNp48AuTUzqggANCWsR6v7bqlguCoVWk_YOUs36Ug, short-id: fe12}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -490,14 +487,11 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - r3mrcg001286ek2.cybervena.com:50099
       - 130.94.114.217:443
       - 18.181.208.41:28694
-      - 185.126.236.190:443
       - 104.194.148.56:22263
       - 45.198.87.60:8443
       - www.speedtest.org:443
-      - 45.130.125.229:443
       - 144.31.128.56:443
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -505,14 +499,11 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - r3mrcg001286ek2.cybervena.com:50099
       - 130.94.114.217:443
       - 18.181.208.41:28694
-      - 185.126.236.190:443
       - 104.194.148.56:22263
       - 45.198.87.60:8443
       - www.speedtest.org:443
-      - 45.130.125.229:443
       - 144.31.128.56:443
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -520,14 +511,11 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - r3mrcg001286ek2.cybervena.com:50099
       - 130.94.114.217:443
       - 18.181.208.41:28694
-      - 185.126.236.190:443
       - 104.194.148.56:22263
       - 45.198.87.60:8443
       - www.speedtest.org:443
-      - 45.130.125.229:443
       - 144.31.128.56:443
   - name: اتصال پایدار 🔗
     type: url-test
@@ -544,14 +532,11 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - r3mrcg001286ek2.cybervena.com:50099
       - 130.94.114.217:443
       - 18.181.208.41:28694
-      - 185.126.236.190:443
       - 104.194.148.56:22263
       - 45.198.87.60:8443
       - www.speedtest.org:443
-      - 45.130.125.229:443
       - 144.31.128.56:443
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -559,14 +544,11 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - r3mrcg001286ek2.cybervena.com:50099
       - 130.94.114.217:443
       - 18.181.208.41:28694
-      - 185.126.236.190:443
       - 104.194.148.56:22263
       - 45.198.87.60:8443
       - www.speedtest.org:443
-      - 45.130.125.229:443
       - 144.31.128.56:443
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -574,14 +556,11 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - r3mrcg001286ek2.cybervena.com:50099
       - 130.94.114.217:443
       - 18.181.208.41:28694
-      - 185.126.236.190:443
       - 104.194.148.56:22263
       - 45.198.87.60:8443
       - www.speedtest.org:443
-      - 45.130.125.229:443
       - 144.31.128.56:443
   - name: دانلود منیجر 📥
     type: select
