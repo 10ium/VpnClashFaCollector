@@ -5,116 +5,88 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@proxy_kafee⚕️", server: 4.168.196.7, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 8iW2GElOLWl9Ztjj, udp: true, tfo: false}
   - {name: "@proxy_kafee 65⚡", server: 151.101.110.219, port: 443, type: trojan, password: MITIVPN, sni: global.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: /ed=mitivpn, headers: {Host: global.fastly.com}}, udp: true, tfo: false}
   - {name: "@proxy_kafee 64⚡`", server: 151.101.69.219, port: 443, type: trojan, password: MITIVPN, sni: speedtest.net, skip-cert-verify: false, network: ws, ws-opts: {path: /ed=mitivpn, headers: {Host: speedtest.net}}, udp: true, tfo: false}
-  - {name: "@proxy_kafee⚕️`", server: 194.5.193.150, port: 443, type: trojan, password: SoftNetConnect, sni: www.yahoo.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee (3🇨🇭⚡)`", server: 83.228.224.161, port: 2087, type: trojan, password: SoftNetConnect, sni: www.yahoo.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee (4🇨🇭⚡)", server: 83.228.224.161, port: 42549, type: trojan, password: SoftNetConnect, sni: www.speedtest.net, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee (🇨🇭⚡)", server: 83.228.224.161, port: 8443, type: trojan, password: SoftNetConnect, sni: play.google.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee⚕️ 2", server: 188.114.97.6, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 14b59caf-a196-4ec2-8c70-c7b388062f5b, servername: vangoghhh.info, network: ws, ws-opts: {path: /rdfgtws, headers: {Host: vangoghhh.info}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: دیوانه زنجیریِ کم خون — p`, server: 31.57.106.21, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 2eaf3e87-edcd-479b-997e-3e693d2ec458, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: IiXOtrr72OAumtdjHDdvqxwyiInUq8_5b2wG477U40k, short-id: cee5cf0cb56d6912}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee (5🇨🇭⚡)", server: 83.228.224.161, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: 89049f79-320b-48a0-b1cf-110165cae30c, servername: www.yahoo.com, host: www.yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: l1Ekgk-8T5rB-yolp5OIpc0XZTcd2gBeqmIR2bytKXY, short-id: 4e590fdc}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee⚕️ 3", server: 188.114.97.6, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c2f0a8f0-36fe-4a94-824b-bca271ca642b, servername: alphacdn.alphashops.shop, network: ws, ws-opts: {path: /ws, headers: {Host: alphacdn.alphashops.shop}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee (3🇨🇭⚡)", server: 37.156.45.237, port: 2087, type: trojan, password: SoftNetConnect, sni: www.yahoo.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee (4🇨🇭⚡)", server: 37.156.45.237, port: 42549, type: trojan, password: SoftNetConnect, sni: www.speedtest.net, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee (2🇨🇭⚡)", server: 37.156.45.237, port: 443, type: trojan, password: SoftNetConnect, sni: www.yahoo.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee (🇨🇭⚡)", server: 37.156.45.237, port: 8443, type: trojan, password: SoftNetConnect, sni: play.google.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee (5🇨🇭⚡)`", server: 37.156.45.237, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: 89049f79-320b-48a0-b1cf-110165cae30c, servername: www.yahoo.com, host: www.yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: l1Ekgk-8T5rB-yolp5OIpc0XZTcd2gBeqmIR2bytKXY, short-id: 4e590fdc}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@proxy_kafee⚕️"
       - "@proxy_kafee 65⚡"
       - "@proxy_kafee 64⚡`"
-      - "@proxy_kafee⚕️`"
-      - "@proxy_kafee (3🇨🇭⚡)`"
+      - "@proxy_kafee (3🇨🇭⚡)"
       - "@proxy_kafee (4🇨🇭⚡)"
+      - "@proxy_kafee (2🇨🇭⚡)"
       - "@proxy_kafee (🇨🇭⚡)"
-      - "@proxy_kafee⚕️ 2"
-      - دیوانه زنجیریِ کم خون — p`
-      - "@proxy_kafee (5🇨🇭⚡)"
-      - "@proxy_kafee⚕️ 3"
+      - "@proxy_kafee (5🇨🇭⚡)`"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@proxy_kafee⚕️"
       - "@proxy_kafee 65⚡"
       - "@proxy_kafee 64⚡`"
-      - "@proxy_kafee⚕️`"
-      - "@proxy_kafee (3🇨🇭⚡)`"
+      - "@proxy_kafee (3🇨🇭⚡)"
       - "@proxy_kafee (4🇨🇭⚡)"
+      - "@proxy_kafee (2🇨🇭⚡)"
       - "@proxy_kafee (🇨🇭⚡)"
-      - "@proxy_kafee⚕️ 2"
-      - دیوانه زنجیریِ کم خون — p`
-      - "@proxy_kafee (5🇨🇭⚡)"
-      - "@proxy_kafee⚕️ 3"
+      - "@proxy_kafee (5🇨🇭⚡)`"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@proxy_kafee⚕️"
       - "@proxy_kafee 65⚡"
       - "@proxy_kafee 64⚡`"
-      - "@proxy_kafee⚕️`"
-      - "@proxy_kafee (3🇨🇭⚡)`"
+      - "@proxy_kafee (3🇨🇭⚡)"
       - "@proxy_kafee (4🇨🇭⚡)"
+      - "@proxy_kafee (2🇨🇭⚡)"
       - "@proxy_kafee (🇨🇭⚡)"
-      - "@proxy_kafee⚕️ 2"
-      - دیوانه زنجیریِ کم خون — p`
-      - "@proxy_kafee (5🇨🇭⚡)"
-      - "@proxy_kafee⚕️ 3"
+      - "@proxy_kafee (5🇨🇭⚡)`"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@proxy_kafee⚕️"
       - "@proxy_kafee 65⚡"
       - "@proxy_kafee 64⚡`"
-      - "@proxy_kafee⚕️`"
-      - "@proxy_kafee (3🇨🇭⚡)`"
+      - "@proxy_kafee (3🇨🇭⚡)"
       - "@proxy_kafee (4🇨🇭⚡)"
+      - "@proxy_kafee (2🇨🇭⚡)"
       - "@proxy_kafee (🇨🇭⚡)"
-      - "@proxy_kafee⚕️ 2"
-      - دیوانه زنجیریِ کم خون — p`
-      - "@proxy_kafee (5🇨🇭⚡)"
-      - "@proxy_kafee⚕️ 3"
+      - "@proxy_kafee (5🇨🇭⚡)`"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@proxy_kafee⚕️"
       - "@proxy_kafee 65⚡"
       - "@proxy_kafee 64⚡`"
-      - "@proxy_kafee⚕️`"
-      - "@proxy_kafee (3🇨🇭⚡)`"
+      - "@proxy_kafee (3🇨🇭⚡)"
       - "@proxy_kafee (4🇨🇭⚡)"
+      - "@proxy_kafee (2🇨🇭⚡)"
       - "@proxy_kafee (🇨🇭⚡)"
-      - "@proxy_kafee⚕️ 2"
-      - دیوانه زنجیریِ کم خون — p`
-      - "@proxy_kafee (5🇨🇭⚡)"
-      - "@proxy_kafee⚕️ 3"
+      - "@proxy_kafee (5🇨🇭⚡)`"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@proxy_kafee⚕️"
       - "@proxy_kafee 65⚡"
       - "@proxy_kafee 64⚡`"
-      - "@proxy_kafee⚕️`"
-      - "@proxy_kafee (3🇨🇭⚡)`"
+      - "@proxy_kafee (3🇨🇭⚡)"
       - "@proxy_kafee (4🇨🇭⚡)"
+      - "@proxy_kafee (2🇨🇭⚡)"
       - "@proxy_kafee (🇨🇭⚡)"
-      - "@proxy_kafee⚕️ 2"
-      - دیوانه زنجیریِ کم خون — p`
-      - "@proxy_kafee (5🇨🇭⚡)"
-      - "@proxy_kafee⚕️ 3"
+      - "@proxy_kafee (5🇨🇭⚡)`"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -142,17 +114,13 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@proxy_kafee⚕️"
       - "@proxy_kafee 65⚡"
       - "@proxy_kafee 64⚡`"
-      - "@proxy_kafee⚕️`"
-      - "@proxy_kafee (3🇨🇭⚡)`"
+      - "@proxy_kafee (3🇨🇭⚡)"
       - "@proxy_kafee (4🇨🇭⚡)"
+      - "@proxy_kafee (2🇨🇭⚡)"
       - "@proxy_kafee (🇨🇭⚡)"
-      - "@proxy_kafee⚕️ 2"
-      - دیوانه زنجیریِ کم خون — p`
-      - "@proxy_kafee (5🇨🇭⚡)"
-      - "@proxy_kafee⚕️ 3"
+      - "@proxy_kafee (5🇨🇭⚡)`"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

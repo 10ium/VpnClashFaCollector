@@ -5,81 +5,60 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@Capoit", server: 188.114.97.6, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true, tfo: false}
-  - {name: "@Capoit`", server: sca11.speedmeter.shop, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit 2", server: sca33.speedmeter.shop, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 2", server: hm.khoycityman.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 921a2a0b-bfb9-445a-a4ec-d81769592d33, servername: www.yahoo.com, host: www.yahoo.com, path: /, reality-opts: {public-key: cAprase508p_Y7olUKMa-aqER9NcBqaCZ8xyvll4Xgk, short-id: edd3256dc1}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit`", server: hm.khoycityman.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 921a2a0b-bfb9-445a-a4ec-d81769592d33, servername: www.yahoo.com, host: www.yahoo.com, path: /, reality-opts: {public-key: cAprase508p_Y7olUKMa-aqER9NcBqaCZ8xyvll4Xgk, short-id: edd3256dc1}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 2", server: radar.cloudflare.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a3e2f3fc-9604-4093-8d92-c4303d822fad, servername: rocket-panel-pearl-313895.nova-5e4426f8.workers.dev, network: ws, ws-opts: {path: "/?u=f37c2ef95c", headers: {Host: rocket-panel-pearl-313895.nova-5e4426f8.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@Capoit` 3", server: 144.124.241.233, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a5ea9247-79f3-4655-aece-3fb51e1e669e, servername: rezerv1.yunus.guru, host: rezerv1.yunus.guru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: -X9CZv5MYKivpxPVP1vdgFKf2AJWmZ0Pju-j8LFmlh4, short-id: 6c88854e73e86773}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit 3", server: 188.114.97.6, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b2f6aa3a-2550-4a1c-b2c0-1c94b1207217, servername: terazhediii.info, network: ws, ws-opts: {path: /hdgrbws, headers: {Host: terazhediii.info}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@Capoit"
       - "@Capoit`"
-      - "@Capoit 2"
       - "@Capoit` 2"
       - "@Capoit` 3"
-      - "@Capoit 3"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@Capoit"
       - "@Capoit`"
-      - "@Capoit 2"
       - "@Capoit` 2"
       - "@Capoit` 3"
-      - "@Capoit 3"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@Capoit"
       - "@Capoit`"
-      - "@Capoit 2"
       - "@Capoit` 2"
       - "@Capoit` 3"
-      - "@Capoit 3"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@Capoit"
       - "@Capoit`"
-      - "@Capoit 2"
       - "@Capoit` 2"
       - "@Capoit` 3"
-      - "@Capoit 3"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@Capoit"
       - "@Capoit`"
-      - "@Capoit 2"
       - "@Capoit` 2"
       - "@Capoit` 3"
-      - "@Capoit 3"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@Capoit"
       - "@Capoit`"
-      - "@Capoit 2"
       - "@Capoit` 2"
       - "@Capoit` 3"
-      - "@Capoit 3"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -107,12 +86,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@Capoit"
       - "@Capoit`"
-      - "@Capoit 2"
       - "@Capoit` 2"
       - "@Capoit` 3"
-      - "@Capoit 3"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
