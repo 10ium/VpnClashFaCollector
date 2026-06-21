@@ -465,12 +465,12 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: 77.42.33.181:1085, server: 77.42.33.181, port: 1085, type: ss, cipher: chacha20-ietf-poly1305, password: 8baa4ead22db1d7e8fea063b6aefcc73, udp: true, tfo: false}
   - {name: 103.136.150.192:30129, server: 103.136.150.192, port: 30129, type: ss, cipher: aes-256-gcm, password: 7e1dd4c55bf85da5, udp: true, tfo: false}
   - {name: 16.163.106.209:41889, server: 16.163.106.209, port: 41889, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 18.162.50.252:9149, server: 18.162.50.252, port: 9149, type: trojan, password: BxceQaOe, sni: t.me%252Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 83.228.230.226:42549, server: 83.228.230.226, port: 42549, type: trojan, password: SoftNetConnect, sni: www.speedtest.net, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 108.165.236.144:2040, server: 108.165.236.144, port: 2040, type: vless, tls: true, packet-encoding: xudp, uuid: 17451fec-af94-4715-8c2f-7f6839130d0a, servername: tradingview.com, host: tradingview.com, path: /, reality-opts: {public-key: LidllyozUeeSbuzJ0ZfieGoy8YjVzqXX9H2m9whPaG0, short-id: 53197c66aef53c44}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 45.81.35.125:80, server: 45.81.35.125, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 5f3b432c-1e4d-4aef-bf55-394ed64eaa6a, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 72.56.112.226:40443, server: 72.56.112.226, port: 40443, type: vless, tls: true, packet-encoding: xudp, uuid: 8c158c22-ecaf-441e-8653-91f1a5a4fd15, servername: deepl.com, host: deepl.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: gFP8-P4r8FKkN10b0q1keHgL7jjmUOpY9qPAem_3z34, short-id: 5201}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: l7.l-itx.info:7443, server: l7.l-itx.info, port: 7443, type: vless, tls: true, packet-encoding: xudp, uuid: f1a44ae4-20f9-4dd7-b60e-b4f2acecfdb4, servername: colorlib.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: xyz}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
@@ -489,12 +489,12 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - 77.42.33.181:1085
       - 103.136.150.192:30129
       - 16.163.106.209:41889
       - 18.162.50.252:9149
       - 83.228.230.226:42549
       - 108.165.236.144:2040
-      - 45.81.35.125:80
       - 72.56.112.226:40443
       - l7.l-itx.info:7443
   - name: خودکار (بهترین پینگ) 🤖
@@ -503,12 +503,12 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - 77.42.33.181:1085
       - 103.136.150.192:30129
       - 16.163.106.209:41889
       - 18.162.50.252:9149
       - 83.228.230.226:42549
       - 108.165.236.144:2040
-      - 45.81.35.125:80
       - 72.56.112.226:40443
       - l7.l-itx.info:7443
   - name: پشتیبان (در صورت قطعی) 🧯
@@ -517,12 +517,12 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - 77.42.33.181:1085
       - 103.136.150.192:30129
       - 16.163.106.209:41889
       - 18.162.50.252:9149
       - 83.228.230.226:42549
       - 108.165.236.144:2040
-      - 45.81.35.125:80
       - 72.56.112.226:40443
       - l7.l-itx.info:7443
   - name: اتصال پایدار 🔗
@@ -540,12 +540,12 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 77.42.33.181:1085
       - 103.136.150.192:30129
       - 16.163.106.209:41889
       - 18.162.50.252:9149
       - 83.228.230.226:42549
       - 108.165.236.144:2040
-      - 45.81.35.125:80
       - 72.56.112.226:40443
       - l7.l-itx.info:7443
   - name: توزیع بار (گردشی) 🔁
@@ -554,12 +554,12 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 77.42.33.181:1085
       - 103.136.150.192:30129
       - 16.163.106.209:41889
       - 18.162.50.252:9149
       - 83.228.230.226:42549
       - 108.165.236.144:2040
-      - 45.81.35.125:80
       - 72.56.112.226:40443
       - l7.l-itx.info:7443
   - name: توزیع بار (موقت) ⏳
@@ -568,12 +568,12 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 77.42.33.181:1085
       - 103.136.150.192:30129
       - 16.163.106.209:41889
       - 18.162.50.252:9149
       - 83.228.230.226:42549
       - 108.165.236.144:2040
-      - 45.81.35.125:80
       - 72.56.112.226:40443
       - l7.l-itx.info:7443
   - name: دانلود منیجر 📥

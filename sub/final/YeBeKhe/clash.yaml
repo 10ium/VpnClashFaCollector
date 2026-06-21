@@ -465,7 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@EarnMoney_arz | @xsfilterrnet", server: 203.202.232.11, port: 36068, type: vless, tls: true, packet-encoding: xudp, uuid: ZoRoVpN, network: ws, ws-opts: {path: /ZoRoVpn, headers: {Host: Play.google.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Best-X-v2, server: 134.255.252.76, port: 9999, type: vless, tls: true, packet-encoding: xudp, uuid: be88d265-a268-4ce1-ba06-516fa5c8471d, servername: varzesh3.com, host: varzesh3.com, path: /, reality-opts: {public-key: _kcz60zlz7bBTIXtK11MgHIrnVBF9sTJnU2MiLCwDF8, short-id: 02}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@EarnMoney_arz | @xsfilterrnet"
+      - Best-X-v2
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@EarnMoney_arz | @xsfilterrnet"
+      - Best-X-v2
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@EarnMoney_arz | @xsfilterrnet"
+      - Best-X-v2
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@EarnMoney_arz | @xsfilterrnet"
+      - Best-X-v2
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@EarnMoney_arz | @xsfilterrnet"
+      - Best-X-v2
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@EarnMoney_arz | @xsfilterrnet"
+      - Best-X-v2
   - name: دانلود منیجر 📥
     type: select
     proxies:

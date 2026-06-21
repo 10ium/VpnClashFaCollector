@@ -5,46 +5,46 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@EarnMoney_arz | @xsfilterrnet", server: 203.202.232.11, port: 36068, type: vless, tls: true, packet-encoding: xudp, uuid: ZoRoVpN, network: ws, ws-opts: {path: /ZoRoVpn, headers: {Host: Play.google.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Best-X-v2, server: 134.255.252.76, port: 9999, type: vless, tls: true, packet-encoding: xudp, uuid: be88d265-a268-4ce1-ba06-516fa5c8471d, servername: varzesh3.com, host: varzesh3.com, path: /, reality-opts: {public-key: _kcz60zlz7bBTIXtK11MgHIrnVBF9sTJnU2MiLCwDF8, short-id: 02}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@EarnMoney_arz | @xsfilterrnet"
+      - Best-X-v2
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@EarnMoney_arz | @xsfilterrnet"
+      - Best-X-v2
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@EarnMoney_arz | @xsfilterrnet"
+      - Best-X-v2
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@EarnMoney_arz | @xsfilterrnet"
+      - Best-X-v2
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@EarnMoney_arz | @xsfilterrnet"
+      - Best-X-v2
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@EarnMoney_arz | @xsfilterrnet"
+      - Best-X-v2
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +72,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@EarnMoney_arz | @xsfilterrnet"
+      - Best-X-v2
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
