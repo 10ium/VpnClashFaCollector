@@ -1,5 +1,160 @@
 # آرشیو کانال: @ConfigWireguard
-بروزرسانی: 2026-06-21 02:33:27 UTC
+بروزرسانی: 2026-06-21 12:07:58 UTC
+
+### 🕒 2026-06-21 09:52:26 UTC
+> ↪️ **Forwarded**
+
+***🚀***
+ آیا می‌خواهید انواع ورکرها را مستقیماً از تلگرام روی کلادفلر دپلو و مدیریت کنید؟
+بخش اول - استفاده از ربات آماده جهت شروع سریع: 
+[@MyCfDeployer_Bot](https://t.me/MyCfDeployer_Bot)
+بخش دوم - آموزش فشرده ساخت ربات اختصاصی خودتان: 
+***🛠***
+ 
+[لینک دریافت سورس‌کد کامل ربات در گیت‌هاب](https://github.com/10ium/free-config/blob/main/worker/ClashFa_Cf_Deployer_Bot)
+گام اول - ساخت توکن کلادفلر:
+ابتدا به بخش My Profile سپس API Tokens پنل کلادفلر بروید و یک توکن شخصی بسازید.
+دسترسی‌های زیر را به ردیف‌های مجوز توکن اضافه کنید:
+بخش Account گزینه Account Settings در حالت Read 
+بخش Account گزینهCloudflare Workers State در حالت Edit
+بخش Account گزینه Workers KV Storage درحالت Edit
+بخش Account گزینه D1 در حالت Edit 
+بخش Account گزینه Cloudflare Pages در حالت Edit 
+تغییر بخش Account Resources به گزینه All accounts 
+تغییر بخش Zone Resources به گزینه All zones و نهایتاً ذخیره و کپی توکن.
+گام دوم - ساخت ربات در تلگرام: ارسال دستور /newbot به ربات 
+[@BotFather](https://t.me/BotFather)
+ و کپی کردن توکن ربات تلگرام.
+گام سوم - ساخت ورکر در کلادفلر: ورود به بخش Workers & Pages پنل، ایجاد یک ورکر جدید و زدن دکمه Deploy. کلیک روی Edit Code، پاک کردن تمام کدهای پیش‌فرض و جایگزینی سورس‌کد کپی‌شده از گیت‌هاب و ذخیره نهایی.
+گام چهارم - اتصال دیتابیس KV: ایجاد یک دیتابیس در بخش KV پنل با نام دلخواه (مثلاً 
+`DEPLOYER_KV`
+). بازگشت به ورکر، ورود به تب Settings سپس منوی Variables و کلیک روی Add binding در بخش KV. نام متغیر (Variable name): عبارت 
+`BOT_KV`
+ (حتماً با حروف بزرگ) نام دیتابیس (KV namespace): دیتابیس ساخته‌شده در مرحله قبل را انتخاب کنید.
+گام پنجم - تعریف متغیرها: افزودن متغیر در بخش Environment Variables با زدن دکمه Add variable: نام متغیر اول: 
+`TELEGRAM_BOT_TOKEN`
+ با مقدار توکن ربات تلگرام.
+نام متغیر دوم (اختیاری): 
+`SECRET_TOKEN `
+با یک رمز عبور دلخواه انگلیسی. کلیک روی دکمه Save and deploy برای ذخیره تغییرات دیتابیس و متغیرها.
+گام ششم - ثبت وب‌هوک و شروع کار: کپی کردن آدرس ورکر خود و اضافه کردن پسوند /setup به انتهای آن و باز کردن در مرورگر. 
+آدرس راه‌انداز نمونه: 
+[https://my-worker.subdomain.workers.dev/setup](https://my-worker.subdomain.workers.dev/setup)
+ مشاهده پیام تایید در مرورگر به معنای اتمام کار و اتصال موفق به تلگرام است.
+گام هفتم - فعال‌سازی به‌روزرسانی الگوها: تنظیم این بخش به ربات شما اجازه می‌دهد آخرین نسخه‌ها را به طور خودکار از گیت‌هاب بروزرسانی کند .
+ ورود به بخش Settings ورکر، سپس تب Triggers و کلیک روی Add Trigger در بخش Cron. تنظیم زمان‌بندی روی حالت روزانه (فرمول پیشرفته
+` 0 0 * * *`
+) و ذخیره نهایی.
+تبریک می‌گوییم! ربات شخصی شما آماده به کار است.
+
+---
+
+### 🕒 2026-06-21 08:27:02 UTC
+Telegram Proxy
+[https://t.me/proxy?server=login.kerfilia.info&port=6775&secret=eee9a4f23b1d768c04a8d7f39120ca5b6e626973636f7474692e79656b74616e65742e636f6d](https://t.me/proxy?server=login.kerfilia.info&port=6775&secret=eee9a4f23b1d768c04a8d7f39120ca5b6e626973636f7474692e79656b74616e65742e636f6d)
+[https://t.me/proxy?server=irancell-mci.ir.gybshdjls.info.&port=88&secret=ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d](https://t.me/proxy?server=irancell-mci.ir.gybshdjls.info.&port=88&secret=ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d)
+[https://t.me/proxy?server=Iran.mother.ir.jetish.info.&port=88&secret=ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d](https://t.me/proxy?server=Iran.mother.ir.jetish.info.&port=88&secret=ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d)
+[https://t.me/proxy?server=goo.vingardium.co.uk.&port=8443&secret=7gggggggggggggggggggggh0cmFuc2xhdGUuZ29v](https://t.me/proxy?server=goo.vingardium.co.uk.&port=8443&secret=7gggggggggggggggggggggh0cmFuc2xhdGUuZ29v)
+[https://t.me/proxy?server=Together-for-iran.jetish.info.&port=88&secret=ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d](https://t.me/proxy?server=Together-for-iran.jetish.info.&port=88&secret=ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d)
+[https://t.me/proxy?server=go.vingardium.co.uk.&port=8443&secret=7gggggggggggggggggggggh0cmFuc2xhdGUuZ29v](https://t.me/proxy?server=go.vingardium.co.uk.&port=8443&secret=7gggggggggggggggggggggh0cmFuc2xhdGUuZ29v)
+[https://t.me/proxy?server=pmcdin.co.uk.&port=443&secret=ddf0eeb0bd9adc4fd4a93994ee3b2a216b](https://t.me/proxy?server=pmcdin.co.uk.&port=443&secret=ddf0eeb0bd9adc4fd4a93994ee3b2a216b)
+[https://t.me/proxy?server=Just-iraninan.com.the-nice-mtproto.info.&port=88&secret=ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d](https://t.me/proxy?server=Just-iraninan.com.the-nice-mtproto.info.&port=88&secret=ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d)
+[https://t.me/proxy?server=openhostings.co.uk.&port=443&secret=eef0eeb0bd9adc4fd4a93994ee3b2a216b63646e2e79656b74616e65742e636f6d](https://t.me/proxy?server=openhostings.co.uk.&port=443&secret=eef0eeb0bd9adc4fd4a93994ee3b2a216b63646e2e79656b74616e65742e636f6d)
+[https://t.me/proxy?server=wan.asiaadomainsshatelhamrahaval.co.uk.&port=443&secret=7t3_BeZaaaan_RoooooSH_93ZWIuYmFsZS5haQ%3D%3D](https://t.me/proxy?server=wan.asiaadomainsshatelhamrahaval.co.uk.&port=443&secret=7t3_BeZaaaan_RoooooSH_93ZWIuYmFsZS5haQ%3D%3D)
+[https://t.me/proxy?server=Strait-of-Hormuz.ir.jursdheks.info.&port=88&secret=ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d](https://t.me/proxy?server=Strait-of-Hormuz.ir.jursdheks.info.&port=88&secret=ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d)
+[https://t.me/proxy?server=fresh.t-proxy.info.&port=25565&secret=ee104462821249bd7ac519130220c25d0963646e2e79656b74616e65742e636f6d](https://t.me/proxy?server=fresh.t-proxy.info.&port=25565&secret=ee104462821249bd7ac519130220c25d0963646e2e79656b74616e65742e636f6d)
+[https://t.me/proxy?server=135.181.74.189&port=443&secret=3XnnAQIAAQAH8AMDhuJMOt0](https://t.me/proxy?server=135.181.74.189&port=443&secret=3XnnAQIAAQAH8AMDhuJMOt0)
+[https://t.me/proxy?server=googel.alo-otp.info.&port=25565&secret=ee104462821249bd7ac519130220c25d0963646e2e79656b74616e65742e636f6d](https://t.me/proxy?server=googel.alo-otp.info.&port=25565&secret=ee104462821249bd7ac519130220c25d0963646e2e79656b74616e65742e636f6d)
+[https://t.me/proxy?server=proxy.speedbreaker.info&port=25565&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d](https://t.me/proxy?server=proxy.speedbreaker.info&port=25565&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d)
+[https://t.me/proxy?server=football.world-pro.co.uk&port=25565&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d](https://t.me/proxy?server=football.world-pro.co.uk&port=25565&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d)
+[https://t.me/proxy?server=blue.protocolsix.info&port=22&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d](https://t.me/proxy?server=blue.protocolsix.info&port=22&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d)
+[https://t.me/proxy?server=mc-ssh.t-proxyru.info.&port=25565&secret=ee104462821249bd7ac519130220c25d0963646e2e79656b74616e65742e636f6d](https://t.me/proxy?server=mc-ssh.t-proxyru.info.&port=25565&secret=ee104462821249bd7ac519130220c25d0963646e2e79656b74616e65742e636f6d)
+[https://t.me/proxy?server=www.vingardium.co.uk.&port=443&secret=7t3__FoRaLL_Proxy_93ZWIuYmFsZS5haQ%3D%3D](https://t.me/proxy?server=www.vingardium.co.uk.&port=443&secret=7t3__FoRaLL_Proxy_93ZWIuYmFsZS5haQ%3D%3D)
+[https://t.me/proxy?server=For.dear-iranian-people.com.heazshddd.info.&port=88&secret=ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d](https://t.me/proxy?server=For.dear-iranian-people.com.heazshddd.info.&port=88&secret=ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d)
+[https://t.me/proxy?server=bale-ai.vingardium.co.uk.&port=443&secret=7t3__FoRaLL_Proxy_93ZWIuYmFsZS5haQ%3D%3D](https://t.me/proxy?server=bale-ai.vingardium.co.uk.&port=443&secret=7t3__FoRaLL_Proxy_93ZWIuYmFsZS5haQ%3D%3D)
+[https://t.me/proxy?server=norm.quickdl.info&port=25565&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d](https://t.me/proxy?server=norm.quickdl.info&port=25565&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d)
+[https://t.me/proxy?server=rudomain.info.&port=443&secret=eef0eeb0bd9adc4fd4a93994ee3b2a216b63646e2e79656b74616e65742e636f6d](https://t.me/proxy?server=rudomain.info.&port=443&secret=eef0eeb0bd9adc4fd4a93994ee3b2a216b63646e2e79656b74616e65742e636f6d)
+[https://t.me/proxy?server=subobdoa.co.uk.&port=443&secret=eef0eeb0bd9adc4fd4a93994ee3b2a216b63646e2e79656b74616e65742e636f6d](https://t.me/proxy?server=subobdoa.co.uk.&port=443&secret=eef0eeb0bd9adc4fd4a93994ee3b2a216b63646e2e79656b74616e65742e636f6d)
+[https://t.me/proxy?server=b8rta.co.uk.&port=443&secret=ddf0eeb0bd9adc4fd4a93994ee3b2a216b](https://t.me/proxy?server=b8rta.co.uk.&port=443&secret=ddf0eeb0bd9adc4fd4a93994ee3b2a216b)
+[https://t.me/proxy?server=best-sellerst.co.uk.&port=443&secret=eef0eeb0bd9adc4fd4a93994ee3b2a216b63646e2e79656b74616e65742e636f6d](https://t.me/proxy?server=best-sellerst.co.uk.&port=443&secret=eef0eeb0bd9adc4fd4a93994ee3b2a216b63646e2e79656b74616e65742e636f6d)
+
+---
+
+### 🕒 2026-06-21 08:23:01 UTC
+> ↪️ **Forwarded**
+
+اگه میخواین بدون VPN، به سایت x.com (یا توییتر سابق) دسترسی پیدا کنید، کافیه این گام‌ها رو طی کنید: 
+***1️⃣***
+ وارد این مسیر بشید: C:\Windows\System32\drivers\etc 
+***2️⃣***
+ فایل hosts رو با Notepad باز کنید 
+***3️⃣***
+ انتهای فایل، این خطوط رو اضافه کنید: 104.19.229.21 abs.twimg.com…
+
+---
+
+### 🕒 2026-06-21 08:23:01 UTC
+> ↪️ **Forwarded**
+
+اگه میخواین بدون VPN، به سایت 
+[x.com](http://x.com/)
+ (یا توییتر سابق) دسترسی پیدا کنید، کافیه این گام‌ها رو طی کنید:
+***1️⃣***
+ وارد این مسیر بشید:
+`C:\Windows\System32\drivers\etc`
+***2️⃣***
+ فایل 
+`hosts`
+ رو با Notepad باز کنید
+***3️⃣***
+ انتهای فایل، این خطوط رو اضافه کنید:
+`104.19.229.21 abs.twimg.com104.19.229.21 x.com104.19.229.21 ads-api.x.com104.19.229.21 pbs.twimg.com104.19.229.21 api.x.com`
+میتونید بجای استفاده از 104.19.229.21، هر IP مربوط به cloudflare که تمیز هست، استفاده کنید
+***4️⃣***
+ فایل رو ذخیره کنید
+***5️⃣***
+ مرورگرهاتون رو ببندید و دوباره باز کنید و 
+[x.com](http://x.com/)
+ رو جستجو کنید (بسته شرایط اینترنت‌تون، ممکنه مجبور بشید که چند بار صفحه رو reload کنید
+***⚠️***
+ توجه داشته باشید که در این روش، ممکنه 
+[x.com](http://x.com/)
+ (یا توییتر سابق)، شما رو با IP خودتون شناسایی کنه، چون که شما بدون سرور واسطه ممکنه متصل بشید (به 
+[این دلیل](https://t.me/Sampa_Asa/26)
+ از کلمه‌ی "ممکنه" استفاده کردم).
+
+---
+
+### 🕒 2026-06-21 06:11:50 UTC
+Open Vpn
+
+---
+
+### 🕒 2026-06-21 05:42:32 UTC
+***🚀***
+ نسخه جدید منتشر شد برای de
+
+---
+
+### 🕒 2026-06-21 05:36:52 UTC
+Happ Hiddify V2rayNg Karing Exclave Streisand
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTprMWRCT21PQjRvcWk3VW1wMzdhMWJR@82.38.31.218:8080#⁰
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpDSm1UQ0N4N0x0dWQ@108.181.58.239:8388#¹
+vless://ad73ff14-a0e3-46d1-adc0-02ca29a32485@18.153.81.34:443?encryption=none&type=tcp&headerType=none#²
+trojan://MiTiVPN@188.114.97.6:443?type=ws&security=tls&path=%2Fed%3Dmitivpn&host=wwww.95r.ir&sni=wwww.95r.ir&alpn=http%2F1.1&fp=chrome&insecure=0&allowInsecure=0#³
+vless://8ca5cbd3-ec16-4728-bedc-2bc0d82f0922@lv.faygo.bot:443?encryption=none&type=tcp&security=reality&headerType=none&sni=enterprisekitten.com&fp=qq&insecure=1&allowInsecure=1&pbk=SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc&sid=6ba85179e30d4fc2&flow=xtls-rprx-vision#⁴
+
+---
+
+### 🕒 2026-06-21 05:35:12 UTC
+DNS Jumper
+نرم افزار 
+[**DNS Jumper**](https://www.sordum.org/7952/dns-jumper-v2-3/)
+ رو ، روی سیستم نصب کنید
+لیست کامل از دی‌ان‌اس هارو بهتون نشون میده و میتونید هر کدوم پینگ بهتر داشت استفاده کنی و داخل کنسول هم میشه ازشون استفاده کرد
+[https://www.sordum.org/7952/dns-jumper-v2-3/](https://www.sordum.org/7952/dns-jumper-v2-3/)
+
+---
 
 ### 🕒 2026-06-20 17:58:15 UTC
 آنقدر نیومدید به ربات هاتون اد کنید گروه رو بشه منیج کرد یه کوچولو اشو درست کردم 
@@ -176,173 +331,6 @@ obfs4 5.104.81.79:8443 42FAC9C256D5701BDE7336474369550BC4D28182 cert=gcKlN2VE+NS
  | 
 [2](https://t.me/FREE2CONFIG/5727)
 [تنظیمات اتصال](https://t.me/FREE2CONFIG/2321?single)
-
----
-
-### 🕒 2026-06-20 10:26:01 UTC
-***💠***
- 
-**دریافت اشتراک 3 ماهه Octohide**
- 
-**VPN**
-***🔺***
-** آموزش دریافت**
-:
-***❗️***
- ابتدا ربات 
-[Octohide](http://t.me/octohide_bot)
- رو استارت کنید و روی دکمه Get Free Vip کلیک کنید تا یک کد اشتراک براتون ارسال بشه.
-***❗️***
- وارد برنامه و بخش settings شوید و روی دکمه Redeem token کلیک کنید.
-***❗️***
- کدی که از ربات دریافت کردید رو وارد و روی دکمه تایید کلیک کنید.
-**برای اتصال بهتره پروتکل را OverHttps  انتخاب کنید **
-***📍***
- اتصال روی بعضی اپراتورها و مناطق فعاله 
-[Android](https://play.google.com/store/apps/details?id=octohide.vpn)
- | 
-[IOS](https://apps.apple.com/us/app/octohide-vpn/id6443674175)
-میتونید برای استفاده از کانفیگ وایرگارد Octohid این روش پیش برید 
-[https://t.me/ConfigWireguard/30342](https://t.me/ConfigWireguard/30342)
-
----
-
-### 🕒 2026-06-20 06:39:01 UTC
-**Telegram Proxy**
-[https://t.me/proxy?server=googel.alo-otp.info.&port=25565&secret=ee104462821249bd7ac519130220c25d0963646e2e79656b74616e65742e636f6d](https://t.me/proxy?server=googel.alo-otp.info.&port=25565&secret=ee104462821249bd7ac519130220c25d0963646e2e79656b74616e65742e636f6d)
-[https://t.me/proxy?server=Together-for-iran.jetish.info.&port=88&secret=ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d](https://t.me/proxy?server=Together-for-iran.jetish.info.&port=88&secret=ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d)
-[https://t.me/proxy?server=blue.protocolsix.info&port=22&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d](https://t.me/proxy?server=blue.protocolsix.info&port=22&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d)
-[https://t.me/proxy?server=football.world-pro.co.uk&port=25565&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d](https://t.me/proxy?server=football.world-pro.co.uk&port=25565&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d)
-[https://t.me/proxy?server=mizban.genuismind.info&port=443&secret=ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d](https://t.me/proxy?server=mizban.genuismind.info&port=443&secret=ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d)
-[https://t.me/proxy?server=irancell-mci.ir.gybshdjls.info.&port=88&secret=ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d](https://t.me/proxy?server=irancell-mci.ir.gybshdjls.info.&port=88&secret=ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d)
-[https://t.me/proxy?server=iran.protocolsix.info&port=25565&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d](https://t.me/proxy?server=iran.protocolsix.info&port=25565&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d)
-[https://t.me/proxy?server=form.quickdl.info&port=22&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d](https://t.me/proxy?server=form.quickdl.info&port=22&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d)
-[https://t.me/proxy?server=rudomain.info.&port=443&secret=eef0eeb0bd9adc4fd4a93994ee3b2a216b63646e2e79656b74616e65742e636f6d](https://t.me/proxy?server=rudomain.info.&port=443&secret=eef0eeb0bd9adc4fd4a93994ee3b2a216b63646e2e79656b74616e65742e636f6d)
-[https://t.me/proxy?server=proxy.speedbreaker.info&port=25565&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d](https://t.me/proxy?server=proxy.speedbreaker.info&port=25565&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d)
-[https://t.me/proxy?server=norm.quickdl.info&port=25565&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d](https://t.me/proxy?server=norm.quickdl.info&port=25565&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d)
-[https://t.me/proxy?server=pmcdin.co.uk.&port=443&secret=ddf0eeb0bd9adc4fd4a93994ee3b2a216b](https://t.me/proxy?server=pmcdin.co.uk.&port=443&secret=ddf0eeb0bd9adc4fd4a93994ee3b2a216b)
-[https://t.me/proxy?server=Iran.mother.ir.jetish.info.&port=88&secret=ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d](https://t.me/proxy?server=Iran.mother.ir.jetish.info.&port=88&secret=ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d)
-[https://t.me/proxy?server=go.vingardium.co.uk.&port=8443&secret=7gggggggggggggggggggggh0cmFuc2xhdGUuZ29v](https://t.me/proxy?server=go.vingardium.co.uk.&port=8443&secret=7gggggggggggggggggggggh0cmFuc2xhdGUuZ29v)
-[https://t.me/proxy?server=For.dear-iranian-people.com.heazshddd.info.&port=88&secret=ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d](https://t.me/proxy?server=For.dear-iranian-people.com.heazshddd.info.&port=88&secret=ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d)
-[https://t.me/proxy?server=Strait-of-Hormuz.ir.jursdheks.info.&port=88&secret=ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d](https://t.me/proxy?server=Strait-of-Hormuz.ir.jursdheks.info.&port=88&secret=ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d)
-[https://t.me/proxy?server=mc-ssh.t-proxyru.info.&port=25565&secret=ee104462821249bd7ac519130220c25d0963646e2e79656b74616e65742e636f6d](https://t.me/proxy?server=mc-ssh.t-proxyru.info.&port=25565&secret=ee104462821249bd7ac519130220c25d0963646e2e79656b74616e65742e636f6d)
-[https://t.me/proxy?server=goo.vingardium.co.uk.&port=8443&secret=7gggggggggggggggggggggh0cmFuc2xhdGUuZ29v](https://t.me/proxy?server=goo.vingardium.co.uk.&port=8443&secret=7gggggggggggggggggggggh0cmFuc2xhdGUuZ29v)
-[https://t.me/proxy?server=wan.asiaadomainsshatelhamrahaval.co.uk.&port=443&secret=7t3_BeZaaaan_RoooooSH_93ZWIuYmFsZS5haQ%3D%3D](https://t.me/proxy?server=wan.asiaadomainsshatelhamrahaval.co.uk.&port=443&secret=7t3_BeZaaaan_RoooooSH_93ZWIuYmFsZS5haQ%3D%3D)
-[https://t.me/proxy?server=fresh.t-proxy.info.&port=25565&secret=ee104462821249bd7ac519130220c25d0963646e2e79656b74616e65742e636f6d](https://t.me/proxy?server=fresh.t-proxy.info.&port=25565&secret=ee104462821249bd7ac519130220c25d0963646e2e79656b74616e65742e636f6d)
-[https://t.me/proxy?server=moh.kingproxynewdomailasiatech.ink&port=25565&secret=FgMBAgABAAH8AxOG4kw63Q](https://t.me/proxy?server=moh.kingproxynewdomailasiatech.ink&port=25565&secret=FgMBAgABAAH8AxOG4kw63Q)
-[https://t.me/proxy?server=openhostings.co.uk.&port=443&secret=eef0eeb0bd9adc4fd4a93994ee3b2a216b63646e2e79656b74616e65742e636f6d](https://t.me/proxy?server=openhostings.co.uk.&port=443&secret=eef0eeb0bd9adc4fd4a93994ee3b2a216b63646e2e79656b74616e65742e636f6d)
-[https://t.me/proxy?server=Just-iraninan.com.the-nice-mtproto.info.&port=88&secret=ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d](https://t.me/proxy?server=Just-iraninan.com.the-nice-mtproto.info.&port=88&secret=ee0000f00f0f775555fffffff5006e2e696d656469612e737465616d706f77657265642e636f6d)
-[https://t.me/proxy?server=login.kerfilia.info&port=6775&secret=eee9a4f23b1d768c04a8d7f39120ca5b6e626973636f7474692e79656b74616e65742e636f6d](https://t.me/proxy?server=login.kerfilia.info&port=6775&secret=eee9a4f23b1d768c04a8d7f39120ca5b6e626973636f7474692e79656b74616e65742e636f6d)
-[@configwireguard](https://t.me/configwireguard)
-
----
-
-### 🕒 2026-06-20 05:08:59 UTC
-> ↪️ **Forwarded**
-
-***🚨***
-[ᑎΞᗯ ᑌᑭᗪᗩTΞ](https://lastest-update.pages.dev/)
-***🚀***
- نسخه جدید منتشر شد برای 
-[**SIMORGH**](https://github.com/rezakhosh78/SIMORGH)
-:
-***✅***
- 
-**SIMORGH v1.1.23.46**
- (v1.1.23.46)
-## 
-***🚀***
- SIMORGH VPN v1.1.23.46
-### 
-***✨***
- Changes compared to v1.1.23.45
-* 
-***🧠***
- Improved **Simple Mode** connection stability
-* 
-***⚡***
- Added safer click handling for the **Simple Connect** button to prevent duplicate connect jobs and random crashes
-* 
-***🛡️***
- Added protection against simultaneous connect/disconnect race conditions
-* 
-***📡***
- Improved **Real Xray Health Test** behavior for Simple configs
-* 
-***🎯***
- Simple Mode now keeps selecting the lowest-ping healthy config more reliably
-* 
-***🔄***
- Improved auto-best selection ...
-(متن کامل در گیت‌هاب)
-***🔗***
- 
-[مشاهده در گیت‌هاب](https://github.com/rezakhosh78/SIMORGH/releases/tag/v1.1.23.46)
-[𓄂𓆃](https://t.me/update_releases)
-
----
-
-### 🕒 2026-06-20 05:05:36 UTC
-> ↪️ **Forwarded**
-
-**🛠️ گام اول: توکن دسترسی کلودفلر (Cloudflare API Token)**
-لطفاً توکن API کلودفلر خود را به صورت پیام متنی ارسال کنید.
-***💡***
- 
-**راهنمای گام به گام دریافت توکن:**
-۱. ابتدا وارد داشبورد کلودفلر شده و به آدرس زیر بروید:
-[https://dash.cloudflare.com/profile/api-tokens](https://dash.cloudflare.com/profile/api-tokens)
-۲. روی دکمه آبی‌رنگ 
-**Create Token**
- کلیک کنید.
-۳. در انتهای صفحه روی دکمه 
-**Create Custom Token**
- کلیک کنید.
-۴. یک نام دلخواه برای توکن بگذارید (مثلاً: 
-`nahan-installer`
-).
-۵. در بخش 
-**Permissions**
-، دسترسی‌های زیر را عینا تنظیم کنید:
-   - 
-`Account`
- ➔ 
-`Workers Scripts`
- ➔ 
-`Edit`
-   - 
-`Account`
- ➔ 
-`D1`
- ➔ 
-`Edit`
-۶. در بخش 
-**Account Resources**
-، گزینه 
-**Include**
- ➔ 
-**All accounts**
- را انتخاب کنید.
-۷. روی دکمه 
-**Continue to summary**
- و سپس 
-**Create Token**
- کلیک کنید.
-۸. توکن تولید شده را کپی کرده و برای من بفرستید.
-*جهت انصراف هر زمان که مایل بودید کلمه **لغو** یا دستور *
-`/cancel`
-* را بفرستید.*
-
----
-
-### 🕒 2026-06-20 05:05:07 UTC
-> ↪️ **Forwarded**
-
-راه‌اندازی و بروزرسانی ساده پنل نهان: 
-***🚀***
-[@itsyebekhebot](https://t.me/itsyebekhebot)
- 
-***🔗***
 
 ---
 
