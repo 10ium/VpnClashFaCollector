@@ -5,46 +5,46 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@Kia_Net`", server: DaSHBoard.mobileatlass.ir, port: 2035, type: vless, tls: true, packet-encoding: xudp, uuid: 76420ede-08de-4869-abeb-ad2d11729386, host: play.google.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Kia_Net تلگرام ❤️`", server: 151.115.166.249, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@Kia_Net`"
+      - "@Kia_Net تلگرام ❤️`"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@Kia_Net`"
+      - "@Kia_Net تلگرام ❤️`"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@Kia_Net`"
+      - "@Kia_Net تلگرام ❤️`"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@Kia_Net`"
+      - "@Kia_Net تلگرام ❤️`"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@Kia_Net`"
+      - "@Kia_Net تلگرام ❤️`"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@Kia_Net`"
+      - "@Kia_Net تلگرام ❤️`"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +72,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@Kia_Net`"
+      - "@Kia_Net تلگرام ❤️`"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
