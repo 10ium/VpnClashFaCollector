@@ -465,7 +465,6 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 144.31.55.35:28126, server: 144.31.55.35, port: 28126, type: trojan, password: oJRk-2+NoHJ3N4frj_O2.0CzT+WAgdcs7b, sni: www.game-bridge.click, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 89.208.113.157:443, server: 89.208.113.157, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 1f4c983e-382c-d2fa-b2dc-7981f02b34de, servername: parisjetaime.com, host: parisjetaime.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 2dgS9vJTywAfGZmlkuzDIIXLUR-E1A-0na8_W--ruUc, short-id: 5be8210215}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -483,7 +482,6 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 144.31.55.35:28126
       - 89.208.113.157:443
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -491,7 +489,6 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - 144.31.55.35:28126
       - 89.208.113.157:443
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -499,7 +496,6 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - 144.31.55.35:28126
       - 89.208.113.157:443
   - name: اتصال پایدار 🔗
     type: url-test
@@ -516,7 +512,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 144.31.55.35:28126
       - 89.208.113.157:443
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -524,7 +519,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 144.31.55.35:28126
       - 89.208.113.157:443
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -532,7 +526,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 144.31.55.35:28126
       - 89.208.113.157:443
   - name: دانلود منیجر 📥
     type: select
