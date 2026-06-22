@@ -465,12 +465,12 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 77.42.33.181:1085, server: 77.42.33.181, port: 1085, type: ss, cipher: chacha20-ietf-poly1305, password: 8baa4ead22db1d7e8fea063b6aefcc73, udp: true, tfo: false}
   - {name: 46.29.163.104:24213, server: 46.29.163.104, port: 24213, type: ss, cipher: aes-256-gcm, password: c5fcdf7829112cb4, udp: true, tfo: false}
   - {name: 83.228.224.161:42549, server: 83.228.224.161, port: 42549, type: trojan, password: SoftNetConnect, sni: www.speedtest.net, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 35.77.34.38:53012, server: 35.77.34.38, port: 53012, type: trojan, password: e0195c73018d597b1c2f0ea89d8676ae, sni: www.nintendogames.net, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 43.198.206.201:48738, server: 43.198.206.201, port: 48738, type: trojan, password: e0195c73018d597b1c2f0ea89d8676ae, sni: www.nintendogames.net, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 144.31.55.35:28126, server: 144.31.55.35, port: 28126, type: trojan, password: oJRk-2+NoHJ3N4frj_O2.0CzT+WAgdcs7b, sni: www.game-bridge.click, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 89.208.113.157:443, server: 89.208.113.157, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 1f4c983e-382c-d2fa-b2dc-7981f02b34de, servername: parisjetaime.com, host: parisjetaime.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 2dgS9vJTywAfGZmlkuzDIIXLUR-E1A-0na8_W--ruUc, short-id: 5be8210215}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 186.246.19.138:40443, server: 186.246.19.138, port: 40443, type: vless, tls: true, packet-encoding: xudp, uuid: 6aa91885-dc17-4d70-a58b-ccc29dd71b04, servername: deepl.com, host: deepl.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: mimJ_uInBYERt8TayjrHu5Kmq4b1ko39G6WD72SUkGw, short-id: 75cf}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 72.56.112.226:40443, server: 72.56.112.226, port: 40443, type: vless, tls: true, packet-encoding: xudp, uuid: 8c158c22-ecaf-441e-8653-91f1a5a4fd15, servername: deepl.com, host: deepl.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: gFP8-P4r8FKkN10b0q1keHgL7jjmUOpY9qPAem_3z34, short-id: 5201}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 150.241.102.175:443, server: 150.241.102.175, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 967064b5-3272-431e-8dce-9519acfb94be, servername: usa.zestful.bond, host: usa.zestful.bond, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: KS0F6q2PTY1s6y2sH5PdrznYqprIkUBtS1masvcrJjo, short-id: 823257b7b9ab9d02}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
@@ -493,12 +493,12 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 77.42.33.181:1085
       - 46.29.163.104:24213
       - 83.228.224.161:42549
       - 35.77.34.38:53012
       - 43.198.206.201:48738
       - 144.31.55.35:28126
+      - 89.208.113.157:443
       - 186.246.19.138:40443
       - 72.56.112.226:40443
       - 150.241.102.175:443
@@ -511,12 +511,12 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - 77.42.33.181:1085
       - 46.29.163.104:24213
       - 83.228.224.161:42549
       - 35.77.34.38:53012
       - 43.198.206.201:48738
       - 144.31.55.35:28126
+      - 89.208.113.157:443
       - 186.246.19.138:40443
       - 72.56.112.226:40443
       - 150.241.102.175:443
@@ -529,12 +529,12 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - 77.42.33.181:1085
       - 46.29.163.104:24213
       - 83.228.224.161:42549
       - 35.77.34.38:53012
       - 43.198.206.201:48738
       - 144.31.55.35:28126
+      - 89.208.113.157:443
       - 186.246.19.138:40443
       - 72.56.112.226:40443
       - 150.241.102.175:443
@@ -556,12 +556,12 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 77.42.33.181:1085
       - 46.29.163.104:24213
       - 83.228.224.161:42549
       - 35.77.34.38:53012
       - 43.198.206.201:48738
       - 144.31.55.35:28126
+      - 89.208.113.157:443
       - 186.246.19.138:40443
       - 72.56.112.226:40443
       - 150.241.102.175:443
@@ -574,12 +574,12 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 77.42.33.181:1085
       - 46.29.163.104:24213
       - 83.228.224.161:42549
       - 35.77.34.38:53012
       - 43.198.206.201:48738
       - 144.31.55.35:28126
+      - 89.208.113.157:443
       - 186.246.19.138:40443
       - 72.56.112.226:40443
       - 150.241.102.175:443
@@ -592,12 +592,12 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 77.42.33.181:1085
       - 46.29.163.104:24213
       - 83.228.224.161:42549
       - 35.77.34.38:53012
       - 43.198.206.201:48738
       - 144.31.55.35:28126
+      - 89.208.113.157:443
       - 186.246.19.138:40443
       - 72.56.112.226:40443
       - 150.241.102.175:443
