@@ -465,8 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@lrnbymaa-join(@lrnbymaa)-40.00GB📊`", server: 54.37.77.112, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 32c10f05-8429-43d6-bbe2-c01e3ff46743, servername: icloud.com, host: icloud.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: yTAgtjK2YbXNvD3P0zoe_Ety36DwOrSaUjpJFKAns3Q, short-id: c42798ab846527b9}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@lrnbymaa…", server: 54.37.77.112, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 32c10f05-8429-43d6-bbe2-c01e3ff46743, servername: icloud.com, host: icloud.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: yTAgtjK2YbXNvD3P0zoe_Ety36DwOrSaUjpJFKAns3Q, short-id: c42798ab846527b9}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Lrnbymaa`, server: 82.38.31.200, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
+  - {name: Lrnbymaa, server: 5.180.173.222, port: 448, type: vless, tls: true, packet-encoding: xudp, uuid: 626b07bd-81c4-4212-be7a-27442a579620, servername: www.googletagmanager.com, host: www.googletagmanager.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: y4_NnPQc2X8Bj97LpUL9r9xuK-R2pLwjd5cZbBw2HSo, short-id: 15052edc8120b63d}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@lrnbymaa-join(@lrnbymaa)-40.00GB📊`"
-      - "@lrnbymaa…"
+      - Lrnbymaa`
+      - Lrnbymaa
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@lrnbymaa-join(@lrnbymaa)-40.00GB📊`"
-      - "@lrnbymaa…"
+      - Lrnbymaa`
+      - Lrnbymaa
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@lrnbymaa-join(@lrnbymaa)-40.00GB📊`"
-      - "@lrnbymaa…"
+      - Lrnbymaa`
+      - Lrnbymaa
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@lrnbymaa-join(@lrnbymaa)-40.00GB📊`"
-      - "@lrnbymaa…"
+      - Lrnbymaa`
+      - Lrnbymaa
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@lrnbymaa-join(@lrnbymaa)-40.00GB📊`"
-      - "@lrnbymaa…"
+      - Lrnbymaa`
+      - Lrnbymaa
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@lrnbymaa-join(@lrnbymaa)-40.00GB📊`"
-      - "@lrnbymaa…"
+      - Lrnbymaa`
+      - Lrnbymaa
   - name: دانلود منیجر 📥
     type: select
     proxies:

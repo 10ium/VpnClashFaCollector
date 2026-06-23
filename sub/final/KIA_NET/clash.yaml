@@ -465,7 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Kia_Net تلگرام ❤️`", server: 151.115.166.249, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇫🇷 [Kia_Net] 🇫🇷 FR-513", server: 152.228.162.19, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 25f86cb1-2140-4085-abcb-c3a0ea7a4be0, network: ws, ws-opts: {path: /vless/}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇫🇷 [Kia_Net] 🇫🇷 FR-489", server: OV-France1.09vpn.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 25f86cb1-2140-4085-abcb-c3a0ea7a4be0, network: ws, ws-opts: {path: /vless/, headers: {Host: OV-France1.09vpn.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇩🇪 [Kia_Net] 🇩🇪 DE-3173", server: 162.19.228.119, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: dc8eccdb-ecfa-435f-9ac1-5dc4882e7b51, network: ws, ws-opts: {path: "/http#Telegram@V2ray_Alpha/?ed=2560", headers: {Host: google.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇩🇪 [Kia_Net] 🇩🇪 DE-3220`", server: de.vpnbase.net, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: dc8eccdb-ecfa-435f-9ac1-5dc4882e7b51, network: ws, ws-opts: {path: /http, headers: {Host: de.vpnbase.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇫🇷 [Kia_Net] 🇫🇷 FR-496", server: OV-France1.09vpn.com, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: f5c47e9c-914a-4a91-a81e-a5a77bc10fc1, network: ws, ws-opts: {path: /vless/, headers: {Host: OV-France1.09vpn.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +486,33 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@Kia_Net تلگرام ❤️`"
+      - 🇫🇷 [Kia_Net] 🇫🇷 FR-513
+      - 🇫🇷 [Kia_Net] 🇫🇷 FR-489
+      - 🇩🇪 [Kia_Net] 🇩🇪 DE-3173
+      - 🇩🇪 [Kia_Net] 🇩🇪 DE-3220`
+      - 🇫🇷 [Kia_Net] 🇫🇷 FR-496
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@Kia_Net تلگرام ❤️`"
+      - 🇫🇷 [Kia_Net] 🇫🇷 FR-513
+      - 🇫🇷 [Kia_Net] 🇫🇷 FR-489
+      - 🇩🇪 [Kia_Net] 🇩🇪 DE-3173
+      - 🇩🇪 [Kia_Net] 🇩🇪 DE-3220`
+      - 🇫🇷 [Kia_Net] 🇫🇷 FR-496
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@Kia_Net تلگرام ❤️`"
+      - 🇫🇷 [Kia_Net] 🇫🇷 FR-513
+      - 🇫🇷 [Kia_Net] 🇫🇷 FR-489
+      - 🇩🇪 [Kia_Net] 🇩🇪 DE-3173
+      - 🇩🇪 [Kia_Net] 🇩🇪 DE-3220`
+      - 🇫🇷 [Kia_Net] 🇫🇷 FR-496
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +528,33 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Kia_Net تلگرام ❤️`"
+      - 🇫🇷 [Kia_Net] 🇫🇷 FR-513
+      - 🇫🇷 [Kia_Net] 🇫🇷 FR-489
+      - 🇩🇪 [Kia_Net] 🇩🇪 DE-3173
+      - 🇩🇪 [Kia_Net] 🇩🇪 DE-3220`
+      - 🇫🇷 [Kia_Net] 🇫🇷 FR-496
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Kia_Net تلگرام ❤️`"
+      - 🇫🇷 [Kia_Net] 🇫🇷 FR-513
+      - 🇫🇷 [Kia_Net] 🇫🇷 FR-489
+      - 🇩🇪 [Kia_Net] 🇩🇪 DE-3173
+      - 🇩🇪 [Kia_Net] 🇩🇪 DE-3220`
+      - 🇫🇷 [Kia_Net] 🇫🇷 FR-496
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Kia_Net تلگرام ❤️`"
+      - 🇫🇷 [Kia_Net] 🇫🇷 FR-513
+      - 🇫🇷 [Kia_Net] 🇫🇷 FR-489
+      - 🇩🇪 [Kia_Net] 🇩🇪 DE-3173
+      - 🇩🇪 [Kia_Net] 🇩🇪 DE-3220`
+      - 🇫🇷 [Kia_Net] 🇫🇷 FR-496
   - name: دانلود منیجر 📥
     type: select
     proxies:
