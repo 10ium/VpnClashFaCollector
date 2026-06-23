@@ -465,7 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 89.208.113.157:443, server: 89.208.113.157, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 1f4c983e-382c-d2fa-b2dc-7981f02b34de, servername: parisjetaime.com, host: parisjetaime.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 2dgS9vJTywAfGZmlkuzDIIXLUR-E1A-0na8_W--ruUc, short-id: 5be8210215}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 5.42.121.174:443, server: 5.42.121.174, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 33de2596-d95d-412b-a8c2-410be7060ca3, servername: sellflow.org, host: sellflow.org, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 81.17.154.131:443, server: 81.17.154.131, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 33de2596-d95d-412b-a8c2-410be7060ca3, servername: sellflow.org, host: sellflow.org, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 89.208.113.157:443
+      - 5.42.121.174:443
+      - 81.17.154.131:443
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 89.208.113.157:443
+      - 5.42.121.174:443
+      - 81.17.154.131:443
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 89.208.113.157:443
+      - 5.42.121.174:443
+      - 81.17.154.131:443
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 89.208.113.157:443
+      - 5.42.121.174:443
+      - 81.17.154.131:443
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 89.208.113.157:443
+      - 5.42.121.174:443
+      - 81.17.154.131:443
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 89.208.113.157:443
+      - 5.42.121.174:443
+      - 81.17.154.131:443
   - name: دانلود منیجر 📥
     type: select
     proxies:
