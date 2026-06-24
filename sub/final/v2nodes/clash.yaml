@@ -465,8 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: 109.73.194.240:443, server: 109.73.194.240, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 33de2596-d95d-412b-a8c2-410be7060ca3, servername: sellflow.org, host: sellflow.org, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 5.42.121.174:443, server: 5.42.121.174, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 33de2596-d95d-412b-a8c2-410be7060ca3, servername: sellflow.org, host: sellflow.org, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 81.17.154.131:443, server: 81.17.154.131, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 33de2596-d95d-412b-a8c2-410be7060ca3, servername: sellflow.org, host: sellflow.org, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 217.195.200.171:44904, server: 217.195.200.171, port: 44904, type: vless, tls: true, packet-encoding: xudp, uuid: b08d0906-8840-4b27-9261-0fe72600de7f, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: fry2.brocollisuper.click:443, server: fry2.brocollisuper.click, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e4468d51-2528-4d40-a92d-5cf409d00dac, servername: fry2.brocollisuper.click, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: grpc-api}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +486,33 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - 109.73.194.240:443
       - 5.42.121.174:443
       - 81.17.154.131:443
+      - 217.195.200.171:44904
+      - fry2.brocollisuper.click:443
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
+      - 109.73.194.240:443
       - 5.42.121.174:443
       - 81.17.154.131:443
+      - 217.195.200.171:44904
+      - fry2.brocollisuper.click:443
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
+      - 109.73.194.240:443
       - 5.42.121.174:443
       - 81.17.154.131:443
+      - 217.195.200.171:44904
+      - fry2.brocollisuper.click:443
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +528,33 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 109.73.194.240:443
       - 5.42.121.174:443
       - 81.17.154.131:443
+      - 217.195.200.171:44904
+      - fry2.brocollisuper.click:443
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 109.73.194.240:443
       - 5.42.121.174:443
       - 81.17.154.131:443
+      - 217.195.200.171:44904
+      - fry2.brocollisuper.click:443
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 109.73.194.240:443
       - 5.42.121.174:443
       - 81.17.154.131:443
+      - 217.195.200.171:44904
+      - fry2.brocollisuper.click:443
   - name: دانلود منیجر 📥
     type: select
     proxies:
