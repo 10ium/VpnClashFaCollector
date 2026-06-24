@@ -6,13 +6,14 @@ log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
   - {name: " ", server: 193.47.60.186, port: 28687, type: ss, cipher: chacha20-ietf-poly1305, password: yKVMoB3AwiTEznpnoq2FYR, udp: true, tfo: false}
-  - {name: "  2", server: 8.209.74.72, port: 20001, type: ss, cipher: chacha20-ietf-poly1305, password: PWpjPo3tqhPN4yRZ, udp: true, tfo: false}
-  - {name: "  3", server: 193.29.139.235, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
-  - {name: "  4", server: 82.38.31.149, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
+  - {name: "  2", server: 82.38.31.149, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
+  - {name: "  3", server: 217.28.48.29, port: 25752, type: vless, tls: true, packet-encoding: xudp, uuid: 27f2ae85-3e15-4a9a-9c71-49ee032e7b26, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "  4", server: 51.158.206.87, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "  5", server: 51.44.16.107, port: 31413, type: vless, tls: true, packet-encoding: xudp, uuid: 5454343b-541b-4c96-8c2a-52e81079d124, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: nMlxwhP34_5wFPscbso_hOfRDmsj9DonMpDSXUrnJR8, short-id: ead3d6f82a9d}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "  6", server: 85.234.114.53, port: 22231, type: vless, tls: true, packet-encoding: xudp, uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8, servername: r1.mizulina.top, host: r1.mizulina.top, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "  7", server: r1.mizulina.top, port: 22231, type: vless, tls: true, packet-encoding: xudp, uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8, servername: r1.mizulina.top, host: r1.mizulina.top, path: /, flow: xtls-rprx-vision-udp443, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "  8", server: 5.254.14.169, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ccdce320-7eef-4815-8edb-c599987c2279, servername: cdn9-40.yahoo.com, host: cdn9-40.yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw, short-id: 0dc0ced5bf4f756c}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "  6", server: 85.208.139.100, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 612c872d-1370-4109-8644-f0755f97e33f, servername: www.samsung.com, host: www.samsung.com, path: /, reality-opts: {public-key: GzOdZG9TCQSrZV7ivcmOq9tKWUf37QnoTxSHf32OfAs, short-id: 16}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "  7", server: 85.234.114.53, port: 22231, type: vless, tls: true, packet-encoding: xudp, uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8, servername: r1.mizulina.top, host: r1.mizulina.top, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "  8", server: r1.mizulina.top, port: 22231, type: vless, tls: true, packet-encoding: xudp, uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8, servername: r1.mizulina.top, host: r1.mizulina.top, path: /, flow: xtls-rprx-vision-udp443, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "  9", server: 5.254.14.169, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ccdce320-7eef-4815-8edb-c599987c2279, servername: cdn9-40.yahoo.com, host: cdn9-40.yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw, short-id: 0dc0ced5bf4f756c}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -27,6 +28,7 @@ proxy-groups:
       - "  6"
       - "  7"
       - "  8"
+      - "  9"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -41,6 +43,7 @@ proxy-groups:
       - "  6"
       - "  7"
       - "  8"
+      - "  9"
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -55,6 +58,7 @@ proxy-groups:
       - "  6"
       - "  7"
       - "  8"
+      - "  9"
   - name: 📲 电报信息
     type: select
     proxies:
@@ -68,6 +72,7 @@ proxy-groups:
       - "  6"
       - "  7"
       - "  8"
+      - "  9"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -81,6 +86,7 @@ proxy-groups:
       - "  6"
       - "  7"
       - "  8"
+      - "  9"
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -94,6 +100,7 @@ proxy-groups:
       - "  6"
       - "  7"
       - "  8"
+      - "  9"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -129,6 +136,7 @@ proxy-groups:
       - "  6"
       - "  7"
       - "  8"
+      - "  9"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
