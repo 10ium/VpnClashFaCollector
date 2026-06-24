@@ -466,8 +466,7 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: "@Capoit`", server: 37.156.44.6, port: 443, type: trojan, password: SoftNetConnect, sni: www.yahoo.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 2", server: lite.abalahrar.ir, port: 41570, type: vless, tls: true, packet-encoding: xudp, uuid: 1b57d4d2-a6d4-4c35-9915-6b1113397bbe, host: lite.abalahrar.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 3", server: 46.33.8.18, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5982d32f-f2e4-4267-a8ad-48492e65344c, servername: filesconvert.org, host: filesconvert.org, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: U_E3xSI6QY_Mj-3zjkB4esvMj0aVvYH6W6oHOR50XBs, short-id: f3c5f072749dcc9c}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 2", server: 46.33.8.18, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5982d32f-f2e4-4267-a8ad-48492e65344c, servername: filesconvert.org, host: filesconvert.org, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: U_E3xSI6QY_Mj-3zjkB4esvMj0aVvYH6W6oHOR50XBs, short-id: f3c5f072749dcc9c}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,7 +485,6 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
-      - "@Capoit` 3"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -495,7 +493,6 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
-      - "@Capoit` 3"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -504,7 +501,6 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
-      - "@Capoit` 3"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -522,7 +518,6 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
-      - "@Capoit` 3"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -531,7 +526,6 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
-      - "@Capoit` 3"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -540,7 +534,6 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
-      - "@Capoit` 3"
   - name: دانلود منیجر 📥
     type: select
     proxies:
