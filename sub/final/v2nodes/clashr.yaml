@@ -5,95 +5,81 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 43.199.31.72:39414, server: 43.199.31.72, port: 39414, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 38.60.168.129:443, server: 38.60.168.129, port: 443, type: trojan, password: Lw_DP4+W.J5K33MD2Jy5zQVuT5n71+=BcD, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 38.60.168.129:443 2, server: 38.60.168.129, port: 443, type: trojan, password: Lw_DP4+W.J5K33MD2Jy5zQVuT5n71+=BcD, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 185.137.157.145:443, server: 185.137.157.145, port: 443, type: trojan, password: dh-Ws-YoJIgTYLZ-A5VljeduVse-vhDl7Q, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 54.250.183.37:10624, server: 54.250.183.37, port: 10624, type: trojan, password: BxceQaOe, sni: t.me%252Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 38.60.136.156:443, server: 38.60.136.156, port: 443, type: trojan, password: hCunaKqdEJDBO+3jCrJUSMevXOw9Q_r4Ey, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 45.77.227.183:443, server: 45.77.227.183, port: 443, type: trojan, password: kflYwtj8VD7Pd4V9ixedIxEDsac4QQXvbP, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 185.137.157.72:443, server: 185.137.157.72, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 55a5044d-5b35-405f-971c-ea7aacaafcb4, servername: www.nvidia.com, host: www.nvidia.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: z6_OFl0jskilOOxkQcUcdQOCS4-LVndwFF9i7kIOPzg, short-id: d23753491eefde7e}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: rezerv18.yunus.guru:443, server: rezerv18.yunus.guru, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a5ea9247-79f3-4655-aece-3fb51e1e669e, servername: rezerv18.yunus.guru, host: rezerv18.yunus.guru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: jLa4bn_ZuTamBSUdxQCJJI1seX1TvPQDKB5u7rzbcG4, short-id: ce92dfd666224477}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 91.98.3.186:55555, server: 91.98.3.186, port: 55555, type: vless, tls: true, packet-encoding: xudp, uuid: d6695105-8e40-4a45-a87e-d3cf561c9fa4, servername: yahoo.com, host: yahoo.com, path: /, reality-opts: {public-key: XPuLE49PtDeixzwOmEHuMFSZexYDTQifZ7s99w5e4QY, short-id: 880eeeef4927eed5}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 43.199.31.72:39414
-      - 38.60.168.129:443
-      - 38.60.168.129:443 2
-      - 185.137.157.145:443
+      - 54.250.183.37:10624
       - 38.60.136.156:443
       - 45.77.227.183:443
       - 185.137.157.72:443
       - rezerv18.yunus.guru:443
+      - 91.98.3.186:55555
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 43.199.31.72:39414
-      - 38.60.168.129:443
-      - 38.60.168.129:443 2
-      - 185.137.157.145:443
+      - 54.250.183.37:10624
       - 38.60.136.156:443
       - 45.77.227.183:443
       - 185.137.157.72:443
       - rezerv18.yunus.guru:443
+      - 91.98.3.186:55555
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 43.199.31.72:39414
-      - 38.60.168.129:443
-      - 38.60.168.129:443 2
-      - 185.137.157.145:443
+      - 54.250.183.37:10624
       - 38.60.136.156:443
       - 45.77.227.183:443
       - 185.137.157.72:443
       - rezerv18.yunus.guru:443
+      - 91.98.3.186:55555
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 43.199.31.72:39414
-      - 38.60.168.129:443
-      - 38.60.168.129:443 2
-      - 185.137.157.145:443
+      - 54.250.183.37:10624
       - 38.60.136.156:443
       - 45.77.227.183:443
       - 185.137.157.72:443
       - rezerv18.yunus.guru:443
+      - 91.98.3.186:55555
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 43.199.31.72:39414
-      - 38.60.168.129:443
-      - 38.60.168.129:443 2
-      - 185.137.157.145:443
+      - 54.250.183.37:10624
       - 38.60.136.156:443
       - 45.77.227.183:443
       - 185.137.157.72:443
       - rezerv18.yunus.guru:443
+      - 91.98.3.186:55555
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 43.199.31.72:39414
-      - 38.60.168.129:443
-      - 38.60.168.129:443 2
-      - 185.137.157.145:443
+      - 54.250.183.37:10624
       - 38.60.136.156:443
       - 45.77.227.183:443
       - 185.137.157.72:443
       - rezerv18.yunus.guru:443
+      - 91.98.3.186:55555
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -121,14 +107,12 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 43.199.31.72:39414
-      - 38.60.168.129:443
-      - 38.60.168.129:443 2
-      - 185.137.157.145:443
+      - 54.250.183.37:10624
       - 38.60.136.156:443
       - 45.77.227.183:443
       - 185.137.157.72:443
       - rezerv18.yunus.guru:443
+      - 91.98.3.186:55555
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

@@ -466,8 +466,9 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: "@Capoit`", server: 151.101.1.242, port: 443, type: trojan, password: MiTiVPN, sni: www.f6r.ir, skip-cert-verify: false, network: ws, ws-opts: {path: /de=mitivpn, headers: {Host: www.f6r.ir}}, udp: true, tfo: false}
+  - {name: "@Capoit` 2", server: 43.169.18.179, port: 443, type: trojan, password: humanity, sni: www.creationlong.org, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org}}, udp: true, tfo: false}
   - {name: "@Capoit", server: 91.107.160.130, port: 33819, type: vless, tls: true, packet-encoding: xudp, uuid: 73eed38e-09ea-4c07-aa95-c53684400d68, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 2", server: 217.217.247.247, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8ca5cbd3-ec16-4728-bedc-2bc0d82f0922, servername: enterprisekitten.com, host: enterprisekitten.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 3", server: 217.217.247.247, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8ca5cbd3-ec16-4728-bedc-2bc0d82f0922, servername: enterprisekitten.com, host: enterprisekitten.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@Capoit 2", server: 2.27.22.238, port: 110, type: vless, tls: true, packet-encoding: xudp, uuid: ecd7aeca-2e37-4761-93e7-7cf4c2ff55bf, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@Capoit 3", server: 45.130.125.114, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: f3b8c2a1-9d4e-4b7f-a6c5-2e8d1f0b4a93, servername: srv75.perfectbulk.info, network: ws, ws-opts: {path: /, headers: {Host: srv75.perfectbulk.info}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
@@ -487,8 +488,9 @@ proxy-groups:
     type: select
     proxies:
       - "@Capoit`"
-      - "@Capoit"
       - "@Capoit` 2"
+      - "@Capoit"
+      - "@Capoit` 3"
       - "@Capoit 2"
       - "@Capoit 3"
   - name: خودکار (بهترین پینگ) 🤖
@@ -498,8 +500,9 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Capoit`"
-      - "@Capoit"
       - "@Capoit` 2"
+      - "@Capoit"
+      - "@Capoit` 3"
       - "@Capoit 2"
       - "@Capoit 3"
   - name: پشتیبان (در صورت قطعی) 🧯
@@ -509,8 +512,9 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Capoit`"
-      - "@Capoit"
       - "@Capoit` 2"
+      - "@Capoit"
+      - "@Capoit` 3"
       - "@Capoit 2"
       - "@Capoit 3"
   - name: اتصال پایدار 🔗
@@ -529,8 +533,9 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit`"
-      - "@Capoit"
       - "@Capoit` 2"
+      - "@Capoit"
+      - "@Capoit` 3"
       - "@Capoit 2"
       - "@Capoit 3"
   - name: توزیع بار (گردشی) 🔁
@@ -540,8 +545,9 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit`"
-      - "@Capoit"
       - "@Capoit` 2"
+      - "@Capoit"
+      - "@Capoit` 3"
       - "@Capoit 2"
       - "@Capoit 3"
   - name: توزیع بار (موقت) ⏳
@@ -551,8 +557,9 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit`"
-      - "@Capoit"
       - "@Capoit` 2"
+      - "@Capoit"
+      - "@Capoit` 3"
       - "@Capoit 2"
       - "@Capoit 3"
   - name: دانلود منیجر 📥
