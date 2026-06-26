@@ -469,9 +469,12 @@ proxies:
   - {name: "@Capoit`", server: 104.16.72.70, port: 443, type: trojan, password: 86957ec0-b213-433b-a43b-51f2175e0ec3, sni: space.byu.id.yxls.eu.cc, skip-cert-verify: false, network: ws, ws-opts: {path: /au-do, headers: {Host: space.byu.id.yxls.eu.cc}}, udp: true, tfo: false}
   - {name: "@Capoit` 2", server: 151.101.110.219, port: 443, type: trojan, password: MiTiVPN, sni: ssl.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: /de=mitivpn, headers: {Host: ssl.fastly.com}}, udp: true, tfo: false}
   - {name: "@Capoit 2", server: 151.101.110.219, port: 443, type: trojan, password: MiTiVPN, sni: ssl.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: /de, headers: {Host: ssl.fastly.com}}, udp: true, tfo: false}
-  - {name: "@Capoit` 3", server: 43.169.18.179, port: 443, type: trojan, password: humanity, sni: www.creationlong.org, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org}}, udp: true, tfo: false}
+  - {name: "@Capoit` 3", server: 104.16.72.70, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 0ac0a6f0-d3f0-47f1-8de4-ce785e515a5c, servername: unnes.ac.id.yxls.eu.cc, network: ws, ws-opts: {path: /ca-cl, headers: {Host: unnes.ac.id.yxls.eu.cc}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@Capoit` 4", server: 104.16.72.70, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 539dccf8-7ad6-4787-bb6c-c416b896ecaf, servername: ssl.myblog.org.tr, alpn: [h3%2Ch2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: ssl.myblog.org.tr}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit 3", server: 104.16.72.70, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 659a9075-d5ab-4fd2-bf34-b37043fae832, servername: nbhhh.mrcool.kdns.fr, network: ws, ws-opts: {path: /proxyip, headers: {Host: nbhhh.mrcool.kdns.fr}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@Capoit` 5", server: 141.193.213.10, port: 2087, type: vless, tls: true, packet-encoding: xudp, uuid: daf13e97-3503-47ef-8318-d6e64c820223, servername: nova-coral-gate-cb56.nova-b3a2de.workers.dev, network: ws, ws-opts: {path: /, headers: {Host: nova-coral-gate-cb56.nova-b3a2de.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit 4", server: 5.199.170.105, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fd47216b-4217-4ec1-85b9-98304634a391, servername: amd.com, host: amd.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: xFUmqmEPEKyv-5ReppEM1oTkc04HQcBUfySH-EwPBlE, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit 5", server: 5.199.170.105, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fd47216b-4217-4ec1-85b9-98304634a391, servername: amd.com, host: amd.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: xFUmqmEPEKyv-5ReppEM1oTkc04HQcBUfySH-EwPBlE, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -494,7 +497,10 @@ proxy-groups:
       - "@Capoit 2"
       - "@Capoit` 3"
       - "@Capoit` 4"
+      - "@Capoit 3"
       - "@Capoit` 5"
+      - "@Capoit 4"
+      - "@Capoit 5"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -507,7 +513,10 @@ proxy-groups:
       - "@Capoit 2"
       - "@Capoit` 3"
       - "@Capoit` 4"
+      - "@Capoit 3"
       - "@Capoit` 5"
+      - "@Capoit 4"
+      - "@Capoit 5"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -520,7 +529,10 @@ proxy-groups:
       - "@Capoit 2"
       - "@Capoit` 3"
       - "@Capoit` 4"
+      - "@Capoit 3"
       - "@Capoit` 5"
+      - "@Capoit 4"
+      - "@Capoit 5"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -542,7 +554,10 @@ proxy-groups:
       - "@Capoit 2"
       - "@Capoit` 3"
       - "@Capoit` 4"
+      - "@Capoit 3"
       - "@Capoit` 5"
+      - "@Capoit 4"
+      - "@Capoit 5"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -555,7 +570,10 @@ proxy-groups:
       - "@Capoit 2"
       - "@Capoit` 3"
       - "@Capoit` 4"
+      - "@Capoit 3"
       - "@Capoit` 5"
+      - "@Capoit 4"
+      - "@Capoit 5"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -568,7 +586,10 @@ proxy-groups:
       - "@Capoit 2"
       - "@Capoit` 3"
       - "@Capoit` 4"
+      - "@Capoit 3"
       - "@Capoit` 5"
+      - "@Capoit 4"
+      - "@Capoit 5"
   - name: دانلود منیجر 📥
     type: select
     proxies:

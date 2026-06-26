@@ -465,13 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "CH: @antimeli", server: 98.71.82.228, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 1JHsI7fA3wFUiarJ, udp: true, tfo: false}
-  - {name: "CH: @antimeli 2", server: 165.215.250.14, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true, tfo: false}
-  - {name: "CH: @antimeli`", server: 188.114.97.6, port: 443, type: trojan, password: humanity, sni: www.calmloud.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmloud.com}}, udp: true, tfo: false}
-  - {name: "CH: @antimeli 3", server: 46.229.243.133, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 931729a8-3c20-4841-89a1-f18dc9ce0a6f, servername: cdn3-87.vk-cdnvideo.com, host: cdn3-87.vk-cdnvideo.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "CH: @antimeli 4", server: 46.229.243.75, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 931729a8-3c20-4841-89a1-f18dc9ce0a6f, servername: cdn7-39.vk-cdnvideo.com, host: cdn7-39.vk-cdnvideo.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "CH: @antimeli 5", server: 77.74.123.163, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 931729a8-3c20-4841-89a1-f18dc9ce0a6f, servername: cdn3-87.vk-cdnvideo.com, host: cdn3-87.vk-cdnvideo.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "CH: @antimeli 6", server: 141.193.213.11, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fc965ad9-bdd7-4815-ad71-b39ec5972dc1, servername: octopusss4.com, network: ws, ws-opts: {path: /tsghdws, headers: {Host: octopusss4.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "CH: @antimeli`", server: 93.114.98.241, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 39eb6d15-e27a-4f2e-b865-b49a15b2d5f6, servername: play.google.com, host: play.google.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: B_wBq5f4zAcNXK2nvrsOOV1Fz3Vb_I6VBV_VlNg7emA, short-id: 3026393990dbc6c9}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "CH: @antimeli", server: hm.khoycityman.ir, port: 57176, type: vless, tls: true, packet-encoding: xudp, uuid: 6e6af208-ed09-4051-8a18-e44f7bef2a55, servername: www.yahoo.com, host: www.yahoo.com, path: /, reality-opts: {public-key: 0SiYe8YXJTlWr6n0f2nSSGngDeW2riD_fxHWIH-SEUI, short-id: b8}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -488,39 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "CH: @antimeli"
-      - "CH: @antimeli 2"
       - "CH: @antimeli`"
-      - "CH: @antimeli 3"
-      - "CH: @antimeli 4"
-      - "CH: @antimeli 5"
-      - "CH: @antimeli 6"
+      - "CH: @antimeli"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "CH: @antimeli"
-      - "CH: @antimeli 2"
       - "CH: @antimeli`"
-      - "CH: @antimeli 3"
-      - "CH: @antimeli 4"
-      - "CH: @antimeli 5"
-      - "CH: @antimeli 6"
+      - "CH: @antimeli"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "CH: @antimeli"
-      - "CH: @antimeli 2"
       - "CH: @antimeli`"
-      - "CH: @antimeli 3"
-      - "CH: @antimeli 4"
-      - "CH: @antimeli 5"
-      - "CH: @antimeli 6"
+      - "CH: @antimeli"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -536,39 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "CH: @antimeli"
-      - "CH: @antimeli 2"
       - "CH: @antimeli`"
-      - "CH: @antimeli 3"
-      - "CH: @antimeli 4"
-      - "CH: @antimeli 5"
-      - "CH: @antimeli 6"
+      - "CH: @antimeli"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "CH: @antimeli"
-      - "CH: @antimeli 2"
       - "CH: @antimeli`"
-      - "CH: @antimeli 3"
-      - "CH: @antimeli 4"
-      - "CH: @antimeli 5"
-      - "CH: @antimeli 6"
+      - "CH: @antimeli"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "CH: @antimeli"
-      - "CH: @antimeli 2"
       - "CH: @antimeli`"
-      - "CH: @antimeli 3"
-      - "CH: @antimeli 4"
-      - "CH: @antimeli 5"
-      - "CH: @antimeli 6"
+      - "CH: @antimeli"
   - name: دانلود منیجر 📥
     type: select
     proxies:

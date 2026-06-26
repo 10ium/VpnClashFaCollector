@@ -6,9 +6,10 @@ log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
   - {name: 104.156.233.234:27116, server: 104.156.233.234, port: 27116, type: ss, cipher: chacha20-ietf-poly1305, password: bIOoi5TuImG2KccxV7-jcA7Cez+vun-c_E, udp: true, tfo: false}
-  - {name: 54.250.183.37:10624, server: 54.250.183.37, port: 10624, type: trojan, password: BxceQaOe, sni: t.me%252Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 85.198.9.136:443, server: 85.198.9.136, port: 443, type: ss, cipher: aes-256-gcm, password: p+sslTvPR5jUuECZwjaTLZiImJPTnc/Bt4n7c+h1vyg=, udp: true, tfo: false}
   - {name: 38.60.220.65:443, server: 38.60.220.65, port: 443, type: trojan, password: t5FsyeQXkNCY6eVGiqBXmPu4..jBEpNbak, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 91.98.3.186:55555, server: 91.98.3.186, port: 55555, type: vless, tls: true, packet-encoding: xudp, uuid: d6695105-8e40-4a45-a87e-d3cf561c9fa4, servername: yahoo.com, host: yahoo.com, path: /, reality-opts: {public-key: XPuLE49PtDeixzwOmEHuMFSZexYDTQifZ7s99w5e4QY, short-id: 880eeeef4927eed5}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 82.202.177.144:5269, server: 82.202.177.144, port: 5269, type: vless, tls: true, packet-encoding: xudp, uuid: 083471bf-bbf4-4e1d-8953-912b8d3b6255, servername: max.ru, host: max.ru, path: /, reality-opts: {public-key: hx1gkWBL2ixtwQSGXEvLT1Yz8GBsCFWriz_WLzLQNHQ, short-id: 4eb166dbed98e63d}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 185.94.29.67:2048, server: 185.94.29.67, port: 2048, type: vless, tls: true, packet-encoding: xudp, uuid: 5b9fbae6-4aef-4282-b14d-3ebdb19d532c, network: ws, ws-opts: {path: /, headers: {Host: ads.x5.ru}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -16,9 +17,10 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - 104.156.233.234:27116
-      - 54.250.183.37:10624
+      - 85.198.9.136:443
       - 38.60.220.65:443
-      - 91.98.3.186:55555
+      - 82.202.177.144:5269
+      - 185.94.29.67:2048
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -26,9 +28,10 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 104.156.233.234:27116
-      - 54.250.183.37:10624
+      - 85.198.9.136:443
       - 38.60.220.65:443
-      - 91.98.3.186:55555
+      - 82.202.177.144:5269
+      - 185.94.29.67:2048
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -36,36 +39,40 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - 104.156.233.234:27116
-      - 54.250.183.37:10624
+      - 85.198.9.136:443
       - 38.60.220.65:443
-      - 91.98.3.186:55555
+      - 82.202.177.144:5269
+      - 185.94.29.67:2048
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - 104.156.233.234:27116
-      - 54.250.183.37:10624
+      - 85.198.9.136:443
       - 38.60.220.65:443
-      - 91.98.3.186:55555
+      - 82.202.177.144:5269
+      - 185.94.29.67:2048
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - 104.156.233.234:27116
-      - 54.250.183.37:10624
+      - 85.198.9.136:443
       - 38.60.220.65:443
-      - 91.98.3.186:55555
+      - 82.202.177.144:5269
+      - 185.94.29.67:2048
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - 104.156.233.234:27116
-      - 54.250.183.37:10624
+      - 85.198.9.136:443
       - 38.60.220.65:443
-      - 91.98.3.186:55555
+      - 82.202.177.144:5269
+      - 185.94.29.67:2048
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -94,9 +101,10 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - 104.156.233.234:27116
-      - 54.250.183.37:10624
+      - 85.198.9.136:443
       - 38.60.220.65:443
-      - 91.98.3.186:55555
+      - 82.202.177.144:5269
+      - 185.94.29.67:2048
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
