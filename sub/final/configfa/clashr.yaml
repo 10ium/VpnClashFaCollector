@@ -5,326 +5,291 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@vasl_bashim [18]`", server: 61.171.92.202, port: 1001, type: ss, cipher: aes-256-gcm, password: !<str> 123, udp: true, tfo: false}
-  - {name: "@vasl_bashim [17]`", server: 54.250.183.37, port: 10624, type: trojan, password: BxceQaOe, sni: t.me%252Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@MARAMBASHI 💟", server: 151.101.1.242, port: 443, type: trojan, password: MiTiVPN, sni: www.f6r.ir, skip-cert-verify: false, network: ws, ws-opts: {path: /de=mitivpn, headers: {Host: www.f6r.ir}}, udp: true, tfo: false}
-  - {name: "@vasl_bashim [9]`", server: 151.101.1.242, port: 443, type: trojan, password: MiTiVPN, sni: www.f6r.ir, skip-cert-verify: false, network: ws, ws-opts: {path: /de=mitivpn, headers: {Host: www.f6r.ir}}, udp: true, tfo: false}
-  - {name: "@MARAMBASHI 💟 2", server: 151.101.110.219, port: 443, type: trojan, password: MiTiVPN, sni: ssl.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: /de=mitivpn, headers: {Host: ssl.fastly.com}}, udp: true, tfo: false}
-  - {name: "@vasl_bashim [11]`", server: 151.101.110.219, port: 443, type: trojan, password: MiTiVPN, sni: ssl.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: /de=mitivpn, headers: {Host: ssl.fastly.com}}, udp: true, tfo: false}
-  - {name: "@vasl_bashim [4]`", server: 151.101.193.242, port: 443, type: trojan, password: MiTiVPN, sni: f6r.ir, skip-cert-verify: false, network: ws, ws-opts: {path: /usa=mitivpn, headers: {Host: f6r.ir}}, udp: true, tfo: false}
-  - {name: "@vasl_bashim [12]`", server: 167.82.101.251, port: 443, type: trojan, password: MiTiVPN, sni: default.ssl.fastly.net, skip-cert-verify: false, network: ws, ws-opts: {path: /nl, headers: {Host: default.ssl.fastly.net}}, udp: true, tfo: false}
-  - {name: "@vasl_bashim [6]`", server: 172.66.47.69, port: 443, type: trojan, password: MiTiVPN, sni: f6r.ir, skip-cert-verify: false, network: ws, ws-opts: {path: /de=mitivpn, headers: {Host: f6r.ir}}, udp: true, tfo: false}
-  - {name: "@vasl_bashim [10]`", server: 45.131.4.118, port: 443, type: trojan, password: MiTiVPN, sni: f6r.ir, skip-cert-verify: false, network: ws, ws-opts: {path: /usa=mitivpn, headers: {Host: f6r.ir}}, udp: true, tfo: false}
-  - {name: "@MARAMBASHI 💟 3", server: 89.116.180.49, port: 443, type: trojan, password: MiTiVPN, sni: f6r.ir, skip-cert-verify: false, network: ws, ws-opts: {path: /nl=mitivpn, headers: {Host: f6r.ir}}, udp: true, tfo: false}
-  - {name: "@vasl_bashim [5]`", server: 89.116.180.49, port: 443, type: trojan, password: MiTiVPN, sni: f6r.ir, skip-cert-verify: false, network: ws, ws-opts: {path: /nl=mitivpn, headers: {Host: f6r.ir}}, udp: true, tfo: false}
-  - {name: "@vasl_bashim [8]`", server: 64.225.72.24, port: 443, type: trojan, password: fs9rozbqca2shhlq, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim [13]`", server: 216.24.57.1, port: 443, type: trojan, password: humanity, sni: www.gossipglove.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.gossipglove.com}}, udp: true, tfo: false}
-  - {name: PUBLIC 2`, server: 45.130.125.2, port: 443, type: trojan, password: humanity, sni: Www.cReaTIOnLONG.OrG, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: Www.cReaTIOnLONG.OrG}}, udp: true, tfo: false}
-  - {name: V2RAYENGLISH@⭐`, server: 92.119.35.87, port: 443, type: trojan, password: urhj8z8R8nBovrNsYzXhL35jLGC5ruguRh, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@MARAMBASHI 💟`", server: 167.82.0.1, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 0058c215-ab1e-400c-a403-b5b2fda7e846, network: ws, ws-opts: {path: "/?TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=512", headers: {Host: max-gb1.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim [15]`", server: 199.232.245.208, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 0cc72cd6-29b2-4dcc-af4d-2907d19a0680, servername: default.ssl.fastly.net, network: ws, ws-opts: {path: /, headers: {Host: default.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ☀️tel:@varkana0`, server: bypass.fr-gt-01.com, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 356ccb34-22cc-4446-a137-072bc60d65ca, servername: storage.yandex.net, host: storage.yandex.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1oUeBtHH4DskTM_jCh-6enWRkFMDX9l1OU5kWYl4kxA, short-id: f34818a561dfd1fe}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ☀️tel:@varkana0` 2, server: lv.faygo.bot, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8ca5cbd3-ec16-4728-bedc-2bc0d82f0922, servername: enterprisekitten.com, host: enterprisekitten.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: V2RAYENGLISH@💎, server: sca23.myfymain.com, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim [16]`", server: 37.152.190.242, port: 49194, type: vless, tls: true, packet-encoding: xudp, uuid: a1667f69-6ef0-4f4c-a4e6-3fe555d6da71, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim [1]`", server: 37.49.224.32, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a5f3e5f5-ffa4-43dd-84b6-20aedd1a843e, servername: dev.max.ru, host: dev.max.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: QWxSKVguwUnPvmYaOR4DvxpmVxCJfPEaipbjdAfAbG4, short-id: c338fe2b01cf271a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim [2]`", server: 37.49.224.32, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a5f3e5f5-ffa4-43dd-84b6-20aedd1a843e, servername: dev.max.ru, host: dev.max.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: QWxSKVguwUnPvmYaOR4DvxpmVxCJfPEaipbjdAfAbG4, short-id: c338fe2b01cf271a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ☀️tel:@varkana0` 3, server: 38.54.45.184, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: afcac633-0e1a-46c3-bef2-cc01cc0097c8, servername: r1.mizulina.top, host: r1.mizulina.top, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@MARAMBASHI ❤️‍🔥", server: 209.127.228.114, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d205ae68-0819-473c-b425-6c5947ac2f8d, servername: cars.morro-settings.ru, host: cars.morro-settings.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 8vqOvJ5eoG_9oHla4B3Vh1E-o39RrCXW6Wr7OcXZGmI, short-id: dd}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: V2RAYENGLISH@🔥, server: 162.19.228.119, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: dc8eccdb-ecfa-435f-9ac1-5dc4882e7b51, network: ws, ws-opts: {path: /http, headers: {Host: de.vpnbase.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ☀️tel:@varkana0` 4, server: free.qelzino.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: def62c86-e2f2-4d13-b1f1-b3c197ed4873, servername: play.google.com, network: ws, ws-opts: {path: /, headers: {Host: play.google.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ☀️tel:@varkana0` 5, server: 135.84.73.140, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: f9255507-1b65-433f-bfd8-193b35e068e2, network: ws, ws-opts: {path: Telegram🇨🇳+@WangCai2, headers: {Host: s5.868001.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ☀️tel:@varkana0` 6, server: 154.83.2.140, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: f9255507-1b65-433f-bfd8-193b35e068e2, network: ws, ws-opts: {path: Telegram🇨🇳+@WangCai2, headers: {Host: s5.868001.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ☀️tel:@varkana0` 7, server: 154.83.2.140, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: f9255507-1b65-433f-bfd8-193b35e068e2, network: ws, ws-opts: {path: Telegram🇨🇳 @WangCai2, headers: {Host: s5.868001.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ☀️tel:@varkana0` 8, server: 167.68.5.140, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: f9255507-1b65-433f-bfd8-193b35e068e2, network: ws, ws-opts: {path: /Telegram🇨🇳 @WangCai2, headers: {Host: s5.868001.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ☀️tel:@varkana0` 9, server: 185.176.26.140, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: f9255507-1b65-433f-bfd8-193b35e068e2, network: ws, ws-opts: {path: Telegram🇨🇳 @WangCai2, headers: {Host: s5.868001.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ☀️tel:@varkana0` 10, server: 185.193.28.140, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: f9255507-1b65-433f-bfd8-193b35e068e2, network: ws, ws-opts: {path: Telegram🇨🇳+@WangCai2, headers: {Host: s5.868001.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ☀️tel:@varkana0` 11, server: 185.207.196.140, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: f9255507-1b65-433f-bfd8-193b35e068e2, network: ws, ws-opts: {path: Telegram🇨🇳 @WangCai2, headers: {Host: s5.868001.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ☀️tel:@varkana0` 12, server: 198.177.57.140, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: f9255507-1b65-433f-bfd8-193b35e068e2, network: ws, ws-opts: {path: /Telegram🇨🇳+@WangCai2, headers: {Host: s5.868001.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ☀️tel:@varkana0` 13, server: 45.40.144.140, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: f9255507-1b65-433f-bfd8-193b35e068e2, network: ws, ws-opts: {path: /Telegram🇨🇳+@WangCai2, headers: {Host: s5.868001.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ☀️tel:@varkana0` 14, server: 45.40.148.140, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: f9255507-1b65-433f-bfd8-193b35e068e2, network: ws, ws-opts: {path: Telegram🇨🇳 @WangCai2, headers: {Host: s5.868001.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ☀️tel:@varkana0` 15, server: 45.40.150.140, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: f9255507-1b65-433f-bfd8-193b35e068e2, network: ws, ws-opts: {path: /Telegram+@WangCai2, headers: {Host: s5.868001.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ☀️tel:@varkana0` 16, server: 74.49.214.140, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: f9255507-1b65-433f-bfd8-193b35e068e2, network: ws, ws-opts: {path: /Telegram+@WangCai2, headers: {Host: s5.868001.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ☀️tel:@varkana0` 17, server: 94.247.142.140, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: f9255507-1b65-433f-bfd8-193b35e068e2, network: ws, ws-opts: {path: Telegram🇨🇳 @WangCai2, headers: {Host: s5.868001.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim [8]`", server: 20.166.126.19, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: Z6myLjn9ZqrCvo4j, udp: true, tfo: false}
+  - {name: "@vasl_bashim [20]`", server: 61.171.92.202, port: 1001, type: ss, cipher: aes-256-gcm, password: !<str> 123, udp: true, tfo: false}
+  - {name: "@MiTiVPN - Ultra 🇩🇪", server: 164.38.155.135, port: 443, type: trojan, password: MITIVPN, sni: 95r.ir, skip-cert-verify: false, network: ws, ws-opts: {path: /MiTiVPN=De, headers: {Host: 95r.ir}}, udp: true, tfo: false}
+  - {name: "@speedsclub - mqx 🇩🇪`", server: 164.38.155.135, port: 443, type: trojan, password: MITIVPN, sni: 95r.ir, skip-cert-verify: false, network: ws, ws-opts: {path: /MiTiVPN=De, headers: {Host: 95r.ir}}, udp: true, tfo: false}
+  - {name: "@MiTiVPN - Ultra 🇺🇲", server: 94.140.0.100, port: 443, type: trojan, password: MITIVPN, sni: 95r.ir, skip-cert-verify: false, network: ws, ws-opts: {path: /MiTiVPN=Usa, headers: {Host: 95r.ir}}, udp: true, tfo: false}
+  - {name: "@speedsclub - max 🇺🇲`", server: 94.140.0.100, port: 443, type: trojan, password: MITIVPN, sni: 95r.ir, skip-cert-verify: false, network: ws, ws-opts: {path: /MiTiVPN=Usa, headers: {Host: 95r.ir}}, udp: true, tfo: false}
+  - {name: "@MiTiVPN - Ultra 🇫🇮", server: 199.181.197.176, port: 443, type: trojan, password: MiTiVPN, sni: 95r.ir, skip-cert-verify: false, network: ws, ws-opts: {path: /MiTiVPN=fL, headers: {Host: 95r.ir}}, udp: true, tfo: false}
+  - {name: "@MiTiVPN - Ultra 🇫🇮`", server: 199.181.197.176, port: 443, type: trojan, password: MiTiVPN, sni: 95r.ir, skip-cert-verify: false, network: ws, ws-opts: {path: /MiTiVPN=fL, headers: {Host: 95r.ir}}, udp: true, tfo: false}
+  - {name: "@speedsclub - max 🇫🇮`", server: 199.181.197.176, port: 443, type: trojan, password: MiTiVPN, sni: 95r.ir, skip-cert-verify: false, network: ws, ws-opts: {path: /MiTiVPN=fL, headers: {Host: 95r.ir}}, udp: true, tfo: false}
+  - {name: "@MiTiVPN - Ultra 🇸🇪", server: 45.131.4.118, port: 443, type: trojan, password: MiTiVPN, sni: 95r.ir, skip-cert-verify: false, network: ws, ws-opts: {path: /MiTiVPN=Se, headers: {Host: 95r.ir}}, udp: true, tfo: false}
+  - {name: "@speedsclub - max 🇸🇪`", server: 45.131.4.118, port: 443, type: trojan, password: MiTiVPN, sni: 95r.ir, skip-cert-verify: false, network: ws, ws-opts: {path: /MiTiVPN=Se, headers: {Host: 95r.ir}}, udp: true, tfo: false}
+  - {name: "@MiTiVPN - Ultra 🇳🇱", server: 91.193.58.201, port: 443, type: trojan, password: MiTiVPN, sni: 95r.ir, skip-cert-verify: false, network: ws, ws-opts: {path: /MiTiVPN=NL, headers: {Host: 95r.ir}}, udp: true, tfo: false}
+  - {name: "@speedsclub - max 🇳🇱`", server: 91.193.58.201, port: 443, type: trojan, password: MiTiVPN, sni: 95r.ir, skip-cert-verify: false, network: ws, ws-opts: {path: /MiTiVPN=NL, headers: {Host: 95r.ir}}, udp: true, tfo: false}
+  - {name: "@MiTiVPN -  3🇩🇪", server: 151.101.0.0, port: 80, type: trojan, password: Mitivpn, skip-cert-verify: false, network: ws, ws-opts: {path: /ed=mitivpn}, udp: true, tfo: false}
+  - {name: "@vasl_bashim [10]`", server: 151.101.110.219, port: 443, type: trojan, password: Mitivpn, sni: ssl.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: /boost, headers: {Host: ssl.fastly.com}}, udp: true, tfo: false}
+  - {name: "@MiTiVPN -  2🇩🇪", server: 151.101.110.219, port: 443, type: trojan, password: Mitivpn, sni: global.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: /de=mitivpn, headers: {Host: global.fastly.com}}, udp: true, tfo: false}
+  - {name: "@vasl_bashim [12]`", server: 151.101.110.219, port: 443, type: trojan, password: Mitivpn, sni: global.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: /de=mitivpn, headers: {Host: global.fastly.com}}, udp: true, tfo: false}
+  - {name: "@MiTiVPN -  4🇩🇪", server: 151.101.242.172, port: 80, type: trojan, password: Mitivpn, skip-cert-verify: false, network: ws, ws-opts: {path: /ed=mitivpn}, udp: true, tfo: false}
+  - {name: "@vasl_bashim [1]`", server: 151.101.56.6, port: 443, type: trojan, password: Mitivpn, sni: ssl.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: ssl.fastly.com}}, udp: true, tfo: false}
+  - {name: "@MiTiVPN - 1🇩🇪", server: 151.101.56.6, port: 443, type: trojan, password: Mitivpn, sni: ssl.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: /fastly=mitivpn, headers: {Host: ssl.fastly.com}}, udp: true, tfo: false}
+  - {name: "@vasl_bashim [13]`", server: 151.101.56.6, port: 443, type: trojan, password: Mitivpn, sni: ssl.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: /fastly=mitivpn, headers: {Host: ssl.fastly.com}}, udp: true, tfo: false}
+  - {name: "Tel : @V2RAYENGLISH 👈عضو", server: 151.101.56.6, port: 443, type: trojan, password: Mitivpn, sni: ssl.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: /fastly=mitivpn, headers: {Host: ssl.fastly.com}}, udp: true, tfo: false}
+  - {name: "@vasl_bashim [11]`", server: 151.101.56.6, port: 443, type: trojan, password: Mitivpn, sni: ssl.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: /slowdns, headers: {Host: ssl.fastly.com}}, udp: true, tfo: false}
+  - {name: "@vasl_bashim [18]`", server: 216.24.57.1, port: 443, type: trojan, password: humanity, sni: www.calmloud.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmloud.com}}, udp: true, tfo: false}
+  - {name: "@vasl_bashim [4]`", server: 199.232.245.208, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 0cc72cd6-29b2-4dcc-af4d-2907d19a0680, servername: default.ssl.fastly.net, network: ws, ws-opts: {path: /, headers: {Host: default.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim [17]`", server: fbi.gov, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 1c0abb34-4313-4acb-993d-62bf52eace71, servername: c.downloadphysics.ir, network: ws, ws-opts: {path: /, headers: {Host: c.downloadphysics.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim [3]`", server: rvg-production-6b96.up.railway.app, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4e1430eb-93a1-57d2-2663-3677f25941bd, servername: rvg-production-6b96.up.railway.app, alpn: [http%2F1.1], network: ws, ws-opts: {path: /ws/4e1430eb-93a1-57d2-2663-3677f25941bd, headers: {Host: rvg-production-6b96.up.railway.app}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "Tel : @V2RAYENGLISH 👈عضو`", server: 151.115.164.126, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@VPNCUSTOMIZE`", server: 192.71.82.2, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a5c05c1e-aa68-443f-8598-09800244bd4b, servername: kingcloud.biack.ir, alpn: [h3], network: ws, ws-opts: {path: "/LiL?ed=2560", headers: {Host: kingcloud.biack.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: تست دو ساعته, server: 192.71.82.2, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a5c05c1e-aa68-443f-8598-09800244bd4b, servername: kingcloud.biack.ir, alpn: [h3], network: ws, ws-opts: {path: "/LiL?ed=2560", headers: {Host: kingcloud.biack.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ConfigX2ray`, server: 192.71.82.2, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a5c05c1e-aa68-443f-8598-09800244bd4b, servername: kingcloud.biack.ir, alpn: [h3], network: ws, ws-opts: {path: "/LiL?ed=2560", headers: {Host: kingcloud.biack.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim [7]`", server: 104.26.14.85, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575, servername: rubifen.adaspoloandco.com, network: ws, ws-opts: {path: /GOrbEh, headers: {Host: rubifen.adaspoloandco.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim [14]`", server: 188.114.97.4, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575, servername: rubifen.adaspoloandco.com, network: ws, ws-opts: {path: /GOrbEh, headers: {Host: rubifen.adaspoloandco.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim [2]`", server: 167.82.101.251, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d27a232b-de94-4204-9bae-b0c243c6b93c, servername: default.ssl.fastly.net, network: ws, ws-opts: {path: /, headers: {Host: default.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim [9]`", server: love.ns.cloudflare.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e277ac9b-3225-3381-a9fb-3585419f7142, servername: media14.ftmsoft.com, alpn: [http%2F1.1], network: ws, ws-opts: {path: /media14, headers: {Host: media14.ftmsoft.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim [6]`", server: it-zicid.locations-sub.com, port: 6200, type: vless, tls: true, packet-encoding: xudp, uuid: e554afea-76a5-4733-9934-f9d4316d2f9b, servername: play.google.com, host: play.google.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@vasl_bashim [18]`"
-      - "@vasl_bashim [17]`"
-      - "@MARAMBASHI 💟"
-      - "@vasl_bashim [9]`"
-      - "@MARAMBASHI 💟 2"
-      - "@vasl_bashim [11]`"
-      - "@vasl_bashim [4]`"
-      - "@vasl_bashim [12]`"
-      - "@vasl_bashim [6]`"
-      - "@vasl_bashim [10]`"
-      - "@MARAMBASHI 💟 3"
-      - "@vasl_bashim [5]`"
       - "@vasl_bashim [8]`"
-      - "@vasl_bashim [13]`"
-      - PUBLIC 2`
-      - V2RAYENGLISH@⭐`
-      - "@MARAMBASHI 💟`"
-      - "@vasl_bashim [15]`"
-      - ☀️tel:@varkana0`
-      - ☀️tel:@varkana0` 2
-      - V2RAYENGLISH@💎
-      - "@vasl_bashim [16]`"
+      - "@vasl_bashim [20]`"
+      - "@MiTiVPN - Ultra 🇩🇪"
+      - "@speedsclub - mqx 🇩🇪`"
+      - "@MiTiVPN - Ultra 🇺🇲"
+      - "@speedsclub - max 🇺🇲`"
+      - "@MiTiVPN - Ultra 🇫🇮"
+      - "@MiTiVPN - Ultra 🇫🇮`"
+      - "@speedsclub - max 🇫🇮`"
+      - "@MiTiVPN - Ultra 🇸🇪"
+      - "@speedsclub - max 🇸🇪`"
+      - "@MiTiVPN - Ultra 🇳🇱"
+      - "@speedsclub - max 🇳🇱`"
+      - "@MiTiVPN -  3🇩🇪"
+      - "@vasl_bashim [10]`"
+      - "@MiTiVPN -  2🇩🇪"
+      - "@vasl_bashim [12]`"
+      - "@MiTiVPN -  4🇩🇪"
       - "@vasl_bashim [1]`"
+      - "@MiTiVPN - 1🇩🇪"
+      - "@vasl_bashim [13]`"
+      - "Tel : @V2RAYENGLISH 👈عضو"
+      - "@vasl_bashim [11]`"
+      - "@vasl_bashim [18]`"
+      - "@vasl_bashim [4]`"
+      - "@vasl_bashim [17]`"
+      - "@vasl_bashim [3]`"
+      - "Tel : @V2RAYENGLISH 👈عضو`"
+      - "@VPNCUSTOMIZE`"
+      - تست دو ساعته
+      - ConfigX2ray`
+      - "@vasl_bashim [7]`"
+      - "@vasl_bashim [14]`"
       - "@vasl_bashim [2]`"
-      - ☀️tel:@varkana0` 3
-      - "@MARAMBASHI ❤️‍🔥"
-      - V2RAYENGLISH@🔥
-      - ☀️tel:@varkana0` 4
-      - ☀️tel:@varkana0` 5
-      - ☀️tel:@varkana0` 6
-      - ☀️tel:@varkana0` 7
-      - ☀️tel:@varkana0` 8
-      - ☀️tel:@varkana0` 9
-      - ☀️tel:@varkana0` 10
-      - ☀️tel:@varkana0` 11
-      - ☀️tel:@varkana0` 12
-      - ☀️tel:@varkana0` 13
-      - ☀️tel:@varkana0` 14
-      - ☀️tel:@varkana0` 15
-      - ☀️tel:@varkana0` 16
-      - ☀️tel:@varkana0` 17
+      - "@vasl_bashim [9]`"
+      - "@vasl_bashim [6]`"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@vasl_bashim [18]`"
-      - "@vasl_bashim [17]`"
-      - "@MARAMBASHI 💟"
-      - "@vasl_bashim [9]`"
-      - "@MARAMBASHI 💟 2"
-      - "@vasl_bashim [11]`"
-      - "@vasl_bashim [4]`"
-      - "@vasl_bashim [12]`"
-      - "@vasl_bashim [6]`"
-      - "@vasl_bashim [10]`"
-      - "@MARAMBASHI 💟 3"
-      - "@vasl_bashim [5]`"
       - "@vasl_bashim [8]`"
-      - "@vasl_bashim [13]`"
-      - PUBLIC 2`
-      - V2RAYENGLISH@⭐`
-      - "@MARAMBASHI 💟`"
-      - "@vasl_bashim [15]`"
-      - ☀️tel:@varkana0`
-      - ☀️tel:@varkana0` 2
-      - V2RAYENGLISH@💎
-      - "@vasl_bashim [16]`"
+      - "@vasl_bashim [20]`"
+      - "@MiTiVPN - Ultra 🇩🇪"
+      - "@speedsclub - mqx 🇩🇪`"
+      - "@MiTiVPN - Ultra 🇺🇲"
+      - "@speedsclub - max 🇺🇲`"
+      - "@MiTiVPN - Ultra 🇫🇮"
+      - "@MiTiVPN - Ultra 🇫🇮`"
+      - "@speedsclub - max 🇫🇮`"
+      - "@MiTiVPN - Ultra 🇸🇪"
+      - "@speedsclub - max 🇸🇪`"
+      - "@MiTiVPN - Ultra 🇳🇱"
+      - "@speedsclub - max 🇳🇱`"
+      - "@MiTiVPN -  3🇩🇪"
+      - "@vasl_bashim [10]`"
+      - "@MiTiVPN -  2🇩🇪"
+      - "@vasl_bashim [12]`"
+      - "@MiTiVPN -  4🇩🇪"
       - "@vasl_bashim [1]`"
+      - "@MiTiVPN - 1🇩🇪"
+      - "@vasl_bashim [13]`"
+      - "Tel : @V2RAYENGLISH 👈عضو"
+      - "@vasl_bashim [11]`"
+      - "@vasl_bashim [18]`"
+      - "@vasl_bashim [4]`"
+      - "@vasl_bashim [17]`"
+      - "@vasl_bashim [3]`"
+      - "Tel : @V2RAYENGLISH 👈عضو`"
+      - "@VPNCUSTOMIZE`"
+      - تست دو ساعته
+      - ConfigX2ray`
+      - "@vasl_bashim [7]`"
+      - "@vasl_bashim [14]`"
       - "@vasl_bashim [2]`"
-      - ☀️tel:@varkana0` 3
-      - "@MARAMBASHI ❤️‍🔥"
-      - V2RAYENGLISH@🔥
-      - ☀️tel:@varkana0` 4
-      - ☀️tel:@varkana0` 5
-      - ☀️tel:@varkana0` 6
-      - ☀️tel:@varkana0` 7
-      - ☀️tel:@varkana0` 8
-      - ☀️tel:@varkana0` 9
-      - ☀️tel:@varkana0` 10
-      - ☀️tel:@varkana0` 11
-      - ☀️tel:@varkana0` 12
-      - ☀️tel:@varkana0` 13
-      - ☀️tel:@varkana0` 14
-      - ☀️tel:@varkana0` 15
-      - ☀️tel:@varkana0` 16
-      - ☀️tel:@varkana0` 17
+      - "@vasl_bashim [9]`"
+      - "@vasl_bashim [6]`"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@vasl_bashim [18]`"
-      - "@vasl_bashim [17]`"
-      - "@MARAMBASHI 💟"
-      - "@vasl_bashim [9]`"
-      - "@MARAMBASHI 💟 2"
-      - "@vasl_bashim [11]`"
-      - "@vasl_bashim [4]`"
-      - "@vasl_bashim [12]`"
-      - "@vasl_bashim [6]`"
-      - "@vasl_bashim [10]`"
-      - "@MARAMBASHI 💟 3"
-      - "@vasl_bashim [5]`"
       - "@vasl_bashim [8]`"
-      - "@vasl_bashim [13]`"
-      - PUBLIC 2`
-      - V2RAYENGLISH@⭐`
-      - "@MARAMBASHI 💟`"
-      - "@vasl_bashim [15]`"
-      - ☀️tel:@varkana0`
-      - ☀️tel:@varkana0` 2
-      - V2RAYENGLISH@💎
-      - "@vasl_bashim [16]`"
+      - "@vasl_bashim [20]`"
+      - "@MiTiVPN - Ultra 🇩🇪"
+      - "@speedsclub - mqx 🇩🇪`"
+      - "@MiTiVPN - Ultra 🇺🇲"
+      - "@speedsclub - max 🇺🇲`"
+      - "@MiTiVPN - Ultra 🇫🇮"
+      - "@MiTiVPN - Ultra 🇫🇮`"
+      - "@speedsclub - max 🇫🇮`"
+      - "@MiTiVPN - Ultra 🇸🇪"
+      - "@speedsclub - max 🇸🇪`"
+      - "@MiTiVPN - Ultra 🇳🇱"
+      - "@speedsclub - max 🇳🇱`"
+      - "@MiTiVPN -  3🇩🇪"
+      - "@vasl_bashim [10]`"
+      - "@MiTiVPN -  2🇩🇪"
+      - "@vasl_bashim [12]`"
+      - "@MiTiVPN -  4🇩🇪"
       - "@vasl_bashim [1]`"
+      - "@MiTiVPN - 1🇩🇪"
+      - "@vasl_bashim [13]`"
+      - "Tel : @V2RAYENGLISH 👈عضو"
+      - "@vasl_bashim [11]`"
+      - "@vasl_bashim [18]`"
+      - "@vasl_bashim [4]`"
+      - "@vasl_bashim [17]`"
+      - "@vasl_bashim [3]`"
+      - "Tel : @V2RAYENGLISH 👈عضو`"
+      - "@VPNCUSTOMIZE`"
+      - تست دو ساعته
+      - ConfigX2ray`
+      - "@vasl_bashim [7]`"
+      - "@vasl_bashim [14]`"
       - "@vasl_bashim [2]`"
-      - ☀️tel:@varkana0` 3
-      - "@MARAMBASHI ❤️‍🔥"
-      - V2RAYENGLISH@🔥
-      - ☀️tel:@varkana0` 4
-      - ☀️tel:@varkana0` 5
-      - ☀️tel:@varkana0` 6
-      - ☀️tel:@varkana0` 7
-      - ☀️tel:@varkana0` 8
-      - ☀️tel:@varkana0` 9
-      - ☀️tel:@varkana0` 10
-      - ☀️tel:@varkana0` 11
-      - ☀️tel:@varkana0` 12
-      - ☀️tel:@varkana0` 13
-      - ☀️tel:@varkana0` 14
-      - ☀️tel:@varkana0` 15
-      - ☀️tel:@varkana0` 16
-      - ☀️tel:@varkana0` 17
+      - "@vasl_bashim [9]`"
+      - "@vasl_bashim [6]`"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@vasl_bashim [18]`"
-      - "@vasl_bashim [17]`"
-      - "@MARAMBASHI 💟"
-      - "@vasl_bashim [9]`"
-      - "@MARAMBASHI 💟 2"
-      - "@vasl_bashim [11]`"
-      - "@vasl_bashim [4]`"
-      - "@vasl_bashim [12]`"
-      - "@vasl_bashim [6]`"
-      - "@vasl_bashim [10]`"
-      - "@MARAMBASHI 💟 3"
-      - "@vasl_bashim [5]`"
       - "@vasl_bashim [8]`"
-      - "@vasl_bashim [13]`"
-      - PUBLIC 2`
-      - V2RAYENGLISH@⭐`
-      - "@MARAMBASHI 💟`"
-      - "@vasl_bashim [15]`"
-      - ☀️tel:@varkana0`
-      - ☀️tel:@varkana0` 2
-      - V2RAYENGLISH@💎
-      - "@vasl_bashim [16]`"
+      - "@vasl_bashim [20]`"
+      - "@MiTiVPN - Ultra 🇩🇪"
+      - "@speedsclub - mqx 🇩🇪`"
+      - "@MiTiVPN - Ultra 🇺🇲"
+      - "@speedsclub - max 🇺🇲`"
+      - "@MiTiVPN - Ultra 🇫🇮"
+      - "@MiTiVPN - Ultra 🇫🇮`"
+      - "@speedsclub - max 🇫🇮`"
+      - "@MiTiVPN - Ultra 🇸🇪"
+      - "@speedsclub - max 🇸🇪`"
+      - "@MiTiVPN - Ultra 🇳🇱"
+      - "@speedsclub - max 🇳🇱`"
+      - "@MiTiVPN -  3🇩🇪"
+      - "@vasl_bashim [10]`"
+      - "@MiTiVPN -  2🇩🇪"
+      - "@vasl_bashim [12]`"
+      - "@MiTiVPN -  4🇩🇪"
       - "@vasl_bashim [1]`"
+      - "@MiTiVPN - 1🇩🇪"
+      - "@vasl_bashim [13]`"
+      - "Tel : @V2RAYENGLISH 👈عضو"
+      - "@vasl_bashim [11]`"
+      - "@vasl_bashim [18]`"
+      - "@vasl_bashim [4]`"
+      - "@vasl_bashim [17]`"
+      - "@vasl_bashim [3]`"
+      - "Tel : @V2RAYENGLISH 👈عضو`"
+      - "@VPNCUSTOMIZE`"
+      - تست دو ساعته
+      - ConfigX2ray`
+      - "@vasl_bashim [7]`"
+      - "@vasl_bashim [14]`"
       - "@vasl_bashim [2]`"
-      - ☀️tel:@varkana0` 3
-      - "@MARAMBASHI ❤️‍🔥"
-      - V2RAYENGLISH@🔥
-      - ☀️tel:@varkana0` 4
-      - ☀️tel:@varkana0` 5
-      - ☀️tel:@varkana0` 6
-      - ☀️tel:@varkana0` 7
-      - ☀️tel:@varkana0` 8
-      - ☀️tel:@varkana0` 9
-      - ☀️tel:@varkana0` 10
-      - ☀️tel:@varkana0` 11
-      - ☀️tel:@varkana0` 12
-      - ☀️tel:@varkana0` 13
-      - ☀️tel:@varkana0` 14
-      - ☀️tel:@varkana0` 15
-      - ☀️tel:@varkana0` 16
-      - ☀️tel:@varkana0` 17
+      - "@vasl_bashim [9]`"
+      - "@vasl_bashim [6]`"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@vasl_bashim [18]`"
-      - "@vasl_bashim [17]`"
-      - "@MARAMBASHI 💟"
-      - "@vasl_bashim [9]`"
-      - "@MARAMBASHI 💟 2"
-      - "@vasl_bashim [11]`"
-      - "@vasl_bashim [4]`"
-      - "@vasl_bashim [12]`"
-      - "@vasl_bashim [6]`"
-      - "@vasl_bashim [10]`"
-      - "@MARAMBASHI 💟 3"
-      - "@vasl_bashim [5]`"
       - "@vasl_bashim [8]`"
-      - "@vasl_bashim [13]`"
-      - PUBLIC 2`
-      - V2RAYENGLISH@⭐`
-      - "@MARAMBASHI 💟`"
-      - "@vasl_bashim [15]`"
-      - ☀️tel:@varkana0`
-      - ☀️tel:@varkana0` 2
-      - V2RAYENGLISH@💎
-      - "@vasl_bashim [16]`"
+      - "@vasl_bashim [20]`"
+      - "@MiTiVPN - Ultra 🇩🇪"
+      - "@speedsclub - mqx 🇩🇪`"
+      - "@MiTiVPN - Ultra 🇺🇲"
+      - "@speedsclub - max 🇺🇲`"
+      - "@MiTiVPN - Ultra 🇫🇮"
+      - "@MiTiVPN - Ultra 🇫🇮`"
+      - "@speedsclub - max 🇫🇮`"
+      - "@MiTiVPN - Ultra 🇸🇪"
+      - "@speedsclub - max 🇸🇪`"
+      - "@MiTiVPN - Ultra 🇳🇱"
+      - "@speedsclub - max 🇳🇱`"
+      - "@MiTiVPN -  3🇩🇪"
+      - "@vasl_bashim [10]`"
+      - "@MiTiVPN -  2🇩🇪"
+      - "@vasl_bashim [12]`"
+      - "@MiTiVPN -  4🇩🇪"
       - "@vasl_bashim [1]`"
+      - "@MiTiVPN - 1🇩🇪"
+      - "@vasl_bashim [13]`"
+      - "Tel : @V2RAYENGLISH 👈عضو"
+      - "@vasl_bashim [11]`"
+      - "@vasl_bashim [18]`"
+      - "@vasl_bashim [4]`"
+      - "@vasl_bashim [17]`"
+      - "@vasl_bashim [3]`"
+      - "Tel : @V2RAYENGLISH 👈عضو`"
+      - "@VPNCUSTOMIZE`"
+      - تست دو ساعته
+      - ConfigX2ray`
+      - "@vasl_bashim [7]`"
+      - "@vasl_bashim [14]`"
       - "@vasl_bashim [2]`"
-      - ☀️tel:@varkana0` 3
-      - "@MARAMBASHI ❤️‍🔥"
-      - V2RAYENGLISH@🔥
-      - ☀️tel:@varkana0` 4
-      - ☀️tel:@varkana0` 5
-      - ☀️tel:@varkana0` 6
-      - ☀️tel:@varkana0` 7
-      - ☀️tel:@varkana0` 8
-      - ☀️tel:@varkana0` 9
-      - ☀️tel:@varkana0` 10
-      - ☀️tel:@varkana0` 11
-      - ☀️tel:@varkana0` 12
-      - ☀️tel:@varkana0` 13
-      - ☀️tel:@varkana0` 14
-      - ☀️tel:@varkana0` 15
-      - ☀️tel:@varkana0` 16
-      - ☀️tel:@varkana0` 17
+      - "@vasl_bashim [9]`"
+      - "@vasl_bashim [6]`"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@vasl_bashim [18]`"
-      - "@vasl_bashim [17]`"
-      - "@MARAMBASHI 💟"
-      - "@vasl_bashim [9]`"
-      - "@MARAMBASHI 💟 2"
-      - "@vasl_bashim [11]`"
-      - "@vasl_bashim [4]`"
-      - "@vasl_bashim [12]`"
-      - "@vasl_bashim [6]`"
-      - "@vasl_bashim [10]`"
-      - "@MARAMBASHI 💟 3"
-      - "@vasl_bashim [5]`"
       - "@vasl_bashim [8]`"
-      - "@vasl_bashim [13]`"
-      - PUBLIC 2`
-      - V2RAYENGLISH@⭐`
-      - "@MARAMBASHI 💟`"
-      - "@vasl_bashim [15]`"
-      - ☀️tel:@varkana0`
-      - ☀️tel:@varkana0` 2
-      - V2RAYENGLISH@💎
-      - "@vasl_bashim [16]`"
+      - "@vasl_bashim [20]`"
+      - "@MiTiVPN - Ultra 🇩🇪"
+      - "@speedsclub - mqx 🇩🇪`"
+      - "@MiTiVPN - Ultra 🇺🇲"
+      - "@speedsclub - max 🇺🇲`"
+      - "@MiTiVPN - Ultra 🇫🇮"
+      - "@MiTiVPN - Ultra 🇫🇮`"
+      - "@speedsclub - max 🇫🇮`"
+      - "@MiTiVPN - Ultra 🇸🇪"
+      - "@speedsclub - max 🇸🇪`"
+      - "@MiTiVPN - Ultra 🇳🇱"
+      - "@speedsclub - max 🇳🇱`"
+      - "@MiTiVPN -  3🇩🇪"
+      - "@vasl_bashim [10]`"
+      - "@MiTiVPN -  2🇩🇪"
+      - "@vasl_bashim [12]`"
+      - "@MiTiVPN -  4🇩🇪"
       - "@vasl_bashim [1]`"
+      - "@MiTiVPN - 1🇩🇪"
+      - "@vasl_bashim [13]`"
+      - "Tel : @V2RAYENGLISH 👈عضو"
+      - "@vasl_bashim [11]`"
+      - "@vasl_bashim [18]`"
+      - "@vasl_bashim [4]`"
+      - "@vasl_bashim [17]`"
+      - "@vasl_bashim [3]`"
+      - "Tel : @V2RAYENGLISH 👈عضو`"
+      - "@VPNCUSTOMIZE`"
+      - تست دو ساعته
+      - ConfigX2ray`
+      - "@vasl_bashim [7]`"
+      - "@vasl_bashim [14]`"
       - "@vasl_bashim [2]`"
-      - ☀️tel:@varkana0` 3
-      - "@MARAMBASHI ❤️‍🔥"
-      - V2RAYENGLISH@🔥
-      - ☀️tel:@varkana0` 4
-      - ☀️tel:@varkana0` 5
-      - ☀️tel:@varkana0` 6
-      - ☀️tel:@varkana0` 7
-      - ☀️tel:@varkana0` 8
-      - ☀️tel:@varkana0` 9
-      - ☀️tel:@varkana0` 10
-      - ☀️tel:@varkana0` 11
-      - ☀️tel:@varkana0` 12
-      - ☀️tel:@varkana0` 13
-      - ☀️tel:@varkana0` 14
-      - ☀️tel:@varkana0` 15
-      - ☀️tel:@varkana0` 16
-      - ☀️tel:@varkana0` 17
+      - "@vasl_bashim [9]`"
+      - "@vasl_bashim [6]`"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -352,47 +317,42 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@vasl_bashim [18]`"
-      - "@vasl_bashim [17]`"
-      - "@MARAMBASHI 💟"
-      - "@vasl_bashim [9]`"
-      - "@MARAMBASHI 💟 2"
-      - "@vasl_bashim [11]`"
-      - "@vasl_bashim [4]`"
-      - "@vasl_bashim [12]`"
-      - "@vasl_bashim [6]`"
-      - "@vasl_bashim [10]`"
-      - "@MARAMBASHI 💟 3"
-      - "@vasl_bashim [5]`"
       - "@vasl_bashim [8]`"
-      - "@vasl_bashim [13]`"
-      - PUBLIC 2`
-      - V2RAYENGLISH@⭐`
-      - "@MARAMBASHI 💟`"
-      - "@vasl_bashim [15]`"
-      - ☀️tel:@varkana0`
-      - ☀️tel:@varkana0` 2
-      - V2RAYENGLISH@💎
-      - "@vasl_bashim [16]`"
+      - "@vasl_bashim [20]`"
+      - "@MiTiVPN - Ultra 🇩🇪"
+      - "@speedsclub - mqx 🇩🇪`"
+      - "@MiTiVPN - Ultra 🇺🇲"
+      - "@speedsclub - max 🇺🇲`"
+      - "@MiTiVPN - Ultra 🇫🇮"
+      - "@MiTiVPN - Ultra 🇫🇮`"
+      - "@speedsclub - max 🇫🇮`"
+      - "@MiTiVPN - Ultra 🇸🇪"
+      - "@speedsclub - max 🇸🇪`"
+      - "@MiTiVPN - Ultra 🇳🇱"
+      - "@speedsclub - max 🇳🇱`"
+      - "@MiTiVPN -  3🇩🇪"
+      - "@vasl_bashim [10]`"
+      - "@MiTiVPN -  2🇩🇪"
+      - "@vasl_bashim [12]`"
+      - "@MiTiVPN -  4🇩🇪"
       - "@vasl_bashim [1]`"
+      - "@MiTiVPN - 1🇩🇪"
+      - "@vasl_bashim [13]`"
+      - "Tel : @V2RAYENGLISH 👈عضو"
+      - "@vasl_bashim [11]`"
+      - "@vasl_bashim [18]`"
+      - "@vasl_bashim [4]`"
+      - "@vasl_bashim [17]`"
+      - "@vasl_bashim [3]`"
+      - "Tel : @V2RAYENGLISH 👈عضو`"
+      - "@VPNCUSTOMIZE`"
+      - تست دو ساعته
+      - ConfigX2ray`
+      - "@vasl_bashim [7]`"
+      - "@vasl_bashim [14]`"
       - "@vasl_bashim [2]`"
-      - ☀️tel:@varkana0` 3
-      - "@MARAMBASHI ❤️‍🔥"
-      - V2RAYENGLISH@🔥
-      - ☀️tel:@varkana0` 4
-      - ☀️tel:@varkana0` 5
-      - ☀️tel:@varkana0` 6
-      - ☀️tel:@varkana0` 7
-      - ☀️tel:@varkana0` 8
-      - ☀️tel:@varkana0` 9
-      - ☀️tel:@varkana0` 10
-      - ☀️tel:@varkana0` 11
-      - ☀️tel:@varkana0` 12
-      - ☀️tel:@varkana0` 13
-      - ☀️tel:@varkana0` 14
-      - ☀️tel:@varkana0` 15
-      - ☀️tel:@varkana0` 16
-      - ☀️tel:@varkana0` 17
+      - "@vasl_bashim [9]`"
+      - "@vasl_bashim [6]`"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

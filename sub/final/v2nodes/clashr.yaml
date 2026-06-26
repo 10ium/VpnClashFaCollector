@@ -5,74 +5,74 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 104.156.233.234:27116, server: 104.156.233.234, port: 27116, type: ss, cipher: chacha20-ietf-poly1305, password: bIOoi5TuImG2KccxV7-jcA7Cez+vun-c_E, udp: true, tfo: false}
   - {name: 85.198.9.136:443, server: 85.198.9.136, port: 443, type: ss, cipher: aes-256-gcm, password: p+sslTvPR5jUuECZwjaTLZiImJPTnc/Bt4n7c+h1vyg=, udp: true, tfo: false}
-  - {name: 38.60.220.65:443, server: 38.60.220.65, port: 443, type: trojan, password: t5FsyeQXkNCY6eVGiqBXmPu4..jBEpNbak, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: kkvlvvq-a.catcat321.com:20035, server: kkvlvvq-a.catcat321.com, port: 20035, type: trojan, password: 63872b0d-87dd-4474-b690-92773af2922e, sni: hk.catxstar.com, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 82.202.177.144:5269, server: 82.202.177.144, port: 5269, type: vless, tls: true, packet-encoding: xudp, uuid: 083471bf-bbf4-4e1d-8953-912b8d3b6255, servername: max.ru, host: max.ru, path: /, reality-opts: {public-key: hx1gkWBL2ixtwQSGXEvLT1Yz8GBsCFWriz_WLzLQNHQ, short-id: 4eb166dbed98e63d}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 185.94.29.67:2048, server: 185.94.29.67, port: 2048, type: vless, tls: true, packet-encoding: xudp, uuid: 5b9fbae6-4aef-4282-b14d-3ebdb19d532c, network: ws, ws-opts: {path: /, headers: {Host: ads.x5.ru}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 31.76.113.29:443, server: 31.76.113.29, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de, servername: it.s3-cloud.xyz, host: it.s3-cloud.xyz, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: zPi2L9vrl2hkaCTT3lZTzBna-qz6JrteRjDz1i-DsxY, short-id: 7a3f9e2b1c8d4f6a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 104.156.233.234:27116
       - 85.198.9.136:443
-      - 38.60.220.65:443
+      - kkvlvvq-a.catcat321.com:20035
       - 82.202.177.144:5269
       - 185.94.29.67:2048
+      - 31.76.113.29:443
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 104.156.233.234:27116
       - 85.198.9.136:443
-      - 38.60.220.65:443
+      - kkvlvvq-a.catcat321.com:20035
       - 82.202.177.144:5269
       - 185.94.29.67:2048
+      - 31.76.113.29:443
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 104.156.233.234:27116
       - 85.198.9.136:443
-      - 38.60.220.65:443
+      - kkvlvvq-a.catcat321.com:20035
       - 82.202.177.144:5269
       - 185.94.29.67:2048
+      - 31.76.113.29:443
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 104.156.233.234:27116
       - 85.198.9.136:443
-      - 38.60.220.65:443
+      - kkvlvvq-a.catcat321.com:20035
       - 82.202.177.144:5269
       - 185.94.29.67:2048
+      - 31.76.113.29:443
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 104.156.233.234:27116
       - 85.198.9.136:443
-      - 38.60.220.65:443
+      - kkvlvvq-a.catcat321.com:20035
       - 82.202.177.144:5269
       - 185.94.29.67:2048
+      - 31.76.113.29:443
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 104.156.233.234:27116
       - 85.198.9.136:443
-      - 38.60.220.65:443
+      - kkvlvvq-a.catcat321.com:20035
       - 82.202.177.144:5269
       - 185.94.29.67:2048
+      - 31.76.113.29:443
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -100,11 +100,11 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 104.156.233.234:27116
       - 85.198.9.136:443
-      - 38.60.220.65:443
+      - kkvlvvq-a.catcat321.com:20035
       - 82.202.177.144:5269
       - 185.94.29.67:2048
+      - 31.76.113.29:443
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
