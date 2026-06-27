@@ -465,15 +465,13 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@filembad", server: aris.arisping-ir.store, port: 443, type: vmess, uuid: 67f79907-6163-475c-b5ba-2a3faa0c02c5, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: cdn.arisping-ir.store, network: ws, ws-opts: {path: /, headers: {Host: cdn.arisping-ir.store}}, udp: true, tfo: false}
-  - {name: "@filembad 2", server: digi8.ez0535.com, port: 443, type: vmess, uuid: 98bd500d-cd2e-4e6a-a2ae-59a1f40930af, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad", server: digi8.ez0535.com, port: 443, type: vmess, uuid: 98bd500d-cd2e-4e6a-a2ae-59a1f40930af, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@meliproxyy", server: 47.244.120.197, port: 36703, type: vmess, uuid: 45b83519-9c4f-4052-a11b-02e017b636d4, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/arki?ed=2048"}, udp: true, tfo: false}
   - {name: "@meliproxyy 2", server: 47.250.45.234, port: 8613, type: vmess, uuid: 80039b4d-bac0-4f89-82c7-54fad3b0a1ea, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /arki, headers: {Host: 47.250.45.234}}, udp: true, tfo: false}
+  - {name: "@filembad 2", server: 51.195.235.71, port: 2052, type: vmess, uuid: 59e28f78-c31b-4613-9d9f-1e6732a31f46, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@v2FreeHub 🇩🇪", server: 57.129.121.230, port: 2053, type: vmess, uuid: 3d358ea5-465b-46ac-a2df-98ca1555194f, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@filembad 3", server: 65.109.218.60, port: 8088, type: vmess, uuid: 65488bcf-8573-44ee-9b4f-9abf4390acca, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "☑➜چنلمون: Express_freevpn@", server: 69.84.182.49, port: 80, type: vmess, uuid: f8975871-a7a0-4906-8835-a23c1258ca1e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.}}, udp: true, tfo: false}
-  - {name: "@filembad 4", server: 85.133.221.139, port: 1433, type: vmess, uuid: a70e57d0-6431-41fd-ba01-2f34d0d60208, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}, udp: true, tfo: false}
-  - {name: "@filembad 5", server: 85.133.240.19, port: 14050, type: vmess, uuid: cfcafe87-08aa-42e3-b03e-9a298ae45576, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@Farazv2ray", server: 104.17.77.77, port: 8443, type: vmess, uuid: 60441548-b68e-43b2-8191-e3b884be4b3c, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: v2ray1.dozapp.xyz, network: ws, ws-opts: {path: /lMnsZUN4/, headers: {Host: v2ray1.dozapp.xyz}}, udp: true, tfo: false}
   - {name: "@outline_ir", server: digi8.ez0535.com, port: 443, type: vmess, uuid: 98bd500d-cd2e-4e6a-a2ae-59a1f40930af, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
@@ -493,14 +491,12 @@ proxy-groups:
     type: select
     proxies:
       - "@filembad"
-      - "@filembad 2"
       - "@meliproxyy"
       - "@meliproxyy 2"
+      - "@filembad 2"
       - "@v2FreeHub 🇩🇪"
       - "@filembad 3"
       - "☑➜چنلمون: Express_freevpn@"
-      - "@filembad 4"
-      - "@filembad 5"
       - "@Farazv2ray"
       - "@outline_ir"
   - name: خودکار (بهترین پینگ) 🤖
@@ -510,14 +506,12 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@filembad"
-      - "@filembad 2"
       - "@meliproxyy"
       - "@meliproxyy 2"
+      - "@filembad 2"
       - "@v2FreeHub 🇩🇪"
       - "@filembad 3"
       - "☑➜چنلمون: Express_freevpn@"
-      - "@filembad 4"
-      - "@filembad 5"
       - "@Farazv2ray"
       - "@outline_ir"
   - name: پشتیبان (در صورت قطعی) 🧯
@@ -527,14 +521,12 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@filembad"
-      - "@filembad 2"
       - "@meliproxyy"
       - "@meliproxyy 2"
+      - "@filembad 2"
       - "@v2FreeHub 🇩🇪"
       - "@filembad 3"
       - "☑➜چنلمون: Express_freevpn@"
-      - "@filembad 4"
-      - "@filembad 5"
       - "@Farazv2ray"
       - "@outline_ir"
   - name: اتصال پایدار 🔗
@@ -553,14 +545,12 @@ proxy-groups:
     interval: 600
     proxies:
       - "@filembad"
-      - "@filembad 2"
       - "@meliproxyy"
       - "@meliproxyy 2"
+      - "@filembad 2"
       - "@v2FreeHub 🇩🇪"
       - "@filembad 3"
       - "☑➜چنلمون: Express_freevpn@"
-      - "@filembad 4"
-      - "@filembad 5"
       - "@Farazv2ray"
       - "@outline_ir"
   - name: توزیع بار (گردشی) 🔁
@@ -570,14 +560,12 @@ proxy-groups:
     interval: 600
     proxies:
       - "@filembad"
-      - "@filembad 2"
       - "@meliproxyy"
       - "@meliproxyy 2"
+      - "@filembad 2"
       - "@v2FreeHub 🇩🇪"
       - "@filembad 3"
       - "☑➜چنلمون: Express_freevpn@"
-      - "@filembad 4"
-      - "@filembad 5"
       - "@Farazv2ray"
       - "@outline_ir"
   - name: توزیع بار (موقت) ⏳
@@ -587,14 +575,12 @@ proxy-groups:
     interval: 600
     proxies:
       - "@filembad"
-      - "@filembad 2"
       - "@meliproxyy"
       - "@meliproxyy 2"
+      - "@filembad 2"
       - "@v2FreeHub 🇩🇪"
       - "@filembad 3"
       - "☑➜چنلمون: Express_freevpn@"
-      - "@filembad 4"
-      - "@filembad 5"
       - "@Farazv2ray"
       - "@outline_ir"
   - name: دانلود منیجر 📥

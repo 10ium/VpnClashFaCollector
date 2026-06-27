@@ -5,10 +5,7 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@Capoit`", server: 104.16.72.70, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 0ac0a6f0-d3f0-47f1-8de4-ce785e515a5c, servername: unnes.ac.id.yxls.eu.cc, network: ws, ws-opts: {path: /ca-cl, headers: {Host: unnes.ac.id.yxls.eu.cc}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit", server: 104.16.72.70, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 659a9075-d5ab-4fd2-bf34-b37043fae832, servername: nbhhh.mrcool.kdns.fr, network: ws, ws-opts: {path: /proxyip, headers: {Host: nbhhh.mrcool.kdns.fr}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit 2", server: 5.199.170.105, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fd47216b-4217-4ec1-85b9-98304634a391, servername: amd.com, host: amd.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: xFUmqmEPEKyv-5ReppEM1oTkc04HQcBUfySH-EwPBlE, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit 3", server: 5.199.170.105, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fd47216b-4217-4ec1-85b9-98304634a391, servername: amd.com, host: amd.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: xFUmqmEPEKyv-5ReppEM1oTkc04HQcBUfySH-EwPBlE, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit`", server: 151.101.193.242, port: 443, type: trojan, password: MiTiVPN, sni: f6r.ir, skip-cert-verify: false, network: ws, ws-opts: {path: /usa=mitivpn, headers: {Host: f6r.ir}}, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -16,9 +13,6 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - "@Capoit`"
-      - "@Capoit"
-      - "@Capoit 2"
-      - "@Capoit 3"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -26,9 +20,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Capoit`"
-      - "@Capoit"
-      - "@Capoit 2"
-      - "@Capoit 3"
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -36,36 +27,24 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - "@Capoit`"
-      - "@Capoit"
-      - "@Capoit 2"
-      - "@Capoit 3"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@Capoit`"
-      - "@Capoit"
-      - "@Capoit 2"
-      - "@Capoit 3"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - "@Capoit`"
-      - "@Capoit"
-      - "@Capoit 2"
-      - "@Capoit 3"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@Capoit`"
-      - "@Capoit"
-      - "@Capoit 2"
-      - "@Capoit 3"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -94,9 +73,6 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - "@Capoit`"
-      - "@Capoit"
-      - "@Capoit 2"
-      - "@Capoit 3"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
