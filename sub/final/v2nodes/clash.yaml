@@ -466,13 +466,13 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: 45.32.122.179:23027, server: 45.32.122.179, port: 23027, type: ss, cipher: chacha20-ietf-poly1305, password: I-bP3lFh.dTG3XitF7XtVK83CZ7rI2Ut=n, udp: true, tfo: false}
+  - {name: 45.77.232.213:15675, server: 45.77.232.213, port: 15675, type: ss, cipher: chacha20-ietf-poly1305, password: TWG7J1KR5KsPaV5qZI+rieueKxxafZSpCH, udp: true, tfo: false}
   - {name: 15.204.254.187:12000, server: 15.204.254.187, port: 12000, type: ss, cipher: aes-256-gcm, password: 8JCsPssfgS8tiRwiMlhARg==, udp: true, tfo: false}
-  - {name: kkvlvvq-a.catcat321.com:20035, server: kkvlvvq-a.catcat321.com, port: 20035, type: trojan, password: 63872b0d-87dd-4474-b690-92773af2922e, sni: hk.catxstar.com, skip-cert-verify: false, udp: true, tfo: false}
   - {name: d1.catcat321.com:54007, server: d1.catcat321.com, port: 54007, type: trojan, password: 7e70223b-f331-41d5-9313-02b8d2df2885, sni: d.usj1.cat.bilibili.com, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 54.46.109.132:20744, server: 54.46.109.132, port: 20744, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 54.46.109.132:22657, server: 54.46.109.132, port: 22657, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 45.67.139.162:80, server: 45.67.139.162, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 2c212fbb-08f9-4be0-a128-b10892111d6d, servername: www.sony.com, host: www.sony.com, path: /, reality-opts: {public-key: mjkj2VuAfc9eoRfIVNaHgUV7fZR40XgnjeE31hVVR24, short-id: c1}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 31.76.113.29:443, server: 31.76.113.29, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: dfc0cb9d-f005-41b0-848c-7703bd39d0de, servername: it.s3-cloud.xyz, host: it.s3-cloud.xyz, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: zPi2L9vrl2hkaCTT3lZTzBna-qz6JrteRjDz1i-DsxY, short-id: 7a3f9e2b1c8d4f6a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 95.85.227.25:443, server: 95.85.227.25, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e3e90161-fe65-443a-a3a4-e0e3a73704ca, servername: pol1.hatvpn.org, host: pol1.hatvpn.org, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: PL-jIhHOxLpCUmnDvMEsB3YY3n8o7smiAT0P_SV6RCM, short-id: 19d6296d2621d9fa}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -490,13 +490,13 @@ proxy-groups:
     type: select
     proxies:
       - 45.32.122.179:23027
+      - 45.77.232.213:15675
       - 15.204.254.187:12000
-      - kkvlvvq-a.catcat321.com:20035
       - d1.catcat321.com:54007
       - 54.46.109.132:20744
       - 54.46.109.132:22657
       - 45.67.139.162:80
-      - 31.76.113.29:443
+      - 95.85.227.25:443
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -504,13 +504,13 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 45.32.122.179:23027
+      - 45.77.232.213:15675
       - 15.204.254.187:12000
-      - kkvlvvq-a.catcat321.com:20035
       - d1.catcat321.com:54007
       - 54.46.109.132:20744
       - 54.46.109.132:22657
       - 45.67.139.162:80
-      - 31.76.113.29:443
+      - 95.85.227.25:443
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -518,13 +518,13 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 45.32.122.179:23027
+      - 45.77.232.213:15675
       - 15.204.254.187:12000
-      - kkvlvvq-a.catcat321.com:20035
       - d1.catcat321.com:54007
       - 54.46.109.132:20744
       - 54.46.109.132:22657
       - 45.67.139.162:80
-      - 31.76.113.29:443
+      - 95.85.227.25:443
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -541,13 +541,13 @@ proxy-groups:
     interval: 600
     proxies:
       - 45.32.122.179:23027
+      - 45.77.232.213:15675
       - 15.204.254.187:12000
-      - kkvlvvq-a.catcat321.com:20035
       - d1.catcat321.com:54007
       - 54.46.109.132:20744
       - 54.46.109.132:22657
       - 45.67.139.162:80
-      - 31.76.113.29:443
+      - 95.85.227.25:443
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -555,13 +555,13 @@ proxy-groups:
     interval: 600
     proxies:
       - 45.32.122.179:23027
+      - 45.77.232.213:15675
       - 15.204.254.187:12000
-      - kkvlvvq-a.catcat321.com:20035
       - d1.catcat321.com:54007
       - 54.46.109.132:20744
       - 54.46.109.132:22657
       - 45.67.139.162:80
-      - 31.76.113.29:443
+      - 95.85.227.25:443
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -569,13 +569,13 @@ proxy-groups:
     interval: 600
     proxies:
       - 45.32.122.179:23027
+      - 45.77.232.213:15675
       - 15.204.254.187:12000
-      - kkvlvvq-a.catcat321.com:20035
       - d1.catcat321.com:54007
       - 54.46.109.132:20744
       - 54.46.109.132:22657
       - 45.67.139.162:80
-      - 31.76.113.29:443
+      - 95.85.227.25:443
   - name: دانلود منیجر 📥
     type: select
     proxies:
