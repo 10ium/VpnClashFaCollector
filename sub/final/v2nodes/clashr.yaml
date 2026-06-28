@@ -5,88 +5,74 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 45.77.232.213:15675, server: 45.77.232.213, port: 15675, type: ss, cipher: chacha20-ietf-poly1305, password: TWG7J1KR5KsPaV5qZI+rieueKxxafZSpCH, udp: true, tfo: false}
   - {name: 15.204.254.187:12000, server: 15.204.254.187, port: 12000, type: ss, cipher: aes-256-gcm, password: 8JCsPssfgS8tiRwiMlhARg==, udp: true, tfo: false}
   - {name: 18.163.56.230:3941, server: 18.163.56.230, port: 3941, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 18.183.83.131:18021, server: 18.183.83.131, port: 18021, type: trojan, password: BxceQaOe, sni: t.me%252Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 37.156.44.215:42549, server: 37.156.44.215, port: 42549, type: trojan, password: SoftNetConnect, sni: www.speedtest.net, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 132.243.213.174:37037, server: 132.243.213.174, port: 37037, type: vless, tls: true, packet-encoding: xudp, uuid: 276733b9-25c8-47b0-b651-b18cd4909128, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 95.85.227.25:443, server: 95.85.227.25, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e3e90161-fe65-443a-a3a4-e0e3a73704ca, servername: pol1.hatvpn.org, host: pol1.hatvpn.org, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: PL-jIhHOxLpCUmnDvMEsB3YY3n8o7smiAT0P_SV6RCM, short-id: 19d6296d2621d9fa}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 45.77.232.213:15675
       - 15.204.254.187:12000
       - 18.163.56.230:3941
       - 18.183.83.131:18021
       - 37.156.44.215:42549
       - 132.243.213.174:37037
-      - 95.85.227.25:443
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 45.77.232.213:15675
       - 15.204.254.187:12000
       - 18.163.56.230:3941
       - 18.183.83.131:18021
       - 37.156.44.215:42549
       - 132.243.213.174:37037
-      - 95.85.227.25:443
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 45.77.232.213:15675
       - 15.204.254.187:12000
       - 18.163.56.230:3941
       - 18.183.83.131:18021
       - 37.156.44.215:42549
       - 132.243.213.174:37037
-      - 95.85.227.25:443
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 45.77.232.213:15675
       - 15.204.254.187:12000
       - 18.163.56.230:3941
       - 18.183.83.131:18021
       - 37.156.44.215:42549
       - 132.243.213.174:37037
-      - 95.85.227.25:443
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 45.77.232.213:15675
       - 15.204.254.187:12000
       - 18.163.56.230:3941
       - 18.183.83.131:18021
       - 37.156.44.215:42549
       - 132.243.213.174:37037
-      - 95.85.227.25:443
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 45.77.232.213:15675
       - 15.204.254.187:12000
       - 18.163.56.230:3941
       - 18.183.83.131:18021
       - 37.156.44.215:42549
       - 132.243.213.174:37037
-      - 95.85.227.25:443
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -114,13 +100,11 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 45.77.232.213:15675
       - 15.204.254.187:12000
       - 18.163.56.230:3941
       - 18.183.83.131:18021
       - 37.156.44.215:42549
       - 132.243.213.174:37037
-      - 95.85.227.25:443
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
