@@ -465,7 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "🇩🇪 [🇩🇪 DE] @Masyakata", server: 72.56.105.228, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4af298c3-5c2d-4cf1-af68-5261e482c4e7, servername: max.ru, host: max.ru, path: /, reality-opts: {public-key: iSo20v7O_zNHG6EmG4jGxfUkdqARzC8nFlB-JR4q4BA, short-id: 1a0ec8752eeaf912}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Kamkarstore`", server: 82.38.31.11, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 🇩🇪 [🇩🇪 DE] @Masyakata
+      - "@Kamkarstore`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 🇩🇪 [🇩🇪 DE] @Masyakata
+      - "@Kamkarstore`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 🇩🇪 [🇩🇪 DE] @Masyakata
+      - "@Kamkarstore`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇩🇪 [🇩🇪 DE] @Masyakata
+      - "@Kamkarstore`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇩🇪 [🇩🇪 DE] @Masyakata
+      - "@Kamkarstore`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇩🇪 [🇩🇪 DE] @Masyakata
+      - "@Kamkarstore`"
   - name: دانلود منیجر 📥
     type: select
     proxies:
