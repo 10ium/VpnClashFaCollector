@@ -465,7 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: freenet_vt`, server: vxc.galardoxtn.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5f65c1ae-9e7a-48ea-8ecf-6822365cd177, servername: speedtest.net%40freenettir+%F0%9F%8D%8E, network: ws, ws-opts: {path: /, headers: {Host: speedtest.net%40freenettir+%F0%9F%8D%8E}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@freenet_vt`", server: love.ns.cloudflare.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e277ac9b-3225-3381-a9fb-3585419f7142, servername: media14.ftmsoft.com, network: ws, ws-opts: {path: /media14, headers: {Host: media14.ftmsoft.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - freenet_vt`
+      - "@freenet_vt`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - freenet_vt`
+      - "@freenet_vt`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - freenet_vt`
+      - "@freenet_vt`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - freenet_vt`
+      - "@freenet_vt`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - freenet_vt`
+      - "@freenet_vt`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - freenet_vt`
+      - "@freenet_vt`"
   - name: دانلود منیجر 📥
     type: select
     proxies:

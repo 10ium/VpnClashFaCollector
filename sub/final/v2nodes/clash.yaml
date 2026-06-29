@@ -465,11 +465,10 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 15.204.254.187:12000, server: 15.204.254.187, port: 12000, type: ss, cipher: aes-256-gcm, password: 8JCsPssfgS8tiRwiMlhARg==, udp: true, tfo: false}
-  - {name: 18.163.56.230:3941, server: 18.163.56.230, port: 3941, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 18.183.83.131:18021, server: 18.183.83.131, port: 18021, type: trojan, password: BxceQaOe, sni: t.me%252Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 37.156.44.215:42549, server: 37.156.44.215, port: 42549, type: trojan, password: SoftNetConnect, sni: www.speedtest.net, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 132.243.213.174:37037, server: 132.243.213.174, port: 37037, type: vless, tls: true, packet-encoding: xudp, uuid: 276733b9-25c8-47b0-b651-b18cd4909128, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: vip.bcjdvip.com:14004, server: vip.bcjdvip.com, port: 14004, type: vless, tls: true, packet-encoding: xudp, uuid: 3e06720a-86f0-49b9-8f00-062681e3b385, servername: apple.com, host: apple.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: zSt5a1vs3C3oxm3fSUB_egA98IO3XZr7JGzE6OdMTz8, short-id: 22c485f4000241}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: vip.bcjdvip.com:14009, server: vip.bcjdvip.com, port: 14009, type: vless, tls: true, packet-encoding: xudp, uuid: 3e06720a-86f0-49b9-8f00-062681e3b385, servername: apple.com, host: apple.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: CAFHM6x5kO2ofkpEDelcOJlZ4i6Kw4ZlDNIfdV6ptUw, short-id: 6a1a47}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 104.16.174.3:443, server: 104.16.174.3, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4f013568-a58b-4b04-b5dd-4d52bf1c33a4, servername: JoinProxyVPN11.amoosamiii.net, network: ws, ws-opts: {path: /poiuyws, headers: {Host: JoinProxyVPN11.amoosamiii.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 144.31.11.68:443, server: 144.31.11.68, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 91c2f415-3f4a-4f7e-a53a-c42859b28bff, servername: deepl.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, reality-opts: {public-key: gUntojksdb0qno9iPOBH2NQDTmj_2uiejDx0GV3A2lk, short-id: 0479b8862e48}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,33 +485,30 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 15.204.254.187:12000
-      - 18.163.56.230:3941
-      - 18.183.83.131:18021
-      - 37.156.44.215:42549
-      - 132.243.213.174:37037
+      - vip.bcjdvip.com:14004
+      - vip.bcjdvip.com:14009
+      - 104.16.174.3:443
+      - 144.31.11.68:443
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 15.204.254.187:12000
-      - 18.163.56.230:3941
-      - 18.183.83.131:18021
-      - 37.156.44.215:42549
-      - 132.243.213.174:37037
+      - vip.bcjdvip.com:14004
+      - vip.bcjdvip.com:14009
+      - 104.16.174.3:443
+      - 144.31.11.68:443
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 15.204.254.187:12000
-      - 18.163.56.230:3941
-      - 18.183.83.131:18021
-      - 37.156.44.215:42549
-      - 132.243.213.174:37037
+      - vip.bcjdvip.com:14004
+      - vip.bcjdvip.com:14009
+      - 104.16.174.3:443
+      - 144.31.11.68:443
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -528,33 +524,30 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 15.204.254.187:12000
-      - 18.163.56.230:3941
-      - 18.183.83.131:18021
-      - 37.156.44.215:42549
-      - 132.243.213.174:37037
+      - vip.bcjdvip.com:14004
+      - vip.bcjdvip.com:14009
+      - 104.16.174.3:443
+      - 144.31.11.68:443
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 15.204.254.187:12000
-      - 18.163.56.230:3941
-      - 18.183.83.131:18021
-      - 37.156.44.215:42549
-      - 132.243.213.174:37037
+      - vip.bcjdvip.com:14004
+      - vip.bcjdvip.com:14009
+      - 104.16.174.3:443
+      - 144.31.11.68:443
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 15.204.254.187:12000
-      - 18.163.56.230:3941
-      - 18.183.83.131:18021
-      - 37.156.44.215:42549
-      - 132.243.213.174:37037
+      - vip.bcjdvip.com:14004
+      - vip.bcjdvip.com:14009
+      - 104.16.174.3:443
+      - 144.31.11.68:443
   - name: دانلود منیجر 📥
     type: select
     proxies:

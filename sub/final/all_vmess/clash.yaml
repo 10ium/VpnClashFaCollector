@@ -465,14 +465,17 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: "@filembad", server: 69.84.182.49, port: 80, type: vmess, uuid: f8975871-a7a0-4906-8835-a23c1258ca1e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, servername: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir., network: ws, ws-opts: {path: /, headers: {Host: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.}}, udp: true, tfo: false}
   - {name: "@v2rayconfigamir 4831", server: 61.245.11.60, port: 80, type: vmess, uuid: a3e3a710-79f8-4ae0-b83c-607aab40d197, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /vmess/}, udp: true, tfo: false}
   - {name: "@v2rayconfigamir 9084", server: 61.245.11.60, port: 80, type: vmess, uuid: a3e3a710-79f8-4ae0-b83c-607aab40d197, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /vmess/}, udp: true, tfo: false}
   - {name: "@v2rayconfigamir 3472", server: 61.245.11.60, port: 80, type: vmess, uuid: a3e3a710-79f8-4ae0-b83c-607aab40d197, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /vmess/, headers: {Host: 61.245.11.60}}, udp: true, tfo: false}
-  - {name: "@chillguy_vpn", server: 149.88.23.207, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@v2rayconfigamir 9395", server: 61.245.11.60, port: 80, type: vmess, uuid: a3e3a710-79f8-4ae0-b83c-607aab40d197, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /vmess/}, udp: true, tfo: false}
-  - {name: "@filembad", server: 65.109.186.44, port: 433, type: vmess, uuid: 0cdfc4e0-67aa-40a9-8749-387bf9e11fd9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "اگه میخوای قطع نشی جوین شو : @farsiproxy", server: 65.109.186.44, port: 433, type: vmess, uuid: 0cdfc4e0-67aa-40a9-8749-387bf9e11fd9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 2", server: linkbt.gozar8.ir, port: 443, type: vmess, uuid: b34dc88e-5235-441a-89f9-faf73d34ae62, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: linkbt.gozar8.ir, network: ws, ws-opts: {path: /, headers: {Host: linkbt.gozar8.ir}}, udp: true, tfo: false}
+  - {name: "@filembad 2", server: 65.109.186.44, port: 433, type: vmess, uuid: dee2bb32-00b9-4e54-8287-5b33d22fedb2, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 3", server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ✨ @NamiraConfigs | ❤️ وصل شدی جوین شو | ⚡ | 🇩🇪, server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 4", server: 104.252.111.199, port: 29094, type: vmess, uuid: 1176b07e-35ea-491e-aeec-d7a7912c6162, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 5", server: linkbt.gozar8.ir, port: 443, type: vmess, uuid: b34dc88e-5235-441a-89f9-faf73d34ae62, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: linkbt.gozar8.ir, network: ws, ws-opts: {path: /, headers: {Host: linkbt.gozar8.ir}}, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -489,42 +492,51 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - "@filembad"
       - "@v2rayconfigamir 4831"
       - "@v2rayconfigamir 9084"
       - "@v2rayconfigamir 3472"
-      - "@chillguy_vpn"
       - "@v2rayconfigamir 9395"
-      - "@filembad"
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
       - "@filembad 2"
+      - "@filembad 3"
+      - ✨ @NamiraConfigs | ❤️ وصل شدی جوین شو | ⚡ | 🇩🇪
+      - "@filembad 4"
+      - "@filembad 5"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
+      - "@filembad"
       - "@v2rayconfigamir 4831"
       - "@v2rayconfigamir 9084"
       - "@v2rayconfigamir 3472"
-      - "@chillguy_vpn"
       - "@v2rayconfigamir 9395"
-      - "@filembad"
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
       - "@filembad 2"
+      - "@filembad 3"
+      - ✨ @NamiraConfigs | ❤️ وصل شدی جوین شو | ⚡ | 🇩🇪
+      - "@filembad 4"
+      - "@filembad 5"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
+      - "@filembad"
       - "@v2rayconfigamir 4831"
       - "@v2rayconfigamir 9084"
       - "@v2rayconfigamir 3472"
-      - "@chillguy_vpn"
       - "@v2rayconfigamir 9395"
-      - "@filembad"
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
       - "@filembad 2"
+      - "@filembad 3"
+      - ✨ @NamiraConfigs | ❤️ وصل شدی جوین شو | ⚡ | 🇩🇪
+      - "@filembad 4"
+      - "@filembad 5"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -540,42 +552,51 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@filembad"
       - "@v2rayconfigamir 4831"
       - "@v2rayconfigamir 9084"
       - "@v2rayconfigamir 3472"
-      - "@chillguy_vpn"
       - "@v2rayconfigamir 9395"
-      - "@filembad"
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
       - "@filembad 2"
+      - "@filembad 3"
+      - ✨ @NamiraConfigs | ❤️ وصل شدی جوین شو | ⚡ | 🇩🇪
+      - "@filembad 4"
+      - "@filembad 5"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@filembad"
       - "@v2rayconfigamir 4831"
       - "@v2rayconfigamir 9084"
       - "@v2rayconfigamir 3472"
-      - "@chillguy_vpn"
       - "@v2rayconfigamir 9395"
-      - "@filembad"
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
       - "@filembad 2"
+      - "@filembad 3"
+      - ✨ @NamiraConfigs | ❤️ وصل شدی جوین شو | ⚡ | 🇩🇪
+      - "@filembad 4"
+      - "@filembad 5"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@filembad"
       - "@v2rayconfigamir 4831"
       - "@v2rayconfigamir 9084"
       - "@v2rayconfigamir 3472"
-      - "@chillguy_vpn"
       - "@v2rayconfigamir 9395"
-      - "@filembad"
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
       - "@filembad 2"
+      - "@filembad 3"
+      - ✨ @NamiraConfigs | ❤️ وصل شدی جوین شو | ⚡ | 🇩🇪
+      - "@filembad 4"
+      - "@filembad 5"
   - name: دانلود منیجر 📥
     type: select
     proxies:
