@@ -465,10 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: vip.bcjdvip.com:14007, server: vip.bcjdvip.com, port: 14007, type: vless, tls: true, packet-encoding: xudp, uuid: 3e06720a-86f0-49b9-8f00-062681e3b385, servername: apple.com, host: apple.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: wybFjQzLnkKIaaTEhwp_N9UXU8miqds9U__P971YHlU, short-id: 1d89ebb78c}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 52.222.136.195:443, server: 52.222.136.195, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 3da8ec10-c083-45b4-9c42-2ce3c5128f82, servername: moon.nocturnbit.online, network: ws, ws-opts: {path: /xray, headers: {Host: moon.nocturnbit.online}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 104.18.45.137:443, server: 104.18.45.137, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 72d1797c-cef8-410a-b8fd-db9104dc3cb0, servername: amooaliii.net, network: ws, ws-opts: {path: /jdhfyws, headers: {Host: amooaliii.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇬🇧 gb7.univesalsrv.com:443, server: gb7.univesalsrv.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 810b8ba9-3232-42ac-a474-3e921fdc8845, servername: gb7.univesalsrv.com, alpn: [h2], network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: mobile.api.Event}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: tmesubgift.up.railway.app:443, server: tmesubgift.up.railway.app, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ea2de766-8d11-7c49-2719-570b379d87e0, servername: tmesubgift.up.railway.app, alpn: [http/1.1], network: ws, ws-opts: {path: /ws/ea2de766-8d11-7c49-2719-570b379d87e0, headers: {Host: tmesubgift.up.railway.app}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 83.228.251.119:2083, server: 83.228.251.119, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: c524fa8a-c431-44bb-9a1b-9a12324254e4, servername: www.yahoo.com, host: www.yahoo.com, path: /, reality-opts: {public-key: l1Ekgk-8T5rB-yolp5OIpc0XZTcd2gBeqmIR2bytKXY, short-id: 4e590fdc}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 18.232.147.35:2053, server: 18.232.147.35, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: f188ec3b-e055-4eed-ae62-97403931d4e2, servername: www.intel.com, host: www.intel.com, path: /, reality-opts: {public-key: L0bhr3K-aQCLq4aVrDTBQa6N62T7XbCsFhWnbStdWyc, short-id: 835db5c67c00}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hollowcon6.onrender.com:443, server: hollowcon6.onrender.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f40ef9e3-ce9d-438f-a421-2b3f3361c86a, servername: hollowcon6.onrender.com, alpn: [http/1.1], network: ws, ws-opts: {path: /ws/f40ef9e3-ce9d-438f-a421-2b3f3361c86a, headers: {Host: hollowcon6.onrender.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,30 +486,33 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - vip.bcjdvip.com:14007
+      - 52.222.136.195:443
       - 104.18.45.137:443
-      - 🇬🇧 gb7.univesalsrv.com:443
-      - tmesubgift.up.railway.app:443
+      - 83.228.251.119:2083
+      - 18.232.147.35:2053
+      - hollowcon6.onrender.com:443
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - vip.bcjdvip.com:14007
+      - 52.222.136.195:443
       - 104.18.45.137:443
-      - 🇬🇧 gb7.univesalsrv.com:443
-      - tmesubgift.up.railway.app:443
+      - 83.228.251.119:2083
+      - 18.232.147.35:2053
+      - hollowcon6.onrender.com:443
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - vip.bcjdvip.com:14007
+      - 52.222.136.195:443
       - 104.18.45.137:443
-      - 🇬🇧 gb7.univesalsrv.com:443
-      - tmesubgift.up.railway.app:443
+      - 83.228.251.119:2083
+      - 18.232.147.35:2053
+      - hollowcon6.onrender.com:443
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -524,30 +528,33 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - vip.bcjdvip.com:14007
+      - 52.222.136.195:443
       - 104.18.45.137:443
-      - 🇬🇧 gb7.univesalsrv.com:443
-      - tmesubgift.up.railway.app:443
+      - 83.228.251.119:2083
+      - 18.232.147.35:2053
+      - hollowcon6.onrender.com:443
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - vip.bcjdvip.com:14007
+      - 52.222.136.195:443
       - 104.18.45.137:443
-      - 🇬🇧 gb7.univesalsrv.com:443
-      - tmesubgift.up.railway.app:443
+      - 83.228.251.119:2083
+      - 18.232.147.35:2053
+      - hollowcon6.onrender.com:443
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - vip.bcjdvip.com:14007
+      - 52.222.136.195:443
       - 104.18.45.137:443
-      - 🇬🇧 gb7.univesalsrv.com:443
-      - tmesubgift.up.railway.app:443
+      - 83.228.251.119:2083
+      - 18.232.147.35:2053
+      - hollowcon6.onrender.com:443
   - name: دانلود منیجر 📥
     type: select
     proxies:
