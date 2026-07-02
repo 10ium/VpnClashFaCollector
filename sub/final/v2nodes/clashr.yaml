@@ -5,74 +5,67 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 52.222.136.195:443, server: 52.222.136.195, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 3da8ec10-c083-45b4-9c42-2ce3c5128f82, servername: moon.nocturnbit.online, network: ws, ws-opts: {path: /xray, headers: {Host: moon.nocturnbit.online}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 18.162.144.111:29449, server: 18.162.144.111, port: 29449, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 158.160.198.162:443, server: 158.160.198.162, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a5ea9247-79f3-4655-aece-3fb51e1e669e, servername: rezerv11.yunus.guru, host: rezerv11.yunus.guru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 6QIHdF1dvSK8mDPOeWXvGIqJmZ2ySq5fyc7N15h1WFE, short-id: 34256b39b4ebb864}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 83.228.251.119:2083, server: 83.228.251.119, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: c524fa8a-c431-44bb-9a1b-9a12324254e4, servername: www.yahoo.com, host: www.yahoo.com, path: /, reality-opts: {public-key: l1Ekgk-8T5rB-yolp5OIpc0XZTcd2gBeqmIR2bytKXY, short-id: 4e590fdc}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 209.250.235.53:56021, server: 209.250.235.53, port: 56021, type: vless, tls: true, packet-encoding: xudp, uuid: e9ab53ab-5607-4ec2-8e01-e6e76ce9443d, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 18.232.147.35:2053, server: 18.232.147.35, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: f188ec3b-e055-4eed-ae62-97403931d4e2, servername: www.intel.com, host: www.intel.com, path: /, reality-opts: {public-key: L0bhr3K-aQCLq4aVrDTBQa6N62T7XbCsFhWnbStdWyc, short-id: 835db5c67c00}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: hollowcon6.onrender.com:443, server: hollowcon6.onrender.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f40ef9e3-ce9d-438f-a421-2b3f3361c86a, servername: hollowcon6.onrender.com, alpn: [http/1.1], network: ws, ws-opts: {path: /ws/f40ef9e3-ce9d-438f-a421-2b3f3361c86a, headers: {Host: hollowcon6.onrender.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 52.222.136.195:443
+      - 18.162.144.111:29449
+      - 158.160.198.162:443
       - 83.228.251.119:2083
       - 209.250.235.53:56021
-      - 18.232.147.35:2053
-      - hollowcon6.onrender.com:443
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 52.222.136.195:443
+      - 18.162.144.111:29449
+      - 158.160.198.162:443
       - 83.228.251.119:2083
       - 209.250.235.53:56021
-      - 18.232.147.35:2053
-      - hollowcon6.onrender.com:443
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 52.222.136.195:443
+      - 18.162.144.111:29449
+      - 158.160.198.162:443
       - 83.228.251.119:2083
       - 209.250.235.53:56021
-      - 18.232.147.35:2053
-      - hollowcon6.onrender.com:443
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 52.222.136.195:443
+      - 18.162.144.111:29449
+      - 158.160.198.162:443
       - 83.228.251.119:2083
       - 209.250.235.53:56021
-      - 18.232.147.35:2053
-      - hollowcon6.onrender.com:443
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 52.222.136.195:443
+      - 18.162.144.111:29449
+      - 158.160.198.162:443
       - 83.228.251.119:2083
       - 209.250.235.53:56021
-      - 18.232.147.35:2053
-      - hollowcon6.onrender.com:443
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 52.222.136.195:443
+      - 18.162.144.111:29449
+      - 158.160.198.162:443
       - 83.228.251.119:2083
       - 209.250.235.53:56021
-      - 18.232.147.35:2053
-      - hollowcon6.onrender.com:443
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -100,11 +93,10 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 52.222.136.195:443
+      - 18.162.144.111:29449
+      - 158.160.198.162:443
       - 83.228.251.119:2083
       - 209.250.235.53:56021
-      - 18.232.147.35:2053
-      - hollowcon6.onrender.com:443
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

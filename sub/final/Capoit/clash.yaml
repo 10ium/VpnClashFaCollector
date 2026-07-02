@@ -465,8 +465,13 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Capoit`", server: 141.193.213.21, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4f013568-a58b-4b04-b5dd-4d52bf1c33a4, servername: amoosamiii.net, network: ws, ws-opts: {path: /poiuyws, headers: {Host: amoosamiii.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 2", server: 168.222.43.61, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 94ef5f6f-ac63-4cde-b479-abe32b2f5bf8, servername: www.yahoo.com, host: www.yahoo.com, path: /, reality-opts: {public-key: Xa_iieA3fzOIdVTtBTpTtthiyqVIOvkA1-nvZ0JkFRk, short-id: ffdd0ca907}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit`", server: 104.18.32.47, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true, tfo: false}
+  - {name: "@Capoit", server: 104.21.40.34, port: 443, type: trojan, password: humanity, sni: www.gossipglove.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.gossipglove.com}}, udp: true, tfo: false}
+  - {name: "@Capoit 2", server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.gossipglove.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.gossipglove.com}}, udp: true, tfo: false}
+  - {name: "@Capoit 3", server: 172.67.180.92, port: 443, type: trojan, password: humanity, sni: www.multiplydose.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.multiplydose.com}}, udp: true, tfo: false}
+  - {name: "@Capoit 4", server: 188.114.98.0, port: 443, type: trojan, password: humanity, sni: www.creationlong.org, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org}}, udp: true, tfo: false}
+  - {name: "@Capoit 5", server: go.adslimit.info, port: 2345, type: vless, tls: true, packet-encoding: xudp, uuid: 0331b690-79fc-49d5-85f0-54faa4eff89f, host: go.adslimit.info, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 2", server: 141.193.213.21, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4f013568-a58b-4b04-b5dd-4d52bf1c33a4, servername: amoosamiii.net, network: ws, ws-opts: {path: /poiuyws, headers: {Host: amoosamiii.net}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@Capoit` 3", server: 104.238.31.71, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b783c6d6-3a0f-4c13-bbd1-86bf1ec4d94d, servername: unitbook.net, host: unitbook.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@Capoit` 4", server: 169.40.32.129, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: cb9e1505-01eb-4d35-9840-17128da04d93, servername: www.yahoo.com, host: www.yahoo.com, path: /, reality-opts: {public-key: eg1Br2itpx7DM1ICrT7p7SRmefGONSHQtRQURGV-AWg, short-id: 6a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
@@ -486,6 +491,11 @@ proxy-groups:
     type: select
     proxies:
       - "@Capoit`"
+      - "@Capoit"
+      - "@Capoit 2"
+      - "@Capoit 3"
+      - "@Capoit 4"
+      - "@Capoit 5"
       - "@Capoit` 2"
       - "@Capoit` 3"
       - "@Capoit` 4"
@@ -496,6 +506,11 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Capoit`"
+      - "@Capoit"
+      - "@Capoit 2"
+      - "@Capoit 3"
+      - "@Capoit 4"
+      - "@Capoit 5"
       - "@Capoit` 2"
       - "@Capoit` 3"
       - "@Capoit` 4"
@@ -506,6 +521,11 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Capoit`"
+      - "@Capoit"
+      - "@Capoit 2"
+      - "@Capoit 3"
+      - "@Capoit 4"
+      - "@Capoit 5"
       - "@Capoit` 2"
       - "@Capoit` 3"
       - "@Capoit` 4"
@@ -525,6 +545,11 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit`"
+      - "@Capoit"
+      - "@Capoit 2"
+      - "@Capoit 3"
+      - "@Capoit 4"
+      - "@Capoit 5"
       - "@Capoit` 2"
       - "@Capoit` 3"
       - "@Capoit` 4"
@@ -535,6 +560,11 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit`"
+      - "@Capoit"
+      - "@Capoit 2"
+      - "@Capoit 3"
+      - "@Capoit 4"
+      - "@Capoit 5"
       - "@Capoit` 2"
       - "@Capoit` 3"
       - "@Capoit` 4"
@@ -545,6 +575,11 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit`"
+      - "@Capoit"
+      - "@Capoit 2"
+      - "@Capoit 3"
+      - "@Capoit 4"
+      - "@Capoit 5"
       - "@Capoit` 2"
       - "@Capoit` 3"
       - "@Capoit` 4"

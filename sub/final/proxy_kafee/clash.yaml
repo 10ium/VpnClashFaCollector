@@ -465,16 +465,15 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@proxy_kafee", server: 151.101.110.219, port: 443, type: trojan, password: MITIVPN, sni: global.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: /MiTiVPN=De, headers: {Host: global.fastly.com}}, udp: true, tfo: false}
-  - {name: "@proxy_kafee 2", server: 151.101.56.6, port: 443, type: trojan, password: MITIVPN, sni: global.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: /MiTiVPN=Usa, headers: {Host: global.fastly.com}}, udp: true, tfo: false}
-  - {name: "@proxy_kafee 3", server: 151.101.110.219, port: 443, type: trojan, password: MiTiVPN, sni: ssl.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: /MiTiVPN=NL, headers: {Host: ssl.fastly.com}}, udp: true, tfo: false}
-  - {name: "@proxy_kafee 4", server: 151.101.56.6, port: 443, type: trojan, password: MiTiVPN, sni: ssl.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: /MiTiVPN=fL, headers: {Host: ssl.fastly.com}}, udp: true, tfo: false}
   - {name: "@proxy_kafee (3🇨🇭⚡)", server: 83.228.228.243, port: 2087, type: trojan, password: SoftNetConnect, sni: www.yahoo.com, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee (4🇨🇭⚡)", server: 83.228.228.243, port: 42549, type: trojan, password: SoftNetConnect, sni: www.speedtest.net, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee (2🇨🇭⚡)", server: 83.228.228.243, port: 443, type: trojan, password: SoftNetConnect, sni: www.yahoo.com, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee (🇨🇭⚡)", server: 83.228.228.243, port: 8443, type: trojan, password: SoftNetConnect, sni: play.google.com, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee 🚀", server: 64.226.95.244, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 0970324b-8c61-4ae7-8c3f-385a6f1e17e4, servername: vpn47.cc.cd, network: ws, ws-opts: {path: /, headers: {Host: vpn47.cc.cd}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee 🚀 2", server: 45.13.119.3, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 3b715892-8610-4fdc-9086-647b36af5443, servername: play.google.com, host: play.google.com, path: /, reality-opts: {public-key: uGYj7gkQdNaabDVQZdbHeSVizGPrzj8YD5jdYm7stG0, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee 4`, server: 151.101.193.57, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 6194f73e-67de-445a-b83c-c963e42d5592, network: ws, ws-opts: {path: /, headers: {Host: superip2.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee 2, server: 45.86.228.237, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6194f73e-67de-445a-b83c-c963e42d5592, servername: yahoo.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: xyz}, reality-opts: {public-key: MhOa-Fkr656VVRcxXd27gam263cdXF_uyGiHZZEISUA, short-id: ce741cbe468babc7}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee 3, server: speedtest.net, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 6194f73e-67de-445a-b83c-c963e42d5592, network: ws, ws-opts: {path: /, headers: {Host: pinghub.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee (5🇨🇭⚡)`", server: 83.228.228.243, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: 89049f79-320b-48a0-b1cf-110165cae30c, servername: www.yahoo.com, host: www.yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: l1Ekgk-8T5rB-yolp5OIpc0XZTcd2gBeqmIR2bytKXY, short-id: 4e590fdc}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee 🚀`", server: 217.217.247.248, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8ca5cbd3-ec16-4728-bedc-2bc0d82f0922, servername: enterprisekitten.com, host: enterprisekitten.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@proxy_kafee 🚀` 2", server: sca25.speedmeter.shop, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
@@ -494,16 +493,15 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@proxy_kafee"
-      - "@proxy_kafee 2"
-      - "@proxy_kafee 3"
-      - "@proxy_kafee 4"
       - "@proxy_kafee (3🇨🇭⚡)"
       - "@proxy_kafee (4🇨🇭⚡)"
       - "@proxy_kafee (2🇨🇭⚡)"
       - "@proxy_kafee (🇨🇭⚡)"
       - "@proxy_kafee 🚀"
       - "@proxy_kafee 🚀 2"
+      - 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee 4`
+      - 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee 2
+      - 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee 3
       - "@proxy_kafee (5🇨🇭⚡)`"
       - "@proxy_kafee 🚀`"
       - "@proxy_kafee 🚀` 2"
@@ -513,16 +511,15 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - "@proxy_kafee"
-      - "@proxy_kafee 2"
-      - "@proxy_kafee 3"
-      - "@proxy_kafee 4"
       - "@proxy_kafee (3🇨🇭⚡)"
       - "@proxy_kafee (4🇨🇭⚡)"
       - "@proxy_kafee (2🇨🇭⚡)"
       - "@proxy_kafee (🇨🇭⚡)"
       - "@proxy_kafee 🚀"
       - "@proxy_kafee 🚀 2"
+      - 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee 4`
+      - 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee 2
+      - 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee 3
       - "@proxy_kafee (5🇨🇭⚡)`"
       - "@proxy_kafee 🚀`"
       - "@proxy_kafee 🚀` 2"
@@ -532,16 +529,15 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - "@proxy_kafee"
-      - "@proxy_kafee 2"
-      - "@proxy_kafee 3"
-      - "@proxy_kafee 4"
       - "@proxy_kafee (3🇨🇭⚡)"
       - "@proxy_kafee (4🇨🇭⚡)"
       - "@proxy_kafee (2🇨🇭⚡)"
       - "@proxy_kafee (🇨🇭⚡)"
       - "@proxy_kafee 🚀"
       - "@proxy_kafee 🚀 2"
+      - 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee 4`
+      - 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee 2
+      - 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee 3
       - "@proxy_kafee (5🇨🇭⚡)`"
       - "@proxy_kafee 🚀`"
       - "@proxy_kafee 🚀` 2"
@@ -560,16 +556,15 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@proxy_kafee"
-      - "@proxy_kafee 2"
-      - "@proxy_kafee 3"
-      - "@proxy_kafee 4"
       - "@proxy_kafee (3🇨🇭⚡)"
       - "@proxy_kafee (4🇨🇭⚡)"
       - "@proxy_kafee (2🇨🇭⚡)"
       - "@proxy_kafee (🇨🇭⚡)"
       - "@proxy_kafee 🚀"
       - "@proxy_kafee 🚀 2"
+      - 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee 4`
+      - 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee 2
+      - 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee 3
       - "@proxy_kafee (5🇨🇭⚡)`"
       - "@proxy_kafee 🚀`"
       - "@proxy_kafee 🚀` 2"
@@ -579,16 +574,15 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@proxy_kafee"
-      - "@proxy_kafee 2"
-      - "@proxy_kafee 3"
-      - "@proxy_kafee 4"
       - "@proxy_kafee (3🇨🇭⚡)"
       - "@proxy_kafee (4🇨🇭⚡)"
       - "@proxy_kafee (2🇨🇭⚡)"
       - "@proxy_kafee (🇨🇭⚡)"
       - "@proxy_kafee 🚀"
       - "@proxy_kafee 🚀 2"
+      - 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee 4`
+      - 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee 2
+      - 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee 3
       - "@proxy_kafee (5🇨🇭⚡)`"
       - "@proxy_kafee 🚀`"
       - "@proxy_kafee 🚀` 2"
@@ -598,16 +592,15 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@proxy_kafee"
-      - "@proxy_kafee 2"
-      - "@proxy_kafee 3"
-      - "@proxy_kafee 4"
       - "@proxy_kafee (3🇨🇭⚡)"
       - "@proxy_kafee (4🇨🇭⚡)"
       - "@proxy_kafee (2🇨🇭⚡)"
       - "@proxy_kafee (🇨🇭⚡)"
       - "@proxy_kafee 🚀"
       - "@proxy_kafee 🚀 2"
+      - 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee 4`
+      - 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee 2
+      - 𝗝𝗼𝗶𝗻 ➠ @proxy_kafee 3
       - "@proxy_kafee (5🇨🇭⚡)`"
       - "@proxy_kafee 🚀`"
       - "@proxy_kafee 🚀` 2"
