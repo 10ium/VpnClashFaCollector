@@ -465,12 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@vpnbaz ☂️", server: 82.38.31.213, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
-  - {name: "@vpnbaz 🛸", server: 45.130.125.2, port: 443, type: trojan, password: jZKsbuRpEB, sni: sl.farxmode.ir, skip-cert-verify: false, network: ws, ws-opts: {path: /db, headers: {Host: sl.farxmode.ir}}, udp: true, tfo: false}
-  - {name: "@vpnbaz 🍭", server: 185.128.139.11, port: 18244, type: vless, tls: true, packet-encoding: xudp, uuid: 0d543aed-4e30-4553-b5ac-211419bb0961, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz 🕊️", server: 141.193.213.21, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4f013568-a58b-4b04-b5dd-4d52bf1c33a4, servername: amoosamiii.net, network: ws, ws-opts: {path: /poiuyws, headers: {Host: amoosamiii.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz ⭐", server: 104.238.31.71, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b783c6d6-3a0f-4c13-bbd1-86bf1ec4d94d, servername: unitbook.net, host: unitbook.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz 🍋‍🟩", server: it.fifapes.monster, port: 29148, type: vless, tls: true, packet-encoding: xudp, uuid: eab915bc-d2df-73d1-47d0-6eb240497055, host: it.fifapes.monster, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz ⭐", server: 82.38.31.211, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
+  - {name: "@vpnbaz ☂️", server: 104.16.72.101, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 14b59caf-a196-4ec2-8c70-c7b388062f5b, servername: vangoghhh.info, network: ws, ws-opts: {path: /rdfgtws, headers: {Host: vangoghhh.info}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz 🛸", server: sw.linuxbase.ir, port: 1152, type: vless, tls: true, packet-encoding: xudp, uuid: 4973357c-6436-4970-b1e6-e21244d2ef94, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: YzQz4D9KFIpJ5YB4W5UqPs8wgowbeujf9KEOyuATSE4, short-id: e5115b6a2127146d}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz 🎯", server: 141.193.213.21, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4f013568-a58b-4b04-b5dd-4d52bf1c33a4, servername: amoosamiii.net, network: ws, ws-opts: {path: /poiuyws, headers: {Host: amoosamiii.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz 🍋‍🟩", server: 151.115.165.172, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,11 +486,10 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - "@vpnbaz ⭐"
       - "@vpnbaz ☂️"
       - "@vpnbaz 🛸"
-      - "@vpnbaz 🍭"
-      - "@vpnbaz 🕊️"
-      - "@vpnbaz ⭐"
+      - "@vpnbaz 🎯"
       - "@vpnbaz 🍋‍🟩"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -499,11 +497,10 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - "@vpnbaz ⭐"
       - "@vpnbaz ☂️"
       - "@vpnbaz 🛸"
-      - "@vpnbaz 🍭"
-      - "@vpnbaz 🕊️"
-      - "@vpnbaz ⭐"
+      - "@vpnbaz 🎯"
       - "@vpnbaz 🍋‍🟩"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -511,11 +508,10 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - "@vpnbaz ⭐"
       - "@vpnbaz ☂️"
       - "@vpnbaz 🛸"
-      - "@vpnbaz 🍭"
-      - "@vpnbaz 🕊️"
-      - "@vpnbaz ⭐"
+      - "@vpnbaz 🎯"
       - "@vpnbaz 🍋‍🟩"
   - name: اتصال پایدار 🔗
     type: url-test
@@ -532,11 +528,10 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@vpnbaz ⭐"
       - "@vpnbaz ☂️"
       - "@vpnbaz 🛸"
-      - "@vpnbaz 🍭"
-      - "@vpnbaz 🕊️"
-      - "@vpnbaz ⭐"
+      - "@vpnbaz 🎯"
       - "@vpnbaz 🍋‍🟩"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -544,11 +539,10 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@vpnbaz ⭐"
       - "@vpnbaz ☂️"
       - "@vpnbaz 🛸"
-      - "@vpnbaz 🍭"
-      - "@vpnbaz 🕊️"
-      - "@vpnbaz ⭐"
+      - "@vpnbaz 🎯"
       - "@vpnbaz 🍋‍🟩"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -556,11 +550,10 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@vpnbaz ⭐"
       - "@vpnbaz ☂️"
       - "@vpnbaz 🛸"
-      - "@vpnbaz 🍭"
-      - "@vpnbaz 🕊️"
-      - "@vpnbaz ⭐"
+      - "@vpnbaz 🎯"
       - "@vpnbaz 🍋‍🟩"
   - name: دانلود منیجر 📥
     type: select

@@ -472,8 +472,9 @@ proxies:
   - {name: "@Capoit 4", server: 188.114.98.0, port: 443, type: trojan, password: humanity, sni: www.creationlong.org, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org}}, udp: true, tfo: false}
   - {name: "@Capoit 5", server: go.adslimit.info, port: 2345, type: vless, tls: true, packet-encoding: xudp, uuid: 0331b690-79fc-49d5-85f0-54faa4eff89f, host: go.adslimit.info, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@Capoit` 2", server: 141.193.213.21, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4f013568-a58b-4b04-b5dd-4d52bf1c33a4, servername: amoosamiii.net, network: ws, ws-opts: {path: /poiuyws, headers: {Host: amoosamiii.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 3", server: 104.238.31.71, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b783c6d6-3a0f-4c13-bbd1-86bf1ec4d94d, servername: unitbook.net, host: unitbook.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 4", server: 169.40.32.129, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: cb9e1505-01eb-4d35-9840-17128da04d93, servername: www.yahoo.com, host: www.yahoo.com, path: /, reality-opts: {public-key: eg1Br2itpx7DM1ICrT7p7SRmefGONSHQtRQURGV-AWg, short-id: 6a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 3", server: 213.156.152.182, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: 615cc118-2bdf-4c68-b277-f5faaa2c34c4, servername: www.yahoo.com, host: www.yahoo.com, path: /, reality-opts: {public-key: bALX2hvFIEvdai_RwJ3DwaEPafINjNsxwMBIgkaQIDc, short-id: fd}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 4", server: 104.238.31.71, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b783c6d6-3a0f-4c13-bbd1-86bf1ec4d94d, servername: unitbook.net, host: unitbook.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 5", server: 169.40.32.129, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: cb9e1505-01eb-4d35-9840-17128da04d93, servername: www.yahoo.com, host: www.yahoo.com, path: /, reality-opts: {public-key: eg1Br2itpx7DM1ICrT7p7SRmefGONSHQtRQURGV-AWg, short-id: 6a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -499,6 +500,7 @@ proxy-groups:
       - "@Capoit` 2"
       - "@Capoit` 3"
       - "@Capoit` 4"
+      - "@Capoit` 5"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -514,6 +516,7 @@ proxy-groups:
       - "@Capoit` 2"
       - "@Capoit` 3"
       - "@Capoit` 4"
+      - "@Capoit` 5"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -529,6 +532,7 @@ proxy-groups:
       - "@Capoit` 2"
       - "@Capoit` 3"
       - "@Capoit` 4"
+      - "@Capoit` 5"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -553,6 +557,7 @@ proxy-groups:
       - "@Capoit` 2"
       - "@Capoit` 3"
       - "@Capoit` 4"
+      - "@Capoit` 5"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -568,6 +573,7 @@ proxy-groups:
       - "@Capoit` 2"
       - "@Capoit` 3"
       - "@Capoit` 4"
+      - "@Capoit` 5"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -583,6 +589,7 @@ proxy-groups:
       - "@Capoit` 2"
       - "@Capoit` 3"
       - "@Capoit` 4"
+      - "@Capoit` 5"
   - name: دانلود منیجر 📥
     type: select
     proxies:
