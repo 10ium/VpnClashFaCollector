@@ -465,13 +465,10 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Capoit`", server: 104.18.32.47, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true, tfo: false}
-  - {name: "@Capoit", server: 104.21.40.34, port: 443, type: trojan, password: humanity, sni: www.gossipglove.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.gossipglove.com}}, udp: true, tfo: false}
-  - {name: "@Capoit 2", server: 172.64.152.23, port: 443, type: trojan, password: humanity, sni: www.gossipglove.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.gossipglove.com}}, udp: true, tfo: false}
-  - {name: "@Capoit 3", server: 172.67.180.92, port: 443, type: trojan, password: humanity, sni: www.multiplydose.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.multiplydose.com}}, udp: true, tfo: false}
-  - {name: "@Capoit 4", server: 188.114.98.0, port: 443, type: trojan, password: humanity, sni: www.creationlong.org, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.creationlong.org}}, udp: true, tfo: false}
-  - {name: "@Capoit 5", server: go.adslimit.info, port: 2345, type: vless, tls: true, packet-encoding: xudp, uuid: 0331b690-79fc-49d5-85f0-54faa4eff89f, host: go.adslimit.info, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 2", server: 213.156.152.182, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: 615cc118-2bdf-4c68-b277-f5faaa2c34c4, servername: www.yahoo.com, host: www.yahoo.com, path: /, reality-opts: {public-key: bALX2hvFIEvdai_RwJ3DwaEPafINjNsxwMBIgkaQIDc, short-id: fd}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit`", server: 213.156.152.182, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: 615cc118-2bdf-4c68-b277-f5faaa2c34c4, servername: www.yahoo.com, host: www.yahoo.com, path: /, reality-opts: {public-key: bALX2hvFIEvdai_RwJ3DwaEPafINjNsxwMBIgkaQIDc, short-id: fd}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit", server: 51.178.135.38, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a0fe6694-919a-4346-9260-da24a197ee0b, servername: www.yahoo.com, host: www.yahoo.com, path: /, reality-opts: {public-key: ato7XtTu3WFMLSmhffM_uO2ziYxJ63veJKKRQ28zQ0I, short-id: 89}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit 2", server: 192.71.82.2, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a5c05c1e-aa68-443f-8598-09800244bd4b, servername: kingcloud.biack.ir, alpn: [h3], network: ws, ws-opts: {path: "/LiL?ed=2560", headers: {Host: kingcloud.biack.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 2", server: 104.26.14.85, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575, servername: rubifen.adaspoloandco.com, network: ws, ws-opts: {path: /GOrbEh, headers: {Host: rubifen.adaspoloandco.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -491,9 +488,6 @@ proxy-groups:
       - "@Capoit`"
       - "@Capoit"
       - "@Capoit 2"
-      - "@Capoit 3"
-      - "@Capoit 4"
-      - "@Capoit 5"
       - "@Capoit` 2"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -504,9 +498,6 @@ proxy-groups:
       - "@Capoit`"
       - "@Capoit"
       - "@Capoit 2"
-      - "@Capoit 3"
-      - "@Capoit 4"
-      - "@Capoit 5"
       - "@Capoit` 2"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -517,9 +508,6 @@ proxy-groups:
       - "@Capoit`"
       - "@Capoit"
       - "@Capoit 2"
-      - "@Capoit 3"
-      - "@Capoit 4"
-      - "@Capoit 5"
       - "@Capoit` 2"
   - name: اتصال پایدار 🔗
     type: url-test
@@ -539,9 +527,6 @@ proxy-groups:
       - "@Capoit`"
       - "@Capoit"
       - "@Capoit 2"
-      - "@Capoit 3"
-      - "@Capoit 4"
-      - "@Capoit 5"
       - "@Capoit` 2"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -552,9 +537,6 @@ proxy-groups:
       - "@Capoit`"
       - "@Capoit"
       - "@Capoit 2"
-      - "@Capoit 3"
-      - "@Capoit 4"
-      - "@Capoit 5"
       - "@Capoit` 2"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -565,9 +547,6 @@ proxy-groups:
       - "@Capoit`"
       - "@Capoit"
       - "@Capoit 2"
-      - "@Capoit 3"
-      - "@Capoit 4"
-      - "@Capoit 5"
       - "@Capoit` 2"
   - name: دانلود منیجر 📥
     type: select

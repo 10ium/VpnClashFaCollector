@@ -465,13 +465,12 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 18.162.144.111:29449, server: 18.162.144.111, port: 29449, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
   - {name: ethical-raccoon.rooster465.autos:443, server: ethical-raccoon.rooster465.autos, port: 443, type: trojan, password: PI36027154, skip-cert-verify: false, udp: true, tfo: false}
   - {name: large-baboon.rooster465.autos:443, server: large-baboon.rooster465.autos, port: 443, type: trojan, password: PI36027154, skip-cert-verify: false, udp: true, tfo: false}
   - {name: rich-mule.rooster465.autos:443, server: rich-mule.rooster465.autos, port: 443, type: trojan, password: PI36027154, skip-cert-verify: false, udp: true, tfo: false}
   - {name: tight-possum.rooster465.autos:443, server: tight-possum.rooster465.autos, port: 443, type: trojan, password: PI36027154, skip-cert-verify: false, udp: true, tfo: false}
   - {name: amirmakiaj.vtuix.ir:20200, server: amirmakiaj.vtuix.ir, port: 20200, type: vless, tls: true, packet-encoding: xudp, uuid: 545ce653-21f9-beb8-777e-143c35cdc023, host: amirmakiaj.vtuix.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 158.160.198.162:443, server: 158.160.198.162, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a5ea9247-79f3-4655-aece-3fb51e1e669e, servername: rezerv11.yunus.guru, host: rezerv11.yunus.guru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 6QIHdF1dvSK8mDPOeWXvGIqJmZ2ySq5fyc7N15h1WFE, short-id: 34256b39b4ebb864}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 192.144.13.35:42942, server: 192.144.13.35, port: 42942, type: vless, tls: true, packet-encoding: xudp, uuid: 6a372c32-1b32-4c23-9671-bb1c1a13a54e, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -488,39 +487,36 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 18.162.144.111:29449
       - ethical-raccoon.rooster465.autos:443
       - large-baboon.rooster465.autos:443
       - rich-mule.rooster465.autos:443
       - tight-possum.rooster465.autos:443
       - amirmakiaj.vtuix.ir:20200
-      - 158.160.198.162:443
+      - 192.144.13.35:42942
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 18.162.144.111:29449
       - ethical-raccoon.rooster465.autos:443
       - large-baboon.rooster465.autos:443
       - rich-mule.rooster465.autos:443
       - tight-possum.rooster465.autos:443
       - amirmakiaj.vtuix.ir:20200
-      - 158.160.198.162:443
+      - 192.144.13.35:42942
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 18.162.144.111:29449
       - ethical-raccoon.rooster465.autos:443
       - large-baboon.rooster465.autos:443
       - rich-mule.rooster465.autos:443
       - tight-possum.rooster465.autos:443
       - amirmakiaj.vtuix.ir:20200
-      - 158.160.198.162:443
+      - 192.144.13.35:42942
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -536,39 +532,36 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 18.162.144.111:29449
       - ethical-raccoon.rooster465.autos:443
       - large-baboon.rooster465.autos:443
       - rich-mule.rooster465.autos:443
       - tight-possum.rooster465.autos:443
       - amirmakiaj.vtuix.ir:20200
-      - 158.160.198.162:443
+      - 192.144.13.35:42942
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 18.162.144.111:29449
       - ethical-raccoon.rooster465.autos:443
       - large-baboon.rooster465.autos:443
       - rich-mule.rooster465.autos:443
       - tight-possum.rooster465.autos:443
       - amirmakiaj.vtuix.ir:20200
-      - 158.160.198.162:443
+      - 192.144.13.35:42942
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 18.162.144.111:29449
       - ethical-raccoon.rooster465.autos:443
       - large-baboon.rooster465.autos:443
       - rich-mule.rooster465.autos:443
       - tight-possum.rooster465.autos:443
       - amirmakiaj.vtuix.ir:20200
-      - 158.160.198.162:443
+      - 192.144.13.35:42942
   - name: دانلود منیجر 📥
     type: select
     proxies:
