@@ -5,8 +5,8 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: 166.1.228.172:30888, server: 166.1.228.172, port: 30888, type: ss, cipher: aes-256-gcm, password: 2803361d6c196af8, udp: true, tfo: false}
   - {name: pro-tortoise.rooster465.autos:443, server: pro-tortoise.rooster465.autos, port: 443, type: trojan, password: PI36027154, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: amirmakiaj.vtuix.ir:20200, server: amirmakiaj.vtuix.ir, port: 20200, type: vless, tls: true, packet-encoding: xudp, uuid: 545ce653-21f9-beb8-777e-143c35cdc023, host: amirmakiaj.vtuix.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 192.144.13.35:42942, server: 192.144.13.35, port: 42942, type: vless, tls: true, packet-encoding: xudp, uuid: 6a372c32-1b32-4c23-9671-bb1c1a13a54e, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
@@ -14,8 +14,8 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - 166.1.228.172:30888
       - pro-tortoise.rooster465.autos:443
-      - amirmakiaj.vtuix.ir:20200
       - 192.144.13.35:42942
   - name: ♻️ 自动选择
     type: url-test
@@ -23,8 +23,8 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - 166.1.228.172:30888
       - pro-tortoise.rooster465.autos:443
-      - amirmakiaj.vtuix.ir:20200
       - 192.144.13.35:42942
   - name: 🌍 国外媒体
     type: select
@@ -32,32 +32,32 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 166.1.228.172:30888
       - pro-tortoise.rooster465.autos:443
-      - amirmakiaj.vtuix.ir:20200
       - 192.144.13.35:42942
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 166.1.228.172:30888
       - pro-tortoise.rooster465.autos:443
-      - amirmakiaj.vtuix.ir:20200
       - 192.144.13.35:42942
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - 166.1.228.172:30888
       - pro-tortoise.rooster465.autos:443
-      - amirmakiaj.vtuix.ir:20200
       - 192.144.13.35:42942
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 166.1.228.172:30888
       - pro-tortoise.rooster465.autos:443
-      - amirmakiaj.vtuix.ir:20200
       - 192.144.13.35:42942
   - name: 🎯 全球直连
     type: select
@@ -86,8 +86,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 166.1.228.172:30888
       - pro-tortoise.rooster465.autos:443
-      - amirmakiaj.vtuix.ir:20200
       - 192.144.13.35:42942
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
