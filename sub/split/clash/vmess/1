@@ -465,11 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@meliproxyy", server: vip.bigchanger.site, port: 8087, type: vmess, uuid: 99316f50-d177-4ac2-93fa-07482d5954cc, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "🇳🇱 [openproxylist.com] vmess-NL", server: c87s5.portablesubmarines.com, port: 18339, type: vmess, uuid: 3cd9077d-76f7-4104-bd82-eb6916b89d43, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad", server: vip.bigchanger.site, port: 8087, type: vmess, uuid: 99316f50-d177-4ac2-93fa-07482d5954cc, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 2", server: cf.877774.xyz, port: 80, type: vmess, uuid: f8975871-a7a0-4906-8835-a23c1258ca1e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.}}, udp: true, tfo: false}
-  - {name: "@filembad 3", server: ct.877774.xyz, port: 80, type: vmess, uuid: f8975871-a7a0-4906-8835-a23c1258ca1e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.}}, udp: true, tfo: false}
+  - {name: "@filembad", server: 47.250.45.234, port: 43063, type: vmess, uuid: c77f48f5-4be3-4461-b52b-49998e7b897b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/arki?ed=2048"}, udp: true, tfo: false}
+  - {name: "@filembad 2", server: cdc.sanaiehdasti.com, port: 1930, type: vmess, uuid: 6e9f5eec-4880-4ce0-80e8-9883da07a962, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,33 +484,27 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@meliproxyy"
       - 🇳🇱 [openproxylist.com] vmess-NL
       - "@filembad"
       - "@filembad 2"
-      - "@filembad 3"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@meliproxyy"
       - 🇳🇱 [openproxylist.com] vmess-NL
       - "@filembad"
       - "@filembad 2"
-      - "@filembad 3"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@meliproxyy"
       - 🇳🇱 [openproxylist.com] vmess-NL
       - "@filembad"
       - "@filembad 2"
-      - "@filembad 3"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -528,33 +520,27 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@meliproxyy"
       - 🇳🇱 [openproxylist.com] vmess-NL
       - "@filembad"
       - "@filembad 2"
-      - "@filembad 3"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@meliproxyy"
       - 🇳🇱 [openproxylist.com] vmess-NL
       - "@filembad"
       - "@filembad 2"
-      - "@filembad 3"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@meliproxyy"
       - 🇳🇱 [openproxylist.com] vmess-NL
       - "@filembad"
       - "@filembad 2"
-      - "@filembad 3"
   - name: دانلود منیجر 📥
     type: select
     proxies:

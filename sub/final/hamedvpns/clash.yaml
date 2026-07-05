@@ -465,8 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 130.61.50.75:6443, server: 130.61.50.75, port: 6443, type: hysteria2, ports: 6443, password: zhangyang, sni: dash.cloudflare.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 130.61.50.75:6443 2, server: 130.61.50.75, port: 6443, type: hysteria2, ports: 6443, password: zhangyang, sni: https://www.calmloud.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: -hamedvpns⚡, server: 104.18.152.229, port: 443, type: trojan, password: humanity, sni: www.ignitelimit.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.ignitelimit.com}}, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 130.61.50.75:6443
-      - 130.61.50.75:6443 2
+      - -hamedvpns⚡
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 130.61.50.75:6443
-      - 130.61.50.75:6443 2
+      - -hamedvpns⚡
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 130.61.50.75:6443
-      - 130.61.50.75:6443 2
+      - -hamedvpns⚡
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 130.61.50.75:6443
-      - 130.61.50.75:6443 2
+      - -hamedvpns⚡
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 130.61.50.75:6443
-      - 130.61.50.75:6443 2
+      - -hamedvpns⚡
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 130.61.50.75:6443
-      - 130.61.50.75:6443 2
+      - -hamedvpns⚡
   - name: دانلود منیجر 📥
     type: select
     proxies:
