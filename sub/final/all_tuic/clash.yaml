@@ -465,8 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: ♦️16@oneclickvpnkeys, server: 62.210.24.143, port: 33888, type: tuic, uuid: 9adb384a-0f16-4501-a8f3-b6b2556fce87, password: dongtaiwang.com, alpn: [h3], udp-relay-mode: native, congestion-controller: cubic, sni: bing.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 101479 | ⚡️Telegram - t.me/SOSkeyNET, server: 62.210.24.143, port: 33888, type: tuic, uuid: 9adb384a-0f16-4501-a8f3-b6b2556fce87, password: dongtaiwang.com, alpn: [h3], udp-relay-mode: native, congestion-controller: cubic, sni: bing.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ♦️16@oneclick, server: 62.210.24.143, port: 33888, type: tuic, uuid: 9adb384a-0f16-4501-a8f3-b6b2556fce87, password: dongtaiwang.com, alpn: [h3], udp-relay-mode: native, congestion-controller: cubic, sni: bing.com, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - ♦️16@oneclickvpnkeys
-      - 101479 | ⚡️Telegram - t.me/SOSkeyNET
+      - ♦️16@oneclick
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - ♦️16@oneclickvpnkeys
-      - 101479 | ⚡️Telegram - t.me/SOSkeyNET
+      - ♦️16@oneclick
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - ♦️16@oneclickvpnkeys
-      - 101479 | ⚡️Telegram - t.me/SOSkeyNET
+      - ♦️16@oneclick
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - ♦️16@oneclickvpnkeys
-      - 101479 | ⚡️Telegram - t.me/SOSkeyNET
+      - ♦️16@oneclick
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - ♦️16@oneclickvpnkeys
-      - 101479 | ⚡️Telegram - t.me/SOSkeyNET
+      - ♦️16@oneclick
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - ♦️16@oneclickvpnkeys
-      - 101479 | ⚡️Telegram - t.me/SOSkeyNET
+      - ♦️16@oneclick
   - name: دانلود منیجر 📥
     type: select
     proxies:
