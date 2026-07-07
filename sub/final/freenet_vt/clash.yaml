@@ -465,9 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@freenet_vt2", server: 114.129.43.130, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 3ea0a12e-162e-45b8-b03b-c490d6105091, servername: wa1.mhrnet.com, network: ws, ws-opts: {path: /, headers: {Host: wa1.mhrnet.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@freenet_vt3`", server: 209.46.30.56, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 3ea0a12e-162e-45b8-b03b-c490d6105091, servername: wa1.mhrnet.com, network: ws, ws-opts: {path: /, headers: {Host: wa1.mhrnet.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@freenet_vt1", server: 23.227.38.91, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 3ea0a12e-162e-45b8-b03b-c490d6105091, servername: wa1.mhrnet.com, network: ws, ws-opts: {path: /, headers: {Host: wa1.mhrnet.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: vip3`, server: 5.42.100.84, port: 48212, type: vless, tls: true, packet-encoding: xudp, uuid: 2f93a08b-5c23-502c-936d-a53072cf9882, servername: yandex.ru, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: grpc}, reality-opts: {public-key: 8rZnE8gkbRv3ZVHUvkyrMZnmoIRhtncAgQpUAPAwIlo, short-id: 62b5466a2183d4da}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,27 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@freenet_vt2"
-      - "@freenet_vt3`"
-      - "@freenet_vt1"
+      - vip3`
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@freenet_vt2"
-      - "@freenet_vt3`"
-      - "@freenet_vt1"
+      - vip3`
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@freenet_vt2"
-      - "@freenet_vt3`"
-      - "@freenet_vt1"
+      - vip3`
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -520,27 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@freenet_vt2"
-      - "@freenet_vt3`"
-      - "@freenet_vt1"
+      - vip3`
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@freenet_vt2"
-      - "@freenet_vt3`"
-      - "@freenet_vt1"
+      - vip3`
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@freenet_vt2"
-      - "@freenet_vt3`"
-      - "@freenet_vt1"
+      - vip3`
   - name: دانلود منیجر 📥
     type: select
     proxies:
