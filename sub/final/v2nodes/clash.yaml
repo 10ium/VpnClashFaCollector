@@ -465,13 +465,12 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: 149.28.241.235:443, server: 149.28.241.235, port: 443, type: trojan, password: lcGo9bOwOB8yC7oAAI.TC=rBFs6PfVgCeF, sni: 149.28.241.235, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 82.158.229.125:11126, server: 82.158.229.125, port: 11126, type: vless, tls: true, packet-encoding: xudp, uuid: 2166fcae-8e93-4f50-d3c4-94c7042767ac, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 176.109.88.218:443, server: 176.109.88.218, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 43eb972f-f2fa-47dd-9916-85322c6e2c47, servername: 95.85.246.16.speed-storage.ru, alpn: [h2], network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: "%2Fsequre%2Fgrpc%2F"}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 🇷🇺 213.21.222.33.vhubtest.ru:443, server: 213.21.222.33.vhubtest.ru, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 43eb972f-f2fa-47dd-9916-85322c6e2c47, servername: 213.21.222.33.vhubtest.ru, alpn: [h2], network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: "%2Fsequre%2Fgrpc"}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 103.97.201.171:57468, server: 103.97.201.171, port: 57468, type: vless, tls: true, packet-encoding: xudp, uuid: 4cda4ebf-06b7-4f21-a1ca-95b73f1f7163, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 67.159.56.57:443, server: 67.159.56.57, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 52b71b75-4b77-4cec-990b-046ec1938e1f, servername: uk.bvps.cloud, host: uk.bvps.cloud, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: j5qmR8E9er-0n5zZbK6s_SdvYm-tYlraXVYm49ArWS8, short-id: 60debb3ab744d8ce}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: lva2.unlimitedteam.space:443, server: lva2.unlimitedteam.space, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 7982f37c-757c-4a29-9ad4-04db96d6b1bc, servername: lva2.unlimitedteam.space, host: lva2.unlimitedteam.space, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: aFJd-2v7u8SUz5w95zS46_LpnMPievSZkGobHwx4JSI, short-id: 589b1c3ca18d6a16}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 104.26.14.137:443, server: 104.26.14.137, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 7e544a9d-7667-413b-bbb0-b3bb1aac6d77, servername: shegeftihaaa.net, network: ws, ws-opts: {path: /rsedgws, headers: {Host: shegeftihaaa.net}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: tea.horqen.ir:56720, server: tea.horqen.ir, port: 56720, type: vless, tls: true, packet-encoding: xudp, uuid: 9920a813-38cc-4908-821c-9624dedcc8c9, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: grpc}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 38.180.149.55:49875, server: 38.180.149.55, port: 49875, type: vless, tls: true, packet-encoding: xudp, uuid: c3f8992b-c174-4fc0-bfde-87ae88c88da2, servername: www.ebay.com, host: www.ebay.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
@@ -490,13 +489,12 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - 149.28.241.235:443
       - 82.158.229.125:11126
       - 176.109.88.218:443
       - 🇷🇺 213.21.222.33.vhubtest.ru:443
       - 103.97.201.171:57468
-      - 67.159.56.57:443
       - lva2.unlimitedteam.space:443
-      - 104.26.14.137:443
       - tea.horqen.ir:56720
       - 38.180.149.55:49875
   - name: خودکار (بهترین پینگ) 🤖
@@ -505,13 +503,12 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - 149.28.241.235:443
       - 82.158.229.125:11126
       - 176.109.88.218:443
       - 🇷🇺 213.21.222.33.vhubtest.ru:443
       - 103.97.201.171:57468
-      - 67.159.56.57:443
       - lva2.unlimitedteam.space:443
-      - 104.26.14.137:443
       - tea.horqen.ir:56720
       - 38.180.149.55:49875
   - name: پشتیبان (در صورت قطعی) 🧯
@@ -520,13 +517,12 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - 149.28.241.235:443
       - 82.158.229.125:11126
       - 176.109.88.218:443
       - 🇷🇺 213.21.222.33.vhubtest.ru:443
       - 103.97.201.171:57468
-      - 67.159.56.57:443
       - lva2.unlimitedteam.space:443
-      - 104.26.14.137:443
       - tea.horqen.ir:56720
       - 38.180.149.55:49875
   - name: اتصال پایدار 🔗
@@ -544,13 +540,12 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 149.28.241.235:443
       - 82.158.229.125:11126
       - 176.109.88.218:443
       - 🇷🇺 213.21.222.33.vhubtest.ru:443
       - 103.97.201.171:57468
-      - 67.159.56.57:443
       - lva2.unlimitedteam.space:443
-      - 104.26.14.137:443
       - tea.horqen.ir:56720
       - 38.180.149.55:49875
   - name: توزیع بار (گردشی) 🔁
@@ -559,13 +554,12 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 149.28.241.235:443
       - 82.158.229.125:11126
       - 176.109.88.218:443
       - 🇷🇺 213.21.222.33.vhubtest.ru:443
       - 103.97.201.171:57468
-      - 67.159.56.57:443
       - lva2.unlimitedteam.space:443
-      - 104.26.14.137:443
       - tea.horqen.ir:56720
       - 38.180.149.55:49875
   - name: توزیع بار (موقت) ⏳
@@ -574,13 +568,12 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 149.28.241.235:443
       - 82.158.229.125:11126
       - 176.109.88.218:443
       - 🇷🇺 213.21.222.33.vhubtest.ru:443
       - 103.97.201.171:57468
-      - 67.159.56.57:443
       - lva2.unlimitedteam.space:443
-      - 104.26.14.137:443
       - tea.horqen.ir:56720
       - 38.180.149.55:49875
   - name: دانلود منیجر 📥
