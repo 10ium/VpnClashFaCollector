@@ -5,8 +5,7 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@Capoit`", server: 151.101.56.7, port: 443, type: trojan, password: MITIVPN, sni: ssl.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: /---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN=GE, headers: {Host: ssl.fastly.com}}, udp: true, tfo: false}
-  - {name: "@Capoit", server: 199.232.78.140, port: 443, type: trojan, password: MiTiVPN, sni: ssl.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: /---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN=fl, headers: {Host: ssl.fastly.com}}, udp: true, tfo: false}
+  - {name: "@Capoit`", server: server.xv98.ir, port: 2044, type: vless, tls: true, packet-encoding: xudp, uuid: f75566a5-4744-4806-ac2e-ccaefe1b1080, host: play.google.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -14,7 +13,6 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - "@Capoit`"
-      - "@Capoit"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -22,7 +20,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Capoit`"
-      - "@Capoit"
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -30,28 +27,24 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - "@Capoit`"
-      - "@Capoit"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@Capoit`"
-      - "@Capoit"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - "@Capoit`"
-      - "@Capoit"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@Capoit`"
-      - "@Capoit"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -80,7 +73,6 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - "@Capoit`"
-      - "@Capoit"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

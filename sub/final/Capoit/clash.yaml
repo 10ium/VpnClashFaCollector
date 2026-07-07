@@ -465,8 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Capoit`", server: 151.101.56.7, port: 443, type: trojan, password: MITIVPN, sni: ssl.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: /---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN=GE, headers: {Host: ssl.fastly.com}}, udp: true, tfo: false}
-  - {name: "@Capoit", server: 199.232.78.140, port: 443, type: trojan, password: MiTiVPN, sni: ssl.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: /---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN=fl, headers: {Host: ssl.fastly.com}}, udp: true, tfo: false}
+  - {name: "@Capoit`", server: server.xv98.ir, port: 2044, type: vless, tls: true, packet-encoding: xudp, uuid: f75566a5-4744-4806-ac2e-ccaefe1b1080, host: play.google.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,7 +483,6 @@ proxy-groups:
     type: select
     proxies:
       - "@Capoit`"
-      - "@Capoit"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -492,7 +490,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Capoit`"
-      - "@Capoit"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -500,7 +497,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Capoit`"
-      - "@Capoit"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -517,7 +513,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit`"
-      - "@Capoit"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -525,7 +520,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit`"
-      - "@Capoit"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -533,7 +527,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit`"
-      - "@Capoit"
   - name: دانلود منیجر 📥
     type: select
     proxies:
