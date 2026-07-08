@@ -5,46 +5,74 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 🇬🇧 United Kingdom 🇬🇧, server: 57.128.176.87, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 0970324b-8c61-4ae7-8c3f-385a6f1e17e4, servername: vpn47.cc.cd, network: ws, ws-opts: {path: /, headers: {Host: vpn47.cc.cd}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇩🇪 Germany 🇩🇪, server: 57.129.121.230, port: 10443, type: ss, cipher: chacha20-ietf-poly1305, password: uROuEqsL8IUMMVb4wDwnGU, udp: true, tfo: false}
+  - {name: 🇩🇪 Germany 🇩🇪 2, server: 185.137.157.138, port: 443, type: trojan, password: dh-Ws-YoJIgTYLZ-A5VljeduVse-vhDl7Q, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇩🇪 Germany 🇩🇪`, server: 161.35.217.79, port: 2087, type: vless, tls: true, packet-encoding: xudp, uuid: 0970324b-8c61-4ae7-8c3f-385a6f1e17e4, servername: vpn47.cc.cd, network: ws, ws-opts: {path: /, headers: {Host: vpn47.cc.cd}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇩🇪 Germany 🇩🇪 3, server: 209.38.221.121, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 0970324b-8c61-4ae7-8c3f-385a6f1e17e4, servername: vpn47.cc.cd, network: ws, ws-opts: {path: /, headers: {Host: vpn47.cc.cd}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇩🇪 Germany 🇩🇪 4, server: 148.253.210.248, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c35050ce-01ab-45a9-91b8-54cec637d0a8, servername: octopusss5.info, network: ws, ws-opts: {path: /udfyfws, headers: {Host: octopusss5.info}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇬🇧 United Kingdom 🇬🇧
+      - 🇩🇪 Germany 🇩🇪
+      - 🇩🇪 Germany 🇩🇪 2
+      - 🇩🇪 Germany 🇩🇪`
+      - 🇩🇪 Germany 🇩🇪 3
+      - 🇩🇪 Germany 🇩🇪 4
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 🇬🇧 United Kingdom 🇬🇧
+      - 🇩🇪 Germany 🇩🇪
+      - 🇩🇪 Germany 🇩🇪 2
+      - 🇩🇪 Germany 🇩🇪`
+      - 🇩🇪 Germany 🇩🇪 3
+      - 🇩🇪 Germany 🇩🇪 4
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇬🇧 United Kingdom 🇬🇧
+      - 🇩🇪 Germany 🇩🇪
+      - 🇩🇪 Germany 🇩🇪 2
+      - 🇩🇪 Germany 🇩🇪`
+      - 🇩🇪 Germany 🇩🇪 3
+      - 🇩🇪 Germany 🇩🇪 4
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇬🇧 United Kingdom 🇬🇧
+      - 🇩🇪 Germany 🇩🇪
+      - 🇩🇪 Germany 🇩🇪 2
+      - 🇩🇪 Germany 🇩🇪`
+      - 🇩🇪 Germany 🇩🇪 3
+      - 🇩🇪 Germany 🇩🇪 4
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 🇬🇧 United Kingdom 🇬🇧
+      - 🇩🇪 Germany 🇩🇪
+      - 🇩🇪 Germany 🇩🇪 2
+      - 🇩🇪 Germany 🇩🇪`
+      - 🇩🇪 Germany 🇩🇪 3
+      - 🇩🇪 Germany 🇩🇪 4
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇬🇧 United Kingdom 🇬🇧
+      - 🇩🇪 Germany 🇩🇪
+      - 🇩🇪 Germany 🇩🇪 2
+      - 🇩🇪 Germany 🇩🇪`
+      - 🇩🇪 Germany 🇩🇪 3
+      - 🇩🇪 Germany 🇩🇪 4
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +100,11 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇬🇧 United Kingdom 🇬🇧
+      - 🇩🇪 Germany 🇩🇪
+      - 🇩🇪 Germany 🇩🇪 2
+      - 🇩🇪 Germany 🇩🇪`
+      - 🇩🇪 Germany 🇩🇪 3
+      - 🇩🇪 Germany 🇩🇪 4
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
