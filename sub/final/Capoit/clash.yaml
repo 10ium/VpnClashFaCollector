@@ -470,7 +470,6 @@ proxies:
   - {name: "@Capoit 2", server: 151.101.110.219, port: 443, type: trojan, password: MiTiVPN, sni: ssl.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: /MiTiVPN=NL, headers: {Host: ssl.fastly.com}}, udp: true, tfo: false}
   - {name: "@Capoit` 2", server: panel.aminsec.ir, port: 22338, type: vless, tls: true, packet-encoding: xudp, uuid: 07a978bb-49ec-4dbe-827b-feb9243f3e63, host: play.google.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@Capoit` 3", server: x4g-production-b104.up.railway.app, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: eb6100e8-8f59-d6aa-c018-b3b48795fb7b, servername: x4g-production-b104.up.railway.app, alpn: [http%2F1.1], network: ws, ws-opts: {path: /ws/eb6100e8-8f59-d6aa-c018-b3b48795fb7b, headers: {Host: x4g-production-b104.up.railway.app}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 4", server: server.xv98.ir, port: 2044, type: vless, tls: true, packet-encoding: xudp, uuid: f75566a5-4744-4806-ac2e-ccaefe1b1080, host: play.google.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -492,7 +491,6 @@ proxy-groups:
       - "@Capoit 2"
       - "@Capoit` 2"
       - "@Capoit` 3"
-      - "@Capoit` 4"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -504,7 +502,6 @@ proxy-groups:
       - "@Capoit 2"
       - "@Capoit` 2"
       - "@Capoit` 3"
-      - "@Capoit` 4"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -516,7 +513,6 @@ proxy-groups:
       - "@Capoit 2"
       - "@Capoit` 2"
       - "@Capoit` 3"
-      - "@Capoit` 4"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -537,7 +533,6 @@ proxy-groups:
       - "@Capoit 2"
       - "@Capoit` 2"
       - "@Capoit` 3"
-      - "@Capoit` 4"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -549,7 +544,6 @@ proxy-groups:
       - "@Capoit 2"
       - "@Capoit` 2"
       - "@Capoit` 3"
-      - "@Capoit` 4"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -561,7 +555,6 @@ proxy-groups:
       - "@Capoit 2"
       - "@Capoit` 2"
       - "@Capoit` 3"
-      - "@Capoit` 4"
   - name: دانلود منیجر 📥
     type: select
     proxies:
