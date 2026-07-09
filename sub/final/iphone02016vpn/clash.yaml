@@ -465,15 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@iphone02016vpn - 5", server: 83.228.226.166, port: 1131, type: trojan, password: ---------------BanV2ray---------------, sni: promotion.yahoo.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@iphone02016vpn - 6", server: 83.228.226.166, port: 12830, type: trojan, password: ---------------BanV2ray---------------, sni: promotion.yahoo.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@iphone02016vpn - 9", server: 83.228.226.166, port: 1337, type: trojan, password: ---------------BanV2ray---------------, sni: promotion.yahoo.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@iphone02016vpn - 8", server: 83.228.226.166, port: 16369, type: trojan, password: ---------------BanV2ray---------------, sni: promotion.yahoo.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@iphone02016vpn - 7", server: 83.228.226.166, port: 3936, type: trojan, password: ---------------BanV2ray---------------, sni: promotion.yahoo.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@iphone02016vpn - 10`", server: 83.228.226.166, port: 40179, type: trojan, password: ---------------BanV2ray---------------, sni: promotion.yahoo.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@iphone02016vpn - 4", server: 83.168.71.216, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a18f7c2d-9e45-4b8a-af3c-1d5e7f9c8b2a, servername: ads.x5.ru, host: ads.x5.ru, path: /, reality-opts: {public-key: 8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho, short-id: 2f49bccf11150ef2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "***🆔***@iphone02016vpn`", server: 83.168.71.216, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a18f7c2d-9e45-4b8a-af3c-1d5e7f9c8b2a, servername: ads.x5.ru, host: ads.x5.ru, path: /, reality-opts: {public-key: 8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho, short-id: 2f49bccf11150ef2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@iphone02016vpn - 2", server: 83.168.71.216, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a18f7c2d-9e45-4b8a-af3c-1d5e7f9c8b2a, servername: ads.x5.ru, host: ads.x5.ru, path: /, reality-opts: {public-key: 8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho, short-id: 2f49bccf11150ef2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -490,45 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@iphone02016vpn - 5"
-      - "@iphone02016vpn - 6"
-      - "@iphone02016vpn - 9"
-      - "@iphone02016vpn - 8"
-      - "@iphone02016vpn - 7"
-      - "@iphone02016vpn - 10`"
-      - "@iphone02016vpn - 4"
       - "***🆔***@iphone02016vpn`"
-      - "@iphone02016vpn - 2"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@iphone02016vpn - 5"
-      - "@iphone02016vpn - 6"
-      - "@iphone02016vpn - 9"
-      - "@iphone02016vpn - 8"
-      - "@iphone02016vpn - 7"
-      - "@iphone02016vpn - 10`"
-      - "@iphone02016vpn - 4"
       - "***🆔***@iphone02016vpn`"
-      - "@iphone02016vpn - 2"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@iphone02016vpn - 5"
-      - "@iphone02016vpn - 6"
-      - "@iphone02016vpn - 9"
-      - "@iphone02016vpn - 8"
-      - "@iphone02016vpn - 7"
-      - "@iphone02016vpn - 10`"
-      - "@iphone02016vpn - 4"
       - "***🆔***@iphone02016vpn`"
-      - "@iphone02016vpn - 2"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -544,45 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@iphone02016vpn - 5"
-      - "@iphone02016vpn - 6"
-      - "@iphone02016vpn - 9"
-      - "@iphone02016vpn - 8"
-      - "@iphone02016vpn - 7"
-      - "@iphone02016vpn - 10`"
-      - "@iphone02016vpn - 4"
       - "***🆔***@iphone02016vpn`"
-      - "@iphone02016vpn - 2"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@iphone02016vpn - 5"
-      - "@iphone02016vpn - 6"
-      - "@iphone02016vpn - 9"
-      - "@iphone02016vpn - 8"
-      - "@iphone02016vpn - 7"
-      - "@iphone02016vpn - 10`"
-      - "@iphone02016vpn - 4"
       - "***🆔***@iphone02016vpn`"
-      - "@iphone02016vpn - 2"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@iphone02016vpn - 5"
-      - "@iphone02016vpn - 6"
-      - "@iphone02016vpn - 9"
-      - "@iphone02016vpn - 8"
-      - "@iphone02016vpn - 7"
-      - "@iphone02016vpn - 10`"
-      - "@iphone02016vpn - 4"
       - "***🆔***@iphone02016vpn`"
-      - "@iphone02016vpn - 2"
   - name: دانلود منیجر 📥
     type: select
     proxies:
