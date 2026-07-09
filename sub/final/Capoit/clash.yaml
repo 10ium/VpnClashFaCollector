@@ -465,14 +465,12 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Capoit", server: 179.237.75.28, port: 61235, type: trojan, password: 2TzqY10FJL, sni: yahoo.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit 2", server: 104.16.72.2, port: 443, type: trojan, password: 86957ec0-b213-433b-a43b-51f2175e0ec3, sni: space.byu.id.yxls.eu.cc, skip-cert-verify: false, network: ws, ws-opts: {path: /au-do, headers: {Host: space.byu.id.yxls.eu.cc}}, udp: true, tfo: false}
-  - {name: "@Capoit`", server: 151.101.56.7, port: 443, type: trojan, password: MITIVPN, sni: ssl.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: /---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN=de, headers: {Host: ssl.fastly.com}}, udp: true, tfo: false}
-  - {name: "@Capoit` 2", server: 104.16.72.2, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true, tfo: false}
-  - {name: "@Capoit 3", server: 104.16.72.2, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6680846a-8a57-4dfd-9a0e-63209cfc8535, servername: support.zoom.us.yxls.eu.cc, network: ws, ws-opts: {path: /sg-amz, headers: {Host: support.zoom.us.yxls.eu.cc}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit 4", server: 104.16.72.50, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 7968c546-02dc-4f8c-b791-934591a94cb2, servername: hhvl.hhapp.kdns.fr, network: ws, ws-opts: {path: /cbasur, headers: {Host: hhvl.hhapp.kdns.fr}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit 5", server: 104.16.72.2, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b26ec0f4-6c92-45f7-b287-2a664abf1963, servername: server-ir-7.ariyuz.org, network: ws, ws-opts: {path: /, headers: {Host: server-ir-7.ariyuz.org}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit 6", server: 104.16.72.50, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f0db70ae-559e-4cba-aa00-3a04eb04c3e0, servername: fm3.pages.dev, network: ws, ws-opts: {path: /, headers: {Host: fm3.pages.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit", server: 104.16.72.2, port: 443, type: trojan, password: 86957ec0-b213-433b-a43b-51f2175e0ec3, sni: space.byu.id.yxls.eu.cc, skip-cert-verify: false, network: ws, ws-opts: {path: /au-do, headers: {Host: space.byu.id.yxls.eu.cc}}, udp: true, tfo: false}
+  - {name: "@Capoit`", server: 104.16.72.2, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true, tfo: false}
+  - {name: "@Capoit` 2", server: x4g-production-6820.up.railway.app, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 63799b8b-df83-81fb-1fee-9cf67dd2d4db, servername: x4g-production-6820.up.railway.app, alpn: [http%2F1.1], network: ws, ws-opts: {path: /ws/63799b8b-df83-81fb-1fee-9cf67dd2d4db, headers: {Host: x4g-production-6820.up.railway.app}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit 2", server: 104.16.72.2, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6680846a-8a57-4dfd-9a0e-63209cfc8535, servername: support.zoom.us.yxls.eu.cc, network: ws, ws-opts: {path: /sg-amz, headers: {Host: support.zoom.us.yxls.eu.cc}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit 3", server: 104.16.72.50, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 7968c546-02dc-4f8c-b791-934591a94cb2, servername: hhvl.hhapp.kdns.fr, network: ws, ws-opts: {path: /cbasur, headers: {Host: hhvl.hhapp.kdns.fr}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit 4", server: 104.16.72.2, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b26ec0f4-6c92-45f7-b287-2a664abf1963, servername: server-ir-7.ariyuz.org, network: ws, ws-opts: {path: /, headers: {Host: server-ir-7.ariyuz.org}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -490,13 +488,11 @@ proxy-groups:
     type: select
     proxies:
       - "@Capoit"
-      - "@Capoit 2"
       - "@Capoit`"
       - "@Capoit` 2"
+      - "@Capoit 2"
       - "@Capoit 3"
       - "@Capoit 4"
-      - "@Capoit 5"
-      - "@Capoit 6"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -504,13 +500,11 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Capoit"
-      - "@Capoit 2"
       - "@Capoit`"
       - "@Capoit` 2"
+      - "@Capoit 2"
       - "@Capoit 3"
       - "@Capoit 4"
-      - "@Capoit 5"
-      - "@Capoit 6"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -518,13 +512,11 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Capoit"
-      - "@Capoit 2"
       - "@Capoit`"
       - "@Capoit` 2"
+      - "@Capoit 2"
       - "@Capoit 3"
       - "@Capoit 4"
-      - "@Capoit 5"
-      - "@Capoit 6"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -541,13 +533,11 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit"
-      - "@Capoit 2"
       - "@Capoit`"
       - "@Capoit` 2"
+      - "@Capoit 2"
       - "@Capoit 3"
       - "@Capoit 4"
-      - "@Capoit 5"
-      - "@Capoit 6"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -555,13 +545,11 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit"
-      - "@Capoit 2"
       - "@Capoit`"
       - "@Capoit` 2"
+      - "@Capoit 2"
       - "@Capoit 3"
       - "@Capoit 4"
-      - "@Capoit 5"
-      - "@Capoit 6"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -569,13 +557,11 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit"
-      - "@Capoit 2"
       - "@Capoit`"
       - "@Capoit` 2"
+      - "@Capoit 2"
       - "@Capoit 3"
       - "@Capoit 4"
-      - "@Capoit 5"
-      - "@Capoit 6"
   - name: دانلود منیجر 📥
     type: select
     proxies:
