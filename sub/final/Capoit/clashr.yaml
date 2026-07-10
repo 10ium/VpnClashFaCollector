@@ -5,74 +5,46 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@Capoit", server: 104.16.72.2, port: 443, type: trojan, password: 86957ec0-b213-433b-a43b-51f2175e0ec3, sni: space.byu.id.yxls.eu.cc, skip-cert-verify: false, network: ws, ws-opts: {path: /au-do, headers: {Host: space.byu.id.yxls.eu.cc}}, udp: true, tfo: false}
-  - {name: "@Capoit`", server: 104.16.72.2, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true, tfo: false}
-  - {name: "@Capoit 2", server: 104.16.72.2, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6680846a-8a57-4dfd-9a0e-63209cfc8535, servername: support.zoom.us.yxls.eu.cc, network: ws, ws-opts: {path: /sg-amz, headers: {Host: support.zoom.us.yxls.eu.cc}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit 3", server: 104.16.72.50, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 7968c546-02dc-4f8c-b791-934591a94cb2, servername: hhvl.hhapp.kdns.fr, network: ws, ws-opts: {path: /cbasur, headers: {Host: hhvl.hhapp.kdns.fr}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit 4", server: 104.16.72.2, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b26ec0f4-6c92-45f7-b287-2a664abf1963, servername: server-ir-7.ariyuz.org, network: ws, ws-opts: {path: /, headers: {Host: server-ir-7.ariyuz.org}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit`", server: server.xv98.ir, port: 2044, type: vless, tls: true, packet-encoding: xudp, uuid: f75566a5-4744-4806-ac2e-ccaefe1b1080, host: play.google.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@Capoit"
       - "@Capoit`"
-      - "@Capoit 2"
-      - "@Capoit 3"
-      - "@Capoit 4"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@Capoit"
       - "@Capoit`"
-      - "@Capoit 2"
-      - "@Capoit 3"
-      - "@Capoit 4"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@Capoit"
       - "@Capoit`"
-      - "@Capoit 2"
-      - "@Capoit 3"
-      - "@Capoit 4"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@Capoit"
       - "@Capoit`"
-      - "@Capoit 2"
-      - "@Capoit 3"
-      - "@Capoit 4"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@Capoit"
       - "@Capoit`"
-      - "@Capoit 2"
-      - "@Capoit 3"
-      - "@Capoit 4"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@Capoit"
       - "@Capoit`"
-      - "@Capoit 2"
-      - "@Capoit 3"
-      - "@Capoit 4"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -100,11 +72,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@Capoit"
       - "@Capoit`"
-      - "@Capoit 2"
-      - "@Capoit 3"
-      - "@Capoit 4"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

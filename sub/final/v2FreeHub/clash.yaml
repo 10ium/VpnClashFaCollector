@@ -465,13 +465,13 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@v2FreeHub 🇸🇬", server: 45.32.122.179, port: 23027, type: ss, cipher: chacha20-ietf-poly1305, password: I-bP3lFh.dTG3XitF7XtVK83CZ7rI2Ut=n, udp: true, tfo: false}
-  - {name: "@v2FreeHub 🇳🇱", server: 5.253.59.156, port: 32140, type: ss, cipher: chacha20-ietf-poly1305, password: It2NiBbsHvvhqU5aGEZ2pI, udp: true, tfo: false}
-  - {name: "@v2FreeHub 🇦🇺", server: 45.77.232.213, port: 15675, type: ss, cipher: chacha20-ietf-poly1305, password: TWG7J1KR5KsPaV5qZI+rieueKxxafZSpCH, udp: true, tfo: false}
-  - {name: "@v2FreeHub 🇧🇷", server: 38.180.221.143, port: 17283, type: ss, cipher: chacha20-ietf-poly1305, password: bwjNPcwgz5+1gCyi+rB+nfqugw38B7tqVa, udp: true, tfo: false}
-  - {name: "@v2FreeHub 🇫🇷", server: 137.74.119.18, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 9479aaaf-3057-4bac-ad58-efa2a6abff73, alpn: [h2%2Chttp%2F1.1], path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2FreeHub 🇬🇧", server: 141.133.175.194, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b6f29f8d-016e-4f30-b57f-c0cdafab2a40, servername: ads.x5.ru, host: ads.x5.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: nPcUKydxoRI66O3tT9O4QCZpLjOBvkGsiXG7pDX1BBw, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2FreeHub 🇩🇪", server: 57.129.121.230, port: 2053, type: vmess, uuid: 3d358ea5-465b-46ac-a2df-98ca1555194f, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇫🇮 Finland 🇫🇮, server: bot.sobhanpor.ir, port: 1080, type: ss, cipher: chacha20-ietf-poly1305, password: 4-eFXdHLJpTSmLFKqFapXGNQwddDf4LG, udp: true, tfo: false}
+  - {name: 🇹🇷 Türkiye 🇹🇷, server: 77.83.245.116, port: 9753, type: ss, cipher: chacha20-ietf-poly1305, password: 7exNiN1wA7fVCOV8YdOvBN, udp: true, tfo: false}
+  - {name: 🇸🇬 Singapore 🇸🇬`, server: v2.nooend.me, port: 1080, type: ss, cipher: chacha20-ietf-poly1305, password: -t1IdcYcbkZjR1K5pWlz2A, udp: true, tfo: false}
+  - {name: 🇳🇱 The Netherlands 🇳🇱, server: 5.253.59.156, port: 32140, type: ss, cipher: chacha20-ietf-poly1305, password: WMNFFjQqdFNX4oDo1b2LVO, udp: true, tfo: false}
+  - {name: 🇹🇷 Türkiye 🇹🇷 2, server: 62.133.63.222, port: 48981, type: ss, cipher: chacha20-ietf-poly1305, password: abC43WeNxuDAXdmQZdkwVx, udp: true, tfo: false}
+  - {name: 🇨🇳 Taiwan 🇹🇼, server: 114.25.8.182, port: 50099, type: ss, cipher: chacha20-ietf-poly1305, password: b1ae0fce-9340-4f2e-882d-fdb2218e2e2b, udp: true, tfo: false}
+  - {name: 🇫🇷 France 🇫🇷, server: 135.125.113.81, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: q6bhpyjk0o352x7i, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -488,39 +488,39 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@v2FreeHub 🇸🇬"
-      - "@v2FreeHub 🇳🇱"
-      - "@v2FreeHub 🇦🇺"
-      - "@v2FreeHub 🇧🇷"
-      - "@v2FreeHub 🇫🇷"
-      - "@v2FreeHub 🇬🇧"
-      - "@v2FreeHub 🇩🇪"
+      - 🇫🇮 Finland 🇫🇮
+      - 🇹🇷 Türkiye 🇹🇷
+      - 🇸🇬 Singapore 🇸🇬`
+      - 🇳🇱 The Netherlands 🇳🇱
+      - 🇹🇷 Türkiye 🇹🇷 2
+      - 🇨🇳 Taiwan 🇹🇼
+      - 🇫🇷 France 🇫🇷
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@v2FreeHub 🇸🇬"
-      - "@v2FreeHub 🇳🇱"
-      - "@v2FreeHub 🇦🇺"
-      - "@v2FreeHub 🇧🇷"
-      - "@v2FreeHub 🇫🇷"
-      - "@v2FreeHub 🇬🇧"
-      - "@v2FreeHub 🇩🇪"
+      - 🇫🇮 Finland 🇫🇮
+      - 🇹🇷 Türkiye 🇹🇷
+      - 🇸🇬 Singapore 🇸🇬`
+      - 🇳🇱 The Netherlands 🇳🇱
+      - 🇹🇷 Türkiye 🇹🇷 2
+      - 🇨🇳 Taiwan 🇹🇼
+      - 🇫🇷 France 🇫🇷
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@v2FreeHub 🇸🇬"
-      - "@v2FreeHub 🇳🇱"
-      - "@v2FreeHub 🇦🇺"
-      - "@v2FreeHub 🇧🇷"
-      - "@v2FreeHub 🇫🇷"
-      - "@v2FreeHub 🇬🇧"
-      - "@v2FreeHub 🇩🇪"
+      - 🇫🇮 Finland 🇫🇮
+      - 🇹🇷 Türkiye 🇹🇷
+      - 🇸🇬 Singapore 🇸🇬`
+      - 🇳🇱 The Netherlands 🇳🇱
+      - 🇹🇷 Türkiye 🇹🇷 2
+      - 🇨🇳 Taiwan 🇹🇼
+      - 🇫🇷 France 🇫🇷
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -536,39 +536,39 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2FreeHub 🇸🇬"
-      - "@v2FreeHub 🇳🇱"
-      - "@v2FreeHub 🇦🇺"
-      - "@v2FreeHub 🇧🇷"
-      - "@v2FreeHub 🇫🇷"
-      - "@v2FreeHub 🇬🇧"
-      - "@v2FreeHub 🇩🇪"
+      - 🇫🇮 Finland 🇫🇮
+      - 🇹🇷 Türkiye 🇹🇷
+      - 🇸🇬 Singapore 🇸🇬`
+      - 🇳🇱 The Netherlands 🇳🇱
+      - 🇹🇷 Türkiye 🇹🇷 2
+      - 🇨🇳 Taiwan 🇹🇼
+      - 🇫🇷 France 🇫🇷
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2FreeHub 🇸🇬"
-      - "@v2FreeHub 🇳🇱"
-      - "@v2FreeHub 🇦🇺"
-      - "@v2FreeHub 🇧🇷"
-      - "@v2FreeHub 🇫🇷"
-      - "@v2FreeHub 🇬🇧"
-      - "@v2FreeHub 🇩🇪"
+      - 🇫🇮 Finland 🇫🇮
+      - 🇹🇷 Türkiye 🇹🇷
+      - 🇸🇬 Singapore 🇸🇬`
+      - 🇳🇱 The Netherlands 🇳🇱
+      - 🇹🇷 Türkiye 🇹🇷 2
+      - 🇨🇳 Taiwan 🇹🇼
+      - 🇫🇷 France 🇫🇷
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2FreeHub 🇸🇬"
-      - "@v2FreeHub 🇳🇱"
-      - "@v2FreeHub 🇦🇺"
-      - "@v2FreeHub 🇧🇷"
-      - "@v2FreeHub 🇫🇷"
-      - "@v2FreeHub 🇬🇧"
-      - "@v2FreeHub 🇩🇪"
+      - 🇫🇮 Finland 🇫🇮
+      - 🇹🇷 Türkiye 🇹🇷
+      - 🇸🇬 Singapore 🇸🇬`
+      - 🇳🇱 The Netherlands 🇳🇱
+      - 🇹🇷 Türkiye 🇹🇷 2
+      - 🇨🇳 Taiwan 🇹🇼
+      - 🇫🇷 France 🇫🇷
   - name: دانلود منیجر 📥
     type: select
     proxies:

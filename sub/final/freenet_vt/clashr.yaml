@@ -5,46 +5,46 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: vip3`, server: 5.42.100.84, port: 48212, type: vless, tls: true, packet-encoding: xudp, uuid: 2f93a08b-5c23-502c-936d-a53072cf9882, servername: yandex.ru, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: grpc}, reality-opts: {public-key: 8rZnE8gkbRv3ZVHUvkyrMZnmoIRhtncAgQpUAPAwIlo, short-id: 62b5466a2183d4da}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@freenet_vt`", server: 151.101.34.144, port: 443, type: trojan, password: 1N2o5bPwwA, sni: global.fastly.com, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - vip3`
+      - "@freenet_vt`"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - vip3`
+      - "@freenet_vt`"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - vip3`
+      - "@freenet_vt`"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - vip3`
+      - "@freenet_vt`"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - vip3`
+      - "@freenet_vt`"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - vip3`
+      - "@freenet_vt`"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +72,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - vip3`
+      - "@freenet_vt`"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

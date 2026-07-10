@@ -465,7 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: vip3`, server: 5.42.100.84, port: 48212, type: vless, tls: true, packet-encoding: xudp, uuid: 2f93a08b-5c23-502c-936d-a53072cf9882, servername: yandex.ru, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: grpc}, reality-opts: {public-key: 8rZnE8gkbRv3ZVHUvkyrMZnmoIRhtncAgQpUAPAwIlo, short-id: 62b5466a2183d4da}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@freenet_vt`", server: 151.101.34.144, port: 443, type: trojan, password: 1N2o5bPwwA, sni: global.fastly.com, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - vip3`
+      - "@freenet_vt`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - vip3`
+      - "@freenet_vt`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - vip3`
+      - "@freenet_vt`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - vip3`
+      - "@freenet_vt`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - vip3`
+      - "@freenet_vt`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - vip3`
+      - "@freenet_vt`"
   - name: دانلود منیجر 📥
     type: select
     proxies:
