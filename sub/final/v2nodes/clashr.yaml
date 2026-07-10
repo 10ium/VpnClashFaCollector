@@ -5,6 +5,9 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: 31.76.80.205:8388, server: 31.76.80.205, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: UZQY9hNjVNWwamajrXAf1vt8u63nj0fF, udp: true, tfo: false}
+  - {name: 104.16.72.2:443, server: 104.16.72.2, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 14b59caf-a196-4ec2-8c70-c7b388062f5b, servername: vangoghhh.info, network: ws, ws-opts: {path: /rdfgtws, headers: {Host: vangoghhh.info}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: osit1.ghast.sbs:443, server: osit1.ghast.sbs, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 367ff772-a8f4-4895-8e99-3702a868f0c6, servername: osit1.ghast.sbs, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: grpc-api}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: rare-creation-production.up.railway.app:443, server: rare-creation-production.up.railway.app, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 39dfd8b4-47a8-158c-80e9-e80a747828fc, servername: rare-creation-production.up.railway.app, alpn: [http/1.1], network: ws, ws-opts: {path: /ws/39dfd8b4-47a8-158c-80e9-e80a747828fc, headers: {Host: rare-creation-production.up.railway.app}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
@@ -12,6 +15,9 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - 31.76.80.205:8388
+      - 104.16.72.2:443
+      - osit1.ghast.sbs:443
       - rare-creation-production.up.railway.app:443
   - name: ♻️ 自动选择
     type: url-test
@@ -19,6 +25,9 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - 31.76.80.205:8388
+      - 104.16.72.2:443
+      - osit1.ghast.sbs:443
       - rare-creation-production.up.railway.app:443
   - name: 🌍 国外媒体
     type: select
@@ -26,24 +35,36 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 31.76.80.205:8388
+      - 104.16.72.2:443
+      - osit1.ghast.sbs:443
       - rare-creation-production.up.railway.app:443
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 31.76.80.205:8388
+      - 104.16.72.2:443
+      - osit1.ghast.sbs:443
       - rare-creation-production.up.railway.app:443
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - 31.76.80.205:8388
+      - 104.16.72.2:443
+      - osit1.ghast.sbs:443
       - rare-creation-production.up.railway.app:443
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 31.76.80.205:8388
+      - 104.16.72.2:443
+      - osit1.ghast.sbs:443
       - rare-creation-production.up.railway.app:443
   - name: 🎯 全球直连
     type: select
@@ -72,6 +93,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 31.76.80.205:8388
+      - 104.16.72.2:443
+      - osit1.ghast.sbs:443
       - rare-creation-production.up.railway.app:443
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
