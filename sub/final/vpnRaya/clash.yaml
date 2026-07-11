@@ -465,12 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@v2ray_33", server: nl-tx.sbrf-cdn342.ru, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 01ea3b87-b7b1-4aef-b24a-9c43fbd3b26f, servername: sub.sbrf-cdn342.ru, alpn: [http%2F1.1], host: sub.sbrf-cdn342.ru, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2ray_33 2", server: uae.sbrf-cdn342.ru, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 01ea3b87-b7b1-4aef-b24a-9c43fbd3b26f, servername: sub.sbrf-cdn342.ru, alpn: [http%2F1.1], host: sub.sbrf-cdn342.ru, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@themecherie`", server: 43.169.18.179, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 06b65903-406d-4a41-8463-6fd5c0ee7798, servername: sni.skylee4.cloudns.ch, network: ws, ws-opts: {path: /proxyip, headers: {Host: sni.skylee4.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2ray_33 3", server: 184.72.235.33, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 26524cce-d514-4014-a426-365fb266a14d, servername: i8dxb.media-cdn-us.chinav.indevs.in, network: ws, ws-opts: {path: /danfeng-lo9ew8-vfksib-hwrl-84fg5mvlfp, headers: {Host: i8dxb.media-cdn-us.chinav.indevs.in}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2ray_33 4", server: 20.229.252.162, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 26524cce-d514-4014-a426-365fb266a14d, servername: i8dxb.media-cdn-us.chinav.indevs.in, network: ws, ws-opts: {path: /danfeng-lo9ew8-vfksib-hwrl-84fg5mvlfp, headers: {Host: i8dxb.media-cdn-us.chinav.indevs.in}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2ray_33 5", server: melimtn.piroowat.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d6c7779c-1ac5-40ef-c0d8-6c952bb9032e, servername: panel8.piroowat.com, network: ws, ws-opts: {path: /, headers: {Host: panel8.piroowat.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: -tst`, server: 94.183.207.211, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b9808bb6-69bd-4370-ac79-97e1e535966e, host: www.icloud.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,36 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@v2ray_33"
-      - "@v2ray_33 2"
-      - "@themecherie`"
-      - "@v2ray_33 3"
-      - "@v2ray_33 4"
-      - "@v2ray_33 5"
+      - -tst`
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@v2ray_33"
-      - "@v2ray_33 2"
-      - "@themecherie`"
-      - "@v2ray_33 3"
-      - "@v2ray_33 4"
-      - "@v2ray_33 5"
+      - -tst`
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@v2ray_33"
-      - "@v2ray_33 2"
-      - "@themecherie`"
-      - "@v2ray_33 3"
-      - "@v2ray_33 4"
-      - "@v2ray_33 5"
+      - -tst`
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -532,36 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2ray_33"
-      - "@v2ray_33 2"
-      - "@themecherie`"
-      - "@v2ray_33 3"
-      - "@v2ray_33 4"
-      - "@v2ray_33 5"
+      - -tst`
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2ray_33"
-      - "@v2ray_33 2"
-      - "@themecherie`"
-      - "@v2ray_33 3"
-      - "@v2ray_33 4"
-      - "@v2ray_33 5"
+      - -tst`
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2ray_33"
-      - "@v2ray_33 2"
-      - "@themecherie`"
-      - "@v2ray_33 3"
-      - "@v2ray_33 4"
-      - "@v2ray_33 5"
+      - -tst`
   - name: دانلود منیجر 📥
     type: select
     proxies:
