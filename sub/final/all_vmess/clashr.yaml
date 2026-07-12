@@ -5,13 +5,14 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "اگه میخوای قطع نشی جوین شو : @farsiproxy", server: 165.140.216.142, port: 443, type: vmess, uuid: b65a2d69-5634-42a2-e4be-54e8a6176900, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "اگه میخوای قطع نشی جوین شو : @farsiproxy 2", server: 57.129.121.230, port: 2053, type: vmess, uuid: 3d358ea5-465b-46ac-a2df-98ca1555194f, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "اگه میخوای قطع نشی جوین شو : @farsiproxy 3", server: 82.198.246.37, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad", server: 47.83.221.185, port: 80, type: vmess, uuid: 771a590c-5eac-5732-b796-17251132f8d2, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 2", server: 143.198.235.98, port: 30080, type: vmess, uuid: d76c0edb-8097-4371-8d97-722723756012, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /vm}, udp: true, tfo: false}
-  - {name: "@filembad 3", server: 31.76.78.98, port: 110, type: vmess, uuid: c4caf231-bf6c-4603-98d8-f4518bfc52af, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 4", server: es.connfull.org, port: 2052, type: vmess, uuid: e42d124a-470f-4c84-bf4f-eff46cd8d7b7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "اگه میخوای قطع نشی جوین شو : @farsiproxy", server: 57.129.121.230, port: 2053, type: vmess, uuid: 3d358ea5-465b-46ac-a2df-98ca1555194f, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "اگه میخوای قطع نشی جوین شو : @farsiproxy 2", server: 82.198.246.37, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad", server: 43.153.94.24, port: 10086, type: vmess, uuid: bd7e0c40-79c7-4db1-ba27-43894d59a4a1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 2", server: 47.83.221.185, port: 80, type: vmess, uuid: 771a590c-5eac-5732-b796-17251132f8d2, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 3", server: 143.198.235.98, port: 30080, type: vmess, uuid: d76c0edb-8097-4371-8d97-722723756012, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /vm}, udp: true, tfo: false}
+  - {name: ✨ @NamiraConfigs | ❤️ وصل شدی جوین شو | ⚡ | 🇳🇱, server: 31.76.78.98, port: 110, type: vmess, uuid: c4caf231-bf6c-4603-98d8-f4518bfc52af, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 4", server: 31.76.78.98, port: 110, type: vmess, uuid: c4caf231-bf6c-4603-98d8-f4518bfc52af, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 5", server: es.connfull.org, port: 2052, type: vmess, uuid: e42d124a-470f-4c84-bf4f-eff46cd8d7b7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -20,11 +21,12 @@ proxy-groups:
       - DIRECT
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy 2"
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy 3"
       - "@filembad"
       - "@filembad 2"
       - "@filembad 3"
+      - ✨ @NamiraConfigs | ❤️ وصل شدی جوین شو | ⚡ | 🇳🇱
       - "@filembad 4"
+      - "@filembad 5"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -33,11 +35,12 @@ proxy-groups:
     proxies:
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy 2"
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy 3"
       - "@filembad"
       - "@filembad 2"
       - "@filembad 3"
+      - ✨ @NamiraConfigs | ❤️ وصل شدی جوین شو | ⚡ | 🇳🇱
       - "@filembad 4"
+      - "@filembad 5"
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -46,11 +49,12 @@ proxy-groups:
       - 🎯 全球直连
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy 2"
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy 3"
       - "@filembad"
       - "@filembad 2"
       - "@filembad 3"
+      - ✨ @NamiraConfigs | ❤️ وصل شدی جوین شو | ⚡ | 🇳🇱
       - "@filembad 4"
+      - "@filembad 5"
   - name: 📲 电报信息
     type: select
     proxies:
@@ -58,11 +62,12 @@ proxy-groups:
       - 🎯 全球直连
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy 2"
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy 3"
       - "@filembad"
       - "@filembad 2"
       - "@filembad 3"
+      - ✨ @NamiraConfigs | ❤️ وصل شدی جوین شو | ⚡ | 🇳🇱
       - "@filembad 4"
+      - "@filembad 5"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -70,11 +75,12 @@ proxy-groups:
       - 🚀 节点选择
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy 2"
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy 3"
       - "@filembad"
       - "@filembad 2"
       - "@filembad 3"
+      - ✨ @NamiraConfigs | ❤️ وصل شدی جوین شو | ⚡ | 🇳🇱
       - "@filembad 4"
+      - "@filembad 5"
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -82,11 +88,12 @@ proxy-groups:
       - 🎯 全球直连
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy 2"
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy 3"
       - "@filembad"
       - "@filembad 2"
       - "@filembad 3"
+      - ✨ @NamiraConfigs | ❤️ وصل شدی جوین شو | ⚡ | 🇳🇱
       - "@filembad 4"
+      - "@filembad 5"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -116,11 +123,12 @@ proxy-groups:
       - ♻️ 自动选择
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy 2"
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy 3"
       - "@filembad"
       - "@filembad 2"
       - "@filembad 3"
+      - ✨ @NamiraConfigs | ❤️ وصل شدی جوین شو | ⚡ | 🇳🇱
       - "@filembad 4"
+      - "@filembad 5"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
