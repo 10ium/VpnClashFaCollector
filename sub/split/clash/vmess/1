@@ -465,13 +465,10 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "اگه میخوای قطع نشی جوین شو : @farsiproxy", server: 165.140.216.142, port: 443, type: vmess, uuid: b65a2d69-5634-42a2-e4be-54e8a6176900, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad", server: 43.153.94.24, port: 10086, type: vmess, uuid: bd7e0c40-79c7-4db1-ba27-43894d59a4a1, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@bored_vpn", server: 94.103.167.116, port: 80, type: vmess, uuid: d1b0c103-a7ff-4bd6-887d-a73d6ebf1f50, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 2", server: 94.184.17.132, port: 32748, type: vmess, uuid: 0257f746-fdfd-4eba-ba90-28cae94390e2, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@FarazV2ray", server: cl.northbookway.shop, port: 1080, type: vmess, uuid: 5c21b2cb-9aee-4d82-80ac-b6779e6bfec9, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: sub.zirolost.sbs, network: ws, ws-opts: {path: /api, headers: {Host: sub.zirolost.sbs}}, udp: true, tfo: false}
-  - {name: ✨ @NamiraConfigs | ❤️ وصل شدی جوین شو | ⚡ | 🇮🇷, server: dn.torontomovie.com, port: 8080, type: vmess, uuid: a020b5fa-fa21-4f08-9bcd-95f4de69484c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@proxy_kafee", server: kiri1.dlweb.info, port: 23793, type: vmess, uuid: 17483fa4-f518-4886-b85e-a5abd76f7314, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@meliproxy", server: 31.77.149.131, port: 110, type: vmess, uuid: 958f5940-de3d-4466-bb30-b605993db27e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad", server: 2.26.7.59, port: 110, type: vmess, uuid: 958f5940-de3d-4466-bb30-b605993db27e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 2", server: 31.77.149.131, port: 110, type: vmess, uuid: 958f5940-de3d-4466-bb30-b605993db27e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz 🍭", server: spt.reata.ir, port: 1050, type: vmess, uuid: b5b183b6-a4f0-41ad-a015-ba9f000ad7ed, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -488,39 +485,30 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
+      - "@meliproxy"
       - "@filembad"
-      - "@bored_vpn"
       - "@filembad 2"
-      - "@FarazV2ray"
-      - ✨ @NamiraConfigs | ❤️ وصل شدی جوین شو | ⚡ | 🇮🇷
-      - "@proxy_kafee"
+      - "@vpnbaz 🍭"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
+      - "@meliproxy"
       - "@filembad"
-      - "@bored_vpn"
       - "@filembad 2"
-      - "@FarazV2ray"
-      - ✨ @NamiraConfigs | ❤️ وصل شدی جوین شو | ⚡ | 🇮🇷
-      - "@proxy_kafee"
+      - "@vpnbaz 🍭"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
+      - "@meliproxy"
       - "@filembad"
-      - "@bored_vpn"
       - "@filembad 2"
-      - "@FarazV2ray"
-      - ✨ @NamiraConfigs | ❤️ وصل شدی جوین شو | ⚡ | 🇮🇷
-      - "@proxy_kafee"
+      - "@vpnbaz 🍭"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -536,39 +524,30 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
+      - "@meliproxy"
       - "@filembad"
-      - "@bored_vpn"
       - "@filembad 2"
-      - "@FarazV2ray"
-      - ✨ @NamiraConfigs | ❤️ وصل شدی جوین شو | ⚡ | 🇮🇷
-      - "@proxy_kafee"
+      - "@vpnbaz 🍭"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
+      - "@meliproxy"
       - "@filembad"
-      - "@bored_vpn"
       - "@filembad 2"
-      - "@FarazV2ray"
-      - ✨ @NamiraConfigs | ❤️ وصل شدی جوین شو | ⚡ | 🇮🇷
-      - "@proxy_kafee"
+      - "@vpnbaz 🍭"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
+      - "@meliproxy"
       - "@filembad"
-      - "@bored_vpn"
       - "@filembad 2"
-      - "@FarazV2ray"
-      - ✨ @NamiraConfigs | ❤️ وصل شدی جوین شو | ⚡ | 🇮🇷
-      - "@proxy_kafee"
+      - "@vpnbaz 🍭"
   - name: دانلود منیجر 📥
     type: select
     proxies:
