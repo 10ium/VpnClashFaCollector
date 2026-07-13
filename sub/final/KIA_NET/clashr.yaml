@@ -5,81 +5,60 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 🇩🇪 Germany 🇩🇪, server: 185.137.157.145, port: 443, type: trojan, password: dh-Ws-YoJIgTYLZ-A5VljeduVse-vhDl7Q, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇩🇪 Germany 🇩🇪 2, server: 185.137.157.149, port: 443, type: trojan, password: dh-Ws-YoJIgTYLZ-A5VljeduVse-vhDl7Q, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇬🇧 United Kingdom 🇬🇧`, server: 45.86.159.134, port: 2085, type: vless, tls: true, packet-encoding: xudp, uuid: 1ea1b30b-4114-4a5c-bd3a-9637bdae1948, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: vless}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇫🇷 France 🇫🇷, server: 149.202.58.99, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b585dc5e-55bf-4a8b-913a-27c9ccac05c3, servername: bab-6.site, network: ws, ws-opts: {path: /vws/, headers: {Host: bab-6.site}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "[🇸🇪]`", server: 56a186a3d3464b11.sorcepack.ir, port: 56625, type: vless, tls: true, packet-encoding: xudp, uuid: d7955f3f-dfa3-45a0-a3ef-9693df439a0f, servername: icloud.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, reality-opts: {public-key: sVtMU2ZA5W6TLnBCZdgfXqDnOwWePrGVjSNnueDlYmM, short-id: abbb6e5e07cdf34b}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇵🇱 Poland 🇵🇱, server: 94.125.102.52, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e258977b-e413-4718-a3af-02d75492c349, servername: ww1.aniuge.qzz.io, alpn: [http%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: ww1.aniuge.qzz.io}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "[🇵🇱]Kia_Net`", server: z0gpl.pastilbastani.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 735d7945-8748-4a4f-8598-8ccb6aa94bc6, host: play.google.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "[🇫🇮]t.me/Kia_Net`", server: hokm-t1.igatel.com, port: 8526, type: vless, tls: true, packet-encoding: xudp, uuid: a49adb79-ed7b-449a-8bba-3842dc495e74, servername: www.yahoo.com, host: www.yahoo.com, path: /, reality-opts: {public-key: -zNDEqKkScKvMWB7spEper78GE_u-nR4jDHZ3DpOoxM, short-id: 62ad184af31fc8cf}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "[🇩🇪]t.me/Kia_Net`", server: 154.222.9.208, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ea68ea3d-b2f7-47f8-97d5-04cad78dd226, servername: storage.yandex.net, host: storage.yandex.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: ISa-DZOI4LRRb9DHMFYm5oFqBXDjYzz0hVWUfWvzLmo, short-id: dc8109baf0f607ea}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇩🇪 Germany 🇩🇪
-      - 🇩🇪 Germany 🇩🇪 2
-      - 🇬🇧 United Kingdom 🇬🇧`
-      - 🇫🇷 France 🇫🇷
-      - "[🇸🇪]`"
-      - 🇵🇱 Poland 🇵🇱
+      - "[🇵🇱]Kia_Net`"
+      - "[🇫🇮]t.me/Kia_Net`"
+      - "[🇩🇪]t.me/Kia_Net`"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 🇩🇪 Germany 🇩🇪
-      - 🇩🇪 Germany 🇩🇪 2
-      - 🇬🇧 United Kingdom 🇬🇧`
-      - 🇫🇷 France 🇫🇷
-      - "[🇸🇪]`"
-      - 🇵🇱 Poland 🇵🇱
+      - "[🇵🇱]Kia_Net`"
+      - "[🇫🇮]t.me/Kia_Net`"
+      - "[🇩🇪]t.me/Kia_Net`"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇩🇪 Germany 🇩🇪
-      - 🇩🇪 Germany 🇩🇪 2
-      - 🇬🇧 United Kingdom 🇬🇧`
-      - 🇫🇷 France 🇫🇷
-      - "[🇸🇪]`"
-      - 🇵🇱 Poland 🇵🇱
+      - "[🇵🇱]Kia_Net`"
+      - "[🇫🇮]t.me/Kia_Net`"
+      - "[🇩🇪]t.me/Kia_Net`"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇩🇪 Germany 🇩🇪
-      - 🇩🇪 Germany 🇩🇪 2
-      - 🇬🇧 United Kingdom 🇬🇧`
-      - 🇫🇷 France 🇫🇷
-      - "[🇸🇪]`"
-      - 🇵🇱 Poland 🇵🇱
+      - "[🇵🇱]Kia_Net`"
+      - "[🇫🇮]t.me/Kia_Net`"
+      - "[🇩🇪]t.me/Kia_Net`"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 🇩🇪 Germany 🇩🇪
-      - 🇩🇪 Germany 🇩🇪 2
-      - 🇬🇧 United Kingdom 🇬🇧`
-      - 🇫🇷 France 🇫🇷
-      - "[🇸🇪]`"
-      - 🇵🇱 Poland 🇵🇱
+      - "[🇵🇱]Kia_Net`"
+      - "[🇫🇮]t.me/Kia_Net`"
+      - "[🇩🇪]t.me/Kia_Net`"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇩🇪 Germany 🇩🇪
-      - 🇩🇪 Germany 🇩🇪 2
-      - 🇬🇧 United Kingdom 🇬🇧`
-      - 🇫🇷 France 🇫🇷
-      - "[🇸🇪]`"
-      - 🇵🇱 Poland 🇵🇱
+      - "[🇵🇱]Kia_Net`"
+      - "[🇫🇮]t.me/Kia_Net`"
+      - "[🇩🇪]t.me/Kia_Net`"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -107,12 +86,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇩🇪 Germany 🇩🇪
-      - 🇩🇪 Germany 🇩🇪 2
-      - 🇬🇧 United Kingdom 🇬🇧`
-      - 🇫🇷 France 🇫🇷
-      - "[🇸🇪]`"
-      - 🇵🇱 Poland 🇵🇱
+      - "[🇵🇱]Kia_Net`"
+      - "[🇫🇮]t.me/Kia_Net`"
+      - "[🇩🇪]t.me/Kia_Net`"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
