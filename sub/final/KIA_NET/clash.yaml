@@ -465,9 +465,12 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "[🇵🇱]Kia_Net`", server: z0gpl.pastilbastani.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 735d7945-8748-4a4f-8598-8ccb6aa94bc6, host: play.google.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "[🇫🇮]t.me/Kia_Net`", server: hokm-t1.igatel.com, port: 8526, type: vless, tls: true, packet-encoding: xudp, uuid: a49adb79-ed7b-449a-8bba-3842dc495e74, servername: www.yahoo.com, host: www.yahoo.com, path: /, reality-opts: {public-key: -zNDEqKkScKvMWB7spEper78GE_u-nR4jDHZ3DpOoxM, short-id: 62ad184af31fc8cf}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "[🇩🇪]t.me/Kia_Net`", server: 154.222.9.208, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ea68ea3d-b2f7-47f8-97d5-04cad78dd226, servername: storage.yandex.net, host: storage.yandex.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: ISa-DZOI4LRRb9DHMFYm5oFqBXDjYzz0hVWUfWvzLmo, short-id: dc8109baf0f607ea}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "| @Net_Nab", server: 46.62.240.221, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 6871b29e-bb51-4b6b-b2fa-6e2b98ad3859, host: khamenei.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "| @Net_Nab 2", server: 7a1a266ed1a66705.mechanicir.ir, port: 56625, type: vless, tls: true, packet-encoding: xudp, uuid: d7955f3f-dfa3-45a0-a3ef-9693df439a0f, servername: icloud.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, reality-opts: {public-key: sVtMU2ZA5W6TLnBCZdgfXqDnOwWePrGVjSNnueDlYmM, short-id: d22c6bf354720287}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "| @Net_Nab 3", server: dd08e90ee38b1a0f.mbcloudy.ir, port: 56625, type: vless, tls: true, packet-encoding: xudp, uuid: d7955f3f-dfa3-45a0-a3ef-9693df439a0f, servername: icloud.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, reality-opts: {public-key: sVtMU2ZA5W6TLnBCZdgfXqDnOwWePrGVjSNnueDlYmM, short-id: f46de42b38cf0a64}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "| @Net_Nab…", server: dd08e90ee38b1a0f.mbcloudy.ir, port: 56625, type: vless, tls: true, packet-encoding: xudp, uuid: d7955f3f-dfa3-45a0-a3ef-9693df439a0f, servername: icloud.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, reality-opts: {public-key: sVtMU2ZA5W6TLnBCZdgfXqDnOwWePrGVjSNnueDlYmM, short-id: f46de42b38cf0a64}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "| @Net_Nab 4", server: e2d89c6c10610582.nimaghaffarzadeh.ir, port: 56625, type: vless, tls: true, packet-encoding: xudp, uuid: d7955f3f-dfa3-45a0-a3ef-9693df439a0f, servername: icloud.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, reality-opts: {public-key: sVtMU2ZA5W6TLnBCZdgfXqDnOwWePrGVjSNnueDlYmM, short-id: abbb6e5e07cdf34b}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "| @Net_Nab 5", server: ef85c5b68f422eec.mbmovietime.ir, port: 50567, type: vless, tls: true, packet-encoding: xudp, uuid: d7955f3f-dfa3-45a0-a3ef-9693df439a0f, servername: play.google.com, host: play.google.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: NpgXDQ6jl_HGPdHAHFeiBl5Ym7bywxmw_EYovmFjVQs, short-id: 9af7c9c0334675be}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,27 +487,36 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "[🇵🇱]Kia_Net`"
-      - "[🇫🇮]t.me/Kia_Net`"
-      - "[🇩🇪]t.me/Kia_Net`"
+      - "| @Net_Nab"
+      - "| @Net_Nab 2"
+      - "| @Net_Nab 3"
+      - "| @Net_Nab…"
+      - "| @Net_Nab 4"
+      - "| @Net_Nab 5"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "[🇵🇱]Kia_Net`"
-      - "[🇫🇮]t.me/Kia_Net`"
-      - "[🇩🇪]t.me/Kia_Net`"
+      - "| @Net_Nab"
+      - "| @Net_Nab 2"
+      - "| @Net_Nab 3"
+      - "| @Net_Nab…"
+      - "| @Net_Nab 4"
+      - "| @Net_Nab 5"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "[🇵🇱]Kia_Net`"
-      - "[🇫🇮]t.me/Kia_Net`"
-      - "[🇩🇪]t.me/Kia_Net`"
+      - "| @Net_Nab"
+      - "| @Net_Nab 2"
+      - "| @Net_Nab 3"
+      - "| @Net_Nab…"
+      - "| @Net_Nab 4"
+      - "| @Net_Nab 5"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -520,27 +532,36 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "[🇵🇱]Kia_Net`"
-      - "[🇫🇮]t.me/Kia_Net`"
-      - "[🇩🇪]t.me/Kia_Net`"
+      - "| @Net_Nab"
+      - "| @Net_Nab 2"
+      - "| @Net_Nab 3"
+      - "| @Net_Nab…"
+      - "| @Net_Nab 4"
+      - "| @Net_Nab 5"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "[🇵🇱]Kia_Net`"
-      - "[🇫🇮]t.me/Kia_Net`"
-      - "[🇩🇪]t.me/Kia_Net`"
+      - "| @Net_Nab"
+      - "| @Net_Nab 2"
+      - "| @Net_Nab 3"
+      - "| @Net_Nab…"
+      - "| @Net_Nab 4"
+      - "| @Net_Nab 5"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "[🇵🇱]Kia_Net`"
-      - "[🇫🇮]t.me/Kia_Net`"
-      - "[🇩🇪]t.me/Kia_Net`"
+      - "| @Net_Nab"
+      - "| @Net_Nab 2"
+      - "| @Net_Nab 3"
+      - "| @Net_Nab…"
+      - "| @Net_Nab 4"
+      - "| @Net_Nab 5"
   - name: دانلود منیجر 📥
     type: select
     proxies:
