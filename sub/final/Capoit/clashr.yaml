@@ -5,13 +5,17 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@Capoit`", server: 162.159.38.119, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8ad6f598-cd8d-4fca-848e-05fc9be15ff3, servername: deicl.redstone-vex.sbs, network: ws, ws-opts: {path: /sea, headers: {Host: deicl.redstone-vex.sbs}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit", server: 199.232.9.94, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 86fdb625-1a7f-4784-99a6-a96b3a80fc6d, servername: speedtest.net, alpn: [h2], network: ws, ws-opts: {path: "/vip1#TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=512", headers: {Host: speedtest.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit 2", server: love.ns.cloudflare.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8ad6f598-cd8d-4fca-848e-05fc9be15ff3, servername: deicl.redstone-vex.sbs, network: ws, ws-opts: {path: "/sea#TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=512", headers: {Host: deicl.redstone-vex.sbs}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit`", server: 173.245.59.1, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575, servername: rubifen.adaspoloandco.com, network: ws, ws-opts: {path: "/GOrbEh#TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=512", headers: {Host: rubifen.adaspoloandco.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - "@Capoit"
+      - "@Capoit 2"
       - "@Capoit`"
   - name: ♻️ 自动选择
     type: url-test
@@ -19,6 +23,8 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - "@Capoit"
+      - "@Capoit 2"
       - "@Capoit`"
   - name: 🌍 国外媒体
     type: select
@@ -26,24 +32,32 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - "@Capoit"
+      - "@Capoit 2"
       - "@Capoit`"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - "@Capoit"
+      - "@Capoit 2"
       - "@Capoit`"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - "@Capoit"
+      - "@Capoit 2"
       - "@Capoit`"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - "@Capoit"
+      - "@Capoit 2"
       - "@Capoit`"
   - name: 🎯 全球直连
     type: select
@@ -72,6 +86,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - "@Capoit"
+      - "@Capoit 2"
       - "@Capoit`"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连

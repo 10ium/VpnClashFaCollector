@@ -465,7 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@hamedvpns - ws]", server: marzban-node-production-081bc.up.railway.app, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8cf9848f-76ae-44a7-adc5-cfd0ab4c9f5a, servername: marzban-node-production-081bc.up.railway.app, alpn: [h3%2Ch2%2Chttp%2F1.1], network: ws, ws-opts: {path: /vless, headers: {Host: marzban-node-production-081bc.up.railway.app}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hamedvpns- ws, server: marzban-node-production-7017.up.railway.app, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e3b61686-574f-4c57-b016-0e6d060f0b4f, servername: marzban-node-production-7017.up.railway.app, alpn: [h3%2Ch2%2Chttp%2F1.1], network: ws, ws-opts: {path: /vless, headers: {Host: marzban-node-production-7017.up.railway.app}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@hamedvpns - ws]"
+      - hamedvpns- ws
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@hamedvpns - ws]"
+      - hamedvpns- ws
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@hamedvpns - ws]"
+      - hamedvpns- ws
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@hamedvpns - ws]"
+      - hamedvpns- ws
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@hamedvpns - ws]"
+      - hamedvpns- ws
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@hamedvpns - ws]"
+      - hamedvpns- ws
   - name: دانلود منیجر 📥
     type: select
     proxies:

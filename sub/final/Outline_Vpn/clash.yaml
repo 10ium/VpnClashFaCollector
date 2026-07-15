@@ -465,11 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: Mi168 12 @Outline_Vpn, server: 104.248.161.136, port: 443, type: trojan, password: !<str> 521314, sni: tjplay.lxdxo.kdns.fr, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: tjplay.lxdxo.kdns.fr}}, udp: true, tfo: false}
-  - {name: Mi168 14 @Outline_Vpn, server: 3.249.67.252, port: 443, type: trojan, password: XG59623478, sni: singular-lark.rooster465.autos, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Mi168 13 @Outline_Vpn, server: 37.59.96.25, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6680846a-8a57-4dfd-9a0e-63209cfc8535, servername: support.zoom.us.yxls.eu.cc, network: ws, ws-opts: {path: /sg-amz, headers: {Host: support.zoom.us.yxls.eu.cc}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Mi168 11 @Outline_Vpn, server: 43.165.2.200, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8d5e7f2a-3c1b-4d9e-a6f8-2b5c0e7d4a19, servername: 43.165.2.200, network: ws, ws-opts: {path: /proxy, headers: {Host: 43.165.2.200}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Mi168 15 @Outline_Vpn`, server: 64.23.143.23, port: 34045, type: vless, tls: true, packet-encoding: xudp, uuid: d8dd94fd-540e-461d-b5d4-acebef02c22a, servername: visit-this-invitation-link-to-join-tg-enkelte-notif.ekt.me, host: visit-this-invitation-link-to-join-tg-enkelte-notif.ekt.me, path: /, reality-opts: {public-key: cDaDzPr3PlS3NM8lreHZbdo-Mhqz8vMBzMSkHXhGIUA, short-id: e8ab71d0}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Mi168 18 @Outline_Vpn, server: 185.137.157.128, port: 443, type: trojan, password: dh-Ws-YoJIgTYLZ-A5VljeduVse-vhDl7Q, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Mi168 20 @Outline_Vpn`, server: 173.245.58.75, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 073d1d50-8478-47bf-a828-7a1b381931d5, servername: octopusss.net, network: ws, ws-opts: {path: /odiyfws, headers: {Host: octopusss.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Mi168 17 @Outline_Vpn, server: xn--b6gac.eu.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4a1441b0-7bc8-4906-85cf-6b59c256b480, servername: edt2.yfqh08811.ccwu.cc, network: ws, ws-opts: {path: /, headers: {Host: edt2.yfqh08811.ccwu.cc}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Mi168 16 @Outline_Vpn, server: 130.49.185.196, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e3c56988-5261-400f-b21b-6af5fa6efae1, servername: site.rumedia-cdn.com, host: site.rumedia-cdn.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 4ndg8TcyXMWmnEvthjh9mIWJ9mc85jzy_G9D4D5xGxM, short-id: 808a7e8a2e32c697}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Mi168 19 @Outline_Vpn, server: po.fastbrokencompony.com, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: e7961655-9674-4cbd-a36f-ec0d5d7d660c, network: ws, ws-opts: {path: /, headers: {Host: po.fastbrokencompony.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,33 +486,33 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - Mi168 12 @Outline_Vpn
-      - Mi168 14 @Outline_Vpn
-      - Mi168 13 @Outline_Vpn
-      - Mi168 11 @Outline_Vpn
-      - Mi168 15 @Outline_Vpn`
+      - Mi168 18 @Outline_Vpn
+      - Mi168 20 @Outline_Vpn`
+      - Mi168 17 @Outline_Vpn
+      - Mi168 16 @Outline_Vpn
+      - Mi168 19 @Outline_Vpn
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - Mi168 12 @Outline_Vpn
-      - Mi168 14 @Outline_Vpn
-      - Mi168 13 @Outline_Vpn
-      - Mi168 11 @Outline_Vpn
-      - Mi168 15 @Outline_Vpn`
+      - Mi168 18 @Outline_Vpn
+      - Mi168 20 @Outline_Vpn`
+      - Mi168 17 @Outline_Vpn
+      - Mi168 16 @Outline_Vpn
+      - Mi168 19 @Outline_Vpn
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - Mi168 12 @Outline_Vpn
-      - Mi168 14 @Outline_Vpn
-      - Mi168 13 @Outline_Vpn
-      - Mi168 11 @Outline_Vpn
-      - Mi168 15 @Outline_Vpn`
+      - Mi168 18 @Outline_Vpn
+      - Mi168 20 @Outline_Vpn`
+      - Mi168 17 @Outline_Vpn
+      - Mi168 16 @Outline_Vpn
+      - Mi168 19 @Outline_Vpn
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -528,33 +528,33 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Mi168 12 @Outline_Vpn
-      - Mi168 14 @Outline_Vpn
-      - Mi168 13 @Outline_Vpn
-      - Mi168 11 @Outline_Vpn
-      - Mi168 15 @Outline_Vpn`
+      - Mi168 18 @Outline_Vpn
+      - Mi168 20 @Outline_Vpn`
+      - Mi168 17 @Outline_Vpn
+      - Mi168 16 @Outline_Vpn
+      - Mi168 19 @Outline_Vpn
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Mi168 12 @Outline_Vpn
-      - Mi168 14 @Outline_Vpn
-      - Mi168 13 @Outline_Vpn
-      - Mi168 11 @Outline_Vpn
-      - Mi168 15 @Outline_Vpn`
+      - Mi168 18 @Outline_Vpn
+      - Mi168 20 @Outline_Vpn`
+      - Mi168 17 @Outline_Vpn
+      - Mi168 16 @Outline_Vpn
+      - Mi168 19 @Outline_Vpn
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Mi168 12 @Outline_Vpn
-      - Mi168 14 @Outline_Vpn
-      - Mi168 13 @Outline_Vpn
-      - Mi168 11 @Outline_Vpn
-      - Mi168 15 @Outline_Vpn`
+      - Mi168 18 @Outline_Vpn
+      - Mi168 20 @Outline_Vpn`
+      - Mi168 17 @Outline_Vpn
+      - Mi168 16 @Outline_Vpn
+      - Mi168 19 @Outline_Vpn
   - name: دانلود منیجر 📥
     type: select
     proxies:
