@@ -490,8 +490,6 @@ proxies:
   - {name: together-impala.rooster465.autos:443, server: together-impala.rooster465.autos, port: 443, type: trojan, password: CF68213490, sni: together-impala.rooster465.autos, skip-cert-verify: false, udp: true, tfo: false}
   - {name: tolerant-stag.rooster465.autos:443, server: tolerant-stag.rooster465.autos, port: 443, type: trojan, password: CF68213490, sni: tolerant-stag.rooster465.autos, skip-cert-verify: false, udp: true, tfo: false}
   - {name: upward-yak.rooster465.autos:443, server: upward-yak.rooster465.autos, port: 443, type: trojan, password: CF68213490, sni: upward-yak.rooster465.autos, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: eventloophub.org:8443, server: eventloophub.org, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: aa28b265-baff-42e4-927e-7a8dee0ef623, servername: eventloophub.org, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: grpc}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 138.16.169.188:2087, server: 138.16.169.188, port: 2087, type: vless, tls: true, packet-encoding: xudp, uuid: ab51054f-de76-4a0f-9f3a-b44c8df86a6c, servername: yastatic.net, host: yastatic.net, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 45.39.12.165:8442, server: 45.39.12.165, port: 8442, type: vless, tls: true, packet-encoding: xudp, uuid: e0bced99-604f-41d1-8c0c-467e5838c33f, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -534,8 +532,6 @@ proxy-groups:
       - together-impala.rooster465.autos:443
       - tolerant-stag.rooster465.autos:443
       - upward-yak.rooster465.autos:443
-      - eventloophub.org:8443
-      - 138.16.169.188:2087
       - 45.39.12.165:8442
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -568,8 +564,6 @@ proxy-groups:
       - together-impala.rooster465.autos:443
       - tolerant-stag.rooster465.autos:443
       - upward-yak.rooster465.autos:443
-      - eventloophub.org:8443
-      - 138.16.169.188:2087
       - 45.39.12.165:8442
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -602,8 +596,6 @@ proxy-groups:
       - together-impala.rooster465.autos:443
       - tolerant-stag.rooster465.autos:443
       - upward-yak.rooster465.autos:443
-      - eventloophub.org:8443
-      - 138.16.169.188:2087
       - 45.39.12.165:8442
   - name: اتصال پایدار 🔗
     type: url-test
@@ -645,8 +637,6 @@ proxy-groups:
       - together-impala.rooster465.autos:443
       - tolerant-stag.rooster465.autos:443
       - upward-yak.rooster465.autos:443
-      - eventloophub.org:8443
-      - 138.16.169.188:2087
       - 45.39.12.165:8442
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -679,8 +669,6 @@ proxy-groups:
       - together-impala.rooster465.autos:443
       - tolerant-stag.rooster465.autos:443
       - upward-yak.rooster465.autos:443
-      - eventloophub.org:8443
-      - 138.16.169.188:2087
       - 45.39.12.165:8442
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -713,8 +701,6 @@ proxy-groups:
       - together-impala.rooster465.autos:443
       - tolerant-stag.rooster465.autos:443
       - upward-yak.rooster465.autos:443
-      - eventloophub.org:8443
-      - 138.16.169.188:2087
       - 45.39.12.165:8442
   - name: دانلود منیجر 📥
     type: select
