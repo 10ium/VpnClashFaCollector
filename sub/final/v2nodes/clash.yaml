@@ -565,6 +565,8 @@ proxies:
   - {name: 🇬🇧 gb-5.lemonbow.ru:443, server: gb-5.lemonbow.ru, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8516c47e-a7a1-42f7-9c14-ae9b14873cc8, servername: www.samsung.com, host: www.samsung.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 🇷🇺 ge-5.lemonbow.ru:443, server: ge-5.lemonbow.ru, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8516c47e-a7a1-42f7-9c14-ae9b14873cc8, servername: www.samsung.com, host: www.samsung.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 81.31.211.108:2085, server: 81.31.211.108, port: 2085, type: vless, tls: true, packet-encoding: xudp, uuid: cebf31b3-a467-4b84-9dce-62bed1c26719, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: vless}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 81.31.211.113:2085, server: 81.31.211.113, port: 2085, type: vless, tls: true, packet-encoding: xudp, uuid: cebf31b3-a467-4b84-9dce-62bed1c26719, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: vless}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇺🇸 [openproxylist.com] vmess-US", server: 165.140.216.142, port: 443, type: vmess, uuid: b65a2d69-5634-42a2-e4be-54e8a6176900, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -681,6 +683,8 @@ proxy-groups:
       - 🇬🇧 gb-5.lemonbow.ru:443
       - 🇷🇺 ge-5.lemonbow.ru:443
       - 81.31.211.108:2085
+      - 81.31.211.113:2085
+      - 🇺🇸 [openproxylist.com] vmess-US
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -787,6 +791,8 @@ proxy-groups:
       - 🇬🇧 gb-5.lemonbow.ru:443
       - 🇷🇺 ge-5.lemonbow.ru:443
       - 81.31.211.108:2085
+      - 81.31.211.113:2085
+      - 🇺🇸 [openproxylist.com] vmess-US
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -893,6 +899,8 @@ proxy-groups:
       - 🇬🇧 gb-5.lemonbow.ru:443
       - 🇷🇺 ge-5.lemonbow.ru:443
       - 81.31.211.108:2085
+      - 81.31.211.113:2085
+      - 🇺🇸 [openproxylist.com] vmess-US
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -1008,6 +1016,8 @@ proxy-groups:
       - 🇬🇧 gb-5.lemonbow.ru:443
       - 🇷🇺 ge-5.lemonbow.ru:443
       - 81.31.211.108:2085
+      - 81.31.211.113:2085
+      - 🇺🇸 [openproxylist.com] vmess-US
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -1114,6 +1124,8 @@ proxy-groups:
       - 🇬🇧 gb-5.lemonbow.ru:443
       - 🇷🇺 ge-5.lemonbow.ru:443
       - 81.31.211.108:2085
+      - 81.31.211.113:2085
+      - 🇺🇸 [openproxylist.com] vmess-US
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -1220,6 +1232,8 @@ proxy-groups:
       - 🇬🇧 gb-5.lemonbow.ru:443
       - 🇷🇺 ge-5.lemonbow.ru:443
       - 81.31.211.108:2085
+      - 81.31.211.113:2085
+      - 🇺🇸 [openproxylist.com] vmess-US
   - name: دانلود منیجر 📥
     type: select
     proxies:
