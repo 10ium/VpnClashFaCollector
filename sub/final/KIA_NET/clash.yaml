@@ -465,10 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: ⟡ ✨ ʀᴇᴀʟɪᴛʏ, server: 1e11b57ea6a53111.securitynet.ir, port: 56625, type: vless, tls: true, packet-encoding: xudp, uuid: 30a135f8-8f71-40ef-a45d-b305d47fb71b, servername: icloud.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, reality-opts: {public-key: sVtMU2ZA5W6TLnBCZdgfXqDnOwWePrGVjSNnueDlYmM, short-id: 2619d1af5cad99b0}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ⟡ ✨ ʀᴇᴀʟɪᴛʏ 2, server: 4a0a5c0a97952b62.mbmovietime.ir, port: 50567, type: vless, tls: true, packet-encoding: xudp, uuid: 30a135f8-8f71-40ef-a45d-b305d47fb71b, servername: play.google.com, host: play.google.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: NpgXDQ6jl_HGPdHAHFeiBl5Ym7bywxmw_EYovmFjVQs, short-id: c39acc8cb9481d24}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ⟡ ✨ ʀᴇᴀʟɪᴛʏ 3, server: fb266f26d247b098.neshatinjafood.ir, port: 34027, type: vless, tls: true, packet-encoding: xudp, uuid: 30a135f8-8f71-40ef-a45d-b305d47fb71b, servername: msn.com, host: msn.com, path: /, reality-opts: {public-key: 9s3yEketDxPnrIxtN-KUdfVJ_p3gfOpcr_0abD4vSFw, short-id: 0e84472c5bfccf3c}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ⟡ ✨ ʀᴇᴀʟɪᴛʏ 4, server: fd09f2c827a2fc5c.monopolitass.ir, port: 56625, type: vless, tls: true, packet-encoding: xudp, uuid: 30a135f8-8f71-40ef-a45d-b305d47fb71b, servername: icloud.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, reality-opts: {public-key: sVtMU2ZA5W6TLnBCZdgfXqDnOwWePrGVjSNnueDlYmM, short-id: abbb6e5e07cdf34b}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ⟡ ✨ ʀᴇᴀʟɪᴛʏ, server: sp.foot8all.ir, port: 56625, type: vless, tls: true, packet-encoding: xudp, uuid: df0e61f6-dd51-49d6-bee7-6d5ff06ae44b, servername: icloud.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, reality-opts: {public-key: sVtMU2ZA5W6TLnBCZdgfXqDnOwWePrGVjSNnueDlYmM, short-id: d5e4b75249e38cbb}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ⟡ ✨ ʀᴇᴀʟɪᴛʏ 2, server: swser2.foot8all.ir, port: 50567, type: vless, tls: true, packet-encoding: xudp, uuid: df0e61f6-dd51-49d6-bee7-6d5ff06ae44b, servername: play.google.com, host: play.google.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: NpgXDQ6jl_HGPdHAHFeiBl5Ym7bywxmw_EYovmFjVQs, short-id: 1bfe954cb07fb70a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,8 +485,6 @@ proxy-groups:
     proxies:
       - ⟡ ✨ ʀᴇᴀʟɪᴛʏ
       - ⟡ ✨ ʀᴇᴀʟɪᴛʏ 2
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ 3
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ 4
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -497,8 +493,6 @@ proxy-groups:
     proxies:
       - ⟡ ✨ ʀᴇᴀʟɪᴛʏ
       - ⟡ ✨ ʀᴇᴀʟɪᴛʏ 2
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ 3
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ 4
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -507,8 +501,6 @@ proxy-groups:
     proxies:
       - ⟡ ✨ ʀᴇᴀʟɪᴛʏ
       - ⟡ ✨ ʀᴇᴀʟɪᴛʏ 2
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ 3
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ 4
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -526,8 +518,6 @@ proxy-groups:
     proxies:
       - ⟡ ✨ ʀᴇᴀʟɪᴛʏ
       - ⟡ ✨ ʀᴇᴀʟɪᴛʏ 2
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ 3
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ 4
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -536,8 +526,6 @@ proxy-groups:
     proxies:
       - ⟡ ✨ ʀᴇᴀʟɪᴛʏ
       - ⟡ ✨ ʀᴇᴀʟɪᴛʏ 2
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ 3
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ 4
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -546,8 +534,6 @@ proxy-groups:
     proxies:
       - ⟡ ✨ ʀᴇᴀʟɪᴛʏ
       - ⟡ ✨ ʀᴇᴀʟɪᴛʏ 2
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ 3
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ 4
   - name: دانلود منیجر 📥
     type: select
     proxies:
