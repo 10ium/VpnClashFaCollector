@@ -5,53 +5,60 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: ⟡ ✨ ʀᴇᴀʟɪᴛʏ, server: sp.foot8all.ir, port: 56625, type: vless, tls: true, packet-encoding: xudp, uuid: df0e61f6-dd51-49d6-bee7-6d5ff06ae44b, servername: icloud.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, reality-opts: {public-key: sVtMU2ZA5W6TLnBCZdgfXqDnOwWePrGVjSNnueDlYmM, short-id: d5e4b75249e38cbb}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ⟡ ✨ ʀᴇᴀʟɪᴛʏ 2, server: swser2.foot8all.ir, port: 50567, type: vless, tls: true, packet-encoding: xudp, uuid: df0e61f6-dd51-49d6-bee7-6d5ff06ae44b, servername: play.google.com, host: play.google.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: NpgXDQ6jl_HGPdHAHFeiBl5Ym7bywxmw_EYovmFjVQs, short-id: 1bfe954cb07fb70a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Net_Nab", server: www.calmlunch.com, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true, tfo: false}
+  - {name: "@Net_Nab`", server: 104.18.42.54, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: eeb6823c-b926-4ea2-866a-5542edd26e59, servername: t1s1.rittbo.kdns.fr, network: ws, ws-opts: {path: /, headers: {Host: t1s1.rittbo.kdns.fr}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Net_Nab 2", server: 162.159.38.119, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: eeb6823c-b926-4ea2-866a-5542edd26e59, servername: t1s1.rittbo.kdns.fr, network: ws, ws-opts: {path: /, headers: {Host: t1s1.rittbo.kdns.fr}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ 2
+      - "@Net_Nab"
+      - "@Net_Nab`"
+      - "@Net_Nab 2"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ 2
+      - "@Net_Nab"
+      - "@Net_Nab`"
+      - "@Net_Nab 2"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ 2
+      - "@Net_Nab"
+      - "@Net_Nab`"
+      - "@Net_Nab 2"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ 2
+      - "@Net_Nab"
+      - "@Net_Nab`"
+      - "@Net_Nab 2"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ 2
+      - "@Net_Nab"
+      - "@Net_Nab`"
+      - "@Net_Nab 2"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ 2
+      - "@Net_Nab"
+      - "@Net_Nab`"
+      - "@Net_Nab 2"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -79,8 +86,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ 2
+      - "@Net_Nab"
+      - "@Net_Nab`"
+      - "@Net_Nab 2"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
