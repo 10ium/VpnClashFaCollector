@@ -466,7 +466,9 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: "@Capoit`", server: 151.101.1.194, port: 443, type: trojan, password: MiTiVPN, sni: ssl.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: /---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN=sws-s, headers: {Host: ssl.fastly.com}}, udp: true, tfo: false}
-  - {name: "@Capoit` 2", server: 64.188.126.226, port: 3468, type: vless, tls: true, packet-encoding: xudp, uuid: a09b6dfa-e48a-0d75-bcad-df385fa5b73a, servername: telewebion.ir, host: telewebion.ir, path: /, reality-opts: {public-key: SvSapHrt3EpoN_JcW195G48r5nJVuioGP7LNABKWxG4, short-id: b6eae5ce}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit", server: 46.101.128.159, port: 10249, type: vless, tls: true, packet-encoding: xudp, uuid: 6e270c02-4fda-4874-a6e2-9cad6591e685, host: play.google.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit 2", server: 185.209.15.91, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8f0560ec-ba22-4431-a6a7-318dc59d5233, servername: gedolam-vawset.ru, host: gedolam-vawset.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: tSxNp48AuTUzqggANCWsR6v7bqlguCoVWk_YOUs36Ug, short-id: 5e3ab3ab228625}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 2", server: 104.16.72.50, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: eeb6823c-b926-4ea2-866a-5542edd26e59, servername: t1s1.rittbo.kdns.fr, network: ws, ws-opts: {path: /fp, headers: {Host: t1s1.rittbo.kdns.fr}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,6 +486,8 @@ proxy-groups:
     type: select
     proxies:
       - "@Capoit`"
+      - "@Capoit"
+      - "@Capoit 2"
       - "@Capoit` 2"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -492,6 +496,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Capoit`"
+      - "@Capoit"
+      - "@Capoit 2"
       - "@Capoit` 2"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -500,6 +506,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Capoit`"
+      - "@Capoit"
+      - "@Capoit 2"
       - "@Capoit` 2"
   - name: اتصال پایدار 🔗
     type: url-test
@@ -517,6 +525,8 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit`"
+      - "@Capoit"
+      - "@Capoit 2"
       - "@Capoit` 2"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -525,6 +535,8 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit`"
+      - "@Capoit"
+      - "@Capoit 2"
       - "@Capoit` 2"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -533,6 +545,8 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit`"
+      - "@Capoit"
+      - "@Capoit 2"
       - "@Capoit` 2"
   - name: دانلود منیجر 📥
     type: select
