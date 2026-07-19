@@ -465,8 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@freenet_vt`", server: 213.109.147.242, port: 62685, type: ss, cipher: chacha20-ietf-poly1305, password: VpKABcOpNNA0l5G2AVOmw8, udp: true, tfo: false}
-  - {name: "@freenet_vt` 2", server: 104.19.229.21, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true, tfo: false}
+  - {name: 🇳🇱 Netherlands-SS`, server: 141.227.131.203, port: 1234, type: ss, cipher: chacha20-ietf-poly1305, password: vMs2W5rpEvD8HRKQE2uy_F8faCdEHrMT, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@freenet_vt`"
-      - "@freenet_vt` 2"
+      - 🇳🇱 Netherlands-SS`
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@freenet_vt`"
-      - "@freenet_vt` 2"
+      - 🇳🇱 Netherlands-SS`
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@freenet_vt`"
-      - "@freenet_vt` 2"
+      - 🇳🇱 Netherlands-SS`
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@freenet_vt`"
-      - "@freenet_vt` 2"
+      - 🇳🇱 Netherlands-SS`
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@freenet_vt`"
-      - "@freenet_vt` 2"
+      - 🇳🇱 Netherlands-SS`
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@freenet_vt`"
-      - "@freenet_vt` 2"
+      - 🇳🇱 Netherlands-SS`
   - name: دانلود منیجر 📥
     type: select
     proxies:
