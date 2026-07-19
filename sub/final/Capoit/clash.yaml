@@ -465,10 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Capoit`", server: 151.101.1.194, port: 443, type: trojan, password: MiTiVPN, sni: ssl.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: /---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN/---@MiTiVPN=sws-s, headers: {Host: ssl.fastly.com}}, udp: true, tfo: false}
   - {name: "@Capoit", server: 46.101.128.159, port: 10249, type: vless, tls: true, packet-encoding: xudp, uuid: 6e270c02-4fda-4874-a6e2-9cad6591e685, host: play.google.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@Capoit 2", server: 185.209.15.91, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8f0560ec-ba22-4431-a6a7-318dc59d5233, servername: gedolam-vawset.ru, host: gedolam-vawset.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: tSxNp48AuTUzqggANCWsR6v7bqlguCoVWk_YOUs36Ug, short-id: 5e3ab3ab228625}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 2", server: 104.16.72.50, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: eeb6823c-b926-4ea2-866a-5542edd26e59, servername: t1s1.rittbo.kdns.fr, network: ws, ws-opts: {path: /fp, headers: {Host: t1s1.rittbo.kdns.fr}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit`", server: 104.16.72.50, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: eeb6823c-b926-4ea2-866a-5542edd26e59, servername: t1s1.rittbo.kdns.fr, network: ws, ws-opts: {path: /fp, headers: {Host: t1s1.rittbo.kdns.fr}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,30 +484,27 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@Capoit`"
       - "@Capoit"
       - "@Capoit 2"
-      - "@Capoit` 2"
+      - "@Capoit`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@Capoit`"
       - "@Capoit"
       - "@Capoit 2"
-      - "@Capoit` 2"
+      - "@Capoit`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@Capoit`"
       - "@Capoit"
       - "@Capoit 2"
-      - "@Capoit` 2"
+      - "@Capoit`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -524,30 +520,27 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Capoit`"
       - "@Capoit"
       - "@Capoit 2"
-      - "@Capoit` 2"
+      - "@Capoit`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Capoit`"
       - "@Capoit"
       - "@Capoit 2"
-      - "@Capoit` 2"
+      - "@Capoit`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Capoit`"
       - "@Capoit"
       - "@Capoit 2"
-      - "@Capoit` 2"
+      - "@Capoit`"
   - name: دانلود منیجر 📥
     type: select
     proxies:
