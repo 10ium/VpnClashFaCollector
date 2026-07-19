@@ -465,7 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: Oman², server: 38.54.116.187, port: 48933, type: vless, tls: true, packet-encoding: xudp, uuid: d823a737-3780-4943-8598-b7581cdf74bd, servername: play.google.com, host: play.google.com, path: /, reality-opts: {public-key: cTKgK8lZ6O9Ris1YgPR_G22H3DmtNckOKWdfumsj3m8, short-id: a294ccf0e2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇫🇷 France`, server: Killian.athforce.ir, port: 5050, type: vless, tls: true, packet-encoding: xudp, uuid: a8ab58d5-5b4a-4d47-a9af-56c1e94c7c92, host: play.google.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇩🇪 Germany, server: db.athforce.ir, port: 447, type: vless, tls: true, packet-encoding: xudp, uuid: a8ab58d5-5b4a-4d47-a9af-56c1e94c7c92, host: db.athforce.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - Oman²
+      - 🇫🇷 France`
+      - 🇩🇪 Germany
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - Oman²
+      - 🇫🇷 France`
+      - 🇩🇪 Germany
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - Oman²
+      - 🇫🇷 France`
+      - 🇩🇪 Germany
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Oman²
+      - 🇫🇷 France`
+      - 🇩🇪 Germany
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Oman²
+      - 🇫🇷 France`
+      - 🇩🇪 Germany
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Oman²
+      - 🇫🇷 France`
+      - 🇩🇪 Germany
   - name: دانلود منیجر 📥
     type: select
     proxies:
