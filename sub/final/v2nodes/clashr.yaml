@@ -5,15 +5,16 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: 82.38.31.174:8080, server: 82.38.31.174, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
   - {name: 🇫🇷 1.n.c.5.h.z.q.e.d.fr01-ae5.entry.v51124-5.qpon:20068, server: 1.n.c.5.h.z.q.e.d.fr01-ae5.entry.v51124-5.qpon, port: 20068, type: ss, cipher: aes-256-gcm, password: 95c3d114-5370-3e54-832a-5a5acc492b9b, udp: true, tfo: false}
-  - {name: crucial-moth.rooster465.autos:443, server: crucial-moth.rooster465.autos, port: 443, type: trojan, password: ON38567014, sni: crucial-moth.rooster465.autos, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: amazed-burro.rooster465.autos:443, server: amazed-burro.rooster465.autos, port: 443, type: trojan, password: IQ68037294, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: enhanced-dassie.rooster465.autos:443, server: enhanced-dassie.rooster465.autos, port: 443, type: trojan, password: IQ68037294, sni: enhanced-dassie.rooster465.autos, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: moving-wren.rooster465.autos:443, server: moving-wren.rooster465.autos, port: 443, type: trojan, password: IQ68037294, sni: moving-wren.rooster465.autos, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: whole-perch.rooster465.autos:443, server: whole-perch.rooster465.autos, port: 443, type: trojan, password: IQ68037294, sni: whole-perch.rooster465.autos, skip-cert-verify: false, udp: true, tfo: false}
   - {name: genuine-grackle.rooster465.autos:443, server: genuine-grackle.rooster465.autos, port: 443, type: trojan, password: ON38567014, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: glorious-glider.rooster465.autos:443, server: glorious-glider.rooster465.autos, port: 443, type: trojan, password: ON38567014, sni: glorious-glider.rooster465.autos, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: harmless-akita.rooster465.autos:443, server: harmless-akita.rooster465.autos, port: 443, type: trojan, password: ON38567014, sni: harmless-akita.rooster465.autos, skip-cert-verify: false, udp: true, tfo: false}
   - {name: possible-pup.rooster465.autos:443, server: possible-pup.rooster465.autos, port: 443, type: trojan, password: XG59623478, sni: possible-pup.rooster465.autos, skip-cert-verify: false, udp: true, tfo: false}
   - {name: vips.irhubby.ir:8080, server: vips.irhubby.ir, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 4a4b76ab-ec8a-4211-9f02-db69f4ec879b, network: ws, ws-opts: {path: /, headers: {Host: vips.irhubby.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 0w7ymj.spectrum.vu:443, server: 0w7ymj.spectrum.vu, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 76713d07-5a6b-49c2-abd8-bc450a2fa7fc, host: 0w7ymj.spectrum.vu, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: cdn.pinecloud.net:443, server: cdn.pinecloud.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b052df40-d51c-456c-9bd6-57af01a87e4e, servername: cdn.pinecloud.net, host: cdn.pinecloud.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: vWSgdMDirb9aDZLWijSXXXl-NCTrtBgEe9MQqcgV6h8, short-id: 6a2e3af684799b19}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "🇺🇸 [openproxylist.com] vmess-US", server: 165.140.216.142, port: 443, type: vmess, uuid: b65a2d69-5634-42a2-e4be-54e8a6176900, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
@@ -21,15 +22,16 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - 82.38.31.174:8080
       - 🇫🇷 1.n.c.5.h.z.q.e.d.fr01-ae5.entry.v51124-5.qpon:20068
-      - crucial-moth.rooster465.autos:443
+      - amazed-burro.rooster465.autos:443
+      - enhanced-dassie.rooster465.autos:443
+      - moving-wren.rooster465.autos:443
+      - whole-perch.rooster465.autos:443
       - genuine-grackle.rooster465.autos:443
-      - glorious-glider.rooster465.autos:443
-      - harmless-akita.rooster465.autos:443
       - possible-pup.rooster465.autos:443
       - vips.irhubby.ir:8080
       - 0w7ymj.spectrum.vu:443
-      - cdn.pinecloud.net:443
       - 🇺🇸 [openproxylist.com] vmess-US
   - name: ♻️ 自动选择
     type: url-test
@@ -37,15 +39,16 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - 82.38.31.174:8080
       - 🇫🇷 1.n.c.5.h.z.q.e.d.fr01-ae5.entry.v51124-5.qpon:20068
-      - crucial-moth.rooster465.autos:443
+      - amazed-burro.rooster465.autos:443
+      - enhanced-dassie.rooster465.autos:443
+      - moving-wren.rooster465.autos:443
+      - whole-perch.rooster465.autos:443
       - genuine-grackle.rooster465.autos:443
-      - glorious-glider.rooster465.autos:443
-      - harmless-akita.rooster465.autos:443
       - possible-pup.rooster465.autos:443
       - vips.irhubby.ir:8080
       - 0w7ymj.spectrum.vu:443
-      - cdn.pinecloud.net:443
       - 🇺🇸 [openproxylist.com] vmess-US
   - name: 🌍 国外媒体
     type: select
@@ -53,60 +56,64 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 82.38.31.174:8080
       - 🇫🇷 1.n.c.5.h.z.q.e.d.fr01-ae5.entry.v51124-5.qpon:20068
-      - crucial-moth.rooster465.autos:443
+      - amazed-burro.rooster465.autos:443
+      - enhanced-dassie.rooster465.autos:443
+      - moving-wren.rooster465.autos:443
+      - whole-perch.rooster465.autos:443
       - genuine-grackle.rooster465.autos:443
-      - glorious-glider.rooster465.autos:443
-      - harmless-akita.rooster465.autos:443
       - possible-pup.rooster465.autos:443
       - vips.irhubby.ir:8080
       - 0w7ymj.spectrum.vu:443
-      - cdn.pinecloud.net:443
       - 🇺🇸 [openproxylist.com] vmess-US
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 82.38.31.174:8080
       - 🇫🇷 1.n.c.5.h.z.q.e.d.fr01-ae5.entry.v51124-5.qpon:20068
-      - crucial-moth.rooster465.autos:443
+      - amazed-burro.rooster465.autos:443
+      - enhanced-dassie.rooster465.autos:443
+      - moving-wren.rooster465.autos:443
+      - whole-perch.rooster465.autos:443
       - genuine-grackle.rooster465.autos:443
-      - glorious-glider.rooster465.autos:443
-      - harmless-akita.rooster465.autos:443
       - possible-pup.rooster465.autos:443
       - vips.irhubby.ir:8080
       - 0w7ymj.spectrum.vu:443
-      - cdn.pinecloud.net:443
       - 🇺🇸 [openproxylist.com] vmess-US
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - 82.38.31.174:8080
       - 🇫🇷 1.n.c.5.h.z.q.e.d.fr01-ae5.entry.v51124-5.qpon:20068
-      - crucial-moth.rooster465.autos:443
+      - amazed-burro.rooster465.autos:443
+      - enhanced-dassie.rooster465.autos:443
+      - moving-wren.rooster465.autos:443
+      - whole-perch.rooster465.autos:443
       - genuine-grackle.rooster465.autos:443
-      - glorious-glider.rooster465.autos:443
-      - harmless-akita.rooster465.autos:443
       - possible-pup.rooster465.autos:443
       - vips.irhubby.ir:8080
       - 0w7ymj.spectrum.vu:443
-      - cdn.pinecloud.net:443
       - 🇺🇸 [openproxylist.com] vmess-US
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 82.38.31.174:8080
       - 🇫🇷 1.n.c.5.h.z.q.e.d.fr01-ae5.entry.v51124-5.qpon:20068
-      - crucial-moth.rooster465.autos:443
+      - amazed-burro.rooster465.autos:443
+      - enhanced-dassie.rooster465.autos:443
+      - moving-wren.rooster465.autos:443
+      - whole-perch.rooster465.autos:443
       - genuine-grackle.rooster465.autos:443
-      - glorious-glider.rooster465.autos:443
-      - harmless-akita.rooster465.autos:443
       - possible-pup.rooster465.autos:443
       - vips.irhubby.ir:8080
       - 0w7ymj.spectrum.vu:443
-      - cdn.pinecloud.net:443
       - 🇺🇸 [openproxylist.com] vmess-US
   - name: 🎯 全球直连
     type: select
@@ -135,15 +142,16 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 82.38.31.174:8080
       - 🇫🇷 1.n.c.5.h.z.q.e.d.fr01-ae5.entry.v51124-5.qpon:20068
-      - crucial-moth.rooster465.autos:443
+      - amazed-burro.rooster465.autos:443
+      - enhanced-dassie.rooster465.autos:443
+      - moving-wren.rooster465.autos:443
+      - whole-perch.rooster465.autos:443
       - genuine-grackle.rooster465.autos:443
-      - glorious-glider.rooster465.autos:443
-      - harmless-akita.rooster465.autos:443
       - possible-pup.rooster465.autos:443
       - vips.irhubby.ir:8080
       - 0w7ymj.spectrum.vu:443
-      - cdn.pinecloud.net:443
       - 🇺🇸 [openproxylist.com] vmess-US
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
