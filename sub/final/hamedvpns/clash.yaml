@@ -465,7 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: hamedvpns- ws, server: marzban-node-production-7017.up.railway.app, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e3b61686-574f-4c57-b016-0e6d060f0b4f, servername: marzban-node-production-7017.up.railway.app, alpn: [h3%2Ch2%2Chttp%2F1.1], network: ws, ws-opts: {path: /vless, headers: {Host: marzban-node-production-7017.up.railway.app}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hamedvpns::🇺🇸, server: 162.159.5.231, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: eeb6823c-b926-4ea2-866a-5542edd26e59, servername: t1s1.rittbo.kdns.fr, network: ws, ws-opts: {path: /fp, headers: {Host: t1s1.rittbo.kdns.fr}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - hamedvpns- ws
+      - hamedvpns::🇺🇸
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - hamedvpns- ws
+      - hamedvpns::🇺🇸
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - hamedvpns- ws
+      - hamedvpns::🇺🇸
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - hamedvpns- ws
+      - hamedvpns::🇺🇸
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - hamedvpns- ws
+      - hamedvpns::🇺🇸
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - hamedvpns- ws
+      - hamedvpns::🇺🇸
   - name: دانلود منیجر 📥
     type: select
     proxies:

@@ -465,11 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Masyakata 🍭", server: www.calmlunch.com, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true, tfo: false}
-  - {name: "@Masyakata 🛸", server: 8.47.69.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 7e544a9d-7667-413b-bbb0-b3bb1aac6d77, servername: shegeftihaaa.net, network: ws, ws-opts: {path: /rsedgws, headers: {Host: shegeftihaaa.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Masyakata ⭐", server: 185.155.97.58, port: 45176, type: vless, tls: true, packet-encoding: xudp, uuid: dc7940e0-6bff-45e3-853d-4007561803c3, servername: www.googletagmanager.com, host: www.googletagmanager.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: A1Qf_rMG4KDfLzfCK-M5R9qW_0uThfeSosQnv6LBL1M, short-id: 8433cb66b6c3ab6d}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Masyakata 🍋‍🟩", server: 162.159.38.119, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: eeb6823c-b926-4ea2-866a-5542edd26e59, servername: t1s1.rittbo.kdns.fr, network: ws, ws-opts: {path: /, headers: {Host: t1s1.rittbo.kdns.fr}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Masyakata ☘️", server: store.ubi.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: eeb6823c-b926-4ea2-866a-5542edd26e59, servername: t1s1.rittbo.kdns.fr, network: ws, ws-opts: {path: /, headers: {Host: t1s1.rittbo.kdns.fr}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Masyakata", server: 91.202.171.142, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 928b7d22-2f67-43e4-9963-ab7e84efd4dd, servername: www.asus.com, host: www.asus.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: W1O_G8Pa5c0WpgXdrZmYO4nYU2TXqQGuOux9s9rGCkg, short-id: 53c387c2210f756b}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,33 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@Masyakata 🍭"
-      - "@Masyakata 🛸"
-      - "@Masyakata ⭐"
-      - "@Masyakata 🍋‍🟩"
-      - "@Masyakata ☘️"
+      - "@Masyakata"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@Masyakata 🍭"
-      - "@Masyakata 🛸"
-      - "@Masyakata ⭐"
-      - "@Masyakata 🍋‍🟩"
-      - "@Masyakata ☘️"
+      - "@Masyakata"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@Masyakata 🍭"
-      - "@Masyakata 🛸"
-      - "@Masyakata ⭐"
-      - "@Masyakata 🍋‍🟩"
-      - "@Masyakata ☘️"
+      - "@Masyakata"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -528,33 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Masyakata 🍭"
-      - "@Masyakata 🛸"
-      - "@Masyakata ⭐"
-      - "@Masyakata 🍋‍🟩"
-      - "@Masyakata ☘️"
+      - "@Masyakata"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Masyakata 🍭"
-      - "@Masyakata 🛸"
-      - "@Masyakata ⭐"
-      - "@Masyakata 🍋‍🟩"
-      - "@Masyakata ☘️"
+      - "@Masyakata"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Masyakata 🍭"
-      - "@Masyakata 🛸"
-      - "@Masyakata ⭐"
-      - "@Masyakata 🍋‍🟩"
-      - "@Masyakata ☘️"
+      - "@Masyakata"
   - name: دانلود منیجر 📥
     type: select
     proxies:
