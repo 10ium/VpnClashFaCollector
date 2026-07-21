@@ -5,46 +5,46 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 🇳🇱 Netherlands-SS`, server: 141.227.131.203, port: 1234, type: ss, cipher: chacha20-ietf-poly1305, password: vMs2W5rpEvD8HRKQE2uy_F8faCdEHrMT, udp: true, tfo: false}
+  - {name: "@freenet_vt`", server: 45.144.48.128, port: 6200, type: ss, cipher: aes-256-cfb, password: sshs8_996701053, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇳🇱 Netherlands-SS`
+      - "@freenet_vt`"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 🇳🇱 Netherlands-SS`
+      - "@freenet_vt`"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇳🇱 Netherlands-SS`
+      - "@freenet_vt`"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇳🇱 Netherlands-SS`
+      - "@freenet_vt`"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 🇳🇱 Netherlands-SS`
+      - "@freenet_vt`"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇳🇱 Netherlands-SS`
+      - "@freenet_vt`"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +72,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇳🇱 Netherlands-SS`
+      - "@freenet_vt`"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

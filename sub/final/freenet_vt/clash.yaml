@@ -465,7 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 🇳🇱 Netherlands-SS`, server: 141.227.131.203, port: 1234, type: ss, cipher: chacha20-ietf-poly1305, password: vMs2W5rpEvD8HRKQE2uy_F8faCdEHrMT, udp: true, tfo: false}
+  - {name: "@freenet_vt`", server: 45.144.48.128, port: 6200, type: ss, cipher: aes-256-cfb, password: sshs8_996701053, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 🇳🇱 Netherlands-SS`
+      - "@freenet_vt`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 🇳🇱 Netherlands-SS`
+      - "@freenet_vt`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 🇳🇱 Netherlands-SS`
+      - "@freenet_vt`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇳🇱 Netherlands-SS`
+      - "@freenet_vt`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇳🇱 Netherlands-SS`
+      - "@freenet_vt`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇳🇱 Netherlands-SS`
+      - "@freenet_vt`"
   - name: دانلود منیجر 📥
     type: select
     proxies:
