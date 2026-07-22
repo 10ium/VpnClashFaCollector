@@ -6,6 +6,7 @@ log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
   - {name: "@Capoit`", server: pizzashop.dearhossein-taktaz.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 1cbb57cd-47bb-4de5-9f1d-932fa81f8f96, servername: pizzashop.dearhossein-taktaz.ir, alpn: [h2%2Chttp%2F1.1%2Ch3], network: ws, ws-opts: {path: /, headers: {Host: pizzashop.dearhossein-taktaz.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 2", server: 64.49.15.67, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: e1bc0b88-6fa2-4dd7-a936-d5fff3ebfe6c, servername: play.google.com, host: play.google.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: VhsxX3w5SvS-XTnHi_xg85bq9aoIU79NrmEg9Aig52w, short-id: 79472fefa9c9f227}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -13,6 +14,7 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - "@Capoit`"
+      - "@Capoit` 2"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -20,6 +22,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Capoit`"
+      - "@Capoit` 2"
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -27,24 +30,28 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - "@Capoit`"
+      - "@Capoit` 2"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@Capoit`"
+      - "@Capoit` 2"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - "@Capoit`"
+      - "@Capoit` 2"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@Capoit`"
+      - "@Capoit` 2"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -73,6 +80,7 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - "@Capoit`"
+      - "@Capoit` 2"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
