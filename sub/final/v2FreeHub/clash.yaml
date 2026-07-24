@@ -465,9 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 🇳🇱 The Netherlands 🇳🇱, server: 141.227.152.129, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: bBnV36tzt7MKV75aDZTbzG, udp: true, tfo: false}
-  - {name: 🇷🇺 Russia 🇷🇺`, server: 157.22.240.141, port: 57925, type: ss, cipher: chacha20-ietf-poly1305, password: gN4mwZLXd1bJte9JaXKPWT, udp: true, tfo: false}
-  - {name: 🇩🇪 Germany 🇩🇪, server: 51.75.69.164, port: 2087, type: trojan, password: S2afbE52L3, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇫🇮 Finland 🇫🇮, server: 31.76.80.205, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: UZQY9hNjVNWwamajrXAf1vt8u63nj0fF, udp: true, tfo: false}
+  - {name: 🇫🇮 Finland 🇫🇮`, server: 31.76.80.205, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6422cd50-ebf9-49d9-a9f3-ff21fa1a2325, servername: ads.x5.ru, host: ads.x5.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: nPcUKydxoRI66O3tT9O4QCZpLjOBvkGsiXG7pDX1BBw, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,27 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 🇳🇱 The Netherlands 🇳🇱
-      - 🇷🇺 Russia 🇷🇺`
-      - 🇩🇪 Germany 🇩🇪
+      - 🇫🇮 Finland 🇫🇮
+      - 🇫🇮 Finland 🇫🇮`
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 🇳🇱 The Netherlands 🇳🇱
-      - 🇷🇺 Russia 🇷🇺`
-      - 🇩🇪 Germany 🇩🇪
+      - 🇫🇮 Finland 🇫🇮
+      - 🇫🇮 Finland 🇫🇮`
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 🇳🇱 The Netherlands 🇳🇱
-      - 🇷🇺 Russia 🇷🇺`
-      - 🇩🇪 Germany 🇩🇪
+      - 🇫🇮 Finland 🇫🇮
+      - 🇫🇮 Finland 🇫🇮`
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -520,27 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇳🇱 The Netherlands 🇳🇱
-      - 🇷🇺 Russia 🇷🇺`
-      - 🇩🇪 Germany 🇩🇪
+      - 🇫🇮 Finland 🇫🇮
+      - 🇫🇮 Finland 🇫🇮`
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇳🇱 The Netherlands 🇳🇱
-      - 🇷🇺 Russia 🇷🇺`
-      - 🇩🇪 Germany 🇩🇪
+      - 🇫🇮 Finland 🇫🇮
+      - 🇫🇮 Finland 🇫🇮`
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇳🇱 The Netherlands 🇳🇱
-      - 🇷🇺 Russia 🇷🇺`
-      - 🇩🇪 Germany 🇩🇪
+      - 🇫🇮 Finland 🇫🇮
+      - 🇫🇮 Finland 🇫🇮`
   - name: دانلود منیجر 📥
     type: select
     proxies:
