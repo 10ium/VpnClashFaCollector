@@ -5,67 +5,60 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 🇺🇸 @NetAccount-US`, server: one-for-all.levikogjgfdd.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 7968c546-02dc-4f8c-b791-934591a94cb2, servername: hhvl.hhapp.kdns.fr, network: ws, ws-opts: {path: /cbasur, headers: {Host: hhvl.hhapp.kdns.fr}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇩🇪 @NetAccount-DE`, server: love.ns.cloudflare.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8ad6f598-cd8d-4fca-848e-05fc9be15ff3, servername: htelm.neowolfbox-ilo.sbs, network: ws, ws-opts: {path: /sea, headers: {Host: htelm.neowolfbox-ilo.sbs}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@NetAccount-UNK`", server: 130.17.2.67, port: 2200, type: vless, tls: true, packet-encoding: xudp, uuid: 9b44bfb4-9d28-4870-9fc3-5154d6d462ff, network: ws, ws-opts: {path: /v1}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇬🇧 @NetAccount-GB`, server: ukall.lorqina.ir, port: 31118, type: vless, tls: true, packet-encoding: xudp, uuid: 9d66932d-9eec-47de-972a-e98dee7231c1, servername: de.nachrichten.yahoo.com, host: de.nachrichten.yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: LUCLCEE0jswfTEzoonfVHLw_1l-j4uROgNJi12jJsnc, short-id: 1604fe}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇳🇱 @NetAccount-NL`, server: 45.88.172.154, port: 11594, type: vless, tls: true, packet-encoding: xudp, uuid: 0370b162-baff-4757-86cc-cce4bf07f6f1, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@NetAccount-SE`", server: 62.60.159.137, port: 50443, type: vless, tls: true, packet-encoding: xudp, uuid: ab51054f-de76-4a0f-9f3a-b44c8df86a6c, servername: www.icloud.com, host: www.icloud.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇺🇸 @NetAccount-US`, server: 31.57.46.165, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: f05645e7-b789-48b9-a98f-434fa8035d5c, alpn: ["h2,http/1.1"], network: ws, ws-opts: {path: /ws}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - 🇳🇱 @NetAccount-NL`
+      - "@NetAccount-SE`"
       - 🇺🇸 @NetAccount-US`
-      - 🇩🇪 @NetAccount-DE`
-      - "@NetAccount-UNK`"
-      - 🇬🇧 @NetAccount-GB`
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - 🇳🇱 @NetAccount-NL`
+      - "@NetAccount-SE`"
       - 🇺🇸 @NetAccount-US`
-      - 🇩🇪 @NetAccount-DE`
-      - "@NetAccount-UNK`"
-      - 🇬🇧 @NetAccount-GB`
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 🇳🇱 @NetAccount-NL`
+      - "@NetAccount-SE`"
       - 🇺🇸 @NetAccount-US`
-      - 🇩🇪 @NetAccount-DE`
-      - "@NetAccount-UNK`"
-      - 🇬🇧 @NetAccount-GB`
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 🇳🇱 @NetAccount-NL`
+      - "@NetAccount-SE`"
       - 🇺🇸 @NetAccount-US`
-      - 🇩🇪 @NetAccount-DE`
-      - "@NetAccount-UNK`"
-      - 🇬🇧 @NetAccount-GB`
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - 🇳🇱 @NetAccount-NL`
+      - "@NetAccount-SE`"
       - 🇺🇸 @NetAccount-US`
-      - 🇩🇪 @NetAccount-DE`
-      - "@NetAccount-UNK`"
-      - 🇬🇧 @NetAccount-GB`
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 🇳🇱 @NetAccount-NL`
+      - "@NetAccount-SE`"
       - 🇺🇸 @NetAccount-US`
-      - 🇩🇪 @NetAccount-DE`
-      - "@NetAccount-UNK`"
-      - 🇬🇧 @NetAccount-GB`
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -93,10 +86,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 🇳🇱 @NetAccount-NL`
+      - "@NetAccount-SE`"
       - 🇺🇸 @NetAccount-US`
-      - 🇩🇪 @NetAccount-DE`
-      - "@NetAccount-UNK`"
-      - 🇬🇧 @NetAccount-GB`
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
