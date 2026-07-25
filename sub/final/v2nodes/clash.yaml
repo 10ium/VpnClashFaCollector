@@ -465,18 +465,12 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: neat-quail.rooster465.autos:443, server: neat-quail.rooster465.autos, port: 443, type: trojan, password: FC60532879, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: powerful-opossum.rooster465.autos:443, server: powerful-opossum.rooster465.autos, port: 443, type: trojan, password: FC60532879, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: resolved-gelding.rooster465.autos:443, server: resolved-gelding.rooster465.autos, port: 443, type: trojan, password: FC60532879, sni: resolved-gelding.rooster465.autos, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: evident-gnat.rooster465.autos:443, server: evident-gnat.rooster465.autos, port: 443, type: trojan, password: JA96378052, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: moral-dolphin.rooster465.autos:443, server: moral-dolphin.rooster465.autos, port: 443, type: trojan, password: UZ15382649, sni: moral-dolphin.rooster465.autos, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: kkvlvvq-a.catcat321.com:20023, server: kkvlvvq-a.catcat321.com, port: 20023, type: trojan, password: 7e70223b-f331-41d5-9313-02b8d2df2885, sni: hk.catxstar.com, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 81.31.211.170:2085, server: 81.31.211.170, port: 2085, type: vless, tls: true, packet-encoding: xudp, uuid: 2f03aff6-7774-4bdc-a04f-5feb5b3c21b0, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: vless}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 154.19.184.40:52535, server: 154.19.184.40, port: 52535, type: vless, tls: true, packet-encoding: xudp, uuid: a1ac8747-4fd7-486b-b099-19fbb45610be, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 15.224.131.242:22223, server: 15.224.131.242, port: 22223, type: vless, tls: true, packet-encoding: xudp, uuid: e4514801-0d5a-42ba-869f-39bd605aef9e, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 18.198.252.91:22224, server: 18.198.252.91, port: 22224, type: vless, tls: true, packet-encoding: xudp, uuid: e4514801-0d5a-42ba-869f-39bd605aef9e, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 52.57.117.158:22224, server: 52.57.117.158, port: 22224, type: vless, tls: true, packet-encoding: xudp, uuid: e4514801-0d5a-42ba-869f-39bd605aef9e, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "🇺🇸 [openproxylist.com] vmess-US", server: 165.140.216.142, port: 443, type: vmess, uuid: b65a2d69-5634-42a2-e4be-54e8a6176900, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "🇺🇸 [openproxylist.com] vmess-US 2", server: 165.140.216.142, port: 443, type: vmess, uuid: b65a2d69-5634-42a2-e4be-54e8a6176900, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇺🇸 [openproxylist.com] vmess-US 3", server: 165.140.216.142, port: 443, type: vmess, uuid: b65a2d69-5634-42a2-e4be-54e8a6176900, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -493,54 +487,36 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - neat-quail.rooster465.autos:443
-      - powerful-opossum.rooster465.autos:443
-      - resolved-gelding.rooster465.autos:443
-      - evident-gnat.rooster465.autos:443
-      - moral-dolphin.rooster465.autos:443
+      - kkvlvvq-a.catcat321.com:20023
       - 81.31.211.170:2085
       - 154.19.184.40:52535
-      - 15.224.131.242:22223
-      - 18.198.252.91:22224
-      - 52.57.117.158:22224
       - 🇺🇸 [openproxylist.com] vmess-US
       - 🇺🇸 [openproxylist.com] vmess-US 2
+      - 🇺🇸 [openproxylist.com] vmess-US 3
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - neat-quail.rooster465.autos:443
-      - powerful-opossum.rooster465.autos:443
-      - resolved-gelding.rooster465.autos:443
-      - evident-gnat.rooster465.autos:443
-      - moral-dolphin.rooster465.autos:443
+      - kkvlvvq-a.catcat321.com:20023
       - 81.31.211.170:2085
       - 154.19.184.40:52535
-      - 15.224.131.242:22223
-      - 18.198.252.91:22224
-      - 52.57.117.158:22224
       - 🇺🇸 [openproxylist.com] vmess-US
       - 🇺🇸 [openproxylist.com] vmess-US 2
+      - 🇺🇸 [openproxylist.com] vmess-US 3
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - neat-quail.rooster465.autos:443
-      - powerful-opossum.rooster465.autos:443
-      - resolved-gelding.rooster465.autos:443
-      - evident-gnat.rooster465.autos:443
-      - moral-dolphin.rooster465.autos:443
+      - kkvlvvq-a.catcat321.com:20023
       - 81.31.211.170:2085
       - 154.19.184.40:52535
-      - 15.224.131.242:22223
-      - 18.198.252.91:22224
-      - 52.57.117.158:22224
       - 🇺🇸 [openproxylist.com] vmess-US
       - 🇺🇸 [openproxylist.com] vmess-US 2
+      - 🇺🇸 [openproxylist.com] vmess-US 3
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -556,54 +532,36 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - neat-quail.rooster465.autos:443
-      - powerful-opossum.rooster465.autos:443
-      - resolved-gelding.rooster465.autos:443
-      - evident-gnat.rooster465.autos:443
-      - moral-dolphin.rooster465.autos:443
+      - kkvlvvq-a.catcat321.com:20023
       - 81.31.211.170:2085
       - 154.19.184.40:52535
-      - 15.224.131.242:22223
-      - 18.198.252.91:22224
-      - 52.57.117.158:22224
       - 🇺🇸 [openproxylist.com] vmess-US
       - 🇺🇸 [openproxylist.com] vmess-US 2
+      - 🇺🇸 [openproxylist.com] vmess-US 3
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - neat-quail.rooster465.autos:443
-      - powerful-opossum.rooster465.autos:443
-      - resolved-gelding.rooster465.autos:443
-      - evident-gnat.rooster465.autos:443
-      - moral-dolphin.rooster465.autos:443
+      - kkvlvvq-a.catcat321.com:20023
       - 81.31.211.170:2085
       - 154.19.184.40:52535
-      - 15.224.131.242:22223
-      - 18.198.252.91:22224
-      - 52.57.117.158:22224
       - 🇺🇸 [openproxylist.com] vmess-US
       - 🇺🇸 [openproxylist.com] vmess-US 2
+      - 🇺🇸 [openproxylist.com] vmess-US 3
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - neat-quail.rooster465.autos:443
-      - powerful-opossum.rooster465.autos:443
-      - resolved-gelding.rooster465.autos:443
-      - evident-gnat.rooster465.autos:443
-      - moral-dolphin.rooster465.autos:443
+      - kkvlvvq-a.catcat321.com:20023
       - 81.31.211.170:2085
       - 154.19.184.40:52535
-      - 15.224.131.242:22223
-      - 18.198.252.91:22224
-      - 52.57.117.158:22224
       - 🇺🇸 [openproxylist.com] vmess-US
       - 🇺🇸 [openproxylist.com] vmess-US 2
+      - 🇺🇸 [openproxylist.com] vmess-US 3
   - name: دانلود منیجر 📥
     type: select
     proxies:
