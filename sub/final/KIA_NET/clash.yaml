@@ -465,10 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: ⟡ ✨ ʀᴇᴀʟɪᴛʏ `, server: 95ccdd930758e457.mbcloudy.ir, port: 23857, type: vless, tls: true, packet-encoding: xudp, uuid: 22ceed66-6218-4688-9234-9ba29027774b, servername: icloud.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, reality-opts: {public-key: sVtMU2ZA5W6TLnBCZdgfXqDnOwWePrGVjSNnueDlYmM, short-id: db418071da7fcb7b}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ⟡ ✨ ʀᴇᴀʟɪᴛʏ, server: sp.foot8all.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 22ceed66-6218-4688-9234-9ba29027774b, servername: msn.com, host: msn.com, path: /, reality-opts: {public-key: 9s3yEketDxPnrIxtN-KUdfVJ_p3gfOpcr_0abD4vSFw, short-id: 9898d6525ddd5816}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ⟡ �…, server: sp.foot8all.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 22ceed66-6218-4688-9234-9ba29027774b, servername: msn.com, host: msn.com, path: /, reality-opts: {public-key: 9s3yEketDxPnrIxtN-KUdfVJ_p3gfOpcr_0abD4vSFw, short-id: 9898d6525ddd5816}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ⟡ ✨ ʀᴇᴀʟɪᴛʏ 2, server: sw.foot8all.ir, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 22ceed66-6218-4688-9234-9ba29027774b, servername: play.google.com, host: play.google.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: NpgXDQ6jl_HGPdHAHFeiBl5Ym7bywxmw_EYovmFjVQs, short-id: 9e3f5e25c17d2615}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ⟡…, server: sp.foot8all.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 22ceed66-6218-4688-9234-9ba29027774b, servername: wildcard.msn.com, host: wildcard.msn.com, path: /, reality-opts: {public-key: 9s3yEketDxPnrIxtN-KUdfVJ_p3gfOpcr_0abD4vSFw, short-id: 278a44a65abeeb40}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,27 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ `
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ 2
+      - ⟡…
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ `
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ 2
+      - ⟡…
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ `
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ 2
+      - ⟡…
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -521,27 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ `
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ 2
+      - ⟡…
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ `
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ 2
+      - ⟡…
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ `
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ
-      - ⟡ ✨ ʀᴇᴀʟɪᴛʏ 2
+      - ⟡…
   - name: دانلود منیجر 📥
     type: select
     proxies:
