@@ -5,151 +5,53 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@freenet-vt", server: 66.245.196.212, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4e00f3f8-06db-4e20-9737-3e0ca935ab60, servername: www.lovelive-anime.jp, host: www.lovelive-anime.jp, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: EtKRG8sxUJsdy-KwUOtYUNJnSn5VMx2sfKvvdpzg2X0, short-id: f0eb800bd980b00b}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: freenet_vt `, server: cdn-ams.veilora.net, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: 4e00f3f8-06db-4e20-9737-3e0ca935ab60, network: ws, ws-opts: {path: /, headers: {Host: cdn-ams.veilora.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@freenet-vt 2", server: cdn-ams.veilora.net, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 4e00f3f8-06db-4e20-9737-3e0ca935ab60, network: ws, ws-opts: {path: /, headers: {Host: cdn-ams.veilora.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: freenet-vt, server: cdn-waw.veilora.net, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: 4e00f3f8-06db-4e20-9737-3e0ca935ab60, network: ws, ws-opts: {path: /, headers: {Host: cdn-waw.veilora.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: freenet_vt, server: cdn-waw.veilora.net, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 4e00f3f8-06db-4e20-9737-3e0ca935ab60, network: ws, ws-opts: {path: /, headers: {Host: cdn-waw.veilora.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: freenet-vt 2, server: nbg.edgeptr.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4e00f3f8-06db-4e20-9737-3e0ca935ab60, servername: www.lovelive-anime.jp, host: www.lovelive-anime.jp, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: EtKRG8sxUJsdy-KwUOtYUNJnSn5VMx2sfKvvdpzg2X0, short-id: f0eb800bd980b00b}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: freenet-vt 3, server: sof.edgeptr.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4e00f3f8-06db-4e20-9737-3e0ca935ab60, servername: www.lovelive-anime.jp, host: www.lovelive-anime.jp, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: EtKRG8sxUJsdy-KwUOtYUNJnSn5VMx2sfKvvdpzg2X0, short-id: f0eb800bd980b00b}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: freenet-vt 4, server: sto.edgeptr.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4e00f3f8-06db-4e20-9737-3e0ca935ab60, servername: www.lovelive-anime.jp, host: www.lovelive-anime.jp, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: EtKRG8sxUJsdy-KwUOtYUNJnSn5VMx2sfKvvdpzg2X0, short-id: f0eb800bd980b00b}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: l freenet-vt, server: 66.245.196.212, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 9086023c-0f03-4c9c-b8ad-dbe93267c0ea, servername: www.lovelive-anime.jp, host: www.lovelive-anime.jp, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: EtKRG8sxUJsdy-KwUOtYUNJnSn5VMx2sfKvvdpzg2X0, short-id: f0eb800bd980b00b}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: freenet_vt ` 2, server: cdn-ams.veilora.net, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: 9086023c-0f03-4c9c-b8ad-dbe93267c0ea, network: ws, ws-opts: {path: /, headers: {Host: cdn-ams.veilora.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: freenet_vt 2, server: cdn-ams.veilora.net, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 9086023c-0f03-4c9c-b8ad-dbe93267c0ea, network: ws, ws-opts: {path: /, headers: {Host: cdn-ams.veilora.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: freenet_vt 3, server: cdn-waw.veilora.net, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: 9086023c-0f03-4c9c-b8ad-dbe93267c0ea, network: ws, ws-opts: {path: /, headers: {Host: cdn-waw.veilora.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: freenet-vt 5, server: cdn-waw.veilora.net, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 9086023c-0f03-4c9c-b8ad-dbe93267c0ea, network: ws, ws-opts: {path: /, headers: {Host: cdn-waw.veilora.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: freenet-vt 6, server: nbg.edgeptr.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 9086023c-0f03-4c9c-b8ad-dbe93267c0ea, servername: www.lovelive-anime.jp, host: www.lovelive-anime.jp, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: EtKRG8sxUJsdy-KwUOtYUNJnSn5VMx2sfKvvdpzg2X0, short-id: f0eb800bd980b00b}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: freenet-vt 7, server: sof.edgeptr.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 9086023c-0f03-4c9c-b8ad-dbe93267c0ea, servername: www.lovelive-anime.jp, host: www.lovelive-anime.jp, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: EtKRG8sxUJsdy-KwUOtYUNJnSn5VMx2sfKvvdpzg2X0, short-id: f0eb800bd980b00b}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: freenet-vt 8, server: sto.edgeptr.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 9086023c-0f03-4c9c-b8ad-dbe93267c0ea, servername: www.lovelive-anime.jp, host: www.lovelive-anime.jp, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: EtKRG8sxUJsdy-KwUOtYUNJnSn5VMx2sfKvvdpzg2X0, short-id: f0eb800bd980b00b}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@freenet_vt`", server: 91.107.178.22, port: 443, type: hysteria2, ports: 443, password: voQTxwGh4I, obfs: salamander, obfs-password: RedmEthIS-Join-V2RayyNGvpn-oBsPaHard183hgak, sni: www.refersion.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@freenet_vt` 2", server: de.cdn.salvaran.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 3ad2d35c-ee05-4a47-a751-a47364707414, servername: pic.rtbcdn.ru, host: pic.rtbcdn.ru, path: /, reality-opts: {public-key: SrCs_FEPa8080pJG_nK-Ub0XjZQuyAS8NMPCQ85n6nE, short-id: 7b11f17a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@freenet-vt"
-      - freenet_vt `
-      - "@freenet-vt 2"
-      - freenet-vt
-      - freenet_vt
-      - freenet-vt 2
-      - freenet-vt 3
-      - freenet-vt 4
-      - l freenet-vt
-      - freenet_vt ` 2
-      - freenet_vt 2
-      - freenet_vt 3
-      - freenet-vt 5
-      - freenet-vt 6
-      - freenet-vt 7
-      - freenet-vt 8
+      - "@freenet_vt`"
+      - "@freenet_vt` 2"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@freenet-vt"
-      - freenet_vt `
-      - "@freenet-vt 2"
-      - freenet-vt
-      - freenet_vt
-      - freenet-vt 2
-      - freenet-vt 3
-      - freenet-vt 4
-      - l freenet-vt
-      - freenet_vt ` 2
-      - freenet_vt 2
-      - freenet_vt 3
-      - freenet-vt 5
-      - freenet-vt 6
-      - freenet-vt 7
-      - freenet-vt 8
+      - "@freenet_vt`"
+      - "@freenet_vt` 2"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@freenet-vt"
-      - freenet_vt `
-      - "@freenet-vt 2"
-      - freenet-vt
-      - freenet_vt
-      - freenet-vt 2
-      - freenet-vt 3
-      - freenet-vt 4
-      - l freenet-vt
-      - freenet_vt ` 2
-      - freenet_vt 2
-      - freenet_vt 3
-      - freenet-vt 5
-      - freenet-vt 6
-      - freenet-vt 7
-      - freenet-vt 8
+      - "@freenet_vt`"
+      - "@freenet_vt` 2"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@freenet-vt"
-      - freenet_vt `
-      - "@freenet-vt 2"
-      - freenet-vt
-      - freenet_vt
-      - freenet-vt 2
-      - freenet-vt 3
-      - freenet-vt 4
-      - l freenet-vt
-      - freenet_vt ` 2
-      - freenet_vt 2
-      - freenet_vt 3
-      - freenet-vt 5
-      - freenet-vt 6
-      - freenet-vt 7
-      - freenet-vt 8
+      - "@freenet_vt`"
+      - "@freenet_vt` 2"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@freenet-vt"
-      - freenet_vt `
-      - "@freenet-vt 2"
-      - freenet-vt
-      - freenet_vt
-      - freenet-vt 2
-      - freenet-vt 3
-      - freenet-vt 4
-      - l freenet-vt
-      - freenet_vt ` 2
-      - freenet_vt 2
-      - freenet_vt 3
-      - freenet-vt 5
-      - freenet-vt 6
-      - freenet-vt 7
-      - freenet-vt 8
+      - "@freenet_vt`"
+      - "@freenet_vt` 2"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@freenet-vt"
-      - freenet_vt `
-      - "@freenet-vt 2"
-      - freenet-vt
-      - freenet_vt
-      - freenet-vt 2
-      - freenet-vt 3
-      - freenet-vt 4
-      - l freenet-vt
-      - freenet_vt ` 2
-      - freenet_vt 2
-      - freenet_vt 3
-      - freenet-vt 5
-      - freenet-vt 6
-      - freenet-vt 7
-      - freenet-vt 8
+      - "@freenet_vt`"
+      - "@freenet_vt` 2"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -177,22 +79,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@freenet-vt"
-      - freenet_vt `
-      - "@freenet-vt 2"
-      - freenet-vt
-      - freenet_vt
-      - freenet-vt 2
-      - freenet-vt 3
-      - freenet-vt 4
-      - l freenet-vt
-      - freenet_vt ` 2
-      - freenet_vt 2
-      - freenet_vt 3
-      - freenet-vt 5
-      - freenet-vt 6
-      - freenet-vt 7
-      - freenet-vt 8
+      - "@freenet_vt`"
+      - "@freenet_vt` 2"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
