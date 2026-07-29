@@ -1,5 +1,24 @@
 # آرشیو کانال: @freenet_vt
-بروزرسانی: 2026-07-29 01:28:11 UTC
+بروزرسانی: 2026-07-29 11:59:34 UTC
+
+### 🕒 2026-07-29 10:40:19 UTC
+`slipnet-enc://AYPf6fHQnfPRz83vcP6bbx7D/upA//st22GPLxZtfbOVzArSVkwpL116AZLcCupLpXi8+EvuJuGp8LJMYJIZf0RxwaVAHYePp+WvacV8+L7A3SeC7RaVkIjKOdd6znBoz6QDuYEYfjVzhDPdYfrzEw+EkFQONaiPR/cFVb0wH1aYd6TwtV+P87FUBWSCFMinukWzFkcGhCZdE/KRwWwbwfc9FmBbAbotB2iT9dqBgTl+gf/xb7cVUQmp4qIC+V1P0+eWbcUa1RmRF1/dP9skXq5qFA+Q9DHZxHCFDFFKLWvfPYDo8NJnsOpiyi4xnerQiWFBFr2Iz4gaMyHtIrdTqYujxtgHoiYvaiS2OcrWOgh94NFNUC6XbUEU7BBv47Q8RPJ7Be4P2QNNSFeLseYKamKT2b02q22CaGWbEOSg/4NLQdRL+kUYMiT6OWBNO8BUFsEGoTnDqvljFCovExdjb8ZAutedmkrma363QcnPQiTVN4Ln`
+به این اسلیپ نت هیولا هم وصل شید
+***🔥***
+پینگ 50
+منطقه ای
+
+---
+
+### 🕒 2026-07-29 07:37:52 UTC
+نیاز به انتقال هم نیست به اینصورت هم می تونید نصب کنید
+
+---
+
+### 🕒 2026-07-29 07:34:23 UTC
+زال نسخه ای که خودم با گوشی مودش کردم این و انتقال بدید داخل پوشه مود لاکی پچر با لاکی نصبش کنید
+
+---
 
 ### 🕒 2026-07-28 21:36:25 UTC
 ۱
@@ -51,43 +70,6 @@ updated
 ### 🕒 2026-07-28 12:13:16 UTC
 Zaal vpn  
 نسخه ای که خودم استفاده میکنم خیلی راحت وصل میشه
-
----
-
-### 🕒 2026-07-28 11:49:54 UTC
-Zaal VPN
-
----
-
-### 🕒 2026-07-28 07:41:56 UTC
-این عالیه روی ایرانسل همراه اول تست نکردم
-
----
-
-### 🕒 2026-07-28 07:41:14 UTC
-`#!/usr/bin/env bash# Hamid Scanner Menu: SSTP + DoH# ColorsRED="\033[31m"; GREEN="\033[32m"; PURPLE="\033[35m"; CYAN="\033[36m"; MAGENTA="\033[35m"; RESET="\033[0m"TAG="${PURPLE}┌────────────────────┐\n│ t.me/freenet_vt    │\n└────────────────────┘${RESET}"# ----------------------------------------------------------# Option 1 — SSTP Scanner# ----------------------------------------------------------scan_sstp() {    PAGE_URL="https://ipspeed.info/free-sstp.php"    echo "[*] Fetching SSTP servers..."    HTML="$(curl -fsSL "$PAGE_URL")" || { echo "[!] Fetch failed"; return; }    mapfile -t RAW_HOSTS < <(echo "$HTML" | grep -Eo '[a-zA-Z0-9.-]+\.[a-z]{2,6}:[0-9]{2,5}')    if [[ ${#RAW_HOSTS[@]} -eq 0 ]]; then      echo "[!] No hosts found"      return    fi    echo "[*] Testing servers..."    for item in "${RAW_HOSTS[@]}"; do      host="${item%%:*}"      port="${item##*:}"      [[ "$host" == "$port" ]] && port=443      if timeout 5 bash -c "echo > /dev/tcp/${host}/${port}" 2>/dev/null; then        echo -e "${GREEN}[OPEN] ${host}:${port}${RESET}\n$TAG"      else        echo -e "${RED}[CLOSED] ${host}:${port}${RESET}\n$TAG"      fi    done}# ----------------------------------------------------------# Option 2 — DoH Scanner (Fast + Progress % + Single Best)# ----------------------------------------------------------scan_doh_dns() {    LIST_URL="https://raw.githubusercontent.com/10ium/Public-DNS-Collector/main/lists/doh.txt"    TEST_DOMAIN="example.com"    TIMEOUT=1    PARALLEL=35    echo -e "${MAGENTA}Downloading DoH list...${RESET}"    LIST=$(curl -fsS "$LIST_URL") || { echo "Error downloading list"; return; }    LIST=$(echo "$LIST" | grep -v '^$')    TOTAL=$(echo "$LIST" | wc -l)    echo "Total: $TOTAL servers"    TMP=$(mktemp)    current=0    test_one() {        base="$1"        if [[ "$base" == *"dns-query"* ]]; then            URL="$base?name=$TEST_DOMAIN&type=A"        else            URL="${base%/}/dns-query?name=$TEST_DOMAIN&type=A"        fi        RESULT=$(curl -s -H "accept: application/dns-json" --max-time $TIMEOUT -w "\n%{time_total}" "$URL")        EXIT=$?        [[ $EXIT -ne 0 ]] && return        TIME=$(echo "$RESULT" | tail -n1)        BODY=$(echo "$RESULT" | sed '$d')        STATUS=$(echo "$BODY" | jq -r '.Status // 1' 2>/dev/null)        [[ "$STATUS" == "0" ]] && echo "$TIME $URL" >> "$TMP"    }    for base in $LIST; do        ((current++))        PERCENT=$(( current * 100 / TOTAL ))        echo -ne "Progress: $PERCENT%   \r"        test_one "$base" &        while (( $(jobs -r | wc -l) >= PARALLEL )); do            sleep 0.05        done    done    wait    echo -e "\nDone.\n"    BEST=$(sort -n "$TMP" | head -n1)    rm -f "$TMP"    if [[ -n "$BEST" ]]; then        BEST_TIME=$(echo "$BEST" | awk '{print $1}')        BEST_URL=$(echo "$BEST" | awk '{print $2}')        echo -e "${GREEN}Fastest DoH:${RESET}"        echo -e "${GREEN}$BEST_URL${RESET}"        echo -e "${GREEN}Latency: $BEST_TIME sec${RESET}"        echo        echo "curl -H 'accept: application/dns-json' \"$BEST_URL\""    else        echo "No working DoH found."    fi}# ----------------------------------------------------------# MENU# ----------------------------------------------------------while true; do    clear    echo -e "${MAGENTA}======================================${RESET}"    echo -e "${MAGENTA}        t.me/freenet_vt Menu         ${RESET}"    echo -e "${MAGENTA}======================================${RESET}"    echo    echo -e "${CYAN}1) Scan SSTP${RESET}"    echo -e "${CYAN}2) Scan DoH DNS${RESET}"    echo -e "${CYAN}0) Exit${RESET}"    echo    read -p "Choose option: " opt    case $opt in        1) scan_sstp; read -p "Press Enter...";;        2) scan_doh_dns; read -p "Press Enter...";;        0) exit ;;        *) echo "Invalid choice"; sleep 1 ;;    esacdone`
-اسکربیت مورد نیاز
-
----
-
-### 🕒 2026-07-28 07:39:49 UTC
-اموزش استفاده از سرورهای sstp سایت vpngate
-لینک دانلود ترموکس از  github
-[https://github.com/termux/termux-app/releases](https://github.com/termux/termux-app/releases)
-دانلود نرم افزهر zedpass
-[https://github.com/CluvexStudio/ZedPass/releases](https://github.com/CluvexStudio/ZedPass/releases)
-
----
-
-### 🕒 2026-07-28 05:43:16 UTC
-`vless://3ad2d35c-ee05-4a47-a751-a47364707414@de.cdn.salvaran.com:443?encryption=none&fp=chrome&pbk=SrCs_FEPa8080pJG_nK-Ub0XjZQuyAS8NMPCQ85n6nE&security=reality&sid=7b11f17a&sni=pic.rtbcdn.ru&type=tcp#@freenet_vt`
-ویتوری هیدیفای ویتوباکس نکوباکس
-
----
-
-### 🕒 2026-07-28 05:40:06 UTC
-`hysteria2://voQTxwGh4I@91.107.178.22:443/?insecure=1&obfs=salamander&obfs-password=RedmEthIS-Join-V2RayyNGvpn-oBsPaHard183hgak&sni=www.refersion.com#@freenet_vt`
-کانفیگ هیستریا بزنید هیدیفای نکوباکس لذت ببرید
 
 ---
 

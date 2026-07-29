@@ -466,7 +466,6 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: 🚀🇩🇪, server: xn--dash-4o53c.xn--ir-nz82a.netbazshop.ir, port: 2095, type: vless, tls: true, packet-encoding: xudp, uuid: 0a268813-7200-4d23-9851-74568928fc82, host: play.google.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "`", server: xn--dash-4o53c.xn--ir-nz82a.netbazshop.ir, port: 2095, type: vless, tls: true, packet-encoding: xudp, uuid: 0a268813-7200-4d23-9851-74568928fc82, host: play.google.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 2`, server: dashboard.lucypro.ir, port: 550, type: vless, tls: true, packet-encoding: xudp, uuid: de17a7f2-3071-467e-9e19-c6f9f6891475, network: ws, ws-opts: {path: /, headers: {Host: play.google.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -485,7 +484,6 @@ proxy-groups:
     type: select
     proxies:
       - 🚀🇩🇪
-      - "`"
       - 2`
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -494,7 +492,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 🚀🇩🇪
-      - "`"
       - 2`
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -503,7 +500,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 🚀🇩🇪
-      - "`"
       - 2`
   - name: اتصال پایدار 🔗
     type: url-test
@@ -521,7 +517,6 @@ proxy-groups:
     interval: 600
     proxies:
       - 🚀🇩🇪
-      - "`"
       - 2`
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -530,7 +525,6 @@ proxy-groups:
     interval: 600
     proxies:
       - 🚀🇩🇪
-      - "`"
       - 2`
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -539,7 +533,6 @@ proxy-groups:
     interval: 600
     proxies:
       - 🚀🇩🇪
-      - "`"
       - 2`
   - name: دانلود منیجر 📥
     type: select
