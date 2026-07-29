@@ -5,46 +5,67 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: Me…, server: 192.71.82.2, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a5c05c1e-aa68-443f-8598-09800244bd4b, servername: kingcloud.biack.ir, alpn: [h3], network: ws, ws-opts: {path: "/LiL?ed=2560", headers: {Host: kingcloud.biack.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: MerlinVpn, server: channel.tradeip.store, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: t.me.TradeIP, servername: play.google.com, host: play.google.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: HL-IrEO6_mXNGgiBztNWX0VY3nb-JQ3thK_7gFbk4Bg, short-id: 285efec4}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: MerlinVpn`, server: channel.tradeip.store, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: t.me.TradeIP, servername: play.google.com, host: play.google.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: HL-IrEO6_mXNGgiBztNWX0VY3nb-JQ3thK_7gFbk4Bg, short-id: c214}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: MerlinVpn 2, server: channel.tradeip.store, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: t.me.TradeIP, servername: play.google.com, host: play.google.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: HL-IrEO6_mXNGgiBztNWX0VY3nb-JQ3thK_7gFbk4Bg, short-id: 285efec4}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: MerlinVpn 3, server: channel.tradeip.store, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: t.me.TradeIP, servername: play.google.com, host: play.google.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: HL-IrEO6_mXNGgiBztNWX0VY3nb-JQ3thK_7gFbk4Bg, short-id: cade810b0760c4}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - Me…
+      - MerlinVpn
+      - MerlinVpn`
+      - MerlinVpn 2
+      - MerlinVpn 3
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - Me…
+      - MerlinVpn
+      - MerlinVpn`
+      - MerlinVpn 2
+      - MerlinVpn 3
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - Me…
+      - MerlinVpn
+      - MerlinVpn`
+      - MerlinVpn 2
+      - MerlinVpn 3
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - Me…
+      - MerlinVpn
+      - MerlinVpn`
+      - MerlinVpn 2
+      - MerlinVpn 3
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - Me…
+      - MerlinVpn
+      - MerlinVpn`
+      - MerlinVpn 2
+      - MerlinVpn 3
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - Me…
+      - MerlinVpn
+      - MerlinVpn`
+      - MerlinVpn 2
+      - MerlinVpn 3
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +93,10 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - Me…
+      - MerlinVpn
+      - MerlinVpn`
+      - MerlinVpn 2
+      - MerlinVpn 3
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

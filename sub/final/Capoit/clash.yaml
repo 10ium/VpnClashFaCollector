@@ -465,7 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Capoit`", server: 93.152.205.216, port: 444, type: vless, tls: true, packet-encoding: xudp, uuid: 0b9bcbc1-b289-4a64-86fa-a5b731b65384, servername: web.max.ru, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: web.max.ru}, reality-opts: {public-key: X-YL5VNtlMNIaBrwaHt3hJCeF_gMT9gPRDDlK1Qg7Tc, short-id: 8321461729abcdef}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit", server: 172.67.180.92, port: 443, type: trojan, password: humanity, sni: www.multiplydose.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.multiplydose.com}}, udp: true, tfo: false}
+  - {name: "@Capoit 2", server: 72.56.81.165, port: 40443, type: vless, tls: true, packet-encoding: xudp, uuid: 4bf5a71c-d726-4585-b095-7396675706d5, servername: deepl.com, host: deepl.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: D_ks4Yyk4-osnWBxCFvd0_UEgohUXvR2zJoWQg1CACU, short-id: c84f}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit`", server: 104.18.37.228, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b, servername: hhlfy.twiladaphne.ndjp.net, network: ws, ws-opts: {path: /fp, headers: {Host: hhlfy.twiladaphne.ndjp.net}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,6 +484,8 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - "@Capoit"
+      - "@Capoit 2"
       - "@Capoit`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -489,6 +493,8 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - "@Capoit"
+      - "@Capoit 2"
       - "@Capoit`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -496,6 +502,8 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - "@Capoit"
+      - "@Capoit 2"
       - "@Capoit`"
   - name: اتصال پایدار 🔗
     type: url-test
@@ -512,6 +520,8 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@Capoit"
+      - "@Capoit 2"
       - "@Capoit`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -519,6 +529,8 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@Capoit"
+      - "@Capoit 2"
       - "@Capoit`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -526,6 +538,8 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@Capoit"
+      - "@Capoit 2"
       - "@Capoit`"
   - name: دانلود منیجر 📥
     type: select

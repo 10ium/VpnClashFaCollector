@@ -5,144 +5,123 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: oplosgru-c.catcat321.com:20004, server: oplosgru-c.catcat321.com, port: 20004, type: trojan, password: ba07a8af-5544-48ac-ab62-3b6c00a44fa6, sni: hk.catxstar.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: oplosgru-c.catcat321.com:20068, server: oplosgru-c.catcat321.com, port: 20068, type: trojan, password: ba07a8af-5544-48ac-ab62-3b6c00a44fa6, sni: hk.catxstar.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: rr2.tube-cat.com:9450, server: rr2.tube-cat.com, port: 9450, type: trojan, password: ba07a8af-5544-48ac-ab62-3b6c00a44fa6, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 158.101.208.107:45819, server: 158.101.208.107, port: 45819, type: ss, cipher: chacha20-ietf-poly1305, password: YTEyZDI0OGQwM2ZmZjc4ZTg1ZTBiYTNlZTZkZjIxODM=, udp: true, tfo: false}
+  - {name: oplosgru-c.catcat321.com:20120, server: oplosgru-c.catcat321.com, port: 20120, type: trojan, password: ba07a8af-5544-48ac-ab62-3b6c00a44fa6, sni: hk.catxstar.com, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 🇵🇱 pl.mifbot.pro:49000, server: pl.mifbot.pro, port: 49000, type: vless, tls: true, packet-encoding: xudp, uuid: 11113f77-b439-4911-a8dd-414d2ee36b59, servername: git.sly.team, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 95.85.224.3:8443, server: 95.85.224.3, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 1f29762d-3f23-4207-9e39-f774de5d49ba, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: grpc}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 155.117.137.201:443, server: 155.117.137.201, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 7d6d3391-7bf8-46bf-bd2e-01e82a790017, servername: cdn2-07.yahoo.com, host: cdn2-07.yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: CMkW1axrhEXoiJ6anMz9XEjlfqlAtEZya7L0b5ZPMyw, short-id: d6816b10d545df54}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 141.148.232.142:62145, server: 141.148.232.142, port: 62145, type: vless, tls: true, packet-encoding: xudp, uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 104.21.55.229:443, server: 104.21.55.229, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e1bd5c86-721c-4a2d-bdf8-ba50e522ec57, servername: uk.xfj123.top, network: ws, ws-opts: {path: /e1bd5c86-721c-4a2d-bdf8-ba50e522ec57-vless, headers: {Host: uk.xfj123.top}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 193.123.62.167:62145, server: 193.123.62.167, port: 62145, type: vless, tls: true, packet-encoding: xudp, uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: t1.hhaakk9922.com:36798, server: t1.hhaakk9922.com, port: 36798, type: vless, tls: true, packet-encoding: xudp, uuid: e34501b9-faa9-356f-8b30-8f2c986b764b, servername: t1.hhaakk9922.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: ljfxz}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: t1.hhaakk9922.com:46784, server: t1.hhaakk9922.com, port: 46784, type: vless, tls: true, packet-encoding: xudp, uuid: e34501b9-faa9-356f-8b30-8f2c986b764b, servername: t1.hhaakk9922.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: ljfxz}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 13.36.44.201:22224, server: 13.36.44.201, port: 22224, type: vless, tls: true, packet-encoding: xudp, uuid: e4514801-0d5a-42ba-869f-39bd605aef9e, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 35.181.156.38:22223, server: 35.181.156.38, port: 22223, type: vless, tls: true, packet-encoding: xudp, uuid: e4514801-0d5a-42ba-869f-39bd605aef9e, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "🇺🇸 [openproxylist.com] vmess-US", server: 165.140.216.142, port: 443, type: vmess, uuid: b65a2d69-5634-42a2-e4be-54e8a6176900, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "🇺🇸 [openproxylist.com] vmess-US 2", server: 165.140.216.142, port: 443, type: vmess, uuid: b65a2d69-5634-42a2-e4be-54e8a6176900, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "🇺🇸 [openproxylist.com] vmess-US 3", server: 165.140.216.142, port: 443, type: vmess, uuid: b65a2d69-5634-42a2-e4be-54e8a6176900, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - oplosgru-c.catcat321.com:20004
-      - oplosgru-c.catcat321.com:20068
-      - rr2.tube-cat.com:9450
+      - 158.101.208.107:45819
+      - oplosgru-c.catcat321.com:20120
       - 🇵🇱 pl.mifbot.pro:49000
       - 95.85.224.3:8443
       - 155.117.137.201:443
       - 141.148.232.142:62145
-      - 104.21.55.229:443
+      - 193.123.62.167:62145
       - t1.hhaakk9922.com:36798
       - t1.hhaakk9922.com:46784
       - 13.36.44.201:22224
       - 35.181.156.38:22223
       - 🇺🇸 [openproxylist.com] vmess-US
-      - 🇺🇸 [openproxylist.com] vmess-US 2
-      - 🇺🇸 [openproxylist.com] vmess-US 3
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - oplosgru-c.catcat321.com:20004
-      - oplosgru-c.catcat321.com:20068
-      - rr2.tube-cat.com:9450
+      - 158.101.208.107:45819
+      - oplosgru-c.catcat321.com:20120
       - 🇵🇱 pl.mifbot.pro:49000
       - 95.85.224.3:8443
       - 155.117.137.201:443
       - 141.148.232.142:62145
-      - 104.21.55.229:443
+      - 193.123.62.167:62145
       - t1.hhaakk9922.com:36798
       - t1.hhaakk9922.com:46784
       - 13.36.44.201:22224
       - 35.181.156.38:22223
       - 🇺🇸 [openproxylist.com] vmess-US
-      - 🇺🇸 [openproxylist.com] vmess-US 2
-      - 🇺🇸 [openproxylist.com] vmess-US 3
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - oplosgru-c.catcat321.com:20004
-      - oplosgru-c.catcat321.com:20068
-      - rr2.tube-cat.com:9450
+      - 158.101.208.107:45819
+      - oplosgru-c.catcat321.com:20120
       - 🇵🇱 pl.mifbot.pro:49000
       - 95.85.224.3:8443
       - 155.117.137.201:443
       - 141.148.232.142:62145
-      - 104.21.55.229:443
+      - 193.123.62.167:62145
       - t1.hhaakk9922.com:36798
       - t1.hhaakk9922.com:46784
       - 13.36.44.201:22224
       - 35.181.156.38:22223
       - 🇺🇸 [openproxylist.com] vmess-US
-      - 🇺🇸 [openproxylist.com] vmess-US 2
-      - 🇺🇸 [openproxylist.com] vmess-US 3
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - oplosgru-c.catcat321.com:20004
-      - oplosgru-c.catcat321.com:20068
-      - rr2.tube-cat.com:9450
+      - 158.101.208.107:45819
+      - oplosgru-c.catcat321.com:20120
       - 🇵🇱 pl.mifbot.pro:49000
       - 95.85.224.3:8443
       - 155.117.137.201:443
       - 141.148.232.142:62145
-      - 104.21.55.229:443
+      - 193.123.62.167:62145
       - t1.hhaakk9922.com:36798
       - t1.hhaakk9922.com:46784
       - 13.36.44.201:22224
       - 35.181.156.38:22223
       - 🇺🇸 [openproxylist.com] vmess-US
-      - 🇺🇸 [openproxylist.com] vmess-US 2
-      - 🇺🇸 [openproxylist.com] vmess-US 3
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - oplosgru-c.catcat321.com:20004
-      - oplosgru-c.catcat321.com:20068
-      - rr2.tube-cat.com:9450
+      - 158.101.208.107:45819
+      - oplosgru-c.catcat321.com:20120
       - 🇵🇱 pl.mifbot.pro:49000
       - 95.85.224.3:8443
       - 155.117.137.201:443
       - 141.148.232.142:62145
-      - 104.21.55.229:443
+      - 193.123.62.167:62145
       - t1.hhaakk9922.com:36798
       - t1.hhaakk9922.com:46784
       - 13.36.44.201:22224
       - 35.181.156.38:22223
       - 🇺🇸 [openproxylist.com] vmess-US
-      - 🇺🇸 [openproxylist.com] vmess-US 2
-      - 🇺🇸 [openproxylist.com] vmess-US 3
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - oplosgru-c.catcat321.com:20004
-      - oplosgru-c.catcat321.com:20068
-      - rr2.tube-cat.com:9450
+      - 158.101.208.107:45819
+      - oplosgru-c.catcat321.com:20120
       - 🇵🇱 pl.mifbot.pro:49000
       - 95.85.224.3:8443
       - 155.117.137.201:443
       - 141.148.232.142:62145
-      - 104.21.55.229:443
+      - 193.123.62.167:62145
       - t1.hhaakk9922.com:36798
       - t1.hhaakk9922.com:46784
       - 13.36.44.201:22224
       - 35.181.156.38:22223
       - 🇺🇸 [openproxylist.com] vmess-US
-      - 🇺🇸 [openproxylist.com] vmess-US 2
-      - 🇺🇸 [openproxylist.com] vmess-US 3
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -170,21 +149,18 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - oplosgru-c.catcat321.com:20004
-      - oplosgru-c.catcat321.com:20068
-      - rr2.tube-cat.com:9450
+      - 158.101.208.107:45819
+      - oplosgru-c.catcat321.com:20120
       - 🇵🇱 pl.mifbot.pro:49000
       - 95.85.224.3:8443
       - 155.117.137.201:443
       - 141.148.232.142:62145
-      - 104.21.55.229:443
+      - 193.123.62.167:62145
       - t1.hhaakk9922.com:36798
       - t1.hhaakk9922.com:46784
       - 13.36.44.201:22224
       - 35.181.156.38:22223
       - 🇺🇸 [openproxylist.com] vmess-US
-      - 🇺🇸 [openproxylist.com] vmess-US 2
-      - 🇺🇸 [openproxylist.com] vmess-US 3
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
