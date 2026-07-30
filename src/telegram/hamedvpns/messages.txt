@@ -1,5 +1,137 @@
 # آرشیو کانال: @hamedvpns
-بروزرسانی: 2026-07-29 20:49:19 UTC
+بروزرسانی: 2026-07-30 01:23:30 UTC
+
+### 🕒 2026-07-30 01:00:47 UTC
+***🚨***
+[ᑎΞᗯ ᑌᑭᗪᗩTΞ](https://lastest-update.pages.dev/)
+***🚀***
+ نسخه جدید منتشر شد برای 
+[**dicodePing**](https://github.com/mcodersir/dicodePing)
+:
+***✅***
+ 
+**dicodePing v2.0.4**
+ (v2.0.4)
+# dicodePing v2.0.4 — انتشار پایدار
+این نسخه چهار مشکل اساسی را حل می‌کند:
+1. **باگ دسکتاپ `blob_to_config is not defined`:** تابع `enrich_saved_scanner_records`
+   در v2.0.1 اضافه شد اما `blob_to_config` فقط به‌صورت محلی داخل یک تابع دیگر
+   import شده بود. حالا در سطح ماژول import می‌شود.
+2. **پس‌زمینه قهوه‌ای دارک‌تم اندروید:** تم Material3 به‌طور پیش‌فرض نقش‌های رنگی
+   سطحی (`colorSurfaceVariant`، `colorSurfaceContainerLow` و غیره) را به مقادیر
+   گرم/بنفش (`
+[#1D1B20](?q=%231D1B20)
+`، `
+[#49454F](?q=%2349454F)
+`) تنظیم می...
+(متن کامل در گیت‌هاب)
+***🔗***
+ 
+[مشاهده در گیت‌هاب](https://github.com/mcodersir/dicodePing/releases/tag/v2.0.4)
+[𓄂𓆃](https://t.me/update_releases)
+
+---
+
+### 🕒 2026-07-30 00:15:44 UTC
+***🚨***
+[ᑎΞᗯ ᑌᑭᗪᗩTΞ](https://lastest-update.pages.dev/)
+***🚀***
+ نسخه جدید منتشر شد برای 
+[**dicodePing**](https://github.com/mcodersir/dicodePing)
+:
+***✅***
+ 
+**dicodePing v2.0.3**
+ (v2.0.3)
+# dicodePing v2.0.3 — انتشار پایدار
+این نسخه دو مشکل اساسی را حل می‌کند:
+1. **اسپلش‌اسکرین اولین اجرا:** کاربری که نرم‌افزار را تازه نصب می‌کرد، به‌خصوص روی
+   اندروید، هیچ سروری با پینگ و لوکیشن نمی‌دید. حالا اسپلش منابع را دریافت،
+   نمونه ۳۰٪ هر منبع را با TCP موازی پینگ، و سپس **به‌صورت inline روی همان نمونه**
+   لوکیشن و IP را resolve می‌کند — قبل از باز شدن رابط اصلی.
+2. **سرعت اسکنر:** فاز A (پروب موازی TCP) سریع‌تر شد (تایم‌اوت ۱۴۰۰→۸۰۰ms، همزمانی
+   ۱۲→۱۶) و فاز B (پروب سری Xray) فقط...
+(متن کامل در گیت‌هاب)
+***🔗***
+ 
+[مشاهده در گیت‌هاب](https://github.com/mcodersir/dicodePing/releases/tag/v2.0.3)
+[𓄂𓆃](https://t.me/update_releases)
+
+---
+
+### 🕒 2026-07-30 00:00:49 UTC
+***🚨***
+[ᑎΞᗯ ᑌᑭᗪᗩTΞ](https://lastest-update.pages.dev/)
+***🚀***
+ نسخه جدید منتشر شد برای 
+[**incy-platforms**](https://github.com/INCY-DEV/incy-platforms)
+:
+***✅***
+ 
+**Desktop v3.3.8**
+ (desktop-v3.3.8)
+INCY Desktop v3.3.8 — macOS (ARM64/Intel), Windows (x64/ARM64), Linux (x64/ARM64)
+***🔗***
+ 
+[مشاهده در گیت‌هاب](https://github.com/INCY-DEV/incy-platforms/releases/tag/desktop-v3.3.8)
+[𓄂𓆃](https://t.me/update_releases)
+
+---
+
+### 🕒 2026-07-29 23:15:52 UTC
+***🚨***
+[ᑎΞᗯ ᑌᑭᗪᗩTΞ](https://lastest-update.pages.dev/)
+***🚀***
+ نسخه جدید منتشر شد برای 
+[**dicodePing**](https://github.com/mcodersir/dicodePing)
+:
+***✅***
+ 
+**dicodePing v2.0.2**
+ (v2.0.2)
+# dicodePing v2.0.2 — انتشار پایدار
+این نسخه یک اصلاح اساسی روی همزمانی واقعی اسکنر اندروید است. نسخه قبلی (v2.0.1)
+سعی کرد همزمانی پروب‌های Xray را با `SCANNER_PROBE_CONCURRENCY = 3` افزایش دهد، اما
+به‌دلیل قفل process-wide کتابخانه `libv2ray`، همه پروب‌های Xray HTTP عملاً ترتیبی
+اجرا می‌شدند و کاربر هیچ بهبودی حس نمی‌کرد. v2.0.2 این مشکل را با یک معماری دو‌فازی
+حل می‌کند که همزمانی واقعی را روی اندروید ممکن می‌سازد و همچنین README کاملاً
+حرفه‌ای جایگزین README قبلی می‌شود.
+## همزمانی واقعی ا...
+(متن کامل در گیت‌هاب)
+***🔗***
+ 
+[مشاهده در گیت‌هاب](https://github.com/mcodersir/dicodePing/releases/tag/v2.0.2)
+[𓄂𓆃](https://t.me/update_releases)
+
+---
+
+### 🕒 2026-07-29 22:30:49 UTC
+***🚨***
+[ᑎΞᗯ ᑌᑭᗪᗩTΞ](https://lastest-update.pages.dev/)
+***🚀***
+ نسخه جدید منتشر شد برای 
+[**dicodePing**](https://github.com/mcodersir/dicodePing)
+:
+***✅***
+ 
+**dicodePing v2.0.1**
+ (v2.0.1)
+# dicodePing v2.0.1 — انتشار پایدار
+این نسخه یک اصلاح پایدار روی بستر نسخه ۲.۰.۰ است که دو مشکل اساسی اسکنر را
+برای همه چهار پلتفرم (ویندوز، لینوکس، مک، اندروید) حل می‌کند.
+## اسکنر همزمان به جای دونه‌به‌دونه
+- **اندروید**: همزمانی probe واقعی Xray از ۱ به ۳ افزایش یافت. کانفیگ‌ها حالا
+  به‌صورت موازی تست می‌شوند، نه ترتیبی. زمان کل اسکن روی نمونه ۴۰ کانفیگ
+  تقریباً ۵۵٪ کاهش می‌یابد.
+- **دسکتاپ (ویندوز/لینوکس/مک)**: اسکنر از قبل با `ThreadPoolExecutor` موازی
+  بود؛ اما مرحله «تست مجدد پس از ...
+(متن کامل در گیت‌هاب)
+***🔗***
+ 
+[مشاهده در گیت‌هاب](https://github.com/mcodersir/dicodePing/releases/tag/v2.0.1)
+[𓄂𓆃](https://t.me/update_releases)
+
+---
 
 ### 🕒 2026-07-29 18:48:38 UTC
 خب دوستان لطفاً نسخه 
@@ -79,15 +211,6 @@ V2rayng
 ***❤️***
 اشتراک بزارین   |   Share 
 ***⭐️***
-
----
-
-### 🕒 2026-07-28 21:11:34 UTC
-دوستان عزیزم
-Cfnew 
-آپدیت داده و مشکل 1101 حل شده 
-خواستید برید سراغش
-[https://t.me/hamedvpns/19131](https://t.me/hamedvpns/19131)
 
 ---
 
