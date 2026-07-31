@@ -5,137 +5,116 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 130.61.114.133:59924, server: 130.61.114.133, port: 59924, type: ss, cipher: chacha20-ietf-poly1305, password: OWVhYWM4OTFlNGFhNTFiNjY5NDNlODI3ZDE5Njc0ZmE=, udp: true, tfo: false}
   - {name: 54.46.46.228:15775, server: 54.46.46.228, port: 15775, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 18.181.205.36:38937, server: 18.181.205.36, port: 38937, type: trojan, password: d1960ba9f0f6353353994fa844cf817b, sni: www.nintendogames.net, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 43.199.32.78:13118, server: 43.199.32.78, port: 13118, type: trojan, password: d1960ba9f0f6353353994fa844cf817b, sni: www.nintendogames.net, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 104.17.70.206:2096, server: 104.17.70.206, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 395d040e-a04a-43d7-a1e9-8635f545879a, servername: shalana.xyz, network: ws, ws-opts: {path: /shalana, headers: {Host: shalana.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: apinbxs.eovay.com:39756, server: apinbxs.eovay.com, port: 39756, type: vless, tls: true, packet-encoding: xudp, uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134, servername: iosapps.itunes.apple.com, host: iosapps.itunes.apple.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: dDf2TcDNn3Kk8pAp4EnNC4ZUAmGkzAapRFGFe-41IEk, short-id: 86f6705960e3e3}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 195.123.216.28:443, server: 195.123.216.28, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 74ae950f-95c6-417b-9409-a0f58be33429, servername: www.intel.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, reality-opts: {public-key: RRhxkmf4YgwjyNSikyomlL6Me9329CTvZbAMFWakWjE, short-id: 4e6e39c4}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 157.137.234.139:62145, server: 157.137.234.139, port: 62145, type: vless, tls: true, packet-encoding: xudp, uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 198.41.209.149:443, server: 198.41.209.149, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 95891abd-c399-a085-ea21-21df48ea0fa2, servername: oxnetirpx.kdns.fr, alpn: [http/1.1], network: ws, ws-opts: {path: /ws/oxnetir-vl-ws, headers: {Host: oxnetirpx.kdns.fr}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 🇩🇪 v-de-node-03.bot-auth.com:8443, server: v-de-node-03.bot-auth.com, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: b9b1e7c9-4160-49b4-85a4-2f096706509a, servername: www.oracle.com, host: www.oracle.com, path: /, reality-opts: {public-key: dNfk0sOCzOlmE61B7ur7YzU2i08RqXIBcGVBA2Ne1Ck, short-id: 7548bc}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 78.154.108.26:1447, server: 78.154.108.26, port: 1447, type: vless, tls: true, packet-encoding: xudp, uuid: d8b42cd5-a149-4356-9e61-111111111111, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 78.154.108.51:1446, server: 78.154.108.51, port: 1446, type: vless, tls: true, packet-encoding: xudp, uuid: d8b42cd5-a149-4356-9e61-111111111111, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 15.237.168.93:22222, server: 15.237.168.93, port: 22222, type: vless, tls: true, packet-encoding: xudp, uuid: e4514801-0d5a-42ba-869f-39bd605aef9e, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 13.38.146.131:22223, server: 13.38.146.131, port: 22223, type: vless, tls: true, packet-encoding: xudp, uuid: e4514801-0d5a-42ba-869f-39bd605aef9e, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "🇺🇸 [openproxylist.com] vmess-US", server: 165.140.216.142, port: 443, type: vmess, uuid: b65a2d69-5634-42a2-e4be-54e8a6176900, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇺🇸 [openproxylist.com] vmess-US 2", server: 165.140.216.142, port: 443, type: vmess, uuid: b65a2d69-5634-42a2-e4be-54e8a6176900, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 130.61.114.133:59924
       - 54.46.46.228:15775
       - 18.181.205.36:38937
       - 43.199.32.78:13118
       - 104.17.70.206:2096
       - apinbxs.eovay.com:39756
       - 195.123.216.28:443
-      - 157.137.234.139:62145
       - 198.41.209.149:443
       - 🇩🇪 v-de-node-03.bot-auth.com:8443
-      - 78.154.108.26:1447
-      - 78.154.108.51:1446
-      - 15.237.168.93:22222
+      - 13.38.146.131:22223
       - 🇺🇸 [openproxylist.com] vmess-US
+      - 🇺🇸 [openproxylist.com] vmess-US 2
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 130.61.114.133:59924
       - 54.46.46.228:15775
       - 18.181.205.36:38937
       - 43.199.32.78:13118
       - 104.17.70.206:2096
       - apinbxs.eovay.com:39756
       - 195.123.216.28:443
-      - 157.137.234.139:62145
       - 198.41.209.149:443
       - 🇩🇪 v-de-node-03.bot-auth.com:8443
-      - 78.154.108.26:1447
-      - 78.154.108.51:1446
-      - 15.237.168.93:22222
+      - 13.38.146.131:22223
       - 🇺🇸 [openproxylist.com] vmess-US
+      - 🇺🇸 [openproxylist.com] vmess-US 2
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 130.61.114.133:59924
       - 54.46.46.228:15775
       - 18.181.205.36:38937
       - 43.199.32.78:13118
       - 104.17.70.206:2096
       - apinbxs.eovay.com:39756
       - 195.123.216.28:443
-      - 157.137.234.139:62145
       - 198.41.209.149:443
       - 🇩🇪 v-de-node-03.bot-auth.com:8443
-      - 78.154.108.26:1447
-      - 78.154.108.51:1446
-      - 15.237.168.93:22222
+      - 13.38.146.131:22223
       - 🇺🇸 [openproxylist.com] vmess-US
+      - 🇺🇸 [openproxylist.com] vmess-US 2
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 130.61.114.133:59924
       - 54.46.46.228:15775
       - 18.181.205.36:38937
       - 43.199.32.78:13118
       - 104.17.70.206:2096
       - apinbxs.eovay.com:39756
       - 195.123.216.28:443
-      - 157.137.234.139:62145
       - 198.41.209.149:443
       - 🇩🇪 v-de-node-03.bot-auth.com:8443
-      - 78.154.108.26:1447
-      - 78.154.108.51:1446
-      - 15.237.168.93:22222
+      - 13.38.146.131:22223
       - 🇺🇸 [openproxylist.com] vmess-US
+      - 🇺🇸 [openproxylist.com] vmess-US 2
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 130.61.114.133:59924
       - 54.46.46.228:15775
       - 18.181.205.36:38937
       - 43.199.32.78:13118
       - 104.17.70.206:2096
       - apinbxs.eovay.com:39756
       - 195.123.216.28:443
-      - 157.137.234.139:62145
       - 198.41.209.149:443
       - 🇩🇪 v-de-node-03.bot-auth.com:8443
-      - 78.154.108.26:1447
-      - 78.154.108.51:1446
-      - 15.237.168.93:22222
+      - 13.38.146.131:22223
       - 🇺🇸 [openproxylist.com] vmess-US
+      - 🇺🇸 [openproxylist.com] vmess-US 2
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 130.61.114.133:59924
       - 54.46.46.228:15775
       - 18.181.205.36:38937
       - 43.199.32.78:13118
       - 104.17.70.206:2096
       - apinbxs.eovay.com:39756
       - 195.123.216.28:443
-      - 157.137.234.139:62145
       - 198.41.209.149:443
       - 🇩🇪 v-de-node-03.bot-auth.com:8443
-      - 78.154.108.26:1447
-      - 78.154.108.51:1446
-      - 15.237.168.93:22222
+      - 13.38.146.131:22223
       - 🇺🇸 [openproxylist.com] vmess-US
+      - 🇺🇸 [openproxylist.com] vmess-US 2
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -163,20 +142,17 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 130.61.114.133:59924
       - 54.46.46.228:15775
       - 18.181.205.36:38937
       - 43.199.32.78:13118
       - 104.17.70.206:2096
       - apinbxs.eovay.com:39756
       - 195.123.216.28:443
-      - 157.137.234.139:62145
       - 198.41.209.149:443
       - 🇩🇪 v-de-node-03.bot-auth.com:8443
-      - 78.154.108.26:1447
-      - 78.154.108.51:1446
-      - 15.237.168.93:22222
+      - 13.38.146.131:22223
       - 🇺🇸 [openproxylist.com] vmess-US
+      - 🇺🇸 [openproxylist.com] vmess-US 2
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
