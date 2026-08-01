@@ -469,10 +469,11 @@ proxies:
   - {name: 141.144.195.131:45819, server: 141.144.195.131, port: 45819, type: ss, cipher: chacha20-ietf-poly1305, password: YTEyZDI0OGQwM2ZmZjc4ZTg1ZTBiYTNlZTZkZjIxODM=, udp: true, tfo: false}
   - {name: 16.162.122.119:38961, server: 16.162.122.119, port: 38961, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
   - {name: v2jp.k1.ssnss.live:44184, server: v2jp.k1.ssnss.live, port: 44184, type: trojan, password: d050aca3-9df2-4461-90ec-92373c1d7636, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 13.38.146.131:22223, server: 13.38.146.131, port: 22223, type: vless, tls: true, packet-encoding: xudp, uuid: e4514801-0d5a-42ba-869f-39bd605aef9e, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 104.19.64.105:443, server: 104.19.64.105, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true, tfo: false}
+  - {name: 157.137.228.255:62145, server: 157.137.228.255, port: 62145, type: vless, tls: true, packet-encoding: xudp, uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: eu-gw.videomonitor.cloud:2053, server: eu-gw.videomonitor.cloud, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: b1e4bfe2-2b12-11f1-92cb-12ba70109d32, servername: dzen.ru, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: grpc-direct}, reality-opts: {public-key: j8OW1foMwfeiy3VMbNPHLgTXgy_ZPdFFxv-H3HrbNF0, short-id: f0c18fcc1d09b637}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "🇺🇸 [openproxylist.com] vmess-US", server: 165.140.216.142, port: 443, type: vmess, uuid: b65a2d69-5634-42a2-e4be-54e8a6176900, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "🇺🇸 [openproxylist.com] vmess-US 2", server: 165.140.216.142, port: 443, type: vmess, uuid: b65a2d69-5634-42a2-e4be-54e8a6176900, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "🇺🇸 [openproxylist.com] vmess-US 3", server: 165.140.216.142, port: 443, type: vmess, uuid: b65a2d69-5634-42a2-e4be-54e8a6176900, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -493,10 +494,11 @@ proxy-groups:
       - 141.144.195.131:45819
       - 16.162.122.119:38961
       - v2jp.k1.ssnss.live:44184
-      - 13.38.146.131:22223
+      - 104.19.64.105:443
+      - 157.137.228.255:62145
+      - eu-gw.videomonitor.cloud:2053
       - 🇺🇸 [openproxylist.com] vmess-US
       - 🇺🇸 [openproxylist.com] vmess-US 2
-      - 🇺🇸 [openproxylist.com] vmess-US 3
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -507,10 +509,11 @@ proxy-groups:
       - 141.144.195.131:45819
       - 16.162.122.119:38961
       - v2jp.k1.ssnss.live:44184
-      - 13.38.146.131:22223
+      - 104.19.64.105:443
+      - 157.137.228.255:62145
+      - eu-gw.videomonitor.cloud:2053
       - 🇺🇸 [openproxylist.com] vmess-US
       - 🇺🇸 [openproxylist.com] vmess-US 2
-      - 🇺🇸 [openproxylist.com] vmess-US 3
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -521,10 +524,11 @@ proxy-groups:
       - 141.144.195.131:45819
       - 16.162.122.119:38961
       - v2jp.k1.ssnss.live:44184
-      - 13.38.146.131:22223
+      - 104.19.64.105:443
+      - 157.137.228.255:62145
+      - eu-gw.videomonitor.cloud:2053
       - 🇺🇸 [openproxylist.com] vmess-US
       - 🇺🇸 [openproxylist.com] vmess-US 2
-      - 🇺🇸 [openproxylist.com] vmess-US 3
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -544,10 +548,11 @@ proxy-groups:
       - 141.144.195.131:45819
       - 16.162.122.119:38961
       - v2jp.k1.ssnss.live:44184
-      - 13.38.146.131:22223
+      - 104.19.64.105:443
+      - 157.137.228.255:62145
+      - eu-gw.videomonitor.cloud:2053
       - 🇺🇸 [openproxylist.com] vmess-US
       - 🇺🇸 [openproxylist.com] vmess-US 2
-      - 🇺🇸 [openproxylist.com] vmess-US 3
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -558,10 +563,11 @@ proxy-groups:
       - 141.144.195.131:45819
       - 16.162.122.119:38961
       - v2jp.k1.ssnss.live:44184
-      - 13.38.146.131:22223
+      - 104.19.64.105:443
+      - 157.137.228.255:62145
+      - eu-gw.videomonitor.cloud:2053
       - 🇺🇸 [openproxylist.com] vmess-US
       - 🇺🇸 [openproxylist.com] vmess-US 2
-      - 🇺🇸 [openproxylist.com] vmess-US 3
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -572,10 +578,11 @@ proxy-groups:
       - 141.144.195.131:45819
       - 16.162.122.119:38961
       - v2jp.k1.ssnss.live:44184
-      - 13.38.146.131:22223
+      - 104.19.64.105:443
+      - 157.137.228.255:62145
+      - eu-gw.videomonitor.cloud:2053
       - 🇺🇸 [openproxylist.com] vmess-US
       - 🇺🇸 [openproxylist.com] vmess-US 2
-      - 🇺🇸 [openproxylist.com] vmess-US 3
   - name: دانلود منیجر 📥
     type: select
     proxies:
