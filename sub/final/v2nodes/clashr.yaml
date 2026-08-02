@@ -8,6 +8,7 @@ proxies:
   - {name: 84.235.160.109:45819, server: 84.235.160.109, port: 45819, type: ss, cipher: chacha20-ietf-poly1305, password: YTEyZDI0OGQwM2ZmZjc4ZTg1ZTBiYTNlZTZkZjIxODM=, udp: true, tfo: false}
   - {name: teain.org:1000, server: teain.org, port: 1000, type: vless, tls: true, packet-encoding: xudp, uuid: 6f436a44-f703-93da-7e45-615824a39d3b, servername: knox.cdn-apple.com, host: knox.cdn-apple.com, path: /, reality-opts: {public-key: ECxm-BdHYhxYK9MtN33NkkrFSdFZXp-OB-yhN8AleRY, short-id: a62d513cd709744a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: fin.sillyvpn.cc:31013, server: fin.sillyvpn.cc, port: 31013, type: vless, tls: true, packet-encoding: xudp, uuid: ddd9a320-9e93-437f-a5b6-6bf9647334a9, host: fin.sillyvpn.cc, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇺🇸 [openproxylist.com] vmess-US", server: 165.140.216.142, port: 443, type: vmess, uuid: b65a2d69-5634-42a2-e4be-54e8a6176900, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -17,6 +18,7 @@ proxy-groups:
       - 84.235.160.109:45819
       - teain.org:1000
       - fin.sillyvpn.cc:31013
+      - 🇺🇸 [openproxylist.com] vmess-US
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -26,6 +28,7 @@ proxy-groups:
       - 84.235.160.109:45819
       - teain.org:1000
       - fin.sillyvpn.cc:31013
+      - 🇺🇸 [openproxylist.com] vmess-US
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -35,6 +38,7 @@ proxy-groups:
       - 84.235.160.109:45819
       - teain.org:1000
       - fin.sillyvpn.cc:31013
+      - 🇺🇸 [openproxylist.com] vmess-US
   - name: 📲 电报信息
     type: select
     proxies:
@@ -43,6 +47,7 @@ proxy-groups:
       - 84.235.160.109:45819
       - teain.org:1000
       - fin.sillyvpn.cc:31013
+      - 🇺🇸 [openproxylist.com] vmess-US
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -51,6 +56,7 @@ proxy-groups:
       - 84.235.160.109:45819
       - teain.org:1000
       - fin.sillyvpn.cc:31013
+      - 🇺🇸 [openproxylist.com] vmess-US
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -59,6 +65,7 @@ proxy-groups:
       - 84.235.160.109:45819
       - teain.org:1000
       - fin.sillyvpn.cc:31013
+      - 🇺🇸 [openproxylist.com] vmess-US
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -89,6 +96,7 @@ proxy-groups:
       - 84.235.160.109:45819
       - teain.org:1000
       - fin.sillyvpn.cc:31013
+      - 🇺🇸 [openproxylist.com] vmess-US
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
