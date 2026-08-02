@@ -5,46 +5,46 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 🇺🇸 hamedvpns-us🇺🇸1, server: chuixuecf.blowingsnowclouds.cc, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: b2ae0130-662d-4c2e-9a8b-aaf95fc326fd, servername: preferred-free-us1.laodavip.com, network: ws, ws-opts: {path: /asdasd, headers: {Host: preferred-free-us1.laodavip.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hamedvpns, server: turok2.o4ka-internet.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a03df445-0666-4d61-acde-9705009e409c, servername: turok2.o4ka-internet.com, host: turok2.o4ka-internet.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: V2JprbR_aJkS7uX6anyU3nrswGxdvDQT2HpY4WnzuC8, short-id: 5629431325884ff0}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇺🇸 hamedvpns-us🇺🇸1
+      - hamedvpns
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 🇺🇸 hamedvpns-us🇺🇸1
+      - hamedvpns
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇺🇸 hamedvpns-us🇺🇸1
+      - hamedvpns
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇺🇸 hamedvpns-us🇺🇸1
+      - hamedvpns
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 🇺🇸 hamedvpns-us🇺🇸1
+      - hamedvpns
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇺🇸 hamedvpns-us🇺🇸1
+      - hamedvpns
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +72,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇺🇸 hamedvpns-us🇺🇸1
+      - hamedvpns
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

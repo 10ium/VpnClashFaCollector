@@ -465,7 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 🇺🇸 hamedvpns-us🇺🇸1, server: chuixuecf.blowingsnowclouds.cc, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: b2ae0130-662d-4c2e-9a8b-aaf95fc326fd, servername: preferred-free-us1.laodavip.com, network: ws, ws-opts: {path: /asdasd, headers: {Host: preferred-free-us1.laodavip.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hamedvpns, server: turok2.o4ka-internet.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a03df445-0666-4d61-acde-9705009e409c, servername: turok2.o4ka-internet.com, host: turok2.o4ka-internet.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: V2JprbR_aJkS7uX6anyU3nrswGxdvDQT2HpY4WnzuC8, short-id: 5629431325884ff0}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 🇺🇸 hamedvpns-us🇺🇸1
+      - hamedvpns
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 🇺🇸 hamedvpns-us🇺🇸1
+      - hamedvpns
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 🇺🇸 hamedvpns-us🇺🇸1
+      - hamedvpns
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇺🇸 hamedvpns-us🇺🇸1
+      - hamedvpns
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇺🇸 hamedvpns-us🇺🇸1
+      - hamedvpns
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇺🇸 hamedvpns-us🇺🇸1
+      - hamedvpns
   - name: دانلود منیجر 📥
     type: select
     proxies:
