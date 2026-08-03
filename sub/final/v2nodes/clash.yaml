@@ -465,9 +465,10 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 84.235.160.109:45819, server: 84.235.160.109, port: 45819, type: ss, cipher: chacha20-ietf-poly1305, password: YTEyZDI0OGQwM2ZmZjc4ZTg1ZTBiYTNlZTZkZjIxODM=, udp: true, tfo: false}
-  - {name: teain.org:1000, server: teain.org, port: 1000, type: vless, tls: true, packet-encoding: xudp, uuid: 6f436a44-f703-93da-7e45-615824a39d3b, servername: knox.cdn-apple.com, host: knox.cdn-apple.com, path: /, reality-opts: {public-key: ECxm-BdHYhxYK9MtN33NkkrFSdFZXp-OB-yhN8AleRY, short-id: a62d513cd709744a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: epnbiaynh2yw.cdn000.com:30202, server: epnbiaynh2yw.cdn000.com, port: 30202, type: ss, cipher: 2022-blake3-aes-128-gcm, password: Y2FkNzhhZWQ0MzA1NzlhZA==:YmU0ZDQzODMtYWFhZi00Yg==, udp: true, tfo: false}
+  - {name: 🇸🇬 sg.csfcpun8nb61wyygrclw.cdn000.com:31304, server: sg.csfcpun8nb61wyygrclw.cdn000.com, port: 31304, type: ss, cipher: 2022-blake3-aes-128-gcm, password: Y2FkNzhhZWQ0MzA1NzlhZA==:YmU0ZDQzODMtYWFhZi00Yg==, udp: true, tfo: false}
   - {name: fin.sillyvpn.cc:31013, server: fin.sillyvpn.cc, port: 31013, type: vless, tls: true, packet-encoding: xudp, uuid: ddd9a320-9e93-437f-a5b6-6bf9647334a9, host: fin.sillyvpn.cc, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 15.237.234.170:22223, server: 15.237.234.170, port: 22223, type: vless, tls: true, packet-encoding: xudp, uuid: e4514801-0d5a-42ba-869f-39bd605aef9e, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "🇺🇸 [openproxylist.com] vmess-US", server: 165.140.216.142, port: 443, type: vmess, uuid: b65a2d69-5634-42a2-e4be-54e8a6176900, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -485,9 +486,10 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 84.235.160.109:45819
-      - teain.org:1000
+      - epnbiaynh2yw.cdn000.com:30202
+      - 🇸🇬 sg.csfcpun8nb61wyygrclw.cdn000.com:31304
       - fin.sillyvpn.cc:31013
+      - 15.237.234.170:22223
       - 🇺🇸 [openproxylist.com] vmess-US
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -495,9 +497,10 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - 84.235.160.109:45819
-      - teain.org:1000
+      - epnbiaynh2yw.cdn000.com:30202
+      - 🇸🇬 sg.csfcpun8nb61wyygrclw.cdn000.com:31304
       - fin.sillyvpn.cc:31013
+      - 15.237.234.170:22223
       - 🇺🇸 [openproxylist.com] vmess-US
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -505,9 +508,10 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - 84.235.160.109:45819
-      - teain.org:1000
+      - epnbiaynh2yw.cdn000.com:30202
+      - 🇸🇬 sg.csfcpun8nb61wyygrclw.cdn000.com:31304
       - fin.sillyvpn.cc:31013
+      - 15.237.234.170:22223
       - 🇺🇸 [openproxylist.com] vmess-US
   - name: اتصال پایدار 🔗
     type: url-test
@@ -524,9 +528,10 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 84.235.160.109:45819
-      - teain.org:1000
+      - epnbiaynh2yw.cdn000.com:30202
+      - 🇸🇬 sg.csfcpun8nb61wyygrclw.cdn000.com:31304
       - fin.sillyvpn.cc:31013
+      - 15.237.234.170:22223
       - 🇺🇸 [openproxylist.com] vmess-US
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -534,9 +539,10 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 84.235.160.109:45819
-      - teain.org:1000
+      - epnbiaynh2yw.cdn000.com:30202
+      - 🇸🇬 sg.csfcpun8nb61wyygrclw.cdn000.com:31304
       - fin.sillyvpn.cc:31013
+      - 15.237.234.170:22223
       - 🇺🇸 [openproxylist.com] vmess-US
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -544,9 +550,10 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 84.235.160.109:45819
-      - teain.org:1000
+      - epnbiaynh2yw.cdn000.com:30202
+      - 🇸🇬 sg.csfcpun8nb61wyygrclw.cdn000.com:31304
       - fin.sillyvpn.cc:31013
+      - 15.237.234.170:22223
       - 🇺🇸 [openproxylist.com] vmess-US
   - name: دانلود منیجر 📥
     type: select
