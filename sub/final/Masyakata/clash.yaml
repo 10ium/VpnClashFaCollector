@@ -465,7 +465,12 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Masyakata", server: 91.202.171.142, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 928b7d22-2f67-43e4-9963-ab7e84efd4dd, servername: www.asus.com, host: www.asus.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: W1O_G8Pa5c0WpgXdrZmYO4nYU2TXqQGuOux9s9rGCkg, short-id: 53c387c2210f756b}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@ShadowFlux2 | کانال ما در تلگرام`", server: 5.75.201.77, port: 51822, type: vless, tls: true, packet-encoding: xudp, uuid: 200e4181-caf2-4261-bd98-b1fd9ad1fce1, host: BIA_TELEGRAM%3F%3D%40ShadowFlux2---%40ShadowFlux2---%40ShadowFlux2---%40ShadowFlux2---%40ShadowFlux2, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@ShadowFlux2 | کانال ما در تلگرام` 2", server: 130.49.219.126, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 2ee2b77f-e4cd-4e5d-af22-f9d919eeadd5, servername: at16.fastlanehosting.ru, alpn: [h2%2Chttp%2F1.1], host: at16.fastlanehosting.ru, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@ShadowFlux2 | کانال ما در تلگرام` 3", server: 150.241.79.143, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: b9b1e7c9-4160-49b4-85a4-2f096706509a, servername: www.oracle.com, host: www.oracle.com, path: /, reality-opts: {public-key: dNfk0sOCzOlmE61B7ur7YzU2i08RqXIBcGVBA2Ne1Ck, short-id: 7548bc}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@ShadowFlux2 | کانال ما در تلگرام` 4", server: 45.196.201.39, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f75814f6-8f81-4847-b792-168c41f2dc85, servername: storage.yandex.net, host: storage.yandex.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04, short-id: c6ef72e4635d15a5}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@ShadowFlux2 | کانال ما در تلگرام` 5", server: 45.196.201.53, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f75814f6-8f81-4847-b792-168c41f2dc85, servername: storage.yandex.net, host: storage.yandex.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04, short-id: c6ef72e4635d15a5}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@ShadowFlux2 | کانال ما در تلگرام` 6", server: 45.196.201.88, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f75814f6-8f81-4847-b792-168c41f2dc85, servername: storage.yandex.net, host: storage.yandex.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04, short-id: c6ef72e4635d15a5}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +487,36 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@Masyakata"
+      - "@ShadowFlux2 | کانال ما در تلگرام`"
+      - "@ShadowFlux2 | کانال ما در تلگرام` 2"
+      - "@ShadowFlux2 | کانال ما در تلگرام` 3"
+      - "@ShadowFlux2 | کانال ما در تلگرام` 4"
+      - "@ShadowFlux2 | کانال ما در تلگرام` 5"
+      - "@ShadowFlux2 | کانال ما در تلگرام` 6"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@Masyakata"
+      - "@ShadowFlux2 | کانال ما در تلگرام`"
+      - "@ShadowFlux2 | کانال ما در تلگرام` 2"
+      - "@ShadowFlux2 | کانال ما در تلگرام` 3"
+      - "@ShadowFlux2 | کانال ما در تلگرام` 4"
+      - "@ShadowFlux2 | کانال ما در تلگرام` 5"
+      - "@ShadowFlux2 | کانال ما در تلگرام` 6"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@Masyakata"
+      - "@ShadowFlux2 | کانال ما در تلگرام`"
+      - "@ShadowFlux2 | کانال ما در تلگرام` 2"
+      - "@ShadowFlux2 | کانال ما در تلگرام` 3"
+      - "@ShadowFlux2 | کانال ما در تلگرام` 4"
+      - "@ShadowFlux2 | کانال ما در تلگرام` 5"
+      - "@ShadowFlux2 | کانال ما در تلگرام` 6"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +532,36 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Masyakata"
+      - "@ShadowFlux2 | کانال ما در تلگرام`"
+      - "@ShadowFlux2 | کانال ما در تلگرام` 2"
+      - "@ShadowFlux2 | کانال ما در تلگرام` 3"
+      - "@ShadowFlux2 | کانال ما در تلگرام` 4"
+      - "@ShadowFlux2 | کانال ما در تلگرام` 5"
+      - "@ShadowFlux2 | کانال ما در تلگرام` 6"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Masyakata"
+      - "@ShadowFlux2 | کانال ما در تلگرام`"
+      - "@ShadowFlux2 | کانال ما در تلگرام` 2"
+      - "@ShadowFlux2 | کانال ما در تلگرام` 3"
+      - "@ShadowFlux2 | کانال ما در تلگرام` 4"
+      - "@ShadowFlux2 | کانال ما در تلگرام` 5"
+      - "@ShadowFlux2 | کانال ما در تلگرام` 6"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Masyakata"
+      - "@ShadowFlux2 | کانال ما در تلگرام`"
+      - "@ShadowFlux2 | کانال ما در تلگرام` 2"
+      - "@ShadowFlux2 | کانال ما در تلگرام` 3"
+      - "@ShadowFlux2 | کانال ما در تلگرام` 4"
+      - "@ShadowFlux2 | کانال ما در تلگرام` 5"
+      - "@ShadowFlux2 | کانال ما در تلگرام` 6"
   - name: دانلود منیجر 📥
     type: select
     proxies:
