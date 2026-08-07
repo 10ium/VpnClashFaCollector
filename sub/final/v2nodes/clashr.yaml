@@ -5,88 +5,81 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 🇨🇳 speed-01.aliyun-web-tracker.cn:39221, server: speed-01.aliyun-web-tracker.cn, port: 39221, type: trojan, password: 55354c2b8ee339571bd657a9bb9858cc, sni: speed-01.aliyun-web-tracker.cn, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 14.137.238.144:10000, server: 14.137.238.144, port: 10000, type: vless, tls: true, packet-encoding: xudp, uuid: 431fe973-a43a-4fac-bf83-2a772e0d0625, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 130.61.102.202:59924, server: 130.61.102.202, port: 59924, type: ss, cipher: chacha20-ietf-poly1305, password: OWVhYWM4OTFlNGFhNTFiNjY5NDNlODI3ZDE5Njc0ZmE=, udp: true, tfo: false}
   - {name: teain.org:1000, server: teain.org, port: 1000, type: vless, tls: true, packet-encoding: xudp, uuid: 6f436a44-f703-93da-7e45-615824a39d3b, servername: knox.cdn-apple.com, host: knox.cdn-apple.com, path: /, reality-opts: {public-key: ECxm-BdHYhxYK9MtN33NkkrFSdFZXp-OB-yhN8AleRY, short-id: a62d513cd709744a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 134.98.150.57:62145, server: 134.98.150.57, port: 62145, type: vless, tls: true, packet-encoding: xudp, uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 149.130.176.140:62145, server: 149.130.176.140, port: 62145, type: vless, tls: true, packet-encoding: xudp, uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 158.101.194.120:62145, server: 158.101.194.120, port: 62145, type: vless, tls: true, packet-encoding: xudp, uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "🇺🇸 [openproxylist.com] vmess-US", server: 165.140.216.142, port: 443, type: vmess, uuid: b65a2d69-5634-42a2-e4be-54e8a6176900, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 149.130.187.58:62145, server: 149.130.187.58, port: 62145, type: vless, tls: true, packet-encoding: xudp, uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 157.137.211.212:62145, server: 157.137.211.212, port: 62145, type: vless, tls: true, packet-encoding: xudp, uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 84.235.167.4:62145, server: 84.235.167.4, port: 62145, type: vless, tls: true, packet-encoding: xudp, uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇨🇳 speed-01.aliyun-web-tracker.cn:39221
-      - 14.137.238.144:10000
+      - 130.61.102.202:59924
       - teain.org:1000
-      - 134.98.150.57:62145
       - 149.130.176.140:62145
-      - 158.101.194.120:62145
-      - 🇺🇸 [openproxylist.com] vmess-US
+      - 149.130.187.58:62145
+      - 157.137.211.212:62145
+      - 84.235.167.4:62145
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 🇨🇳 speed-01.aliyun-web-tracker.cn:39221
-      - 14.137.238.144:10000
+      - 130.61.102.202:59924
       - teain.org:1000
-      - 134.98.150.57:62145
       - 149.130.176.140:62145
-      - 158.101.194.120:62145
-      - 🇺🇸 [openproxylist.com] vmess-US
+      - 149.130.187.58:62145
+      - 157.137.211.212:62145
+      - 84.235.167.4:62145
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇨🇳 speed-01.aliyun-web-tracker.cn:39221
-      - 14.137.238.144:10000
+      - 130.61.102.202:59924
       - teain.org:1000
-      - 134.98.150.57:62145
       - 149.130.176.140:62145
-      - 158.101.194.120:62145
-      - 🇺🇸 [openproxylist.com] vmess-US
+      - 149.130.187.58:62145
+      - 157.137.211.212:62145
+      - 84.235.167.4:62145
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇨🇳 speed-01.aliyun-web-tracker.cn:39221
-      - 14.137.238.144:10000
+      - 130.61.102.202:59924
       - teain.org:1000
-      - 134.98.150.57:62145
       - 149.130.176.140:62145
-      - 158.101.194.120:62145
-      - 🇺🇸 [openproxylist.com] vmess-US
+      - 149.130.187.58:62145
+      - 157.137.211.212:62145
+      - 84.235.167.4:62145
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 🇨🇳 speed-01.aliyun-web-tracker.cn:39221
-      - 14.137.238.144:10000
+      - 130.61.102.202:59924
       - teain.org:1000
-      - 134.98.150.57:62145
       - 149.130.176.140:62145
-      - 158.101.194.120:62145
-      - 🇺🇸 [openproxylist.com] vmess-US
+      - 149.130.187.58:62145
+      - 157.137.211.212:62145
+      - 84.235.167.4:62145
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇨🇳 speed-01.aliyun-web-tracker.cn:39221
-      - 14.137.238.144:10000
+      - 130.61.102.202:59924
       - teain.org:1000
-      - 134.98.150.57:62145
       - 149.130.176.140:62145
-      - 158.101.194.120:62145
-      - 🇺🇸 [openproxylist.com] vmess-US
+      - 149.130.187.58:62145
+      - 157.137.211.212:62145
+      - 84.235.167.4:62145
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -114,13 +107,12 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇨🇳 speed-01.aliyun-web-tracker.cn:39221
-      - 14.137.238.144:10000
+      - 130.61.102.202:59924
       - teain.org:1000
-      - 134.98.150.57:62145
       - 149.130.176.140:62145
-      - 158.101.194.120:62145
-      - 🇺🇸 [openproxylist.com] vmess-US
+      - 149.130.187.58:62145
+      - 157.137.211.212:62145
+      - 84.235.167.4:62145
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

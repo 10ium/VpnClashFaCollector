@@ -465,14 +465,13 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 🇩🇪 Germany 🇩🇪, server: 83.243.86.80, port: 443, type: hysteria2, ports: 443, password: 1hOIVDVBG2hdKtJwOV2aUEFTDaFArCSH9-HrcOnps8yqQZeq, sni: prodfr.h2corp.org, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇩🇪 Germany 🇩🇪`, server: 93.114.194.117, port: 8443, type: hysteria2, ports: 8443, password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0, sni: grape-zet-ro-turbo.bumbleshrimp.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇳🇱 The Netherlands 🇳🇱, server: 82.38.31.15, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
-  - {name: 🇩🇪 Germany 🇩🇪 2, server: 141.101.90.101, port: 443, type: trojan, password: humanity, sni: www.ignitelimit.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.ignitelimit.com}}, udp: true, tfo: false}
+  - {name: "@Kia_Net", server: 179.61.251.253, port: 37003, type: hysteria2, ports: 37003, password: TelegramVPNjey, obfs: salamander, obfs-password: 83v9muumcyikh5ch, sni: de.jey.cc.cd, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Kia_Net`", server: 179.61.251.253, port: 37003, type: hysteria2, ports: 37003, password: TelegramVPNjey, obfs: salamander, obfs-password: 83v9muumcyikh5ch, sni: de.jey.cc.cd, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Kia_Net 2", server: assets.gateway-stream.com, port: 52046, type: hysteria2, ports: 52046, password: ik0zt621uw9iqvsi, obfs: salamander, obfs-password: 7h5we82pkgh4qwid, sni: assets.gateway-stream.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Kia_Net 3", server: assets.gateway-stream.com, port: 52062, type: hysteria2, ports: 52062, password: ik0zt621uw9iqvsi, obfs: salamander, obfs-password: hg7rfvz151ftjh0w, sni: assets.gateway-stream.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Kia_Net 4", server: hy2.aspidnet.xyz, port: 443, type: hysteria2, ports: 443, password: p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR, obfs: salamander, obfs-password: rG07s3COMIEvdnQipRyWzx_H_2xygNC3, sni: hy2.aspidnet.xyz, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hy2.aspidnet.xyz:443, server: hy2.aspidnet.xyz, port: 443, type: hysteria2, ports: 443, password: p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@kia_net`", server: 77.42.125.134, port: 1234, type: vless, tls: true, packet-encoding: xudp, uuid: 42632980-9f42-4762-a313-a31e8ec88da4, host: play.google.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇳🇱 Netherlands 🇳🇱, server: 51.158.206.25, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@kai_net کانال  کیانت`", server: sca30.mysilipdir.com, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 8dc7722c-2767-4eea-a28b-2f8daacc07e3, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@kia_anet کانال  کیانت`", server: 63.182.59.68, port: 22222, type: vless, tls: true, packet-encoding: xudp, uuid: e4514801-0d5a-42ba-869f-39bd605aef9e, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -489,42 +488,39 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 🇩🇪 Germany 🇩🇪
-      - 🇩🇪 Germany 🇩🇪`
-      - 🇳🇱 The Netherlands 🇳🇱
-      - 🇩🇪 Germany 🇩🇪 2
+      - "@Kia_Net"
+      - "@Kia_Net`"
+      - "@Kia_Net 2"
+      - "@Kia_Net 3"
+      - "@Kia_Net 4"
+      - hy2.aspidnet.xyz:443
       - "@kia_net`"
-      - 🇳🇱 Netherlands 🇳🇱
-      - "@kai_net کانال  کیانت`"
-      - "@kia_anet کانال  کیانت`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 🇩🇪 Germany 🇩🇪
-      - 🇩🇪 Germany 🇩🇪`
-      - 🇳🇱 The Netherlands 🇳🇱
-      - 🇩🇪 Germany 🇩🇪 2
+      - "@Kia_Net"
+      - "@Kia_Net`"
+      - "@Kia_Net 2"
+      - "@Kia_Net 3"
+      - "@Kia_Net 4"
+      - hy2.aspidnet.xyz:443
       - "@kia_net`"
-      - 🇳🇱 Netherlands 🇳🇱
-      - "@kai_net کانال  کیانت`"
-      - "@kia_anet کانال  کیانت`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 🇩🇪 Germany 🇩🇪
-      - 🇩🇪 Germany 🇩🇪`
-      - 🇳🇱 The Netherlands 🇳🇱
-      - 🇩🇪 Germany 🇩🇪 2
+      - "@Kia_Net"
+      - "@Kia_Net`"
+      - "@Kia_Net 2"
+      - "@Kia_Net 3"
+      - "@Kia_Net 4"
+      - hy2.aspidnet.xyz:443
       - "@kia_net`"
-      - 🇳🇱 Netherlands 🇳🇱
-      - "@kai_net کانال  کیانت`"
-      - "@kia_anet کانال  کیانت`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -540,42 +536,39 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇩🇪 Germany 🇩🇪
-      - 🇩🇪 Germany 🇩🇪`
-      - 🇳🇱 The Netherlands 🇳🇱
-      - 🇩🇪 Germany 🇩🇪 2
+      - "@Kia_Net"
+      - "@Kia_Net`"
+      - "@Kia_Net 2"
+      - "@Kia_Net 3"
+      - "@Kia_Net 4"
+      - hy2.aspidnet.xyz:443
       - "@kia_net`"
-      - 🇳🇱 Netherlands 🇳🇱
-      - "@kai_net کانال  کیانت`"
-      - "@kia_anet کانال  کیانت`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇩🇪 Germany 🇩🇪
-      - 🇩🇪 Germany 🇩🇪`
-      - 🇳🇱 The Netherlands 🇳🇱
-      - 🇩🇪 Germany 🇩🇪 2
+      - "@Kia_Net"
+      - "@Kia_Net`"
+      - "@Kia_Net 2"
+      - "@Kia_Net 3"
+      - "@Kia_Net 4"
+      - hy2.aspidnet.xyz:443
       - "@kia_net`"
-      - 🇳🇱 Netherlands 🇳🇱
-      - "@kai_net کانال  کیانت`"
-      - "@kia_anet کانال  کیانت`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇩🇪 Germany 🇩🇪
-      - 🇩🇪 Germany 🇩🇪`
-      - 🇳🇱 The Netherlands 🇳🇱
-      - 🇩🇪 Germany 🇩🇪 2
+      - "@Kia_Net"
+      - "@Kia_Net`"
+      - "@Kia_Net 2"
+      - "@Kia_Net 3"
+      - "@Kia_Net 4"
+      - hy2.aspidnet.xyz:443
       - "@kia_net`"
-      - 🇳🇱 Netherlands 🇳🇱
-      - "@kai_net کانال  کیانت`"
-      - "@kia_anet کانال  کیانت`"
   - name: دانلود منیجر 📥
     type: select
     proxies:
