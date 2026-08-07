@@ -5,60 +5,67 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: Armenia 🇦🇲`, server: 92.246.138.69, port: 2050, type: ss, cipher: chacha20-ietf-poly1305, password: njMNis_EAXngzNp7Ag7Vrg, udp: true, tfo: false}
-  - {name: 🇷🇺 Russia 🇷🇺`, server: 195.133.23.200, port: 1291, type: ss, cipher: aes-256-gcm, password: 9f3d1a6d31468599, udp: true, tfo: false}
-  - {name: 🇷🇺 Russia 🇷🇺` 2, server: 195.133.5.207, port: 50111, type: ss, cipher: aes-256-gcm, password: b24a80e79cee1d1f, udp: true, tfo: false}
+  - {name: "🇷🇺 Russia #64 VLESS @v2FreeHub `", server: 104.171.137.109, port: 2200, type: vless, tls: true, packet-encoding: xudp, uuid: 5502312d-b5cf-4652-8c59-4d670dd047be, network: ws, ws-opts: {path: /v1}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇩🇪 Germany #13 VLESS @v2FreeHub", server: 217.19.122.17, port: 2027, type: vless, tls: true, packet-encoding: xudp, uuid: 851ed0d8-a37b-452d-8ef2-5b6c2d28a060, servername: storage.yandex.net, host: storage.yandex.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: ISa-DZOI4LRRb9DHMFYm5oFqBXDjYzz0hVWUfWvzLmo, short-id: 8d3293f0066e129a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇷🇺 Russia #56 VLESS @v2FreeHub", server: 94.242.55.42, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8ca5cbd3-ec16-4728-bedc-2bc0d82f0922, servername: enterprisekitten.com, host: enterprisekitten.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇷🇺 Russia #2 VLESS @v2FreeHub", server: 77.110.113.103, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b17fa109-615f-4fcc-abee-8ac8358664e1, servername: vk.com, host: vk.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: YbSMmjuRFkilXmQH_RZ9uDFwA17yDulRSTBHRVilzXs, short-id: a3dbdfb829}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - Armenia 🇦🇲`
-      - 🇷🇺 Russia 🇷🇺`
-      - 🇷🇺 Russia 🇷🇺` 2
+      - "🇷🇺 Russia #64 VLESS @v2FreeHub `"
+      - "🇩🇪 Germany #13 VLESS @v2FreeHub"
+      - "🇷🇺 Russia #56 VLESS @v2FreeHub"
+      - "🇷🇺 Russia #2 VLESS @v2FreeHub"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - Armenia 🇦🇲`
-      - 🇷🇺 Russia 🇷🇺`
-      - 🇷🇺 Russia 🇷🇺` 2
+      - "🇷🇺 Russia #64 VLESS @v2FreeHub `"
+      - "🇩🇪 Germany #13 VLESS @v2FreeHub"
+      - "🇷🇺 Russia #56 VLESS @v2FreeHub"
+      - "🇷🇺 Russia #2 VLESS @v2FreeHub"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - Armenia 🇦🇲`
-      - 🇷🇺 Russia 🇷🇺`
-      - 🇷🇺 Russia 🇷🇺` 2
+      - "🇷🇺 Russia #64 VLESS @v2FreeHub `"
+      - "🇩🇪 Germany #13 VLESS @v2FreeHub"
+      - "🇷🇺 Russia #56 VLESS @v2FreeHub"
+      - "🇷🇺 Russia #2 VLESS @v2FreeHub"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - Armenia 🇦🇲`
-      - 🇷🇺 Russia 🇷🇺`
-      - 🇷🇺 Russia 🇷🇺` 2
+      - "🇷🇺 Russia #64 VLESS @v2FreeHub `"
+      - "🇩🇪 Germany #13 VLESS @v2FreeHub"
+      - "🇷🇺 Russia #56 VLESS @v2FreeHub"
+      - "🇷🇺 Russia #2 VLESS @v2FreeHub"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - Armenia 🇦🇲`
-      - 🇷🇺 Russia 🇷🇺`
-      - 🇷🇺 Russia 🇷🇺` 2
+      - "🇷🇺 Russia #64 VLESS @v2FreeHub `"
+      - "🇩🇪 Germany #13 VLESS @v2FreeHub"
+      - "🇷🇺 Russia #56 VLESS @v2FreeHub"
+      - "🇷🇺 Russia #2 VLESS @v2FreeHub"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - Armenia 🇦🇲`
-      - 🇷🇺 Russia 🇷🇺`
-      - 🇷🇺 Russia 🇷🇺` 2
+      - "🇷🇺 Russia #64 VLESS @v2FreeHub `"
+      - "🇩🇪 Germany #13 VLESS @v2FreeHub"
+      - "🇷🇺 Russia #56 VLESS @v2FreeHub"
+      - "🇷🇺 Russia #2 VLESS @v2FreeHub"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -86,9 +93,10 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - Armenia 🇦🇲`
-      - 🇷🇺 Russia 🇷🇺`
-      - 🇷🇺 Russia 🇷🇺` 2
+      - "🇷🇺 Russia #64 VLESS @v2FreeHub `"
+      - "🇩🇪 Germany #13 VLESS @v2FreeHub"
+      - "🇷🇺 Russia #56 VLESS @v2FreeHub"
+      - "🇷🇺 Russia #2 VLESS @v2FreeHub"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
