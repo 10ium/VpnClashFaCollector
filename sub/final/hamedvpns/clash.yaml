@@ -465,8 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: hp2, server: kino.memhd.store, port: 33729, type: vless, tls: true, packet-encoding: xudp, uuid: cf8906f5-63d3-44c2-8c1f-d2906cb3a229, servername: ymail.com, host: ymail.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: b5vvvll6WHFXYBOc-P4iEYNFw_uVALgypTESN0Nup2s, short-id: 0bd4698a48}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: hp71, server: 82.39.171.145, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d65cc14c-f53f-4fe2-b262-97856601319c, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg, short-id: c39cc7310a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 45.196.201.30:443, server: 45.196.201.30, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f75814f6-8f81-4847-b792-168c41f2dc85, servername: storage.yandex.net, host: storage.yandex.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04, short-id: c6ef72e4635d15a5}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - hp2
-      - hp71
+      - 45.196.201.30:443
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - hp2
-      - hp71
+      - 45.196.201.30:443
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - hp2
-      - hp71
+      - 45.196.201.30:443
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - hp2
-      - hp71
+      - 45.196.201.30:443
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - hp2
-      - hp71
+      - 45.196.201.30:443
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - hp2
-      - hp71
+      - 45.196.201.30:443
   - name: دانلود منیجر 📥
     type: select
     proxies:

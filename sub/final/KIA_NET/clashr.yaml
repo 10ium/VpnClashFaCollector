@@ -11,7 +11,16 @@ proxies:
   - {name: "@Kia_Net 3", server: assets.gateway-stream.com, port: 52062, type: hysteria2, ports: 52062, password: ik0zt621uw9iqvsi, obfs: salamander, obfs-password: hg7rfvz151ftjh0w, sni: assets.gateway-stream.com, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@Kia_Net 4", server: hy2.aspidnet.xyz, port: 443, type: hysteria2, ports: 443, password: p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR, obfs: salamander, obfs-password: rG07s3COMIEvdnQipRyWzx_H_2xygNC3, sni: hy2.aspidnet.xyz, skip-cert-verify: false, udp: true, tfo: false}
   - {name: hy2.aspidnet.xyz:443, server: hy2.aspidnet.xyz, port: 443, type: hysteria2, ports: 443, password: p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@kia_net`", server: 77.42.125.134, port: 1234, type: vless, tls: true, packet-encoding: xudp, uuid: 42632980-9f42-4762-a313-a31e8ec88da4, host: play.google.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: CDN, server: millionaire.levikogjgfdd.ir, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true, tfo: false}
+  - {name: CDN 2, server: cf.levikogjgfdd.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4d10c997-4781-4cd9-82c3-15453523e12c, servername: support.zoom.us.yxls.eu.cc, network: ws, ws-opts: {path: /sg-melbi, headers: {Host: support.zoom.us.yxls.eu.cc}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: direct, server: nl4.levikogjgfdd.ir, port: 40443, type: vless, tls: true, packet-encoding: xudp, uuid: 69a74770-7152-4a27-bef0-2615ca16e1b1, servername: deepl.com, host: deepl.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: D0AQp0cWaQR55Q-zPwp6__AxN9CoT9neZj0UzlNcLCk, short-id: bd72}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: CDN 3, server: millionaire.levikogjgfdd.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: /sg-melbi, headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: CDN 4, server: one-for-all.levikogjgfdd.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: /sg-melbi, headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: CDN 5, server: one-for-all.levikogjgfdd.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b2f6aa3a-2550-4a1c-b2c0-1c94b1207217, servername: terazhediii.info, network: ws, ws-opts: {path: /hdgrbws, headers: {Host: terazhediii.info}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: CDN 6, server: millionaire.levikogjgfdd.ir, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: d361072e-9e0e-4e2d-8ec7-2a4189b5b23a, servername: ov.iran-servers.shop, network: ws, ws-opts: {path: /J5aLQOY1R9ONWYCM, headers: {Host: ov.iran-servers.shop}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: CDN 7, server: cf.levikogjgfdd.ir, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: d7ec3e31-a9c4-4bdf-a2d8-7f75a8381035, network: ws, ws-opts: {path: /, headers: {Host: weathered-lake-e883.35-bc4.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: direct 2, server: trk.levikogjgfdd.ir, port: 22324, type: vmess, uuid: 04621bae-ab36-11ec-b909-0242ac120002, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: CDN 8, server: cf.levikogjgfdd.ir, port: 2053, type: vmess, uuid: 9a1a05d9-69be-45d3-e326-c6621edf7b31, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /devm, headers: {Host: deapp.jisuyun.top}}, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -24,7 +33,16 @@ proxy-groups:
       - "@Kia_Net 3"
       - "@Kia_Net 4"
       - hy2.aspidnet.xyz:443
-      - "@kia_net`"
+      - CDN
+      - CDN 2
+      - direct
+      - CDN 3
+      - CDN 4
+      - CDN 5
+      - CDN 6
+      - CDN 7
+      - direct 2
+      - CDN 8
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -37,7 +55,16 @@ proxy-groups:
       - "@Kia_Net 3"
       - "@Kia_Net 4"
       - hy2.aspidnet.xyz:443
-      - "@kia_net`"
+      - CDN
+      - CDN 2
+      - direct
+      - CDN 3
+      - CDN 4
+      - CDN 5
+      - CDN 6
+      - CDN 7
+      - direct 2
+      - CDN 8
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -50,7 +77,16 @@ proxy-groups:
       - "@Kia_Net 3"
       - "@Kia_Net 4"
       - hy2.aspidnet.xyz:443
-      - "@kia_net`"
+      - CDN
+      - CDN 2
+      - direct
+      - CDN 3
+      - CDN 4
+      - CDN 5
+      - CDN 6
+      - CDN 7
+      - direct 2
+      - CDN 8
   - name: 📲 电报信息
     type: select
     proxies:
@@ -62,7 +98,16 @@ proxy-groups:
       - "@Kia_Net 3"
       - "@Kia_Net 4"
       - hy2.aspidnet.xyz:443
-      - "@kia_net`"
+      - CDN
+      - CDN 2
+      - direct
+      - CDN 3
+      - CDN 4
+      - CDN 5
+      - CDN 6
+      - CDN 7
+      - direct 2
+      - CDN 8
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -74,7 +119,16 @@ proxy-groups:
       - "@Kia_Net 3"
       - "@Kia_Net 4"
       - hy2.aspidnet.xyz:443
-      - "@kia_net`"
+      - CDN
+      - CDN 2
+      - direct
+      - CDN 3
+      - CDN 4
+      - CDN 5
+      - CDN 6
+      - CDN 7
+      - direct 2
+      - CDN 8
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -86,7 +140,16 @@ proxy-groups:
       - "@Kia_Net 3"
       - "@Kia_Net 4"
       - hy2.aspidnet.xyz:443
-      - "@kia_net`"
+      - CDN
+      - CDN 2
+      - direct
+      - CDN 3
+      - CDN 4
+      - CDN 5
+      - CDN 6
+      - CDN 7
+      - direct 2
+      - CDN 8
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -120,7 +183,16 @@ proxy-groups:
       - "@Kia_Net 3"
       - "@Kia_Net 4"
       - hy2.aspidnet.xyz:443
-      - "@kia_net`"
+      - CDN
+      - CDN 2
+      - direct
+      - CDN 3
+      - CDN 4
+      - CDN 5
+      - CDN 6
+      - CDN 7
+      - direct 2
+      - CDN 8
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
