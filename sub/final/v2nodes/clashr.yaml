@@ -5,88 +5,53 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 177.3.208.169:443, server: 177.3.208.169, port: 443, type: trojan, password: 581e14a5fcc14107b9326cc54f047891, sni: titandarkness.mooo.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 16.162.161.131:29444, server: 16.162.161.131, port: 29444, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 47.236.106.241:40480, server: 47.236.106.241, port: 40480, type: vless, tls: true, packet-encoding: xudp, uuid: 0c97c970-41be-47dd-80d6-06c9a5c9c458, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 🇺🇸 support.zoom.us:80, server: support.zoom.us, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 6aa028bc-08a9-41d1-a397-d60ce65df081, network: ws, ws-opts: {path: /shalana, headers: {Host: shalana.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 172.64.146.153:2095, server: 172.64.146.153, port: 2095, type: vless, tls: true, packet-encoding: xudp, uuid: 86c50e3a-5b87-49dd-bd20-03c7f2735e40, network: ws, ws-opts: {path: /, headers: {Host: fangbinxingnmsl.pusytroller.gq}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "🇺🇸 [openproxylist.com] vmess-US", server: 165.140.216.142, port: 443, type: vmess, uuid: b65a2d69-5634-42a2-e4be-54e8a6176900, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "🇺🇸 [openproxylist.com] vmess-US 2", server: 165.140.216.142, port: 443, type: vmess, uuid: b65a2d69-5634-42a2-e4be-54e8a6176900, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 177.3.208.169:443
-      - 16.162.161.131:29444
-      - 47.236.106.241:40480
       - 🇺🇸 support.zoom.us:80
-      - 172.64.146.153:2095
       - 🇺🇸 [openproxylist.com] vmess-US
-      - 🇺🇸 [openproxylist.com] vmess-US 2
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 177.3.208.169:443
-      - 16.162.161.131:29444
-      - 47.236.106.241:40480
       - 🇺🇸 support.zoom.us:80
-      - 172.64.146.153:2095
       - 🇺🇸 [openproxylist.com] vmess-US
-      - 🇺🇸 [openproxylist.com] vmess-US 2
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 177.3.208.169:443
-      - 16.162.161.131:29444
-      - 47.236.106.241:40480
       - 🇺🇸 support.zoom.us:80
-      - 172.64.146.153:2095
       - 🇺🇸 [openproxylist.com] vmess-US
-      - 🇺🇸 [openproxylist.com] vmess-US 2
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 177.3.208.169:443
-      - 16.162.161.131:29444
-      - 47.236.106.241:40480
       - 🇺🇸 support.zoom.us:80
-      - 172.64.146.153:2095
       - 🇺🇸 [openproxylist.com] vmess-US
-      - 🇺🇸 [openproxylist.com] vmess-US 2
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 177.3.208.169:443
-      - 16.162.161.131:29444
-      - 47.236.106.241:40480
       - 🇺🇸 support.zoom.us:80
-      - 172.64.146.153:2095
       - 🇺🇸 [openproxylist.com] vmess-US
-      - 🇺🇸 [openproxylist.com] vmess-US 2
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 177.3.208.169:443
-      - 16.162.161.131:29444
-      - 47.236.106.241:40480
       - 🇺🇸 support.zoom.us:80
-      - 172.64.146.153:2095
       - 🇺🇸 [openproxylist.com] vmess-US
-      - 🇺🇸 [openproxylist.com] vmess-US 2
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -114,13 +79,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 177.3.208.169:443
-      - 16.162.161.131:29444
-      - 47.236.106.241:40480
       - 🇺🇸 support.zoom.us:80
-      - 172.64.146.153:2095
       - 🇺🇸 [openproxylist.com] vmess-US
-      - 🇺🇸 [openproxylist.com] vmess-US 2
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
