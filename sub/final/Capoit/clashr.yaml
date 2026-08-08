@@ -5,53 +5,67 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@Capoit`", server: 92.114.24.95, port: 43630, type: vless, tls: true, packet-encoding: xudp, uuid: 01a95af3-a2f6-453e-9f88-b2fc011627cc, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 2", server: 172.66.44.97, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: /sg-melbi, headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit", server: 172.66.44.97, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4d10c997-4781-4cd9-82c3-15453523e12c, servername: support.zoom.us.yxls.eu.cc, network: ws, ws-opts: {path: /sg-melbi, headers: {Host: support.zoom.us.yxls.eu.cc}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit`", server: 172.66.44.97, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: /sg-melbi, headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 2", server: 45.131.185.205, port: 47504, type: vless, tls: true, packet-encoding: xudp, uuid: dc2a36c3-1eec-444e-abcd-d435adf0a74f, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit 2", server: 104.26.14.85, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: f798a2c4-c51b-409d-b349-ca8455b36796, servername: chopin.adaspoloandco.com, network: ws, ws-opts: {path: /download.php, headers: {Host: chopin.adaspoloandco.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - "@Capoit"
       - "@Capoit`"
       - "@Capoit` 2"
+      - "@Capoit 2"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - "@Capoit"
       - "@Capoit`"
       - "@Capoit` 2"
+      - "@Capoit 2"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - "@Capoit"
       - "@Capoit`"
       - "@Capoit` 2"
+      - "@Capoit 2"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - "@Capoit"
       - "@Capoit`"
       - "@Capoit` 2"
+      - "@Capoit 2"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - "@Capoit"
       - "@Capoit`"
       - "@Capoit` 2"
+      - "@Capoit 2"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - "@Capoit"
       - "@Capoit`"
       - "@Capoit` 2"
+      - "@Capoit 2"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -79,8 +93,10 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - "@Capoit"
       - "@Capoit`"
       - "@Capoit` 2"
+      - "@Capoit 2"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

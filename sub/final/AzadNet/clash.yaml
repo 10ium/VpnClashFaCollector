@@ -465,9 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@AzadNet", server: 82.38.31.202, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
-  - {name: "@AzadNet`", server: www.speedtest.net, port: 2086, type: vless, tls: true, packet-encoding: xudp, uuid: 17fb5a8c-de83-449b-9996-a85181c42224, network: ws, ws-opts: {path: "/eyJqdW5rIjoiVXduczlGSWJuc2JiIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMjYwMjpmYzU5OjExOjY0OjpdIl19?ed=2560", headers: {Host: soft-bar-c978.babaiikhoshk.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@AzadNet 2", server: web.subster.ir, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: 1f951937-38f9-4d24-a748-b7832d08f2f9, servername: nazanMano.x-upload.org, network: ws, ws-opts: {path: /, headers: {Host: nazanMano.x-upload.org}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: VIP @AzadNet, server: 63.184.103.244, port: 22224, type: vless, tls: true, packet-encoding: xudp, uuid: e4514801-0d5a-42ba-869f-39bd605aef9e, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: VIP @AzadNet 2, server: 144.31.213.172, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f692629b-3557-488a-9c9b-60775331e423, servername: fi1-cosmostechnology.ru, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: fi1cosmos}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: VIP @AzadNet 3, server: 144.31.218.18, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f692629b-3557-488a-9c9b-60775331e423, servername: fi1-cosmostechnology.ru, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: fi1cosmos}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: VIP @AzadNet 4, server: 150.241.72.37, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f692629b-3557-488a-9c9b-60775331e423, servername: fi1-cosmostechnology.ru, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: fi1cosmos}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: VIP @AzadNet`, server: 150.241.73.74, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f692629b-3557-488a-9c9b-60775331e423, servername: fi1-cosmostechnology.ru, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: fi1cosmos}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,27 +486,33 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@AzadNet"
-      - "@AzadNet`"
-      - "@AzadNet 2"
+      - VIP @AzadNet
+      - VIP @AzadNet 2
+      - VIP @AzadNet 3
+      - VIP @AzadNet 4
+      - VIP @AzadNet`
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@AzadNet"
-      - "@AzadNet`"
-      - "@AzadNet 2"
+      - VIP @AzadNet
+      - VIP @AzadNet 2
+      - VIP @AzadNet 3
+      - VIP @AzadNet 4
+      - VIP @AzadNet`
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@AzadNet"
-      - "@AzadNet`"
-      - "@AzadNet 2"
+      - VIP @AzadNet
+      - VIP @AzadNet 2
+      - VIP @AzadNet 3
+      - VIP @AzadNet 4
+      - VIP @AzadNet`
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -520,27 +528,33 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@AzadNet"
-      - "@AzadNet`"
-      - "@AzadNet 2"
+      - VIP @AzadNet
+      - VIP @AzadNet 2
+      - VIP @AzadNet 3
+      - VIP @AzadNet 4
+      - VIP @AzadNet`
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@AzadNet"
-      - "@AzadNet`"
-      - "@AzadNet 2"
+      - VIP @AzadNet
+      - VIP @AzadNet 2
+      - VIP @AzadNet 3
+      - VIP @AzadNet 4
+      - VIP @AzadNet`
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@AzadNet"
-      - "@AzadNet`"
-      - "@AzadNet 2"
+      - VIP @AzadNet
+      - VIP @AzadNet 2
+      - VIP @AzadNet 3
+      - VIP @AzadNet 4
+      - VIP @AzadNet`
   - name: دانلود منیجر 📥
     type: select
     proxies:
