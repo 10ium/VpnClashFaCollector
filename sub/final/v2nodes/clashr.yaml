@@ -7,6 +7,9 @@ external-controller: 127.0.0.1:9090
 proxies:
   - {name: 129.151.81.122:61312, server: 129.151.81.122, port: 61312, type: ss, cipher: chacha20-ietf-poly1305, password: MGU4ZjVkMGNhY2Y3YzM0NmIxMDgyNDQ5OGVjZjY2Y2Y=, udp: true, tfo: false}
   - {name: 92.5.238.164:45819, server: 92.5.238.164, port: 45819, type: ss, cipher: chacha20-ietf-poly1305, password: YTEyZDI0OGQwM2ZmZjc4ZTg1ZTBiYTNlZTZkZjIxODM=, udp: true, tfo: false}
+  - {name: 16.162.190.25:35151, server: 16.162.190.25, port: 35151, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 18.167.76.203:10418, server: 18.167.76.203, port: 10418, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 188.119.123.112:49001, server: 188.119.123.112, port: 49001, type: vless, tls: true, packet-encoding: xudp, uuid: 41784775-8846-4579-9d9d-9ad6ea802e2e, servername: de-7.techprovide.icu, host: de-7.techprovide.icu, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: _LbLyj6OynSREglFpkhdrxVmh_bf9p60uTEWfQbtUWo, short-id: 1a6b1f9d0e}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 157.137.220.255:62145, server: 157.137.220.255, port: 62145, type: vless, tls: true, packet-encoding: xudp, uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
@@ -16,6 +19,9 @@ proxy-groups:
       - DIRECT
       - 129.151.81.122:61312
       - 92.5.238.164:45819
+      - 16.162.190.25:35151
+      - 18.167.76.203:10418
+      - 188.119.123.112:49001
       - 157.137.220.255:62145
   - name: ♻️ 自动选择
     type: url-test
@@ -25,6 +31,9 @@ proxy-groups:
     proxies:
       - 129.151.81.122:61312
       - 92.5.238.164:45819
+      - 16.162.190.25:35151
+      - 18.167.76.203:10418
+      - 188.119.123.112:49001
       - 157.137.220.255:62145
   - name: 🌍 国外媒体
     type: select
@@ -34,6 +43,9 @@ proxy-groups:
       - 🎯 全球直连
       - 129.151.81.122:61312
       - 92.5.238.164:45819
+      - 16.162.190.25:35151
+      - 18.167.76.203:10418
+      - 188.119.123.112:49001
       - 157.137.220.255:62145
   - name: 📲 电报信息
     type: select
@@ -42,6 +54,9 @@ proxy-groups:
       - 🎯 全球直连
       - 129.151.81.122:61312
       - 92.5.238.164:45819
+      - 16.162.190.25:35151
+      - 18.167.76.203:10418
+      - 188.119.123.112:49001
       - 157.137.220.255:62145
   - name: Ⓜ️ 微软服务
     type: select
@@ -50,6 +65,9 @@ proxy-groups:
       - 🚀 节点选择
       - 129.151.81.122:61312
       - 92.5.238.164:45819
+      - 16.162.190.25:35151
+      - 18.167.76.203:10418
+      - 188.119.123.112:49001
       - 157.137.220.255:62145
   - name: 🍎 苹果服务
     type: select
@@ -58,6 +76,9 @@ proxy-groups:
       - 🎯 全球直连
       - 129.151.81.122:61312
       - 92.5.238.164:45819
+      - 16.162.190.25:35151
+      - 18.167.76.203:10418
+      - 188.119.123.112:49001
       - 157.137.220.255:62145
   - name: 🎯 全球直连
     type: select
@@ -88,6 +109,9 @@ proxy-groups:
       - ♻️ 自动选择
       - 129.151.81.122:61312
       - 92.5.238.164:45819
+      - 16.162.190.25:35151
+      - 18.167.76.203:10418
+      - 188.119.123.112:49001
       - 157.137.220.255:62145
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
