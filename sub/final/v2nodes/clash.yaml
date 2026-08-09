@@ -465,8 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 🇺🇸 support.zoom.us:80, server: support.zoom.us, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 6aa028bc-08a9-41d1-a397-d60ce65df081, network: ws, ws-opts: {path: /shalana, headers: {Host: shalana.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "🇺🇸 [openproxylist.com] vmess-US", server: 165.140.216.142, port: 443, type: vmess, uuid: b65a2d69-5634-42a2-e4be-54e8a6176900, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 129.151.81.122:61312, server: 129.151.81.122, port: 61312, type: ss, cipher: chacha20-ietf-poly1305, password: MGU4ZjVkMGNhY2Y3YzM0NmIxMDgyNDQ5OGVjZjY2Y2Y=, udp: true, tfo: false}
+  - {name: 92.5.238.164:45819, server: 92.5.238.164, port: 45819, type: ss, cipher: chacha20-ietf-poly1305, password: YTEyZDI0OGQwM2ZmZjc4ZTg1ZTBiYTNlZTZkZjIxODM=, udp: true, tfo: false}
+  - {name: 157.137.220.255:62145, server: 157.137.220.255, port: 62145, type: vless, tls: true, packet-encoding: xudp, uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +484,27 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 🇺🇸 support.zoom.us:80
-      - 🇺🇸 [openproxylist.com] vmess-US
+      - 129.151.81.122:61312
+      - 92.5.238.164:45819
+      - 157.137.220.255:62145
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 🇺🇸 support.zoom.us:80
-      - 🇺🇸 [openproxylist.com] vmess-US
+      - 129.151.81.122:61312
+      - 92.5.238.164:45819
+      - 157.137.220.255:62145
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 🇺🇸 support.zoom.us:80
-      - 🇺🇸 [openproxylist.com] vmess-US
+      - 129.151.81.122:61312
+      - 92.5.238.164:45819
+      - 157.137.220.255:62145
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +520,27 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇺🇸 support.zoom.us:80
-      - 🇺🇸 [openproxylist.com] vmess-US
+      - 129.151.81.122:61312
+      - 92.5.238.164:45819
+      - 157.137.220.255:62145
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇺🇸 support.zoom.us:80
-      - 🇺🇸 [openproxylist.com] vmess-US
+      - 129.151.81.122:61312
+      - 92.5.238.164:45819
+      - 157.137.220.255:62145
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇺🇸 support.zoom.us:80
-      - 🇺🇸 [openproxylist.com] vmess-US
+      - 129.151.81.122:61312
+      - 92.5.238.164:45819
+      - 157.137.220.255:62145
   - name: دانلود منیجر 📥
     type: select
     proxies:
