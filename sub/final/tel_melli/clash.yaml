@@ -465,7 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@v2box_meli 🇳🇱", server: 204.168.196.173, port: 6985, type: vless, tls: true, packet-encoding: xudp, uuid: 832e0199-9614-4d74-a7ba-1dca5453dab5, host: play.google.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2bix_meli☠️", server: 188.72.103.3, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 166ef05e-8ab5-43b7-8910-d1bb0a4326a5, servername: cdn.tracker.yandex.net, network: ws, ws-opts: {path: "/api/v1/rooms/63368e3dbb/sync/?TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=512", headers: {Host: cdn.tracker.yandex.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2box_meli🩵", server: 199.232.78.159, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d6a909a7-d8d7-44e3-8c81-a0e1ddae231b, servername: ssl.fastly.com, network: ws, ws-opts: {path: /, headers: {Host: ssl.fastly.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@v2box_meli 🇳🇱"
+      - "@v2bix_meli☠️"
+      - "@v2box_meli🩵"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@v2box_meli 🇳🇱"
+      - "@v2bix_meli☠️"
+      - "@v2box_meli🩵"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@v2box_meli 🇳🇱"
+      - "@v2bix_meli☠️"
+      - "@v2box_meli🩵"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2box_meli 🇳🇱"
+      - "@v2bix_meli☠️"
+      - "@v2box_meli🩵"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2box_meli 🇳🇱"
+      - "@v2bix_meli☠️"
+      - "@v2box_meli🩵"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2box_meli 🇳🇱"
+      - "@v2bix_meli☠️"
+      - "@v2box_meli🩵"
   - name: دانلود منیجر 📥
     type: select
     proxies:

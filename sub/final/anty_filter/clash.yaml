@@ -465,11 +465,12 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@vpnbaz ⭐", server: free.soundfiy.ir, port: 4554, type: vless, tls: true, packet-encoding: xudp, uuid: 7f3c3105-bc39-47fa-812d-1833b3709a9f, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: v-ydSy2Eb-YyiWYd3WyFoJc4Bjs9QPGRTsVac6SyO14, short-id: e3}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz 🌊", server: 193.233.255.10, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8fdf6dde-a1ca-456d-9b18-86b74d5768e6, servername: de.sellflow.org, host: de.sellflow.org, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz ☂️", server: 31.43.191.39, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c28ee61d-0d43-4e69-8e6a-6397ed0ffc03, servername: luminous-vortex.cdn.cachefleet.com, host: luminous-vortex.cdn.cachefleet.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz 🎲", server: 5.253.42.164, port: 40443, type: vless, tls: true, packet-encoding: xudp, uuid: e99ba96d-dec8-42eb-be53-19e71eef7cab, servername: deepl.com, host: deepl.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw, short-id: 68a8}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz 🍭", server: 82.198.246.250, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz ⭐", server: 158.173.20.208, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true, tfo: false}
+  - {name: "@vpnbaz ☂️", server: 130.78.216.194, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 2a12bb81-f3a3-0065-99ab-36febf676b4a, servername: quiet-bear.cdn.cachefleet.com, host: quiet-bear.cdn.cachefleet.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz 🍋‍🟩", server: 130.78.216.196, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 2a12bb81-f3a3-41bb-99ab-36febf676b4a, servername: calm-panther.cdn.cachefleet.com, host: calm-panther.cdn.cachefleet.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz 🍭", server: 164.37.109.187, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c28ee61d-0d43-0064-8e6a-6397ed0ffc03, servername: gb.cdn.cachefleet.com, host: gb.cdn.cachefleet.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz 🎩", server: 31.43.191.39, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c28ee61d-0d43-4e69-8e6a-6397ed0ffc03, servername: luminous-vortex.cdn.cachefleet.com, host: luminous-vortex.cdn.cachefleet.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz 🛸", server: 193.124.254.60, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f61025f4-7973-4e3e-883c-a0fe85f0489c, servername: lv.rexten.cc, host: lv.rexten.cc, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,10 +488,11 @@ proxy-groups:
     type: select
     proxies:
       - "@vpnbaz ⭐"
-      - "@vpnbaz 🌊"
       - "@vpnbaz ☂️"
-      - "@vpnbaz 🎲"
+      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz 🍭"
+      - "@vpnbaz 🎩"
+      - "@vpnbaz 🛸"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -498,10 +500,11 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@vpnbaz ⭐"
-      - "@vpnbaz 🌊"
       - "@vpnbaz ☂️"
-      - "@vpnbaz 🎲"
+      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz 🍭"
+      - "@vpnbaz 🎩"
+      - "@vpnbaz 🛸"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -509,10 +512,11 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@vpnbaz ⭐"
-      - "@vpnbaz 🌊"
       - "@vpnbaz ☂️"
-      - "@vpnbaz 🎲"
+      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz 🍭"
+      - "@vpnbaz 🎩"
+      - "@vpnbaz 🛸"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -529,10 +533,11 @@ proxy-groups:
     interval: 600
     proxies:
       - "@vpnbaz ⭐"
-      - "@vpnbaz 🌊"
       - "@vpnbaz ☂️"
-      - "@vpnbaz 🎲"
+      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz 🍭"
+      - "@vpnbaz 🎩"
+      - "@vpnbaz 🛸"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -540,10 +545,11 @@ proxy-groups:
     interval: 600
     proxies:
       - "@vpnbaz ⭐"
-      - "@vpnbaz 🌊"
       - "@vpnbaz ☂️"
-      - "@vpnbaz 🎲"
+      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz 🍭"
+      - "@vpnbaz 🎩"
+      - "@vpnbaz 🛸"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -551,10 +557,11 @@ proxy-groups:
     interval: 600
     proxies:
       - "@vpnbaz ⭐"
-      - "@vpnbaz 🌊"
       - "@vpnbaz ☂️"
-      - "@vpnbaz 🎲"
+      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz 🍭"
+      - "@vpnbaz 🎩"
+      - "@vpnbaz 🛸"
   - name: دانلود منیجر 📥
     type: select
     proxies:
