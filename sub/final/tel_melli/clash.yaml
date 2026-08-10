@@ -466,8 +466,6 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: "@v2box_meli 🇳🇱", server: 204.168.196.173, port: 6985, type: vless, tls: true, packet-encoding: xudp, uuid: 832e0199-9614-4d74-a7ba-1dca5453dab5, host: play.google.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2box_meli🎶", server: 140.248.186.45, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: XpnTeam-21, servername: ssl.fastly.com, alpn: [http%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: ssl.fastly.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2box_meli👑", server: 18.197.75.14, port: 22224, type: vless, tls: true, packet-encoding: xudp, uuid: e4514801-0d5a-42ba-869f-39bd605aef9e, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,8 +483,6 @@ proxy-groups:
     type: select
     proxies:
       - "@v2box_meli 🇳🇱"
-      - "@v2box_meli🎶"
-      - "@v2box_meli👑"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -494,8 +490,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@v2box_meli 🇳🇱"
-      - "@v2box_meli🎶"
-      - "@v2box_meli👑"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -503,8 +497,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@v2box_meli 🇳🇱"
-      - "@v2box_meli🎶"
-      - "@v2box_meli👑"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -521,8 +513,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@v2box_meli 🇳🇱"
-      - "@v2box_meli🎶"
-      - "@v2box_meli👑"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -530,8 +520,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@v2box_meli 🇳🇱"
-      - "@v2box_meli🎶"
-      - "@v2box_meli👑"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -539,8 +527,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@v2box_meli 🇳🇱"
-      - "@v2box_meli🎶"
-      - "@v2box_meli👑"
   - name: دانلود منیجر 📥
     type: select
     proxies:
