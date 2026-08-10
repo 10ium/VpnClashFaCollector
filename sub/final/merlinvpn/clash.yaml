@@ -465,10 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: MerlinVpn, server: channel.tradeip.store, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: t.me.TradeIP, servername: play.google.com, host: play.google.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: HL-IrEO6_mXNGgiBztNWX0VY3nb-JQ3thK_7gFbk4Bg, short-id: 285efec4}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: MerlinVpn`, server: channel.tradeip.store, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: t.me.TradeIP, servername: play.google.com, host: play.google.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: HL-IrEO6_mXNGgiBztNWX0VY3nb-JQ3thK_7gFbk4Bg, short-id: c214}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: MerlinVpn 2, server: channel.tradeip.store, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: t.me.TradeIP, servername: play.google.com, host: play.google.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: HL-IrEO6_mXNGgiBztNWX0VY3nb-JQ3thK_7gFbk4Bg, short-id: 285efec4}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: MerlinVpn 3, server: channel.tradeip.store, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: t.me.TradeIP, servername: play.google.com, host: play.google.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: HL-IrEO6_mXNGgiBztNWX0VY3nb-JQ3thK_7gFbk4Bg, short-id: cade810b0760c4}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MerlinVpn ⚡︎ 🇩🇪 RT`", server: ip-4.vexogf.ir, port: 55555, type: vless, tls: true, packet-encoding: xudp, uuid: 170066e2-025f-482e-aa11-a2ca2f44fbc2, servername: www.yahoo.com, host: www.yahoo.com, path: /, reality-opts: {public-key: O2bbfKBzFAKWuGpGOV8sy4-jtHWTqR-FmTytzi-4_FY, short-id: dcc923278ffdd028}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,30 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - MerlinVpn
-      - MerlinVpn`
-      - MerlinVpn 2
-      - MerlinVpn 3
+      - "@MerlinVpn ⚡︎ 🇩🇪 RT`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - MerlinVpn
-      - MerlinVpn`
-      - MerlinVpn 2
-      - MerlinVpn 3
+      - "@MerlinVpn ⚡︎ 🇩🇪 RT`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - MerlinVpn
-      - MerlinVpn`
-      - MerlinVpn 2
-      - MerlinVpn 3
+      - "@MerlinVpn ⚡︎ 🇩🇪 RT`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -524,30 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - MerlinVpn
-      - MerlinVpn`
-      - MerlinVpn 2
-      - MerlinVpn 3
+      - "@MerlinVpn ⚡︎ 🇩🇪 RT`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - MerlinVpn
-      - MerlinVpn`
-      - MerlinVpn 2
-      - MerlinVpn 3
+      - "@MerlinVpn ⚡︎ 🇩🇪 RT`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - MerlinVpn
-      - MerlinVpn`
-      - MerlinVpn 2
-      - MerlinVpn 3
+      - "@MerlinVpn ⚡︎ 🇩🇪 RT`"
   - name: دانلود منیجر 📥
     type: select
     proxies:
