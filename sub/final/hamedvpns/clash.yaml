@@ -465,7 +465,6 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 51.158.206.93:23576, server: 51.158.206.93, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: HamedVPN-CF 001 | %F0%9F%87%A9%F0%9F%87%AA%, server: 87.120.126.63, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: b94da146-a56e-49d7-af4c-a68c9065cbfd, servername: vpnforppl.top, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, reality-opts: {public-key: gOummriWvIYMJpd5oifBLqxsf_jcWHVsxVI7wnM0rRo, short-id: 1e943a831d22faf6}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -483,7 +482,6 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 51.158.206.93:23576
       - HamedVPN-CF 001 | %F0%9F%87%A9%F0%9F%87%AA%
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -491,7 +489,6 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - 51.158.206.93:23576
       - HamedVPN-CF 001 | %F0%9F%87%A9%F0%9F%87%AA%
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -499,7 +496,6 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - 51.158.206.93:23576
       - HamedVPN-CF 001 | %F0%9F%87%A9%F0%9F%87%AA%
   - name: اتصال پایدار 🔗
     type: url-test
@@ -516,7 +512,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 51.158.206.93:23576
       - HamedVPN-CF 001 | %F0%9F%87%A9%F0%9F%87%AA%
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -524,7 +519,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 51.158.206.93:23576
       - HamedVPN-CF 001 | %F0%9F%87%A9%F0%9F%87%AA%
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -532,7 +526,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 51.158.206.93:23576
       - HamedVPN-CF 001 | %F0%9F%87%A9%F0%9F%87%AA%
   - name: دانلود منیجر 📥
     type: select

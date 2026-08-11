@@ -465,8 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Capoit`", server: 172.66.44.97, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: "musiclovers85_musiclovers85?ed=512", headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 2", server: 169.197.113.179, port: 20190, type: vless, tls: true, packet-encoding: xudp, uuid: ad4dd89a-2e4b-4f33-bb96-7e9c4eb85d0b, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit", server: 82.26.91.87, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 7e760d89-a8f4-4a87-8f10-b4af28c61b7f, servername: faster.yandex-apicloud.ru, alpn: [h2], host: faster.yandex-apicloud.ru, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit 2", server: 144.31.168.91, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8033102198, servername: de14.fast-connect-service.site, alpn: [http%2F1.1], host: de14.fast-connect-service.site, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit`", server: 144.31.171.233, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8033102198, servername: pl6.fast-connect-service.site, alpn: [h2%2Chttp%2F1.1], host: pl6.fast-connect-service.site, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit 3", server: 159.195.40.19, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8033102198, servername: de7.fast-connect-service.site, alpn: [http%2F1.1], host: de7.fast-connect-service.site, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 2", server: 69.46.46.10, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b1abaebf-41e9-0617-fa54-901793b4188e, servername: rvg-production-6cac.up.railway.app, alpn: [http%2F1.1], network: ws, ws-opts: {path: /ws/b1abaebf-41e9-0617-fa54-901793b4188e, headers: {Host: rvg-production-6cac.up.railway.app}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,7 +486,10 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - "@Capoit"
+      - "@Capoit 2"
       - "@Capoit`"
+      - "@Capoit 3"
       - "@Capoit` 2"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -491,7 +497,10 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - "@Capoit"
+      - "@Capoit 2"
       - "@Capoit`"
+      - "@Capoit 3"
       - "@Capoit` 2"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -499,7 +508,10 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - "@Capoit"
+      - "@Capoit 2"
       - "@Capoit`"
+      - "@Capoit 3"
       - "@Capoit` 2"
   - name: اتصال پایدار 🔗
     type: url-test
@@ -516,7 +528,10 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@Capoit"
+      - "@Capoit 2"
       - "@Capoit`"
+      - "@Capoit 3"
       - "@Capoit` 2"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -524,7 +539,10 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@Capoit"
+      - "@Capoit 2"
       - "@Capoit`"
+      - "@Capoit 3"
       - "@Capoit` 2"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -532,7 +550,10 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@Capoit"
+      - "@Capoit 2"
       - "@Capoit`"
+      - "@Capoit 3"
       - "@Capoit` 2"
   - name: دانلود منیجر 📥
     type: select
