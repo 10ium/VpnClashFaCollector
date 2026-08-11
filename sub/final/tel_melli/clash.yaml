@@ -466,6 +466,7 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: "@v2bix_meli☠️", server: 188.72.103.3, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 166ef05e-8ab5-43b7-8910-d1bb0a4326a5, servername: cdn.tracker.yandex.net, network: ws, ws-opts: {path: "/api/v1/rooms/63368e3dbb/sync/?TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=512", headers: {Host: cdn.tracker.yandex.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2box_meli💘", server: 45.196.193.123, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d2042070-c247-4226-a3ac-15337923e00d, servername: storage.yandex.net, host: storage.yandex.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: IdqrygjwHBEMCOamBl7a504TVk6uMAtTRj0xLWcFcxY, short-id: 40ce08cf20c67003}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@v2box_meli🩵", server: 199.232.78.159, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d6a909a7-d8d7-44e3-8c81-a0e1ddae231b, servername: ssl.fastly.com, network: ws, ws-opts: {path: /, headers: {Host: ssl.fastly.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -484,6 +485,7 @@ proxy-groups:
     type: select
     proxies:
       - "@v2bix_meli☠️"
+      - "@v2box_meli💘"
       - "@v2box_meli🩵"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -492,6 +494,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@v2bix_meli☠️"
+      - "@v2box_meli💘"
       - "@v2box_meli🩵"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -500,6 +503,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@v2bix_meli☠️"
+      - "@v2box_meli💘"
       - "@v2box_meli🩵"
   - name: اتصال پایدار 🔗
     type: url-test
@@ -517,6 +521,7 @@ proxy-groups:
     interval: 600
     proxies:
       - "@v2bix_meli☠️"
+      - "@v2box_meli💘"
       - "@v2box_meli🩵"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -525,6 +530,7 @@ proxy-groups:
     interval: 600
     proxies:
       - "@v2bix_meli☠️"
+      - "@v2box_meli💘"
       - "@v2box_meli🩵"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -533,6 +539,7 @@ proxy-groups:
     interval: 600
     proxies:
       - "@v2bix_meli☠️"
+      - "@v2box_meli💘"
       - "@v2box_meli🩵"
   - name: دانلود منیجر 📥
     type: select

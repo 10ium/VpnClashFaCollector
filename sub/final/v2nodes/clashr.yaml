@@ -5,46 +5,88 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 109.73.195.8:443, server: 109.73.195.8, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 02e2d68f-9982-4467-ad47-00cbeeae30e6, servername: ru7.cdn-global.pro, host: ru7.cdn-global.pro, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: h18Rbgv9RV558p-9Pl4g_--jJjXlTZL0-jHqNK5M_n4, short-id: 2b8c3e90e14740d2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 16.162.92.128:9408, server: 16.162.92.128, port: 9408, type: trojan, password: BxceQaOe, sni: t.me%252Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 18.166.226.204:39024, server: 18.166.226.204, port: 39024, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 149.130.189.106:62145, server: 149.130.189.106, port: 62145, type: vless, tls: true, packet-encoding: xudp, uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ger1.ilia.iranstoresf.ir:2056, server: ger1.ilia.iranstoresf.ir, port: 2056, type: vless, tls: true, packet-encoding: xudp, uuid: d14b7d3c-bdda-40ab-8e5e-ee1b67ef0357, host: ger1.ilia.iranstoresf.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: cache.she-happ.com:443, server: cache.she-happ.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f50e364f-f5c9-4552-b0d9-13e4de24b9f0, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: push.v2.RelayService}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇵🇱 [openproxylist.com] vmess-PL", server: 168.222.49.188, port: 80, type: vmess, uuid: 2571f762-03af-4c30-8eb9-6652102e7cd3, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇨🇳 [openproxylist.com] vmess-TW", server: 366-1095.rabbitpro-in-3.com, port: 27118, type: vmess, uuid: e351d6d8-c167-3e07-8fda-3f2f4ec0760b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 109.73.195.8:443
+      - 16.162.92.128:9408
+      - 18.166.226.204:39024
+      - 149.130.189.106:62145
+      - ger1.ilia.iranstoresf.ir:2056
+      - cache.she-happ.com:443
+      - 🇵🇱 [openproxylist.com] vmess-PL
+      - 🇨🇳 [openproxylist.com] vmess-TW
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 109.73.195.8:443
+      - 16.162.92.128:9408
+      - 18.166.226.204:39024
+      - 149.130.189.106:62145
+      - ger1.ilia.iranstoresf.ir:2056
+      - cache.she-happ.com:443
+      - 🇵🇱 [openproxylist.com] vmess-PL
+      - 🇨🇳 [openproxylist.com] vmess-TW
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 109.73.195.8:443
+      - 16.162.92.128:9408
+      - 18.166.226.204:39024
+      - 149.130.189.106:62145
+      - ger1.ilia.iranstoresf.ir:2056
+      - cache.she-happ.com:443
+      - 🇵🇱 [openproxylist.com] vmess-PL
+      - 🇨🇳 [openproxylist.com] vmess-TW
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 109.73.195.8:443
+      - 16.162.92.128:9408
+      - 18.166.226.204:39024
+      - 149.130.189.106:62145
+      - ger1.ilia.iranstoresf.ir:2056
+      - cache.she-happ.com:443
+      - 🇵🇱 [openproxylist.com] vmess-PL
+      - 🇨🇳 [openproxylist.com] vmess-TW
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 109.73.195.8:443
+      - 16.162.92.128:9408
+      - 18.166.226.204:39024
+      - 149.130.189.106:62145
+      - ger1.ilia.iranstoresf.ir:2056
+      - cache.she-happ.com:443
+      - 🇵🇱 [openproxylist.com] vmess-PL
+      - 🇨🇳 [openproxylist.com] vmess-TW
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 109.73.195.8:443
+      - 16.162.92.128:9408
+      - 18.166.226.204:39024
+      - 149.130.189.106:62145
+      - ger1.ilia.iranstoresf.ir:2056
+      - cache.she-happ.com:443
+      - 🇵🇱 [openproxylist.com] vmess-PL
+      - 🇨🇳 [openproxylist.com] vmess-TW
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +114,13 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 109.73.195.8:443
+      - 16.162.92.128:9408
+      - 18.166.226.204:39024
+      - 149.130.189.106:62145
+      - ger1.ilia.iranstoresf.ir:2056
+      - cache.she-happ.com:443
+      - 🇵🇱 [openproxylist.com] vmess-PL
+      - 🇨🇳 [openproxylist.com] vmess-TW
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
