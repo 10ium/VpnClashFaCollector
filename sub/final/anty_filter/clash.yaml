@@ -465,11 +465,12 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@vpnbaz 🎲", server: 78.17.158.155, port: 13868, type: vless, tls: true, packet-encoding: xudp, uuid: 06d44c57-8e1a-41f4-b9c4-65d35869e078, servername: www.ea.com, host: www.ea.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: W24D31y_1ZaASX1bq3d85DQaQd_3NcJQCvg1wmCn-Uo, short-id: e852dc}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz 🍭", server: 45.145.56.163, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 76713d07-5a6b-49c2-abd8-bc450a2fa7fc, servername: de2.spectrum.vu, host: de2.spectrum.vu, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: Vci2ab6lM0ezoLBj2LgE-ynvakjbWOqUUSZmk5vcNjE, short-id: 44d44d1c625a13aa}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz 🍋‍🟩", server: 95.85.233.181, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e0bb3250-1873-4b9d-b9b5-7aa6c863885f, servername: c.primarymaster.online, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, reality-opts: {public-key: S05RWQUVH-p3uqekd0iRpIeH__NpCt0XEN2xCiQJs3Y, short-id: c56c3ba3b9f676c5}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz 🛸", server: 95.85.233.181, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e0bb3250-1873-4b9d-b9b5-7aa6c863885f, servername: c.primarymaster.online, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, reality-opts: {public-key: S05RWQUVH-p3uqekd0iRpIeH__NpCt0XEN2xCiQJs3Y, short-id: c56c3ba3b9f676c5}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz ☂️", server: 168.222.49.188, port: 80, type: vmess, uuid: 6a9f1cc0-0a97-4d85-8294-f92369984bdc, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz ☂️", server: 51.77.225.200, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: zRZNBszYyWo5, udp: true, tfo: false}
+  - {name: "@vpnbaz ⭐", server: 15.235.75.71, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: FD3rCuOsxOay, udp: true, tfo: false}
+  - {name: "@vpnbaz 🍋‍🟩", server: 176.97.73.215, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: ma6zc4JoLRJA, udp: true, tfo: false}
+  - {name: "@vpnbaz 🎲", server: 202.37.33.80, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5aafc2be-9348-4dec-b896-f4a91253bbca, servername: support.zoom.us.yxls.eu.cc, network: ws, ws-opts: {path: "/id-tksi?ed=2048", headers: {Host: support.zoom.us.yxls.eu.cc}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz 🍭", server: 104.18.37.228, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: "musiclovers85?ed=512", headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz 🛸", server: nele.neobo-tooth.ru, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: b6c29ae7-4748-4049-b642-b695c0d2c776, servername: vk.ru, host: vk.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: TSOm7XIZvGzYoCbh_lFFA9PTQJqI-JU5kKIAffGmUWg, short-id: 5e39e518bfac6392}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,33 +487,36 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - "@vpnbaz ☂️"
+      - "@vpnbaz ⭐"
+      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz 🎲"
       - "@vpnbaz 🍭"
-      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz 🛸"
-      - "@vpnbaz ☂️"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
+      - "@vpnbaz ☂️"
+      - "@vpnbaz ⭐"
+      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz 🎲"
       - "@vpnbaz 🍭"
-      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz 🛸"
-      - "@vpnbaz ☂️"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
+      - "@vpnbaz ☂️"
+      - "@vpnbaz ⭐"
+      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz 🎲"
       - "@vpnbaz 🍭"
-      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz 🛸"
-      - "@vpnbaz ☂️"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -528,33 +532,36 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@vpnbaz ☂️"
+      - "@vpnbaz ⭐"
+      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz 🎲"
       - "@vpnbaz 🍭"
-      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz 🛸"
-      - "@vpnbaz ☂️"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@vpnbaz ☂️"
+      - "@vpnbaz ⭐"
+      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz 🎲"
       - "@vpnbaz 🍭"
-      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz 🛸"
-      - "@vpnbaz ☂️"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@vpnbaz ☂️"
+      - "@vpnbaz ⭐"
+      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz 🎲"
       - "@vpnbaz 🍭"
-      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz 🛸"
-      - "@vpnbaz ☂️"
   - name: دانلود منیجر 📥
     type: select
     proxies:
