@@ -465,8 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: "@v2box_meli🇩🇪", server: 51.195.126.38, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: 2YdE4lFOid5a, udp: true, tfo: false}
+  - {name: "@v2box_meli🇳🇱", server: 188.116.23.244, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: eVC634QvVk5l, udp: true, tfo: false}
   - {name: "@v2vox_meli🌧️", server: 69.46.46.30, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 2816ccb5-c589-5a88-c54f-a7759c15a059, servername: rvg-production-115b.up.railway.app, alpn: [http%2F1.1], network: ws, ws-opts: {path: /ws/2816ccb5-c589-5a88-c54f-a7759c15a059, headers: {Host: rvg-production-115b.up.railway.app}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2box_meli💘", server: 45.196.193.123, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d2042070-c247-4226-a3ac-15337923e00d, servername: storage.yandex.net, host: storage.yandex.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: IdqrygjwHBEMCOamBl7a504TVk6uMAtTRj0xLWcFcxY, short-id: 40ce08cf20c67003}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +484,27 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - "@v2box_meli🇩🇪"
+      - "@v2box_meli🇳🇱"
       - "@v2vox_meli🌧️"
-      - "@v2box_meli💘"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
+      - "@v2box_meli🇩🇪"
+      - "@v2box_meli🇳🇱"
       - "@v2vox_meli🌧️"
-      - "@v2box_meli💘"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
+      - "@v2box_meli🇩🇪"
+      - "@v2box_meli🇳🇱"
       - "@v2vox_meli🌧️"
-      - "@v2box_meli💘"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +520,27 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@v2box_meli🇩🇪"
+      - "@v2box_meli🇳🇱"
       - "@v2vox_meli🌧️"
-      - "@v2box_meli💘"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@v2box_meli🇩🇪"
+      - "@v2box_meli🇳🇱"
       - "@v2vox_meli🌧️"
-      - "@v2box_meli💘"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@v2box_meli🇩🇪"
+      - "@v2box_meli🇳🇱"
       - "@v2vox_meli🌧️"
-      - "@v2box_meli💘"
   - name: دانلود منیجر 📥
     type: select
     proxies:

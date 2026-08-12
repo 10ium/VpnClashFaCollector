@@ -465,14 +465,10 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: ggboy.ggboyz.online:8444, server: ggboy.ggboyz.online, port: 8444, type: trojan, password: 2EXii6JlhaDvgSiTsC, sni: ggboy.ggboyz.online, skip-cert-verify: false, udp: true, tfo: false}
   - {name: t11.qifei.app:55682, server: t11.qifei.app, port: 55682, type: trojan, password: 7d8e6db4-96cc-4710-afc0-619edde2d7a1, sni: t11.qifei.app, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 16.162.92.128:9408, server: 16.162.92.128, port: 9408, type: trojan, password: BxceQaOe, sni: t.me%252Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 18.166.226.204:39024, server: 18.166.226.204, port: 39024, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 149.130.189.106:62145, server: 149.130.189.106, port: 62145, type: vless, tls: true, packet-encoding: xudp, uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ger1.ilia.iranstoresf.ir:2056, server: ger1.ilia.iranstoresf.ir, port: 2056, type: vless, tls: true, packet-encoding: xudp, uuid: d14b7d3c-bdda-40ab-8e5e-ee1b67ef0357, host: ger1.ilia.iranstoresf.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: cache.she-happ.com:443, server: cache.she-happ.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f50e364f-f5c9-4552-b0d9-13e4de24b9f0, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: push.v2.RelayService}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "🇵🇱 [openproxylist.com] vmess-PL", server: 168.222.49.188, port: 80, type: vmess, uuid: 2571f762-03af-4c30-8eb9-6652102e7cd3, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "🇨🇳 [openproxylist.com] vmess-TW", server: 366-1095.rabbitpro-in-3.com, port: 27118, type: vmess, uuid: e351d6d8-c167-3e07-8fda-3f2f4ec0760b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: xiweini.dpdns.org:30101, server: xiweini.dpdns.org, port: 30101, type: trojan, password: t3re5bgbot4z4z3t, sni: xiweini.dpdns.org, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇺🇸 [openproxylist.com] vmess-US", server: lt.badns.help, port: 53168, type: vmess, uuid: 85ad21e1-c2cd-3407-aa90-815f3f3ea636, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -489,42 +485,30 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - ggboy.ggboyz.online:8444
       - t11.qifei.app:55682
-      - 16.162.92.128:9408
-      - 18.166.226.204:39024
-      - 149.130.189.106:62145
-      - ger1.ilia.iranstoresf.ir:2056
-      - cache.she-happ.com:443
-      - 🇵🇱 [openproxylist.com] vmess-PL
-      - 🇨🇳 [openproxylist.com] vmess-TW
+      - xiweini.dpdns.org:30101
+      - 🇺🇸 [openproxylist.com] vmess-US
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
+      - ggboy.ggboyz.online:8444
       - t11.qifei.app:55682
-      - 16.162.92.128:9408
-      - 18.166.226.204:39024
-      - 149.130.189.106:62145
-      - ger1.ilia.iranstoresf.ir:2056
-      - cache.she-happ.com:443
-      - 🇵🇱 [openproxylist.com] vmess-PL
-      - 🇨🇳 [openproxylist.com] vmess-TW
+      - xiweini.dpdns.org:30101
+      - 🇺🇸 [openproxylist.com] vmess-US
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
+      - ggboy.ggboyz.online:8444
       - t11.qifei.app:55682
-      - 16.162.92.128:9408
-      - 18.166.226.204:39024
-      - 149.130.189.106:62145
-      - ger1.ilia.iranstoresf.ir:2056
-      - cache.she-happ.com:443
-      - 🇵🇱 [openproxylist.com] vmess-PL
-      - 🇨🇳 [openproxylist.com] vmess-TW
+      - xiweini.dpdns.org:30101
+      - 🇺🇸 [openproxylist.com] vmess-US
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -540,42 +524,30 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - ggboy.ggboyz.online:8444
       - t11.qifei.app:55682
-      - 16.162.92.128:9408
-      - 18.166.226.204:39024
-      - 149.130.189.106:62145
-      - ger1.ilia.iranstoresf.ir:2056
-      - cache.she-happ.com:443
-      - 🇵🇱 [openproxylist.com] vmess-PL
-      - 🇨🇳 [openproxylist.com] vmess-TW
+      - xiweini.dpdns.org:30101
+      - 🇺🇸 [openproxylist.com] vmess-US
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - ggboy.ggboyz.online:8444
       - t11.qifei.app:55682
-      - 16.162.92.128:9408
-      - 18.166.226.204:39024
-      - 149.130.189.106:62145
-      - ger1.ilia.iranstoresf.ir:2056
-      - cache.she-happ.com:443
-      - 🇵🇱 [openproxylist.com] vmess-PL
-      - 🇨🇳 [openproxylist.com] vmess-TW
+      - xiweini.dpdns.org:30101
+      - 🇺🇸 [openproxylist.com] vmess-US
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - ggboy.ggboyz.online:8444
       - t11.qifei.app:55682
-      - 16.162.92.128:9408
-      - 18.166.226.204:39024
-      - 149.130.189.106:62145
-      - ger1.ilia.iranstoresf.ir:2056
-      - cache.she-happ.com:443
-      - 🇵🇱 [openproxylist.com] vmess-PL
-      - 🇨🇳 [openproxylist.com] vmess-TW
+      - xiweini.dpdns.org:30101
+      - 🇺🇸 [openproxylist.com] vmess-US
   - name: دانلود منیجر 📥
     type: select
     proxies:
