@@ -465,7 +465,10 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Capoit`", server: 172.66.44.97, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: "musiclovers85_musiclovers85?ed=512", headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit`", server: 69.46.46.40, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 14e941de-82a6-802c-b0f3-c31697d9692b, servername: rvg-production-471c.up.railway.app, alpn: [http%2F1.1], network: ws, ws-opts: {path: /ws/14e941de-82a6-802c-b0f3-c31697d9692b, headers: {Host: rvg-production-471c.up.railway.app}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit", server: 172.67.74.10, port: 2087, type: vless, tls: true, packet-encoding: xudp, uuid: 97ea73b6-2043-4238-903c-a1e3d4a43c96, servername: amphetamine.adaspoloandco.com, network: ws, ws-opts: {path: /download.php, headers: {Host: amphetamine.adaspoloandco.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit 2", server: 104.26.14.85, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575, servername: rubifen.adaspoloandco.com, network: ws, ws-opts: {path: /GOrbEh, headers: {Host: rubifen.adaspoloandco.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit 3", server: 104.26.14.85, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: f798a2c4-c51b-409d-b349-ca8455b36796, servername: chopin.adaspoloandco.com, network: ws, ws-opts: {path: /download.php, headers: {Host: chopin.adaspoloandco.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,6 +486,9 @@ proxy-groups:
     type: select
     proxies:
       - "@Capoit`"
+      - "@Capoit"
+      - "@Capoit 2"
+      - "@Capoit 3"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -490,6 +496,9 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Capoit`"
+      - "@Capoit"
+      - "@Capoit 2"
+      - "@Capoit 3"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -497,6 +506,9 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Capoit`"
+      - "@Capoit"
+      - "@Capoit 2"
+      - "@Capoit 3"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -513,6 +525,9 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit`"
+      - "@Capoit"
+      - "@Capoit 2"
+      - "@Capoit 3"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -520,6 +535,9 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit`"
+      - "@Capoit"
+      - "@Capoit 2"
+      - "@Capoit 3"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -527,6 +545,9 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit`"
+      - "@Capoit"
+      - "@Capoit 2"
+      - "@Capoit 3"
   - name: دانلود منیجر 📥
     type: select
     proxies:

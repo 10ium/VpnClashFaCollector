@@ -5,7 +5,10 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@Capoit`", server: 172.66.44.97, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: "musiclovers85_musiclovers85?ed=512", headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit`", server: 69.46.46.40, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 14e941de-82a6-802c-b0f3-c31697d9692b, servername: rvg-production-471c.up.railway.app, alpn: [http%2F1.1], network: ws, ws-opts: {path: /ws/14e941de-82a6-802c-b0f3-c31697d9692b, headers: {Host: rvg-production-471c.up.railway.app}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit", server: 172.67.74.10, port: 2087, type: vless, tls: true, packet-encoding: xudp, uuid: 97ea73b6-2043-4238-903c-a1e3d4a43c96, servername: amphetamine.adaspoloandco.com, network: ws, ws-opts: {path: /download.php, headers: {Host: amphetamine.adaspoloandco.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit 2", server: 104.26.14.85, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575, servername: rubifen.adaspoloandco.com, network: ws, ws-opts: {path: /GOrbEh, headers: {Host: rubifen.adaspoloandco.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit 3", server: 104.26.14.85, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: f798a2c4-c51b-409d-b349-ca8455b36796, servername: chopin.adaspoloandco.com, network: ws, ws-opts: {path: /download.php, headers: {Host: chopin.adaspoloandco.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -13,6 +16,9 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - "@Capoit`"
+      - "@Capoit"
+      - "@Capoit 2"
+      - "@Capoit 3"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -20,6 +26,9 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Capoit`"
+      - "@Capoit"
+      - "@Capoit 2"
+      - "@Capoit 3"
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -27,24 +36,36 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - "@Capoit`"
+      - "@Capoit"
+      - "@Capoit 2"
+      - "@Capoit 3"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@Capoit`"
+      - "@Capoit"
+      - "@Capoit 2"
+      - "@Capoit 3"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - "@Capoit`"
+      - "@Capoit"
+      - "@Capoit 2"
+      - "@Capoit 3"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@Capoit`"
+      - "@Capoit"
+      - "@Capoit 2"
+      - "@Capoit 3"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -73,6 +94,9 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - "@Capoit`"
+      - "@Capoit"
+      - "@Capoit 2"
+      - "@Capoit 3"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
