@@ -465,12 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: ggboy.ggboyz.online:8444, server: ggboy.ggboyz.online, port: 8444, type: trojan, password: 2EXii6JlhaDvgSiTsC, sni: ggboy.ggboyz.online, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 16.162.109.29:3415, server: 16.162.109.29, port: 3415, type: trojan, password: 6ec301428255a78a1d826988d86cc87e, sni: www.nintendogames.net, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 16.162.109.29:50887, server: 16.162.109.29, port: 50887, type: trojan, password: 6ec301428255a78a1d826988d86cc87e, sni: www.nintendogames.net, skip-cert-verify: false, udp: true, tfo: false}
   - {name: v2jp.k1.ssnss.live:44184, server: v2jp.k1.ssnss.live, port: 44184, type: trojan, password: d050aca3-9df2-4461-90ec-92373c1d7636, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: xiweini.dpdns.org:30101, server: xiweini.dpdns.org, port: 30101, type: trojan, password: t3re5bgbot4z4z3t, sni: xiweini.dpdns.org, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 134.98.155.169:62145, server: 134.98.155.169, port: 62145, type: vless, tls: true, packet-encoding: xudp, uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "🇸🇬 [openproxylist.com] vmess-SG", server: 366-1095.rabbitpro-in-3.com, port: 29006, type: vmess, uuid: e351d6d8-c167-3e07-8fda-3f2f4ec0760b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "🇺🇸 [openproxylist.com] vmess-US", server: lt.badns.help, port: 53168, type: vmess, uuid: 85ad21e1-c2cd-3407-aa90-815f3f3ea636, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,36 +486,33 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - ggboy.ggboyz.online:8444
+      - 16.162.109.29:3415
+      - 16.162.109.29:50887
       - v2jp.k1.ssnss.live:44184
-      - xiweini.dpdns.org:30101
       - 134.98.155.169:62145
       - 🇸🇬 [openproxylist.com] vmess-SG
-      - 🇺🇸 [openproxylist.com] vmess-US
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - ggboy.ggboyz.online:8444
+      - 16.162.109.29:3415
+      - 16.162.109.29:50887
       - v2jp.k1.ssnss.live:44184
-      - xiweini.dpdns.org:30101
       - 134.98.155.169:62145
       - 🇸🇬 [openproxylist.com] vmess-SG
-      - 🇺🇸 [openproxylist.com] vmess-US
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - ggboy.ggboyz.online:8444
+      - 16.162.109.29:3415
+      - 16.162.109.29:50887
       - v2jp.k1.ssnss.live:44184
-      - xiweini.dpdns.org:30101
       - 134.98.155.169:62145
       - 🇸🇬 [openproxylist.com] vmess-SG
-      - 🇺🇸 [openproxylist.com] vmess-US
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -532,36 +528,33 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - ggboy.ggboyz.online:8444
+      - 16.162.109.29:3415
+      - 16.162.109.29:50887
       - v2jp.k1.ssnss.live:44184
-      - xiweini.dpdns.org:30101
       - 134.98.155.169:62145
       - 🇸🇬 [openproxylist.com] vmess-SG
-      - 🇺🇸 [openproxylist.com] vmess-US
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - ggboy.ggboyz.online:8444
+      - 16.162.109.29:3415
+      - 16.162.109.29:50887
       - v2jp.k1.ssnss.live:44184
-      - xiweini.dpdns.org:30101
       - 134.98.155.169:62145
       - 🇸🇬 [openproxylist.com] vmess-SG
-      - 🇺🇸 [openproxylist.com] vmess-US
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - ggboy.ggboyz.online:8444
+      - 16.162.109.29:3415
+      - 16.162.109.29:50887
       - v2jp.k1.ssnss.live:44184
-      - xiweini.dpdns.org:30101
       - 134.98.155.169:62145
       - 🇸🇬 [openproxylist.com] vmess-SG
-      - 🇺🇸 [openproxylist.com] vmess-US
   - name: دانلود منیجر 📥
     type: select
     proxies:

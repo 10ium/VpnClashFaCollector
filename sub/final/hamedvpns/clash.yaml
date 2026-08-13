@@ -465,7 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: HamedVPN-CF 001 | %F0%9F%87%A9%F0%9F%87%AA%, server: 87.120.126.63, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: b94da146-a56e-49d7-af4c-a68c9065cbfd, servername: vpnforppl.top, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, reality-opts: {public-key: gOummriWvIYMJpd5oifBLqxsf_jcWHVsxVI7wnM0rRo, short-id: 1e943a831d22faf6}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hamedvpns - 🇸🇪, server: 95.85.246.138, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8033102198, servername: pl9.fast-connect-service.site, alpn: [http%2F1.1], host: pl9.fast-connect-service.site, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - HamedVPN-CF 001 | %F0%9F%87%A9%F0%9F%87%AA%
+      - hamedvpns - 🇸🇪
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - HamedVPN-CF 001 | %F0%9F%87%A9%F0%9F%87%AA%
+      - hamedvpns - 🇸🇪
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - HamedVPN-CF 001 | %F0%9F%87%A9%F0%9F%87%AA%
+      - hamedvpns - 🇸🇪
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - HamedVPN-CF 001 | %F0%9F%87%A9%F0%9F%87%AA%
+      - hamedvpns - 🇸🇪
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - HamedVPN-CF 001 | %F0%9F%87%A9%F0%9F%87%AA%
+      - hamedvpns - 🇸🇪
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - HamedVPN-CF 001 | %F0%9F%87%A9%F0%9F%87%AA%
+      - hamedvpns - 🇸🇪
   - name: دانلود منیجر 📥
     type: select
     proxies:

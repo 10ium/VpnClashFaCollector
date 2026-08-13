@@ -21,8 +21,13 @@ proxies:
   - {name: 🇺🇸 dc-udp-🇺🇸 USA-Washington DC-met_vg8l31sv, server: assets.gateway-stream.com, port: 52088, type: hysteria2, ports: 52088, password: 3ff7b2e75ce84d05ae16572b60a9b707, obfs: salamander, obfs-password: qfsk2h15o2dm0msi, sni: assets.gateway-stream.com, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 🇿🇦 dc-udp-🇿🇦 South Africa-Johannesburg-met_vg8l31sv`, server: assets.gateway-stream.com, port: 52089, type: hysteria2, ports: 52089, password: 3ff7b2e75ce84d05ae16572b60a9b707, obfs: salamander, obfs-password: hitar6eeayxd7imh, sni: assets.gateway-stream.com, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 🇦🇺 Australia 🇦🇺, server: 45.77.232.213, port: 15675, type: ss, cipher: chacha20-ietf-poly1305, password: TWG7J1KR5KsPaV5qZI+rieueKxxafZSpCH, udp: true, tfo: false}
-  - {name: 🇳🇱 The Netherlands 🇳🇱, server: 82.38.31.47, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
+  - {name: 🇳🇱 The Netherlands 🇳🇱, server: 82.38.31.35, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
+  - {name: 🇳🇱 The Netherlands 🇳🇱 2, server: 82.38.31.47, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
   - {name: 🇺🇸 United States 🇺🇸, server: 198.62.62.23, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: false, network: ws, ws-opts: {path: //assignment, headers: {Host: www.calmlunch.com}}, udp: true, tfo: false}
+  - {name: 🇩🇪 Germany 🇩🇪, server: 144.31.168.91, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 551955b3-46e9-5129-95c9-e7474c15ed6b, servername: de14.fast-connect-service.site, alpn: [http%2F1.1], host: de14.fast-connect-service.site, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇳🇿 New Zealand 🇳🇿`, server: 202.37.33.80, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5aafc2be-9348-4dec-b896-f4a91253bbca, servername: support.zoom.us.yxls.eu.cc, network: ws, ws-opts: {path: "/id-tksi?ed=2048", headers: {Host: support.zoom.us.yxls.eu.cc}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Cloudflare 🌐, server: cf.9999669.xyz, port: 2087, type: vless, tls: true, packet-encoding: xudp, uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2, servername: faxf32gkfzoxqv.fx6hsv0.ccwu.cc, network: ws, ws-opts: {path: /, headers: {Host: faxf32gkfzoxqv.fx6hsv0.ccwu.cc}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Cloudflare 🌐 2, server: www.speedtest.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f62d35a6-49ed-4b93-b504-b021cb2755ab, servername: bpB-b589C199.sdvSDC.wORkERS.deV, alpn: [http%2F1.1], network: ws, ws-opts: {path: "/eyJqdW5rIjoiNVpNbHhpeDVhbnFZVWNQIiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ==?ed=2560", headers: {Host: bpB-b589C199.sdvSDC.wORkERS.deV}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -46,7 +51,12 @@ proxy-groups:
       - 🇿🇦 dc-udp-🇿🇦 South Africa-Johannesburg-met_vg8l31sv`
       - 🇦🇺 Australia 🇦🇺
       - 🇳🇱 The Netherlands 🇳🇱
+      - 🇳🇱 The Netherlands 🇳🇱 2
       - 🇺🇸 United States 🇺🇸
+      - 🇩🇪 Germany 🇩🇪
+      - 🇳🇿 New Zealand 🇳🇿`
+      - Cloudflare 🌐
+      - Cloudflare 🌐 2
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -70,7 +80,12 @@ proxy-groups:
       - 🇿🇦 dc-udp-🇿🇦 South Africa-Johannesburg-met_vg8l31sv`
       - 🇦🇺 Australia 🇦🇺
       - 🇳🇱 The Netherlands 🇳🇱
+      - 🇳🇱 The Netherlands 🇳🇱 2
       - 🇺🇸 United States 🇺🇸
+      - 🇩🇪 Germany 🇩🇪
+      - 🇳🇿 New Zealand 🇳🇿`
+      - Cloudflare 🌐
+      - Cloudflare 🌐 2
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -94,7 +109,12 @@ proxy-groups:
       - 🇿🇦 dc-udp-🇿🇦 South Africa-Johannesburg-met_vg8l31sv`
       - 🇦🇺 Australia 🇦🇺
       - 🇳🇱 The Netherlands 🇳🇱
+      - 🇳🇱 The Netherlands 🇳🇱 2
       - 🇺🇸 United States 🇺🇸
+      - 🇩🇪 Germany 🇩🇪
+      - 🇳🇿 New Zealand 🇳🇿`
+      - Cloudflare 🌐
+      - Cloudflare 🌐 2
   - name: 📲 电报信息
     type: select
     proxies:
@@ -117,7 +137,12 @@ proxy-groups:
       - 🇿🇦 dc-udp-🇿🇦 South Africa-Johannesburg-met_vg8l31sv`
       - 🇦🇺 Australia 🇦🇺
       - 🇳🇱 The Netherlands 🇳🇱
+      - 🇳🇱 The Netherlands 🇳🇱 2
       - 🇺🇸 United States 🇺🇸
+      - 🇩🇪 Germany 🇩🇪
+      - 🇳🇿 New Zealand 🇳🇿`
+      - Cloudflare 🌐
+      - Cloudflare 🌐 2
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -140,7 +165,12 @@ proxy-groups:
       - 🇿🇦 dc-udp-🇿🇦 South Africa-Johannesburg-met_vg8l31sv`
       - 🇦🇺 Australia 🇦🇺
       - 🇳🇱 The Netherlands 🇳🇱
+      - 🇳🇱 The Netherlands 🇳🇱 2
       - 🇺🇸 United States 🇺🇸
+      - 🇩🇪 Germany 🇩🇪
+      - 🇳🇿 New Zealand 🇳🇿`
+      - Cloudflare 🌐
+      - Cloudflare 🌐 2
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -163,7 +193,12 @@ proxy-groups:
       - 🇿🇦 dc-udp-🇿🇦 South Africa-Johannesburg-met_vg8l31sv`
       - 🇦🇺 Australia 🇦🇺
       - 🇳🇱 The Netherlands 🇳🇱
+      - 🇳🇱 The Netherlands 🇳🇱 2
       - 🇺🇸 United States 🇺🇸
+      - 🇩🇪 Germany 🇩🇪
+      - 🇳🇿 New Zealand 🇳🇿`
+      - Cloudflare 🌐
+      - Cloudflare 🌐 2
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -208,7 +243,12 @@ proxy-groups:
       - 🇿🇦 dc-udp-🇿🇦 South Africa-Johannesburg-met_vg8l31sv`
       - 🇦🇺 Australia 🇦🇺
       - 🇳🇱 The Netherlands 🇳🇱
+      - 🇳🇱 The Netherlands 🇳🇱 2
       - 🇺🇸 United States 🇺🇸
+      - 🇩🇪 Germany 🇩🇪
+      - 🇳🇿 New Zealand 🇳🇿`
+      - Cloudflare 🌐
+      - Cloudflare 🌐 2
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
