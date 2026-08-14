@@ -465,12 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@ShadowFlux2 | کانال ما در تلگرام`", server: 5.75.201.77, port: 51822, type: vless, tls: true, packet-encoding: xudp, uuid: 200e4181-caf2-4261-bd98-b1fd9ad1fce1, host: BIA_TELEGRAM%3F%3D%40ShadowFlux2---%40ShadowFlux2---%40ShadowFlux2---%40ShadowFlux2---%40ShadowFlux2, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@ShadowFlux2 | کانال ما در تلگرام` 2", server: 130.49.219.126, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 2ee2b77f-e4cd-4e5d-af22-f9d919eeadd5, servername: at16.fastlanehosting.ru, alpn: [h2%2Chttp%2F1.1], host: at16.fastlanehosting.ru, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@ShadowFlux2 | کانال ما در تلگرام` 3", server: 150.241.79.143, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: b9b1e7c9-4160-49b4-85a4-2f096706509a, servername: www.oracle.com, host: www.oracle.com, path: /, reality-opts: {public-key: dNfk0sOCzOlmE61B7ur7YzU2i08RqXIBcGVBA2Ne1Ck, short-id: 7548bc}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@ShadowFlux2 | کانال ما در تلگرام` 4", server: 45.196.201.39, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f75814f6-8f81-4847-b792-168c41f2dc85, servername: storage.yandex.net, host: storage.yandex.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04, short-id: c6ef72e4635d15a5}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@ShadowFlux2 | کانال ما در تلگرام` 5", server: 45.196.201.53, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f75814f6-8f81-4847-b792-168c41f2dc85, servername: storage.yandex.net, host: storage.yandex.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04, short-id: c6ef72e4635d15a5}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@ShadowFlux2 | کانال ما در تلگرام` 6", server: 45.196.201.88, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f75814f6-8f81-4847-b792-168c41f2dc85, servername: storage.yandex.net, host: storage.yandex.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: zii4nGNapnFKL6SN8GzWNqFlElBvUCUFUThEP0kFH04, short-id: c6ef72e4635d15a5}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 51.158.206.25:23576, server: 51.158.206.25, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇫🇷 france.zestmarket.ir:6800, server: france.zestmarket.ir, port: 6800, type: vless, tls: true, packet-encoding: xudp, uuid: 7595cd50-9326-48e4-a7bc-802e85e643ec, servername: play.google.com, host: play.google.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,36 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@ShadowFlux2 | کانال ما در تلگرام`"
-      - "@ShadowFlux2 | کانال ما در تلگرام` 2"
-      - "@ShadowFlux2 | کانال ما در تلگرام` 3"
-      - "@ShadowFlux2 | کانال ما در تلگرام` 4"
-      - "@ShadowFlux2 | کانال ما در تلگرام` 5"
-      - "@ShadowFlux2 | کانال ما در تلگرام` 6"
+      - 51.158.206.25:23576
+      - 🇫🇷 france.zestmarket.ir:6800
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@ShadowFlux2 | کانال ما در تلگرام`"
-      - "@ShadowFlux2 | کانال ما در تلگرام` 2"
-      - "@ShadowFlux2 | کانال ما در تلگرام` 3"
-      - "@ShadowFlux2 | کانال ما در تلگرام` 4"
-      - "@ShadowFlux2 | کانال ما در تلگرام` 5"
-      - "@ShadowFlux2 | کانال ما در تلگرام` 6"
+      - 51.158.206.25:23576
+      - 🇫🇷 france.zestmarket.ir:6800
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@ShadowFlux2 | کانال ما در تلگرام`"
-      - "@ShadowFlux2 | کانال ما در تلگرام` 2"
-      - "@ShadowFlux2 | کانال ما در تلگرام` 3"
-      - "@ShadowFlux2 | کانال ما در تلگرام` 4"
-      - "@ShadowFlux2 | کانال ما در تلگرام` 5"
-      - "@ShadowFlux2 | کانال ما در تلگرام` 6"
+      - 51.158.206.25:23576
+      - 🇫🇷 france.zestmarket.ir:6800
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -532,36 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@ShadowFlux2 | کانال ما در تلگرام`"
-      - "@ShadowFlux2 | کانال ما در تلگرام` 2"
-      - "@ShadowFlux2 | کانال ما در تلگرام` 3"
-      - "@ShadowFlux2 | کانال ما در تلگرام` 4"
-      - "@ShadowFlux2 | کانال ما در تلگرام` 5"
-      - "@ShadowFlux2 | کانال ما در تلگرام` 6"
+      - 51.158.206.25:23576
+      - 🇫🇷 france.zestmarket.ir:6800
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@ShadowFlux2 | کانال ما در تلگرام`"
-      - "@ShadowFlux2 | کانال ما در تلگرام` 2"
-      - "@ShadowFlux2 | کانال ما در تلگرام` 3"
-      - "@ShadowFlux2 | کانال ما در تلگرام` 4"
-      - "@ShadowFlux2 | کانال ما در تلگرام` 5"
-      - "@ShadowFlux2 | کانال ما در تلگرام` 6"
+      - 51.158.206.25:23576
+      - 🇫🇷 france.zestmarket.ir:6800
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@ShadowFlux2 | کانال ما در تلگرام`"
-      - "@ShadowFlux2 | کانال ما در تلگرام` 2"
-      - "@ShadowFlux2 | کانال ما در تلگرام` 3"
-      - "@ShadowFlux2 | کانال ما در تلگرام` 4"
-      - "@ShadowFlux2 | کانال ما در تلگرام` 5"
-      - "@ShadowFlux2 | کانال ما در تلگرام` 6"
+      - 51.158.206.25:23576
+      - 🇫🇷 france.zestmarket.ir:6800
   - name: دانلود منیجر 📥
     type: select
     proxies:
