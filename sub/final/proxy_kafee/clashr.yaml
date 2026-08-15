@@ -5,81 +5,102 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "Channel : @proxy_kafee", server: 51.77.225.200, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: zRZNBszYyWo5, udp: true, tfo: false}
-  - {name: "Channel : @proxy_kafee 2", server: 172.66.44.97, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: "/sg-melbi#TELEGRAM-TOOTFFARANGI_TOOTFFARANGI?ed=2560", headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "Channel : @proxy_kafee 3", server: 172.66.44.97, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: /, headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "Channel : @proxy_kafee 4", server: 130.185.122.175, port: 8888, type: vless, tls: true, packet-encoding: xudp, uuid: f76c1fb2-47ef-4b15-9901-69a5656afdb4, servername: 130.185.122.175, alpn: [h2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: 130.185.122.175}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "Channel : @proxy_kafee 5", server: 65.109.178.10, port: 2086, type: vmess, uuid: f6361af8-bb8f-4609-bf5d-3fc0f688f47b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "Channel : @proxy_kafee 6", server: 178.83.45.29, port: 38998, type: vmess, uuid: 48422300-458f-4dbb-b0f5-96f45450ab9f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee : کانال تلگرام", server: 18.194.130.12, port: 443, type: trojan, password: AE62539071, sni: sterling-macaw.rooster465.autos, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee : کانال تلگرام 2", server: 18.198.1.232, port: 443, type: trojan, password: AE62539071, sni: teaching-gnu.rooster465.autos, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee : کانال تلگرام 3", server: 89.167.12.115, port: 22579, type: vless, tls: true, packet-encoding: xudp, uuid: 39ad12ba-914a-4aa1-a825-3ee4db7c0a52, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee : کانال تلگرام 4", server: 104.18.37.228, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: "musiclovers85?ed", headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee : کانال تلگرام 5", server: 172.66.44.97, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: /sg-melbi, headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee : کانال تلگرام 6", server: 172.66.44.97, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: "?ed=2560", headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee : کانال تلگرام 7", server: 172.66.44.97, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: "?ed=512", headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee : کانال تلگرام 8", server: 5.75.197.25, port: 1000, type: vless, tls: true, packet-encoding: xudp, uuid: 97ee39cc-cb22-42fd-9476-0c1a5f5a9621, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee : کانال تلگرام 9", server: 18.153.151.72, port: 22222, type: vless, tls: true, packet-encoding: xudp, uuid: e4514801-0d5a-42ba-869f-39bd605aef9e, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "Channel : @proxy_kafee"
-      - "Channel : @proxy_kafee 2"
-      - "Channel : @proxy_kafee 3"
-      - "Channel : @proxy_kafee 4"
-      - "Channel : @proxy_kafee 5"
-      - "Channel : @proxy_kafee 6"
+      - "@proxy_kafee : کانال تلگرام"
+      - "@proxy_kafee : کانال تلگرام 2"
+      - "@proxy_kafee : کانال تلگرام 3"
+      - "@proxy_kafee : کانال تلگرام 4"
+      - "@proxy_kafee : کانال تلگرام 5"
+      - "@proxy_kafee : کانال تلگرام 6"
+      - "@proxy_kafee : کانال تلگرام 7"
+      - "@proxy_kafee : کانال تلگرام 8"
+      - "@proxy_kafee : کانال تلگرام 9"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "Channel : @proxy_kafee"
-      - "Channel : @proxy_kafee 2"
-      - "Channel : @proxy_kafee 3"
-      - "Channel : @proxy_kafee 4"
-      - "Channel : @proxy_kafee 5"
-      - "Channel : @proxy_kafee 6"
+      - "@proxy_kafee : کانال تلگرام"
+      - "@proxy_kafee : کانال تلگرام 2"
+      - "@proxy_kafee : کانال تلگرام 3"
+      - "@proxy_kafee : کانال تلگرام 4"
+      - "@proxy_kafee : کانال تلگرام 5"
+      - "@proxy_kafee : کانال تلگرام 6"
+      - "@proxy_kafee : کانال تلگرام 7"
+      - "@proxy_kafee : کانال تلگرام 8"
+      - "@proxy_kafee : کانال تلگرام 9"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "Channel : @proxy_kafee"
-      - "Channel : @proxy_kafee 2"
-      - "Channel : @proxy_kafee 3"
-      - "Channel : @proxy_kafee 4"
-      - "Channel : @proxy_kafee 5"
-      - "Channel : @proxy_kafee 6"
+      - "@proxy_kafee : کانال تلگرام"
+      - "@proxy_kafee : کانال تلگرام 2"
+      - "@proxy_kafee : کانال تلگرام 3"
+      - "@proxy_kafee : کانال تلگرام 4"
+      - "@proxy_kafee : کانال تلگرام 5"
+      - "@proxy_kafee : کانال تلگرام 6"
+      - "@proxy_kafee : کانال تلگرام 7"
+      - "@proxy_kafee : کانال تلگرام 8"
+      - "@proxy_kafee : کانال تلگرام 9"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "Channel : @proxy_kafee"
-      - "Channel : @proxy_kafee 2"
-      - "Channel : @proxy_kafee 3"
-      - "Channel : @proxy_kafee 4"
-      - "Channel : @proxy_kafee 5"
-      - "Channel : @proxy_kafee 6"
+      - "@proxy_kafee : کانال تلگرام"
+      - "@proxy_kafee : کانال تلگرام 2"
+      - "@proxy_kafee : کانال تلگرام 3"
+      - "@proxy_kafee : کانال تلگرام 4"
+      - "@proxy_kafee : کانال تلگرام 5"
+      - "@proxy_kafee : کانال تلگرام 6"
+      - "@proxy_kafee : کانال تلگرام 7"
+      - "@proxy_kafee : کانال تلگرام 8"
+      - "@proxy_kafee : کانال تلگرام 9"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "Channel : @proxy_kafee"
-      - "Channel : @proxy_kafee 2"
-      - "Channel : @proxy_kafee 3"
-      - "Channel : @proxy_kafee 4"
-      - "Channel : @proxy_kafee 5"
-      - "Channel : @proxy_kafee 6"
+      - "@proxy_kafee : کانال تلگرام"
+      - "@proxy_kafee : کانال تلگرام 2"
+      - "@proxy_kafee : کانال تلگرام 3"
+      - "@proxy_kafee : کانال تلگرام 4"
+      - "@proxy_kafee : کانال تلگرام 5"
+      - "@proxy_kafee : کانال تلگرام 6"
+      - "@proxy_kafee : کانال تلگرام 7"
+      - "@proxy_kafee : کانال تلگرام 8"
+      - "@proxy_kafee : کانال تلگرام 9"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "Channel : @proxy_kafee"
-      - "Channel : @proxy_kafee 2"
-      - "Channel : @proxy_kafee 3"
-      - "Channel : @proxy_kafee 4"
-      - "Channel : @proxy_kafee 5"
-      - "Channel : @proxy_kafee 6"
+      - "@proxy_kafee : کانال تلگرام"
+      - "@proxy_kafee : کانال تلگرام 2"
+      - "@proxy_kafee : کانال تلگرام 3"
+      - "@proxy_kafee : کانال تلگرام 4"
+      - "@proxy_kafee : کانال تلگرام 5"
+      - "@proxy_kafee : کانال تلگرام 6"
+      - "@proxy_kafee : کانال تلگرام 7"
+      - "@proxy_kafee : کانال تلگرام 8"
+      - "@proxy_kafee : کانال تلگرام 9"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -107,12 +128,15 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "Channel : @proxy_kafee"
-      - "Channel : @proxy_kafee 2"
-      - "Channel : @proxy_kafee 3"
-      - "Channel : @proxy_kafee 4"
-      - "Channel : @proxy_kafee 5"
-      - "Channel : @proxy_kafee 6"
+      - "@proxy_kafee : کانال تلگرام"
+      - "@proxy_kafee : کانال تلگرام 2"
+      - "@proxy_kafee : کانال تلگرام 3"
+      - "@proxy_kafee : کانال تلگرام 4"
+      - "@proxy_kafee : کانال تلگرام 5"
+      - "@proxy_kafee : کانال تلگرام 6"
+      - "@proxy_kafee : کانال تلگرام 7"
+      - "@proxy_kafee : کانال تلگرام 8"
+      - "@proxy_kafee : کانال تلگرام 9"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
