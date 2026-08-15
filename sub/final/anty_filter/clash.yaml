@@ -465,12 +465,10 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@vpnbaz ⭐", server: 51.195.126.38, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: 2YdE4lFOid5a, udp: true, tfo: false}
-  - {name: "@vpnbaz 🍋‍🟩", server: 51.195.126.38, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: 2YdE4lFOid5a, udp: true, tfo: false}
-  - {name: "@vpnbaz ☂️", server: 15.235.75.71, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: FD3rCuOsxOay, udp: true, tfo: false}
-  - {name: "@vpnbaz 🌊", server: 188.114.97.7, port: 443, type: trojan, password: humanity, sni: www.ignitelimit.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.ignitelimit.com}}, udp: true, tfo: false}
-  - {name: "@vpnbaz 🛸", server: 169.40.42.212, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d65cc14c-f53f-4fe2-b262-97856601319c, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg, short-id: c39cc7310a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz 🍭", server: 82.198.246.250, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz ⭐", server: 176.97.64.144, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: TFElG2FVqyqG, udp: true, tfo: false}
+  - {name: "@vpnbaz ☂️", server: 38.180.135.156, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: YHtesZ0qvgtg, udp: true, tfo: false}
+  - {name: "@vpnbaz 🍭", server: 169.40.42.212, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d65cc14c-f53f-4fe2-b262-97856601319c, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg, short-id: c39cc7310a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz 🍋‍🟩", server: 95.85.233.181, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e0bb3250-1873-4b9d-b9b5-7aa6c863885f, servername: c.primarymaster.online, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, reality-opts: {public-key: S05RWQUVH-p3uqekd0iRpIeH__NpCt0XEN2xCiQJs3Y, short-id: c56c3ba3b9f676c5}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -488,11 +486,9 @@ proxy-groups:
     type: select
     proxies:
       - "@vpnbaz ⭐"
-      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz ☂️"
-      - "@vpnbaz 🌊"
-      - "@vpnbaz 🛸"
       - "@vpnbaz 🍭"
+      - "@vpnbaz 🍋‍🟩"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -500,11 +496,9 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@vpnbaz ⭐"
-      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz ☂️"
-      - "@vpnbaz 🌊"
-      - "@vpnbaz 🛸"
       - "@vpnbaz 🍭"
+      - "@vpnbaz 🍋‍🟩"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -512,11 +506,9 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@vpnbaz ⭐"
-      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz ☂️"
-      - "@vpnbaz 🌊"
-      - "@vpnbaz 🛸"
       - "@vpnbaz 🍭"
+      - "@vpnbaz 🍋‍🟩"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -533,11 +525,9 @@ proxy-groups:
     interval: 600
     proxies:
       - "@vpnbaz ⭐"
-      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz ☂️"
-      - "@vpnbaz 🌊"
-      - "@vpnbaz 🛸"
       - "@vpnbaz 🍭"
+      - "@vpnbaz 🍋‍🟩"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -545,11 +535,9 @@ proxy-groups:
     interval: 600
     proxies:
       - "@vpnbaz ⭐"
-      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz ☂️"
-      - "@vpnbaz 🌊"
-      - "@vpnbaz 🛸"
       - "@vpnbaz 🍭"
+      - "@vpnbaz 🍋‍🟩"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -557,11 +545,9 @@ proxy-groups:
     interval: 600
     proxies:
       - "@vpnbaz ⭐"
-      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz ☂️"
-      - "@vpnbaz 🌊"
-      - "@vpnbaz 🛸"
       - "@vpnbaz 🍭"
+      - "@vpnbaz 🍋‍🟩"
   - name: دانلود منیجر 📥
     type: select
     proxies:

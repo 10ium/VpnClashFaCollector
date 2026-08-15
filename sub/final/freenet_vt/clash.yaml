@@ -465,9 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "] freenet_vt 🤩", server: 104.19.229.21, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true, tfo: false}
-  - {name: "freenet_vt 🔥]`", server: 172.67.149.60, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true, tfo: false}
-  - {name: Freenet_vt 🥰`, server: 188.114.98.0, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true, tfo: false}
+  - {name: Freenet_vt `, server: 162.159.82.25, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 1febe521-c7ff-408c-9b79-f197e44029c6, servername: auto-1febe5.telfreenetvt.workers.dev, alpn: [http%2F1.1], network: ws, ws-opts: {path: "/?ed=2560", headers: {Host: auto-1febe5.telfreenetvt.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,27 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "] freenet_vt 🤩"
-      - freenet_vt 🔥]`
-      - Freenet_vt 🥰`
+      - Freenet_vt `
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "] freenet_vt 🤩"
-      - freenet_vt 🔥]`
-      - Freenet_vt 🥰`
+      - Freenet_vt `
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "] freenet_vt 🤩"
-      - freenet_vt 🔥]`
-      - Freenet_vt 🥰`
+      - Freenet_vt `
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -520,27 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "] freenet_vt 🤩"
-      - freenet_vt 🔥]`
-      - Freenet_vt 🥰`
+      - Freenet_vt `
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "] freenet_vt 🤩"
-      - freenet_vt 🔥]`
-      - Freenet_vt 🥰`
+      - Freenet_vt `
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "] freenet_vt 🤩"
-      - freenet_vt 🔥]`
-      - Freenet_vt 🥰`
+      - Freenet_vt `
   - name: دانلود منیجر 📥
     type: select
     proxies:
