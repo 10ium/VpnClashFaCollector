@@ -465,7 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Capoit`", server: 188.114.97.7, port: 443, type: trojan, password: humanity, sni: www.ignitelimit.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.ignitelimit.com}}, udp: true, tfo: false}
+  - {name: "@Capoit", server: 151.101.56.7, port: 443, type: trojan, password: MiTiVPN, sni: ssl.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/D-e1@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN, headers: {Host: ssl.fastly.com}}, udp: true, tfo: false}
+  - {name: "@Capoit`", server: sv33.lithiumhost.ir, port: 41722, type: vless, tls: true, packet-encoding: xudp, uuid: adc1e45e-78f9-4c4c-a127-d27401c40432, host: sv33.lithiumhost.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 2", server: iman.dexterr.ir, port: 42314, type: vless, tls: true, packet-encoding: xudp, uuid: de221fe4-be98-4e42-a9e3-1a373dfa8662, servername: play.google.com, host: play.google.com, path: /, reality-opts: {public-key: LPViwfCMM74xqoaSY7ZIO38CYQrLIlDgRMowiuhyKWs, short-id: 52bdf8ea99}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +484,27 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - "@Capoit"
       - "@Capoit`"
+      - "@Capoit` 2"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
+      - "@Capoit"
       - "@Capoit`"
+      - "@Capoit` 2"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
+      - "@Capoit"
       - "@Capoit`"
+      - "@Capoit` 2"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +520,27 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@Capoit"
       - "@Capoit`"
+      - "@Capoit` 2"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@Capoit"
       - "@Capoit`"
+      - "@Capoit` 2"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@Capoit"
       - "@Capoit`"
+      - "@Capoit` 2"
   - name: دانلود منیجر 📥
     type: select
     proxies:
