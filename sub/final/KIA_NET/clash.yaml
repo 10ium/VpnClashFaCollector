@@ -465,11 +465,12 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 🇨🇦 Canada 🇨🇦, server: 15.235.75.71, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: FD3rCuOsxOay, udp: true, tfo: false}
-  - {name: 🇫🇷 France 🇫🇷, server: fancy-skink.rooster465.autos, port: 443, type: trojan, password: ND91608427, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇫🇷 France 🇫🇷 2, server: fr15.mechvpn.online, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 53c76647-14d1-4df5-99cb-be99ad2e6bd9, host: fr15.mechvpn.online, path: /, flow: xtls-rprx-vision-udp443, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇵🇱 Poland 🇵🇱, server: 82.26.91.87, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 7e760d89-a8f4-4a87-8f10-b4af28c61b7f, servername: faster.yandex-apicloud.ru, alpn: [h2], host: faster.yandex-apicloud.ru, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Lithuania 🇱🇹`, server: 84.32.209.7, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f1c496bf-d2ab-45be-bc13-051d60d227b7, servername: dartsearch-cn.net, host: dartsearch-cn.net, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇳🇱 The Netherlands 🇳🇱, server: 193.29.139.151, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
+  - {name: 🇳🇱 The Netherlands 🇳🇱 2, server: 82.38.31.149, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
+  - {name: 🇫🇷 France 🇫🇷, server: distinct-quail.rooster465.autos, port: 443, type: trojan, password: AE62539071, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇫🇷 France …, server: distinct-quail.rooster465.autos, port: 443, type: trojan, password: AE62539071, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇮🇪 Ireland 🇮🇪, server: unbiased-garfish.rooster465.autos, port: 443, type: trojan, password: AE62539071, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇩🇪 Germany 🇩🇪, server: 178.83.45.29, port: 38998, type: vmess, uuid: 48422300-458f-4dbb-b0f5-96f45450ab9f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,33 +487,36 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 🇨🇦 Canada 🇨🇦
+      - 🇳🇱 The Netherlands 🇳🇱
+      - 🇳🇱 The Netherlands 🇳🇱 2
       - 🇫🇷 France 🇫🇷
-      - 🇫🇷 France 🇫🇷 2
-      - 🇵🇱 Poland 🇵🇱
-      - Lithuania 🇱🇹`
+      - 🇫🇷 France …
+      - 🇮🇪 Ireland 🇮🇪
+      - 🇩🇪 Germany 🇩🇪
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 🇨🇦 Canada 🇨🇦
+      - 🇳🇱 The Netherlands 🇳🇱
+      - 🇳🇱 The Netherlands 🇳🇱 2
       - 🇫🇷 France 🇫🇷
-      - 🇫🇷 France 🇫🇷 2
-      - 🇵🇱 Poland 🇵🇱
-      - Lithuania 🇱🇹`
+      - 🇫🇷 France …
+      - 🇮🇪 Ireland 🇮🇪
+      - 🇩🇪 Germany 🇩🇪
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 🇨🇦 Canada 🇨🇦
+      - 🇳🇱 The Netherlands 🇳🇱
+      - 🇳🇱 The Netherlands 🇳🇱 2
       - 🇫🇷 France 🇫🇷
-      - 🇫🇷 France 🇫🇷 2
-      - 🇵🇱 Poland 🇵🇱
-      - Lithuania 🇱🇹`
+      - 🇫🇷 France …
+      - 🇮🇪 Ireland 🇮🇪
+      - 🇩🇪 Germany 🇩🇪
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -528,33 +532,36 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇨🇦 Canada 🇨🇦
+      - 🇳🇱 The Netherlands 🇳🇱
+      - 🇳🇱 The Netherlands 🇳🇱 2
       - 🇫🇷 France 🇫🇷
-      - 🇫🇷 France 🇫🇷 2
-      - 🇵🇱 Poland 🇵🇱
-      - Lithuania 🇱🇹`
+      - 🇫🇷 France …
+      - 🇮🇪 Ireland 🇮🇪
+      - 🇩🇪 Germany 🇩🇪
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇨🇦 Canada 🇨🇦
+      - 🇳🇱 The Netherlands 🇳🇱
+      - 🇳🇱 The Netherlands 🇳🇱 2
       - 🇫🇷 France 🇫🇷
-      - 🇫🇷 France 🇫🇷 2
-      - 🇵🇱 Poland 🇵🇱
-      - Lithuania 🇱🇹`
+      - 🇫🇷 France …
+      - 🇮🇪 Ireland 🇮🇪
+      - 🇩🇪 Germany 🇩🇪
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇨🇦 Canada 🇨🇦
+      - 🇳🇱 The Netherlands 🇳🇱
+      - 🇳🇱 The Netherlands 🇳🇱 2
       - 🇫🇷 France 🇫🇷
-      - 🇫🇷 France 🇫🇷 2
-      - 🇵🇱 Poland 🇵🇱
-      - Lithuania 🇱🇹`
+      - 🇫🇷 France …
+      - 🇮🇪 Ireland 🇮🇪
+      - 🇩🇪 Germany 🇩🇪
   - name: دانلود منیجر 📥
     type: select
     proxies:
