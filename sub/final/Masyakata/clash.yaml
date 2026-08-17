@@ -465,8 +465,10 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 51.158.206.25:23576, server: 51.158.206.25, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇫🇷 france.zestmarket.ir:6800, server: france.zestmarket.ir, port: 6800, type: vless, tls: true, packet-encoding: xudp, uuid: 7595cd50-9326-48e4-a7bc-802e85e643ec, servername: play.google.com, host: play.google.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 144814 | ⚡️Telegram - @Masyakata, server: upright-hamster.rooster465.autos, port: 443, type: trojan, password: ND91608427, sni: upright-hamster.rooster465.autos, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 144815 | ⚡️Telegram - @Masyakata, server: adgof.mgodping12.xyz, port: 2086, type: vless, tls: true, packet-encoding: xudp, uuid: 257c313c-36fa-4d99-ba06-bb4a02aae70d, alpn: [h2%2Chttp%2F1.1%2Ch3], network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 144818 | ⚡️Telegram - @Masyakata, server: testtt.botdegeris.ir, port: 58752, type: vless, tls: true, packet-encoding: xudp, uuid: 67770c79-6faa-4969-bdca-f8995c3bd884, host: testtt.botdegeris.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 144813 | ⚡️Telegram - jsyakata, server: spider-panel-production-c21d.up.railway.app, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c2ab50ae-7520-4d34-bd34-d6d5cf1b6faa, servername: spider-panel-production-c21d.up.railway.app, alpn: [http/1.1], network: ws, ws-opts: {path: /ws/c2ab50ae-7520-4d34-bd34-d6d5cf1b6faa, headers: {Host: spider-panel-production-c21d.up.railway.app}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +485,30 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 51.158.206.25:23576
-      - 🇫🇷 france.zestmarket.ir:6800
+      - 144814 | ⚡️Telegram - @Masyakata
+      - 144815 | ⚡️Telegram - @Masyakata
+      - 144818 | ⚡️Telegram - @Masyakata
+      - 144813 | ⚡️Telegram - jsyakata
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 51.158.206.25:23576
-      - 🇫🇷 france.zestmarket.ir:6800
+      - 144814 | ⚡️Telegram - @Masyakata
+      - 144815 | ⚡️Telegram - @Masyakata
+      - 144818 | ⚡️Telegram - @Masyakata
+      - 144813 | ⚡️Telegram - jsyakata
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 51.158.206.25:23576
-      - 🇫🇷 france.zestmarket.ir:6800
+      - 144814 | ⚡️Telegram - @Masyakata
+      - 144815 | ⚡️Telegram - @Masyakata
+      - 144818 | ⚡️Telegram - @Masyakata
+      - 144813 | ⚡️Telegram - jsyakata
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +524,30 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 51.158.206.25:23576
-      - 🇫🇷 france.zestmarket.ir:6800
+      - 144814 | ⚡️Telegram - @Masyakata
+      - 144815 | ⚡️Telegram - @Masyakata
+      - 144818 | ⚡️Telegram - @Masyakata
+      - 144813 | ⚡️Telegram - jsyakata
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 51.158.206.25:23576
-      - 🇫🇷 france.zestmarket.ir:6800
+      - 144814 | ⚡️Telegram - @Masyakata
+      - 144815 | ⚡️Telegram - @Masyakata
+      - 144818 | ⚡️Telegram - @Masyakata
+      - 144813 | ⚡️Telegram - jsyakata
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 51.158.206.25:23576
-      - 🇫🇷 france.zestmarket.ir:6800
+      - 144814 | ⚡️Telegram - @Masyakata
+      - 144815 | ⚡️Telegram - @Masyakata
+      - 144818 | ⚡️Telegram - @Masyakata
+      - 144813 | ⚡️Telegram - jsyakata
   - name: دانلود منیجر 📥
     type: select
     proxies:
