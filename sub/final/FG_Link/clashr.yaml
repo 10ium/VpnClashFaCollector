@@ -5,60 +5,53 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: r3mrcg001286ek2.cybervena.com:50099, server: r3mrcg001286ek2.cybervena.com, port: 50099, type: ss, cipher: chacha20-ietf-poly1305, password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4, udp: true, tfo: false}
-  - {name: 94.183.124.95:82, server: 94.183.124.95, port: 82, type: ss, cipher: aes-256-gcm, password: EMIruFl6nN37LDQxCIwstG09haCBkyjvZVjWIMOQ0Jk=, udp: true, tfo: false}
-  - {name: 167.150.100.133:450, server: 167.150.100.133, port: 450, type: trojan, password: 0_Oms89nH82l_Ki813_Nxmw81_Rbt_Jq190Kl_m, sni: grape-power-sg.roxa.org, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 144.31.168.176:45640, server: 144.31.168.176, port: 45640, type: ss, cipher: chacha20-ietf-poly1305, password: eQvKkykBEbCky5p4BVghO0, udp: true, tfo: false}
+  - {name: 194.87.47.204:10901, server: 194.87.47.204, port: 10901, type: ss, cipher: aes-256-gcm, password: d1fa2f4b98a38bc8, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - r3mrcg001286ek2.cybervena.com:50099
-      - 94.183.124.95:82
-      - 167.150.100.133:450
+      - 144.31.168.176:45640
+      - 194.87.47.204:10901
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - r3mrcg001286ek2.cybervena.com:50099
-      - 94.183.124.95:82
-      - 167.150.100.133:450
+      - 144.31.168.176:45640
+      - 194.87.47.204:10901
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - r3mrcg001286ek2.cybervena.com:50099
-      - 94.183.124.95:82
-      - 167.150.100.133:450
+      - 144.31.168.176:45640
+      - 194.87.47.204:10901
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - r3mrcg001286ek2.cybervena.com:50099
-      - 94.183.124.95:82
-      - 167.150.100.133:450
+      - 144.31.168.176:45640
+      - 194.87.47.204:10901
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - r3mrcg001286ek2.cybervena.com:50099
-      - 94.183.124.95:82
-      - 167.150.100.133:450
+      - 144.31.168.176:45640
+      - 194.87.47.204:10901
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - r3mrcg001286ek2.cybervena.com:50099
-      - 94.183.124.95:82
-      - 167.150.100.133:450
+      - 144.31.168.176:45640
+      - 194.87.47.204:10901
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -86,9 +79,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - r3mrcg001286ek2.cybervena.com:50099
-      - 94.183.124.95:82
-      - 167.150.100.133:450
+      - 144.31.168.176:45640
+      - 194.87.47.204:10901
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

@@ -5,60 +5,46 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@Capoit", server: 151.101.56.7, port: 443, type: trojan, password: MiTiVPN, sni: ssl.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/D-e1@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN, headers: {Host: ssl.fastly.com}}, udp: true, tfo: false}
-  - {name: "@Capoit`", server: sv33.lithiumhost.ir, port: 41722, type: vless, tls: true, packet-encoding: xudp, uuid: adc1e45e-78f9-4c4c-a127-d27401c40432, host: sv33.lithiumhost.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 2", server: iman.dexterr.ir, port: 42314, type: vless, tls: true, packet-encoding: xudp, uuid: de221fe4-be98-4e42-a9e3-1a373dfa8662, servername: play.google.com, host: play.google.com, path: /, reality-opts: {public-key: LPViwfCMM74xqoaSY7ZIO38CYQrLIlDgRMowiuhyKWs, short-id: 52bdf8ea99}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit`", server: one-for-all.levikogjgfdd.ir, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: e7961655-9674-4cbd-a36f-ec0d5d7d660c, servername: po.fastbrokencompony.com, alpn: [h3%2Ch2], network: ws, ws-opts: {path: /, headers: {Host: po.fastbrokencompony.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@Capoit"
       - "@Capoit`"
-      - "@Capoit` 2"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@Capoit"
       - "@Capoit`"
-      - "@Capoit` 2"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@Capoit"
       - "@Capoit`"
-      - "@Capoit` 2"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@Capoit"
       - "@Capoit`"
-      - "@Capoit` 2"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@Capoit"
       - "@Capoit`"
-      - "@Capoit` 2"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@Capoit"
       - "@Capoit`"
-      - "@Capoit` 2"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -86,9 +72,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@Capoit"
       - "@Capoit`"
-      - "@Capoit` 2"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
