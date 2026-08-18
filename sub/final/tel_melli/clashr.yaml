@@ -5,46 +5,46 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@v2box_meli👈 عضو شو", server: 57.129.47.4, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: c7e9c591-2764-423a-afca-efbd010fd396, servername: forfreeuse.rtqa.ru, network: ws, ws-opts: {path: /, headers: {Host: forfreeuse.rtqa.ru}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2box_meli🇸🇪", server: 140.248.185.253, port: 443, type: trojan, password: MiTiVPN, sni: mitivpn--mitivpn---mitivpn---mitivpn.mitivpn, skip-cert-verify: false, network: ws, ws-opts: {path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/s-w@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN, headers: {Host: mitivpn--mitivpn---mitivpn---mitivpn.mitivpn}}, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@v2box_meli👈 عضو شو"
+      - "@v2box_meli🇸🇪"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@v2box_meli👈 عضو شو"
+      - "@v2box_meli🇸🇪"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@v2box_meli👈 عضو شو"
+      - "@v2box_meli🇸🇪"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@v2box_meli👈 عضو شو"
+      - "@v2box_meli🇸🇪"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@v2box_meli👈 عضو شو"
+      - "@v2box_meli🇸🇪"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@v2box_meli👈 عضو شو"
+      - "@v2box_meli🇸🇪"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +72,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@v2box_meli👈 عضو شو"
+      - "@v2box_meli🇸🇪"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
