@@ -465,12 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 🇳🇱 The Netherlands 🇳🇱, server: 193.29.139.151, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
-  - {name: 🇳🇱 The Netherlands 🇳🇱 2, server: 82.38.31.149, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
-  - {name: 🇫🇷 France 🇫🇷, server: distinct-quail.rooster465.autos, port: 443, type: trojan, password: AE62539071, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇫🇷 France …, server: distinct-quail.rooster465.autos, port: 443, type: trojan, password: AE62539071, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇮🇪 Ireland 🇮🇪, server: unbiased-garfish.rooster465.autos, port: 443, type: trojan, password: AE62539071, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇩🇪 Germany 🇩🇪, server: 178.83.45.29, port: 38998, type: vmess, uuid: 48422300-458f-4dbb-b0f5-96f45450ab9f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇷🇴 Romania 🇷🇴`, server: 85.204.107.165, port: 8443, type: hysteria2, ports: 8443, password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0, sni: grape-zet-ro-turbo.bumbleshrimp.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇳🇱 Netherlands 🇳🇱, server: whole-woodcock.rooster465.autos, port: 443, type: trojan, password: AE62539071, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Cloudflare 🌐, server: 172.64.144.251, port: 2083, type: trojan, password: Mehdi1234, sni: purple-recipe-5e30.cimavo4626.workers.dev, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: purple-recipe-5e30.cimavo4626.workers.dev}}, udp: true, tfo: false}
+  - {name: Cloudflare 🌐 2, server: www.speedtest.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 7812d96c-fbd5-4689-a480-e359dde49b7b, servername: BPb-F23dDEdd.JCXkvlnDL.WOrkERS.deV, alpn: [http%2F1.1], network: ws, ws-opts: {path: "/eyJqdW5rIjoiWWdUTFZiaTRQU3YiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119?ed=2560", headers: {Host: BPb-F23dDEdd.JCXkvlnDL.WOrkERS.deV}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇺🇸 United States 🇺🇸, server: 63.141.128.22, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b8b01773-36b1-4b49-9bd0-6249f52345b4, servername: misty-tooth-78ca.fobogah414-e7b.workers.dev, network: ws, ws-opts: {path: /eyJqdW5rIjoiTkNUaFg0ZnJNUjhhcyIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=, headers: {Host: misty-tooth-78ca.fobogah414-e7b.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,36 +486,33 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 🇳🇱 The Netherlands 🇳🇱
-      - 🇳🇱 The Netherlands 🇳🇱 2
-      - 🇫🇷 France 🇫🇷
-      - 🇫🇷 France …
-      - 🇮🇪 Ireland 🇮🇪
-      - 🇩🇪 Germany 🇩🇪
+      - 🇷🇴 Romania 🇷🇴`
+      - 🇳🇱 Netherlands 🇳🇱
+      - Cloudflare 🌐
+      - Cloudflare 🌐 2
+      - 🇺🇸 United States 🇺🇸
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 🇳🇱 The Netherlands 🇳🇱
-      - 🇳🇱 The Netherlands 🇳🇱 2
-      - 🇫🇷 France 🇫🇷
-      - 🇫🇷 France …
-      - 🇮🇪 Ireland 🇮🇪
-      - 🇩🇪 Germany 🇩🇪
+      - 🇷🇴 Romania 🇷🇴`
+      - 🇳🇱 Netherlands 🇳🇱
+      - Cloudflare 🌐
+      - Cloudflare 🌐 2
+      - 🇺🇸 United States 🇺🇸
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 🇳🇱 The Netherlands 🇳🇱
-      - 🇳🇱 The Netherlands 🇳🇱 2
-      - 🇫🇷 France 🇫🇷
-      - 🇫🇷 France …
-      - 🇮🇪 Ireland 🇮🇪
-      - 🇩🇪 Germany 🇩🇪
+      - 🇷🇴 Romania 🇷🇴`
+      - 🇳🇱 Netherlands 🇳🇱
+      - Cloudflare 🌐
+      - Cloudflare 🌐 2
+      - 🇺🇸 United States 🇺🇸
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -532,36 +528,33 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇳🇱 The Netherlands 🇳🇱
-      - 🇳🇱 The Netherlands 🇳🇱 2
-      - 🇫🇷 France 🇫🇷
-      - 🇫🇷 France …
-      - 🇮🇪 Ireland 🇮🇪
-      - 🇩🇪 Germany 🇩🇪
+      - 🇷🇴 Romania 🇷🇴`
+      - 🇳🇱 Netherlands 🇳🇱
+      - Cloudflare 🌐
+      - Cloudflare 🌐 2
+      - 🇺🇸 United States 🇺🇸
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇳🇱 The Netherlands 🇳🇱
-      - 🇳🇱 The Netherlands 🇳🇱 2
-      - 🇫🇷 France 🇫🇷
-      - 🇫🇷 France …
-      - 🇮🇪 Ireland 🇮🇪
-      - 🇩🇪 Germany 🇩🇪
+      - 🇷🇴 Romania 🇷🇴`
+      - 🇳🇱 Netherlands 🇳🇱
+      - Cloudflare 🌐
+      - Cloudflare 🌐 2
+      - 🇺🇸 United States 🇺🇸
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇳🇱 The Netherlands 🇳🇱
-      - 🇳🇱 The Netherlands 🇳🇱 2
-      - 🇫🇷 France 🇫🇷
-      - 🇫🇷 France …
-      - 🇮🇪 Ireland 🇮🇪
-      - 🇩🇪 Germany 🇩🇪
+      - 🇷🇴 Romania 🇷🇴`
+      - 🇳🇱 Netherlands 🇳🇱
+      - Cloudflare 🌐
+      - Cloudflare 🌐 2
+      - 🇺🇸 United States 🇺🇸
   - name: دانلود منیجر 📥
     type: select
     proxies:
