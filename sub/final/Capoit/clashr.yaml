@@ -5,46 +5,46 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@Capoit`", server: one-for-all.levikogjgfdd.ir, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: e7961655-9674-4cbd-a36f-ec0d5d7d660c, servername: po.fastbrokencompony.com, alpn: [h3%2Ch2], network: ws, ws-opts: {path: /, headers: {Host: po.fastbrokencompony.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit", server: 185.21.15.245, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fe0138b5-ca60-4a67-91aa-b5a49266eeb5, servername: nl.chick-team.ru, host: nl.chick-team.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: aLdyGbloIzzeClW7_SPWL0IZpcaUWsA7rlmbNieggWk, short-id: 0894e51863b5c395}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@Capoit`"
+      - "@Capoit"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@Capoit`"
+      - "@Capoit"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@Capoit`"
+      - "@Capoit"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@Capoit`"
+      - "@Capoit"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@Capoit`"
+      - "@Capoit"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@Capoit`"
+      - "@Capoit"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +72,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@Capoit`"
+      - "@Capoit"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

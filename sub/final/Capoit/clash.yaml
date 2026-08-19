@@ -465,7 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Capoit`", server: one-for-all.levikogjgfdd.ir, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: e7961655-9674-4cbd-a36f-ec0d5d7d660c, servername: po.fastbrokencompony.com, alpn: [h3%2Ch2], network: ws, ws-opts: {path: /, headers: {Host: po.fastbrokencompony.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit", server: 185.21.15.245, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fe0138b5-ca60-4a67-91aa-b5a49266eeb5, servername: nl.chick-team.ru, host: nl.chick-team.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: aLdyGbloIzzeClW7_SPWL0IZpcaUWsA7rlmbNieggWk, short-id: 0894e51863b5c395}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@Capoit`"
+      - "@Capoit"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@Capoit`"
+      - "@Capoit"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@Capoit`"
+      - "@Capoit"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Capoit`"
+      - "@Capoit"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Capoit`"
+      - "@Capoit"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Capoit`"
+      - "@Capoit"
   - name: دانلود منیجر 📥
     type: select
     proxies:

@@ -465,11 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: hamedvpns::🇷🇴, server: node12.fastdatastream.com, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 47388561-cf0c-4cfc-91f8-fdfd9fa3d756, servername: www.amazon.com, host: www.amazon.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: B5F8h8tpeZ-1ydiT0uFgdc30jJyw8H89Y8e-p_VV6yw, short-id: 7b}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@hamedvpns 🦦`", server: 172.66.44.97, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: /, headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: hamedvpns::🇵🇱, server: 54.37.136.194, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: a60bc8c8-1447-4f2c-a09c-c4293b257fd8, servername: www.cloudflare.com, host: www.cloudflare.com, path: /, reality-opts: {public-key: JldKt40jK4uwPfwxy5RNZSvMf11bHIEphKmPNEmlRmg, short-id: 6c3d30b55a969136}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: hamedvpns::🇳🇱, server: 199.232.78.159, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: be42674a-296a-43d8-bf04-b8314d65ff63, servername: ssl.fastly.com, network: ws, ws-opts: {path: "/TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER", headers: {Host: ssl.fastly.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: hamedvpns::🇺🇸, server: 169.40.42.184, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d65cc14c-f53f-4fe2-b262-97856601319c, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg, short-id: c39cc7310a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hamedvpns::🇱🇻, server: 89.36.161.222, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb, servername: vk.ru, host: vk.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: cGVu5j95KoeHBkWXveyTKolORbdvZm9g1T6yyo64ZBg, short-id: d26f4703cdd30f4e}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,33 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - hamedvpns::🇷🇴
-      - "@hamedvpns 🦦`"
-      - hamedvpns::🇵🇱
-      - hamedvpns::🇳🇱
-      - hamedvpns::🇺🇸
+      - hamedvpns::🇱🇻
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - hamedvpns::🇷🇴
-      - "@hamedvpns 🦦`"
-      - hamedvpns::🇵🇱
-      - hamedvpns::🇳🇱
-      - hamedvpns::🇺🇸
+      - hamedvpns::🇱🇻
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - hamedvpns::🇷🇴
-      - "@hamedvpns 🦦`"
-      - hamedvpns::🇵🇱
-      - hamedvpns::🇳🇱
-      - hamedvpns::🇺🇸
+      - hamedvpns::🇱🇻
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -528,33 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - hamedvpns::🇷🇴
-      - "@hamedvpns 🦦`"
-      - hamedvpns::🇵🇱
-      - hamedvpns::🇳🇱
-      - hamedvpns::🇺🇸
+      - hamedvpns::🇱🇻
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - hamedvpns::🇷🇴
-      - "@hamedvpns 🦦`"
-      - hamedvpns::🇵🇱
-      - hamedvpns::🇳🇱
-      - hamedvpns::🇺🇸
+      - hamedvpns::🇱🇻
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - hamedvpns::🇷🇴
-      - "@hamedvpns 🦦`"
-      - hamedvpns::🇵🇱
-      - hamedvpns::🇳🇱
-      - hamedvpns::🇺🇸
+      - hamedvpns::🇱🇻
   - name: دانلود منیجر 📥
     type: select
     proxies:

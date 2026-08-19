@@ -465,11 +465,19 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 🇳🇱 The Netherlands 🇳🇱, server: 193.29.139.151, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
-  - {name: 🇫🇷 France 🇫🇷, server: one-quail.rooster465.autos, port: 443, type: trojan, password: AE62539071, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇮🇪 Ireland 🇮🇪, server: 108.128.201.154, port: 443, type: trojan, password: FH72359861, sni: touching-turtle.rooster465.autos, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇩🇪 Germany 🇩🇪, server: usable-dogfish.rooster465.autos, port: 443, type: trojan, password: PQ05174892, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇵🇱 Poland 🇵🇱`, server: 141.101.120.73, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5d8eb33a-2166-4daf-88fe-4be5799c493b, servername: noisy-term-e657.airdrop2014aa5168.workers.dev, network: ws, ws-opts: {path: /, headers: {Host: noisy-term-e657.airdrop2014aa5168.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇳🇱 Netherlands 🇳🇱, server: 167.179.34.31, port: 55443, type: hysteria2, ports: 55443, password: 083417772bc618cd61f0cca23dd91680, sni: gorbachev-new-th.kvnfreetest.uk, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇺🇸 United States 🇺🇸, server: 198.98.53.130, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: eDfN7SODQceIOmIAbtJJtK, udp: true, tfo: false}
+  - {name: 🇵🇱 Poland 🇵🇱, server: enough-basilisk.rooster465.autos, port: 443, type: trojan, password: AE62539071, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇫🇷 France 🇫🇷`, server: tough-hermit.rooster465.autos, port: 443, type: trojan, password: AE62539071, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇩🇪 Germany 🇩🇪`, server: up-dinosaur.rooster465.autos, port: 443, type: trojan, password: AE62539071, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇳🇱 Netherlands 🇳🇱 2, server: alive-snapper.rooster465.autos, port: 443, type: trojan, password: FH72359861, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇫🇷 France 🇫🇷, server: nearby-cod.rooster465.autos, port: 443, type: trojan, password: FH72359861, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇵🇱 Poland 🇵🇱 2, server: 202.78.163.248, port: 443, type: trojan, password: ND91608427, sni: relaxed-gull.rooster465.autos, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇫🇷 France 🇫🇷 2, server: great-krill.rooster465.autos, port: 443, type: trojan, password: QV31589740, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇳🇱 Netherlands 🇳🇱 3, server: 51.158.206.8, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇫🇷 France 🇫🇷 3, server: bab-6.site, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b585dc5e-55bf-4a8b-913a-27c9ccac05c3, servername: bab-6.site, network: ws, ws-opts: {path: /vws/, headers: {Host: bab-6.site}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Lithuania 🇱🇹, server: 84.32.209.7, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f1c496bf-d2ab-45be-bc13-051d60d227b7, servername: dartsearch-cn.net, host: dartsearch-cn.net, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇬🇧 United Kingdom 🇬🇧, server: 129.121.95.159, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f6190ff2-864c-46cf-ac16-93908c069b75, servername: 129.121.95.159, network: ws, ws-opts: {path: /connect, headers: {Host: 129.121.95.159}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,33 +494,57 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 🇳🇱 The Netherlands 🇳🇱
+      - 🇳🇱 Netherlands 🇳🇱
+      - 🇺🇸 United States 🇺🇸
+      - 🇵🇱 Poland 🇵🇱
+      - 🇫🇷 France 🇫🇷`
+      - 🇩🇪 Germany 🇩🇪`
+      - 🇳🇱 Netherlands 🇳🇱 2
       - 🇫🇷 France 🇫🇷
-      - 🇮🇪 Ireland 🇮🇪
-      - 🇩🇪 Germany 🇩🇪
-      - 🇵🇱 Poland 🇵🇱`
+      - 🇵🇱 Poland 🇵🇱 2
+      - 🇫🇷 France 🇫🇷 2
+      - 🇳🇱 Netherlands 🇳🇱 3
+      - 🇫🇷 France 🇫🇷 3
+      - Lithuania 🇱🇹
+      - 🇬🇧 United Kingdom 🇬🇧
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 🇳🇱 The Netherlands 🇳🇱
+      - 🇳🇱 Netherlands 🇳🇱
+      - 🇺🇸 United States 🇺🇸
+      - 🇵🇱 Poland 🇵🇱
+      - 🇫🇷 France 🇫🇷`
+      - 🇩🇪 Germany 🇩🇪`
+      - 🇳🇱 Netherlands 🇳🇱 2
       - 🇫🇷 France 🇫🇷
-      - 🇮🇪 Ireland 🇮🇪
-      - 🇩🇪 Germany 🇩🇪
-      - 🇵🇱 Poland 🇵🇱`
+      - 🇵🇱 Poland 🇵🇱 2
+      - 🇫🇷 France 🇫🇷 2
+      - 🇳🇱 Netherlands 🇳🇱 3
+      - 🇫🇷 France 🇫🇷 3
+      - Lithuania 🇱🇹
+      - 🇬🇧 United Kingdom 🇬🇧
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 🇳🇱 The Netherlands 🇳🇱
+      - 🇳🇱 Netherlands 🇳🇱
+      - 🇺🇸 United States 🇺🇸
+      - 🇵🇱 Poland 🇵🇱
+      - 🇫🇷 France 🇫🇷`
+      - 🇩🇪 Germany 🇩🇪`
+      - 🇳🇱 Netherlands 🇳🇱 2
       - 🇫🇷 France 🇫🇷
-      - 🇮🇪 Ireland 🇮🇪
-      - 🇩🇪 Germany 🇩🇪
-      - 🇵🇱 Poland 🇵🇱`
+      - 🇵🇱 Poland 🇵🇱 2
+      - 🇫🇷 France 🇫🇷 2
+      - 🇳🇱 Netherlands 🇳🇱 3
+      - 🇫🇷 France 🇫🇷 3
+      - Lithuania 🇱🇹
+      - 🇬🇧 United Kingdom 🇬🇧
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -528,33 +560,57 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇳🇱 The Netherlands 🇳🇱
+      - 🇳🇱 Netherlands 🇳🇱
+      - 🇺🇸 United States 🇺🇸
+      - 🇵🇱 Poland 🇵🇱
+      - 🇫🇷 France 🇫🇷`
+      - 🇩🇪 Germany 🇩🇪`
+      - 🇳🇱 Netherlands 🇳🇱 2
       - 🇫🇷 France 🇫🇷
-      - 🇮🇪 Ireland 🇮🇪
-      - 🇩🇪 Germany 🇩🇪
-      - 🇵🇱 Poland 🇵🇱`
+      - 🇵🇱 Poland 🇵🇱 2
+      - 🇫🇷 France 🇫🇷 2
+      - 🇳🇱 Netherlands 🇳🇱 3
+      - 🇫🇷 France 🇫🇷 3
+      - Lithuania 🇱🇹
+      - 🇬🇧 United Kingdom 🇬🇧
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇳🇱 The Netherlands 🇳🇱
+      - 🇳🇱 Netherlands 🇳🇱
+      - 🇺🇸 United States 🇺🇸
+      - 🇵🇱 Poland 🇵🇱
+      - 🇫🇷 France 🇫🇷`
+      - 🇩🇪 Germany 🇩🇪`
+      - 🇳🇱 Netherlands 🇳🇱 2
       - 🇫🇷 France 🇫🇷
-      - 🇮🇪 Ireland 🇮🇪
-      - 🇩🇪 Germany 🇩🇪
-      - 🇵🇱 Poland 🇵🇱`
+      - 🇵🇱 Poland 🇵🇱 2
+      - 🇫🇷 France 🇫🇷 2
+      - 🇳🇱 Netherlands 🇳🇱 3
+      - 🇫🇷 France 🇫🇷 3
+      - Lithuania 🇱🇹
+      - 🇬🇧 United Kingdom 🇬🇧
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇳🇱 The Netherlands 🇳🇱
+      - 🇳🇱 Netherlands 🇳🇱
+      - 🇺🇸 United States 🇺🇸
+      - 🇵🇱 Poland 🇵🇱
+      - 🇫🇷 France 🇫🇷`
+      - 🇩🇪 Germany 🇩🇪`
+      - 🇳🇱 Netherlands 🇳🇱 2
       - 🇫🇷 France 🇫🇷
-      - 🇮🇪 Ireland 🇮🇪
-      - 🇩🇪 Germany 🇩🇪
-      - 🇵🇱 Poland 🇵🇱`
+      - 🇵🇱 Poland 🇵🇱 2
+      - 🇫🇷 France 🇫🇷 2
+      - 🇳🇱 Netherlands 🇳🇱 3
+      - 🇫🇷 France 🇫🇷 3
+      - Lithuania 🇱🇹
+      - 🇬🇧 United Kingdom 🇬🇧
   - name: دانلود منیجر 📥
     type: select
     proxies:

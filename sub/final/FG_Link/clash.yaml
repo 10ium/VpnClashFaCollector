@@ -465,12 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 🇯🇵 JP-54.249.34.120-0264, server: 54.249.34.120, port: 443, type: trojan, password: ND91608427, sni: social-mutt.rooster465.autos, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 🇯🇵 JP-52.196.139.154-2279, server: 52.196.139.154, port: 443, type: trojan, password: PQ05174892, sni: sterling-vervet.rooster465.autos, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@FG_Link", server: 43.224.150.71, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 0a31984d-b06f-4e79-b255-0dc64ee5d419, servername: www.bing.com, host: www.bing.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: jkGStCLgX1e3kQ31H1_ycSuYm_zSNQ4qVafasU7bkwU, short-id: 4c0be5bf40e9f5ce}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: IT_604_@Surfboardv2ray, server: 57.131.32.191, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 1e280316-0408-47c4-b058-05b8f1f17f02, network: ws, ws-opts: {path: /vless/, headers: {Host: OV-Italy1.09vpn.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@FG_Link 2", server: azerbaijan.zelnora.ir, port: 64584, type: vless, tls: true, packet-encoding: xudp, uuid: a8307b5d-2d9e-4d34-912d-5b5dd8340082, host: azerbaijan.zelnora.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: parsajo⁴, server: us3.levikogjgfdd.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d65cc14c-f53f-4fe2-b262-97856601319c, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg, short-id: c39cc7310a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇺🇸 United+States+->+🇩🇪Germany+⚡@DeamNet_Proxy, server: 170.114.45.239, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 03707fb7-0990-440f-88f6-b0e0f7242a38, servername: de-new-1.ariyuz.org, network: ws, ws-opts: {path: /, headers: {Host: de-new-1.ariyuz.org}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,36 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 🇯🇵 JP-54.249.34.120-0264
       - 🇯🇵 JP-52.196.139.154-2279
-      - "@FG_Link"
-      - IT_604_@Surfboardv2ray
-      - "@FG_Link 2"
-      - parsajo⁴
+      - 🇺🇸 United+States+->+🇩🇪Germany+⚡@DeamNet_Proxy
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 🇯🇵 JP-54.249.34.120-0264
       - 🇯🇵 JP-52.196.139.154-2279
-      - "@FG_Link"
-      - IT_604_@Surfboardv2ray
-      - "@FG_Link 2"
-      - parsajo⁴
+      - 🇺🇸 United+States+->+🇩🇪Germany+⚡@DeamNet_Proxy
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 🇯🇵 JP-54.249.34.120-0264
       - 🇯🇵 JP-52.196.139.154-2279
-      - "@FG_Link"
-      - IT_604_@Surfboardv2ray
-      - "@FG_Link 2"
-      - parsajo⁴
+      - 🇺🇸 United+States+->+🇩🇪Germany+⚡@DeamNet_Proxy
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -532,36 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇯🇵 JP-54.249.34.120-0264
       - 🇯🇵 JP-52.196.139.154-2279
-      - "@FG_Link"
-      - IT_604_@Surfboardv2ray
-      - "@FG_Link 2"
-      - parsajo⁴
+      - 🇺🇸 United+States+->+🇩🇪Germany+⚡@DeamNet_Proxy
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇯🇵 JP-54.249.34.120-0264
       - 🇯🇵 JP-52.196.139.154-2279
-      - "@FG_Link"
-      - IT_604_@Surfboardv2ray
-      - "@FG_Link 2"
-      - parsajo⁴
+      - 🇺🇸 United+States+->+🇩🇪Germany+⚡@DeamNet_Proxy
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇯🇵 JP-54.249.34.120-0264
       - 🇯🇵 JP-52.196.139.154-2279
-      - "@FG_Link"
-      - IT_604_@Surfboardv2ray
-      - "@FG_Link 2"
-      - parsajo⁴
+      - 🇺🇸 United+States+->+🇩🇪Germany+⚡@DeamNet_Proxy
   - name: دانلود منیجر 📥
     type: select
     proxies:

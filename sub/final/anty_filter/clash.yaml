@@ -465,10 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@vpnbaz ⭐", server: 20.166.49.191, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: n4lfLGpalfuK0Uxh, udp: true, tfo: false}
+  - {name: "@vpnbaz ⭐", server: 15.204.247.124, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true, tfo: false}
   - {name: "@vpnbaz ☂️", server: 188.114.97.7, port: 443, type: trojan, password: humanity, sni: www.ignitelimit.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.ignitelimit.com}}, udp: true, tfo: false}
-  - {name: "@vpnbaz 🍋‍🟩", server: rusl2-e.ya-proxy.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8b706aff-ca60-4632-9658-aeb5c0f48561, servername: eda.x5.ru, host: eda.x5.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: EBISh6QAVskJ_nvet-Qio9jS2yqxe9de6GMScYlbjhI, short-id: 226509f017e4c36d}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz 🛸", server: 188.114.99.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b, servername: hhlfy.twiladaphne.ndjp.net, network: ws, ws-opts: {path: /sg-melbi, headers: {Host: hhlfy.twiladaphne.ndjp.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz 🛸", server: rusl2-e.ya-proxy.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8b706aff-ca60-4632-9658-aeb5c0f48561, servername: eda.x5.ru, host: eda.x5.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: EBISh6QAVskJ_nvet-Qio9jS2yqxe9de6GMScYlbjhI, short-id: 226509f017e4c36d}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz 🍭", server: 188.114.99.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b, servername: hhlfy.twiladaphne.ndjp.net, network: ws, ws-opts: {path: /sg-melbi, headers: {Host: hhlfy.twiladaphne.ndjp.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz 🍋‍🟩", server: 188.114.97.4, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: f798a2c4-c51b-409d-b349-ca8455b36796, servername: chopin.adaspoloandco.com, network: ws, ws-opts: {path: /download.php, headers: {Host: chopin.adaspoloandco.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,8 +488,9 @@ proxy-groups:
     proxies:
       - "@vpnbaz ⭐"
       - "@vpnbaz ☂️"
-      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz 🛸"
+      - "@vpnbaz 🍭"
+      - "@vpnbaz 🍋‍🟩"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -497,8 +499,9 @@ proxy-groups:
     proxies:
       - "@vpnbaz ⭐"
       - "@vpnbaz ☂️"
-      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz 🛸"
+      - "@vpnbaz 🍭"
+      - "@vpnbaz 🍋‍🟩"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -507,8 +510,9 @@ proxy-groups:
     proxies:
       - "@vpnbaz ⭐"
       - "@vpnbaz ☂️"
-      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz 🛸"
+      - "@vpnbaz 🍭"
+      - "@vpnbaz 🍋‍🟩"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -526,8 +530,9 @@ proxy-groups:
     proxies:
       - "@vpnbaz ⭐"
       - "@vpnbaz ☂️"
-      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz 🛸"
+      - "@vpnbaz 🍭"
+      - "@vpnbaz 🍋‍🟩"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -536,8 +541,9 @@ proxy-groups:
     proxies:
       - "@vpnbaz ⭐"
       - "@vpnbaz ☂️"
-      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz 🛸"
+      - "@vpnbaz 🍭"
+      - "@vpnbaz 🍋‍🟩"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -546,8 +552,9 @@ proxy-groups:
     proxies:
       - "@vpnbaz ⭐"
       - "@vpnbaz ☂️"
-      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz 🛸"
+      - "@vpnbaz 🍭"
+      - "@vpnbaz 🍋‍🟩"
   - name: دانلود منیجر 📥
     type: select
     proxies:
