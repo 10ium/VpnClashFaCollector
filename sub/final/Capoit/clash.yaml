@@ -465,7 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Capoit", server: 185.21.15.245, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fe0138b5-ca60-4a67-91aa-b5a49266eeb5, servername: nl.chick-team.ru, host: nl.chick-team.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: aLdyGbloIzzeClW7_SPWL0IZpcaUWsA7rlmbNieggWk, short-id: 0894e51863b5c395}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit`", server: 172.66.44.97, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: /sg-melbi, headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit", server: 172.66.44.97, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: "?ed=2048", headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit 2", server: 129.121.95.159, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f6190ff2-864c-46cf-ac16-93908c069b75, servername: 129.121.95.159, network: ws, ws-opts: {path: /connect, headers: {Host: 129.121.95.159}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +484,27 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - "@Capoit`"
       - "@Capoit"
+      - "@Capoit 2"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
+      - "@Capoit`"
       - "@Capoit"
+      - "@Capoit 2"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
+      - "@Capoit`"
       - "@Capoit"
+      - "@Capoit 2"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +520,27 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@Capoit`"
       - "@Capoit"
+      - "@Capoit 2"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@Capoit`"
       - "@Capoit"
+      - "@Capoit 2"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@Capoit`"
       - "@Capoit"
+      - "@Capoit 2"
   - name: دانلود منیجر 📥
     type: select
     proxies:

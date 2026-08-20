@@ -5,46 +5,60 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@Capoit", server: 185.21.15.245, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fe0138b5-ca60-4a67-91aa-b5a49266eeb5, servername: nl.chick-team.ru, host: nl.chick-team.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: aLdyGbloIzzeClW7_SPWL0IZpcaUWsA7rlmbNieggWk, short-id: 0894e51863b5c395}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit`", server: 172.66.44.97, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: /sg-melbi, headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit", server: 172.66.44.97, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: "?ed=2048", headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit 2", server: 129.121.95.159, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f6190ff2-864c-46cf-ac16-93908c069b75, servername: 129.121.95.159, network: ws, ws-opts: {path: /connect, headers: {Host: 129.121.95.159}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - "@Capoit`"
       - "@Capoit"
+      - "@Capoit 2"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - "@Capoit`"
       - "@Capoit"
+      - "@Capoit 2"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - "@Capoit`"
       - "@Capoit"
+      - "@Capoit 2"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - "@Capoit`"
       - "@Capoit"
+      - "@Capoit 2"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - "@Capoit`"
       - "@Capoit"
+      - "@Capoit 2"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - "@Capoit`"
       - "@Capoit"
+      - "@Capoit 2"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +86,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - "@Capoit`"
       - "@Capoit"
+      - "@Capoit 2"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
