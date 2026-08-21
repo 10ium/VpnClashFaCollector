@@ -465,13 +465,10 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: Freenet_vt`, server: 202.37.33.80, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5aafc2be-9348-4dec-b896-f4a91253bbca, servername: support.zoom.us.yxls.eu.cc, network: ws, ws-opts: {path: "/id-tksi?ed=2048", headers: {Host: support.zoom.us.yxls.eu.cc}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Freenet_vt, server: 202.37.33.80, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5aafc2be-9348-4dec-b896-f4a91253bbca, servername: support.zoom.us.yxls.eu.cc, network: ws, ws-opts: {path: "/id-tksi?ed=2048_/@sil3nt_network", headers: {Host: support.zoom.us.yxls.eu.cc}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Freenet_vt 2, server: 104.18.37.228, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: /sg-melbi, headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Freenet_vt 3, server: 104.18.37.228, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: "musiclovers85?ed=512", headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Freenet_vt 4, server: 104.18.37.228, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: "musiclovers85?ed", headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Freenet_vt 5, server: 172.66.44.97, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: "/sg?ed", headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Freenet_vt 6, server: 172.66.44.97, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: /sg-melbi, headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ️ freenet_vt, server: 104.18.37.228, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: "/?TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=512", headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ⚡ freenet-vt, server: 172.66.44.97, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: "/sg-melbi#TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=512", headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: freenet_vt`, server: 172.66.44.97, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: /, headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Freenet_vt, server: 208.103.161.32, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: /sg-melbi_/, headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -488,39 +485,30 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - Freenet_vt`
+      - ️ freenet_vt
+      - ⚡ freenet-vt
+      - freenet_vt`
       - Freenet_vt
-      - Freenet_vt 2
-      - Freenet_vt 3
-      - Freenet_vt 4
-      - Freenet_vt 5
-      - Freenet_vt 6
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - Freenet_vt`
+      - ️ freenet_vt
+      - ⚡ freenet-vt
+      - freenet_vt`
       - Freenet_vt
-      - Freenet_vt 2
-      - Freenet_vt 3
-      - Freenet_vt 4
-      - Freenet_vt 5
-      - Freenet_vt 6
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - Freenet_vt`
+      - ️ freenet_vt
+      - ⚡ freenet-vt
+      - freenet_vt`
       - Freenet_vt
-      - Freenet_vt 2
-      - Freenet_vt 3
-      - Freenet_vt 4
-      - Freenet_vt 5
-      - Freenet_vt 6
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -536,39 +524,30 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Freenet_vt`
+      - ️ freenet_vt
+      - ⚡ freenet-vt
+      - freenet_vt`
       - Freenet_vt
-      - Freenet_vt 2
-      - Freenet_vt 3
-      - Freenet_vt 4
-      - Freenet_vt 5
-      - Freenet_vt 6
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Freenet_vt`
+      - ️ freenet_vt
+      - ⚡ freenet-vt
+      - freenet_vt`
       - Freenet_vt
-      - Freenet_vt 2
-      - Freenet_vt 3
-      - Freenet_vt 4
-      - Freenet_vt 5
-      - Freenet_vt 6
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Freenet_vt`
+      - ️ freenet_vt
+      - ⚡ freenet-vt
+      - freenet_vt`
       - Freenet_vt
-      - Freenet_vt 2
-      - Freenet_vt 3
-      - Freenet_vt 4
-      - Freenet_vt 5
-      - Freenet_vt 6
   - name: دانلود منیجر 📥
     type: select
     proxies:

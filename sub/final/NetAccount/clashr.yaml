@@ -5,10 +5,11 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@NetAccount-UNK`", server: 93.152.223.98, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 0b9bcbc1-b289-4a64-86fa-a5b731b65384, servername: web.max.ru, host: web.max.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: QocXHwad0mV7WA5jSAcqDac3uuVBEp1WF775-CilniE, short-id: 45ba18f429ad1f28}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇳🇱 @NetAccount-NL`, server: 176.65.151.64, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4411e63c-9d5f-403f-b8b4-89ea29fbde2a, servername: home.amazon.com, host: home.amazon.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: vrCKcD_CfJ3HnoBh8WVGXXPxhCyjXjSVnFDfi14w53s, short-id: 71c764}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇮🇳 @NetAccount-IN`, server: 5.253.30.99, port: 40443, type: vless, tls: true, packet-encoding: xudp, uuid: 511c1563-2cb6-4064-abc6-a59ee49818a8, servername: deepl.com, host: deepl.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0, short-id: 88b6}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@NetAccount-UNK` 2", server: 169.40.42.15, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d65cc14c-f53f-4fe2-b262-97856601319c, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg, short-id: c39cc7310a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@NetAccount-UNK`", server: neth6.lckdwn.ru, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 14da77da-4fb3-4e49-ac4f-7881ea19b267, network: ws, ws-opts: {path: /, headers: {Host: neth6.lckdwn.ru}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇬🇧 @NetAccount-GB`, server: 169.197.113.179, port: 20190, type: vless, tls: true, packet-encoding: xudp, uuid: ad4dd89a-2e4b-4f33-bb96-7e9c4eb85d0b, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@NetAccount-UNK` 2", server: 45.90.32.132, port: 2200, type: vless, tls: true, packet-encoding: xudp, uuid: aef0e934-09d7-4b8f-b3bc-de78d2eec928, network: ws, ws-opts: {path: /v1, headers: {Host: rzd.ru}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@NetAccount-UNK` 3", server: 178.162.253.64, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: bb05f9d7-a3d1-4b81-a790-f6dba0301907, servername: de.servers.gracevpnbuy.com, host: de.servers.gracevpnbuy.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: i00_tpIO0Oe2TV2lxm2BLm6QUzzkncyJtauMa7Rn500, short-id: b91a73752053b039}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇩🇪 @NetAccount-DE`, server: 104.21.7.43, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: f58a9d78-d4cc-c8bc-03d0-2810846a33d1, servername: hossein.shhrsbzhsyn.workers.dev, network: ws, ws-opts: {path: /sync, headers: {Host: hossein.shhrsbzhsyn.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -16,9 +17,10 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - "@NetAccount-UNK`"
-      - 🇳🇱 @NetAccount-NL`
-      - 🇮🇳 @NetAccount-IN`
+      - 🇬🇧 @NetAccount-GB`
       - "@NetAccount-UNK` 2"
+      - "@NetAccount-UNK` 3"
+      - 🇩🇪 @NetAccount-DE`
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -26,9 +28,10 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@NetAccount-UNK`"
-      - 🇳🇱 @NetAccount-NL`
-      - 🇮🇳 @NetAccount-IN`
+      - 🇬🇧 @NetAccount-GB`
       - "@NetAccount-UNK` 2"
+      - "@NetAccount-UNK` 3"
+      - 🇩🇪 @NetAccount-DE`
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -36,36 +39,40 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - "@NetAccount-UNK`"
-      - 🇳🇱 @NetAccount-NL`
-      - 🇮🇳 @NetAccount-IN`
+      - 🇬🇧 @NetAccount-GB`
       - "@NetAccount-UNK` 2"
+      - "@NetAccount-UNK` 3"
+      - 🇩🇪 @NetAccount-DE`
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@NetAccount-UNK`"
-      - 🇳🇱 @NetAccount-NL`
-      - 🇮🇳 @NetAccount-IN`
+      - 🇬🇧 @NetAccount-GB`
       - "@NetAccount-UNK` 2"
+      - "@NetAccount-UNK` 3"
+      - 🇩🇪 @NetAccount-DE`
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - "@NetAccount-UNK`"
-      - 🇳🇱 @NetAccount-NL`
-      - 🇮🇳 @NetAccount-IN`
+      - 🇬🇧 @NetAccount-GB`
       - "@NetAccount-UNK` 2"
+      - "@NetAccount-UNK` 3"
+      - 🇩🇪 @NetAccount-DE`
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@NetAccount-UNK`"
-      - 🇳🇱 @NetAccount-NL`
-      - 🇮🇳 @NetAccount-IN`
+      - 🇬🇧 @NetAccount-GB`
       - "@NetAccount-UNK` 2"
+      - "@NetAccount-UNK` 3"
+      - 🇩🇪 @NetAccount-DE`
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -94,9 +101,10 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - "@NetAccount-UNK`"
-      - 🇳🇱 @NetAccount-NL`
-      - 🇮🇳 @NetAccount-IN`
+      - 🇬🇧 @NetAccount-GB`
       - "@NetAccount-UNK` 2"
+      - "@NetAccount-UNK` 3"
+      - 🇩🇪 @NetAccount-DE`
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
