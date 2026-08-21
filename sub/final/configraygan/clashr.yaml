@@ -5,396 +5,529 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "- @configraygan-32", server: 72.35.246.31, port: 1244, type: vless, tls: true, packet-encoding: xudp, uuid: 2d96d4d6-a276-4ab5-9f20-8dc5cbf6e902, servername: axisvpn.ru, host: axisvpn.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: gHG_cbbi-OJKY2tBQTqz1QryfmmRZEQ7BQgymimukkQ, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-15", server: 2.27.40.190, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 682102a3-9731-4562-ad28-04dc62bc8dee, servername: www.amd.com, host: www.amd.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: jgf0wWpgkEJZzu9wu45Ms33SNZpibtx507rpvzfz3mQ, short-id: 635a76c25a4b1820}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-57", server: 2.27.40.190, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 682102a3-9731-4562-ad28-04dc62bc8dee, servername: www.amd.com, host: www.amd.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: jgf0wWpgkEJZzu9wu45Ms33SNZpibtx507rpvzfz3mQ, short-id: 635a76c25a4b1820}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-58", server: 103.126.50.203, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 76f6b7fe-5de8-4637-87a0-6ddd33d67b3e, servername: ro.getvlessvpn.com, host: ro.getvlessvpn.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: xp7g5asMyVx4aI7vEwfZZPrpd57izUvnNzAOpBs4mh0, short-id: b9f8f9772217538f}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-62", server: 103.126.50.203, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 76f6b7fe-5de8-4637-87a0-6ddd33d67b3e, servername: ro.getvlessvpn.com, host: ro.getvlessvpn.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: xp7g5asMyVx4aI7vEwfZZPrpd57izUvnNzAOpBs4mh0, short-id: b9f8f9772217538f}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan_29, server: 194.61.121.93, port: 7538, type: ss, cipher: chacha20-ietf-poly1305, password: U9YAoqBgg5VyGBc6vQv1sN, udp: true, tfo: false}
+  - {name: configraygan_17, server: 188.116.23.244, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: eVC634QvVk5l, udp: true, tfo: false}
+  - {name: configraygan_18, server: 84.247.155.196, port: 80, type: ss, cipher: aes-256-gcm, password: 3eOFeNssde7PYYMv, udp: true, tfo: false}
+  - {name: configraygan_26, server: 194.233.94.119, port: 80, type: ss, cipher: aes-256-gcm, password: 5QCeIKUZUEp4mR9Z, udp: true, tfo: false}
+  - {name: configraygan_27, server: 154.12.242.150, port: 80, type: ss, cipher: aes-256-gcm, password: Hi9wk14VntzGq7kq, udp: true, tfo: false}
+  - {name: configraygan_28, server: 154.12.242.150, port: 80, type: ss, cipher: aes-256-gcm, password: Hi9wk14VntzGq7kq, udp: true, tfo: false}
+  - {name: configraygan_12, server: 45.207.207.25, port: 443, type: ss, cipher: aes-256-gcm, password: gj1+XKulKV0nmw6IThckOkkJh5DSM7+C, udp: true, tfo: false}
+  - {name: "- @configraygan-68", server: 194.87.47.162, port: 10901, type: ss, cipher: aes-256-gcm, password: d1fa2f4b98a38bc8, udp: true, tfo: false}
+  - {name: configraygan_2, server: 140.248.185.253, port: 443, type: trojan, password: MiTiVPN, sni: ssl.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/s-w@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN, headers: {Host: ssl.fastly.com}}, udp: true, tfo: false}
+  - {name: "- @configraygan-65", server: 188.114.97.7, port: 443, type: trojan, password: humanity, sni: www.ignitelimit.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.ignitelimit.com}}, udp: true, tfo: false}
+  - {name: "- @configraygan-70", server: 188.114.97.7, port: 443, type: trojan, password: humanity, sni: www.ignitelimit.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.ignitelimit.com}}, udp: true, tfo: false}
+  - {name: "- @configraygan-49", server: 89.19.223.136, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 22419260-5475-49d8-a29c-01905c54d1b8, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-59", server: 72.35.246.31, port: 1244, type: vless, tls: true, packet-encoding: xudp, uuid: 2d96d4d6-a276-4ab5-9f20-8dc5cbf6e902, servername: axisvpn.ru, host: axisvpn.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: gHG_cbbi-OJKY2tBQTqz1QryfmmRZEQ7BQgymimukkQ, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan_13, server: 31.76.91.138, port: 2087, type: vless, tls: true, packet-encoding: xudp, uuid: 309b0ce3-09a8-4883-bfe4-bd56e215be44, servername: ads.x5.ru, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: grpc}, reality-opts: {public-key: JfuItzJ81sJehx1PbxyliWSJvuBMKoa9ahNgPO3R7R4, short-id: c226283c4de5b1ad}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan_24, server: 85.155.226.140, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 39c42b0a-b823-4c93-bb99-74b4183e518d, servername: getsavesafe.net, host: getsavesafe.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 5Z6PwoPSNBLPIsX8lZtHM7-Y-psMMR1vz5Pit0EVISs, short-id: 82f5d3a1e9c0b661}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan_11, server: 45.74.159.200, port: 10131, type: vless, tls: true, packet-encoding: xudp, uuid: 745bac6d-e48d-4556-aa77-09b68743a9ce, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-54", server: 103.126.50.203, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 76f6b7fe-5de8-4637-87a0-6ddd33d67b3e, servername: ro.getvlessvpn.com, host: ro.getvlessvpn.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: xp7g5asMyVx4aI7vEwfZZPrpd57izUvnNzAOpBs4mh0, short-id: b9f8f9772217538f}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "- @configraygan-69", server: 103.126.50.203, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 76f6b7fe-5de8-4637-87a0-6ddd33d67b3e, servername: ro.getvlessvpn.com, host: ro.getvlessvpn.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: xp7g5asMyVx4aI7vEwfZZPrpd57izUvnNzAOpBs4mh0, short-id: b9f8f9772217538f}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-72", server: 80.66.78.227, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 76f6b7fe-5de8-4637-87a0-6ddd33d67b3e, servername: cdn-se.alohaapp.uk, host: cdn-se.alohaapp.uk, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: kRwY2AAdT6SH4FKFQb-UhnJbyddqbdluKy1xaYPatD8, short-id: b9f8f9772217538f}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-65", server: 80.66.78.227, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 76f6b7fe-5de8-4637-87a0-6ddd33d67b3e, servername: cdn-se.alohaapp.uk, host: cdn-se.alohaapp.uk, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: kRwY2AAdT6SH4FKFQb-UhnJbyddqbdluKy1xaYPatD8, short-id: b9f8f9772217538f}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-1", server: 185.147.26.175, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 7d2bac5e-6ff9-45c9-844e-6bfc5a384a42, servername: yt.orpheous.ru, host: yt.orpheous.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: lHCkAu_DOVFtE-iL2JGrPt44QeTCFijXuRfuGaSni3Q, short-id: 9e4eced6e98ed4d4}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-5", server: 31.76.119.117, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 7d2bac5e-6ff9-45c9-844e-6bfc5a384a42, servername: de.orpheous.ru, host: de.orpheous.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: lHCkAu_DOVFtE-iL2JGrPt44QeTCFijXuRfuGaSni3Q, short-id: 9e4eced6e98ed4d4}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-30", server: 31.76.119.117, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 7d2bac5e-6ff9-45c9-844e-6bfc5a384a42, servername: de.orpheous.ru, host: de.orpheous.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: lHCkAu_DOVFtE-iL2JGrPt44QeTCFijXuRfuGaSni3Q, short-id: 9e4eced6e98ed4d4}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-7", server: 31.76.119.117, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 7d2bac5e-6ff9-45c9-844e-6bfc5a384a42, servername: de.orpheous.ru, host: de.orpheous.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: lHCkAu_DOVFtE-iL2JGrPt44QeTCFijXuRfuGaSni3Q, short-id: 9e4eced6e98ed4d4}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-39", server: 31.76.119.117, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 7d2bac5e-6ff9-45c9-844e-6bfc5a384a42, servername: de.orpheous.ru, host: de.orpheous.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: lHCkAu_DOVFtE-iL2JGrPt44QeTCFijXuRfuGaSni3Q, short-id: 9e4eced6e98ed4d4}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-14", server: 31.76.119.117, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 7d2bac5e-6ff9-45c9-844e-6bfc5a384a42, servername: de.orpheous.ru, host: de.orpheous.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: lHCkAu_DOVFtE-iL2JGrPt44QeTCFijXuRfuGaSni3Q, short-id: 9e4eced6e98ed4d4}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-70", server: 193.34.213.38, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 7eb234e9-d47e-4dfe-bff3-a0d41a0c4e1d, servername: app.prostocalc.com, host: app.prostocalc.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: c_9pNYSprG0wT-8Dz68poWfpFCktGVKIrX_EVG3J4wk, short-id: f49814084db8f3a6}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-56", server: 193.34.213.38, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 7eb234e9-d47e-4dfe-bff3-a0d41a0c4e1d, servername: app.prostocalc.com, host: app.prostocalc.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: c_9pNYSprG0wT-8Dz68poWfpFCktGVKIrX_EVG3J4wk, short-id: f49814084db8f3a6}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-73", server: 193.34.213.38, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 7eb234e9-d47e-4dfe-bff3-a0d41a0c4e1d, servername: app.prostocalc.com, host: app.prostocalc.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: c_9pNYSprG0wT-8Dz68poWfpFCktGVKIrX_EVG3J4wk, short-id: f49814084db8f3a6}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-66", server: 193.34.213.38, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 7eb234e9-d47e-4dfe-bff3-a0d41a0c4e1d, servername: app.prostocalc.com, host: app.prostocalc.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: c_9pNYSprG0wT-8Dz68poWfpFCktGVKIrX_EVG3J4wk, short-id: f49814084db8f3a6}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-60", server: 193.34.213.38, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 7eb234e9-d47e-4dfe-bff3-a0d41a0c4e1d, servername: app.prostocalc.com, host: app.prostocalc.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: c_9pNYSprG0wT-8Dz68poWfpFCktGVKIrX_EVG3J4wk, short-id: f49814084db8f3a6}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-21", server: 104.16.79.73, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: "/?TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=512", headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-2", server: 104.16.79.73, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: "musiclovers85?ed=512", headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-24", server: 104.16.79.73, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: /, headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-9", server: 172.66.44.97, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: "/?TELEGRAM-MARAMBASHI_MARAMBASHI?ed=512", headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-12", server: 172.66.44.97, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: "/sg-melbi#TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=2048", headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-38", server: 172.66.44.97, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: "/sg-melbi#TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=512", headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-16", server: 172.66.44.97, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: /sg-melbi/=512, headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-25", server: 172.66.44.97, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: "?ed=512", headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-3", server: 172.66.44.97, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: "musiclovers85_musiclovers85?ed=512", headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-41", server: rusl2-e.ya-proxy.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8b706aff-ca60-4632-9658-aeb5c0f48561, servername: eda.x5.ru, host: eda.x5.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: EBISh6QAVskJ_nvet-Qio9jS2yqxe9de6GMScYlbjhI, short-id: 226509f017e4c36d}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-36", server: 5.75.207.94, port: 7190, type: vless, tls: true, packet-encoding: xudp, uuid: 8ce90db0-2b57-41eb-83f2-f65f68c6409b, servername: pypi.org, host: pypi.org, path: /, reality-opts: {public-key: mPyGyFIPaIJskk9IhHv9rkv7amf77CYUV0KVeqDsPU8, short-id: 7398e0c72f7d5c0e}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-11", server: 195.63.131.86, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 9aff0732-7ce4-4b34-ba20-e67c6df64fdd, servername: v942900.hosted-by-vdsina.com, host: v942900.hosted-by-vdsina.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 2FhyzA7SjIl6unScdJt9TfwTDfv6t1dDfy-FbhiIqRY, short-id: 7cecc9897e63223d}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-10", server: 195.63.131.86, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 9aff0732-7ce4-4b34-ba20-e67c6df64fdd, servername: v942900.hosted-by-vdsina.com, host: v942900.hosted-by-vdsina.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 2FhyzA7SjIl6unScdJt9TfwTDfv6t1dDfy-FbhiIqRY, short-id: 7cecc9897e63223d}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-19", server: 195.63.131.86, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 9aff0732-7ce4-4b34-ba20-e67c6df64fdd, servername: v942900.hosted-by-vdsina.com, host: v942900.hosted-by-vdsina.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 2FhyzA7SjIl6unScdJt9TfwTDfv6t1dDfy-FbhiIqRY, short-id: 7cecc9897e63223d}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-37", server: 217.69.167.135, port: 15392, type: vless, tls: true, packet-encoding: xudp, uuid: 9e998501-eaae-4d7e-bbe5-6cecfaef8334, servername: google.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: grpc}, reality-opts: {public-key: O8yFUnhj9NOtJ2eUVQTwrGk8HrkHq94QAO090azV428, short-id: 6a326909}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-35", server: 217.69.167.135, port: 15392, type: vless, tls: true, packet-encoding: xudp, uuid: 9e998501-eaae-4d7e-bbe5-6cecfaef8334, servername: google.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: grpc}, reality-opts: {public-key: O8yFUnhj9NOtJ2eUVQTwrGk8HrkHq94QAO090azV428, short-id: 6a326909}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-13", server: 103.109.234.129, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb, servername: dep.opngtr.nl, host: dep.opngtr.nl, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: gA6-Fj5hl4x-HOtbCcYqD99qsml4ActHRmw-VTkFU14, short-id: 7d6b6b7a606c21cf}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-23", server: 103.109.234.129, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b5ca5ab3-8cbc-4ac3-89da-9cd360589ecb, servername: dep.opngtr.nl, host: dep.opngtr.nl, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: gA6-Fj5hl4x-HOtbCcYqD99qsml4ActHRmw-VTkFU14, short-id: 7d6b6b7a606c21cf}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-20", server: 213.193.255.206, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: be3960db-f339-0065-be7b-c1a130601141, servername: gb.cdn.cachefleet.com, host: gb.cdn.cachefleet.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-31", server: 213.193.255.206, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: be3960db-f339-0065-be7b-c1a130601141, servername: gb.cdn.cachefleet.com, host: gb.cdn.cachefleet.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-59", server: 213.193.255.206, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: be3960db-f339-0065-be7b-c1a130601141, servername: gb.cdn.cachefleet.com, host: gb.cdn.cachefleet.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-66", server: 103.126.50.203, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 76f6b7fe-5de8-4637-87a0-6ddd33d67b3e, servername: ro.getvlessvpn.com, host: ro.getvlessvpn.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: xp7g5asMyVx4aI7vEwfZZPrpd57izUvnNzAOpBs4mh0, short-id: b9f8f9772217538f}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-67", server: 103.126.50.203, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 76f6b7fe-5de8-4637-87a0-6ddd33d67b3e, servername: ro.getvlessvpn.com, host: ro.getvlessvpn.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: xp7g5asMyVx4aI7vEwfZZPrpd57izUvnNzAOpBs4mh0, short-id: b9f8f9772217538f}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-76", server: 103.126.50.203, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 76f6b7fe-5de8-4637-87a0-6ddd33d67b3e, servername: ro.getvlessvpn.com, host: ro.getvlessvpn.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: xp7g5asMyVx4aI7vEwfZZPrpd57izUvnNzAOpBs4mh0, short-id: b9f8f9772217538f}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan_22, server: 80.66.78.227, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 76f6b7fe-5de8-4637-87a0-6ddd33d67b3e, servername: cdn-se.alohaapp.uk, host: cdn-se.alohaapp.uk, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: kRwY2AAdT6SH4FKFQb-UhnJbyddqbdluKy1xaYPatD8, short-id: b9f8f9772217538f}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-5", server: 104.16.79.73, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: "/?TELEGRAM-MARAMBASHI_MARAMBASHI?ed=512", headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-11", server: 104.16.79.73, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: "/?TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=512", headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-13", server: 104.16.79.73, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: "musiclovers85?ed=512", headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-52", server: 104.16.79.73, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: /, headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-9", server: 104.18.37.228, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: "/?TELEGRAM-MARAMBASHI_MARAMBASHI?ed=512", headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-4", server: 104.18.37.228, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: "/?TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=512", headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan_7, server: 159.112.235.52, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: "/?TELEGRAM-MARAMBASHI_MARAMBASHI?ed=512", headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan_5, server: 172.66.44.97, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: "/?TELEGRAM-MARAMBASHI_MARAMBASHI?ed=512", headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-3", server: 172.66.44.97, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: "/sg-melbi#TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=512", headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-2", server: 172.66.44.97, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: "?ed=2048", headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-6", server: 172.66.44.97, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: "musiclovers85_musiclovers85?ed=512", headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-1", server: 172.66.44.97, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: /, headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-12", server: 217.69.167.135, port: 15392, type: vless, tls: true, packet-encoding: xudp, uuid: 9e998501-eaae-4d7e-bbe5-6cecfaef8334, servername: google.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: grpc}, reality-opts: {public-key: O8yFUnhj9NOtJ2eUVQTwrGk8HrkHq94QAO090azV428, short-id: 6a326909}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-42", server: 217.69.167.135, port: 15392, type: vless, tls: true, packet-encoding: xudp, uuid: 9e998501-eaae-4d7e-bbe5-6cecfaef8334, servername: google.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: grpc}, reality-opts: {public-key: O8yFUnhj9NOtJ2eUVQTwrGk8HrkHq94QAO090azV428, short-id: 6a326909}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-46", server: 217.69.167.135, port: 15392, type: vless, tls: true, packet-encoding: xudp, uuid: 9e998501-eaae-4d7e-bbe5-6cecfaef8334, servername: google.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: grpc}, reality-opts: {public-key: O8yFUnhj9NOtJ2eUVQTwrGk8HrkHq94QAO090azV428, short-id: 6a326909}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-7", server: 217.69.167.135, port: 15392, type: vless, tls: true, packet-encoding: xudp, uuid: 9e998501-eaae-4d7e-bbe5-6cecfaef8334, servername: google.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: grpc}, reality-opts: {public-key: O8yFUnhj9NOtJ2eUVQTwrGk8HrkHq94QAO090azV428, short-id: 6a326909}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan_1, server: 199.232.78.160, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: XpnTeam-17, servername: ssl.fastly.com, alpn: [http%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: ssl.fastly.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan_3, server: 83.168.71.216, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a18f7c2d-9e45-4b8a-af3c-1d5e7f9c8b2a, servername: ads.x5.ru, host: ads.x5.ru, path: /, reality-opts: {public-key: 8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho, short-id: 2f49bccf11150ef2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-53", server: 144.31.5.171, port: 753, type: vless, tls: true, packet-encoding: xudp, uuid: bb05f9d7-a3d1-4b81-a790-f6dba0301907, servername: www.nvidia.com, host: www.nvidia.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: i00_tpIO0Oe2TV2lxm2BLm6QUzzkncyJtauMa7Rn500, short-id: b91a73752053b039}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-50", server: 144.31.5.171, port: 753, type: vless, tls: true, packet-encoding: xudp, uuid: bb05f9d7-a3d1-4b81-a790-f6dba0301907, servername: www.nvidia.com, host: www.nvidia.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: i00_tpIO0Oe2TV2lxm2BLm6QUzzkncyJtauMa7Rn500, short-id: b91a73752053b039}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-62", server: 85.192.49.151, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: bb05f9d7-a3d1-4b81-a790-f6dba0301907, servername: de.servers.gracevpnbuy.com, host: de.servers.gracevpnbuy.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: i00_tpIO0Oe2TV2lxm2BLm6QUzzkncyJtauMa7Rn500, short-id: b91a73752053b039}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan_14, server: 85.192.49.151, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: bb05f9d7-a3d1-4b81-a790-f6dba0301907, servername: de.servers.gracevpnbuy.com, host: de.servers.gracevpnbuy.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: i00_tpIO0Oe2TV2lxm2BLm6QUzzkncyJtauMa7Rn500, short-id: b91a73752053b039}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-44", server: 213.193.255.206, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: be3960db-f339-0065-be7b-c1a130601141, servername: gb.cdn.cachefleet.com, host: gb.cdn.cachefleet.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-45", server: 213.193.255.206, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: be3960db-f339-0065-be7b-c1a130601141, servername: gb.cdn.cachefleet.com, host: gb.cdn.cachefleet.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-47", server: 213.193.255.206, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: be3960db-f339-0065-be7b-c1a130601141, servername: gb.cdn.cachefleet.com, host: gb.cdn.cachefleet.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-58", server: 213.193.255.206, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: be3960db-f339-0065-be7b-c1a130601141, servername: gb.cdn.cachefleet.com, host: gb.cdn.cachefleet.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-10", server: 213.193.255.206, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: be3960db-f339-0065-be7b-c1a130601141, servername: gb.cdn.cachefleet.com, host: gb.cdn.cachefleet.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-71", server: 213.193.255.206, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: be3960db-f339-0065-be7b-c1a130601141, servername: gb.cdn.cachefleet.com, host: gb.cdn.cachefleet.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-73", server: 213.193.255.206, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: be3960db-f339-0065-be7b-c1a130601141, servername: gb.cdn.cachefleet.com, host: gb.cdn.cachefleet.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-8", server: 213.193.255.206, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: be3960db-f339-0065-be7b-c1a130601141, servername: gb.cdn.cachefleet.com, host: gb.cdn.cachefleet.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-56", server: 213.193.255.206, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: be3960db-f339-0065-be7b-c1a130601141, servername: gb.cdn.cachefleet.com, host: gb.cdn.cachefleet.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-43", server: 213.193.255.206, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: be3960db-f339-0065-be7b-c1a130601141, servername: gb.cdn.cachefleet.com, host: gb.cdn.cachefleet.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "- @configraygan-55", server: 213.193.255.206, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: be3960db-f339-0065-be7b-c1a130601141, servername: gb.cdn.cachefleet.com, host: gb.cdn.cachefleet.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-61", server: 104.21.71.238, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575, servername: rubifen.adaspoloandco.com, network: ws, ws-opts: {path: "/GOrbEh#TELEGRAM-ICV2RAY?ed=2048", headers: {Host: rubifen.adaspoloandco.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-33", server: 104.26.14.85, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575, servername: rubifen.adaspoloandco.com, network: ws, ws-opts: {path: "/GOrbEh#TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=2560", headers: {Host: rubifen.adaspoloandco.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-64", server: 104.26.14.85, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575, servername: rubifen.adaspoloandco.com, network: ws, ws-opts: {path: /GOrbEh, headers: {Host: rubifen.adaspoloandco.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-63", server: 172.67.172.95, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575, servername: rubifen.adaspoloandco.com, network: ws, ws-opts: {path: "/GOrbEh#TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=2048", headers: {Host: rubifen.adaspoloandco.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-71", server: 104.26.0.7, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d171491a-9995-46ce-8719-f64463ca3a45, servername: sertraline.adaspoloandco.com, alpn: [http%2F1.1%2Ch2], network: ws, ws-opts: {path: /download.php, headers: {Host: sertraline.adaspoloandco.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-27", server: 144.31.157.104, port: 20017, type: vless, tls: true, packet-encoding: xudp, uuid: d2733ae6-44e7-4b14-8c2d-3f5bef74cdec, host: play.google.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-29", server: 63.182.111.210, port: 22223, type: vless, tls: true, packet-encoding: xudp, uuid: e4514801-0d5a-42ba-869f-39bd605aef9e, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-34", server: 167.104.217.250, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: efd400cd-98e1-4a9b-a98c-6f4a3b7cce7f, servername: nl-spec-1.atlanta-api.com, alpn: [h2%2Chttp%2F1.1], host: nl-spec-1.atlanta-api.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-28", server: 167.104.217.250, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: efd400cd-98e1-4a9b-a98c-6f4a3b7cce7f, servername: nl-spec-1.atlanta-api.com, alpn: [h2%2Chttp%2F1.1], host: nl-spec-1.atlanta-api.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "- @configraygan-68", server: 188.114.97.4, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: f798a2c4-c51b-409d-b349-ca8455b36796, servername: chopin.adaspoloandco.com, network: ws, ws-opts: {path: /download.php, headers: {Host: chopin.adaspoloandco.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-48", server: 213.193.255.206, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: be3960db-f339-0065-be7b-c1a130601141, servername: gb.cdn.cachefleet.com, host: gb.cdn.cachefleet.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-51", server: 213.193.255.206, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: be3960db-f339-0065-be7b-c1a130601141, servername: gb.cdn.cachefleet.com, host: gb.cdn.cachefleet.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-57", server: 213.193.255.206, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: be3960db-f339-0065-be7b-c1a130601141, servername: gb.cdn.cachefleet.com, host: gb.cdn.cachefleet.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-61", server: 213.193.255.206, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: be3960db-f339-0065-be7b-c1a130601141, servername: gb.cdn.cachefleet.com, host: gb.cdn.cachefleet.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-64", server: 213.193.255.206, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: be3960db-f339-0065-be7b-c1a130601141, servername: gb.cdn.cachefleet.com, host: gb.cdn.cachefleet.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-60", server: 213.193.255.206, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: be3960db-f339-0065-be7b-c1a130601141, servername: gb.cdn.cachefleet.com, host: gb.cdn.cachefleet.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan_20, server: 194.154.30.154, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c7e9c591-2764-423a-afca-efbd010fd396, servername: forfreeuse.rtqa.ru, network: ws, ws-opts: {path: /, headers: {Host: forfreeuse.rtqa.ru}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan_21, server: 104.26.14.85, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575, servername: rubifen.adaspoloandco.com, network: ws, ws-opts: {path: "/GOrbEh#TELEGRAM-ICV2RAY?ed=512", headers: {Host: rubifen.adaspoloandco.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-75", server: 104.26.14.85, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575, servername: rubifen.adaspoloandco.com, network: ws, ws-opts: {path: "/GOrbEh#TELEGRAM-MARAMBASHI_MARAMBASHI?ed=512", headers: {Host: rubifen.adaspoloandco.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-63", server: 104.26.14.85, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575, servername: rubifen.adaspoloandco.com, network: ws, ws-opts: {path: "/GOrbEh#TELEGRAM-MARAMBASHI_MARAMBASHI?ed=512", headers: {Host: rubifen.adaspoloandco.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan_8, server: 104.26.14.85, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: cf39fab0-bb85-42cb-9945-2ad69d78e575, servername: rubifen.adaspoloandco.com, network: ws, ws-opts: {path: "/GOrbEh#TELEGRAM-mehrosaboran?ed=512", headers: {Host: rubifen.adaspoloandco.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-74", server: 104.26.0.7, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d171491a-9995-46ce-8719-f64463ca3a45, servername: sertraline.adaspoloandco.com, alpn: [http%2F1.1%2Ch2], network: ws, ws-opts: {path: /download.php, headers: {Host: sertraline.adaspoloandco.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "- @configraygan-72", server: 172.67.74.10, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d171491a-9995-46ce-8719-f64463ca3a45, servername: sertraline.adaspoloandco.com, network: ws, ws-opts: {path: "/download.php#TELEGRAM-MARAMBASHI_MARAMBASHI?ed=512", headers: {Host: sertraline.adaspoloandco.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan_10, server: 172.67.74.10, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d171491a-9995-46ce-8719-f64463ca3a45, servername: sertraline.adaspoloandco.com, network: ws, ws-opts: {path: "/download.php#TELEGRAM-MARAMBASHI_MARAMBASHI?ed=512", headers: {Host: sertraline.adaspoloandco.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: configraygan_19, server: 104.27.66.214, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: f798a2c4-c51b-409d-b349-ca8455b36796, servername: chopin.adaspoloandco.com, network: ws, ws-opts: {path: /download.php, headers: {Host: chopin.adaspoloandco.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "- @configraygan-32"
-      - "- @configraygan-15"
-      - "- @configraygan-57"
-      - "- @configraygan-58"
-      - "- @configraygan-62"
-      - "- @configraygan-69"
-      - "- @configraygan-72"
-      - "- @configraygan-65"
-      - "- @configraygan-1"
-      - "- @configraygan-5"
-      - "- @configraygan-30"
-      - "- @configraygan-7"
-      - "- @configraygan-39"
-      - "- @configraygan-14"
-      - "- @configraygan-70"
-      - "- @configraygan-56"
-      - "- @configraygan-73"
-      - "- @configraygan-66"
-      - "- @configraygan-60"
-      - "- @configraygan-21"
-      - "- @configraygan-2"
-      - "- @configraygan-24"
-      - "- @configraygan-9"
-      - "- @configraygan-12"
-      - "- @configraygan-38"
-      - "- @configraygan-16"
-      - "- @configraygan-25"
-      - "- @configraygan-3"
-      - "- @configraygan-41"
-      - "- @configraygan-36"
-      - "- @configraygan-11"
-      - "- @configraygan-10"
-      - "- @configraygan-19"
-      - "- @configraygan-37"
-      - "- @configraygan-35"
-      - "- @configraygan-13"
-      - "- @configraygan-23"
-      - "- @configraygan-20"
-      - "- @configraygan-31"
-      - "- @configraygan-59"
-      - "- @configraygan-55"
-      - "- @configraygan-61"
-      - "- @configraygan-33"
-      - "- @configraygan-64"
-      - "- @configraygan-63"
-      - "- @configraygan-71"
-      - "- @configraygan-27"
-      - "- @configraygan-29"
-      - "- @configraygan-34"
-      - "- @configraygan-28"
+      - configraygan_29
+      - configraygan_17
+      - configraygan_18
+      - configraygan_26
+      - configraygan_27
+      - configraygan_28
+      - configraygan_12
       - "- @configraygan-68"
+      - configraygan_2
+      - "- @configraygan-65"
+      - "- @configraygan-70"
+      - "- @configraygan-49"
+      - "- @configraygan-59"
+      - configraygan_13
+      - configraygan_24
+      - configraygan_11
+      - "- @configraygan-54"
+      - "- @configraygan-69"
+      - "- @configraygan-66"
+      - "- @configraygan-67"
+      - "- @configraygan-76"
+      - configraygan_22
+      - "- @configraygan-5"
+      - "- @configraygan-11"
+      - "- @configraygan-13"
+      - "- @configraygan-52"
+      - "- @configraygan-9"
+      - "- @configraygan-4"
+      - configraygan_7
+      - configraygan_5
+      - "- @configraygan-3"
+      - "- @configraygan-2"
+      - "- @configraygan-6"
+      - "- @configraygan-1"
+      - "- @configraygan-12"
+      - "- @configraygan-42"
+      - "- @configraygan-46"
+      - "- @configraygan-7"
+      - configraygan_1
+      - configraygan_3
+      - "- @configraygan-53"
+      - "- @configraygan-50"
+      - "- @configraygan-62"
+      - configraygan_14
+      - "- @configraygan-44"
+      - "- @configraygan-45"
+      - "- @configraygan-47"
+      - "- @configraygan-58"
+      - "- @configraygan-10"
+      - "- @configraygan-71"
+      - "- @configraygan-73"
+      - "- @configraygan-8"
+      - "- @configraygan-56"
+      - "- @configraygan-43"
+      - "- @configraygan-55"
+      - "- @configraygan-48"
+      - "- @configraygan-51"
+      - "- @configraygan-57"
+      - "- @configraygan-61"
+      - "- @configraygan-64"
+      - "- @configraygan-60"
+      - configraygan_20
+      - configraygan_21
+      - "- @configraygan-75"
+      - "- @configraygan-63"
+      - configraygan_8
+      - "- @configraygan-74"
+      - "- @configraygan-72"
+      - configraygan_10
+      - configraygan_19
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "- @configraygan-32"
-      - "- @configraygan-15"
-      - "- @configraygan-57"
-      - "- @configraygan-58"
-      - "- @configraygan-62"
-      - "- @configraygan-69"
-      - "- @configraygan-72"
-      - "- @configraygan-65"
-      - "- @configraygan-1"
-      - "- @configraygan-5"
-      - "- @configraygan-30"
-      - "- @configraygan-7"
-      - "- @configraygan-39"
-      - "- @configraygan-14"
-      - "- @configraygan-70"
-      - "- @configraygan-56"
-      - "- @configraygan-73"
-      - "- @configraygan-66"
-      - "- @configraygan-60"
-      - "- @configraygan-21"
-      - "- @configraygan-2"
-      - "- @configraygan-24"
-      - "- @configraygan-9"
-      - "- @configraygan-12"
-      - "- @configraygan-38"
-      - "- @configraygan-16"
-      - "- @configraygan-25"
-      - "- @configraygan-3"
-      - "- @configraygan-41"
-      - "- @configraygan-36"
-      - "- @configraygan-11"
-      - "- @configraygan-10"
-      - "- @configraygan-19"
-      - "- @configraygan-37"
-      - "- @configraygan-35"
-      - "- @configraygan-13"
-      - "- @configraygan-23"
-      - "- @configraygan-20"
-      - "- @configraygan-31"
-      - "- @configraygan-59"
-      - "- @configraygan-55"
-      - "- @configraygan-61"
-      - "- @configraygan-33"
-      - "- @configraygan-64"
-      - "- @configraygan-63"
-      - "- @configraygan-71"
-      - "- @configraygan-27"
-      - "- @configraygan-29"
-      - "- @configraygan-34"
-      - "- @configraygan-28"
+      - configraygan_29
+      - configraygan_17
+      - configraygan_18
+      - configraygan_26
+      - configraygan_27
+      - configraygan_28
+      - configraygan_12
       - "- @configraygan-68"
+      - configraygan_2
+      - "- @configraygan-65"
+      - "- @configraygan-70"
+      - "- @configraygan-49"
+      - "- @configraygan-59"
+      - configraygan_13
+      - configraygan_24
+      - configraygan_11
+      - "- @configraygan-54"
+      - "- @configraygan-69"
+      - "- @configraygan-66"
+      - "- @configraygan-67"
+      - "- @configraygan-76"
+      - configraygan_22
+      - "- @configraygan-5"
+      - "- @configraygan-11"
+      - "- @configraygan-13"
+      - "- @configraygan-52"
+      - "- @configraygan-9"
+      - "- @configraygan-4"
+      - configraygan_7
+      - configraygan_5
+      - "- @configraygan-3"
+      - "- @configraygan-2"
+      - "- @configraygan-6"
+      - "- @configraygan-1"
+      - "- @configraygan-12"
+      - "- @configraygan-42"
+      - "- @configraygan-46"
+      - "- @configraygan-7"
+      - configraygan_1
+      - configraygan_3
+      - "- @configraygan-53"
+      - "- @configraygan-50"
+      - "- @configraygan-62"
+      - configraygan_14
+      - "- @configraygan-44"
+      - "- @configraygan-45"
+      - "- @configraygan-47"
+      - "- @configraygan-58"
+      - "- @configraygan-10"
+      - "- @configraygan-71"
+      - "- @configraygan-73"
+      - "- @configraygan-8"
+      - "- @configraygan-56"
+      - "- @configraygan-43"
+      - "- @configraygan-55"
+      - "- @configraygan-48"
+      - "- @configraygan-51"
+      - "- @configraygan-57"
+      - "- @configraygan-61"
+      - "- @configraygan-64"
+      - "- @configraygan-60"
+      - configraygan_20
+      - configraygan_21
+      - "- @configraygan-75"
+      - "- @configraygan-63"
+      - configraygan_8
+      - "- @configraygan-74"
+      - "- @configraygan-72"
+      - configraygan_10
+      - configraygan_19
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "- @configraygan-32"
-      - "- @configraygan-15"
-      - "- @configraygan-57"
-      - "- @configraygan-58"
-      - "- @configraygan-62"
-      - "- @configraygan-69"
-      - "- @configraygan-72"
-      - "- @configraygan-65"
-      - "- @configraygan-1"
-      - "- @configraygan-5"
-      - "- @configraygan-30"
-      - "- @configraygan-7"
-      - "- @configraygan-39"
-      - "- @configraygan-14"
-      - "- @configraygan-70"
-      - "- @configraygan-56"
-      - "- @configraygan-73"
-      - "- @configraygan-66"
-      - "- @configraygan-60"
-      - "- @configraygan-21"
-      - "- @configraygan-2"
-      - "- @configraygan-24"
-      - "- @configraygan-9"
-      - "- @configraygan-12"
-      - "- @configraygan-38"
-      - "- @configraygan-16"
-      - "- @configraygan-25"
-      - "- @configraygan-3"
-      - "- @configraygan-41"
-      - "- @configraygan-36"
-      - "- @configraygan-11"
-      - "- @configraygan-10"
-      - "- @configraygan-19"
-      - "- @configraygan-37"
-      - "- @configraygan-35"
-      - "- @configraygan-13"
-      - "- @configraygan-23"
-      - "- @configraygan-20"
-      - "- @configraygan-31"
-      - "- @configraygan-59"
-      - "- @configraygan-55"
-      - "- @configraygan-61"
-      - "- @configraygan-33"
-      - "- @configraygan-64"
-      - "- @configraygan-63"
-      - "- @configraygan-71"
-      - "- @configraygan-27"
-      - "- @configraygan-29"
-      - "- @configraygan-34"
-      - "- @configraygan-28"
+      - configraygan_29
+      - configraygan_17
+      - configraygan_18
+      - configraygan_26
+      - configraygan_27
+      - configraygan_28
+      - configraygan_12
       - "- @configraygan-68"
+      - configraygan_2
+      - "- @configraygan-65"
+      - "- @configraygan-70"
+      - "- @configraygan-49"
+      - "- @configraygan-59"
+      - configraygan_13
+      - configraygan_24
+      - configraygan_11
+      - "- @configraygan-54"
+      - "- @configraygan-69"
+      - "- @configraygan-66"
+      - "- @configraygan-67"
+      - "- @configraygan-76"
+      - configraygan_22
+      - "- @configraygan-5"
+      - "- @configraygan-11"
+      - "- @configraygan-13"
+      - "- @configraygan-52"
+      - "- @configraygan-9"
+      - "- @configraygan-4"
+      - configraygan_7
+      - configraygan_5
+      - "- @configraygan-3"
+      - "- @configraygan-2"
+      - "- @configraygan-6"
+      - "- @configraygan-1"
+      - "- @configraygan-12"
+      - "- @configraygan-42"
+      - "- @configraygan-46"
+      - "- @configraygan-7"
+      - configraygan_1
+      - configraygan_3
+      - "- @configraygan-53"
+      - "- @configraygan-50"
+      - "- @configraygan-62"
+      - configraygan_14
+      - "- @configraygan-44"
+      - "- @configraygan-45"
+      - "- @configraygan-47"
+      - "- @configraygan-58"
+      - "- @configraygan-10"
+      - "- @configraygan-71"
+      - "- @configraygan-73"
+      - "- @configraygan-8"
+      - "- @configraygan-56"
+      - "- @configraygan-43"
+      - "- @configraygan-55"
+      - "- @configraygan-48"
+      - "- @configraygan-51"
+      - "- @configraygan-57"
+      - "- @configraygan-61"
+      - "- @configraygan-64"
+      - "- @configraygan-60"
+      - configraygan_20
+      - configraygan_21
+      - "- @configraygan-75"
+      - "- @configraygan-63"
+      - configraygan_8
+      - "- @configraygan-74"
+      - "- @configraygan-72"
+      - configraygan_10
+      - configraygan_19
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "- @configraygan-32"
-      - "- @configraygan-15"
-      - "- @configraygan-57"
-      - "- @configraygan-58"
-      - "- @configraygan-62"
-      - "- @configraygan-69"
-      - "- @configraygan-72"
-      - "- @configraygan-65"
-      - "- @configraygan-1"
-      - "- @configraygan-5"
-      - "- @configraygan-30"
-      - "- @configraygan-7"
-      - "- @configraygan-39"
-      - "- @configraygan-14"
-      - "- @configraygan-70"
-      - "- @configraygan-56"
-      - "- @configraygan-73"
-      - "- @configraygan-66"
-      - "- @configraygan-60"
-      - "- @configraygan-21"
-      - "- @configraygan-2"
-      - "- @configraygan-24"
-      - "- @configraygan-9"
-      - "- @configraygan-12"
-      - "- @configraygan-38"
-      - "- @configraygan-16"
-      - "- @configraygan-25"
-      - "- @configraygan-3"
-      - "- @configraygan-41"
-      - "- @configraygan-36"
-      - "- @configraygan-11"
-      - "- @configraygan-10"
-      - "- @configraygan-19"
-      - "- @configraygan-37"
-      - "- @configraygan-35"
-      - "- @configraygan-13"
-      - "- @configraygan-23"
-      - "- @configraygan-20"
-      - "- @configraygan-31"
-      - "- @configraygan-59"
-      - "- @configraygan-55"
-      - "- @configraygan-61"
-      - "- @configraygan-33"
-      - "- @configraygan-64"
-      - "- @configraygan-63"
-      - "- @configraygan-71"
-      - "- @configraygan-27"
-      - "- @configraygan-29"
-      - "- @configraygan-34"
-      - "- @configraygan-28"
+      - configraygan_29
+      - configraygan_17
+      - configraygan_18
+      - configraygan_26
+      - configraygan_27
+      - configraygan_28
+      - configraygan_12
       - "- @configraygan-68"
+      - configraygan_2
+      - "- @configraygan-65"
+      - "- @configraygan-70"
+      - "- @configraygan-49"
+      - "- @configraygan-59"
+      - configraygan_13
+      - configraygan_24
+      - configraygan_11
+      - "- @configraygan-54"
+      - "- @configraygan-69"
+      - "- @configraygan-66"
+      - "- @configraygan-67"
+      - "- @configraygan-76"
+      - configraygan_22
+      - "- @configraygan-5"
+      - "- @configraygan-11"
+      - "- @configraygan-13"
+      - "- @configraygan-52"
+      - "- @configraygan-9"
+      - "- @configraygan-4"
+      - configraygan_7
+      - configraygan_5
+      - "- @configraygan-3"
+      - "- @configraygan-2"
+      - "- @configraygan-6"
+      - "- @configraygan-1"
+      - "- @configraygan-12"
+      - "- @configraygan-42"
+      - "- @configraygan-46"
+      - "- @configraygan-7"
+      - configraygan_1
+      - configraygan_3
+      - "- @configraygan-53"
+      - "- @configraygan-50"
+      - "- @configraygan-62"
+      - configraygan_14
+      - "- @configraygan-44"
+      - "- @configraygan-45"
+      - "- @configraygan-47"
+      - "- @configraygan-58"
+      - "- @configraygan-10"
+      - "- @configraygan-71"
+      - "- @configraygan-73"
+      - "- @configraygan-8"
+      - "- @configraygan-56"
+      - "- @configraygan-43"
+      - "- @configraygan-55"
+      - "- @configraygan-48"
+      - "- @configraygan-51"
+      - "- @configraygan-57"
+      - "- @configraygan-61"
+      - "- @configraygan-64"
+      - "- @configraygan-60"
+      - configraygan_20
+      - configraygan_21
+      - "- @configraygan-75"
+      - "- @configraygan-63"
+      - configraygan_8
+      - "- @configraygan-74"
+      - "- @configraygan-72"
+      - configraygan_10
+      - configraygan_19
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "- @configraygan-32"
-      - "- @configraygan-15"
-      - "- @configraygan-57"
-      - "- @configraygan-58"
-      - "- @configraygan-62"
-      - "- @configraygan-69"
-      - "- @configraygan-72"
-      - "- @configraygan-65"
-      - "- @configraygan-1"
-      - "- @configraygan-5"
-      - "- @configraygan-30"
-      - "- @configraygan-7"
-      - "- @configraygan-39"
-      - "- @configraygan-14"
-      - "- @configraygan-70"
-      - "- @configraygan-56"
-      - "- @configraygan-73"
-      - "- @configraygan-66"
-      - "- @configraygan-60"
-      - "- @configraygan-21"
-      - "- @configraygan-2"
-      - "- @configraygan-24"
-      - "- @configraygan-9"
-      - "- @configraygan-12"
-      - "- @configraygan-38"
-      - "- @configraygan-16"
-      - "- @configraygan-25"
-      - "- @configraygan-3"
-      - "- @configraygan-41"
-      - "- @configraygan-36"
-      - "- @configraygan-11"
-      - "- @configraygan-10"
-      - "- @configraygan-19"
-      - "- @configraygan-37"
-      - "- @configraygan-35"
-      - "- @configraygan-13"
-      - "- @configraygan-23"
-      - "- @configraygan-20"
-      - "- @configraygan-31"
-      - "- @configraygan-59"
-      - "- @configraygan-55"
-      - "- @configraygan-61"
-      - "- @configraygan-33"
-      - "- @configraygan-64"
-      - "- @configraygan-63"
-      - "- @configraygan-71"
-      - "- @configraygan-27"
-      - "- @configraygan-29"
-      - "- @configraygan-34"
-      - "- @configraygan-28"
+      - configraygan_29
+      - configraygan_17
+      - configraygan_18
+      - configraygan_26
+      - configraygan_27
+      - configraygan_28
+      - configraygan_12
       - "- @configraygan-68"
+      - configraygan_2
+      - "- @configraygan-65"
+      - "- @configraygan-70"
+      - "- @configraygan-49"
+      - "- @configraygan-59"
+      - configraygan_13
+      - configraygan_24
+      - configraygan_11
+      - "- @configraygan-54"
+      - "- @configraygan-69"
+      - "- @configraygan-66"
+      - "- @configraygan-67"
+      - "- @configraygan-76"
+      - configraygan_22
+      - "- @configraygan-5"
+      - "- @configraygan-11"
+      - "- @configraygan-13"
+      - "- @configraygan-52"
+      - "- @configraygan-9"
+      - "- @configraygan-4"
+      - configraygan_7
+      - configraygan_5
+      - "- @configraygan-3"
+      - "- @configraygan-2"
+      - "- @configraygan-6"
+      - "- @configraygan-1"
+      - "- @configraygan-12"
+      - "- @configraygan-42"
+      - "- @configraygan-46"
+      - "- @configraygan-7"
+      - configraygan_1
+      - configraygan_3
+      - "- @configraygan-53"
+      - "- @configraygan-50"
+      - "- @configraygan-62"
+      - configraygan_14
+      - "- @configraygan-44"
+      - "- @configraygan-45"
+      - "- @configraygan-47"
+      - "- @configraygan-58"
+      - "- @configraygan-10"
+      - "- @configraygan-71"
+      - "- @configraygan-73"
+      - "- @configraygan-8"
+      - "- @configraygan-56"
+      - "- @configraygan-43"
+      - "- @configraygan-55"
+      - "- @configraygan-48"
+      - "- @configraygan-51"
+      - "- @configraygan-57"
+      - "- @configraygan-61"
+      - "- @configraygan-64"
+      - "- @configraygan-60"
+      - configraygan_20
+      - configraygan_21
+      - "- @configraygan-75"
+      - "- @configraygan-63"
+      - configraygan_8
+      - "- @configraygan-74"
+      - "- @configraygan-72"
+      - configraygan_10
+      - configraygan_19
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "- @configraygan-32"
-      - "- @configraygan-15"
-      - "- @configraygan-57"
-      - "- @configraygan-58"
-      - "- @configraygan-62"
-      - "- @configraygan-69"
-      - "- @configraygan-72"
-      - "- @configraygan-65"
-      - "- @configraygan-1"
-      - "- @configraygan-5"
-      - "- @configraygan-30"
-      - "- @configraygan-7"
-      - "- @configraygan-39"
-      - "- @configraygan-14"
-      - "- @configraygan-70"
-      - "- @configraygan-56"
-      - "- @configraygan-73"
-      - "- @configraygan-66"
-      - "- @configraygan-60"
-      - "- @configraygan-21"
-      - "- @configraygan-2"
-      - "- @configraygan-24"
-      - "- @configraygan-9"
-      - "- @configraygan-12"
-      - "- @configraygan-38"
-      - "- @configraygan-16"
-      - "- @configraygan-25"
-      - "- @configraygan-3"
-      - "- @configraygan-41"
-      - "- @configraygan-36"
-      - "- @configraygan-11"
-      - "- @configraygan-10"
-      - "- @configraygan-19"
-      - "- @configraygan-37"
-      - "- @configraygan-35"
-      - "- @configraygan-13"
-      - "- @configraygan-23"
-      - "- @configraygan-20"
-      - "- @configraygan-31"
-      - "- @configraygan-59"
-      - "- @configraygan-55"
-      - "- @configraygan-61"
-      - "- @configraygan-33"
-      - "- @configraygan-64"
-      - "- @configraygan-63"
-      - "- @configraygan-71"
-      - "- @configraygan-27"
-      - "- @configraygan-29"
-      - "- @configraygan-34"
-      - "- @configraygan-28"
+      - configraygan_29
+      - configraygan_17
+      - configraygan_18
+      - configraygan_26
+      - configraygan_27
+      - configraygan_28
+      - configraygan_12
       - "- @configraygan-68"
+      - configraygan_2
+      - "- @configraygan-65"
+      - "- @configraygan-70"
+      - "- @configraygan-49"
+      - "- @configraygan-59"
+      - configraygan_13
+      - configraygan_24
+      - configraygan_11
+      - "- @configraygan-54"
+      - "- @configraygan-69"
+      - "- @configraygan-66"
+      - "- @configraygan-67"
+      - "- @configraygan-76"
+      - configraygan_22
+      - "- @configraygan-5"
+      - "- @configraygan-11"
+      - "- @configraygan-13"
+      - "- @configraygan-52"
+      - "- @configraygan-9"
+      - "- @configraygan-4"
+      - configraygan_7
+      - configraygan_5
+      - "- @configraygan-3"
+      - "- @configraygan-2"
+      - "- @configraygan-6"
+      - "- @configraygan-1"
+      - "- @configraygan-12"
+      - "- @configraygan-42"
+      - "- @configraygan-46"
+      - "- @configraygan-7"
+      - configraygan_1
+      - configraygan_3
+      - "- @configraygan-53"
+      - "- @configraygan-50"
+      - "- @configraygan-62"
+      - configraygan_14
+      - "- @configraygan-44"
+      - "- @configraygan-45"
+      - "- @configraygan-47"
+      - "- @configraygan-58"
+      - "- @configraygan-10"
+      - "- @configraygan-71"
+      - "- @configraygan-73"
+      - "- @configraygan-8"
+      - "- @configraygan-56"
+      - "- @configraygan-43"
+      - "- @configraygan-55"
+      - "- @configraygan-48"
+      - "- @configraygan-51"
+      - "- @configraygan-57"
+      - "- @configraygan-61"
+      - "- @configraygan-64"
+      - "- @configraygan-60"
+      - configraygan_20
+      - configraygan_21
+      - "- @configraygan-75"
+      - "- @configraygan-63"
+      - configraygan_8
+      - "- @configraygan-74"
+      - "- @configraygan-72"
+      - configraygan_10
+      - configraygan_19
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -422,57 +555,76 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "- @configraygan-32"
-      - "- @configraygan-15"
-      - "- @configraygan-57"
-      - "- @configraygan-58"
-      - "- @configraygan-62"
-      - "- @configraygan-69"
-      - "- @configraygan-72"
-      - "- @configraygan-65"
-      - "- @configraygan-1"
-      - "- @configraygan-5"
-      - "- @configraygan-30"
-      - "- @configraygan-7"
-      - "- @configraygan-39"
-      - "- @configraygan-14"
-      - "- @configraygan-70"
-      - "- @configraygan-56"
-      - "- @configraygan-73"
-      - "- @configraygan-66"
-      - "- @configraygan-60"
-      - "- @configraygan-21"
-      - "- @configraygan-2"
-      - "- @configraygan-24"
-      - "- @configraygan-9"
-      - "- @configraygan-12"
-      - "- @configraygan-38"
-      - "- @configraygan-16"
-      - "- @configraygan-25"
-      - "- @configraygan-3"
-      - "- @configraygan-41"
-      - "- @configraygan-36"
-      - "- @configraygan-11"
-      - "- @configraygan-10"
-      - "- @configraygan-19"
-      - "- @configraygan-37"
-      - "- @configraygan-35"
-      - "- @configraygan-13"
-      - "- @configraygan-23"
-      - "- @configraygan-20"
-      - "- @configraygan-31"
-      - "- @configraygan-59"
-      - "- @configraygan-55"
-      - "- @configraygan-61"
-      - "- @configraygan-33"
-      - "- @configraygan-64"
-      - "- @configraygan-63"
-      - "- @configraygan-71"
-      - "- @configraygan-27"
-      - "- @configraygan-29"
-      - "- @configraygan-34"
-      - "- @configraygan-28"
+      - configraygan_29
+      - configraygan_17
+      - configraygan_18
+      - configraygan_26
+      - configraygan_27
+      - configraygan_28
+      - configraygan_12
       - "- @configraygan-68"
+      - configraygan_2
+      - "- @configraygan-65"
+      - "- @configraygan-70"
+      - "- @configraygan-49"
+      - "- @configraygan-59"
+      - configraygan_13
+      - configraygan_24
+      - configraygan_11
+      - "- @configraygan-54"
+      - "- @configraygan-69"
+      - "- @configraygan-66"
+      - "- @configraygan-67"
+      - "- @configraygan-76"
+      - configraygan_22
+      - "- @configraygan-5"
+      - "- @configraygan-11"
+      - "- @configraygan-13"
+      - "- @configraygan-52"
+      - "- @configraygan-9"
+      - "- @configraygan-4"
+      - configraygan_7
+      - configraygan_5
+      - "- @configraygan-3"
+      - "- @configraygan-2"
+      - "- @configraygan-6"
+      - "- @configraygan-1"
+      - "- @configraygan-12"
+      - "- @configraygan-42"
+      - "- @configraygan-46"
+      - "- @configraygan-7"
+      - configraygan_1
+      - configraygan_3
+      - "- @configraygan-53"
+      - "- @configraygan-50"
+      - "- @configraygan-62"
+      - configraygan_14
+      - "- @configraygan-44"
+      - "- @configraygan-45"
+      - "- @configraygan-47"
+      - "- @configraygan-58"
+      - "- @configraygan-10"
+      - "- @configraygan-71"
+      - "- @configraygan-73"
+      - "- @configraygan-8"
+      - "- @configraygan-56"
+      - "- @configraygan-43"
+      - "- @configraygan-55"
+      - "- @configraygan-48"
+      - "- @configraygan-51"
+      - "- @configraygan-57"
+      - "- @configraygan-61"
+      - "- @configraygan-64"
+      - "- @configraygan-60"
+      - configraygan_20
+      - configraygan_21
+      - "- @configraygan-75"
+      - "- @configraygan-63"
+      - configraygan_8
+      - "- @configraygan-74"
+      - "- @configraygan-72"
+      - configraygan_10
+      - configraygan_19
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
