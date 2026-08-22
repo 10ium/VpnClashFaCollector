@@ -1,5 +1,36 @@
 # آرشیو کانال: @ConfigWireguard
-بروزرسانی: 2026-08-22 10:17:01 UTC
+بروزرسانی: 2026-08-22 20:14:12 UTC
+
+### 🕒 2026-08-22 15:22:40 UTC
+نسل جدید پروکسی فعلا روی تلگرام دسکتاپ.
+***💻***
+ نسخه دسکتاپ تلگرام در حال آماده‌سازی یک «پراکسی وب» (WEB Proxy) جدید است. نوع جدیدی از پراکسی در حال ظهور است که از WebView برای انتقال ترافیک معمول MTProxy از طریق یک بستر انتقال مبتنی بر وب استفاده می‌کند. سازوکار آن تقریباً به این صورت است: تلگرام دسکتاپ ترافیک MTProxy خود را در قالب یک جریان مالتی‌پلکس‌شده (چندگانه) از طریق یک بستر انتقال HTTPS/WebSocket مبتنی بر WebView هدایت می‌کند. یک بستر انتقال مجزا با فرمت فریم‌های اختصاصی خود — شامل OPEN، DATA، WINDOW و CLOSE — پیاده‌سازی شده است تا امکان انتقال چندین اتصال منطقی تلگرام از طریق یک بستر انتقال واحدِ WebView فراهم شود. در سمت سرور، یک رله (relay) اختصاصی این جریان را دریافت کرده، اتصالات مجزا را تفکیک می‌کند و آن‌ها را به یک MTProxy معمولی ارجاع می‌دهد. این رله ترافیک MTProxy را رمزگشایی نمی‌کند و آدرس مقصد دلخواهی را نیز از کلاینت دریافت نمی‌کند. این پراکسی وب می‌تواند روی یک دامنه HTTPS معمولی نیز اجرا شود. چنین دامنه‌ای می‌تواند هم‌زمان میزبان یک وب‌سایت عادی باشد، در حالی که یک صفحه واسط (bridge) ویژه، تنها پس از تأیید قابلیت‌ها بر اساس پیکربندی پراکسی، باز می‌شود. 
+***📱***
+ به عبارت دیگر، تلگرام در حال تدارک روشی دیگر برای اتصال به شبکه خود است؛ روشی که از بستر انتقال HTTPS/WebSocket مبتنی بر WebView استفاده می‌کند و در عین حال، ترافیک استاندارد MTProxy را درون آن حفظ می‌نماید.
+
+---
+
+### 🕒 2026-08-22 12:44:01 UTC
+Argo bridge
+پل آرگو
+-----BEGIN ARGO VPN BRIDGE BLOCK-----
+eJwNzcuOgjAYQOF36RYToIuJNXEBDNZWgXQyI8qOUjA/XjC1
+3DqZdx/2J9/5RUOt39A90cZfoVc537tSoQ2qZz5WD+JJnA4y
+Yh/sFsMx4rY4c1ycGWTAJ7nfmQKL/oKJYTBCRcmsljb9FLYR
+2y1aoTdcn6Xpdb2QSSwiFvgn8sqGdc5P088Ft19CEZr2mUPi
+VtFHrgnrGz9ho28CCA3sbqH1XBpOnZb8QK/ON3WGSrk8Tlud
+BK28lzb3Zhssu79/I8xDVg==
+-----END ARGO VPN BRIDGE BLOCK-----
+-----BEGIN ARGO VPN BRIDGE BLOCK-----
+eJwVzE0TgUAYAOD/stccUkJmHGrR7A5LGLO6tQlv6WOlbVrj
+v+P8zDxvpNJnA1WJZsMBquP+UcUXNENpT7ukcE1hMSUwGZN8
+CWtMdcSpFXECW6BNUj6yc1HfBTiZsMy/d8KmJskqky2Yiwao
+gVsZv9pn+is3yxAT/2S3UqqDlsku9NscL+S+F7nB+6niYSRT
+Iy6ircv8K3jgaVUGOzL2AqZZcllNpk2n+XVE2uDmSGZDjd3h
+saiCveHN5+jzBaOkREs=
+-----END ARGO VPN BRIDGE BLOCK-----
+
+---
 
 ### 🕒 2026-08-22 10:17:01 UTC
 Telegram Proxy
@@ -50,76 +81,6 @@ obfs4 89.147.108.95:443 4655C6A50194893F5CE83994D382E2B52AF6E1FD cert=PEq2efij43
  | 
 [2](https://t.me/FREE2CONFIG/5727)
 [تنظیمات اتصال](https://t.me/FREE2CONFIG/2321?single)
-
----
-
-### 🕒 2026-08-21 19:45:55 UTC
-> ↪️ **Forwarded**
-
-اگه حوصله خوندن توضیحات رو ندارید، فقط ساب زیر را وارد 
-[PattNG](https://github.com/patterniha/PattNG)
- کرده و لذت ببرید !
-`https://raw.githubusercontent.com/patterniha/Free-Configs/main/configs.txt`
-ساب هر ۲۴ ساعت آپدیت میشود.
-///
-**توضیحات:**
-چند تا از پروژه های عالی که کانفیگهای رایگان را جمع‌آوری و تست میکنند و سپس کانفیگهای سالم را فیلتر و در اختیار قرار میدهند پروژه‌ها‌ی 
-[https://github.com/0xRadikal/Free-v2ray-Configs](https://github.com/0xRadikal/Free-v2ray-Configs)
- و 
-[https://github.com/itsyebekhe/PSG](https://github.com/itsyebekhe/PSG)
- و 
-[https://github.com/Delta-Kronecker/V2ray-Config](https://github.com/Delta-Kronecker/V2ray-Config)
- هستند.
-اما این پروژه‌ها دو مشکل اساسی دارند، اول اینکه تست کانفیگها باید از طریق اینترنت و فایروال ایران انجام شود ولی در حال حاضر تست کانفیگها در این پروژه‌ها از طریق گیتهاب انجام میشود، دوم اینکه روی نت‌های آپلود محدود (ایرانسل و ...) عملا اکثر کانفیگهای این پروژه‌ها آپلود محدود هستند و کیفیت بسیار پایینی دارند.
-از آنجا که با روشهای زیادی میتوان محدودیت آپلود را روی کلودفلر دور زد، من در پروژه‌ی خودم اومدم کانفیگهای کلودفلر سالم را از پروژه‌ها‌ی اصلی جدا کردم و تغییراتی را برای دور زدن محدودیت آپلود (و همچنین دور زدن فیلتر دامنه) اعمال کردم (در حال حاضر متد fragment+fingerprint اعمال شده). بنابراین کانفیگهای نهایی سالم و با حداکثر سرعت در تمامی نتها قابل استفاده هستند.
-برای دور زدن محدودیت آپلود در نتهای آپلود محدود در حال حاضر فقط باید از کلاینت 
-[PattNG](https://github.com/patterniha/PattNG)
- استفاده کنید، بزودی در سایر کلاینتها نیز این مورد پشتیبانی میشود.
-[https://github.com/patterniha/Free-Configs](https://github.com/patterniha/Free-Configs)
-
----
-
-### 🕒 2026-08-21 17:56:10 UTC
-Telegram Proxy
-[https://t.me/proxy?server=neshane-rah.simbol.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d](https://t.me/proxy?server=neshane-rah.simbol.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d)
-[https://t.me/proxy?server=seems.simbol.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d](https://t.me/proxy?server=seems.simbol.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d)
-[https://t.me/proxy?server=biaberim.estakhr.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d](https://t.me/proxy?server=biaberim.estakhr.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d)
-[https://t.me/proxy?server=genuismind.info&port=443&secret=ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d](https://t.me/proxy?server=genuismind.info&port=443&secret=ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d)
-[https://t.me/proxy?server=syntax.lamari.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d](https://t.me/proxy?server=syntax.lamari.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d)
-[https://t.me/proxy?server=jounob-iran-dar-ghalb-mast.simbol.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d](https://t.me/proxy?server=jounob-iran-dar-ghalb-mast.simbol.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d)
-[https://t.me/proxy?server=melat.managep.info&port=443&secret=ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d](https://t.me/proxy?server=melat.managep.info&port=443&secret=ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d)
-[https://t.me/proxy?server=sdfree.mahanam.info&port=443&secret=ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d](https://t.me/proxy?server=sdfree.mahanam.info&port=443&secret=ee1603010200010001fc030386e24c3add6d656469612e737465616d706f77657265642e636f6d)
-[https://t.me/proxy?server=takhasos.karshenasi.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d](https://t.me/proxy?server=takhasos.karshenasi.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d)
-[https://t.me/proxy?server=most.karshenasi.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d](https://t.me/proxy?server=most.karshenasi.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d)
-[https://t.me/proxy?server=nasaji.estakhr.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d](https://t.me/proxy?server=nasaji.estakhr.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d)
-[https://t.me/proxy?server=saadi.masnavi.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d](https://t.me/proxy?server=saadi.masnavi.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d)
-[https://t.me/proxy?server=molavi.masnavi.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d](https://t.me/proxy?server=molavi.masnavi.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d)
-[https://t.me/proxy?server=goodman.lamari.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d](https://t.me/proxy?server=goodman.lamari.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d)
-[https://t.me/proxy?server=symbol.simbol.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d](https://t.me/proxy?server=symbol.simbol.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d)
-[https://t.me/proxy?server=manavi.masnavi.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d](https://t.me/proxy?server=manavi.masnavi.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d)
-[https://t.me/proxy?server=borj-pooshak-brj.aseman.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d](https://t.me/proxy?server=borj-pooshak-brj.aseman.info&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d)
-
----
-
-### 🕒 2026-08-21 12:07:01 UTC
-Argo Bridge
-پل آرگو
------BEGIN ARGO VPN BRIDGE BLOCK-----
-eJwVzEuOgjAAANC7dKuLAqKpiQvs4EwbPlaMIjuKRYryEWoJ
-Try7un7J+wdadL1sarA0pqBNx1uTnsESiJEOWYUgNwPNMZmT
-qys9TJ9JTM0kJjKUdEjiW5tWqj5HdslN+PWBWxSSsoHBT4DA
-FPTyUqfq0YlP6bsMk010Whz83BVs/VvCbB8iiexjFx20uhca
-GWEO68F/WGSGHek0TrtrFR3nE6a5iQ22se9F71QLlquieAZ/
-W+FZ2OO9cVmtwOsNMMVDNA==
------END ARGO VPN BRIDGE BLOCK-----
------BEGIN ARGO VPN BRIDGE BLOCK-----
-eJwVzNtugjAAANB/6etMBixcauIDdGy2CgSVcXlrGSEdtmih
-Alv27+rzSc4fuDVq4L0Ea3MFLnQ59/QbrEGzkKkW0GBWfGMI
-O7gL+R6R36ogVlVgnnAiS/mlKjEqym1dFenTJ/ZGDPzTG/F7
-DMEKDLyVdNSqeZRRmCGcokYHr/vUyuHJUYHfLeerLYRTjMOO
-4oircnFymyIYdlOLW3/oo/mzpmR+2ZYf3ejqU8aC3LSlfzx4
-SbQVXg2lZqbrbcD/HXh/Q6c=
------END ARGO VPN BRIDGE BLOCK-----
 
 ---
 

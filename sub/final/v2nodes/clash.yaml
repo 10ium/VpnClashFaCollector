@@ -469,7 +469,6 @@ proxies:
   - {name: 92.5.229.117:45819, server: 92.5.229.117, port: 45819, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: EzU+FRH/EZYadbhR0w4f2raDkz4hunKKlRaHl7eY82E=, udp: true, tfo: false}
   - {name: 138.2.105.188:56927, server: 138.2.105.188, port: 56927, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: Z/c2GxwLzrJ5QmM7b6OT7vd6mCRpsYdlC+pszMgZo90=, udp: true, tfo: false}
   - {name: 89.168.91.118:59924, server: 89.168.91.118, port: 59924, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: gBLY0eMuDeNVYDjFCkB2N5DDyCf9GaiqWe7zAGNlHew=, udp: true, tfo: false}
-  - {name: 130.61.148.92:59924, server: 130.61.148.92, port: 59924, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: iMCyLh/KjHKyfw2Y9uT9AK5zu6o04oI6AtshYHbgpVY=, udp: true, tfo: false}
   - {name: 130.61.38.10:59924, server: 130.61.38.10, port: 59924, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: m2uw0zJCvMeApdVNQ2W+3mYHHsMk1YTubdnEnSRkj20=, udp: true, tfo: false}
   - {name: 84.235.160.143:45819, server: 84.235.160.143, port: 45819, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: n4t1FIL8VA8BBLpHes6ZHGm9on2p1Fsr7DCbgbCUmPU=, udp: true, tfo: false}
   - {name: 129.146.25.160:50356, server: 129.146.25.160, port: 50356, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: wqQTwSODntQiUFCt7X/Awd0hJ1JMzWFCJmvMWShRE7E=, udp: true, tfo: false}
@@ -480,9 +479,11 @@ proxies:
   - {name: optimal-urchin.rooster465.autos:443, server: optimal-urchin.rooster465.autos, port: 443, type: trojan, password: FH72359861, skip-cert-verify: false, udp: true, tfo: false}
   - {name: true-pony.rooster465.autos:443, server: true-pony.rooster465.autos, port: 443, type: trojan, password: FH72359861, sni: true-pony.rooster465.autos, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 🇷🇺 tr-latvia1.unlimited-access.ru:443, server: tr-latvia1.unlimited-access.ru, port: 443, type: trojan, password: kxHw-Dk-e9dffgzYszMlEqLJ92AnY3Pi, sni: tr-latvia1.unlimited-access.ru, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 116.203.193.15:16679, server: 116.203.193.15, port: 16679, type: vless, tls: true, packet-encoding: xudp, uuid: 7a04ab9c-493a-43fc-b382-a5adb3b6e2cb, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 134.98.158.147:62145, server: 134.98.158.147, port: 62145, type: vless, tls: true, packet-encoding: xudp, uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 141.144.199.129:62145, server: 141.144.199.129, port: 62145, type: vless, tls: true, packet-encoding: xudp, uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 158.178.152.93:62145, server: 158.178.152.93, port: 62145, type: vless, tls: true, packet-encoding: xudp, uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇺🇸 [openproxylist.com] vmess-US", server: 165.140.216.142, port: 443, type: vmess, uuid: b65a2d69-5634-42a2-e4be-54e8a6176900, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -503,7 +504,6 @@ proxy-groups:
       - 92.5.229.117:45819
       - 138.2.105.188:56927
       - 89.168.91.118:59924
-      - 130.61.148.92:59924
       - 130.61.38.10:59924
       - 84.235.160.143:45819
       - 129.146.25.160:50356
@@ -514,9 +514,11 @@ proxy-groups:
       - optimal-urchin.rooster465.autos:443
       - true-pony.rooster465.autos:443
       - 🇷🇺 tr-latvia1.unlimited-access.ru:443
+      - 116.203.193.15:16679
       - 134.98.158.147:62145
       - 141.144.199.129:62145
       - 158.178.152.93:62145
+      - 🇺🇸 [openproxylist.com] vmess-US
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -527,7 +529,6 @@ proxy-groups:
       - 92.5.229.117:45819
       - 138.2.105.188:56927
       - 89.168.91.118:59924
-      - 130.61.148.92:59924
       - 130.61.38.10:59924
       - 84.235.160.143:45819
       - 129.146.25.160:50356
@@ -538,9 +539,11 @@ proxy-groups:
       - optimal-urchin.rooster465.autos:443
       - true-pony.rooster465.autos:443
       - 🇷🇺 tr-latvia1.unlimited-access.ru:443
+      - 116.203.193.15:16679
       - 134.98.158.147:62145
       - 141.144.199.129:62145
       - 158.178.152.93:62145
+      - 🇺🇸 [openproxylist.com] vmess-US
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -551,7 +554,6 @@ proxy-groups:
       - 92.5.229.117:45819
       - 138.2.105.188:56927
       - 89.168.91.118:59924
-      - 130.61.148.92:59924
       - 130.61.38.10:59924
       - 84.235.160.143:45819
       - 129.146.25.160:50356
@@ -562,9 +564,11 @@ proxy-groups:
       - optimal-urchin.rooster465.autos:443
       - true-pony.rooster465.autos:443
       - 🇷🇺 tr-latvia1.unlimited-access.ru:443
+      - 116.203.193.15:16679
       - 134.98.158.147:62145
       - 141.144.199.129:62145
       - 158.178.152.93:62145
+      - 🇺🇸 [openproxylist.com] vmess-US
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -584,7 +588,6 @@ proxy-groups:
       - 92.5.229.117:45819
       - 138.2.105.188:56927
       - 89.168.91.118:59924
-      - 130.61.148.92:59924
       - 130.61.38.10:59924
       - 84.235.160.143:45819
       - 129.146.25.160:50356
@@ -595,9 +598,11 @@ proxy-groups:
       - optimal-urchin.rooster465.autos:443
       - true-pony.rooster465.autos:443
       - 🇷🇺 tr-latvia1.unlimited-access.ru:443
+      - 116.203.193.15:16679
       - 134.98.158.147:62145
       - 141.144.199.129:62145
       - 158.178.152.93:62145
+      - 🇺🇸 [openproxylist.com] vmess-US
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -608,7 +613,6 @@ proxy-groups:
       - 92.5.229.117:45819
       - 138.2.105.188:56927
       - 89.168.91.118:59924
-      - 130.61.148.92:59924
       - 130.61.38.10:59924
       - 84.235.160.143:45819
       - 129.146.25.160:50356
@@ -619,9 +623,11 @@ proxy-groups:
       - optimal-urchin.rooster465.autos:443
       - true-pony.rooster465.autos:443
       - 🇷🇺 tr-latvia1.unlimited-access.ru:443
+      - 116.203.193.15:16679
       - 134.98.158.147:62145
       - 141.144.199.129:62145
       - 158.178.152.93:62145
+      - 🇺🇸 [openproxylist.com] vmess-US
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -632,7 +638,6 @@ proxy-groups:
       - 92.5.229.117:45819
       - 138.2.105.188:56927
       - 89.168.91.118:59924
-      - 130.61.148.92:59924
       - 130.61.38.10:59924
       - 84.235.160.143:45819
       - 129.146.25.160:50356
@@ -643,9 +648,11 @@ proxy-groups:
       - optimal-urchin.rooster465.autos:443
       - true-pony.rooster465.autos:443
       - 🇷🇺 tr-latvia1.unlimited-access.ru:443
+      - 116.203.193.15:16679
       - 134.98.158.147:62145
       - 141.144.199.129:62145
       - 158.178.152.93:62145
+      - 🇺🇸 [openproxylist.com] vmess-US
   - name: دانلود منیجر 📥
     type: select
     proxies:

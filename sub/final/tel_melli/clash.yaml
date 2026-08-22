@@ -465,10 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@v2box_meli👑", server: 31.76.91.138, port: 2087, type: vless, tls: true, packet-encoding: xudp, uuid: 309b0ce3-09a8-4883-bfe4-bd56e215be44, servername: ads.x5.ru, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: grpc}, reality-opts: {public-key: JfuItzJ81sJehx1PbxyliWSJvuBMKoa9ahNgPO3R7R4, short-id: c226283c4de5b1ad}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2box_meli🏆🏆🏆", server: 104.18.19.193, port: 2087, type: vless, tls: true, packet-encoding: xudp, uuid: 1cc5e727-62f2-469e-963e-20af8cbf1bf5, servername: arvan2.dearhossein-taktaz.ir, network: ws, ws-opts: {path: /, headers: {Host: arvan2.dearhossein-taktaz.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2box_meli🍓", server: 31.76.91.138, port: 2087, type: vless, tls: true, packet-encoding: xudp, uuid: 309b0ce3-09a8-4883-bfe4-bd56e215be44, servername: ads.x5.ru, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: grpc}, reality-opts: {public-key: JfuItzJ81sJehx1PbxyliWSJvuBMKoa9ahNgPO3R7R4, short-id: c226283c4de5b1ad}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@v2box_meli🗽", server: 162.128.71.118, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 690ad3be-991b-4a2c-b351-42dd06789d03, servername: www.bing.com, host: www.bing.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 3ZKNZEktRaPxt-XoWmx68EGsFwglnICVkvIl96973iA, short-id: 4014ce9b0d82ad9d}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2box_meli🇬🇧", server: 83.168.71.216, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a18f7c2d-9e45-4b8a-af3c-1d5e7f9c8b2a, servername: ads.x5.ru, host: ads.x5.ru, path: /, reality-opts: {public-key: 8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho, short-id: 2f49bccf11150ef2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@V2box_meli💨", server: 144.31.157.104, port: 20017, type: vless, tls: true, packet-encoding: xudp, uuid: d2733ae6-44e7-4b14-8c2d-3f5bef74cdec, host: play.google.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2box_meli🌐", server: sg10.levikogjgfdd.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8d1e0577-bfcb-4cbd-91c0-1f8788d4ba44, servername: www.cloudflare.com, host: www.cloudflare.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: rJ-aDop3jUC-FzyETfI2uDSXQ659PFlehr7XWm5Cm0A, short-id: fe1a104caf309f5a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2box_meli🗽 2", server: p1.levikogjgfdd.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a18f7c2d-9e45-4b8a-af3c-1d5e7f9c8b2a, servername: ads.x5.ru, host: ads.x5.ru, path: /, reality-opts: {public-key: 8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho, short-id: 2f49bccf11150ef2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,30 +486,33 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@v2box_meli👑"
+      - "@v2box_meli🏆🏆🏆"
+      - "@v2box_meli🍓"
       - "@v2box_meli🗽"
-      - "@v2box_meli🇬🇧"
-      - "@V2box_meli💨"
+      - "@v2box_meli🌐"
+      - "@v2box_meli🗽 2"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@v2box_meli👑"
+      - "@v2box_meli🏆🏆🏆"
+      - "@v2box_meli🍓"
       - "@v2box_meli🗽"
-      - "@v2box_meli🇬🇧"
-      - "@V2box_meli💨"
+      - "@v2box_meli🌐"
+      - "@v2box_meli🗽 2"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@v2box_meli👑"
+      - "@v2box_meli🏆🏆🏆"
+      - "@v2box_meli🍓"
       - "@v2box_meli🗽"
-      - "@v2box_meli🇬🇧"
-      - "@V2box_meli💨"
+      - "@v2box_meli🌐"
+      - "@v2box_meli🗽 2"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -524,30 +528,33 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2box_meli👑"
+      - "@v2box_meli🏆🏆🏆"
+      - "@v2box_meli🍓"
       - "@v2box_meli🗽"
-      - "@v2box_meli🇬🇧"
-      - "@V2box_meli💨"
+      - "@v2box_meli🌐"
+      - "@v2box_meli🗽 2"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2box_meli👑"
+      - "@v2box_meli🏆🏆🏆"
+      - "@v2box_meli🍓"
       - "@v2box_meli🗽"
-      - "@v2box_meli🇬🇧"
-      - "@V2box_meli💨"
+      - "@v2box_meli🌐"
+      - "@v2box_meli🗽 2"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2box_meli👑"
+      - "@v2box_meli🏆🏆🏆"
+      - "@v2box_meli🍓"
       - "@v2box_meli🗽"
-      - "@v2box_meli🇬🇧"
-      - "@V2box_meli💨"
+      - "@v2box_meli🌐"
+      - "@v2box_meli🗽 2"
   - name: دانلود منیجر 📥
     type: select
     proxies:
