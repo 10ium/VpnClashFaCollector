@@ -465,10 +465,17 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: "@Freenet_vt", server: 193.29.139.168, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: QCXDxuDlTTMD7jtgHUjIoj, udp: true, tfo: false}
+  - {name: "@Freenet_vt 2", server: 150.40.117.221, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 47388561-cf0c-4cfc-91f8-fdfd9fa3d756, servername: www.amazon.com, host: www.amazon.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: B5F8h8tpeZ-1ydiT0uFgdc30jJyw8H89Y8e-p_VV6yw, short-id: 7b}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@@Freenet_vt", server: 194.55.189.249, port: 40443, type: vless, tls: true, packet-encoding: xudp, uuid: 8212a50b-25bf-4739-bba1-aaffb5ffc84c, servername: deepl.com, host: deepl.com, path: /, reality-opts: {public-key: KCbW84C8h2Ja01LS0Ro8EpLLfzMTjs11t1ldDWLd5zo, short-id: aae8}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: ️ freenet_vt, server: 104.18.37.228, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: "/?TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=512", headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Freenet_vt`", server: 172.66.44.97, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: "/sg-melbi#TELEGRAM-MARAMBASHI_MARAMBASHI?ed=512", headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: ⚡ freenet-vt, server: 172.66.44.97, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: "/sg-melbi#TELEGRAM-MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI_MARAMBASHI?ed=512", headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: freenet_vt`, server: 172.66.44.97, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: /, headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: Freenet_vt, server: 208.103.161.32, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: /sg-melbi_/, headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Freenet_vt 3", server: 169.40.42.179, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d65cc14c-f53f-4fe2-b262-97856601319c, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg, short-id: c39cc7310a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Freenet_vt 4", server: 169.40.42.184, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d65cc14c-f53f-4fe2-b262-97856601319c, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg, short-id: c39cc7310a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Freenet_vt 5", server: 169.40.42.95, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d65cc14c-f53f-4fe2-b262-97856601319c, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg, short-id: c39cc7310a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,30 +492,51 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - "@Freenet_vt"
+      - "@Freenet_vt 2"
+      - "@@Freenet_vt"
       - ️ freenet_vt
+      - "@Freenet_vt`"
       - ⚡ freenet-vt
       - freenet_vt`
       - Freenet_vt
+      - "@Freenet_vt 3"
+      - "@Freenet_vt 4"
+      - "@Freenet_vt 5"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
+      - "@Freenet_vt"
+      - "@Freenet_vt 2"
+      - "@@Freenet_vt"
       - ️ freenet_vt
+      - "@Freenet_vt`"
       - ⚡ freenet-vt
       - freenet_vt`
       - Freenet_vt
+      - "@Freenet_vt 3"
+      - "@Freenet_vt 4"
+      - "@Freenet_vt 5"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
+      - "@Freenet_vt"
+      - "@Freenet_vt 2"
+      - "@@Freenet_vt"
       - ️ freenet_vt
+      - "@Freenet_vt`"
       - ⚡ freenet-vt
       - freenet_vt`
       - Freenet_vt
+      - "@Freenet_vt 3"
+      - "@Freenet_vt 4"
+      - "@Freenet_vt 5"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -524,30 +552,51 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@Freenet_vt"
+      - "@Freenet_vt 2"
+      - "@@Freenet_vt"
       - ️ freenet_vt
+      - "@Freenet_vt`"
       - ⚡ freenet-vt
       - freenet_vt`
       - Freenet_vt
+      - "@Freenet_vt 3"
+      - "@Freenet_vt 4"
+      - "@Freenet_vt 5"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@Freenet_vt"
+      - "@Freenet_vt 2"
+      - "@@Freenet_vt"
       - ️ freenet_vt
+      - "@Freenet_vt`"
       - ⚡ freenet-vt
       - freenet_vt`
       - Freenet_vt
+      - "@Freenet_vt 3"
+      - "@Freenet_vt 4"
+      - "@Freenet_vt 5"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@Freenet_vt"
+      - "@Freenet_vt 2"
+      - "@@Freenet_vt"
       - ️ freenet_vt
+      - "@Freenet_vt`"
       - ⚡ freenet-vt
       - freenet_vt`
       - Freenet_vt
+      - "@Freenet_vt 3"
+      - "@Freenet_vt 4"
+      - "@Freenet_vt 5"
   - name: دانلود منیجر 📥
     type: select
     proxies:
