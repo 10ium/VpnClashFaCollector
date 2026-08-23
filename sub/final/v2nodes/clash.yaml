@@ -467,12 +467,10 @@ rule-providers:
 proxies:
   - {name: 129.151.95.100:61312, server: 129.151.95.100, port: 61312, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: bDu3x7drw0TT4Kl67HF9uBlmyqxTlOe82yLUnKewmJw=, udp: true, tfo: false}
   - {name: londhtc.southbyte.xyz:5448, server: londhtc.southbyte.xyz, port: 5448, type: trojan, password: fg20mtCFHy, sni: londhtc.southbyte.xyz, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 116.203.193.15:16679, server: 116.203.193.15, port: 16679, type: vless, tls: true, packet-encoding: xudp, uuid: 7a04ab9c-493a-43fc-b382-a5adb3b6e2cb, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "🇭🇰 [openproxylist.com] vmess-HK", server: 3j41E63Msh9TgXvR.v.3dns.vip, port: 443, type: vmess, uuid: 1abe49dedb6e4f65a0f0a5ea79ddefad, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: 3j41E63Msh9TgXvR.v.3dns.vip, network: ws, ws-opts: {path: /ws-vmess, headers: {Host: 3j41E63Msh9TgXvR.v.3dns.vip}}, udp: true, tfo: false}
   - {name: "🇭🇰 [openproxylist.com] vmess-HK 2", server: t245hvl0VMtlXR4v.v.3dns.vip, port: 443, type: vmess, uuid: 1abe49dedb6e4f65a0f0a5ea79ddefad, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: t245hvl0VMtlXR4v.v.3dns.vip, network: ws, ws-opts: {path: /ws-vmess, headers: {Host: t245hvl0VMtlXR4v.v.3dns.vip}}, udp: true, tfo: false}
   - {name: "🇯🇵 [openproxylist.com] vmess-JP", server: UcKniXjfd2JOKBmx.v.3dns.vip, port: 443, type: vmess, uuid: 1abe49dedb6e4f65a0f0a5ea79ddefad, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: UcKniXjfd2JOKBmx.v.3dns.vip, network: ws, ws-opts: {path: /ws-vmess, headers: {Host: UcKniXjfd2JOKBmx.v.3dns.vip}}, udp: true, tfo: false}
   - {name: "🇸🇬 [openproxylist.com] vmess-SG", server: Aim7HqTuvNOofcsx.v.3dns.vip, port: 443, type: vmess, uuid: 1abe49dedb6e4f65a0f0a5ea79ddefad, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: Aim7HqTuvNOofcsx.v.3dns.vip, network: ws, ws-opts: {path: /ws-vmess, headers: {Host: Aim7HqTuvNOofcsx.v.3dns.vip}}, udp: true, tfo: false}
-  - {name: "🇺🇸 [openproxylist.com] vmess-US", server: 165.140.216.142, port: 443, type: vmess, uuid: b65a2d69-5634-42a2-e4be-54e8a6176900, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -491,12 +489,10 @@ proxy-groups:
     proxies:
       - 129.151.95.100:61312
       - londhtc.southbyte.xyz:5448
-      - 116.203.193.15:16679
       - 🇭🇰 [openproxylist.com] vmess-HK
       - 🇭🇰 [openproxylist.com] vmess-HK 2
       - 🇯🇵 [openproxylist.com] vmess-JP
       - 🇸🇬 [openproxylist.com] vmess-SG
-      - 🇺🇸 [openproxylist.com] vmess-US
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -505,12 +501,10 @@ proxy-groups:
     proxies:
       - 129.151.95.100:61312
       - londhtc.southbyte.xyz:5448
-      - 116.203.193.15:16679
       - 🇭🇰 [openproxylist.com] vmess-HK
       - 🇭🇰 [openproxylist.com] vmess-HK 2
       - 🇯🇵 [openproxylist.com] vmess-JP
       - 🇸🇬 [openproxylist.com] vmess-SG
-      - 🇺🇸 [openproxylist.com] vmess-US
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -519,12 +513,10 @@ proxy-groups:
     proxies:
       - 129.151.95.100:61312
       - londhtc.southbyte.xyz:5448
-      - 116.203.193.15:16679
       - 🇭🇰 [openproxylist.com] vmess-HK
       - 🇭🇰 [openproxylist.com] vmess-HK 2
       - 🇯🇵 [openproxylist.com] vmess-JP
       - 🇸🇬 [openproxylist.com] vmess-SG
-      - 🇺🇸 [openproxylist.com] vmess-US
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -542,12 +534,10 @@ proxy-groups:
     proxies:
       - 129.151.95.100:61312
       - londhtc.southbyte.xyz:5448
-      - 116.203.193.15:16679
       - 🇭🇰 [openproxylist.com] vmess-HK
       - 🇭🇰 [openproxylist.com] vmess-HK 2
       - 🇯🇵 [openproxylist.com] vmess-JP
       - 🇸🇬 [openproxylist.com] vmess-SG
-      - 🇺🇸 [openproxylist.com] vmess-US
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -556,12 +546,10 @@ proxy-groups:
     proxies:
       - 129.151.95.100:61312
       - londhtc.southbyte.xyz:5448
-      - 116.203.193.15:16679
       - 🇭🇰 [openproxylist.com] vmess-HK
       - 🇭🇰 [openproxylist.com] vmess-HK 2
       - 🇯🇵 [openproxylist.com] vmess-JP
       - 🇸🇬 [openproxylist.com] vmess-SG
-      - 🇺🇸 [openproxylist.com] vmess-US
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -570,12 +558,10 @@ proxy-groups:
     proxies:
       - 129.151.95.100:61312
       - londhtc.southbyte.xyz:5448
-      - 116.203.193.15:16679
       - 🇭🇰 [openproxylist.com] vmess-HK
       - 🇭🇰 [openproxylist.com] vmess-HK 2
       - 🇯🇵 [openproxylist.com] vmess-JP
       - 🇸🇬 [openproxylist.com] vmess-SG
-      - 🇺🇸 [openproxylist.com] vmess-US
   - name: دانلود منیجر 📥
     type: select
     proxies:
