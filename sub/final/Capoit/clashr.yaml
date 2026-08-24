@@ -5,60 +5,60 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@Capoit`", server: 45.155.68.9, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 2b622609-bb92-49e8-9631-4ada00324f47, servername: it2ws.wba-pn.ru, network: ws, ws-opts: {path: /, headers: {Host: it2ws.wba-pn.ru}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit", server: 185.55.240.199, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 53c76647-14d1-4df5-99cb-be99ad2e6bd9, servername: fr199.mechvpn.online, host: fr199.mechvpn.online, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit 2", server: 188.114.99.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b, servername: hhlfy.twiladaphne.ndjp.net, network: ws, ws-opts: {path: /sg-melbi, headers: {Host: hhlfy.twiladaphne.ndjp.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit", server: 104.18.32.47, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true, tfo: false}
+  - {name: "@Capoit 2", server: www.calmlunch.com, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true, tfo: false}
+  - {name: "@Capoit`", server: 72.56.92.177, port: 40443, type: vless, tls: true, packet-encoding: xudp, uuid: 4480161e-2c59-4d37-8736-675c9af32bf1, servername: deepl.com, host: deepl.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: fWzCKXwvMXaacsl1DdFb1vKQ9l9cTK1G7udqmaYHL0Y, short-id: 01d1bf2d4755d40c}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@Capoit`"
       - "@Capoit"
       - "@Capoit 2"
+      - "@Capoit`"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@Capoit`"
       - "@Capoit"
       - "@Capoit 2"
+      - "@Capoit`"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@Capoit`"
       - "@Capoit"
       - "@Capoit 2"
+      - "@Capoit`"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@Capoit`"
       - "@Capoit"
       - "@Capoit 2"
+      - "@Capoit`"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@Capoit`"
       - "@Capoit"
       - "@Capoit 2"
+      - "@Capoit`"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@Capoit`"
       - "@Capoit"
       - "@Capoit 2"
+      - "@Capoit`"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -86,9 +86,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@Capoit`"
       - "@Capoit"
       - "@Capoit 2"
+      - "@Capoit`"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

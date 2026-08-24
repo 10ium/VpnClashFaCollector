@@ -465,9 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Capoit`", server: 45.155.68.9, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 2b622609-bb92-49e8-9631-4ada00324f47, servername: it2ws.wba-pn.ru, network: ws, ws-opts: {path: /, headers: {Host: it2ws.wba-pn.ru}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit", server: 185.55.240.199, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 53c76647-14d1-4df5-99cb-be99ad2e6bd9, servername: fr199.mechvpn.online, host: fr199.mechvpn.online, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit 2", server: 188.114.99.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b, servername: hhlfy.twiladaphne.ndjp.net, network: ws, ws-opts: {path: /sg-melbi, headers: {Host: hhlfy.twiladaphne.ndjp.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit", server: 104.18.32.47, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true, tfo: false}
+  - {name: "@Capoit 2", server: www.calmlunch.com, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true, tfo: false}
+  - {name: "@Capoit`", server: 72.56.92.177, port: 40443, type: vless, tls: true, packet-encoding: xudp, uuid: 4480161e-2c59-4d37-8736-675c9af32bf1, servername: deepl.com, host: deepl.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: fWzCKXwvMXaacsl1DdFb1vKQ9l9cTK1G7udqmaYHL0Y, short-id: 01d1bf2d4755d40c}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,27 +484,27 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@Capoit`"
       - "@Capoit"
       - "@Capoit 2"
+      - "@Capoit`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@Capoit`"
       - "@Capoit"
       - "@Capoit 2"
+      - "@Capoit`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@Capoit`"
       - "@Capoit"
       - "@Capoit 2"
+      - "@Capoit`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -520,27 +520,27 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Capoit`"
       - "@Capoit"
       - "@Capoit 2"
+      - "@Capoit`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Capoit`"
       - "@Capoit"
       - "@Capoit 2"
+      - "@Capoit`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Capoit`"
       - "@Capoit"
       - "@Capoit 2"
+      - "@Capoit`"
   - name: دانلود منیجر 📥
     type: select
     proxies:

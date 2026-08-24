@@ -466,14 +466,10 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: 🇳🇱 Netherlands 🇳🇱`, server: 46.229.243.131, port: 8443, type: hysteria2, ports: 8443, password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z, sni: grape-turbo-fr.roxa.org, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇳🇱 The Netherlands 🇳🇱, server: 108.181.126.122, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: CJmTCCx7Ltud, udp: true, tfo: false}
-  - {name: 🇳🇱 The Netherlands 🇳🇱 2, server: 108.181.58.239, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: CJmTCCx7Ltud, udp: true, tfo: false}
   - {name: Lithuania 🇱🇹, server: 144.31.243.2, port: 16015, type: ss, cipher: chacha20-ietf-poly1305, password: J1InuU6QRT5JOh1mQfkjU2, udp: true, tfo: false}
-  - {name: 🇳🇱 The Netherlands 🇳🇱`, server: 158.173.20.208, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true, tfo: false}
   - {name: 🇧🇪 Belgium 🇧🇪, server: be2.wba-pn.ru, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 08f84d53-e262-459c-a15a-26213e7a07c9, servername: be2.wba-pn.ru, network: ws, ws-opts: {path: /, headers: {Host: be2.wba-pn.ru}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇳🇱 The Netherlands 🇳🇱 3, server: 51.158.206.26, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Cloudflare 🌐, server: 188.114.99.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: /sg-melbi, headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Cloudflare 🌐 2, server: millionaire.levikogjgfdd.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: /sg-melbi, headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇳🇱 The Netherlands 🇳🇱, server: 51.158.206.26, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Cloudflare 🌐, server: millionaire.levikogjgfdd.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83afd88f-200f-4d89-bfc7-66eff160c1d8, servername: josni.hoyes.cloudns.ch, network: ws, ws-opts: {path: /sg-melbi, headers: {Host: josni.hoyes.cloudns.ch}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -491,14 +487,10 @@ proxy-groups:
     type: select
     proxies:
       - 🇳🇱 Netherlands 🇳🇱`
-      - 🇳🇱 The Netherlands 🇳🇱
-      - 🇳🇱 The Netherlands 🇳🇱 2
       - Lithuania 🇱🇹
-      - 🇳🇱 The Netherlands 🇳🇱`
       - 🇧🇪 Belgium 🇧🇪
-      - 🇳🇱 The Netherlands 🇳🇱 3
+      - 🇳🇱 The Netherlands 🇳🇱
       - Cloudflare 🌐
-      - Cloudflare 🌐 2
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -506,14 +498,10 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 🇳🇱 Netherlands 🇳🇱`
-      - 🇳🇱 The Netherlands 🇳🇱
-      - 🇳🇱 The Netherlands 🇳🇱 2
       - Lithuania 🇱🇹
-      - 🇳🇱 The Netherlands 🇳🇱`
       - 🇧🇪 Belgium 🇧🇪
-      - 🇳🇱 The Netherlands 🇳🇱 3
+      - 🇳🇱 The Netherlands 🇳🇱
       - Cloudflare 🌐
-      - Cloudflare 🌐 2
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -521,14 +509,10 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 🇳🇱 Netherlands 🇳🇱`
-      - 🇳🇱 The Netherlands 🇳🇱
-      - 🇳🇱 The Netherlands 🇳🇱 2
       - Lithuania 🇱🇹
-      - 🇳🇱 The Netherlands 🇳🇱`
       - 🇧🇪 Belgium 🇧🇪
-      - 🇳🇱 The Netherlands 🇳🇱 3
+      - 🇳🇱 The Netherlands 🇳🇱
       - Cloudflare 🌐
-      - Cloudflare 🌐 2
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -545,14 +529,10 @@ proxy-groups:
     interval: 600
     proxies:
       - 🇳🇱 Netherlands 🇳🇱`
-      - 🇳🇱 The Netherlands 🇳🇱
-      - 🇳🇱 The Netherlands 🇳🇱 2
       - Lithuania 🇱🇹
-      - 🇳🇱 The Netherlands 🇳🇱`
       - 🇧🇪 Belgium 🇧🇪
-      - 🇳🇱 The Netherlands 🇳🇱 3
+      - 🇳🇱 The Netherlands 🇳🇱
       - Cloudflare 🌐
-      - Cloudflare 🌐 2
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -560,14 +540,10 @@ proxy-groups:
     interval: 600
     proxies:
       - 🇳🇱 Netherlands 🇳🇱`
-      - 🇳🇱 The Netherlands 🇳🇱
-      - 🇳🇱 The Netherlands 🇳🇱 2
       - Lithuania 🇱🇹
-      - 🇳🇱 The Netherlands 🇳🇱`
       - 🇧🇪 Belgium 🇧🇪
-      - 🇳🇱 The Netherlands 🇳🇱 3
+      - 🇳🇱 The Netherlands 🇳🇱
       - Cloudflare 🌐
-      - Cloudflare 🌐 2
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -575,14 +551,10 @@ proxy-groups:
     interval: 600
     proxies:
       - 🇳🇱 Netherlands 🇳🇱`
-      - 🇳🇱 The Netherlands 🇳🇱
-      - 🇳🇱 The Netherlands 🇳🇱 2
       - Lithuania 🇱🇹
-      - 🇳🇱 The Netherlands 🇳🇱`
       - 🇧🇪 Belgium 🇧🇪
-      - 🇳🇱 The Netherlands 🇳🇱 3
+      - 🇳🇱 The Netherlands 🇳🇱
       - Cloudflare 🌐
-      - Cloudflare 🌐 2
   - name: دانلود منیجر 📥
     type: select
     proxies:
