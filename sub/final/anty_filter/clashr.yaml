@@ -5,23 +5,21 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@vpnbaz ⭐", server: 193.29.139.212, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: QCXDxuDlTTMD7jtgHUjIoj, udp: true, tfo: false}
-  - {name: "@vpnbaz ☂️", server: gb1.wba-pn.ru, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4bc8ff7a-20b4-41b2-9751-dfca869f0553, servername: gb1.wba-pn.ru, network: ws, ws-opts: {path: /, headers: {Host: gb1.wba-pn.ru}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz 🍭", server: 5.253.30.99, port: 40443, type: vless, tls: true, packet-encoding: xudp, uuid: 511c1563-2cb6-4064-abc6-a59ee49818a8, servername: deepl.com, host: deepl.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0, short-id: 88b6}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz 🌊", server: ns3.zabidat.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 903daa6f-534c-4f4a-bbc8-024993f5cb01, servername: ptr.cyberbear.io, alpn: [h3%2Ch2%2Chttp%2F1.1], network: ws, ws-opts: {path: /CMlsadnCISdss, headers: {Host: ptr.cyberbear.io}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz 🛸", server: 104.18.28.234, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b, servername: hhlfy.twiladaphne.ndjp.net, network: ws, ws-opts: {path: /sg-melbi, headers: {Host: hhlfy.twiladaphne.ndjp.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz 🍋‍🟩", server: 5.253.42.164, port: 40443, type: vless, tls: true, packet-encoding: xudp, uuid: e99ba96d-dec8-42eb-be53-19e71eef7cab, servername: deepl.com, host: deepl.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw, short-id: 68a8}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz ☂️", server: 94.245.92.85, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: rKE5OchHqTrkamzx, udp: true, tfo: false}
+  - {name: "@vpnbaz ⭐", server: 94.245.92.85, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: rKE5OchHqTrkamzx, udp: true, tfo: false}
+  - {name: "@vpnbaz 🛸", server: turj2.surup.shop, port: 46142, type: vless, tls: true, packet-encoding: xudp, uuid: 255386a8-aec5-4425-bfe7-ca49b7448deb, servername: www.yahoo.com, host: www.yahoo.com, path: /, reality-opts: {public-key: l-OE7EwER1Z_jAifGE_UZ3FqHDMGzaR0jQHFYj5RNAk, short-id: 39feeba3085c}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz 🍭", server: 104.18.28.234, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b, servername: hhlfy.twiladaphne.ndjp.net, network: ws, ws-opts: {path: /sg-melbi, headers: {Host: hhlfy.twiladaphne.ndjp.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz 🍋‍🟩", server: 188.114.99.0, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e5cc16a6-ea42-46b2-82ae-ad2157e1641b, servername: hhlfy.twiladaphne.ndjp.net, network: ws, ws-opts: {path: /sg-melbi, headers: {Host: hhlfy.twiladaphne.ndjp.net}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@vpnbaz ⭐"
       - "@vpnbaz ☂️"
-      - "@vpnbaz 🍭"
-      - "@vpnbaz 🌊"
+      - "@vpnbaz ⭐"
       - "@vpnbaz 🛸"
+      - "@vpnbaz 🍭"
       - "@vpnbaz 🍋‍🟩"
   - name: ♻️ 自动选择
     type: url-test
@@ -29,11 +27,10 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - "@vpnbaz ⭐"
       - "@vpnbaz ☂️"
-      - "@vpnbaz 🍭"
-      - "@vpnbaz 🌊"
+      - "@vpnbaz ⭐"
       - "@vpnbaz 🛸"
+      - "@vpnbaz 🍭"
       - "@vpnbaz 🍋‍🟩"
   - name: 🌍 国外媒体
     type: select
@@ -41,44 +38,40 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@vpnbaz ⭐"
       - "@vpnbaz ☂️"
-      - "@vpnbaz 🍭"
-      - "@vpnbaz 🌊"
+      - "@vpnbaz ⭐"
       - "@vpnbaz 🛸"
+      - "@vpnbaz 🍭"
       - "@vpnbaz 🍋‍🟩"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@vpnbaz ⭐"
       - "@vpnbaz ☂️"
-      - "@vpnbaz 🍭"
-      - "@vpnbaz 🌊"
+      - "@vpnbaz ⭐"
       - "@vpnbaz 🛸"
+      - "@vpnbaz 🍭"
       - "@vpnbaz 🍋‍🟩"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@vpnbaz ⭐"
       - "@vpnbaz ☂️"
-      - "@vpnbaz 🍭"
-      - "@vpnbaz 🌊"
+      - "@vpnbaz ⭐"
       - "@vpnbaz 🛸"
+      - "@vpnbaz 🍭"
       - "@vpnbaz 🍋‍🟩"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@vpnbaz ⭐"
       - "@vpnbaz ☂️"
-      - "@vpnbaz 🍭"
-      - "@vpnbaz 🌊"
+      - "@vpnbaz ⭐"
       - "@vpnbaz 🛸"
+      - "@vpnbaz 🍭"
       - "@vpnbaz 🍋‍🟩"
   - name: 🎯 全球直连
     type: select
@@ -107,11 +100,10 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@vpnbaz ⭐"
       - "@vpnbaz ☂️"
-      - "@vpnbaz 🍭"
-      - "@vpnbaz 🌊"
+      - "@vpnbaz ⭐"
       - "@vpnbaz 🛸"
+      - "@vpnbaz 🍭"
       - "@vpnbaz 🍋‍🟩"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
