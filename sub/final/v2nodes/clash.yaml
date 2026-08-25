@@ -466,6 +466,7 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: 140.245.126.240:56927, server: 140.245.126.240, port: 56927, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: 3+fytx4x59H3KjC9hPkaia/wn+gTgl6ceg2qJ9IXzcE=, udp: true, tfo: false}
+  - {name: 129.146.6.252:50356, server: 129.146.6.252, port: 50356, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: R8BOkugdJijfJpFE2KWz6RKMdj7hWGj6Qo05a0N9STs=, udp: true, tfo: false}
   - {name: 130.61.102.10:59924, server: 130.61.102.10, port: 59924, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: TIsTxhcGxeNIl9sCCPAF5wnpfmfvF43GhTBQnq4HCxk=, udp: true, tfo: false}
   - {name: 130.61.80.61:59924, server: 130.61.80.61, port: 59924, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: jKNMaMEd3mivEOtJZC/XxuvwGTS8fDE8GUWs7V/wmdQ=, udp: true, tfo: false}
   - {name: 158.101.215.37:45819, server: 158.101.215.37, port: 45819, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: qDuLP+56cM4kraLQoKuNGS+a4A+RbcidAw7iXWtddTE=, udp: true, tfo: false}
@@ -473,6 +474,7 @@ proxies:
   - {name: 140.238.153.81:13345, server: 140.238.153.81, port: 13345, type: ss, cipher: chacha20-ietf-poly1305, password: be6cbb46-ebb0-4726-9202-6a3bac1d0afb, udp: true, tfo: false}
   - {name: 47.250.84.25:443, server: 47.250.84.25, port: 443, type: trojan, password: 5931134d1cde66bf83a54acdfebe7ab2, sni: moltbot.doctoroyy.net, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 134.98.151.67:62145, server: 134.98.151.67, port: 62145, type: vless, tls: true, packet-encoding: xudp, uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 157.137.239.241:62145, server: 157.137.239.241, port: 62145, type: vless, tls: true, packet-encoding: xudp, uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 45.134.38.204:8064, server: 45.134.38.204, port: 8064, type: vless, tls: true, packet-encoding: xudp, uuid: a88e2744-3555-4a0a-9635-0aae23e038f8, servername: www.amd.com, host: www.amd.com, path: /, reality-opts: {public-key: hjJ1VN2xwcl1n7vrwvOspB2NFWrXNySUNPexutOVvAM, short-id: d3aea86e1949}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "🇺🇸 [openproxylist.com] vmess-US", server: 165.140.216.142, port: 443, type: vmess, uuid: b65a2d69-5634-42a2-e4be-54e8a6176900, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
@@ -492,6 +494,7 @@ proxy-groups:
     type: select
     proxies:
       - 140.245.126.240:56927
+      - 129.146.6.252:50356
       - 130.61.102.10:59924
       - 130.61.80.61:59924
       - 158.101.215.37:45819
@@ -499,6 +502,7 @@ proxy-groups:
       - 140.238.153.81:13345
       - 47.250.84.25:443
       - 134.98.151.67:62145
+      - 157.137.239.241:62145
       - 45.134.38.204:8064
       - 🇺🇸 [openproxylist.com] vmess-US
   - name: خودکار (بهترین پینگ) 🤖
@@ -508,6 +512,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 140.245.126.240:56927
+      - 129.146.6.252:50356
       - 130.61.102.10:59924
       - 130.61.80.61:59924
       - 158.101.215.37:45819
@@ -515,6 +520,7 @@ proxy-groups:
       - 140.238.153.81:13345
       - 47.250.84.25:443
       - 134.98.151.67:62145
+      - 157.137.239.241:62145
       - 45.134.38.204:8064
       - 🇺🇸 [openproxylist.com] vmess-US
   - name: پشتیبان (در صورت قطعی) 🧯
@@ -524,6 +530,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 140.245.126.240:56927
+      - 129.146.6.252:50356
       - 130.61.102.10:59924
       - 130.61.80.61:59924
       - 158.101.215.37:45819
@@ -531,6 +538,7 @@ proxy-groups:
       - 140.238.153.81:13345
       - 47.250.84.25:443
       - 134.98.151.67:62145
+      - 157.137.239.241:62145
       - 45.134.38.204:8064
       - 🇺🇸 [openproxylist.com] vmess-US
   - name: اتصال پایدار 🔗
@@ -549,6 +557,7 @@ proxy-groups:
     interval: 600
     proxies:
       - 140.245.126.240:56927
+      - 129.146.6.252:50356
       - 130.61.102.10:59924
       - 130.61.80.61:59924
       - 158.101.215.37:45819
@@ -556,6 +565,7 @@ proxy-groups:
       - 140.238.153.81:13345
       - 47.250.84.25:443
       - 134.98.151.67:62145
+      - 157.137.239.241:62145
       - 45.134.38.204:8064
       - 🇺🇸 [openproxylist.com] vmess-US
   - name: توزیع بار (گردشی) 🔁
@@ -565,6 +575,7 @@ proxy-groups:
     interval: 600
     proxies:
       - 140.245.126.240:56927
+      - 129.146.6.252:50356
       - 130.61.102.10:59924
       - 130.61.80.61:59924
       - 158.101.215.37:45819
@@ -572,6 +583,7 @@ proxy-groups:
       - 140.238.153.81:13345
       - 47.250.84.25:443
       - 134.98.151.67:62145
+      - 157.137.239.241:62145
       - 45.134.38.204:8064
       - 🇺🇸 [openproxylist.com] vmess-US
   - name: توزیع بار (موقت) ⏳
@@ -581,6 +593,7 @@ proxy-groups:
     interval: 600
     proxies:
       - 140.245.126.240:56927
+      - 129.146.6.252:50356
       - 130.61.102.10:59924
       - 130.61.80.61:59924
       - 158.101.215.37:45819
@@ -588,6 +601,7 @@ proxy-groups:
       - 140.238.153.81:13345
       - 47.250.84.25:443
       - 134.98.151.67:62145
+      - 157.137.239.241:62145
       - 45.134.38.204:8064
       - 🇺🇸 [openproxylist.com] vmess-US
   - name: دانلود منیجر 📥
