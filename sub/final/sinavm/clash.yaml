@@ -465,7 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@SiNAVM کانال تلگرام`", server: vip.sinavm.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 07730597-ba4f-4ca8-abe5-a53b28ad318c, servername: android.com, host: android.com, path: /, reality-opts: {public-key: 7JDEwF5DtVN9ym8x_tHcdA5-L5hH_JlYNf-ZXUYqu18, short-id: 3f958af268}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: SiNAVMBOT`, server: 150.251.138.142, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 263bae3e-f51c-4946-9c1f-2585347a3dd1, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: SiNAVM`, server: 150.251.138.142, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 263bae3e-f51c-4946-9c1f-2585347a3dd1, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: SiNAVM کانال تلگرامی`, server: 195.133.84.198, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 263bae3e-f51c-4946-9c1f-2585347a3dd1, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +484,27 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@SiNAVM کانال تلگرام`"
+      - SiNAVMBOT`
+      - SiNAVM`
+      - SiNAVM کانال تلگرامی`
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@SiNAVM کانال تلگرام`"
+      - SiNAVMBOT`
+      - SiNAVM`
+      - SiNAVM کانال تلگرامی`
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@SiNAVM کانال تلگرام`"
+      - SiNAVMBOT`
+      - SiNAVM`
+      - SiNAVM کانال تلگرامی`
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +520,27 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@SiNAVM کانال تلگرام`"
+      - SiNAVMBOT`
+      - SiNAVM`
+      - SiNAVM کانال تلگرامی`
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@SiNAVM کانال تلگرام`"
+      - SiNAVMBOT`
+      - SiNAVM`
+      - SiNAVM کانال تلگرامی`
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@SiNAVM کانال تلگرام`"
+      - SiNAVMBOT`
+      - SiNAVM`
+      - SiNAVM کانال تلگرامی`
   - name: دانلود منیجر 📥
     type: select
     proxies:
