@@ -465,8 +465,12 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@vpnbaz 🛸", server: 89.35.14.30, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be, servername: md1.univesalsrv.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: hub.v1.RelayService}, reality-opts: {public-key: xWejOQUn2koOUorUPSrHMLM-lyHlZ441KzxKc9bLmkY, short-id: 221ba6174224ca5b}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz 🌊", server: md5.univesalsrv.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be, servername: md5.univesalsrv.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: app.v1.PushService}, reality-opts: {public-key: 99MRki6b93wC-hhDHe9yq3IXE3KtPGw4RkFAnpI-8gg, short-id: aa9884f2982b7d3c}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz ⭐", server: 193.29.139.212, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: QCXDxuDlTTMD7jtgHUjIoj, udp: true, tfo: false}
+  - {name: "@vpnbaz 🍋‍🟩", server: 193.29.139.212, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: QCXDxuDlTTMD7jtgHUjIoj, udp: true, tfo: false}
+  - {name: "@vpnbaz 🛸", server: 157.173.7.200, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 64774bd8-3116-4eaa-a046-5ea4fc230b81, servername: node-fra02.rkitman.ru, host: node-fra02.rkitman.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 8C7evg_SSrJbxMTaUqJoylqB9HSNsmBvmUlgs_c5EiU, short-id: 88d9dc52ef39c8bd}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz ☂️", server: 67.159.43.203, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 9d8a55de-70df-44a9-973e-4ffa02d05f32, servername: cli-q.bosx.net, alpn: [http%2F1.1], network: ws, ws-opts: {path: /api/connect, headers: {Host: cli-q.bosx.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz 🌊", server: 151.101.56.7, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: da6ece67-aff5-4f94-94f3-08e87ca8cd51, servername: ssl.fastly.com, network: ws, ws-opts: {path: /, headers: {Host: ssl.fastly.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz 🍭", server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +487,36 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - "@vpnbaz ⭐"
+      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz 🛸"
+      - "@vpnbaz ☂️"
       - "@vpnbaz 🌊"
+      - "@vpnbaz 🍭"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
+      - "@vpnbaz ⭐"
+      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz 🛸"
+      - "@vpnbaz ☂️"
       - "@vpnbaz 🌊"
+      - "@vpnbaz 🍭"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
+      - "@vpnbaz ⭐"
+      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz 🛸"
+      - "@vpnbaz ☂️"
       - "@vpnbaz 🌊"
+      - "@vpnbaz 🍭"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +532,36 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@vpnbaz ⭐"
+      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz 🛸"
+      - "@vpnbaz ☂️"
       - "@vpnbaz 🌊"
+      - "@vpnbaz 🍭"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@vpnbaz ⭐"
+      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz 🛸"
+      - "@vpnbaz ☂️"
       - "@vpnbaz 🌊"
+      - "@vpnbaz 🍭"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@vpnbaz ⭐"
+      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz 🛸"
+      - "@vpnbaz ☂️"
       - "@vpnbaz 🌊"
+      - "@vpnbaz 🍭"
   - name: دانلود منیجر 📥
     type: select
     proxies:

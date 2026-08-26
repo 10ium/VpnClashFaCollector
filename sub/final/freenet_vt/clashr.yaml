@@ -5,200 +5,466 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 🇺🇸 United States, server: 139.28.168.55, port: 9080, type: hysteria2, ports: 9080, password: 0wdsa_nJXEWRj9jz9J9xMgtx_n7gzfK_m8, sni: grape-honk.yyuyy.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇮🇳 India, server: 103.120.178.193, port: 31348, type: ss, cipher: chacha20-ietf-poly1305, password: EBDRo9THx4CqiFU7h5gfov76oNwzZURAh0ZwbWjBKddtUhvz, udp: true, tfo: false}
-  - {name: 🇺🇸 United States`, server: 108.181.0.177, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: G5p6ww4o67HB, udp: true, tfo: false}
-  - {name: 🇸🇬 Singapore, server: 194.233.94.119, port: 443, type: ss, cipher: aes-256-gcm, password: 5QCeIKUZUEp4mR9Z, udp: true, tfo: false}
-  - {name: 🇸🇬 Singapore 2, server: 194.233.94.119, port: 80, type: ss, cipher: aes-256-gcm, password: 5QCeIKUZUEp4mR9Z, udp: true, tfo: false}
-  - {name: 🇧🇬 Bulgaria, server: 185.226.172.8, port: 8008, type: ss, cipher: aes-256-gcm, password: XKFKl2rULjIp74, udp: true, tfo: false}
-  - {name: 🇰🇷 South Korea, server: 141.164.45.187, port: 9101, type: ss, cipher: aes-256-gcm, password: e4FCWrgpkji3QY, udp: true, tfo: false}
-  - {name: 🇳🇱 The Netherlands, server: 85.17.145.65, port: 12068, type: vless, tls: true, packet-encoding: xudp, uuid: 05caca6c-9e97-4c0f-8edf-7b88a6e572c5, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇮🇷 Iran, server: 94.183.170.135, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 06c4e938-2954-478f-a870-ca1b163e30e9, servername: estproxy4.lockdwn.com, host: estproxy4.lockdwn.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇮🇷 Iran 2, server: estproxy4.lockdwn.com, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 06c4e938-2954-478f-a870-ca1b163e30e9, host: estproxy4.lockdwn.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇪🇸 Spain, server: 150.241.82.19, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f, servername: america.cendora.ru, host: america.cendora.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: v1hVg2Uc7Wsc_bhlLfKkML_HUGogQA9O9n9uZFwzQSM, short-id: 065cf4f1c7d83e79}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇺🇸 United States 2, server: 15.204.97.219, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇫🇷 France`, server: 51.158.206.29, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇳🇱 The Netherlands 2, server: 188.114.98.0, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 492465ab-3855-46f2-bac3-a2cd19074a87, servername: worker3.gahekif304.workers.dev, network: ws, ws-opts: {path: /NWpadfduJl5DcIDB, headers: {Host: worker3.gahekif304.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: none, server: 104.17.170.132, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: 49a9aa25-443b-4fab-9a85-066dd5396c57, network: ws, ws-opts: {path: /pyip=ProxyIP.KR.CMLiussss.net, headers: {Host: mute-river-6aee.421-bd7.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: none 2, server: skk.moe, port: 8880, type: vless, tls: true, packet-encoding: xudp, uuid: ba746959-18e7-471c-b00f-fa5cdd930abf, network: ws, ws-opts: {path: /pyip=ProxyIP.JP.CMLiussss.net, headers: {Host: crimson-bread-c38e.295.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇺🇸 United States 3, server: 66.163.117.58, port: 22324, type: vmess, uuid: 04621bae-ab36-11ec-b909-0242ac120002, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇬🇧 United Kingdom, server: 82.198.246.250, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇬🇧 United Kingdom 2, server: 82.198.246.233, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇬🇧 United Kingdom 3, server: 82.198.246.37, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, servername: fra5.chasem2026sud.com, udp: true, tfo: false}
-  - {name: 🇸🇬 Singapore 3, server: 129.226.157.220, port: 59121, type: vmess, uuid: d9865d63-d95c-454b-ba07-8e88b838a801, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇨🇦 Canada, server: 154.37.223.56, port: 52080, type: vmess, uuid: f1ac5c82-00a4-400b-bb20-530c91b7c5bb, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇺🇸 United States 4, server: 165.140.216.141, port: 443, type: vmess, uuid: e7d72a8d-26f2-4b54-b366-0c43e0bcba7d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Freenet_vt - 17, server: r3mrcg001287h3p.cybervena.com, port: 50099, type: ss, cipher: chacha20-ietf-poly1305, password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4, udp: true, tfo: false}
+  - {name: Freenet_vt - 31, server: r3mrcg001287h3p.cybervena.com, port: 50099, type: ss, cipher: chacha20-ietf-poly1305, password: 7e731ec3-f8e1-43f6-92cf-3978d14705c4, udp: true, tfo: false}
+  - {name: Freenet_vt - 52, server: 20.234.20.89, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 2OPuSlR6h3ZHql3h, udp: true, tfo: false}
+  - {name: Freenet_vt - 53, server: 20.234.20.89, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 2OPuSlR6h3ZHql3h, udp: true, tfo: false}
+  - {name: Freenet_vt - 1, server: 217.28.129.81, port: 42982, type: ss, cipher: chacha20-ietf-poly1305, password: yTEXWB6XBHyv9SfQJzCSRWCnRYutFdUXg1wbcbutxPwZE6Uxcurka3GkoatgEdX483XZSHeJp3jXcTShLCRM8rPgMF3vYNfS, udp: true, tfo: false}
+  - {name: Freenet_vt - 6, server: 217.28.129.81, port: 42982, type: ss, cipher: chacha20-ietf-poly1305, password: yTEXWB6XBHyv9SfQJzCSRWCnRYutFdUXg1wbcbutxPwZE6Uxcurka3GkoatgEdX483XZSHeJp3jXcTShLCRM8rPgMF3vYNfS, udp: true, tfo: false}
+  - {name: Freenet_vt - 2, server: autodiscover.fuzzyaytor.cyou, port: 42982, type: ss, cipher: chacha20-ietf-poly1305, password: yTEXWB6XBHyv9SfQJzCSRWCnRYutFdUXg1wbcbutxPwZE6Uxcurka3GkoatgEdX483XZSHeJp3jXcTShLCRM8rPgMF3vYNfS, udp: true, tfo: false}
+  - {name: Freenet_vt - 45, server: autodiscover.fuzzyaytor.cyou, port: 42982, type: ss, cipher: chacha20-ietf-poly1305, password: yTEXWB6XBHyv9SfQJzCSRWCnRYutFdUXg1wbcbutxPwZE6Uxcurka3GkoatgEdX483XZSHeJp3jXcTShLCRM8rPgMF3vYNfS, udp: true, tfo: false}
+  - {name: Freenet_vt - 3, server: 64.188.77.159, port: 8390, type: ss, cipher: chacha20-ietf-poly1305, password: EyGy11BMfeP-6UHjsgajWw, udp: true, tfo: false}
+  - {name: Freenet_vt - 44, server: 64.188.77.159, port: 8390, type: ss, cipher: chacha20-ietf-poly1305, password: EyGy11BMfeP-6UHjsgajWw, udp: true, tfo: false}
+  - {name: Freenet_vt - 7, server: 64.188.77.159, port: 8390, type: ss, cipher: chacha20-ietf-poly1305, password: EyGy11BMfeP-6UHjsgajWw, udp: true, tfo: false}
+  - {name: Freenet_vt - 8, server: 15.235.75.71, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: FD3rCuOsxOay, udp: true, tfo: false}
+  - {name: Freenet_vt - 12, server: 108.181.0.177, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: G5p6ww4o67HB, udp: true, tfo: false}
+  - {name: Freenet_vt - 26, server: 108.181.0.177, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: G5p6ww4o67HB, udp: true, tfo: false}
+  - {name: Freenet_vt - 50, server: 108.181.0.177, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: G5p6ww4o67HB, udp: true, tfo: false}
+  - {name: Freenet_vt - 49, server: 138.124.68.88, port: 1443, type: ss, cipher: chacha20-ietf-poly1305, password: OTgxZ, udp: true, tfo: false}
+  - {name: Freenet_vt - 51, server: 193.29.139.212, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: QCXDxuDlTTMD7jtgHUjIoj, udp: true, tfo: false}
+  - {name: Freenet_vt - 54, server: 193.29.139.212, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: QCXDxuDlTTMD7jtgHUjIoj, udp: true, tfo: false}
+  - {name: Freenet_vt - 55, server: 193.29.139.212, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: QCXDxuDlTTMD7jtgHUjIoj, udp: true, tfo: false}
+  - {name: Freenet_vt - 10, server: 31.76.82.131, port: 34260, type: ss, cipher: chacha20-ietf-poly1305, password: cTAObwg4OWWXkZJQs0ZdgC, udp: true, tfo: false}
+  - {name: Freenet_vt - 5, server: 31.76.82.131, port: 34260, type: ss, cipher: chacha20-ietf-poly1305, password: cTAObwg4OWWXkZJQs0ZdgC, udp: true, tfo: false}
+  - {name: Freenet_vt - 4, server: 64.90.7.12, port: 47509, type: ss, cipher: chacha20-ietf-poly1305, password: cgnu9tVCvDXc, udp: true, tfo: false}
+  - {name: Freenet_vt - 9, server: 64.90.7.12, port: 47509, type: ss, cipher: chacha20-ietf-poly1305, password: cgnu9tVCvDXc, udp: true, tfo: false}
+  - {name: Freenet_vt - 43, server: 103.149.182.105, port: 8388, type: ss, cipher: chacha20-ietf, password: asd123456, udp: true, tfo: false}
+  - {name: Freenet_vt - 19, server: 103.169.67.34, port: 65443, type: ss, cipher: aes-256-cfb, password: 7eadc6dbe2ae, udp: true, tfo: false}
+  - {name: Freenet_vt - 33, server: 103.169.67.34, port: 65443, type: ss, cipher: aes-256-cfb, password: 7eadc6dbe2ae, udp: true, tfo: false}
+  - {name: Freenet_vt - 18, server: 121.46.230.138, port: 65443, type: ss, cipher: aes-256-cfb, password: 7eadc6dbe2ae, udp: true, tfo: false}
+  - {name: Freenet_vt - 32, server: 121.46.230.138, port: 65443, type: ss, cipher: aes-256-cfb, password: 7eadc6dbe2ae, udp: true, tfo: false}
+  - {name: Freenet_vt - 15, server: 13.135.252.176, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true, tfo: false}
+  - {name: Freenet_vt - 29, server: 13.135.252.176, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true, tfo: false}
+  - {name: Freenet_vt - 42, server: 13.135.252.176, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true, tfo: false}
+  - {name: Freenet_vt - 24, server: 13.135.73.3, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true, tfo: false}
+  - {name: Freenet_vt - 38, server: 13.135.73.3, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true, tfo: false}
+  - {name: Freenet_vt - 14, server: 3.96.165.186, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true, tfo: false}
+  - {name: Freenet_vt - 28, server: 3.96.165.186, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true, tfo: false}
+  - {name: Freenet_vt - 16, server: 35.178.212.194, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true, tfo: false}
+  - {name: Freenet_vt - 30, server: 35.178.212.194, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true, tfo: false}
+  - {name: Freenet_vt - 11, server: 35.183.121.177, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true, tfo: false}
+  - {name: Freenet_vt - 25, server: 35.183.121.177, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true, tfo: false}
+  - {name: Freenet_vt - 13, server: 99.79.128.42, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true, tfo: false}
+  - {name: Freenet_vt - 27, server: 99.79.128.42, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05, udp: true, tfo: false}
+  - {name: Freenet_vt - 20, server: 211.178.105.134, port: 6123, type: ss, cipher: aes-256-cfb, password: qwerREWQ@@, udp: true, tfo: false}
+  - {name: Freenet_vt - 34, server: 211.178.105.134, port: 6123, type: ss, cipher: aes-256-cfb, password: qwerREWQ@@, udp: true, tfo: false}
+  - {name: Freenet_vt - 22, server: 218.237.185.230, port: 4652, type: ss, cipher: aes-256-cfb, password: qwerREWQ@@, udp: true, tfo: false}
+  - {name: Freenet_vt - 36, server: 218.237.185.230, port: 4652, type: ss, cipher: aes-256-cfb, password: qwerREWQ@@, udp: true, tfo: false}
+  - {name: Freenet_vt - 23, server: 221.139.79.57, port: 13979, type: ss, cipher: aes-256-cfb, password: qwerREWQ@@, udp: true, tfo: false}
+  - {name: Freenet_vt - 37, server: 221.139.79.57, port: 13979, type: ss, cipher: aes-256-cfb, password: qwerREWQ@@, udp: true, tfo: false}
+  - {name: Freenet_vt - 21, server: p141.panda001.net, port: 4652, type: ss, cipher: aes-256-cfb, password: qwerREWQ@@, udp: true, tfo: false}
+  - {name: Freenet_vt - 35, server: p141.panda001.net, port: 4652, type: ss, cipher: aes-256-cfb, password: qwerREWQ@@, udp: true, tfo: false}
+  - {name: Freenet_vt - 41`, server: 194.233.94.119, port: 443, type: ss, cipher: aes-256-gcm, password: 5QCeIKUZUEp4mR9Z, udp: true, tfo: false}
+  - {name: Freenet_vt - 40, server: 15.204.247.124, port: 2375, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true, tfo: false}
+  - {name: Freenet_vt - 39, server: 146.70.23.32, port: 8080, type: ss, cipher: rc4-md5, password: 14fFPrbezE3HDZzsMOr6, udp: true, tfo: false}
+  - {name: Freenet_vt - 48, server: 146.70.23.32, port: 8080, type: ss, cipher: rc4-md5, password: 14fFPrbezE3HDZzsMOr6, udp: true, tfo: false}
+  - {name: Freenet_vt - 46, server: 119.246.1.143, port: 443, type: trojan, password: BxceQaOe, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Freenet_vt - 56, server: 188.114.97.6, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 248b7825-58e7-41cc-899f-95e573e0127b, servername: dry-violet-d6e0.38-431.workers.dev, network: ws, ws-opts: {path: /pyip=ProxyIP.US.CMLiussss.net, headers: {Host: dry-violet-d6e0.38-431.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Freenet_vt - 59, server: 188.114.97.6, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 248b7825-58e7-41cc-899f-95e573e0127b, servername: dry-violet-d6e0.38-431.workers.dev, network: ws, ws-opts: {path: /pyip=ProxyIP.US.CMLiussss.net, headers: {Host: dry-violet-d6e0.38-431.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Freenet_vt - 58, server: 188.114.97.6, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 248b7825-58e7-41cc-899f-95e573e0127b, network: ws, ws-opts: {path: /pyip=ProxyIP.US.CMLiussss.net, headers: {Host: dry-violet-d6e0.38-431.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Freenet_vt - 61`, server: 188.114.97.6, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 248b7825-58e7-41cc-899f-95e573e0127b, network: ws, ws-opts: {path: /pyip=ProxyIP.US.CMLiussss.net, headers: {Host: dry-violet-d6e0.38-431.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Freenet_vt - 47, server: new3.api.go-vpn.club, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 41e71ba7-d389-47aa-94f7-ed1f55fdbcdf, servername: cdnjs.com, host: cdnjs.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: E1te_g9q6EWQVOCgjwI4PF-cml9qqW7OEAf33tYkUxQ, short-id: 17d334ad29b2ff40}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Freenet_vt - 57, server: 188.114.97.6, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d1eeb74f-e5ea-45eb-9934-5376bfeb5ba4, servername: fragrant-shape-07a0.269-144.workers.dev, network: ws, ws-opts: {path: /pyip=ProxyIP.SG.CMLiussss.net, headers: {Host: fragrant-shape-07a0.269-144.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Freenet_vt - 60, server: 188.114.97.6, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d1eeb74f-e5ea-45eb-9934-5376bfeb5ba4, servername: fragrant-shape-07a0.269-144.workers.dev, network: ws, ws-opts: {path: /pyip=ProxyIP.SG.CMLiussss.net, headers: {Host: fragrant-shape-07a0.269-144.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇺🇸 United States
-      - 🇮🇳 India
-      - 🇺🇸 United States`
-      - 🇸🇬 Singapore
-      - 🇸🇬 Singapore 2
-      - 🇧🇬 Bulgaria
-      - 🇰🇷 South Korea
-      - 🇳🇱 The Netherlands
-      - 🇮🇷 Iran
-      - 🇮🇷 Iran 2
-      - 🇪🇸 Spain
-      - 🇺🇸 United States 2
-      - 🇫🇷 France`
-      - 🇳🇱 The Netherlands 2
-      - none
-      - none 2
-      - 🇺🇸 United States 3
-      - 🇬🇧 United Kingdom
-      - 🇬🇧 United Kingdom 2
-      - 🇬🇧 United Kingdom 3
-      - 🇸🇬 Singapore 3
-      - 🇨🇦 Canada
-      - 🇺🇸 United States 4
+      - Freenet_vt - 17
+      - Freenet_vt - 31
+      - Freenet_vt - 52
+      - Freenet_vt - 53
+      - Freenet_vt - 1
+      - Freenet_vt - 6
+      - Freenet_vt - 2
+      - Freenet_vt - 45
+      - Freenet_vt - 3
+      - Freenet_vt - 44
+      - Freenet_vt - 7
+      - Freenet_vt - 8
+      - Freenet_vt - 12
+      - Freenet_vt - 26
+      - Freenet_vt - 50
+      - Freenet_vt - 49
+      - Freenet_vt - 51
+      - Freenet_vt - 54
+      - Freenet_vt - 55
+      - Freenet_vt - 10
+      - Freenet_vt - 5
+      - Freenet_vt - 4
+      - Freenet_vt - 9
+      - Freenet_vt - 43
+      - Freenet_vt - 19
+      - Freenet_vt - 33
+      - Freenet_vt - 18
+      - Freenet_vt - 32
+      - Freenet_vt - 15
+      - Freenet_vt - 29
+      - Freenet_vt - 42
+      - Freenet_vt - 24
+      - Freenet_vt - 38
+      - Freenet_vt - 14
+      - Freenet_vt - 28
+      - Freenet_vt - 16
+      - Freenet_vt - 30
+      - Freenet_vt - 11
+      - Freenet_vt - 25
+      - Freenet_vt - 13
+      - Freenet_vt - 27
+      - Freenet_vt - 20
+      - Freenet_vt - 34
+      - Freenet_vt - 22
+      - Freenet_vt - 36
+      - Freenet_vt - 23
+      - Freenet_vt - 37
+      - Freenet_vt - 21
+      - Freenet_vt - 35
+      - Freenet_vt - 41`
+      - Freenet_vt - 40
+      - Freenet_vt - 39
+      - Freenet_vt - 48
+      - Freenet_vt - 46
+      - Freenet_vt - 56
+      - Freenet_vt - 59
+      - Freenet_vt - 58
+      - Freenet_vt - 61`
+      - Freenet_vt - 47
+      - Freenet_vt - 57
+      - Freenet_vt - 60
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 🇺🇸 United States
-      - 🇮🇳 India
-      - 🇺🇸 United States`
-      - 🇸🇬 Singapore
-      - 🇸🇬 Singapore 2
-      - 🇧🇬 Bulgaria
-      - 🇰🇷 South Korea
-      - 🇳🇱 The Netherlands
-      - 🇮🇷 Iran
-      - 🇮🇷 Iran 2
-      - 🇪🇸 Spain
-      - 🇺🇸 United States 2
-      - 🇫🇷 France`
-      - 🇳🇱 The Netherlands 2
-      - none
-      - none 2
-      - 🇺🇸 United States 3
-      - 🇬🇧 United Kingdom
-      - 🇬🇧 United Kingdom 2
-      - 🇬🇧 United Kingdom 3
-      - 🇸🇬 Singapore 3
-      - 🇨🇦 Canada
-      - 🇺🇸 United States 4
+      - Freenet_vt - 17
+      - Freenet_vt - 31
+      - Freenet_vt - 52
+      - Freenet_vt - 53
+      - Freenet_vt - 1
+      - Freenet_vt - 6
+      - Freenet_vt - 2
+      - Freenet_vt - 45
+      - Freenet_vt - 3
+      - Freenet_vt - 44
+      - Freenet_vt - 7
+      - Freenet_vt - 8
+      - Freenet_vt - 12
+      - Freenet_vt - 26
+      - Freenet_vt - 50
+      - Freenet_vt - 49
+      - Freenet_vt - 51
+      - Freenet_vt - 54
+      - Freenet_vt - 55
+      - Freenet_vt - 10
+      - Freenet_vt - 5
+      - Freenet_vt - 4
+      - Freenet_vt - 9
+      - Freenet_vt - 43
+      - Freenet_vt - 19
+      - Freenet_vt - 33
+      - Freenet_vt - 18
+      - Freenet_vt - 32
+      - Freenet_vt - 15
+      - Freenet_vt - 29
+      - Freenet_vt - 42
+      - Freenet_vt - 24
+      - Freenet_vt - 38
+      - Freenet_vt - 14
+      - Freenet_vt - 28
+      - Freenet_vt - 16
+      - Freenet_vt - 30
+      - Freenet_vt - 11
+      - Freenet_vt - 25
+      - Freenet_vt - 13
+      - Freenet_vt - 27
+      - Freenet_vt - 20
+      - Freenet_vt - 34
+      - Freenet_vt - 22
+      - Freenet_vt - 36
+      - Freenet_vt - 23
+      - Freenet_vt - 37
+      - Freenet_vt - 21
+      - Freenet_vt - 35
+      - Freenet_vt - 41`
+      - Freenet_vt - 40
+      - Freenet_vt - 39
+      - Freenet_vt - 48
+      - Freenet_vt - 46
+      - Freenet_vt - 56
+      - Freenet_vt - 59
+      - Freenet_vt - 58
+      - Freenet_vt - 61`
+      - Freenet_vt - 47
+      - Freenet_vt - 57
+      - Freenet_vt - 60
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇺🇸 United States
-      - 🇮🇳 India
-      - 🇺🇸 United States`
-      - 🇸🇬 Singapore
-      - 🇸🇬 Singapore 2
-      - 🇧🇬 Bulgaria
-      - 🇰🇷 South Korea
-      - 🇳🇱 The Netherlands
-      - 🇮🇷 Iran
-      - 🇮🇷 Iran 2
-      - 🇪🇸 Spain
-      - 🇺🇸 United States 2
-      - 🇫🇷 France`
-      - 🇳🇱 The Netherlands 2
-      - none
-      - none 2
-      - 🇺🇸 United States 3
-      - 🇬🇧 United Kingdom
-      - 🇬🇧 United Kingdom 2
-      - 🇬🇧 United Kingdom 3
-      - 🇸🇬 Singapore 3
-      - 🇨🇦 Canada
-      - 🇺🇸 United States 4
+      - Freenet_vt - 17
+      - Freenet_vt - 31
+      - Freenet_vt - 52
+      - Freenet_vt - 53
+      - Freenet_vt - 1
+      - Freenet_vt - 6
+      - Freenet_vt - 2
+      - Freenet_vt - 45
+      - Freenet_vt - 3
+      - Freenet_vt - 44
+      - Freenet_vt - 7
+      - Freenet_vt - 8
+      - Freenet_vt - 12
+      - Freenet_vt - 26
+      - Freenet_vt - 50
+      - Freenet_vt - 49
+      - Freenet_vt - 51
+      - Freenet_vt - 54
+      - Freenet_vt - 55
+      - Freenet_vt - 10
+      - Freenet_vt - 5
+      - Freenet_vt - 4
+      - Freenet_vt - 9
+      - Freenet_vt - 43
+      - Freenet_vt - 19
+      - Freenet_vt - 33
+      - Freenet_vt - 18
+      - Freenet_vt - 32
+      - Freenet_vt - 15
+      - Freenet_vt - 29
+      - Freenet_vt - 42
+      - Freenet_vt - 24
+      - Freenet_vt - 38
+      - Freenet_vt - 14
+      - Freenet_vt - 28
+      - Freenet_vt - 16
+      - Freenet_vt - 30
+      - Freenet_vt - 11
+      - Freenet_vt - 25
+      - Freenet_vt - 13
+      - Freenet_vt - 27
+      - Freenet_vt - 20
+      - Freenet_vt - 34
+      - Freenet_vt - 22
+      - Freenet_vt - 36
+      - Freenet_vt - 23
+      - Freenet_vt - 37
+      - Freenet_vt - 21
+      - Freenet_vt - 35
+      - Freenet_vt - 41`
+      - Freenet_vt - 40
+      - Freenet_vt - 39
+      - Freenet_vt - 48
+      - Freenet_vt - 46
+      - Freenet_vt - 56
+      - Freenet_vt - 59
+      - Freenet_vt - 58
+      - Freenet_vt - 61`
+      - Freenet_vt - 47
+      - Freenet_vt - 57
+      - Freenet_vt - 60
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇺🇸 United States
-      - 🇮🇳 India
-      - 🇺🇸 United States`
-      - 🇸🇬 Singapore
-      - 🇸🇬 Singapore 2
-      - 🇧🇬 Bulgaria
-      - 🇰🇷 South Korea
-      - 🇳🇱 The Netherlands
-      - 🇮🇷 Iran
-      - 🇮🇷 Iran 2
-      - 🇪🇸 Spain
-      - 🇺🇸 United States 2
-      - 🇫🇷 France`
-      - 🇳🇱 The Netherlands 2
-      - none
-      - none 2
-      - 🇺🇸 United States 3
-      - 🇬🇧 United Kingdom
-      - 🇬🇧 United Kingdom 2
-      - 🇬🇧 United Kingdom 3
-      - 🇸🇬 Singapore 3
-      - 🇨🇦 Canada
-      - 🇺🇸 United States 4
+      - Freenet_vt - 17
+      - Freenet_vt - 31
+      - Freenet_vt - 52
+      - Freenet_vt - 53
+      - Freenet_vt - 1
+      - Freenet_vt - 6
+      - Freenet_vt - 2
+      - Freenet_vt - 45
+      - Freenet_vt - 3
+      - Freenet_vt - 44
+      - Freenet_vt - 7
+      - Freenet_vt - 8
+      - Freenet_vt - 12
+      - Freenet_vt - 26
+      - Freenet_vt - 50
+      - Freenet_vt - 49
+      - Freenet_vt - 51
+      - Freenet_vt - 54
+      - Freenet_vt - 55
+      - Freenet_vt - 10
+      - Freenet_vt - 5
+      - Freenet_vt - 4
+      - Freenet_vt - 9
+      - Freenet_vt - 43
+      - Freenet_vt - 19
+      - Freenet_vt - 33
+      - Freenet_vt - 18
+      - Freenet_vt - 32
+      - Freenet_vt - 15
+      - Freenet_vt - 29
+      - Freenet_vt - 42
+      - Freenet_vt - 24
+      - Freenet_vt - 38
+      - Freenet_vt - 14
+      - Freenet_vt - 28
+      - Freenet_vt - 16
+      - Freenet_vt - 30
+      - Freenet_vt - 11
+      - Freenet_vt - 25
+      - Freenet_vt - 13
+      - Freenet_vt - 27
+      - Freenet_vt - 20
+      - Freenet_vt - 34
+      - Freenet_vt - 22
+      - Freenet_vt - 36
+      - Freenet_vt - 23
+      - Freenet_vt - 37
+      - Freenet_vt - 21
+      - Freenet_vt - 35
+      - Freenet_vt - 41`
+      - Freenet_vt - 40
+      - Freenet_vt - 39
+      - Freenet_vt - 48
+      - Freenet_vt - 46
+      - Freenet_vt - 56
+      - Freenet_vt - 59
+      - Freenet_vt - 58
+      - Freenet_vt - 61`
+      - Freenet_vt - 47
+      - Freenet_vt - 57
+      - Freenet_vt - 60
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 🇺🇸 United States
-      - 🇮🇳 India
-      - 🇺🇸 United States`
-      - 🇸🇬 Singapore
-      - 🇸🇬 Singapore 2
-      - 🇧🇬 Bulgaria
-      - 🇰🇷 South Korea
-      - 🇳🇱 The Netherlands
-      - 🇮🇷 Iran
-      - 🇮🇷 Iran 2
-      - 🇪🇸 Spain
-      - 🇺🇸 United States 2
-      - 🇫🇷 France`
-      - 🇳🇱 The Netherlands 2
-      - none
-      - none 2
-      - 🇺🇸 United States 3
-      - 🇬🇧 United Kingdom
-      - 🇬🇧 United Kingdom 2
-      - 🇬🇧 United Kingdom 3
-      - 🇸🇬 Singapore 3
-      - 🇨🇦 Canada
-      - 🇺🇸 United States 4
+      - Freenet_vt - 17
+      - Freenet_vt - 31
+      - Freenet_vt - 52
+      - Freenet_vt - 53
+      - Freenet_vt - 1
+      - Freenet_vt - 6
+      - Freenet_vt - 2
+      - Freenet_vt - 45
+      - Freenet_vt - 3
+      - Freenet_vt - 44
+      - Freenet_vt - 7
+      - Freenet_vt - 8
+      - Freenet_vt - 12
+      - Freenet_vt - 26
+      - Freenet_vt - 50
+      - Freenet_vt - 49
+      - Freenet_vt - 51
+      - Freenet_vt - 54
+      - Freenet_vt - 55
+      - Freenet_vt - 10
+      - Freenet_vt - 5
+      - Freenet_vt - 4
+      - Freenet_vt - 9
+      - Freenet_vt - 43
+      - Freenet_vt - 19
+      - Freenet_vt - 33
+      - Freenet_vt - 18
+      - Freenet_vt - 32
+      - Freenet_vt - 15
+      - Freenet_vt - 29
+      - Freenet_vt - 42
+      - Freenet_vt - 24
+      - Freenet_vt - 38
+      - Freenet_vt - 14
+      - Freenet_vt - 28
+      - Freenet_vt - 16
+      - Freenet_vt - 30
+      - Freenet_vt - 11
+      - Freenet_vt - 25
+      - Freenet_vt - 13
+      - Freenet_vt - 27
+      - Freenet_vt - 20
+      - Freenet_vt - 34
+      - Freenet_vt - 22
+      - Freenet_vt - 36
+      - Freenet_vt - 23
+      - Freenet_vt - 37
+      - Freenet_vt - 21
+      - Freenet_vt - 35
+      - Freenet_vt - 41`
+      - Freenet_vt - 40
+      - Freenet_vt - 39
+      - Freenet_vt - 48
+      - Freenet_vt - 46
+      - Freenet_vt - 56
+      - Freenet_vt - 59
+      - Freenet_vt - 58
+      - Freenet_vt - 61`
+      - Freenet_vt - 47
+      - Freenet_vt - 57
+      - Freenet_vt - 60
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇺🇸 United States
-      - 🇮🇳 India
-      - 🇺🇸 United States`
-      - 🇸🇬 Singapore
-      - 🇸🇬 Singapore 2
-      - 🇧🇬 Bulgaria
-      - 🇰🇷 South Korea
-      - 🇳🇱 The Netherlands
-      - 🇮🇷 Iran
-      - 🇮🇷 Iran 2
-      - 🇪🇸 Spain
-      - 🇺🇸 United States 2
-      - 🇫🇷 France`
-      - 🇳🇱 The Netherlands 2
-      - none
-      - none 2
-      - 🇺🇸 United States 3
-      - 🇬🇧 United Kingdom
-      - 🇬🇧 United Kingdom 2
-      - 🇬🇧 United Kingdom 3
-      - 🇸🇬 Singapore 3
-      - 🇨🇦 Canada
-      - 🇺🇸 United States 4
+      - Freenet_vt - 17
+      - Freenet_vt - 31
+      - Freenet_vt - 52
+      - Freenet_vt - 53
+      - Freenet_vt - 1
+      - Freenet_vt - 6
+      - Freenet_vt - 2
+      - Freenet_vt - 45
+      - Freenet_vt - 3
+      - Freenet_vt - 44
+      - Freenet_vt - 7
+      - Freenet_vt - 8
+      - Freenet_vt - 12
+      - Freenet_vt - 26
+      - Freenet_vt - 50
+      - Freenet_vt - 49
+      - Freenet_vt - 51
+      - Freenet_vt - 54
+      - Freenet_vt - 55
+      - Freenet_vt - 10
+      - Freenet_vt - 5
+      - Freenet_vt - 4
+      - Freenet_vt - 9
+      - Freenet_vt - 43
+      - Freenet_vt - 19
+      - Freenet_vt - 33
+      - Freenet_vt - 18
+      - Freenet_vt - 32
+      - Freenet_vt - 15
+      - Freenet_vt - 29
+      - Freenet_vt - 42
+      - Freenet_vt - 24
+      - Freenet_vt - 38
+      - Freenet_vt - 14
+      - Freenet_vt - 28
+      - Freenet_vt - 16
+      - Freenet_vt - 30
+      - Freenet_vt - 11
+      - Freenet_vt - 25
+      - Freenet_vt - 13
+      - Freenet_vt - 27
+      - Freenet_vt - 20
+      - Freenet_vt - 34
+      - Freenet_vt - 22
+      - Freenet_vt - 36
+      - Freenet_vt - 23
+      - Freenet_vt - 37
+      - Freenet_vt - 21
+      - Freenet_vt - 35
+      - Freenet_vt - 41`
+      - Freenet_vt - 40
+      - Freenet_vt - 39
+      - Freenet_vt - 48
+      - Freenet_vt - 46
+      - Freenet_vt - 56
+      - Freenet_vt - 59
+      - Freenet_vt - 58
+      - Freenet_vt - 61`
+      - Freenet_vt - 47
+      - Freenet_vt - 57
+      - Freenet_vt - 60
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -226,29 +492,67 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇺🇸 United States
-      - 🇮🇳 India
-      - 🇺🇸 United States`
-      - 🇸🇬 Singapore
-      - 🇸🇬 Singapore 2
-      - 🇧🇬 Bulgaria
-      - 🇰🇷 South Korea
-      - 🇳🇱 The Netherlands
-      - 🇮🇷 Iran
-      - 🇮🇷 Iran 2
-      - 🇪🇸 Spain
-      - 🇺🇸 United States 2
-      - 🇫🇷 France`
-      - 🇳🇱 The Netherlands 2
-      - none
-      - none 2
-      - 🇺🇸 United States 3
-      - 🇬🇧 United Kingdom
-      - 🇬🇧 United Kingdom 2
-      - 🇬🇧 United Kingdom 3
-      - 🇸🇬 Singapore 3
-      - 🇨🇦 Canada
-      - 🇺🇸 United States 4
+      - Freenet_vt - 17
+      - Freenet_vt - 31
+      - Freenet_vt - 52
+      - Freenet_vt - 53
+      - Freenet_vt - 1
+      - Freenet_vt - 6
+      - Freenet_vt - 2
+      - Freenet_vt - 45
+      - Freenet_vt - 3
+      - Freenet_vt - 44
+      - Freenet_vt - 7
+      - Freenet_vt - 8
+      - Freenet_vt - 12
+      - Freenet_vt - 26
+      - Freenet_vt - 50
+      - Freenet_vt - 49
+      - Freenet_vt - 51
+      - Freenet_vt - 54
+      - Freenet_vt - 55
+      - Freenet_vt - 10
+      - Freenet_vt - 5
+      - Freenet_vt - 4
+      - Freenet_vt - 9
+      - Freenet_vt - 43
+      - Freenet_vt - 19
+      - Freenet_vt - 33
+      - Freenet_vt - 18
+      - Freenet_vt - 32
+      - Freenet_vt - 15
+      - Freenet_vt - 29
+      - Freenet_vt - 42
+      - Freenet_vt - 24
+      - Freenet_vt - 38
+      - Freenet_vt - 14
+      - Freenet_vt - 28
+      - Freenet_vt - 16
+      - Freenet_vt - 30
+      - Freenet_vt - 11
+      - Freenet_vt - 25
+      - Freenet_vt - 13
+      - Freenet_vt - 27
+      - Freenet_vt - 20
+      - Freenet_vt - 34
+      - Freenet_vt - 22
+      - Freenet_vt - 36
+      - Freenet_vt - 23
+      - Freenet_vt - 37
+      - Freenet_vt - 21
+      - Freenet_vt - 35
+      - Freenet_vt - 41`
+      - Freenet_vt - 40
+      - Freenet_vt - 39
+      - Freenet_vt - 48
+      - Freenet_vt - 46
+      - Freenet_vt - 56
+      - Freenet_vt - 59
+      - Freenet_vt - 58
+      - Freenet_vt - 61`
+      - Freenet_vt - 47
+      - Freenet_vt - 57
+      - Freenet_vt - 60
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

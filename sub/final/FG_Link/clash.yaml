@@ -465,9 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: IT_604_@Surfboardv2ray, server: 57.131.32.191, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 1e280316-0408-47c4-b058-05b8f1f17f02, network: ws, ws-opts: {path: /vless/, headers: {Host: OV-Italy1.09vpn.com}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "اگه میخوای قطع نشی جوین شو : @farsiproxy", server: 169.40.42.15, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d65cc14c-f53f-4fe2-b262-97856601319c, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg, short-id: c39cc7310a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: Server 19, server: 169.40.42.173, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d65cc14c-f53f-4fe2-b262-97856601319c, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg, short-id: c39cc7310a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@v2raybaaz ⁵", server: 169.40.42.212, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d65cc14c-f53f-4fe2-b262-97856601319c, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg, short-id: c39cc7310a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇫🇷 [openproxylist.com] vmess-FR", server: 62.210.127.120, port: 23388, type: vmess, uuid: 3a966d20-7b9d-48cc-ba2c-8d38161b6d3a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /github.com/Alvin9999-newpac/fanqiang, headers: {Host: engage.cloudflareclient.com}}, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,27 +486,33 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - IT_604_@Surfboardv2ray
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
       - Server 19
       - "@v2raybaaz ⁵"
+      - 🇫🇷 [openproxylist.com] vmess-FR
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
+      - IT_604_@Surfboardv2ray
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
       - Server 19
       - "@v2raybaaz ⁵"
+      - 🇫🇷 [openproxylist.com] vmess-FR
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
+      - IT_604_@Surfboardv2ray
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
       - Server 19
       - "@v2raybaaz ⁵"
+      - 🇫🇷 [openproxylist.com] vmess-FR
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -520,27 +528,33 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - IT_604_@Surfboardv2ray
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
       - Server 19
       - "@v2raybaaz ⁵"
+      - 🇫🇷 [openproxylist.com] vmess-FR
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - IT_604_@Surfboardv2ray
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
       - Server 19
       - "@v2raybaaz ⁵"
+      - 🇫🇷 [openproxylist.com] vmess-FR
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - IT_604_@Surfboardv2ray
       - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
       - Server 19
       - "@v2raybaaz ⁵"
+      - 🇫🇷 [openproxylist.com] vmess-FR
   - name: دانلود منیجر 📥
     type: select
     proxies:
