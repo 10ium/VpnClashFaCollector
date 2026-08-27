@@ -5,74 +5,46 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: IT_604_@Surfboardv2ray, server: 57.131.32.191, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 1e280316-0408-47c4-b058-05b8f1f17f02, network: ws, ws-opts: {path: /vless/, headers: {Host: OV-Italy1.09vpn.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "اگه میخوای قطع نشی جوین شو : @farsiproxy", server: 169.40.42.15, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d65cc14c-f53f-4fe2-b262-97856601319c, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg, short-id: c39cc7310a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Server 19, server: 169.40.42.173, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d65cc14c-f53f-4fe2-b262-97856601319c, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg, short-id: c39cc7310a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2raybaaz ⁵", server: 169.40.42.212, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d65cc14c-f53f-4fe2-b262-97856601319c, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg, short-id: c39cc7310a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "🇫🇷 [openproxylist.com] vmess-FR", server: 62.210.127.120, port: 23388, type: vmess, uuid: 3a966d20-7b9d-48cc-ba2c-8d38161b6d3a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /github.com/Alvin9999-newpac/fanqiang, headers: {Host: engage.cloudflareclient.com}}, udp: true, tfo: false}
+  - {name: "@FG_Link", server: 188.114.97.6, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 97532b08-357e-4140-a6f0-8e07f2ed3327, network: ws, ws-opts: {path: /proxyip=kr.william.us.ci, headers: {Host: yf2.yifangg.de5.net}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - IT_604_@Surfboardv2ray
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
-      - Server 19
-      - "@v2raybaaz ⁵"
-      - 🇫🇷 [openproxylist.com] vmess-FR
+      - "@FG_Link"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - IT_604_@Surfboardv2ray
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
-      - Server 19
-      - "@v2raybaaz ⁵"
-      - 🇫🇷 [openproxylist.com] vmess-FR
+      - "@FG_Link"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - IT_604_@Surfboardv2ray
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
-      - Server 19
-      - "@v2raybaaz ⁵"
-      - 🇫🇷 [openproxylist.com] vmess-FR
+      - "@FG_Link"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - IT_604_@Surfboardv2ray
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
-      - Server 19
-      - "@v2raybaaz ⁵"
-      - 🇫🇷 [openproxylist.com] vmess-FR
+      - "@FG_Link"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - IT_604_@Surfboardv2ray
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
-      - Server 19
-      - "@v2raybaaz ⁵"
-      - 🇫🇷 [openproxylist.com] vmess-FR
+      - "@FG_Link"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - IT_604_@Surfboardv2ray
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
-      - Server 19
-      - "@v2raybaaz ⁵"
-      - 🇫🇷 [openproxylist.com] vmess-FR
+      - "@FG_Link"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -100,11 +72,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - IT_604_@Surfboardv2ray
-      - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
-      - Server 19
-      - "@v2raybaaz ⁵"
-      - 🇫🇷 [openproxylist.com] vmess-FR
+      - "@FG_Link"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

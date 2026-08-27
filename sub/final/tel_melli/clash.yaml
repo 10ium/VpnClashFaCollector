@@ -465,11 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@v2box_meli🇯🇵", server: 43.163.241.110, port: 24477, type: vless, tls: true, packet-encoding: xudp, uuid: 2bc72bec-0c2a-4c6b-aa9f-138bfce7ba0d, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@MetiVIP⚡🇹🇷⚡", server: 213.156.152.110, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 79c08658-753d-41f7-90af-dd03b0e68f75, host: amp-api-edge.apps.apple.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2box_meli💜", server: 213.156.152.110, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 79c08658-753d-41f7-90af-dd03b0e68f75, host: amp-api-edge.apps.apple.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2box_meli🖤", server: 151.101.56.7, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: da6ece67-aff5-4f94-94f3-08e87ca8cd51, servername: ssl.fastly.com, network: ws, ws-opts: {path: /, headers: {Host: ssl.fastly.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2box_meli☃️", server: 31.76.79.118, port: 2444, type: vless, tls: true, packet-encoding: xudp, uuid: fc1ee51e-72ec-4af0-ab0f-540c9e22427b, servername: www.cloudflare.com, host: www.cloudflare.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: JsSTmS0VKNaHF-_QKYS-_utnS-LJuPOBrWcMbVE2RDA, short-id: 0809f782a29a2030}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2box_meli🪼", server: 69.46.46.201, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 1c788c0e-50a1-aa52-9cb4-e5aa1f3c0f73, servername: misty-heron-b4c2-production.up.railway.app, alpn: [http%2F1.1], network: ws, ws-opts: {path: /ws/1c788c0e-50a1-aa52-9cb4-e5aa1f3c0f73, headers: {Host: misty-heron-b4c2-production.up.railway.app}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2box_meli☃️", server: 83.168.71.216, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a18f7c2d-9e45-4b8a-af3c-1d5e7f9c8b2a, servername: ads.x5.ru, host: ads.x5.ru, path: /, reality-opts: {public-key: 8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho, short-id: 2f49bccf11150ef2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2box_meli💝", server: 83.168.71.216, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a18f7c2d-9e45-4b8a-af3c-1d5e7f9c8b2a, servername: ads.x5.ru, host: ads.x5.ru, path: /, reality-opts: {public-key: 8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho, short-id: 2f49bccf11150ef2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2box_meli🫀", server: 69.46.46.100, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b1d8b743-ea5e-2838-479b-96988a514425, servername: swift-ridge-eccc-production.up.railway.app, alpn: [http%2F1.1], network: ws, ws-opts: {path: /ws/b1d8b743-ea5e-2838-479b-96988a514425, headers: {Host: swift-ridge-eccc-production.up.railway.app}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2box_meli🥷", server: 199.232.78.159, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d8b21930-bea8-40de-ba70-c460480c1fd0, servername: ssl.fastly.com, network: ws, ws-opts: {path: /, headers: {Host: ssl.fastly.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,33 +486,33 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@v2box_meli🇯🇵"
-      - "@MetiVIP⚡🇹🇷⚡"
-      - "@v2box_meli💜"
-      - "@v2box_meli🖤"
+      - "@v2box_meli🪼"
       - "@v2box_meli☃️"
+      - "@v2box_meli💝"
+      - "@v2box_meli🫀"
+      - "@v2box_meli🥷"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@v2box_meli🇯🇵"
-      - "@MetiVIP⚡🇹🇷⚡"
-      - "@v2box_meli💜"
-      - "@v2box_meli🖤"
+      - "@v2box_meli🪼"
       - "@v2box_meli☃️"
+      - "@v2box_meli💝"
+      - "@v2box_meli🫀"
+      - "@v2box_meli🥷"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@v2box_meli🇯🇵"
-      - "@MetiVIP⚡🇹🇷⚡"
-      - "@v2box_meli💜"
-      - "@v2box_meli🖤"
+      - "@v2box_meli🪼"
       - "@v2box_meli☃️"
+      - "@v2box_meli💝"
+      - "@v2box_meli🫀"
+      - "@v2box_meli🥷"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -528,33 +528,33 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2box_meli🇯🇵"
-      - "@MetiVIP⚡🇹🇷⚡"
-      - "@v2box_meli💜"
-      - "@v2box_meli🖤"
+      - "@v2box_meli🪼"
       - "@v2box_meli☃️"
+      - "@v2box_meli💝"
+      - "@v2box_meli🫀"
+      - "@v2box_meli🥷"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2box_meli🇯🇵"
-      - "@MetiVIP⚡🇹🇷⚡"
-      - "@v2box_meli💜"
-      - "@v2box_meli🖤"
+      - "@v2box_meli🪼"
       - "@v2box_meli☃️"
+      - "@v2box_meli💝"
+      - "@v2box_meli🫀"
+      - "@v2box_meli🥷"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2box_meli🇯🇵"
-      - "@MetiVIP⚡🇹🇷⚡"
-      - "@v2box_meli💜"
-      - "@v2box_meli🖤"
+      - "@v2box_meli🪼"
       - "@v2box_meli☃️"
+      - "@v2box_meli💝"
+      - "@v2box_meli🫀"
+      - "@v2box_meli🥷"
   - name: دانلود منیجر 📥
     type: select
     proxies:
