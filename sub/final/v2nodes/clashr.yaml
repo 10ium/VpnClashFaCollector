@@ -7,9 +7,8 @@ external-controller: 127.0.0.1:9090
 proxies:
   - {name: 129.146.38.3:50356, server: 129.146.38.3, port: 50356, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: 7D9/3Y5+MCeBDNpC6ftRDlkAJdKpXCc1mOE94SvcXEc=, udp: true, tfo: false}
   - {name: 185.141.227.153:9001, server: 185.141.227.153, port: 9001, type: vless, tls: true, packet-encoding: xudp, uuid: 2c634977-584e-4e1f-b501-1b70c77a6743, servername: api-maps.yandex.ru, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: grpc-reality}, reality-opts: {public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 149.130.184.118:62145, server: 149.130.184.118, port: 62145, type: vless, tls: true, packet-encoding: xudp, uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 159.195.80.233:449, server: 159.195.80.233, port: 449, type: vless, tls: true, packet-encoding: xudp, uuid: becd3b04-62a8-4b74-be67-be746008b4c2, network: ws, ws-opts: {path: /api}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 212.67.10.55:445, server: 212.67.10.55, port: 445, type: vless, tls: true, packet-encoding: xudp, uuid: d0471048-b677-48a4-94d1-50c0a4fb7191, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "🇸🇬 [openproxylist.com] vmess-SG", server: x-ui.zxhh.top, port: 53386, type: vmess, uuid: 32e75662-c1ed-4e8d-f78c-3dcc685cc795, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -18,9 +17,8 @@ proxy-groups:
       - DIRECT
       - 129.146.38.3:50356
       - 185.141.227.153:9001
+      - 149.130.184.118:62145
       - 159.195.80.233:449
-      - 212.67.10.55:445
-      - 🇸🇬 [openproxylist.com] vmess-SG
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -29,9 +27,8 @@ proxy-groups:
     proxies:
       - 129.146.38.3:50356
       - 185.141.227.153:9001
+      - 149.130.184.118:62145
       - 159.195.80.233:449
-      - 212.67.10.55:445
-      - 🇸🇬 [openproxylist.com] vmess-SG
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -40,9 +37,8 @@ proxy-groups:
       - 🎯 全球直连
       - 129.146.38.3:50356
       - 185.141.227.153:9001
+      - 149.130.184.118:62145
       - 159.195.80.233:449
-      - 212.67.10.55:445
-      - 🇸🇬 [openproxylist.com] vmess-SG
   - name: 📲 电报信息
     type: select
     proxies:
@@ -50,9 +46,8 @@ proxy-groups:
       - 🎯 全球直连
       - 129.146.38.3:50356
       - 185.141.227.153:9001
+      - 149.130.184.118:62145
       - 159.195.80.233:449
-      - 212.67.10.55:445
-      - 🇸🇬 [openproxylist.com] vmess-SG
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -60,9 +55,8 @@ proxy-groups:
       - 🚀 节点选择
       - 129.146.38.3:50356
       - 185.141.227.153:9001
+      - 149.130.184.118:62145
       - 159.195.80.233:449
-      - 212.67.10.55:445
-      - 🇸🇬 [openproxylist.com] vmess-SG
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -70,9 +64,8 @@ proxy-groups:
       - 🎯 全球直连
       - 129.146.38.3:50356
       - 185.141.227.153:9001
+      - 149.130.184.118:62145
       - 159.195.80.233:449
-      - 212.67.10.55:445
-      - 🇸🇬 [openproxylist.com] vmess-SG
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -102,9 +95,8 @@ proxy-groups:
       - ♻️ 自动选择
       - 129.146.38.3:50356
       - 185.141.227.153:9001
+      - 149.130.184.118:62145
       - 159.195.80.233:449
-      - 212.67.10.55:445
-      - 🇸🇬 [openproxylist.com] vmess-SG
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
