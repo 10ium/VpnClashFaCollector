@@ -5,81 +5,53 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 🇳🇱 The Netherlands 🇳🇱, server: nl7.unlockvpn.online, port: 10808, type: hysteria2, ports: 10808, password: 1f619326-cd93-4d6b-aebe-e0b5f8831d02, sni: nl7.unlockvpn.online, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇩🇪 Germany 🇩🇪, server: 51.195.126.38, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: 2YdE4lFOid5a, udp: true, tfo: false}
-  - {name: 🇳🇱 The Netherlands 🇳🇱 2, server: 51.158.206.96, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇫🇷 France 🇫🇷, server: 62.210.91.2, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇩🇪 Germany 🇩🇪`, server: 139.28.241.77, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5d5c40b1-102c-4343-94cc-d5b794dbd0c6, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Kia_Net`", server: 51.102.158.171, port: 22222, type: vless, tls: true, packet-encoding: xudp, uuid: e4514801-0d5a-42ba-869f-39bd605aef9e, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 𝙁𝙧𝙖𝙣𝙘𝙚, server: 172.67.149.60, port: 443, type: trojan, password: humanity, sni: www.ignitelimit.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.ignitelimit.com}}, udp: true, tfo: false}
+  - {name: "🇬🇧 : ∞ GB@`", server: 83.168.71.216, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a18f7c2d-9e45-4b8a-af3c-1d5e7f9c8b2a, servername: ads.x5.ru, host: ads.x5.ru, path: /, reality-opts: {public-key: 8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho, short-id: 2f49bccf11150ef2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇳🇱 The Netherlands 🇳🇱
-      - 🇩🇪 Germany 🇩🇪
-      - 🇳🇱 The Netherlands 🇳🇱 2
-      - 🇫🇷 France 🇫🇷
-      - 🇩🇪 Germany 🇩🇪`
-      - "@Kia_Net`"
+      - 𝙁𝙧𝙖𝙣𝙘𝙚
+      - "🇬🇧 : ∞ GB@`"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 🇳🇱 The Netherlands 🇳🇱
-      - 🇩🇪 Germany 🇩🇪
-      - 🇳🇱 The Netherlands 🇳🇱 2
-      - 🇫🇷 France 🇫🇷
-      - 🇩🇪 Germany 🇩🇪`
-      - "@Kia_Net`"
+      - 𝙁𝙧𝙖𝙣𝙘𝙚
+      - "🇬🇧 : ∞ GB@`"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇳🇱 The Netherlands 🇳🇱
-      - 🇩🇪 Germany 🇩🇪
-      - 🇳🇱 The Netherlands 🇳🇱 2
-      - 🇫🇷 France 🇫🇷
-      - 🇩🇪 Germany 🇩🇪`
-      - "@Kia_Net`"
+      - 𝙁𝙧𝙖𝙣𝙘𝙚
+      - "🇬🇧 : ∞ GB@`"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇳🇱 The Netherlands 🇳🇱
-      - 🇩🇪 Germany 🇩🇪
-      - 🇳🇱 The Netherlands 🇳🇱 2
-      - 🇫🇷 France 🇫🇷
-      - 🇩🇪 Germany 🇩🇪`
-      - "@Kia_Net`"
+      - 𝙁𝙧𝙖𝙣𝙘𝙚
+      - "🇬🇧 : ∞ GB@`"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 🇳🇱 The Netherlands 🇳🇱
-      - 🇩🇪 Germany 🇩🇪
-      - 🇳🇱 The Netherlands 🇳🇱 2
-      - 🇫🇷 France 🇫🇷
-      - 🇩🇪 Germany 🇩🇪`
-      - "@Kia_Net`"
+      - 𝙁𝙧𝙖𝙣𝙘𝙚
+      - "🇬🇧 : ∞ GB@`"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇳🇱 The Netherlands 🇳🇱
-      - 🇩🇪 Germany 🇩🇪
-      - 🇳🇱 The Netherlands 🇳🇱 2
-      - 🇫🇷 France 🇫🇷
-      - 🇩🇪 Germany 🇩🇪`
-      - "@Kia_Net`"
+      - 𝙁𝙧𝙖𝙣𝙘𝙚
+      - "🇬🇧 : ∞ GB@`"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -107,12 +79,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇳🇱 The Netherlands 🇳🇱
-      - 🇩🇪 Germany 🇩🇪
-      - 🇳🇱 The Netherlands 🇳🇱 2
-      - 🇫🇷 France 🇫🇷
-      - 🇩🇪 Germany 🇩🇪`
-      - "@Kia_Net`"
+      - 𝙁𝙧𝙖𝙣𝙘𝙚
+      - "🇬🇧 : ∞ GB@`"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

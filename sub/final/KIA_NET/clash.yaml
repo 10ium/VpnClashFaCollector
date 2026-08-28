@@ -465,12 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 🇳🇱 The Netherlands 🇳🇱, server: nl7.unlockvpn.online, port: 10808, type: hysteria2, ports: 10808, password: 1f619326-cd93-4d6b-aebe-e0b5f8831d02, sni: nl7.unlockvpn.online, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇩🇪 Germany 🇩🇪, server: 51.195.126.38, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: 2YdE4lFOid5a, udp: true, tfo: false}
-  - {name: 🇳🇱 The Netherlands 🇳🇱 2, server: 51.158.206.96, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇫🇷 France 🇫🇷, server: 62.210.91.2, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇩🇪 Germany 🇩🇪`, server: 139.28.241.77, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5d5c40b1-102c-4343-94cc-d5b794dbd0c6, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Kia_Net`", server: 51.102.158.171, port: 22222, type: vless, tls: true, packet-encoding: xudp, uuid: e4514801-0d5a-42ba-869f-39bd605aef9e, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 𝙁𝙧𝙖𝙣𝙘𝙚, server: 172.67.149.60, port: 443, type: trojan, password: humanity, sni: www.ignitelimit.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.ignitelimit.com}}, udp: true, tfo: false}
+  - {name: "🇬🇧 : ∞ GB@`", server: 83.168.71.216, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a18f7c2d-9e45-4b8a-af3c-1d5e7f9c8b2a, servername: ads.x5.ru, host: ads.x5.ru, path: /, reality-opts: {public-key: 8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho, short-id: 2f49bccf11150ef2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,36 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 🇳🇱 The Netherlands 🇳🇱
-      - 🇩🇪 Germany 🇩🇪
-      - 🇳🇱 The Netherlands 🇳🇱 2
-      - 🇫🇷 France 🇫🇷
-      - 🇩🇪 Germany 🇩🇪`
-      - "@Kia_Net`"
+      - 𝙁𝙧𝙖𝙣𝙘𝙚
+      - "🇬🇧 : ∞ GB@`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 🇳🇱 The Netherlands 🇳🇱
-      - 🇩🇪 Germany 🇩🇪
-      - 🇳🇱 The Netherlands 🇳🇱 2
-      - 🇫🇷 France 🇫🇷
-      - 🇩🇪 Germany 🇩🇪`
-      - "@Kia_Net`"
+      - 𝙁𝙧𝙖𝙣𝙘𝙚
+      - "🇬🇧 : ∞ GB@`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 🇳🇱 The Netherlands 🇳🇱
-      - 🇩🇪 Germany 🇩🇪
-      - 🇳🇱 The Netherlands 🇳🇱 2
-      - 🇫🇷 France 🇫🇷
-      - 🇩🇪 Germany 🇩🇪`
-      - "@Kia_Net`"
+      - 𝙁𝙧𝙖𝙣𝙘𝙚
+      - "🇬🇧 : ∞ GB@`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -532,36 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇳🇱 The Netherlands 🇳🇱
-      - 🇩🇪 Germany 🇩🇪
-      - 🇳🇱 The Netherlands 🇳🇱 2
-      - 🇫🇷 France 🇫🇷
-      - 🇩🇪 Germany 🇩🇪`
-      - "@Kia_Net`"
+      - 𝙁𝙧𝙖𝙣𝙘𝙚
+      - "🇬🇧 : ∞ GB@`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇳🇱 The Netherlands 🇳🇱
-      - 🇩🇪 Germany 🇩🇪
-      - 🇳🇱 The Netherlands 🇳🇱 2
-      - 🇫🇷 France 🇫🇷
-      - 🇩🇪 Germany 🇩🇪`
-      - "@Kia_Net`"
+      - 𝙁𝙧𝙖𝙣𝙘𝙚
+      - "🇬🇧 : ∞ GB@`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇳🇱 The Netherlands 🇳🇱
-      - 🇩🇪 Germany 🇩🇪
-      - 🇳🇱 The Netherlands 🇳🇱 2
-      - 🇫🇷 France 🇫🇷
-      - 🇩🇪 Germany 🇩🇪`
-      - "@Kia_Net`"
+      - 𝙁𝙧𝙖𝙣𝙘𝙚
+      - "🇬🇧 : ∞ GB@`"
   - name: دانلود منیجر 📥
     type: select
     proxies:
