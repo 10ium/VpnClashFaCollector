@@ -465,6 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: node5.quaxly.com:25830, server: node5.quaxly.com, port: 25830, type: trojan, password: !<str> 123123, sni: node5.quaxly.com, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 185.141.227.153:9001, server: 185.141.227.153, port: 9001, type: vless, tls: true, packet-encoding: xudp, uuid: 2c634977-584e-4e1f-b501-1b70c77a6743, servername: api-maps.yandex.ru, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: grpc-reality}, reality-opts: {public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -482,6 +483,7 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - node5.quaxly.com:25830
       - 185.141.227.153:9001
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -489,6 +491,7 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - node5.quaxly.com:25830
       - 185.141.227.153:9001
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -496,6 +499,7 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - node5.quaxly.com:25830
       - 185.141.227.153:9001
   - name: اتصال پایدار 🔗
     type: url-test
@@ -512,6 +516,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - node5.quaxly.com:25830
       - 185.141.227.153:9001
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -519,6 +524,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - node5.quaxly.com:25830
       - 185.141.227.153:9001
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -526,6 +532,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - node5.quaxly.com:25830
       - 185.141.227.153:9001
   - name: دانلود منیجر 📥
     type: select

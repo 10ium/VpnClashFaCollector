@@ -465,8 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Capoit`", server: 31.128.37.67, port: 16560, type: vless, tls: true, packet-encoding: xudp, uuid: 6d60c73d-5915-4cf8-b155-e522dfd863bb, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit", server: 199.232.78.159, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 83f17de9-04dd-45af-bc7f-3f4e969cc613, servername: ssl.fastly.com, network: ws, ws-opts: {path: /, headers: {Host: ssl.fastly.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit", server: 46.8.102.77, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fcf4e373-29bc-4398-aa26-71ed1923bafe, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit 2", server: 46.8.102.77, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fcf4e373-29bc-4398-aa26-71ed1923bafe, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@Capoit`"
       - "@Capoit"
+      - "@Capoit 2"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@Capoit`"
       - "@Capoit"
+      - "@Capoit 2"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@Capoit`"
       - "@Capoit"
+      - "@Capoit 2"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Capoit`"
       - "@Capoit"
+      - "@Capoit 2"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Capoit`"
       - "@Capoit"
+      - "@Capoit 2"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Capoit`"
       - "@Capoit"
+      - "@Capoit 2"
   - name: دانلود منیجر 📥
     type: select
     proxies:
