@@ -5,53 +5,46 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 𝙁𝙧𝙖𝙣𝙘𝙚, server: 172.67.149.60, port: 443, type: trojan, password: humanity, sni: www.ignitelimit.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.ignitelimit.com}}, udp: true, tfo: false}
-  - {name: "🇬🇧 : ∞ GB@`", server: 83.168.71.216, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a18f7c2d-9e45-4b8a-af3c-1d5e7f9c8b2a, servername: ads.x5.ru, host: ads.x5.ru, path: /, reality-opts: {public-key: 8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho, short-id: 2f49bccf11150ef2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: موشک کیانت)`, server: marzban-node-production-kurdnodes.up.railway.app, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 1a2d5b51-e185-41d3-ab61-5586c1e1e987, servername: marzban-node-production-kurdnodes.up.railway.app, alpn: [h2], network: ws, ws-opts: {path: /vless, headers: {Host: marzban-node-production-kurdnodes.up.railway.app}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 𝙁𝙧𝙖𝙣𝙘𝙚
-      - "🇬🇧 : ∞ GB@`"
+      - موشک کیانت)`
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 𝙁𝙧𝙖𝙣𝙘𝙚
-      - "🇬🇧 : ∞ GB@`"
+      - موشک کیانت)`
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 𝙁𝙧𝙖𝙣𝙘𝙚
-      - "🇬🇧 : ∞ GB@`"
+      - موشک کیانت)`
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 𝙁𝙧𝙖𝙣𝙘𝙚
-      - "🇬🇧 : ∞ GB@`"
+      - موشک کیانت)`
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 𝙁𝙧𝙖𝙣𝙘𝙚
-      - "🇬🇧 : ∞ GB@`"
+      - موشک کیانت)`
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 𝙁𝙧𝙖𝙣𝙘𝙚
-      - "🇬🇧 : ∞ GB@`"
+      - موشک کیانت)`
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -79,8 +72,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 𝙁𝙧𝙖𝙣𝙘𝙚
-      - "🇬🇧 : ∞ GB@`"
+      - موشک کیانت)`
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

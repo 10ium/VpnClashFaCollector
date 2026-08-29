@@ -465,8 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 𝙁𝙧𝙖𝙣𝙘𝙚, server: 172.67.149.60, port: 443, type: trojan, password: humanity, sni: www.ignitelimit.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.ignitelimit.com}}, udp: true, tfo: false}
-  - {name: "🇬🇧 : ∞ GB@`", server: 83.168.71.216, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a18f7c2d-9e45-4b8a-af3c-1d5e7f9c8b2a, servername: ads.x5.ru, host: ads.x5.ru, path: /, reality-opts: {public-key: 8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho, short-id: 2f49bccf11150ef2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: موشک کیانت)`, server: marzban-node-production-kurdnodes.up.railway.app, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 1a2d5b51-e185-41d3-ab61-5586c1e1e987, servername: marzban-node-production-kurdnodes.up.railway.app, alpn: [h2], network: ws, ws-opts: {path: /vless, headers: {Host: marzban-node-production-kurdnodes.up.railway.app}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 𝙁𝙧𝙖𝙣𝙘𝙚
-      - "🇬🇧 : ∞ GB@`"
+      - موشک کیانت)`
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 𝙁𝙧𝙖𝙣𝙘𝙚
-      - "🇬🇧 : ∞ GB@`"
+      - موشک کیانت)`
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 𝙁𝙧𝙖𝙣𝙘𝙚
-      - "🇬🇧 : ∞ GB@`"
+      - موشک کیانت)`
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 𝙁𝙧𝙖𝙣𝙘𝙚
-      - "🇬🇧 : ∞ GB@`"
+      - موشک کیانت)`
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 𝙁𝙧𝙖𝙣𝙘𝙚
-      - "🇬🇧 : ∞ GB@`"
+      - موشک کیانت)`
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 𝙁𝙧𝙖𝙣𝙘𝙚
-      - "🇬🇧 : ∞ GB@`"
+      - موشک کیانت)`
   - name: دانلود منیجر 📥
     type: select
     proxies:
