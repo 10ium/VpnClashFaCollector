@@ -5,8 +5,9 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@Capoit", server: 46.8.102.77, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fcf4e373-29bc-4398-aa26-71ed1923bafe, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit 2", server: 46.8.102.77, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fcf4e373-29bc-4398-aa26-71ed1923bafe, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit", server: 185.110.189.172, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d70e525c-67bd-4261-b7f5-96589be5b3b0, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit 2", server: 185.110.189.172, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fb9b7935-e1d8-4342-b26c-d71c439fa29d, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit`", server: 185.110.189.172, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fb9b7935-e1d8-4342-b26c-d71c439fa29d, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -15,6 +16,7 @@ proxy-groups:
       - DIRECT
       - "@Capoit"
       - "@Capoit 2"
+      - "@Capoit`"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -23,6 +25,7 @@ proxy-groups:
     proxies:
       - "@Capoit"
       - "@Capoit 2"
+      - "@Capoit`"
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -31,6 +34,7 @@ proxy-groups:
       - 🎯 全球直连
       - "@Capoit"
       - "@Capoit 2"
+      - "@Capoit`"
   - name: 📲 电报信息
     type: select
     proxies:
@@ -38,6 +42,7 @@ proxy-groups:
       - 🎯 全球直连
       - "@Capoit"
       - "@Capoit 2"
+      - "@Capoit`"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -45,6 +50,7 @@ proxy-groups:
       - 🚀 节点选择
       - "@Capoit"
       - "@Capoit 2"
+      - "@Capoit`"
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -52,6 +58,7 @@ proxy-groups:
       - 🎯 全球直连
       - "@Capoit"
       - "@Capoit 2"
+      - "@Capoit`"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -81,6 +88,7 @@ proxy-groups:
       - ♻️ 自动选择
       - "@Capoit"
       - "@Capoit 2"
+      - "@Capoit`"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

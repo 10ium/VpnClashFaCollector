@@ -5,81 +5,116 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "", server: 38.110.1.246, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad", server: 130.185.122.177, port: 443, type: vmess, uuid: f232d454-b014-4e00-a7ae-430341909db4, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 130.185.122.177}}, udp: true, tfo: false}
+  - {name: freenet-vt, server: 116.203.54.241, port: 443, type: vmess, uuid: 15247720-17e1-4ea3-9150-b9350099d9fa, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@FarazV2ray", server: 116.203.54.241, port: 443, type: vmess, uuid: 15247720-17e1-4ea3-9150-b9350099d9fa, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@mehrosaboran", server: 130.185.122.177, port: 443, type: vmess, uuid: f232d454-b014-4e00-a7ae-430341909db4, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 130.185.122.177}}, udp: true, tfo: false}
-  - {name: "@filembad 2", server: 176.65.140.210, port: 23981, type: vmess, uuid: ae6999a4-8839-4d81-be13-d18a9d75818a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: bobo.badrangteb.ir}}, udp: true, tfo: false}
-  - {name: "| 10", server: x-ui.zxhh.top, port: 53385, type: vmess, uuid: 6aac0241-0c66-4bec-942d-e8a8d9b11a3a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@FarazV2ray", server: guanwang.awsno.com, port: 443, type: vmess, uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Freenet_vt, server: 149.88.23.207, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@meliproxyy", server: 149.88.23.207, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Freenet_vt 2, server: 154.37.223.56, port: 52080, type: vmess, uuid: f1ac5c82-00a4-400b-bb20-530c91b7c5bb, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇭🇰 Freenet_vt, server: 156.245.232.239, port: 35043, type: vmess, uuid: b15e481d-17e4-41a8-84c2-23d4f0514d9a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}, udp: true, tfo: false}
+  - {name: "@filembad", server: 176.65.140.210, port: 23981, type: vmess, uuid: ae6999a4-8839-4d81-be13-d18a9d75818a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: bobo.badrangteb.ir}}, udp: true, tfo: false}
+  - {name: 🇫🇷 @v2box_meli🇫🇷 FR, server: 2001:bc8:32d7:1a9::2, port: 23388, type: vmess, uuid: 3a966d20-7b9d-48cc-ba2c-8d38161b6d3a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /github.com/Alvin9999-newpac/fanqiang}, udp: true, tfo: false}
+  - {name: "@FarazV2ray 2", server: guanwang.awsno.com, port: 443, type: vmess, uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Freenet_vt 3, server: newrelax.relaxedboy.online, port: 110, type: vmess, uuid: 8e9687fc-a3a7-414a-8676-8e2136797cfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - ""
-      - "@filembad"
-      - "@mehrosaboran"
-      - "@filembad 2"
-      - "| 10"
+      - freenet-vt
       - "@FarazV2ray"
+      - "@mehrosaboran"
+      - Freenet_vt
+      - "@meliproxyy"
+      - Freenet_vt 2
+      - 🇭🇰 Freenet_vt
+      - "@filembad"
+      - 🇫🇷 @v2box_meli🇫🇷 FR
+      - "@FarazV2ray 2"
+      - Freenet_vt 3
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - ""
-      - "@filembad"
-      - "@mehrosaboran"
-      - "@filembad 2"
-      - "| 10"
+      - freenet-vt
       - "@FarazV2ray"
+      - "@mehrosaboran"
+      - Freenet_vt
+      - "@meliproxyy"
+      - Freenet_vt 2
+      - 🇭🇰 Freenet_vt
+      - "@filembad"
+      - 🇫🇷 @v2box_meli🇫🇷 FR
+      - "@FarazV2ray 2"
+      - Freenet_vt 3
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - ""
-      - "@filembad"
-      - "@mehrosaboran"
-      - "@filembad 2"
-      - "| 10"
+      - freenet-vt
       - "@FarazV2ray"
+      - "@mehrosaboran"
+      - Freenet_vt
+      - "@meliproxyy"
+      - Freenet_vt 2
+      - 🇭🇰 Freenet_vt
+      - "@filembad"
+      - 🇫🇷 @v2box_meli🇫🇷 FR
+      - "@FarazV2ray 2"
+      - Freenet_vt 3
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - ""
-      - "@filembad"
-      - "@mehrosaboran"
-      - "@filembad 2"
-      - "| 10"
+      - freenet-vt
       - "@FarazV2ray"
+      - "@mehrosaboran"
+      - Freenet_vt
+      - "@meliproxyy"
+      - Freenet_vt 2
+      - 🇭🇰 Freenet_vt
+      - "@filembad"
+      - 🇫🇷 @v2box_meli🇫🇷 FR
+      - "@FarazV2ray 2"
+      - Freenet_vt 3
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - ""
-      - "@filembad"
-      - "@mehrosaboran"
-      - "@filembad 2"
-      - "| 10"
+      - freenet-vt
       - "@FarazV2ray"
+      - "@mehrosaboran"
+      - Freenet_vt
+      - "@meliproxyy"
+      - Freenet_vt 2
+      - 🇭🇰 Freenet_vt
+      - "@filembad"
+      - 🇫🇷 @v2box_meli🇫🇷 FR
+      - "@FarazV2ray 2"
+      - Freenet_vt 3
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - ""
-      - "@filembad"
-      - "@mehrosaboran"
-      - "@filembad 2"
-      - "| 10"
+      - freenet-vt
       - "@FarazV2ray"
+      - "@mehrosaboran"
+      - Freenet_vt
+      - "@meliproxyy"
+      - Freenet_vt 2
+      - 🇭🇰 Freenet_vt
+      - "@filembad"
+      - 🇫🇷 @v2box_meli🇫🇷 FR
+      - "@FarazV2ray 2"
+      - Freenet_vt 3
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -107,12 +142,17 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - ""
-      - "@filembad"
-      - "@mehrosaboran"
-      - "@filembad 2"
-      - "| 10"
+      - freenet-vt
       - "@FarazV2ray"
+      - "@mehrosaboran"
+      - Freenet_vt
+      - "@meliproxyy"
+      - Freenet_vt 2
+      - 🇭🇰 Freenet_vt
+      - "@filembad"
+      - 🇫🇷 @v2box_meli🇫🇷 FR
+      - "@FarazV2ray 2"
+      - Freenet_vt 3
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
