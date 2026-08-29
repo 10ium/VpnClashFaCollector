@@ -465,8 +465,12 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: 129.151.82.158:61312, server: 129.151.82.158, port: 61312, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: MLVcvtR/UBSlUEC3IwyukwjvKvvRvw9x6Op6LVBX0GA=, udp: true, tfo: false}
+  - {name: 130.61.151.8:59924, server: 130.61.151.8, port: 59924, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: jsjRco4bpxjDpHTSx9qchaZhbzJtIRTREVFoIKkBJyw=, udp: true, tfo: false}
   - {name: node5.quaxly.com:25830, server: node5.quaxly.com, port: 25830, type: trojan, password: !<str> 123123, sni: node5.quaxly.com, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 185.141.227.153:9001, server: 185.141.227.153, port: 9001, type: vless, tls: true, packet-encoding: xudp, uuid: 2c634977-584e-4e1f-b501-1b70c77a6743, servername: api-maps.yandex.ru, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: grpc-reality}, reality-opts: {public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 35.77.87.249:42263, server: 35.77.87.249, port: 42263, type: vless, tls: true, packet-encoding: xudp, uuid: 37c00ed0-de07-4c7d-a4cf-049805c98713, servername: www.sony.com, host: www.sony.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: lLbzgXK1hx6K2J6rDUARlzZzjWqVXMjIhHsKmgEQI0U, short-id: d5cd4778d2da33}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 122.248.209.131:25436, server: 122.248.209.131, port: 25436, type: vless, tls: true, packet-encoding: xudp, uuid: d64d6845-5da0-42b7-b81e-8263ca49a9d8, servername: www.sony.com, host: www.sony.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: pDVraOonSeo3sj5G-Mw969DEc854v0Bpygh1N2xzFT0, short-id: cb344f105044fc}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +487,36 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - 129.151.82.158:61312
+      - 130.61.151.8:59924
       - node5.quaxly.com:25830
       - 185.141.227.153:9001
+      - 35.77.87.249:42263
+      - 122.248.209.131:25436
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
+      - 129.151.82.158:61312
+      - 130.61.151.8:59924
       - node5.quaxly.com:25830
       - 185.141.227.153:9001
+      - 35.77.87.249:42263
+      - 122.248.209.131:25436
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
+      - 129.151.82.158:61312
+      - 130.61.151.8:59924
       - node5.quaxly.com:25830
       - 185.141.227.153:9001
+      - 35.77.87.249:42263
+      - 122.248.209.131:25436
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +532,36 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 129.151.82.158:61312
+      - 130.61.151.8:59924
       - node5.quaxly.com:25830
       - 185.141.227.153:9001
+      - 35.77.87.249:42263
+      - 122.248.209.131:25436
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 129.151.82.158:61312
+      - 130.61.151.8:59924
       - node5.quaxly.com:25830
       - 185.141.227.153:9001
+      - 35.77.87.249:42263
+      - 122.248.209.131:25436
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 129.151.82.158:61312
+      - 130.61.151.8:59924
       - node5.quaxly.com:25830
       - 185.141.227.153:9001
+      - 35.77.87.249:42263
+      - 122.248.209.131:25436
   - name: دانلود منیجر 📥
     type: select
     proxies:
