@@ -465,7 +465,14 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: hamedvpns::🇩🇪, server: 104.16.75.44, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 03707fb7-0990-440f-88f6-b0e0f7242a38, servername: de-new-1.ariyuz.org, network: ws, ws-opts: {path: /, headers: {Host: de-new-1.ariyuz.org}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hamedvpns::🇫🇮, server: 31.76.80.69, port: 443, type: hysteria2, ports: 443, password: 6aab8efdf13945829ae3699c342be406, obfs: salamander, obfs-password: uw9b2qq5rx, sni: fiproxy1.lockdwn.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hamedvpns::🇩🇪, server: hy2-new.aspidnet.xyz, port: 443, type: hysteria2, ports: 443, password: QCgqi_I4EkV8UR-OgQ_tG4EnVTEVvIyR2GgRBzrIn2s, obfs: salamander, obfs-password: c1b4086fea89914496c7e10967a419216566, sni: hy2-new.aspidnet.xyz, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hp71-2, server: 31.76.27.23, port: 37009, type: hysteria2, ports: 37009, password: Telegram%40vpnjey, obfs: salamander, obfs-password: Telegram%40vpnjey, sni: de.vpnjey.store, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hp71, server: 77.110.96.201, port: 36264, type: hysteria2, ports: 36264, password: Telegram%40vpnjey, obfs: salamander, obfs-password: Telegram%40vpnjey, sni: se.vpnjey2.dpdns.org, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hamedvpns::🇩🇪 2, server: de1.sferavpn.pro, port: 443, type: hysteria2, ports: 443, password: cd74c0a406664a5bc0bac098220a2468, obfs: salamander, obfs-password: 44f1c1e2f8b99e792ceed574627a1eb0, sni: de1.sferavpn.pro, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hamedvpns::🇩🇪 3, server: de1.sferavpn.pro, port: 443, type: hysteria2, ports: 443, password: cd74c0a406664a5bc0bac098220a2468, obfs: salamander, obfs-password: 44f1c1e2f8b99e792ceed574627a1eb0, sni: de1.sferavpn.pro, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hamedvpns::🇷🇺, server: ru1.sferavpn.pro, port: 443, type: hysteria2, ports: 443, password: cd74c0a406664a5bc0bac098220a2468, obfs: salamander, obfs-password: 44f1c1e2f8b99e792ceed574627a1eb0, sni: ru1.sferavpn.pro, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hamedvpns::🇭🇰, server: nas.aizhzo.com, port: 5010, type: hysteria2, ports: 5010, password: eBTe6Ax2pUts8oMEWoYVDfnSlHfkLffQ, obfs: salamander, obfs-password: 7M4RXPFcQyQEGbkxBPfXo4bilMhCW2U9, sni: nas.aizhzo.com, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +489,42 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - hamedvpns::🇫🇮
       - hamedvpns::🇩🇪
+      - hp71-2
+      - hp71
+      - hamedvpns::🇩🇪 2
+      - hamedvpns::🇩🇪 3
+      - hamedvpns::🇷🇺
+      - hamedvpns::🇭🇰
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
+      - hamedvpns::🇫🇮
       - hamedvpns::🇩🇪
+      - hp71-2
+      - hp71
+      - hamedvpns::🇩🇪 2
+      - hamedvpns::🇩🇪 3
+      - hamedvpns::🇷🇺
+      - hamedvpns::🇭🇰
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
+      - hamedvpns::🇫🇮
       - hamedvpns::🇩🇪
+      - hp71-2
+      - hp71
+      - hamedvpns::🇩🇪 2
+      - hamedvpns::🇩🇪 3
+      - hamedvpns::🇷🇺
+      - hamedvpns::🇭🇰
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +540,42 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - hamedvpns::🇫🇮
       - hamedvpns::🇩🇪
+      - hp71-2
+      - hp71
+      - hamedvpns::🇩🇪 2
+      - hamedvpns::🇩🇪 3
+      - hamedvpns::🇷🇺
+      - hamedvpns::🇭🇰
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - hamedvpns::🇫🇮
       - hamedvpns::🇩🇪
+      - hp71-2
+      - hp71
+      - hamedvpns::🇩🇪 2
+      - hamedvpns::🇩🇪 3
+      - hamedvpns::🇷🇺
+      - hamedvpns::🇭🇰
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - hamedvpns::🇫🇮
       - hamedvpns::🇩🇪
+      - hp71-2
+      - hp71
+      - hamedvpns::🇩🇪 2
+      - hamedvpns::🇩🇪 3
+      - hamedvpns::🇷🇺
+      - hamedvpns::🇭🇰
   - name: دانلود منیجر 📥
     type: select
     proxies:
