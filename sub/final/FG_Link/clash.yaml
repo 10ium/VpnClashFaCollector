@@ -465,7 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@FG_Link", server: 188.114.97.6, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 97532b08-357e-4140-a6f0-8e07f2ed3327, network: ws, ws-opts: {path: /proxyip=kr.william.us.ci, headers: {Host: yf2.yifangg.de5.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@outline_ir", server: 129.121.95.159, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f6190ff2-864c-46cf-ac16-93908c069b75, servername: 129.121.95.159, network: ws, ws-opts: {path: "/connect#TELEGRAM-TOOTFFARANGI_TOOTFFARANGI?ed=512", headers: {Host: 129.121.95.159}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@FG_Link"
+      - "@outline_ir"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@FG_Link"
+      - "@outline_ir"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@FG_Link"
+      - "@outline_ir"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@FG_Link"
+      - "@outline_ir"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@FG_Link"
+      - "@outline_ir"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@FG_Link"
+      - "@outline_ir"
   - name: دانلود منیجر 📥
     type: select
     proxies:

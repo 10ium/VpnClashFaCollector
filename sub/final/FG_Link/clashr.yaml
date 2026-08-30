@@ -5,46 +5,46 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@FG_Link", server: 188.114.97.6, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 97532b08-357e-4140-a6f0-8e07f2ed3327, network: ws, ws-opts: {path: /proxyip=kr.william.us.ci, headers: {Host: yf2.yifangg.de5.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@outline_ir", server: 129.121.95.159, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f6190ff2-864c-46cf-ac16-93908c069b75, servername: 129.121.95.159, network: ws, ws-opts: {path: "/connect#TELEGRAM-TOOTFFARANGI_TOOTFFARANGI?ed=512", headers: {Host: 129.121.95.159}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@FG_Link"
+      - "@outline_ir"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@FG_Link"
+      - "@outline_ir"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@FG_Link"
+      - "@outline_ir"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@FG_Link"
+      - "@outline_ir"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@FG_Link"
+      - "@outline_ir"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@FG_Link"
+      - "@outline_ir"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +72,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@FG_Link"
+      - "@outline_ir"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

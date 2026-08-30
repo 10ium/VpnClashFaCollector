@@ -465,17 +465,18 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: "@meliproxy", server: newrelax.relaxedboy.online, port: 110, type: vmess, uuid: 8e9687fc-a3a7-414a-8676-8e2136797cfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "اگه میخوای قطع نشی جوین شو : @farsiproxy", server: 47.244.120.197, port: 44867, type: vmess, uuid: 845e6b08-2919-4290-ade0-5dc7dcea59ca, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/arki?ed=2048"}, udp: true, tfo: false}
   - {name: freenet-vt, server: 116.203.54.241, port: 443, type: vmess, uuid: 15247720-17e1-4ea3-9150-b9350099d9fa, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@FarazV2ray", server: 116.203.54.241, port: 443, type: vmess, uuid: 15247720-17e1-4ea3-9150-b9350099d9fa, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@mehrosaboran", server: 130.185.122.177, port: 443, type: vmess, uuid: f232d454-b014-4e00-a7ae-430341909db4, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 130.185.122.177}}, udp: true, tfo: false}
   - {name: Freenet_vt, server: 149.88.23.207, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@meliproxyy", server: 149.88.23.207, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@outline_ir", server: 149.88.23.207, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: برای اتصال دائمی جوین شو🥏 TelegramID ⌲Express_freevpn 🪩, server: 149.88.23.207, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: Freenet_vt 2, server: 154.37.223.56, port: 52080, type: vmess, uuid: f1ac5c82-00a4-400b-bb20-530c91b7c5bb, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 🇭🇰 Freenet_vt, server: 156.245.232.239, port: 35043, type: vmess, uuid: b15e481d-17e4-41a8-84c2-23d4f0514d9a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}, udp: true, tfo: false}
-  - {name: "@filembad", server: 176.65.140.210, port: 23981, type: vmess, uuid: ae6999a4-8839-4d81-be13-d18a9d75818a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: bobo.badrangteb.ir}}, udp: true, tfo: false}
   - {name: 🇫🇷 @v2box_meli🇫🇷 FR, server: 2001:bc8:32d7:1a9::2, port: 23388, type: vmess, uuid: 3a966d20-7b9d-48cc-ba2c-8d38161b6d3a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /github.com/Alvin9999-newpac/fanqiang}, udp: true, tfo: false}
-  - {name: "@FarazV2ray 2", server: guanwang.awsno.com, port: 443, type: vmess, uuid: 6a89a215-22bf-4bd7-9642-b95b2e09583a, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee", server: newrelax.relaxedboy.online, port: 110, type: vmess, uuid: 8e9687fc-a3a7-414a-8676-8e2136797cfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: Freenet_vt 3, server: newrelax.relaxedboy.online, port: 110, type: vmess, uuid: 8e9687fc-a3a7-414a-8676-8e2136797cfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -493,17 +494,18 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - "@meliproxy"
+      - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
       - freenet-vt
       - "@FarazV2ray"
-      - "@mehrosaboran"
       - Freenet_vt
       - "@meliproxyy"
       - "@outline_ir"
+      - برای اتصال دائمی جوین شو🥏 TelegramID ⌲Express_freevpn 🪩
       - Freenet_vt 2
       - 🇭🇰 Freenet_vt
-      - "@filembad"
       - 🇫🇷 @v2box_meli🇫🇷 FR
-      - "@FarazV2ray 2"
+      - "@proxy_kafee"
       - Freenet_vt 3
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -511,17 +513,18 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - "@meliproxy"
+      - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
       - freenet-vt
       - "@FarazV2ray"
-      - "@mehrosaboran"
       - Freenet_vt
       - "@meliproxyy"
       - "@outline_ir"
+      - برای اتصال دائمی جوین شو🥏 TelegramID ⌲Express_freevpn 🪩
       - Freenet_vt 2
       - 🇭🇰 Freenet_vt
-      - "@filembad"
       - 🇫🇷 @v2box_meli🇫🇷 FR
-      - "@FarazV2ray 2"
+      - "@proxy_kafee"
       - Freenet_vt 3
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -529,17 +532,18 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - "@meliproxy"
+      - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
       - freenet-vt
       - "@FarazV2ray"
-      - "@mehrosaboran"
       - Freenet_vt
       - "@meliproxyy"
       - "@outline_ir"
+      - برای اتصال دائمی جوین شو🥏 TelegramID ⌲Express_freevpn 🪩
       - Freenet_vt 2
       - 🇭🇰 Freenet_vt
-      - "@filembad"
       - 🇫🇷 @v2box_meli🇫🇷 FR
-      - "@FarazV2ray 2"
+      - "@proxy_kafee"
       - Freenet_vt 3
   - name: اتصال پایدار 🔗
     type: url-test
@@ -556,17 +560,18 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@meliproxy"
+      - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
       - freenet-vt
       - "@FarazV2ray"
-      - "@mehrosaboran"
       - Freenet_vt
       - "@meliproxyy"
       - "@outline_ir"
+      - برای اتصال دائمی جوین شو🥏 TelegramID ⌲Express_freevpn 🪩
       - Freenet_vt 2
       - 🇭🇰 Freenet_vt
-      - "@filembad"
       - 🇫🇷 @v2box_meli🇫🇷 FR
-      - "@FarazV2ray 2"
+      - "@proxy_kafee"
       - Freenet_vt 3
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -574,17 +579,18 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@meliproxy"
+      - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
       - freenet-vt
       - "@FarazV2ray"
-      - "@mehrosaboran"
       - Freenet_vt
       - "@meliproxyy"
       - "@outline_ir"
+      - برای اتصال دائمی جوین شو🥏 TelegramID ⌲Express_freevpn 🪩
       - Freenet_vt 2
       - 🇭🇰 Freenet_vt
-      - "@filembad"
       - 🇫🇷 @v2box_meli🇫🇷 FR
-      - "@FarazV2ray 2"
+      - "@proxy_kafee"
       - Freenet_vt 3
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -592,17 +598,18 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@meliproxy"
+      - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
       - freenet-vt
       - "@FarazV2ray"
-      - "@mehrosaboran"
       - Freenet_vt
       - "@meliproxyy"
       - "@outline_ir"
+      - برای اتصال دائمی جوین شو🥏 TelegramID ⌲Express_freevpn 🪩
       - Freenet_vt 2
       - 🇭🇰 Freenet_vt
-      - "@filembad"
       - 🇫🇷 @v2box_meli🇫🇷 FR
-      - "@FarazV2ray 2"
+      - "@proxy_kafee"
       - Freenet_vt 3
   - name: دانلود منیجر 📥
     type: select

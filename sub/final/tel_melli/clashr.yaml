@@ -5,74 +5,60 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@v2box_meli🇸🇨", server: 45.207.207.25, port: 443, type: ss, cipher: aes-256-gcm, password: gj1+XKulKV0nmw6IThckOkkJh5DSM7+C, udp: true, tfo: false}
-  - {name: "@v2box_meli🎊2", server: dee.im-soon.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: SoonTeam, network: ws, ws-opts: {path: /, headers: {Host: play.google.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2box_meli👽", server: 5.45.117.125, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c7e9c591-2764-423a-afca-efbd010fd396, servername: freeuse.firta.ru, network: ws, ws-opts: {path: "/?TELEGRAM-MARAMBASHI_MARAMBASHI?ed=512", headers: {Host: freeuse.firta.ru}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2box_meli 🇺🇸", server: 38.128.251.24, port: 56539, type: vless, tls: true, packet-encoding: xudp, uuid: cb183c14-e094-40d5-8519-72933fc74cc9, host: mangaarabics.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇫🇷 @v2box_meli🇫🇷 FR, server: 2001:bc8:32d7:1a9::2, port: 23388, type: vmess, uuid: 3a966d20-7b9d-48cc-ba2c-8d38161b6d3a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /github.com/Alvin9999-newpac/fanqiang}, udp: true, tfo: false}
+  - {name: "@v2box_meli🇵🇹", server: fin.hostingdayam.com.tr, port: 8452, type: vless, tls: true, packet-encoding: xudp, uuid: 34c6b520-fa66-49e9-a337-b7a6a3af28ba, servername: amp-api-edge.apps.apple.com, host: amp-api-edge.apps.apple.com, path: /, reality-opts: {public-key: n7_Ddz9DUWdhhtPh92wOWNehjZr1ewHMvJmVyRYGhX4, short-id: 68d2d5f8}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2box_meli🇫🇮", server: land.hostingdayam.com.tr, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: 34c6b520-fa66-49e9-a337-b7a6a3af28ba, servername: land.hostingdayam.com.tr, alpn: [h3%2Ch2%2Chttp%2F1.1], network: ws, ws-opts: {path: /fi-cdn, headers: {Host: land.hostingdayam.com.tr}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2box_meli🇯🇵", server: marzban-node1-production-ef8e.up.railway.app, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 87c771f9-f42c-4a29-8281-ce9135c1802f, servername: marzban-node1-production-ef8e.up.railway.app, alpn: [h2], network: ws, ws-opts: {path: /vless, headers: {Host: marzban-node1-production-ef8e.up.railway.app}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@v2box_meli🇸🇨"
-      - "@v2box_meli🎊2"
-      - "@v2box_meli👽"
-      - "@v2box_meli 🇺🇸"
-      - 🇫🇷 @v2box_meli🇫🇷 FR
+      - "@v2box_meli🇵🇹"
+      - "@v2box_meli🇫🇮"
+      - "@v2box_meli🇯🇵"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@v2box_meli🇸🇨"
-      - "@v2box_meli🎊2"
-      - "@v2box_meli👽"
-      - "@v2box_meli 🇺🇸"
-      - 🇫🇷 @v2box_meli🇫🇷 FR
+      - "@v2box_meli🇵🇹"
+      - "@v2box_meli🇫🇮"
+      - "@v2box_meli🇯🇵"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@v2box_meli🇸🇨"
-      - "@v2box_meli🎊2"
-      - "@v2box_meli👽"
-      - "@v2box_meli 🇺🇸"
-      - 🇫🇷 @v2box_meli🇫🇷 FR
+      - "@v2box_meli🇵🇹"
+      - "@v2box_meli🇫🇮"
+      - "@v2box_meli🇯🇵"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@v2box_meli🇸🇨"
-      - "@v2box_meli🎊2"
-      - "@v2box_meli👽"
-      - "@v2box_meli 🇺🇸"
-      - 🇫🇷 @v2box_meli🇫🇷 FR
+      - "@v2box_meli🇵🇹"
+      - "@v2box_meli🇫🇮"
+      - "@v2box_meli🇯🇵"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@v2box_meli🇸🇨"
-      - "@v2box_meli🎊2"
-      - "@v2box_meli👽"
-      - "@v2box_meli 🇺🇸"
-      - 🇫🇷 @v2box_meli🇫🇷 FR
+      - "@v2box_meli🇵🇹"
+      - "@v2box_meli🇫🇮"
+      - "@v2box_meli🇯🇵"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@v2box_meli🇸🇨"
-      - "@v2box_meli🎊2"
-      - "@v2box_meli👽"
-      - "@v2box_meli 🇺🇸"
-      - 🇫🇷 @v2box_meli🇫🇷 FR
+      - "@v2box_meli🇵🇹"
+      - "@v2box_meli🇫🇮"
+      - "@v2box_meli🇯🇵"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -100,11 +86,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@v2box_meli🇸🇨"
-      - "@v2box_meli🎊2"
-      - "@v2box_meli👽"
-      - "@v2box_meli 🇺🇸"
-      - 🇫🇷 @v2box_meli🇫🇷 FR
+      - "@v2box_meli🇵🇹"
+      - "@v2box_meli🇫🇮"
+      - "@v2box_meli🇯🇵"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
