@@ -5,9 +5,10 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 129.146.116.35:50356, server: 129.146.116.35, port: 50356, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: nEL9gHcge5INdJhIJL0r9RdkxBOn6nvmaf6wYwH+Jxg=, udp: true, tfo: false}
-  - {name: it.selqora.ir:22211, server: it.selqora.ir, port: 22211, type: vless, tls: true, packet-encoding: xudp, uuid: 14079f86-f06b-48a5-a83c-5a6a0f6f14bd, host: it.selqora.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 84.235.175.73:62145, server: 84.235.175.73, port: 62145, type: vless, tls: true, packet-encoding: xudp, uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇩🇪 de-server-1.zelnora.ir:1080, server: de-server-1.zelnora.ir, port: 1080, type: ss, cipher: chacha20-ietf-poly1305, password: OhGXJG4nEqTN62cDDcD_8_CddrpTHn0u, udp: true, tfo: false}
+  - {name: 18.167.96.176:52770, server: 18.167.96.176, port: 52770, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 149.130.172.177:62145, server: 149.130.172.177, port: 62145, type: vless, tls: true, packet-encoding: xudp, uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇩🇪 germany.superbuba.top:443, server: germany.superbuba.top, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d4cae7df-50a1-428c-bd62-881c8f3bbd90, servername: germany.superbuba.top, host: germany.superbuba.top, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: rCkSHJ7goy7ZvSlau4LfXF-QLloOJMNeMxpeeQtwtVs, short-id: 4fa44664f6a566d3}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: ne1385.cdn-video.pro:443, server: ne1385.cdn-video.pro, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f980aecd-d243-4910-b231-db172d434541, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: trgrpc}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
@@ -15,9 +16,10 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 129.146.116.35:50356
-      - it.selqora.ir:22211
-      - 84.235.175.73:62145
+      - 🇩🇪 de-server-1.zelnora.ir:1080
+      - 18.167.96.176:52770
+      - 149.130.172.177:62145
+      - 🇩🇪 germany.superbuba.top:443
       - ne1385.cdn-video.pro:443
   - name: ♻️ 自动选择
     type: url-test
@@ -25,9 +27,10 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 129.146.116.35:50356
-      - it.selqora.ir:22211
-      - 84.235.175.73:62145
+      - 🇩🇪 de-server-1.zelnora.ir:1080
+      - 18.167.96.176:52770
+      - 149.130.172.177:62145
+      - 🇩🇪 germany.superbuba.top:443
       - ne1385.cdn-video.pro:443
   - name: 🌍 国外媒体
     type: select
@@ -35,36 +38,40 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 129.146.116.35:50356
-      - it.selqora.ir:22211
-      - 84.235.175.73:62145
+      - 🇩🇪 de-server-1.zelnora.ir:1080
+      - 18.167.96.176:52770
+      - 149.130.172.177:62145
+      - 🇩🇪 germany.superbuba.top:443
       - ne1385.cdn-video.pro:443
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 129.146.116.35:50356
-      - it.selqora.ir:22211
-      - 84.235.175.73:62145
+      - 🇩🇪 de-server-1.zelnora.ir:1080
+      - 18.167.96.176:52770
+      - 149.130.172.177:62145
+      - 🇩🇪 germany.superbuba.top:443
       - ne1385.cdn-video.pro:443
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 129.146.116.35:50356
-      - it.selqora.ir:22211
-      - 84.235.175.73:62145
+      - 🇩🇪 de-server-1.zelnora.ir:1080
+      - 18.167.96.176:52770
+      - 149.130.172.177:62145
+      - 🇩🇪 germany.superbuba.top:443
       - ne1385.cdn-video.pro:443
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 129.146.116.35:50356
-      - it.selqora.ir:22211
-      - 84.235.175.73:62145
+      - 🇩🇪 de-server-1.zelnora.ir:1080
+      - 18.167.96.176:52770
+      - 149.130.172.177:62145
+      - 🇩🇪 germany.superbuba.top:443
       - ne1385.cdn-video.pro:443
   - name: 🎯 全球直连
     type: select
@@ -93,9 +100,10 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 129.146.116.35:50356
-      - it.selqora.ir:22211
-      - 84.235.175.73:62145
+      - 🇩🇪 de-server-1.zelnora.ir:1080
+      - 18.167.96.176:52770
+      - 149.130.172.177:62145
+      - 🇩🇪 germany.superbuba.top:443
       - ne1385.cdn-video.pro:443
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连

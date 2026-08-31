@@ -465,8 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 𝐃𝐚𝐫𝐜𝐏𝐫𝐨𝐱𝐲@`, server: 199.232.78.159, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: da6ece67-aff5-4f94-94f3-08e87ca8cd51, servername: ssl.fastly.com, network: ws, ws-opts: {path: /, headers: {Host: ssl.fastly.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 𝐃𝐚𝐫𝐜�%…, server: 199.232.78.159, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: da6ece67-aff5-4f94-94f3-08e87ca8cd51, servername: ssl.fastly.com, network: ws, ws-opts: {path: /, headers: {Host: ssl.fastly.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ƊARƇƤROXƳ@, server: 207.241.172.111, port: 1080, type: ss, cipher: chacha20-ietf-poly1305, password: OhGXJG4nEqTN62cDDcD_8_CddrpTHn0u, udp: true, tfo: false}
+  - {name: ƊARƇƤROXƳ@`, server: 144.31.1.201, port: 8090, type: vless, tls: true, packet-encoding: xudp, uuid: 5f829d2f-2f13-450c-81ac-e9832b8e47ec, servername: mold.speedload.online, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: grpc}, reality-opts: {public-key: J5ITJbg5FQFembAfkogKHHQB6DigsFXQxK7xu-QMWUs, short-id: 6b2f4e6ac9b1d2f0}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,21 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 𝐃𝐚𝐫𝐜𝐏𝐫𝐨𝐱𝐲@`
+      - ƊARƇƤROXƳ@
+      - ƊARƇƤROXƳ@`
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 𝐃𝐚𝐫𝐜𝐏𝐫𝐨𝐱𝐲@`
+      - ƊARƇƤROXƳ@
+      - ƊARƇƤROXƳ@`
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 𝐃𝐚𝐫𝐜𝐏𝐫𝐨𝐱𝐲@`
+      - ƊARƇƤROXƳ@
+      - ƊARƇƤROXƳ@`
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -513,21 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 𝐃𝐚𝐫𝐜𝐏𝐫𝐨𝐱𝐲@`
+      - ƊARƇƤROXƳ@
+      - ƊARƇƤROXƳ@`
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 𝐃𝐚𝐫𝐜𝐏𝐫𝐨𝐱𝐲@`
+      - ƊARƇƤROXƳ@
+      - ƊARƇƤROXƳ@`
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 𝐃𝐚𝐫𝐜𝐏𝐫𝐨𝐱𝐲@`
+      - ƊARƇƤROXƳ@
+      - ƊARƇƤROXƳ@`
   - name: دانلود منیجر 📥
     type: select
     proxies:

@@ -466,7 +466,7 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: "@v2box_meli🇵🇹", server: fin.hostingdayam.com.tr, port: 8452, type: vless, tls: true, packet-encoding: xudp, uuid: 34c6b520-fa66-49e9-a337-b7a6a3af28ba, servername: amp-api-edge.apps.apple.com, host: amp-api-edge.apps.apple.com, path: /, reality-opts: {public-key: n7_Ddz9DUWdhhtPh92wOWNehjZr1ewHMvJmVyRYGhX4, short-id: 68d2d5f8}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2box_meli🇫🇮", server: land.hostingdayam.com.tr, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: 34c6b520-fa66-49e9-a337-b7a6a3af28ba, servername: land.hostingdayam.com.tr, alpn: [h3%2Ch2%2Chttp%2F1.1], network: ws, ws-opts: {path: /fi-cdn, headers: {Host: land.hostingdayam.com.tr}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2box_meli🖤", server: 185.143.233.5, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 38dd06a1-e1cb-492b-bb87-218ce05d0d67, network: ws, ws-opts: {path: /, headers: {Host: fox-a9e04bb07a-test.apps.ir-central1.arvancaas.ir}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@v2box_meli🇯🇵", server: marzban-node1-production-ef8e.up.railway.app, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 87c771f9-f42c-4a29-8281-ce9135c1802f, servername: marzban-node1-production-ef8e.up.railway.app, alpn: [h2], network: ws, ws-opts: {path: /vless, headers: {Host: marzban-node1-production-ef8e.up.railway.app}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -485,7 +485,7 @@ proxy-groups:
     type: select
     proxies:
       - "@v2box_meli🇵🇹"
-      - "@v2box_meli🇫🇮"
+      - "@v2box_meli🖤"
       - "@v2box_meli🇯🇵"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -494,7 +494,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@v2box_meli🇵🇹"
-      - "@v2box_meli🇫🇮"
+      - "@v2box_meli🖤"
       - "@v2box_meli🇯🇵"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -503,7 +503,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@v2box_meli🇵🇹"
-      - "@v2box_meli🇫🇮"
+      - "@v2box_meli🖤"
       - "@v2box_meli🇯🇵"
   - name: اتصال پایدار 🔗
     type: url-test
@@ -521,7 +521,7 @@ proxy-groups:
     interval: 600
     proxies:
       - "@v2box_meli🇵🇹"
-      - "@v2box_meli🇫🇮"
+      - "@v2box_meli🖤"
       - "@v2box_meli🇯🇵"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -530,7 +530,7 @@ proxy-groups:
     interval: 600
     proxies:
       - "@v2box_meli🇵🇹"
-      - "@v2box_meli🇫🇮"
+      - "@v2box_meli🖤"
       - "@v2box_meli🇯🇵"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -539,7 +539,7 @@ proxy-groups:
     interval: 600
     proxies:
       - "@v2box_meli🇵🇹"
-      - "@v2box_meli🇫🇮"
+      - "@v2box_meli🖤"
       - "@v2box_meli🇯🇵"
   - name: دانلود منیجر 📥
     type: select
