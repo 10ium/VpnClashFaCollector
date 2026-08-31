@@ -469,7 +469,6 @@ proxies:
   - {name: 18.167.96.176:52770, server: 18.167.96.176, port: 52770, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 149.130.172.177:62145, server: 149.130.172.177, port: 62145, type: vless, tls: true, packet-encoding: xudp, uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 🇩🇪 germany.superbuba.top:443, server: germany.superbuba.top, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d4cae7df-50a1-428c-bd62-881c8f3bbd90, servername: germany.superbuba.top, host: germany.superbuba.top, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: rCkSHJ7goy7ZvSlau4LfXF-QLloOJMNeMxpeeQtwtVs, short-id: 4fa44664f6a566d3}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ne1385.cdn-video.pro:443, server: ne1385.cdn-video.pro, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f980aecd-d243-4910-b231-db172d434541, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: trgrpc}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -490,7 +489,6 @@ proxy-groups:
       - 18.167.96.176:52770
       - 149.130.172.177:62145
       - 🇩🇪 germany.superbuba.top:443
-      - ne1385.cdn-video.pro:443
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -501,7 +499,6 @@ proxy-groups:
       - 18.167.96.176:52770
       - 149.130.172.177:62145
       - 🇩🇪 germany.superbuba.top:443
-      - ne1385.cdn-video.pro:443
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -512,7 +509,6 @@ proxy-groups:
       - 18.167.96.176:52770
       - 149.130.172.177:62145
       - 🇩🇪 germany.superbuba.top:443
-      - ne1385.cdn-video.pro:443
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -532,7 +528,6 @@ proxy-groups:
       - 18.167.96.176:52770
       - 149.130.172.177:62145
       - 🇩🇪 germany.superbuba.top:443
-      - ne1385.cdn-video.pro:443
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -543,7 +538,6 @@ proxy-groups:
       - 18.167.96.176:52770
       - 149.130.172.177:62145
       - 🇩🇪 germany.superbuba.top:443
-      - ne1385.cdn-video.pro:443
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -554,7 +548,6 @@ proxy-groups:
       - 18.167.96.176:52770
       - 149.130.172.177:62145
       - 🇩🇪 germany.superbuba.top:443
-      - ne1385.cdn-video.pro:443
   - name: دانلود منیجر 📥
     type: select
     proxies:
