@@ -467,7 +467,10 @@ rule-providers:
 proxies:
   - {name: 🇩🇪 de-server-1.zelnora.ir:1080, server: de-server-1.zelnora.ir, port: 1080, type: ss, cipher: chacha20-ietf-poly1305, password: OhGXJG4nEqTN62cDDcD_8_CddrpTHn0u, udp: true, tfo: false}
   - {name: 18.167.96.176:52770, server: 18.167.96.176, port: 52770, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 143.47.176.112:62145, server: 143.47.176.112, port: 62145, type: vless, tls: true, packet-encoding: xudp, uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 149.130.172.177:62145, server: 149.130.172.177, port: 62145, type: vless, tls: true, packet-encoding: xudp, uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 188.220.67.198:2087, server: 188.220.67.198, port: 2087, type: vless, tls: true, packet-encoding: xudp, uuid: 90da514d-8888-4a53-912e-ac2981c8c6ee, network: ws, ws-opts: {path: /8f2690e2d016}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇷🇺 neth8.lunariai.ru:443, server: neth8.lunariai.ru, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c21631d5-36c9-4664-b575-97eca17456be, network: ws, ws-opts: {path: /, headers: {Host: neth8.lunariai.ru}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 🇩🇪 germany.superbuba.top:443, server: germany.superbuba.top, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d4cae7df-50a1-428c-bd62-881c8f3bbd90, servername: germany.superbuba.top, host: germany.superbuba.top, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: rCkSHJ7goy7ZvSlau4LfXF-QLloOJMNeMxpeeQtwtVs, short-id: 4fa44664f6a566d3}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -487,7 +490,10 @@ proxy-groups:
     proxies:
       - 🇩🇪 de-server-1.zelnora.ir:1080
       - 18.167.96.176:52770
+      - 143.47.176.112:62145
       - 149.130.172.177:62145
+      - 188.220.67.198:2087
+      - 🇷🇺 neth8.lunariai.ru:443
       - 🇩🇪 germany.superbuba.top:443
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -497,7 +503,10 @@ proxy-groups:
     proxies:
       - 🇩🇪 de-server-1.zelnora.ir:1080
       - 18.167.96.176:52770
+      - 143.47.176.112:62145
       - 149.130.172.177:62145
+      - 188.220.67.198:2087
+      - 🇷🇺 neth8.lunariai.ru:443
       - 🇩🇪 germany.superbuba.top:443
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -507,7 +516,10 @@ proxy-groups:
     proxies:
       - 🇩🇪 de-server-1.zelnora.ir:1080
       - 18.167.96.176:52770
+      - 143.47.176.112:62145
       - 149.130.172.177:62145
+      - 188.220.67.198:2087
+      - 🇷🇺 neth8.lunariai.ru:443
       - 🇩🇪 germany.superbuba.top:443
   - name: اتصال پایدار 🔗
     type: url-test
@@ -526,7 +538,10 @@ proxy-groups:
     proxies:
       - 🇩🇪 de-server-1.zelnora.ir:1080
       - 18.167.96.176:52770
+      - 143.47.176.112:62145
       - 149.130.172.177:62145
+      - 188.220.67.198:2087
+      - 🇷🇺 neth8.lunariai.ru:443
       - 🇩🇪 germany.superbuba.top:443
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -536,7 +551,10 @@ proxy-groups:
     proxies:
       - 🇩🇪 de-server-1.zelnora.ir:1080
       - 18.167.96.176:52770
+      - 143.47.176.112:62145
       - 149.130.172.177:62145
+      - 188.220.67.198:2087
+      - 🇷🇺 neth8.lunariai.ru:443
       - 🇩🇪 germany.superbuba.top:443
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -546,7 +564,10 @@ proxy-groups:
     proxies:
       - 🇩🇪 de-server-1.zelnora.ir:1080
       - 18.167.96.176:52770
+      - 143.47.176.112:62145
       - 149.130.172.177:62145
+      - 188.220.67.198:2087
+      - 🇷🇺 neth8.lunariai.ru:443
       - 🇩🇪 germany.superbuba.top:443
   - name: دانلود منیجر 📥
     type: select
