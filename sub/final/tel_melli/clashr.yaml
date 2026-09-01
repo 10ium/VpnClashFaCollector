@@ -5,46 +5,53 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@v2box_meli🖤", server: 185.143.233.5, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 38dd06a1-e1cb-492b-bb87-218ce05d0d67, network: ws, ws-opts: {path: /, headers: {Host: fox-a9e04bb07a-test.apps.ir-central1.arvancaas.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: v2box_meli⛈️, server: 69.46.46.20, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 15e9c884-4541-f430-cf55-66401979319d, servername: golden-grove-39ee-production.up.railway.app, alpn: [http%2F1.1], network: ws, ws-opts: {path: /ws/15e9c884-4541-f430-cf55-66401979319d, headers: {Host: golden-grove-39ee-production.up.railway.app}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ⇝ @v2box_meli💠, server: 72.56.115.125, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4e25f371-acc5-4eb6-afb3-b763ee75537d, servername: rotterdam.korgivps.ru, alpn: [http%2F1.1], network: ws, ws-opts: {path: /api/user, headers: {Host: rotterdam.korgivps.ru}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@v2box_meli🖤"
+      - v2box_meli⛈️
+      - ⇝ @v2box_meli💠
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@v2box_meli🖤"
+      - v2box_meli⛈️
+      - ⇝ @v2box_meli💠
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@v2box_meli🖤"
+      - v2box_meli⛈️
+      - ⇝ @v2box_meli💠
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@v2box_meli🖤"
+      - v2box_meli⛈️
+      - ⇝ @v2box_meli💠
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@v2box_meli🖤"
+      - v2box_meli⛈️
+      - ⇝ @v2box_meli💠
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@v2box_meli🖤"
+      - v2box_meli⛈️
+      - ⇝ @v2box_meli💠
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +79,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@v2box_meli🖤"
+      - v2box_meli⛈️
+      - ⇝ @v2box_meli💠
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
