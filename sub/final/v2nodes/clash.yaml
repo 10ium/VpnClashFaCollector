@@ -465,9 +465,10 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 🇭🇰 hk03.qianmoip.win:50222, server: hk03.qianmoip.win, port: 50222, type: trojan, password: 302cf77d-6fb7-4ac8-ae61-88e286340d59, sni: taobao.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 129.146.56.236:50356, server: 129.146.56.236, port: 50356, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: ePPBJythkyFICgU0+BmSFSNJCLWIH/n8VIeBuM22DTU=, udp: true, tfo: false}
   - {name: app2.goonars.com:443, server: app2.goonars.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 2f600710-9f4e-4eab-8de1-89f60a878e55, servername: app2.goonars.com, host: app2.goonars.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: iTCQz0n0AolvGxU2ZASJIsSVoKOR9PAFbnZVQDnSnF8, short-id: c481d750}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 31.76.4.128:5001, server: 31.76.4.128, port: 5001, type: vless, tls: true, packet-encoding: xudp, uuid: 5a92a9d2-3067-49cd-bfc5-989bbdfc5d52, servername: fi.aeternavpn.space, host: fi.aeternavpn.space, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: HNjZe5pYUhcuE8sASYVVrVSMW_jFfekgLnrnO4xXIyQ, short-id: a1b2c3d4}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 49.12.244.56:101, server: 49.12.244.56, port: 101, type: vless, tls: true, packet-encoding: xudp, uuid: 40c81dcc-bc8a-4690-abdf-75ea8530234b, servername: amp-api-edge.apps.apple.com, alpn: ["h3,h2"], host: amp-api-edge.apps.apple.com, path: /, reality-opts: {public-key: VxFkVk2SKEQrRnBnhzvl29UpHlS2i5t6Is__HGPmuRU, short-id: 03e5ac759d2e7e90}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: k2.cloud--vpn.site:443, server: k2.cloud--vpn.site, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 86c2939c-4506-4028-cdc9-6fe073890e81, servername: ssl.fastly.com, alpn: [h2], network: ws, ws-opts: {path: /, headers: {Host: ssl.fastly.com}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 158.247.123.215:62145, server: 158.247.123.215, port: 62145, type: vless, tls: true, packet-encoding: xudp, uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -485,9 +486,10 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 🇭🇰 hk03.qianmoip.win:50222
+      - 129.146.56.236:50356
       - app2.goonars.com:443
-      - 31.76.4.128:5001
+      - 49.12.244.56:101
+      - k2.cloud--vpn.site:443
       - 158.247.123.215:62145
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -495,9 +497,10 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - 🇭🇰 hk03.qianmoip.win:50222
+      - 129.146.56.236:50356
       - app2.goonars.com:443
-      - 31.76.4.128:5001
+      - 49.12.244.56:101
+      - k2.cloud--vpn.site:443
       - 158.247.123.215:62145
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -505,9 +508,10 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - 🇭🇰 hk03.qianmoip.win:50222
+      - 129.146.56.236:50356
       - app2.goonars.com:443
-      - 31.76.4.128:5001
+      - 49.12.244.56:101
+      - k2.cloud--vpn.site:443
       - 158.247.123.215:62145
   - name: اتصال پایدار 🔗
     type: url-test
@@ -524,9 +528,10 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇭🇰 hk03.qianmoip.win:50222
+      - 129.146.56.236:50356
       - app2.goonars.com:443
-      - 31.76.4.128:5001
+      - 49.12.244.56:101
+      - k2.cloud--vpn.site:443
       - 158.247.123.215:62145
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -534,9 +539,10 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇭🇰 hk03.qianmoip.win:50222
+      - 129.146.56.236:50356
       - app2.goonars.com:443
-      - 31.76.4.128:5001
+      - 49.12.244.56:101
+      - k2.cloud--vpn.site:443
       - 158.247.123.215:62145
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -544,9 +550,10 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇭🇰 hk03.qianmoip.win:50222
+      - 129.146.56.236:50356
       - app2.goonars.com:443
-      - 31.76.4.128:5001
+      - 49.12.244.56:101
+      - k2.cloud--vpn.site:443
       - 158.247.123.215:62145
   - name: دانلود منیجر 📥
     type: select
