@@ -5,60 +5,46 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@SiNAVM", server: 192.142.37.217, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d62d49cb-a9b5-4f1f-90a4-316ecc3dadc4, servername: www.oracle.com, host: www.oracle.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: aFbCyrLOre-V3ORpBjqenGfDt62Ng_i1sSq-DmZHVgc, short-id: 89e0494514ec}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@SiNAVM`", server: 192.142.37.217, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d62d49cb-a9b5-4f1f-90a4-316ecc3dadc4, servername: www.oracle.com, host: www.oracle.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: aFbCyrLOre-V3ORpBjqenGfDt62Ng_i1sSq-DmZHVgc, short-id: 89e0494514ec}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@SiNAVM` 2", server: ru.chick-team.ru, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d62d49cb-a9b5-4f1f-90a4-316ecc3dadc4, servername: res.chick-team.ru, host: res.chick-team.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: NBiCX_Tj3BeMAyG-GbLLKpGjW_qacm3A2Mz5mN8v3Xk, short-id: ab532d3308daa67b}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@SiNAVM کانال تلگرامی`", server: sinavm.soft10.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 3a09e0c9-4194-4b85-8d7f-fd1fc38f00b2, servername: sinavm.soft10.ir, alpn: [http/1.1], network: ws, ws-opts: {path: /assignment----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM, headers: {Host: sinavm.soft10.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@SiNAVM"
-      - "@SiNAVM`"
-      - "@SiNAVM` 2"
+      - "@SiNAVM کانال تلگرامی`"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@SiNAVM"
-      - "@SiNAVM`"
-      - "@SiNAVM` 2"
+      - "@SiNAVM کانال تلگرامی`"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@SiNAVM"
-      - "@SiNAVM`"
-      - "@SiNAVM` 2"
+      - "@SiNAVM کانال تلگرامی`"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@SiNAVM"
-      - "@SiNAVM`"
-      - "@SiNAVM` 2"
+      - "@SiNAVM کانال تلگرامی`"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@SiNAVM"
-      - "@SiNAVM`"
-      - "@SiNAVM` 2"
+      - "@SiNAVM کانال تلگرامی`"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@SiNAVM"
-      - "@SiNAVM`"
-      - "@SiNAVM` 2"
+      - "@SiNAVM کانال تلگرامی`"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -86,9 +72,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@SiNAVM"
-      - "@SiNAVM`"
-      - "@SiNAVM` 2"
+      - "@SiNAVM کانال تلگرامی`"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

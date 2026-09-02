@@ -6,7 +6,6 @@ log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
   - {name: 129.146.56.236:50356, server: 129.146.56.236, port: 50356, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: ePPBJythkyFICgU0+BmSFSNJCLWIH/n8VIeBuM22DTU=, udp: true, tfo: false}
-  - {name: app2.goonars.com:443, server: app2.goonars.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 2f600710-9f4e-4eab-8de1-89f60a878e55, servername: app2.goonars.com, host: app2.goonars.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: iTCQz0n0AolvGxU2ZASJIsSVoKOR9PAFbnZVQDnSnF8, short-id: c481d750}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 49.12.244.56:101, server: 49.12.244.56, port: 101, type: vless, tls: true, packet-encoding: xudp, uuid: 40c81dcc-bc8a-4690-abdf-75ea8530234b, servername: amp-api-edge.apps.apple.com, alpn: ["h3,h2"], host: amp-api-edge.apps.apple.com, path: /, reality-opts: {public-key: VxFkVk2SKEQrRnBnhzvl29UpHlS2i5t6Is__HGPmuRU, short-id: 03e5ac759d2e7e90}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: k2.cloud--vpn.site:443, server: k2.cloud--vpn.site, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 86c2939c-4506-4028-cdc9-6fe073890e81, servername: ssl.fastly.com, alpn: [h2], network: ws, ws-opts: {path: /, headers: {Host: ssl.fastly.com}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 158.247.123.215:62145, server: 158.247.123.215, port: 62145, type: vless, tls: true, packet-encoding: xudp, uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a, path: /, skip-cert-verify: false, udp: true, tfo: false}
@@ -17,7 +16,6 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - 129.146.56.236:50356
-      - app2.goonars.com:443
       - 49.12.244.56:101
       - k2.cloud--vpn.site:443
       - 158.247.123.215:62145
@@ -28,7 +26,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 129.146.56.236:50356
-      - app2.goonars.com:443
       - 49.12.244.56:101
       - k2.cloud--vpn.site:443
       - 158.247.123.215:62145
@@ -39,7 +36,6 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - 129.146.56.236:50356
-      - app2.goonars.com:443
       - 49.12.244.56:101
       - k2.cloud--vpn.site:443
       - 158.247.123.215:62145
@@ -49,7 +45,6 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - 129.146.56.236:50356
-      - app2.goonars.com:443
       - 49.12.244.56:101
       - k2.cloud--vpn.site:443
       - 158.247.123.215:62145
@@ -59,7 +54,6 @@ proxy-groups:
       - 🎯 全球直连
       - 🚀 节点选择
       - 129.146.56.236:50356
-      - app2.goonars.com:443
       - 49.12.244.56:101
       - k2.cloud--vpn.site:443
       - 158.247.123.215:62145
@@ -69,7 +63,6 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - 129.146.56.236:50356
-      - app2.goonars.com:443
       - 49.12.244.56:101
       - k2.cloud--vpn.site:443
       - 158.247.123.215:62145
@@ -101,7 +94,6 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - 129.146.56.236:50356
-      - app2.goonars.com:443
       - 49.12.244.56:101
       - k2.cloud--vpn.site:443
       - 158.247.123.215:62145

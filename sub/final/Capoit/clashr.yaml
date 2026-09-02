@@ -5,46 +5,46 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 82.40.62.178:9090, server: 82.40.62.178, port: 9090, type: vless, tls: true, packet-encoding: xudp, uuid: Telegramjoin%3ATurboConfigs%20, host: amp-api-edge.apps.apple.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit`", server: 185.207.197.12, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 080fad7c-ff4b-499f-ab5d-52d69ea5745a, network: ws, ws-opts: {path: /pyip, headers: {Host: calm-tree-22b0.215-d2a.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 82.40.62.178:9090
+      - "@Capoit`"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 82.40.62.178:9090
+      - "@Capoit`"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 82.40.62.178:9090
+      - "@Capoit`"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 82.40.62.178:9090
+      - "@Capoit`"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 82.40.62.178:9090
+      - "@Capoit`"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 82.40.62.178:9090
+      - "@Capoit`"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +72,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 82.40.62.178:9090
+      - "@Capoit`"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
