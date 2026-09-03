@@ -466,9 +466,10 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: 129.146.56.236:50356, server: 129.146.56.236, port: 50356, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: ePPBJythkyFICgU0+BmSFSNJCLWIH/n8VIeBuM22DTU=, udp: true, tfo: false}
+  - {name: xn--1ugy405pdua.gayvibe.dpdns.org:2174, server: xn--1ugy405pdua.gayvibe.dpdns.org, port: 2174, type: trojan, password: tripitropa444, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 49.12.244.56:101, server: 49.12.244.56, port: 101, type: vless, tls: true, packet-encoding: xudp, uuid: 40c81dcc-bc8a-4690-abdf-75ea8530234b, servername: amp-api-edge.apps.apple.com, alpn: ["h3,h2"], host: amp-api-edge.apps.apple.com, path: /, reality-opts: {public-key: VxFkVk2SKEQrRnBnhzvl29UpHlS2i5t6Is__HGPmuRU, short-id: 03e5ac759d2e7e90}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: k2.cloud--vpn.site:443, server: k2.cloud--vpn.site, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 86c2939c-4506-4028-cdc9-6fe073890e81, servername: ssl.fastly.com, alpn: [h2], network: ws, ws-opts: {path: /, headers: {Host: ssl.fastly.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 158.247.123.215:62145, server: 158.247.123.215, port: 62145, type: vless, tls: true, packet-encoding: xudp, uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 144.21.43.131:62145, server: 144.21.43.131, port: 62145, type: vless, tls: true, packet-encoding: xudp, uuid: 8fb65472-5957-4f64-ba2d-b5812b2f155a, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,9 +487,10 @@ proxy-groups:
     type: select
     proxies:
       - 129.146.56.236:50356
+      - xn--1ugy405pdua.gayvibe.dpdns.org:2174
       - 49.12.244.56:101
       - k2.cloud--vpn.site:443
-      - 158.247.123.215:62145
+      - 144.21.43.131:62145
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -496,9 +498,10 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 129.146.56.236:50356
+      - xn--1ugy405pdua.gayvibe.dpdns.org:2174
       - 49.12.244.56:101
       - k2.cloud--vpn.site:443
-      - 158.247.123.215:62145
+      - 144.21.43.131:62145
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -506,9 +509,10 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 129.146.56.236:50356
+      - xn--1ugy405pdua.gayvibe.dpdns.org:2174
       - 49.12.244.56:101
       - k2.cloud--vpn.site:443
-      - 158.247.123.215:62145
+      - 144.21.43.131:62145
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -525,9 +529,10 @@ proxy-groups:
     interval: 600
     proxies:
       - 129.146.56.236:50356
+      - xn--1ugy405pdua.gayvibe.dpdns.org:2174
       - 49.12.244.56:101
       - k2.cloud--vpn.site:443
-      - 158.247.123.215:62145
+      - 144.21.43.131:62145
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -535,9 +540,10 @@ proxy-groups:
     interval: 600
     proxies:
       - 129.146.56.236:50356
+      - xn--1ugy405pdua.gayvibe.dpdns.org:2174
       - 49.12.244.56:101
       - k2.cloud--vpn.site:443
-      - 158.247.123.215:62145
+      - 144.21.43.131:62145
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -545,9 +551,10 @@ proxy-groups:
     interval: 600
     proxies:
       - 129.146.56.236:50356
+      - xn--1ugy405pdua.gayvibe.dpdns.org:2174
       - 49.12.244.56:101
       - k2.cloud--vpn.site:443
-      - 158.247.123.215:62145
+      - 144.21.43.131:62145
   - name: دانلود منیجر 📥
     type: select
     proxies:
