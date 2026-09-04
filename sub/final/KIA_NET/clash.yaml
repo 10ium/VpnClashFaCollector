@@ -465,11 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 🇦🇱 dc-udp-🇦🇱 Albania-Tirana, server: giftcard.gateway-stream.com, port: 52000, type: hysteria2, ports: 52000, password: fmaznn1lrzys7ddy, obfs: salamander, obfs-password: fuw2k1ddrouwxr3u, sni: giftcard.gateway-stream.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇦🇹 dc-udp-🇦🇹 Austria-Vienna, server: giftcard.gateway-stream.com, port: 52002, type: hysteria2, ports: 52002, password: fmaznn1lrzys7ddy, obfs: salamander, obfs-password: fuw2k1ddrouwxr3u, sni: giftcard.gateway-stream.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇦🇺 dc-udp-🇦🇺 Australia-Perth, server: giftcard.gateway-stream.com, port: 52006, type: hysteria2, ports: 52006, password: fmaznn1lrzys7ddy, obfs: salamander, obfs-password: fuw2k1ddrouwxr3u, sni: giftcard.gateway-stream.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇪🇸 dc-udp-🇪🇸 Spain-Valencia, server: giftcard.gateway-stream.com, port: 52028, type: hysteria2, ports: 52028, password: fmaznn1lrzys7ddy, obfs: salamander, obfs-password: fuw2k1ddrouwxr3u, sni: giftcard.gateway-stream.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇫🇮 dc-udp-🇫🇮 Finland-Helsinki, server: giftcard.gateway-stream.com, port: 52029, type: hysteria2, ports: 52029, password: fmaznn1lrzys7ddy, obfs: salamander, obfs-password: fuw2k1ddrouwxr3u, sni: giftcard.gateway-stream.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇸🇬 dc-udp-🇸🇬 Singapore-Singapore, server: giftcard.gateway-stream.com, port: 52063, type: hysteria2, ports: 52063, password: bfmf6a05bp4fjwuh, obfs: salamander, obfs-password: fuw2k1ddrouwxr3u, sni: giftcard.gateway-stream.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇹🇷 dc-udp-🇹🇷 Turkey-Istanbul, server: giftcard.gateway-stream.com, port: 52067, type: hysteria2, ports: 52067, password: bfmf6a05bp4fjwuh, obfs: salamander, obfs-password: fuw2k1ddrouwxr3u, sni: giftcard.gateway-stream.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇺🇦 dc-udp-🇺🇦 Ukraine-Kyiv, server: giftcard.gateway-stream.com, port: 52068, type: hysteria2, ports: 52068, password: bfmf6a05bp4fjwuh, obfs: salamander, obfs-password: fuw2k1ddrouwxr3u, sni: giftcard.gateway-stream.com, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,33 +484,27 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 🇦🇱 dc-udp-🇦🇱 Albania-Tirana
-      - 🇦🇹 dc-udp-🇦🇹 Austria-Vienna
-      - 🇦🇺 dc-udp-🇦🇺 Australia-Perth
-      - 🇪🇸 dc-udp-🇪🇸 Spain-Valencia
-      - 🇫🇮 dc-udp-🇫🇮 Finland-Helsinki
+      - 🇸🇬 dc-udp-🇸🇬 Singapore-Singapore
+      - 🇹🇷 dc-udp-🇹🇷 Turkey-Istanbul
+      - 🇺🇦 dc-udp-🇺🇦 Ukraine-Kyiv
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 🇦🇱 dc-udp-🇦🇱 Albania-Tirana
-      - 🇦🇹 dc-udp-🇦🇹 Austria-Vienna
-      - 🇦🇺 dc-udp-🇦🇺 Australia-Perth
-      - 🇪🇸 dc-udp-🇪🇸 Spain-Valencia
-      - 🇫🇮 dc-udp-🇫🇮 Finland-Helsinki
+      - 🇸🇬 dc-udp-🇸🇬 Singapore-Singapore
+      - 🇹🇷 dc-udp-🇹🇷 Turkey-Istanbul
+      - 🇺🇦 dc-udp-🇺🇦 Ukraine-Kyiv
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 🇦🇱 dc-udp-🇦🇱 Albania-Tirana
-      - 🇦🇹 dc-udp-🇦🇹 Austria-Vienna
-      - 🇦🇺 dc-udp-🇦🇺 Australia-Perth
-      - 🇪🇸 dc-udp-🇪🇸 Spain-Valencia
-      - 🇫🇮 dc-udp-🇫🇮 Finland-Helsinki
+      - 🇸🇬 dc-udp-🇸🇬 Singapore-Singapore
+      - 🇹🇷 dc-udp-🇹🇷 Turkey-Istanbul
+      - 🇺🇦 dc-udp-🇺🇦 Ukraine-Kyiv
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -528,33 +520,27 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇦🇱 dc-udp-🇦🇱 Albania-Tirana
-      - 🇦🇹 dc-udp-🇦🇹 Austria-Vienna
-      - 🇦🇺 dc-udp-🇦🇺 Australia-Perth
-      - 🇪🇸 dc-udp-🇪🇸 Spain-Valencia
-      - 🇫🇮 dc-udp-🇫🇮 Finland-Helsinki
+      - 🇸🇬 dc-udp-🇸🇬 Singapore-Singapore
+      - 🇹🇷 dc-udp-🇹🇷 Turkey-Istanbul
+      - 🇺🇦 dc-udp-🇺🇦 Ukraine-Kyiv
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇦🇱 dc-udp-🇦🇱 Albania-Tirana
-      - 🇦🇹 dc-udp-🇦🇹 Austria-Vienna
-      - 🇦🇺 dc-udp-🇦🇺 Australia-Perth
-      - 🇪🇸 dc-udp-🇪🇸 Spain-Valencia
-      - 🇫🇮 dc-udp-🇫🇮 Finland-Helsinki
+      - 🇸🇬 dc-udp-🇸🇬 Singapore-Singapore
+      - 🇹🇷 dc-udp-🇹🇷 Turkey-Istanbul
+      - 🇺🇦 dc-udp-🇺🇦 Ukraine-Kyiv
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇦🇱 dc-udp-🇦🇱 Albania-Tirana
-      - 🇦🇹 dc-udp-🇦🇹 Austria-Vienna
-      - 🇦🇺 dc-udp-🇦🇺 Australia-Perth
-      - 🇪🇸 dc-udp-🇪🇸 Spain-Valencia
-      - 🇫🇮 dc-udp-🇫🇮 Finland-Helsinki
+      - 🇸🇬 dc-udp-🇸🇬 Singapore-Singapore
+      - 🇹🇷 dc-udp-🇹🇷 Turkey-Istanbul
+      - 🇺🇦 dc-udp-🇺🇦 Ukraine-Kyiv
   - name: دانلود منیجر 📥
     type: select
     proxies:
