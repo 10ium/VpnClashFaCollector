@@ -466,12 +466,12 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: " ", server: 102.37.156.224, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: aduB9HGxQHjA2SBMRjkHX6, udp: true, tfo: false}
-  - {name: "  2", server: 82.38.31.149, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
-  - {name: "  3", server: 82.38.31.35, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
-  - {name: "  4", server: free-amsterdam-node-1.cloudwidecdn.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 44ae52b9-76fc-444d-8e43-186b4384b80a, servername: www.apple.com, host: www.apple.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: PryGoq51ilG0eLUPl9i0xCvmk1xpwkyFSr_tG4GNLlU, short-id: 1d86d17709852910}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "  5", server: 91.92.43.177, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8fe8c95f-1840-42b8-bdf2-35c858eca4e9, servername: expire.selfsteal.vip, host: expire.selfsteal.vip, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: NUszayjBaw2LyjJtctsGRPzLltoafwwxO7xgEcDXWGk, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "  6", server: 188.220.67.245, port: 2087, type: vless, tls: true, packet-encoding: xudp, uuid: 90da514d-8888-4a53-912e-ac2981c8c6ee, network: ws, ws-opts: {path: /8f2690e2d016}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "  7", server: tg1.wba-pn.ru, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ae2009b9-76cb-4d18-8612-7515b2b84398, servername: tg1.wba-pn.ru, network: ws, ws-opts: {path: /, headers: {Host: tg1.wba-pn.ru}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "  2", server: 51.158.206.34, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "  3", server: 51.158.206.8, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "  4", server: 51.158.206.97, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "  5", server: 188.220.67.245, port: 2087, type: vless, tls: true, packet-encoding: xudp, uuid: 90da514d-8888-4a53-912e-ac2981c8c6ee, network: ws, ws-opts: {path: /8f2690e2d016}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "", server: 38.110.1.246, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: " 2", server: 82.198.246.37, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -493,8 +493,8 @@ proxy-groups:
       - "  3"
       - "  4"
       - "  5"
-      - "  6"
-      - "  7"
+      - ""
+      - " 2"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -506,8 +506,8 @@ proxy-groups:
       - "  3"
       - "  4"
       - "  5"
-      - "  6"
-      - "  7"
+      - ""
+      - " 2"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -519,8 +519,8 @@ proxy-groups:
       - "  3"
       - "  4"
       - "  5"
-      - "  6"
-      - "  7"
+      - ""
+      - " 2"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -541,8 +541,8 @@ proxy-groups:
       - "  3"
       - "  4"
       - "  5"
-      - "  6"
-      - "  7"
+      - ""
+      - " 2"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -554,8 +554,8 @@ proxy-groups:
       - "  3"
       - "  4"
       - "  5"
-      - "  6"
-      - "  7"
+      - ""
+      - " 2"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -567,8 +567,8 @@ proxy-groups:
       - "  3"
       - "  4"
       - "  5"
-      - "  6"
-      - "  7"
+      - ""
+      - " 2"
   - name: دانلود منیجر 📥
     type: select
     proxies:

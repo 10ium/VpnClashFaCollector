@@ -5,81 +5,81 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@vpnbaz ⭐", server: 185.226.172.8, port: 8008, type: ss, cipher: aes-256-gcm, password: XKFKl2rULjIp74, udp: true, tfo: false}
+  - {name: "@vpnbaz 🍋‍🟩", server: 188.114.97.7, port: 443, type: trojan, password: humanity, sni: www.ignitelimit.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.ignitelimit.com}}, udp: true, tfo: false}
+  - {name: "@vpnbaz 🌊", server: 15.204.97.195, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@vpnbaz 🍭", server: 15.204.97.206, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz 🍋‍🟩", server: 132.243.235.53, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 60e2a548-96aa-4850-a279-1edab743c39b, servername: dhlparcel.nl, host: dhlparcel.nl, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 0XSgK4OAEjNPsjYdhNBV5xl5mCCRRzYucSQ9LIO0Gkg, short-id: 3dad96f8693ea653}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz ☂️", server: 161.97.160.224, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b81b4d1b-7f20-48f1-82dc-d24bef898cab, servername: passport.yandex.ru, host: passport.yandex.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 33zaT3jHXjtynSQ0Ucw9bK92-XH2zolJmuIeZ1XyZB0, short-id: e6}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz 🛸", server: v5p.sabermusic.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: eaeb9077-b90c-45e3-a52c-da847f5f86d7, host: v5p.sabermusic.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz 🌊", server: 82.198.246.97, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz ⭐", server: 132.243.235.53, port: 2096, type: vless, tls: true, packet-encoding: xudp, uuid: 60e2a548-96aa-4850-a279-1edab743c39b, servername: dhlparcel.nl, host: dhlparcel.nl, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 0XSgK4OAEjNPsjYdhNBV5xl5mCCRRzYucSQ9LIO0Gkg, short-id: 3dad96f8693ea653}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz ☂️", server: 167.233.227.12, port: 35443, type: vless, tls: true, packet-encoding: xudp, uuid: a0ba4d1e-60e7-4362-8f82-33da87da8e88, servername: amp-api-edge.apps.apple.com, host: amp-api-edge.apps.apple.com, path: /, reality-opts: {public-key: fu6E7KRYZT4vs4EoWdDiyH3tL8n4eD8M4TveOvpvNmE, short-id: bd2e4421}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz 🛸", server: 89.34.90.68, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: fe8e2ffb-8796-408c-af5b-0d4774215e00, servername: 360.yandex.ru, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: grpc}, reality-opts: {public-key: dTdncizxtVTqDZDkQoYdRTkf2Mn6XuKtkzg8vZhrkzA, short-id: 6ba85179e30d4fc2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@vpnbaz ⭐"
-      - "@vpnbaz 🍭"
       - "@vpnbaz 🍋‍🟩"
+      - "@vpnbaz 🌊"
+      - "@vpnbaz 🍭"
+      - "@vpnbaz ⭐"
       - "@vpnbaz ☂️"
       - "@vpnbaz 🛸"
-      - "@vpnbaz 🌊"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@vpnbaz ⭐"
-      - "@vpnbaz 🍭"
       - "@vpnbaz 🍋‍🟩"
+      - "@vpnbaz 🌊"
+      - "@vpnbaz 🍭"
+      - "@vpnbaz ⭐"
       - "@vpnbaz ☂️"
       - "@vpnbaz 🛸"
-      - "@vpnbaz 🌊"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@vpnbaz ⭐"
-      - "@vpnbaz 🍭"
       - "@vpnbaz 🍋‍🟩"
+      - "@vpnbaz 🌊"
+      - "@vpnbaz 🍭"
+      - "@vpnbaz ⭐"
       - "@vpnbaz ☂️"
       - "@vpnbaz 🛸"
-      - "@vpnbaz 🌊"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@vpnbaz ⭐"
-      - "@vpnbaz 🍭"
       - "@vpnbaz 🍋‍🟩"
+      - "@vpnbaz 🌊"
+      - "@vpnbaz 🍭"
+      - "@vpnbaz ⭐"
       - "@vpnbaz ☂️"
       - "@vpnbaz 🛸"
-      - "@vpnbaz 🌊"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@vpnbaz ⭐"
-      - "@vpnbaz 🍭"
       - "@vpnbaz 🍋‍🟩"
+      - "@vpnbaz 🌊"
+      - "@vpnbaz 🍭"
+      - "@vpnbaz ⭐"
       - "@vpnbaz ☂️"
       - "@vpnbaz 🛸"
-      - "@vpnbaz 🌊"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@vpnbaz ⭐"
-      - "@vpnbaz 🍭"
       - "@vpnbaz 🍋‍🟩"
+      - "@vpnbaz 🌊"
+      - "@vpnbaz 🍭"
+      - "@vpnbaz ⭐"
       - "@vpnbaz ☂️"
       - "@vpnbaz 🛸"
-      - "@vpnbaz 🌊"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -107,12 +107,12 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@vpnbaz ⭐"
-      - "@vpnbaz 🍭"
       - "@vpnbaz 🍋‍🟩"
+      - "@vpnbaz 🌊"
+      - "@vpnbaz 🍭"
+      - "@vpnbaz ⭐"
       - "@vpnbaz ☂️"
       - "@vpnbaz 🛸"
-      - "@vpnbaz 🌊"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
