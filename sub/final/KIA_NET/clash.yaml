@@ -465,14 +465,15 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 🇫🇷 France 🇫🇷, server: 51.77.225.200, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: zRZNBszYyWo5, udp: true, tfo: false}
-  - {name: 🇬🇧 United Kingdom 🇬🇧, server: 82.38.31.218, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
-  - {name: 🇬🇧 United Kingdom 🇬🇧 2, server: 82.38.31.155, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
+  - {name: 🇩🇪 Germany 🇩🇪, server: 51.195.126.38, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: 2YdE4lFOid5a, udp: true, tfo: false}
+  - {name: 🇺🇸 United States 🇺🇸, server: 108.181.0.177, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: G5p6ww4o67HB, udp: true, tfo: false}
+  - {name: 🇬🇧 United Kingdom 🇬🇧, server: 82.38.31.42, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
+  - {name: 🇮🇹 Italy 🇮🇹, server: 57.131.48.45, port: 8388, type: ss, cipher: aes-256-gcm, password: itzvpn@321, udp: true, tfo: false}
+  - {name: 🇪🇪 Estonia 🇪🇪, server: 95.85.224.51, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 342ab7e4-5a89-0001-8809-304120d4aa83, servername: max.ru, host: max.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: WWeAHWUVD-phmnjNJ823cer0c4CMIbEs08AhsuEZmDc, short-id: a696de84963656de}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 🇦🇱 Albania 🇦🇱, server: 45.82.13.150, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 51231507-67c3-4141-ab08-a69eb121c716, servername: tradingview.com, host: tradingview.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: B0S7A-ceRt0c3aRqbeQG69FVSkK-si6NWLBEM_QuC3U, short-id: 1688}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇩🇪 Germany 🇩🇪, server: 37.114.38.32, port: 31072, type: vless, tls: true, packet-encoding: xudp, uuid: 5a5d23df-f6e5-432f-8eb4-9e8c0fd0fea8, servername: amp-api-edge.apps.apple.com, host: amp-api-edge.apps.apple.com, path: /, reality-opts: {public-key: 9SIL_30T_aI_nCYD6M7f1D-CaKPYjcx1884j2eXBrB0, short-id: 246a748d}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇹🇷 Türkiye 🇹🇷, server: 185.123.100.56, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 78eb4455-0d07-4bc2-93e3-7c8654f11d74, servername: www.apple.com, host: www.apple.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇫🇷 France 🇫🇷, server: 152.228.162.19, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 5ce84688-f535-46ad-a512-37b17becf6ea, network: ws, ws-opts: {path: /vless/, headers: {Host: akamaized.net}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 🇵🇱 Poland 🇵🇱, server: 178.95.170.115, port: 2087, type: vless, tls: true, packet-encoding: xudp, uuid: bf443e4a-aa9e-4509-abf0-d0f6828d57be, network: ws, ws-opts: {path: /4bc027a44532}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇩🇪 Germany 🇩🇪 2, server: 94.156.170.102, port: 110, type: vmess, uuid: 8e9687fc-a3a7-414a-8676-8e2136797cfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇸🇬 Singapore 🇸🇬, server: ww11.levikogjgfdd.ir, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -489,42 +490,45 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 🇫🇷 France 🇫🇷
-      - 🇬🇧 United Kingdom 🇬🇧
-      - 🇬🇧 United Kingdom 🇬🇧 2
-      - 🇦🇱 Albania 🇦🇱
       - 🇩🇪 Germany 🇩🇪
-      - 🇹🇷 Türkiye 🇹🇷
+      - 🇺🇸 United States 🇺🇸
+      - 🇬🇧 United Kingdom 🇬🇧
+      - 🇮🇹 Italy 🇮🇹
+      - 🇪🇪 Estonia 🇪🇪
+      - 🇦🇱 Albania 🇦🇱
+      - 🇫🇷 France 🇫🇷
       - 🇵🇱 Poland 🇵🇱
-      - 🇩🇪 Germany 🇩🇪 2
+      - 🇸🇬 Singapore 🇸🇬
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 🇫🇷 France 🇫🇷
-      - 🇬🇧 United Kingdom 🇬🇧
-      - 🇬🇧 United Kingdom 🇬🇧 2
-      - 🇦🇱 Albania 🇦🇱
       - 🇩🇪 Germany 🇩🇪
-      - 🇹🇷 Türkiye 🇹🇷
+      - 🇺🇸 United States 🇺🇸
+      - 🇬🇧 United Kingdom 🇬🇧
+      - 🇮🇹 Italy 🇮🇹
+      - 🇪🇪 Estonia 🇪🇪
+      - 🇦🇱 Albania 🇦🇱
+      - 🇫🇷 France 🇫🇷
       - 🇵🇱 Poland 🇵🇱
-      - 🇩🇪 Germany 🇩🇪 2
+      - 🇸🇬 Singapore 🇸🇬
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 🇫🇷 France 🇫🇷
-      - 🇬🇧 United Kingdom 🇬🇧
-      - 🇬🇧 United Kingdom 🇬🇧 2
-      - 🇦🇱 Albania 🇦🇱
       - 🇩🇪 Germany 🇩🇪
-      - 🇹🇷 Türkiye 🇹🇷
+      - 🇺🇸 United States 🇺🇸
+      - 🇬🇧 United Kingdom 🇬🇧
+      - 🇮🇹 Italy 🇮🇹
+      - 🇪🇪 Estonia 🇪🇪
+      - 🇦🇱 Albania 🇦🇱
+      - 🇫🇷 France 🇫🇷
       - 🇵🇱 Poland 🇵🇱
-      - 🇩🇪 Germany 🇩🇪 2
+      - 🇸🇬 Singapore 🇸🇬
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -540,42 +544,45 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇫🇷 France 🇫🇷
-      - 🇬🇧 United Kingdom 🇬🇧
-      - 🇬🇧 United Kingdom 🇬🇧 2
-      - 🇦🇱 Albania 🇦🇱
       - 🇩🇪 Germany 🇩🇪
-      - 🇹🇷 Türkiye 🇹🇷
+      - 🇺🇸 United States 🇺🇸
+      - 🇬🇧 United Kingdom 🇬🇧
+      - 🇮🇹 Italy 🇮🇹
+      - 🇪🇪 Estonia 🇪🇪
+      - 🇦🇱 Albania 🇦🇱
+      - 🇫🇷 France 🇫🇷
       - 🇵🇱 Poland 🇵🇱
-      - 🇩🇪 Germany 🇩🇪 2
+      - 🇸🇬 Singapore 🇸🇬
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇫🇷 France 🇫🇷
-      - 🇬🇧 United Kingdom 🇬🇧
-      - 🇬🇧 United Kingdom 🇬🇧 2
-      - 🇦🇱 Albania 🇦🇱
       - 🇩🇪 Germany 🇩🇪
-      - 🇹🇷 Türkiye 🇹🇷
+      - 🇺🇸 United States 🇺🇸
+      - 🇬🇧 United Kingdom 🇬🇧
+      - 🇮🇹 Italy 🇮🇹
+      - 🇪🇪 Estonia 🇪🇪
+      - 🇦🇱 Albania 🇦🇱
+      - 🇫🇷 France 🇫🇷
       - 🇵🇱 Poland 🇵🇱
-      - 🇩🇪 Germany 🇩🇪 2
+      - 🇸🇬 Singapore 🇸🇬
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇫🇷 France 🇫🇷
-      - 🇬🇧 United Kingdom 🇬🇧
-      - 🇬🇧 United Kingdom 🇬🇧 2
-      - 🇦🇱 Albania 🇦🇱
       - 🇩🇪 Germany 🇩🇪
-      - 🇹🇷 Türkiye 🇹🇷
+      - 🇺🇸 United States 🇺🇸
+      - 🇬🇧 United Kingdom 🇬🇧
+      - 🇮🇹 Italy 🇮🇹
+      - 🇪🇪 Estonia 🇪🇪
+      - 🇦🇱 Albania 🇦🇱
+      - 🇫🇷 France 🇫🇷
       - 🇵🇱 Poland 🇵🇱
-      - 🇩🇪 Germany 🇩🇪 2
+      - 🇸🇬 Singapore 🇸🇬
   - name: دانلود منیجر 📥
     type: select
     proxies:
