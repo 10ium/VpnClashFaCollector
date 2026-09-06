@@ -465,9 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@SiNAVM کانال تلگرامی`", server: sinavm.soft10.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 3a09e0c9-4194-4b85-8d7f-fd1fc38f00b2, servername: sinavm.soft10.ir, alpn: [http/1.1], network: ws, ws-opts: {path: /assignment----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM, headers: {Host: sinavm.soft10.ir}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@SiNAVM کانال تلگرامی` 2", server: pl1.mycloud1.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 99ab6a06-d45e-46c3-9993-24e1c0e92d82, servername: pl1.mycloud1.org, host: pl1.mycloud1.org, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: Su5ULcRQKF-0DJIHZeTNEnXHBpyQtizmUrcNIYhZI0E, short-id: afee962d}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@SiNAVM کانال تلگرامی` 3", server: se1.mycloud1.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 99ab6a06-d45e-46c3-9993-24e1c0e92d82, servername: se1.mycloud1.org, host: se1.mycloud1.org, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: Su5ULcRQKF-0DJIHZeTNEnXHBpyQtizmUrcNIYhZI0E, short-id: afee962d}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@SiNAVM کانال تلگرامی`", server: sinavm.soft10.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 3836db74-084f-449e-b07b-aafa1c86f63f, servername: sinavm.soft10.ir, alpn: [http/1.1], network: ws, ws-opts: {path: /assignment----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM, headers: {Host: sinavm.soft10.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,8 +483,6 @@ proxy-groups:
     type: select
     proxies:
       - "@SiNAVM کانال تلگرامی`"
-      - "@SiNAVM کانال تلگرامی` 2"
-      - "@SiNAVM کانال تلگرامی` 3"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -494,8 +490,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@SiNAVM کانال تلگرامی`"
-      - "@SiNAVM کانال تلگرامی` 2"
-      - "@SiNAVM کانال تلگرامی` 3"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -503,8 +497,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@SiNAVM کانال تلگرامی`"
-      - "@SiNAVM کانال تلگرامی` 2"
-      - "@SiNAVM کانال تلگرامی` 3"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -521,8 +513,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@SiNAVM کانال تلگرامی`"
-      - "@SiNAVM کانال تلگرامی` 2"
-      - "@SiNAVM کانال تلگرامی` 3"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -530,8 +520,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@SiNAVM کانال تلگرامی`"
-      - "@SiNAVM کانال تلگرامی` 2"
-      - "@SiNAVM کانال تلگرامی` 3"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -539,8 +527,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@SiNAVM کانال تلگرامی`"
-      - "@SiNAVM کانال تلگرامی` 2"
-      - "@SiNAVM کانال تلگرامی` 3"
   - name: دانلود منیجر 📥
     type: select
     proxies:
