@@ -465,11 +465,12 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@vpnbaz ⭐", server: 15.204.233.41, port: 8882, type: ss, cipher: aes-256-gcm, password: kDWvXYZoTBcGkC4, udp: true, tfo: false}
-  - {name: "@vpnbaz 🍋‍🟩", server: 104.18.9.83, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.calmlunch.com}}, udp: true, tfo: false}
-  - {name: "@vpnbaz ☂️", server: 188.114.97.7, port: 443, type: trojan, password: humanity, sni: www.ignitelimit.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.ignitelimit.com}}, udp: true, tfo: false}
-  - {name: "@vpnbaz 🛸", server: 45.136.126.70, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 0a2dde28-70da-4863-a06f-35d007d94d35, servername: www.google.com, host: www.google.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 6f8KzwYy7MVdBKzDM_Wt_SiKEjZyg1dl1zdR_MoUM3M, short-id: 67933d8be5b42f78}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz 🌊", server: 5.253.30.99, port: 40443, type: vless, tls: true, packet-encoding: xudp, uuid: 511c1563-2cb6-4064-abc6-a59ee49818a8, servername: deepl.com, host: deepl.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0, short-id: 88b6}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz ⭐", server: 20.164.43.105, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: BhYMkBpjAjE6ixSw, udp: true, tfo: false}
+  - {name: "@vpnbaz ☂️", server: 45.136.126.70, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 0a2dde28-70da-4863-a06f-35d007d94d35, servername: www.google.com, host: www.google.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 6f8KzwYy7MVdBKzDM_Wt_SiKEjZyg1dl1zdR_MoUM3M, short-id: 67933d8be5b42f78}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz 🍋‍🟩", server: 89.35.14.30, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be, servername: md1.univesalsrv.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: hub.v1.RelayService}, reality-opts: {public-key: xWejOQUn2koOUorUPSrHMLM-lyHlZ441KzxKc9bLmkY, short-id: 221ba6174224ca5b}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz 🛸", server: 89.35.14.31, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be, servername: md2.univesalsrv.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: hub.v1.SyncService}, reality-opts: {public-key: JXFsWHYjhAcR-7yz9tuCTMdcfuiyC9a-C9ewA55Z63o, short-id: d36a38659ce106cb}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz 🌊", server: md2.univesalsrv.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be, servername: md2.univesalsrv.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: hub.v1.SyncService}, reality-opts: {public-key: JXFsWHYjhAcR-7yz9tuCTMdcfuiyC9a-C9ewA55Z63o, short-id: d36a38659ce106cb}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz 🍭", server: 5.253.30.99, port: 40443, type: vless, tls: true, packet-encoding: xudp, uuid: 511c1563-2cb6-4064-abc6-a59ee49818a8, servername: deepl.com, host: deepl.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0, short-id: 88b6}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,10 +488,11 @@ proxy-groups:
     type: select
     proxies:
       - "@vpnbaz ⭐"
-      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz ☂️"
+      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz 🛸"
       - "@vpnbaz 🌊"
+      - "@vpnbaz 🍭"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -498,10 +500,11 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@vpnbaz ⭐"
-      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz ☂️"
+      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz 🛸"
       - "@vpnbaz 🌊"
+      - "@vpnbaz 🍭"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -509,10 +512,11 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@vpnbaz ⭐"
-      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz ☂️"
+      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz 🛸"
       - "@vpnbaz 🌊"
+      - "@vpnbaz 🍭"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -529,10 +533,11 @@ proxy-groups:
     interval: 600
     proxies:
       - "@vpnbaz ⭐"
-      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz ☂️"
+      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz 🛸"
       - "@vpnbaz 🌊"
+      - "@vpnbaz 🍭"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -540,10 +545,11 @@ proxy-groups:
     interval: 600
     proxies:
       - "@vpnbaz ⭐"
-      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz ☂️"
+      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz 🛸"
       - "@vpnbaz 🌊"
+      - "@vpnbaz 🍭"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -551,10 +557,11 @@ proxy-groups:
     interval: 600
     proxies:
       - "@vpnbaz ⭐"
-      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz ☂️"
+      - "@vpnbaz 🍋‍🟩"
       - "@vpnbaz 🛸"
       - "@vpnbaz 🌊"
+      - "@vpnbaz 🍭"
   - name: دانلود منیجر 📥
     type: select
     proxies:

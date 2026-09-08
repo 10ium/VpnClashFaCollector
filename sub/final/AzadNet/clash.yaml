@@ -465,11 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: VIP @AzadNet, server: 63.184.103.244, port: 22224, type: vless, tls: true, packet-encoding: xudp, uuid: e4514801-0d5a-42ba-869f-39bd605aef9e, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: VIP @AzadNet 2, server: 144.31.213.172, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f692629b-3557-488a-9c9b-60775331e423, servername: fi1-cosmostechnology.ru, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: fi1cosmos}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: VIP @AzadNet 3, server: 144.31.218.18, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f692629b-3557-488a-9c9b-60775331e423, servername: fi1-cosmostechnology.ru, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: fi1cosmos}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: VIP @AzadNet 4, server: 150.241.72.37, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f692629b-3557-488a-9c9b-60775331e423, servername: fi1-cosmostechnology.ru, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: fi1cosmos}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: VIP @AzadNet`, server: 150.241.73.74, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f692629b-3557-488a-9c9b-60775331e423, servername: fi1-cosmostechnology.ru, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: fi1cosmos}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: VIP.@AzadNet 🚀`, server: 104.21.104.150, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 50414e45-4c5f-5a45-5553-00b2a392a159, servername: 9fzcxlewuixs.goodarzev.workers.dev, network: ws, ws-opts: {path: /stream/PANEL_ZEUS/00b2a392a159, headers: {Host: 9fzcxlewuixs.goodarzev.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,33 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - VIP @AzadNet
-      - VIP @AzadNet 2
-      - VIP @AzadNet 3
-      - VIP @AzadNet 4
-      - VIP @AzadNet`
+      - VIP.@AzadNet 🚀`
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - VIP @AzadNet
-      - VIP @AzadNet 2
-      - VIP @AzadNet 3
-      - VIP @AzadNet 4
-      - VIP @AzadNet`
+      - VIP.@AzadNet 🚀`
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - VIP @AzadNet
-      - VIP @AzadNet 2
-      - VIP @AzadNet 3
-      - VIP @AzadNet 4
-      - VIP @AzadNet`
+      - VIP.@AzadNet 🚀`
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -528,33 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - VIP @AzadNet
-      - VIP @AzadNet 2
-      - VIP @AzadNet 3
-      - VIP @AzadNet 4
-      - VIP @AzadNet`
+      - VIP.@AzadNet 🚀`
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - VIP @AzadNet
-      - VIP @AzadNet 2
-      - VIP @AzadNet 3
-      - VIP @AzadNet 4
-      - VIP @AzadNet`
+      - VIP.@AzadNet 🚀`
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - VIP @AzadNet
-      - VIP @AzadNet 2
-      - VIP @AzadNet 3
-      - VIP @AzadNet 4
-      - VIP @AzadNet`
+      - VIP.@AzadNet 🚀`
   - name: دانلود منیجر 📥
     type: select
     proxies:
