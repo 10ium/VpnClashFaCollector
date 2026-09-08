@@ -465,12 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 130.61.179.188:59924, server: 130.61.179.188, port: 59924, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: ILby12dpIbRC+JyGy1Wevfw5i8VL2786URmmlX25BsQ=, udp: true, tfo: false}
   - {name: 130.61.231.219:59924, server: 130.61.231.219, port: 59924, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: IqGBz5QqcOCmSLFq3Byz30nz+eafkJ98Zxlffhvc48A=, udp: true, tfo: false}
-  - {name: 141.95.29.163:2083, server: 141.95.29.163, port: 2083, type: ss, cipher: 2022-blake3-aes-256-gcm, password: cOiC+3JhAXMwdGV5exnrMSorJU0Rl5qlLCbCAuDlWY4=:JTou+JSmZOAyrMLdvNBcXFm0Y9luZ/8u17ie48jQfVc=, udp: true, tfo: false}
-  - {name: 100.42.228.109:443, server: 100.42.228.109, port: 443, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 13.215.162.132:51391, server: 13.215.162.132, port: 51391, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 104.21.33.59:443, server: 104.21.33.59, port: 443, type: trojan, password: humanity, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,36 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 130.61.179.188:59924
       - 130.61.231.219:59924
-      - 141.95.29.163:2083
-      - 100.42.228.109:443
-      - 13.215.162.132:51391
-      - 104.21.33.59:443
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 130.61.179.188:59924
       - 130.61.231.219:59924
-      - 141.95.29.163:2083
-      - 100.42.228.109:443
-      - 13.215.162.132:51391
-      - 104.21.33.59:443
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 130.61.179.188:59924
       - 130.61.231.219:59924
-      - 141.95.29.163:2083
-      - 100.42.228.109:443
-      - 13.215.162.132:51391
-      - 104.21.33.59:443
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -532,36 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 130.61.179.188:59924
       - 130.61.231.219:59924
-      - 141.95.29.163:2083
-      - 100.42.228.109:443
-      - 13.215.162.132:51391
-      - 104.21.33.59:443
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 130.61.179.188:59924
       - 130.61.231.219:59924
-      - 141.95.29.163:2083
-      - 100.42.228.109:443
-      - 13.215.162.132:51391
-      - 104.21.33.59:443
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 130.61.179.188:59924
       - 130.61.231.219:59924
-      - 141.95.29.163:2083
-      - 100.42.228.109:443
-      - 13.215.162.132:51391
-      - 104.21.33.59:443
   - name: دانلود منیجر 📥
     type: select
     proxies:
