@@ -8,11 +8,9 @@ proxies:
   - {name: 130.61.179.188:59924, server: 130.61.179.188, port: 59924, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: ILby12dpIbRC+JyGy1Wevfw5i8VL2786URmmlX25BsQ=, udp: true, tfo: false}
   - {name: 130.61.231.219:59924, server: 130.61.231.219, port: 59924, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: IqGBz5QqcOCmSLFq3Byz30nz+eafkJ98Zxlffhvc48A=, udp: true, tfo: false}
   - {name: 141.95.29.163:2083, server: 141.95.29.163, port: 2083, type: ss, cipher: 2022-blake3-aes-256-gcm, password: cOiC+3JhAXMwdGV5exnrMSorJU0Rl5qlLCbCAuDlWY4=:JTou+JSmZOAyrMLdvNBcXFm0Y9luZ/8u17ie48jQfVc=, udp: true, tfo: false}
-  - {name: 86.38.182.226:97, server: 86.38.182.226, port: 97, type: ss, cipher: chacha20-ietf-poly1305, password: T6IcUpcVx0Y85DxSTgXe4A, udp: true, tfo: false}
   - {name: 100.42.228.109:443, server: 100.42.228.109, port: 443, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 13.215.162.132:51391, server: 13.215.162.132, port: 51391, type: trojan, password: BxceQaOe, sni: t.me%2Fripaojiedian, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 104.21.33.59:443, server: 104.21.33.59, port: 443, type: trojan, password: humanity, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 13.36.74.87:22222, server: 13.36.74.87, port: 22222, type: vless, tls: true, packet-encoding: xudp, uuid: e4514801-0d5a-42ba-869f-39bd605aef9e, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -22,11 +20,9 @@ proxy-groups:
       - 130.61.179.188:59924
       - 130.61.231.219:59924
       - 141.95.29.163:2083
-      - 86.38.182.226:97
       - 100.42.228.109:443
       - 13.215.162.132:51391
       - 104.21.33.59:443
-      - 13.36.74.87:22222
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -36,11 +32,9 @@ proxy-groups:
       - 130.61.179.188:59924
       - 130.61.231.219:59924
       - 141.95.29.163:2083
-      - 86.38.182.226:97
       - 100.42.228.109:443
       - 13.215.162.132:51391
       - 104.21.33.59:443
-      - 13.36.74.87:22222
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -50,11 +44,9 @@ proxy-groups:
       - 130.61.179.188:59924
       - 130.61.231.219:59924
       - 141.95.29.163:2083
-      - 86.38.182.226:97
       - 100.42.228.109:443
       - 13.215.162.132:51391
       - 104.21.33.59:443
-      - 13.36.74.87:22222
   - name: 📲 电报信息
     type: select
     proxies:
@@ -63,11 +55,9 @@ proxy-groups:
       - 130.61.179.188:59924
       - 130.61.231.219:59924
       - 141.95.29.163:2083
-      - 86.38.182.226:97
       - 100.42.228.109:443
       - 13.215.162.132:51391
       - 104.21.33.59:443
-      - 13.36.74.87:22222
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -76,11 +66,9 @@ proxy-groups:
       - 130.61.179.188:59924
       - 130.61.231.219:59924
       - 141.95.29.163:2083
-      - 86.38.182.226:97
       - 100.42.228.109:443
       - 13.215.162.132:51391
       - 104.21.33.59:443
-      - 13.36.74.87:22222
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -89,11 +77,9 @@ proxy-groups:
       - 130.61.179.188:59924
       - 130.61.231.219:59924
       - 141.95.29.163:2083
-      - 86.38.182.226:97
       - 100.42.228.109:443
       - 13.215.162.132:51391
       - 104.21.33.59:443
-      - 13.36.74.87:22222
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -124,11 +110,9 @@ proxy-groups:
       - 130.61.179.188:59924
       - 130.61.231.219:59924
       - 141.95.29.163:2083
-      - 86.38.182.226:97
       - 100.42.228.109:443
       - 13.215.162.132:51391
       - 104.21.33.59:443
-      - 13.36.74.87:22222
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
