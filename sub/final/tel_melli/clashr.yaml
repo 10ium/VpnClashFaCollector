@@ -5,46 +5,53 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@v2box_meli🌟", server: 185.204.170.125, port: 252, type: trojan, password: czenpa59vkg8habv, sni: 185.204.170.125, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: 185.204.170.125}}, udp: true, tfo: false}
+  - {name: "@v2box_meli🩷", server: 168.119.103.176, port: 8585, type: vless, tls: true, packet-encoding: xudp, uuid: 459a27d0-8782-48b8-8048-564afcd03196, host: www.dell.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2box_meli🇴🇲", server: ms8373738jdndhshom.adidasm10.ir, port: 8088, type: vless, tls: true, packet-encoding: xudp, uuid: ff1dcb64-f13d-4ccd-a3c6-055218f7490b, network: ws, ws-opts: {path: /bmi.ir, headers: {Host: play-apps-features.googleusercontent.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@v2box_meli🌟"
+      - "@v2box_meli🩷"
+      - "@v2box_meli🇴🇲"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@v2box_meli🌟"
+      - "@v2box_meli🩷"
+      - "@v2box_meli🇴🇲"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@v2box_meli🌟"
+      - "@v2box_meli🩷"
+      - "@v2box_meli🇴🇲"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@v2box_meli🌟"
+      - "@v2box_meli🩷"
+      - "@v2box_meli🇴🇲"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@v2box_meli🌟"
+      - "@v2box_meli🩷"
+      - "@v2box_meli🇴🇲"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@v2box_meli🌟"
+      - "@v2box_meli🩷"
+      - "@v2box_meli🇴🇲"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +79,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@v2box_meli🌟"
+      - "@v2box_meli🩷"
+      - "@v2box_meli🇴🇲"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
