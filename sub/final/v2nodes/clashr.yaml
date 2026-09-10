@@ -5,6 +5,7 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: 66.90.105.210:2083, server: 66.90.105.210, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: vless}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 35.180.170.215:22223, server: 35.180.170.215, port: 22223, type: vless, tls: true, packet-encoding: xudp, uuid: e4514801-0d5a-42ba-869f-39bd605aef9e, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
@@ -12,6 +13,7 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - 66.90.105.210:2083
       - 35.180.170.215:22223
   - name: ♻️ 自动选择
     type: url-test
@@ -19,6 +21,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - 66.90.105.210:2083
       - 35.180.170.215:22223
   - name: 🌍 国外媒体
     type: select
@@ -26,24 +29,28 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 66.90.105.210:2083
       - 35.180.170.215:22223
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 66.90.105.210:2083
       - 35.180.170.215:22223
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - 66.90.105.210:2083
       - 35.180.170.215:22223
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 66.90.105.210:2083
       - 35.180.170.215:22223
   - name: 🎯 全球直连
     type: select
@@ -72,6 +79,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 66.90.105.210:2083
       - 35.180.170.215:22223
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
