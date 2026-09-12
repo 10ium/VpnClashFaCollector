@@ -5,6 +5,8 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: 15.236.172.122:22223, server: 15.236.172.122, port: 22223, type: vless, tls: true, packet-encoding: xudp, uuid: e4514801-0d5a-42ba-869f-39bd605aef9e, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 15.237.145.224:22222, server: 15.237.145.224, port: 22222, type: vless, tls: true, packet-encoding: xudp, uuid: e4514801-0d5a-42ba-869f-39bd605aef9e, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 212.227.235.66:2053, server: 212.227.235.66, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: ead0dd61-d398-40ad-80d6-a0e1e516d7d3, servername: www.apple.com, host: www.apple.com, path: /, reality-opts: {public-key: 7Y6Xb5Ql_03K25x8yKUSOKI2JTOMyv2nyCcFza90uxk, short-id: 29e8dcd2b37aaa7f}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
@@ -12,6 +14,8 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - 15.236.172.122:22223
+      - 15.237.145.224:22222
       - 212.227.235.66:2053
   - name: ♻️ 自动选择
     type: url-test
@@ -19,6 +23,8 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - 15.236.172.122:22223
+      - 15.237.145.224:22222
       - 212.227.235.66:2053
   - name: 🌍 国外媒体
     type: select
@@ -26,24 +32,32 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 15.236.172.122:22223
+      - 15.237.145.224:22222
       - 212.227.235.66:2053
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 15.236.172.122:22223
+      - 15.237.145.224:22222
       - 212.227.235.66:2053
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - 15.236.172.122:22223
+      - 15.237.145.224:22222
       - 212.227.235.66:2053
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 15.236.172.122:22223
+      - 15.237.145.224:22222
       - 212.227.235.66:2053
   - name: 🎯 全球直连
     type: select
@@ -72,6 +86,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 15.236.172.122:22223
+      - 15.237.145.224:22222
       - 212.227.235.66:2053
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
