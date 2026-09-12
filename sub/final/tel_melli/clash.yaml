@@ -465,8 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@v2box_meli🩷", server: 168.119.103.176, port: 8585, type: vless, tls: true, packet-encoding: xudp, uuid: 459a27d0-8782-48b8-8048-564afcd03196, host: www.dell.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2box_meli🇴🇲", server: ms8373738jdndhshom.adidasm10.ir, port: 8088, type: vless, tls: true, packet-encoding: xudp, uuid: ff1dcb64-f13d-4ccd-a3c6-055218f7490b, network: ws, ws-opts: {path: /bmi.ir, headers: {Host: play-apps-features.googleusercontent.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2box_meli🇫🇮", server: app-ms-35.ecom-ai-solutions.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a71ad164-3b29-4dbe-aa66-24d095ca7b6d, servername: assets-ms-35.ecom-ai-solutions.com, host: assets-ms-35.ecom-ai-solutions.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: NA5eMfdHkl_L80S75uxQwUirS9nvZ80V2u1s71KeXkc, short-id: 2de63d3fd7261b7e}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2box_meli🇪🇪", server: app-sh-173.deep-aispb-analytics.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a71ad164-3b29-4dbe-aa66-24d095ca7b6d, servername: assets-sh-173.deep-aispb-analytics.com, host: assets-sh-173.deep-aispb-analytics.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: HhIP8sHVQwl9BeLGzcIJcfNTeW8PwFzc1s4X6w5m9js, short-id: 21c3fa16032c8eaf}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2box_meli🇩🇪", server: app-ss-57.shopping-spb.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a71ad164-3b29-4dbe-aa66-24d095ca7b6d, servername: assets-ss-57.shopping-spb.com, host: assets-ss-57.shopping-spb.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: dDsLb439UEeGxb-z0NjPGbUR9LvyLZs_SQZNAWKCoHY, short-id: a7ecea927dfcdb35}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +484,27 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@v2box_meli🩷"
-      - "@v2box_meli🇴🇲"
+      - "@v2box_meli🇫🇮"
+      - "@v2box_meli🇪🇪"
+      - "@v2box_meli🇩🇪"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@v2box_meli🩷"
-      - "@v2box_meli🇴🇲"
+      - "@v2box_meli🇫🇮"
+      - "@v2box_meli🇪🇪"
+      - "@v2box_meli🇩🇪"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@v2box_meli🩷"
-      - "@v2box_meli🇴🇲"
+      - "@v2box_meli🇫🇮"
+      - "@v2box_meli🇪🇪"
+      - "@v2box_meli🇩🇪"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +520,27 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2box_meli🩷"
-      - "@v2box_meli🇴🇲"
+      - "@v2box_meli🇫🇮"
+      - "@v2box_meli🇪🇪"
+      - "@v2box_meli🇩🇪"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2box_meli🩷"
-      - "@v2box_meli🇴🇲"
+      - "@v2box_meli🇫🇮"
+      - "@v2box_meli🇪🇪"
+      - "@v2box_meli🇩🇪"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2box_meli🩷"
-      - "@v2box_meli🇴🇲"
+      - "@v2box_meli🇫🇮"
+      - "@v2box_meli🇪🇪"
+      - "@v2box_meli🇩🇪"
   - name: دانلود منیجر 📥
     type: select
     proxies:
