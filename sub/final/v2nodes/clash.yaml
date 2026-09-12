@@ -467,7 +467,7 @@ rule-providers:
 proxies:
   - {name: 15.236.172.122:22223, server: 15.236.172.122, port: 22223, type: vless, tls: true, packet-encoding: xudp, uuid: e4514801-0d5a-42ba-869f-39bd605aef9e, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 15.237.145.224:22222, server: 15.237.145.224, port: 22222, type: vless, tls: true, packet-encoding: xudp, uuid: e4514801-0d5a-42ba-869f-39bd605aef9e, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 212.227.235.66:2053, server: 212.227.235.66, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: ead0dd61-d398-40ad-80d6-a0e1e516d7d3, servername: www.apple.com, host: www.apple.com, path: /, reality-opts: {public-key: 7Y6Xb5Ql_03K25x8yKUSOKI2JTOMyv2nyCcFza90uxk, short-id: 29e8dcd2b37aaa7f}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: aldebaran.yokkastars.com:40443, server: aldebaran.yokkastars.com, port: 40443, type: vless, tls: true, packet-encoding: xudp, uuid: ed91e79c-f6bf-4fba-8cc0-6d45acaec22b, servername: deepl.com, host: deepl.com, path: /, reality-opts: {public-key: dvx6zPztKbgHpYaW6J4OZQC74Uy0JS6HUVdDfbjG5V4, short-id: 7606}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,7 +486,7 @@ proxy-groups:
     proxies:
       - 15.236.172.122:22223
       - 15.237.145.224:22222
-      - 212.227.235.66:2053
+      - aldebaran.yokkastars.com:40443
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -495,7 +495,7 @@ proxy-groups:
     proxies:
       - 15.236.172.122:22223
       - 15.237.145.224:22222
-      - 212.227.235.66:2053
+      - aldebaran.yokkastars.com:40443
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -504,7 +504,7 @@ proxy-groups:
     proxies:
       - 15.236.172.122:22223
       - 15.237.145.224:22222
-      - 212.227.235.66:2053
+      - aldebaran.yokkastars.com:40443
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -522,7 +522,7 @@ proxy-groups:
     proxies:
       - 15.236.172.122:22223
       - 15.237.145.224:22222
-      - 212.227.235.66:2053
+      - aldebaran.yokkastars.com:40443
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -531,7 +531,7 @@ proxy-groups:
     proxies:
       - 15.236.172.122:22223
       - 15.237.145.224:22222
-      - 212.227.235.66:2053
+      - aldebaran.yokkastars.com:40443
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -540,7 +540,7 @@ proxy-groups:
     proxies:
       - 15.236.172.122:22223
       - 15.237.145.224:22222
-      - 212.227.235.66:2053
+      - aldebaran.yokkastars.com:40443
   - name: دانلود منیجر 📥
     type: select
     proxies:
