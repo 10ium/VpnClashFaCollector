@@ -465,8 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: 🇷🇺 plan.api3-max.ru:443, server: plan.api3-max.ru, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 97ecaad4-452c-45ec-b591-d68d3308aad4, servername: plan.api3-max.ru, alpn: ["h2,http/1.1"], host: plan.api3-max.ru, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
   - {name: basalam.horqen.ir:21289, server: basalam.horqen.ir, port: 21289, type: vless, tls: true, packet-encoding: xudp, uuid: c12db015-a63c-43e5-a744-6398a90373b5, host: basalam.horqen.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: aldebaran.yokkastars.com:40443, server: aldebaran.yokkastars.com, port: 40443, type: vless, tls: true, packet-encoding: xudp, uuid: ed91e79c-f6bf-4fba-8cc0-6d45acaec22b, servername: deepl.com, host: deepl.com, path: /, reality-opts: {public-key: dvx6zPztKbgHpYaW6J4OZQC74Uy0JS6HUVdDfbjG5V4, short-id: 7606}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - 🇷🇺 plan.api3-max.ru:443
       - basalam.horqen.ir:21289
-      - aldebaran.yokkastars.com:40443
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
+      - 🇷🇺 plan.api3-max.ru:443
       - basalam.horqen.ir:21289
-      - aldebaran.yokkastars.com:40443
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
+      - 🇷🇺 plan.api3-max.ru:443
       - basalam.horqen.ir:21289
-      - aldebaran.yokkastars.com:40443
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 🇷🇺 plan.api3-max.ru:443
       - basalam.horqen.ir:21289
-      - aldebaran.yokkastars.com:40443
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 🇷🇺 plan.api3-max.ru:443
       - basalam.horqen.ir:21289
-      - aldebaran.yokkastars.com:40443
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 🇷🇺 plan.api3-max.ru:443
       - basalam.horqen.ir:21289
-      - aldebaran.yokkastars.com:40443
   - name: دانلود منیجر 📥
     type: select
     proxies:
