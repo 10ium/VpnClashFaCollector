@@ -465,8 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 15.236.172.122:22223, server: 15.236.172.122, port: 22223, type: vless, tls: true, packet-encoding: xudp, uuid: e4514801-0d5a-42ba-869f-39bd605aef9e, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 15.237.145.224:22222, server: 15.237.145.224, port: 22222, type: vless, tls: true, packet-encoding: xudp, uuid: e4514801-0d5a-42ba-869f-39bd605aef9e, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: basalam.horqen.ir:21289, server: basalam.horqen.ir, port: 21289, type: vless, tls: true, packet-encoding: xudp, uuid: c12db015-a63c-43e5-a744-6398a90373b5, host: basalam.horqen.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: aldebaran.yokkastars.com:40443, server: aldebaran.yokkastars.com, port: 40443, type: vless, tls: true, packet-encoding: xudp, uuid: ed91e79c-f6bf-4fba-8cc0-6d45acaec22b, servername: deepl.com, host: deepl.com, path: /, reality-opts: {public-key: dvx6zPztKbgHpYaW6J4OZQC74Uy0JS6HUVdDfbjG5V4, short-id: 7606}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -484,8 +483,7 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 15.236.172.122:22223
-      - 15.237.145.224:22222
+      - basalam.horqen.ir:21289
       - aldebaran.yokkastars.com:40443
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -493,8 +491,7 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - 15.236.172.122:22223
-      - 15.237.145.224:22222
+      - basalam.horqen.ir:21289
       - aldebaran.yokkastars.com:40443
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -502,8 +499,7 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - 15.236.172.122:22223
-      - 15.237.145.224:22222
+      - basalam.horqen.ir:21289
       - aldebaran.yokkastars.com:40443
   - name: اتصال پایدار 🔗
     type: url-test
@@ -520,8 +516,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 15.236.172.122:22223
-      - 15.237.145.224:22222
+      - basalam.horqen.ir:21289
       - aldebaran.yokkastars.com:40443
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -529,8 +524,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 15.236.172.122:22223
-      - 15.237.145.224:22222
+      - basalam.horqen.ir:21289
       - aldebaran.yokkastars.com:40443
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -538,8 +532,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 15.236.172.122:22223
-      - 15.237.145.224:22222
+      - basalam.horqen.ir:21289
       - aldebaran.yokkastars.com:40443
   - name: دانلود منیجر 📥
     type: select

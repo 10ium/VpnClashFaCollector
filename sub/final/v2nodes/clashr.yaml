@@ -5,8 +5,7 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 15.236.172.122:22223, server: 15.236.172.122, port: 22223, type: vless, tls: true, packet-encoding: xudp, uuid: e4514801-0d5a-42ba-869f-39bd605aef9e, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 15.237.145.224:22222, server: 15.237.145.224, port: 22222, type: vless, tls: true, packet-encoding: xudp, uuid: e4514801-0d5a-42ba-869f-39bd605aef9e, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: basalam.horqen.ir:21289, server: basalam.horqen.ir, port: 21289, type: vless, tls: true, packet-encoding: xudp, uuid: c12db015-a63c-43e5-a744-6398a90373b5, host: basalam.horqen.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: aldebaran.yokkastars.com:40443, server: aldebaran.yokkastars.com, port: 40443, type: vless, tls: true, packet-encoding: xudp, uuid: ed91e79c-f6bf-4fba-8cc0-6d45acaec22b, servername: deepl.com, host: deepl.com, path: /, reality-opts: {public-key: dvx6zPztKbgHpYaW6J4OZQC74Uy0JS6HUVdDfbjG5V4, short-id: 7606}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
@@ -14,8 +13,7 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 15.236.172.122:22223
-      - 15.237.145.224:22222
+      - basalam.horqen.ir:21289
       - aldebaran.yokkastars.com:40443
   - name: ♻️ 自动选择
     type: url-test
@@ -23,8 +21,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 15.236.172.122:22223
-      - 15.237.145.224:22222
+      - basalam.horqen.ir:21289
       - aldebaran.yokkastars.com:40443
   - name: 🌍 国外媒体
     type: select
@@ -32,32 +29,28 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 15.236.172.122:22223
-      - 15.237.145.224:22222
+      - basalam.horqen.ir:21289
       - aldebaran.yokkastars.com:40443
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 15.236.172.122:22223
-      - 15.237.145.224:22222
+      - basalam.horqen.ir:21289
       - aldebaran.yokkastars.com:40443
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 15.236.172.122:22223
-      - 15.237.145.224:22222
+      - basalam.horqen.ir:21289
       - aldebaran.yokkastars.com:40443
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 15.236.172.122:22223
-      - 15.237.145.224:22222
+      - basalam.horqen.ir:21289
       - aldebaran.yokkastars.com:40443
   - name: 🎯 全球直连
     type: select
@@ -86,8 +79,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 15.236.172.122:22223
-      - 15.237.145.224:22222
+      - basalam.horqen.ir:21289
       - aldebaran.yokkastars.com:40443
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
