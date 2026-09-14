@@ -465,6 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: 130.61.34.252:59924, server: 130.61.34.252, port: 59924, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: vQfEC6ISz0hIR/c7zLbfa5SxfaCCmcGPzetIzIkhLyk=, udp: true, tfo: false}
   - {name: 131.123.25.3:443, server: 131.123.25.3, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 3a22ca95-bd99-00e9-a799-f8f73930ea05, servername: fr.convert-flow.net, host: fr.convert-flow.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 8ZYjmjb0b2QJKCGMrcdhQNV28jZZPCKgIQbIdqChQ0w, short-id: 00a61d55a07de885}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 78.141.221.126:25585, server: 78.141.221.126, port: 25585, type: vless, tls: true, packet-encoding: xudp, uuid: 8b84bbec-9a55-47c2-ac2e-03c41065e572, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 51.194.251.114:61592, server: 51.194.251.114, port: 61592, type: vless, tls: true, packet-encoding: xudp, uuid: BD1F7E5E-9E0B-4919-A7F1-84BC9E69426D, servername: store.storeimages.cdn-apple.com, host: store.storeimages.cdn-apple.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: jnu0rNHECTe_v7H9Fmgg0iUSepHz4QQQRPW0XpX5URs, short-id: 1359c9bf9f7442e5}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
@@ -484,6 +485,7 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - 130.61.34.252:59924
       - 131.123.25.3:443
       - 78.141.221.126:25585
       - 51.194.251.114:61592
@@ -493,6 +495,7 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - 130.61.34.252:59924
       - 131.123.25.3:443
       - 78.141.221.126:25585
       - 51.194.251.114:61592
@@ -502,6 +505,7 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - 130.61.34.252:59924
       - 131.123.25.3:443
       - 78.141.221.126:25585
       - 51.194.251.114:61592
@@ -520,6 +524,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 130.61.34.252:59924
       - 131.123.25.3:443
       - 78.141.221.126:25585
       - 51.194.251.114:61592
@@ -529,6 +534,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 130.61.34.252:59924
       - 131.123.25.3:443
       - 78.141.221.126:25585
       - 51.194.251.114:61592
@@ -538,6 +544,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - 130.61.34.252:59924
       - 131.123.25.3:443
       - 78.141.221.126:25585
       - 51.194.251.114:61592
