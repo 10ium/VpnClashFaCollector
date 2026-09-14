@@ -5,53 +5,53 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: 78.141.221.126:25585, server: 78.141.221.126, port: 25585, type: vless, tls: true, packet-encoding: xudp, uuid: 8b84bbec-9a55-47c2-ac2e-03c41065e572, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 🇷🇺 plan.api3-max.ru:443, server: plan.api3-max.ru, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 97ecaad4-452c-45ec-b591-d68d3308aad4, servername: plan.api3-max.ru, alpn: ["h2,http/1.1"], host: plan.api3-max.ru, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: basalam.horqen.ir:21289, server: basalam.horqen.ir, port: 21289, type: vless, tls: true, packet-encoding: xudp, uuid: c12db015-a63c-43e5-a744-6398a90373b5, host: basalam.horqen.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - 78.141.221.126:25585
       - 🇷🇺 plan.api3-max.ru:443
-      - basalam.horqen.ir:21289
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - 78.141.221.126:25585
       - 🇷🇺 plan.api3-max.ru:443
-      - basalam.horqen.ir:21289
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 78.141.221.126:25585
       - 🇷🇺 plan.api3-max.ru:443
-      - basalam.horqen.ir:21289
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 78.141.221.126:25585
       - 🇷🇺 plan.api3-max.ru:443
-      - basalam.horqen.ir:21289
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - 78.141.221.126:25585
       - 🇷🇺 plan.api3-max.ru:443
-      - basalam.horqen.ir:21289
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 78.141.221.126:25585
       - 🇷🇺 plan.api3-max.ru:443
-      - basalam.horqen.ir:21289
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -79,8 +79,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 78.141.221.126:25585
       - 🇷🇺 plan.api3-max.ru:443
-      - basalam.horqen.ir:21289
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
