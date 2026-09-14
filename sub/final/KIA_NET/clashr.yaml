@@ -5,53 +5,74 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: SE 🇸🇪 | @kia_net | DF3375, server: 193.148.59.178, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 20d7c485-5d24-49b5-a5cc-bb7a7daf9908, servername: www.apple.com, host: www.apple.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: -GMpCber8qtrKzJbwvpLcwlIhOy-5zS66u_x9lLvIjE, short-id: e3daad69}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: TR 🇹🇷 | @Kia_Net | 5CB12A, server: 156.67.63.231, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b052df40-d51c-456c-9bd6-57af01a87e4e, servername: sync-bridge.org, host: sync-bridge.org, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: PTqeBbbr2xJ1L3V1PyYjKjxanMKKqJHU-wtnpYmFQCI, short-id: 5606d4a25c99e7af}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇳🇱 The Netherlands 🇳🇱, server: 193.29.139.225, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
+  - {name: 🇺🇸 United States 🇺🇸, server: 192.3.247.109, port: 43580, type: vless, tls: true, packet-encoding: xudp, uuid: 25a6a9f3-ad9e-45f2-96e1-be21c9d97789, servername: apple.com, host: apple.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: smOBJ9RB9nUF3SCGBJ5A1O24Dla9YlQY_YSUjmHRW2g, short-id: 0123456789abcdef}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇵🇱 Poland 🇵🇱, server: 185.223.57.10, port: 33743, type: vless, tls: true, packet-encoding: xudp, uuid: b3a11068-1a7e-4643-85de-7c82cce46943, servername: www.google.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: TunService}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇩🇪 Germany 🇩🇪, server: 82.198.246.250, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇩🇪 Germany 🇩🇪 2, server: 82.198.246.37, port: 180, type: vmess, uuid: d13fc2f5-3e05-4795-81eb-44143a09e552, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - SE 🇸🇪 | @kia_net | DF3375
-      - TR 🇹🇷 | @Kia_Net | 5CB12A
+      - 🇳🇱 The Netherlands 🇳🇱
+      - 🇺🇸 United States 🇺🇸
+      - 🇵🇱 Poland 🇵🇱
+      - 🇩🇪 Germany 🇩🇪
+      - 🇩🇪 Germany 🇩🇪 2
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - SE 🇸🇪 | @kia_net | DF3375
-      - TR 🇹🇷 | @Kia_Net | 5CB12A
+      - 🇳🇱 The Netherlands 🇳🇱
+      - 🇺🇸 United States 🇺🇸
+      - 🇵🇱 Poland 🇵🇱
+      - 🇩🇪 Germany 🇩🇪
+      - 🇩🇪 Germany 🇩🇪 2
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - SE 🇸🇪 | @kia_net | DF3375
-      - TR 🇹🇷 | @Kia_Net | 5CB12A
+      - 🇳🇱 The Netherlands 🇳🇱
+      - 🇺🇸 United States 🇺🇸
+      - 🇵🇱 Poland 🇵🇱
+      - 🇩🇪 Germany 🇩🇪
+      - 🇩🇪 Germany 🇩🇪 2
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - SE 🇸🇪 | @kia_net | DF3375
-      - TR 🇹🇷 | @Kia_Net | 5CB12A
+      - 🇳🇱 The Netherlands 🇳🇱
+      - 🇺🇸 United States 🇺🇸
+      - 🇵🇱 Poland 🇵🇱
+      - 🇩🇪 Germany 🇩🇪
+      - 🇩🇪 Germany 🇩🇪 2
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - SE 🇸🇪 | @kia_net | DF3375
-      - TR 🇹🇷 | @Kia_Net | 5CB12A
+      - 🇳🇱 The Netherlands 🇳🇱
+      - 🇺🇸 United States 🇺🇸
+      - 🇵🇱 Poland 🇵🇱
+      - 🇩🇪 Germany 🇩🇪
+      - 🇩🇪 Germany 🇩🇪 2
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - SE 🇸🇪 | @kia_net | DF3375
-      - TR 🇹🇷 | @Kia_Net | 5CB12A
+      - 🇳🇱 The Netherlands 🇳🇱
+      - 🇺🇸 United States 🇺🇸
+      - 🇵🇱 Poland 🇵🇱
+      - 🇩🇪 Germany 🇩🇪
+      - 🇩🇪 Germany 🇩🇪 2
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -79,8 +100,11 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - SE 🇸🇪 | @kia_net | DF3375
-      - TR 🇹🇷 | @Kia_Net | 5CB12A
+      - 🇳🇱 The Netherlands 🇳🇱
+      - 🇺🇸 United States 🇺🇸
+      - 🇵🇱 Poland 🇵🇱
+      - 🇩🇪 Germany 🇩🇪
+      - 🇩🇪 Germany 🇩🇪 2
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
