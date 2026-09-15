@@ -466,8 +466,8 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: 130.61.34.252:59924, server: 130.61.34.252, port: 59924, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: vQfEC6ISz0hIR/c7zLbfa5SxfaCCmcGPzetIzIkhLyk=, udp: true, tfo: false}
-  - {name: 131.123.25.3:443, server: 131.123.25.3, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 3a22ca95-bd99-00e9-a799-f8f73930ea05, servername: fr.convert-flow.net, host: fr.convert-flow.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 8ZYjmjb0b2QJKCGMrcdhQNV28jZZPCKgIQbIdqChQ0w, short-id: 00a61d55a07de885}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 51.194.251.114:61592, server: 51.194.251.114, port: 61592, type: vless, tls: true, packet-encoding: xudp, uuid: BD1F7E5E-9E0B-4919-A7F1-84BC9E69426D, servername: store.storeimages.cdn-apple.com, host: store.storeimages.cdn-apple.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: jnu0rNHECTe_v7H9Fmgg0iUSepHz4QQQRPW0XpX5URs, short-id: 1359c9bf9f7442e5}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 83.147.216.223:4433, server: 83.147.216.223, port: 4433, type: vless, tls: true, packet-encoding: xudp, uuid: 660174a2-d32d-4521-840d-d1853bfc80b8, servername: 3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev, network: ws, ws-opts: {path: /@Marisa_kristi, headers: {Host: 3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 51.194.251.172:31068, server: 51.194.251.172, port: 31068, type: vless, tls: true, packet-encoding: xudp, uuid: BD1F7E5E-9E0B-4919-A7F1-84BC9E69426D, servername: snapshot.apple-mapkit.com, host: snapshot.apple-mapkit.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: jnu0rNHECTe_v7H9Fmgg0iUSepHz4QQQRPW0XpX5URs, short-id: 1359c9bf9f7442e5}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,8 +485,8 @@ proxy-groups:
     type: select
     proxies:
       - 130.61.34.252:59924
-      - 131.123.25.3:443
-      - 51.194.251.114:61592
+      - 83.147.216.223:4433
+      - 51.194.251.172:31068
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -494,8 +494,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 130.61.34.252:59924
-      - 131.123.25.3:443
-      - 51.194.251.114:61592
+      - 83.147.216.223:4433
+      - 51.194.251.172:31068
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -503,8 +503,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 130.61.34.252:59924
-      - 131.123.25.3:443
-      - 51.194.251.114:61592
+      - 83.147.216.223:4433
+      - 51.194.251.172:31068
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -521,8 +521,8 @@ proxy-groups:
     interval: 600
     proxies:
       - 130.61.34.252:59924
-      - 131.123.25.3:443
-      - 51.194.251.114:61592
+      - 83.147.216.223:4433
+      - 51.194.251.172:31068
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -530,8 +530,8 @@ proxy-groups:
     interval: 600
     proxies:
       - 130.61.34.252:59924
-      - 131.123.25.3:443
-      - 51.194.251.114:61592
+      - 83.147.216.223:4433
+      - 51.194.251.172:31068
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -539,8 +539,8 @@ proxy-groups:
     interval: 600
     proxies:
       - 130.61.34.252:59924
-      - 131.123.25.3:443
-      - 51.194.251.114:61592
+      - 83.147.216.223:4433
+      - 51.194.251.172:31068
   - name: دانلود منیجر 📥
     type: select
     proxies:
