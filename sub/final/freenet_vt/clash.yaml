@@ -465,7 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: Freenet_vt @ 🇺🇸`, server: 156.146.38.169, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true, tfo: false}
+  - {name: "@Freenet_vt", server: new2.smart-cats.ru, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: 60a361f9-3c45-4954-9e4c-92a85bda243d, servername: www.google.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: grpc}, reality-opts: {public-key: mzrVbIsEggpJfXR8M7yxki2vgv3sXWQdy1bGhXqatUY, short-id: 4881f8244d1b9021}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Freenet_vt `", server: new3.smart-cats.ru, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: 60a361f9-3c45-4954-9e4c-92a85bda243d, servername: www.google.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: grpc}, reality-opts: {public-key: mzrVbIsEggpJfXR8M7yxki2vgv3sXWQdy1bGhXqatUY, short-id: 4881f8244d1b9021}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - Freenet_vt @ 🇺🇸`
+      - "@Freenet_vt"
+      - "@Freenet_vt `"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - Freenet_vt @ 🇺🇸`
+      - "@Freenet_vt"
+      - "@Freenet_vt `"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - Freenet_vt @ 🇺🇸`
+      - "@Freenet_vt"
+      - "@Freenet_vt `"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Freenet_vt @ 🇺🇸`
+      - "@Freenet_vt"
+      - "@Freenet_vt `"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Freenet_vt @ 🇺🇸`
+      - "@Freenet_vt"
+      - "@Freenet_vt `"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Freenet_vt @ 🇺🇸`
+      - "@Freenet_vt"
+      - "@Freenet_vt `"
   - name: دانلود منیجر 📥
     type: select
     proxies:
