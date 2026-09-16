@@ -465,8 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 83.147.216.223:4433, server: 83.147.216.223, port: 4433, type: vless, tls: true, packet-encoding: xudp, uuid: 660174a2-d32d-4521-840d-d1853bfc80b8, servername: 3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev, network: ws, ws-opts: {path: /@Marisa_kristi, headers: {Host: 3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 51.194.251.172:31068, server: 51.194.251.172, port: 31068, type: vless, tls: true, packet-encoding: xudp, uuid: BD1F7E5E-9E0B-4919-A7F1-84BC9E69426D, servername: snapshot.apple-mapkit.com, host: snapshot.apple-mapkit.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: jnu0rNHECTe_v7H9Fmgg0iUSepHz4QQQRPW0XpX5URs, short-id: 1359c9bf9f7442e5}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 212.16.92.112:443, server: 212.16.92.112, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 32721515-985b-4773-9e70-5d2e1b88a060, servername: jobinvest.ru, host: jobinvest.ru, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 83.147.216.223:4433
-      - 51.194.251.172:31068
+      - 212.16.92.112:443
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 83.147.216.223:4433
-      - 51.194.251.172:31068
+      - 212.16.92.112:443
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 83.147.216.223:4433
-      - 51.194.251.172:31068
+      - 212.16.92.112:443
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 83.147.216.223:4433
-      - 51.194.251.172:31068
+      - 212.16.92.112:443
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 83.147.216.223:4433
-      - 51.194.251.172:31068
+      - 212.16.92.112:443
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 83.147.216.223:4433
-      - 51.194.251.172:31068
+      - 212.16.92.112:443
   - name: دانلود منیجر 📥
     type: select
     proxies:
