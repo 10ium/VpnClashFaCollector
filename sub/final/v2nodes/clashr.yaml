@@ -5,6 +5,7 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: 130.61.35.239:59924, server: 130.61.35.239, port: 59924, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: FL7Njqx7acZnllLYPIZhRxXMtCBw8Tct6FFY7Yqd8lw=, udp: true, tfo: false}
   - {name: 212.16.92.112:443, server: 212.16.92.112, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 32721515-985b-4773-9e70-5d2e1b88a060, servername: jobinvest.ru, host: jobinvest.ru, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
@@ -12,6 +13,7 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - 130.61.35.239:59924
       - 212.16.92.112:443
   - name: ♻️ 自动选择
     type: url-test
@@ -19,6 +21,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - 130.61.35.239:59924
       - 212.16.92.112:443
   - name: 🌍 国外媒体
     type: select
@@ -26,24 +29,28 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 130.61.35.239:59924
       - 212.16.92.112:443
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 130.61.35.239:59924
       - 212.16.92.112:443
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - 130.61.35.239:59924
       - 212.16.92.112:443
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 130.61.35.239:59924
       - 212.16.92.112:443
   - name: 🎯 全球直连
     type: select
@@ -72,6 +79,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 130.61.35.239:59924
       - 212.16.92.112:443
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
