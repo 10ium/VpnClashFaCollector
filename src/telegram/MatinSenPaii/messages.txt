@@ -1,11 +1,52 @@
 # آرشیو کانال: @MatinSenPaii
-بروزرسانی: 2026-09-17 14:35:50 UTC
+بروزرسانی: 2026-09-17 22:35:35 UTC
 
-### 🕒 2026-09-16 17:52:34 UTC
-گویا روی Open Code یه مدل جدید Stealth ناشناس به صورت رایگان اومده به اسم Union Alpha
-1- خیلی‌ها قدرتش رو در حد Opus 5 و مدلهای Frontier گزارش کردن
-2- گفتن که سرعتش وحشتناک بالاست(الان به خاطر استفاده سنگین مردم یه کم کند شده)
-3- و گفتن تا می‌تونید توکن بسوزونید
+### 🕒 2026-09-17 20:29:09 UTC
+> ↪️ **Forwarded**
+
+***🚀***
+;کاتن روتر
+** چیست؟**
+کاتن روتر یک ابزار سبک برای مدیریت چند سرویس DNS Tunnel روی یک سرور است.
+**خیلی ساده بخواهیم بگوییم:فرض کنید چند سرویس مختلف دارید، اما فقط یک سرور و یک IP در اختیار دارید. CottenRouter درخواست‌ها را دریافت می‌کند و بر اساس دامنه، هر درخواست را به سرویس مربوطه می‌فرستد.یعنی چند سرویس می‌توانند از یک IP و پورت عمومی ۵۳ استفاده کنند.⚠️ توجه: CottenRouter خودش VPN یا تونل ایجاد نمی‌کند؛ بلکه سرویس‌های تونلی موجود مانند CottenDNS، MasterDnsVPN، StormDNS و SlipGate را مدیریت و مسیریابی می‌کند.🔗 لینک پروژه:**
+[**https://github.com/TaJirax/CottenRouter**](https://github.com/TaJirax/CottenRouter)
+**پیش‌نیازهابرای نصب به این موارد نیاز دارید:یک سرور Linux با IP عمومیدسترسی SSH و root یا sudoدامنه یا زیردامنهسیستم‌عامل پیشنهادی: Ubuntu 20.04 به بالا یا Debian 11 به بالاروی ویندوز مستقیماً نصب نمی‌شود؛ باید روی سرور Linux نصب شود.نصب آسانابتدا با SSH به سرور وصل شوید:**
+ssh root@IP-SERVER
+**سپس دستور زیر را اجرا کنید:**
+curl -fsSL 
+[https://raw.githubusercontent.com/TaJirax/CottenRouter/main/scripts/install.sh](https://raw.githubusercontent.com/TaJirax/CottenRouter/main/scripts/install.sh)
+ | sudo bash
+**بعد از نصب، پنل مدیریت را باز کنید:**
+sudo cottenrouter tui
+**استفاده خیلی سادهدر پنل بازشده:با کلید Space سرویس موردنظر را انتخاب کنید.با کلید i نصب هدایت‌شده را شروع کنید.با کلیدهای Enter یا e دامنه و پورت سرویس را تنظیم کنید.با کلید s یک سرویس را Restart کنید.با کلید v اطلاعات اتصال و مسیر رمزها را ببینید.با کلید x یک سرویس را حذف کنید.تنظیم دامنهبرای هر سرویس یک زیردامنه جدا بسازید و همه را به IP سرور متصل کنید:**
+[**cotten.example.com**](http://cotten.example.com/)
+**  → CottenDNS**
+[**master.example.com**](http://master.example.com/)
+**  → MasterDnsVPN**
+[**storm.example.com**](http://storm.example.com/)
+**   → StormDNS**
+[**feed.example.com**](http://feed.example.com/)
+**    → thefeedدر پنل، همین دامنه‌ها را برای سرویس‌های مربوطه وارد کنید.بررسی وضعیت سرویسبرای دیدن وضعیت CottenRouter:**
+sudo systemctl status cottenrouter
+**برای بررسی سلامت:**
+sudo cottenrouter healthz -config /etc/cottenrouter/config.json
+**برای دیدن لاگ‌ها:**
+sudo journalctl -u cottenrouter -f
+**به‌روزرسانیبرای نصب آخرین نسخه، همان دستور نصب را دوباره اجرا کنید:**
+curl -fsSL 
+[https://raw.githubusercontent.com/TaJirax/CottenRouter/main/scripts/install.sh](https://raw.githubusercontent.com/TaJirax/CottenRouter/main/scripts/install.sh)
+ | sudo bash
+**نصاب تنظیمات قبلی را نگه می‌دارد و در صورت بروز خطا امکان بازگشت خودکار دارد.**
+***📌***
+ برای اطلاعات کامل‌تر، راهنمای فارسی پروژه را ببینید:
+[https://github.com/TaJirax/CottenRouter/blob/main/README.fa.md](https://github.com/TaJirax/CottenRouter/blob/main/README.fa.md)
+اطلاعات این متن بر اساس راهنمای فعلی مخزن نوشته شده است.
+[@whitedns](https://t.me/whitedns)
+
+---
+
+### 🕒 2026-09-17 20:26:54 UTC
+گویا روی Open Code یه مدل جدید Stealth ناشناس به صورت رایگان اومده به اسم Union Alpha  1- خیلی‌ها قدرتش رو در حد Opus 5 و مدلهای Frontier گزارش کردن 2- گفتن که سرعتش وحشتناک بالاست(الان به خاطر استفاده سنگین مردم یه کم کند شده) 3- و گفتن تا می‌تونید توکن بسوزونید
 ***🙏***
 ***🔥***
 
