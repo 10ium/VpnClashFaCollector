@@ -466,7 +466,10 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: 130.61.35.239:59924, server: 130.61.35.239, port: 59924, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: FL7Njqx7acZnllLYPIZhRxXMtCBw8Tct6FFY7Yqd8lw=, udp: true, tfo: false}
+  - {name: 130.61.114.207:59924, server: 130.61.114.207, port: 59924, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: UcnlHOpHlHUejLfgqFfISWebKoZl4ngC58AQM/e/So0=, udp: true, tfo: false}
+  - {name: 194.87.196.13:9011, server: 194.87.196.13, port: 9011, type: ss, cipher: aes-256-gcm, password: 4938e975724d0ed1, udp: true, tfo: false}
   - {name: 212.16.92.112:443, server: 212.16.92.112, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 32721515-985b-4773-9e70-5d2e1b88a060, servername: jobinvest.ru, host: jobinvest.ru, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 52.47.212.72:22222, server: 52.47.212.72, port: 22222, type: vless, tls: true, packet-encoding: xudp, uuid: e4514801-0d5a-42ba-869f-39bd605aef9e, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,7 +487,10 @@ proxy-groups:
     type: select
     proxies:
       - 130.61.35.239:59924
+      - 130.61.114.207:59924
+      - 194.87.196.13:9011
       - 212.16.92.112:443
+      - 52.47.212.72:22222
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -492,7 +498,10 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 130.61.35.239:59924
+      - 130.61.114.207:59924
+      - 194.87.196.13:9011
       - 212.16.92.112:443
+      - 52.47.212.72:22222
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -500,7 +509,10 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 130.61.35.239:59924
+      - 130.61.114.207:59924
+      - 194.87.196.13:9011
       - 212.16.92.112:443
+      - 52.47.212.72:22222
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -517,7 +529,10 @@ proxy-groups:
     interval: 600
     proxies:
       - 130.61.35.239:59924
+      - 130.61.114.207:59924
+      - 194.87.196.13:9011
       - 212.16.92.112:443
+      - 52.47.212.72:22222
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -525,7 +540,10 @@ proxy-groups:
     interval: 600
     proxies:
       - 130.61.35.239:59924
+      - 130.61.114.207:59924
+      - 194.87.196.13:9011
       - 212.16.92.112:443
+      - 52.47.212.72:22222
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -533,7 +551,10 @@ proxy-groups:
     interval: 600
     proxies:
       - 130.61.35.239:59924
+      - 130.61.114.207:59924
+      - 194.87.196.13:9011
       - 212.16.92.112:443
+      - 52.47.212.72:22222
   - name: دانلود منیجر 📥
     type: select
     proxies:
