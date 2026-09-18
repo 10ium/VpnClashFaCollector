@@ -6,7 +6,6 @@ log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
   - {name: "@Capoit`", server: 104.21.89.41, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 44eae030-290b-4083-8102-6f8bab05701b, servername: cfvvv-ev1.pages.dev, network: ws, ws-opts: {path: /, headers: {Host: cfvvv-ev1.pages.dev}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit", server: web.turbooserver.net.tr, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: turboo-server, host: dynu.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -14,7 +13,6 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - "@Capoit`"
-      - "@Capoit"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -22,7 +20,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Capoit`"
-      - "@Capoit"
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -30,28 +27,24 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - "@Capoit`"
-      - "@Capoit"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@Capoit`"
-      - "@Capoit"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - "@Capoit`"
-      - "@Capoit"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@Capoit`"
-      - "@Capoit"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -80,7 +73,6 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - "@Capoit`"
-      - "@Capoit"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
