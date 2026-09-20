@@ -465,11 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: lrnbymaa, server: k2.cloud--vpn.site, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 029fc301-ac31-4aae-9fd8-5d0bff6ec5c0, servername: ssl.fastly.com, alpn: [h2], network: ws, ws-opts: {path: /, headers: {Host: ssl.fastly.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: lrnbymaa 2, server: 80.93.217.193, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 4865927f-15be-4e19-a692-32f256982df5, host: play.google.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: lrnbymaa 3, server: 13.37.31.153, port: 22222, type: vless, tls: true, packet-encoding: xudp, uuid: e4514801-0d5a-42ba-869f-39bd605aef9e, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: lrnbymaa 4, server: 201.51.10.240, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e580c6ba-f942-49d2-a224-bf07fbff9b96, servername: cdn6.goonars.com, host: cdn6.goonars.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: VWDBW2RS3o-oFBrSNdpncoaVVU8KixbPNHoj4-Wy7lM, short-id: 04a69fc6}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: lrnbymaa 5, server: 199.232.237.79, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: turboo-server, servername: turboo-server-telegram.com, alpn: [h3%2Ch2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: turboo-server-telegram.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: lrnbymaa, server: 199.232.237.79, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: turboo-server, servername: turboo-server-telegram.com, alpn: [h3%2Ch2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: turboo-server-telegram.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,10 +483,6 @@ proxy-groups:
     type: select
     proxies:
       - lrnbymaa
-      - lrnbymaa 2
-      - lrnbymaa 3
-      - lrnbymaa 4
-      - lrnbymaa 5
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -498,10 +490,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - lrnbymaa
-      - lrnbymaa 2
-      - lrnbymaa 3
-      - lrnbymaa 4
-      - lrnbymaa 5
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -509,10 +497,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - lrnbymaa
-      - lrnbymaa 2
-      - lrnbymaa 3
-      - lrnbymaa 4
-      - lrnbymaa 5
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -529,10 +513,6 @@ proxy-groups:
     interval: 600
     proxies:
       - lrnbymaa
-      - lrnbymaa 2
-      - lrnbymaa 3
-      - lrnbymaa 4
-      - lrnbymaa 5
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -540,10 +520,6 @@ proxy-groups:
     interval: 600
     proxies:
       - lrnbymaa
-      - lrnbymaa 2
-      - lrnbymaa 3
-      - lrnbymaa 4
-      - lrnbymaa 5
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -551,10 +527,6 @@ proxy-groups:
     interval: 600
     proxies:
       - lrnbymaa
-      - lrnbymaa 2
-      - lrnbymaa 3
-      - lrnbymaa 4
-      - lrnbymaa 5
   - name: دانلود منیجر 📥
     type: select
     proxies:
