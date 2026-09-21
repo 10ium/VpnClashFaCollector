@@ -465,11 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Capoit", server: 2.27.59.206, port: 443, type: hysteria2, ports: 443, password: cd74c0a406664a5bc0bac098220a2468, obfs: salamander, obfs-password: 44f1c1e2f8b99e792ceed574627a1eb0, sni: de1.sferavpn.pro, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit 2", server: 199.232.78.159, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 3680a45e-ee4d-4093-bc7f-487fd66b8f59, servername: ssl.fastly.com, network: ws, ws-opts: {path: /, headers: {Host: ssl.fastly.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit 3", server: dv3.kontabox.ir, port: 1280, type: vless, tls: true, packet-encoding: xudp, uuid: 3680a45e-ee4d-4093-bc7f-487fd66b8f59, network: ws, ws-opts: {path: /, headers: {Host: play-apps-features.googleusercontent.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit 4", server: sb3.centeriran.shop, port: 1280, type: vless, tls: true, packet-encoding: xudp, uuid: 3680a45e-ee4d-4093-bc7f-487fd66b8f59, network: ws, ws-opts: {path: /, headers: {Host: is1-ssl.mzstatic.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit 5", server: k2.cloud--vpn.site, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 9503e890-3702-4847-af0a-2bceac2f0da0, servername: ssl.fastly.com, alpn: [h2], network: ws, ws-opts: {path: /, headers: {Host: ssl.fastly.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit", server: 104.24.0.184, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 44eae030-290b-4083-8102-6f8bab05701b, servername: cfvvv-ev1.pages.dev, network: ws, ws-opts: {path: /, headers: {Host: cfvvv-ev1.pages.dev}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,10 +483,6 @@ proxy-groups:
     type: select
     proxies:
       - "@Capoit"
-      - "@Capoit 2"
-      - "@Capoit 3"
-      - "@Capoit 4"
-      - "@Capoit 5"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -498,10 +490,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Capoit"
-      - "@Capoit 2"
-      - "@Capoit 3"
-      - "@Capoit 4"
-      - "@Capoit 5"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -509,10 +497,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Capoit"
-      - "@Capoit 2"
-      - "@Capoit 3"
-      - "@Capoit 4"
-      - "@Capoit 5"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -529,10 +513,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit"
-      - "@Capoit 2"
-      - "@Capoit 3"
-      - "@Capoit 4"
-      - "@Capoit 5"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -540,10 +520,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit"
-      - "@Capoit 2"
-      - "@Capoit 3"
-      - "@Capoit 4"
-      - "@Capoit 5"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -551,10 +527,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit"
-      - "@Capoit 2"
-      - "@Capoit 3"
-      - "@Capoit 4"
-      - "@Capoit 5"
   - name: دانلود منیجر 📥
     type: select
     proxies:
