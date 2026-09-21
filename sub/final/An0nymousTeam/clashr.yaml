@@ -5,46 +5,102 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@An0nymousteam - Reality`", server: panel.an0nymousteam.qd.je, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c68e203b-2ba9-4586-bc43-029b20a5111c, servername: yt.be, host: yt.be, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: LvIQyEzdMEvkPimuLuzP3VctDadFFgvieDEMRy2da0c, short-id: fc}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Lagos-1, server: 103.97.91.17, port: 443, type: trojan, password: 600421cf-11d7-429f-a65b-c30397f1bc03, sni: la.freeguard.org, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Los Angeles-14, server: 104.160.44.203, port: 443, type: trojan, password: 600421cf-11d7-429f-a65b-c30397f1bc03, sni: la14.freeguard.org, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Canberra-1, server: 113.20.12.98, port: 443, type: trojan, password: 600421cf-11d7-429f-a65b-c30397f1bc03, sni: ca.freeguard.org, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Ashburn-2, server: 152.53.80.195, port: 443, type: trojan, password: 600421cf-11d7-429f-a65b-c30397f1bc03, sni: abr2.freeguard.org, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Seoul`, server: 158.247.222.240, port: 443, type: trojan, password: 600421cf-11d7-429f-a65b-c30397f1bc03, sni: kr.freeguard.org, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: San Jose-6, server: 23.106.44.14, port: 443, type: trojan, password: 600421cf-11d7-429f-a65b-c30397f1bc03, sni: sj6.freeguard.org, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Bucharest-2, server: 38.180.35.145, port: 443, type: trojan, password: 600421cf-11d7-429f-a65b-c30397f1bc03, sni: bu2.freeguard.org, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Graz-1, server: 86.106.119.23, port: 443, type: trojan, password: 600421cf-11d7-429f-a65b-c30397f1bc03, sni: gr.freeguard.org, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 86.106.119.23:443, server: 86.106.119.23, port: 443, type: trojan, password: 600421cf-11d7-429f-a65b-c30397f1bc03, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@An0nymousteam - Reality`"
+      - Lagos-1
+      - Los Angeles-14
+      - Canberra-1
+      - Ashburn-2
+      - Seoul`
+      - San Jose-6
+      - Bucharest-2
+      - Graz-1
+      - 86.106.119.23:443
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@An0nymousteam - Reality`"
+      - Lagos-1
+      - Los Angeles-14
+      - Canberra-1
+      - Ashburn-2
+      - Seoul`
+      - San Jose-6
+      - Bucharest-2
+      - Graz-1
+      - 86.106.119.23:443
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@An0nymousteam - Reality`"
+      - Lagos-1
+      - Los Angeles-14
+      - Canberra-1
+      - Ashburn-2
+      - Seoul`
+      - San Jose-6
+      - Bucharest-2
+      - Graz-1
+      - 86.106.119.23:443
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@An0nymousteam - Reality`"
+      - Lagos-1
+      - Los Angeles-14
+      - Canberra-1
+      - Ashburn-2
+      - Seoul`
+      - San Jose-6
+      - Bucharest-2
+      - Graz-1
+      - 86.106.119.23:443
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@An0nymousteam - Reality`"
+      - Lagos-1
+      - Los Angeles-14
+      - Canberra-1
+      - Ashburn-2
+      - Seoul`
+      - San Jose-6
+      - Bucharest-2
+      - Graz-1
+      - 86.106.119.23:443
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@An0nymousteam - Reality`"
+      - Lagos-1
+      - Los Angeles-14
+      - Canberra-1
+      - Ashburn-2
+      - Seoul`
+      - San Jose-6
+      - Bucharest-2
+      - Graz-1
+      - 86.106.119.23:443
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +128,15 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@An0nymousteam - Reality`"
+      - Lagos-1
+      - Los Angeles-14
+      - Canberra-1
+      - Ashburn-2
+      - Seoul`
+      - San Jose-6
+      - Bucharest-2
+      - Graz-1
+      - 86.106.119.23:443
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

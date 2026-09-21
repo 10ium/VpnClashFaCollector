@@ -465,7 +465,15 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@An0nymousteam - Reality`", server: panel.an0nymousteam.qd.je, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c68e203b-2ba9-4586-bc43-029b20a5111c, servername: yt.be, host: yt.be, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: LvIQyEzdMEvkPimuLuzP3VctDadFFgvieDEMRy2da0c, short-id: fc}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Lagos-1, server: 103.97.91.17, port: 443, type: trojan, password: 600421cf-11d7-429f-a65b-c30397f1bc03, sni: la.freeguard.org, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Los Angeles-14, server: 104.160.44.203, port: 443, type: trojan, password: 600421cf-11d7-429f-a65b-c30397f1bc03, sni: la14.freeguard.org, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Canberra-1, server: 113.20.12.98, port: 443, type: trojan, password: 600421cf-11d7-429f-a65b-c30397f1bc03, sni: ca.freeguard.org, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Ashburn-2, server: 152.53.80.195, port: 443, type: trojan, password: 600421cf-11d7-429f-a65b-c30397f1bc03, sni: abr2.freeguard.org, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Seoul`, server: 158.247.222.240, port: 443, type: trojan, password: 600421cf-11d7-429f-a65b-c30397f1bc03, sni: kr.freeguard.org, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: San Jose-6, server: 23.106.44.14, port: 443, type: trojan, password: 600421cf-11d7-429f-a65b-c30397f1bc03, sni: sj6.freeguard.org, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Bucharest-2, server: 38.180.35.145, port: 443, type: trojan, password: 600421cf-11d7-429f-a65b-c30397f1bc03, sni: bu2.freeguard.org, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Graz-1, server: 86.106.119.23, port: 443, type: trojan, password: 600421cf-11d7-429f-a65b-c30397f1bc03, sni: gr.freeguard.org, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 86.106.119.23:443, server: 86.106.119.23, port: 443, type: trojan, password: 600421cf-11d7-429f-a65b-c30397f1bc03, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +490,45 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@An0nymousteam - Reality`"
+      - Lagos-1
+      - Los Angeles-14
+      - Canberra-1
+      - Ashburn-2
+      - Seoul`
+      - San Jose-6
+      - Bucharest-2
+      - Graz-1
+      - 86.106.119.23:443
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@An0nymousteam - Reality`"
+      - Lagos-1
+      - Los Angeles-14
+      - Canberra-1
+      - Ashburn-2
+      - Seoul`
+      - San Jose-6
+      - Bucharest-2
+      - Graz-1
+      - 86.106.119.23:443
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@An0nymousteam - Reality`"
+      - Lagos-1
+      - Los Angeles-14
+      - Canberra-1
+      - Ashburn-2
+      - Seoul`
+      - San Jose-6
+      - Bucharest-2
+      - Graz-1
+      - 86.106.119.23:443
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +544,45 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@An0nymousteam - Reality`"
+      - Lagos-1
+      - Los Angeles-14
+      - Canberra-1
+      - Ashburn-2
+      - Seoul`
+      - San Jose-6
+      - Bucharest-2
+      - Graz-1
+      - 86.106.119.23:443
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@An0nymousteam - Reality`"
+      - Lagos-1
+      - Los Angeles-14
+      - Canberra-1
+      - Ashburn-2
+      - Seoul`
+      - San Jose-6
+      - Bucharest-2
+      - Graz-1
+      - 86.106.119.23:443
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@An0nymousteam - Reality`"
+      - Lagos-1
+      - Los Angeles-14
+      - Canberra-1
+      - Ashburn-2
+      - Seoul`
+      - San Jose-6
+      - Bucharest-2
+      - Graz-1
+      - 86.106.119.23:443
   - name: دانلود منیجر 📥
     type: select
     proxies:
