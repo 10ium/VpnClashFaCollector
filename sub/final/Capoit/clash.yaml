@@ -465,6 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: "@Capoit`", server: k2.cloud--vpn.site, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 1fac5e18-2ca8-4626-c299-1f3f21c6b55e, servername: ssl.fastly.com, alpn: [h2], network: ws, ws-opts: {path: /, headers: {Host: ssl.fastly.com}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@Capoit", server: 104.24.0.184, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 44eae030-290b-4083-8102-6f8bab05701b, servername: cfvvv-ev1.pages.dev, network: ws, ws-opts: {path: /, headers: {Host: cfvvv-ev1.pages.dev}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -482,6 +483,7 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - "@Capoit`"
       - "@Capoit"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -489,6 +491,7 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - "@Capoit`"
       - "@Capoit"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -496,6 +499,7 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - "@Capoit`"
       - "@Capoit"
   - name: اتصال پایدار 🔗
     type: url-test
@@ -512,6 +516,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@Capoit`"
       - "@Capoit"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -519,6 +524,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@Capoit`"
       - "@Capoit"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -526,6 +532,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@Capoit`"
       - "@Capoit"
   - name: دانلود منیجر 📥
     type: select

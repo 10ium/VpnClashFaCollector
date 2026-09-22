@@ -5,6 +5,7 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: "@Capoit`", server: k2.cloud--vpn.site, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 1fac5e18-2ca8-4626-c299-1f3f21c6b55e, servername: ssl.fastly.com, alpn: [h2], network: ws, ws-opts: {path: /, headers: {Host: ssl.fastly.com}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@Capoit", server: 104.24.0.184, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 44eae030-290b-4083-8102-6f8bab05701b, servername: cfvvv-ev1.pages.dev, network: ws, ws-opts: {path: /, headers: {Host: cfvvv-ev1.pages.dev}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
@@ -12,6 +13,7 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - "@Capoit`"
       - "@Capoit"
   - name: ♻️ 自动选择
     type: url-test
@@ -19,6 +21,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - "@Capoit`"
       - "@Capoit"
   - name: 🌍 国外媒体
     type: select
@@ -26,24 +29,28 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - "@Capoit`"
       - "@Capoit"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - "@Capoit`"
       - "@Capoit"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - "@Capoit`"
       - "@Capoit"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - "@Capoit`"
       - "@Capoit"
   - name: 🎯 全球直连
     type: select
@@ -72,6 +79,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - "@Capoit`"
       - "@Capoit"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
