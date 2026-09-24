@@ -465,7 +465,6 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 92.113.149.59:443, server: 92.113.149.59, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c18b978e-1c4e-415c-8bea-07942b563a64, servername: shuma.ccwu.cc, network: ws, ws-opts: {path: /fp=chrome, headers: {Host: shuma.ccwu.cc}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 34.147.59.126:443, server: 34.147.59.126, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f76627ae-2626-4c53-ab57-da0e4d377a53, servername: www.cloudflare.com, host: www.cloudflare.com, path: /, reality-opts: {public-key: ODBW9YQs2TYvh_KBUQvbvAh61EULeZvqvwjc2RysKTs, short-id: 973452cd8674dbaf}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -483,7 +482,6 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 92.113.149.59:443
       - 34.147.59.126:443
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -491,7 +489,6 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - 92.113.149.59:443
       - 34.147.59.126:443
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -499,7 +496,6 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - 92.113.149.59:443
       - 34.147.59.126:443
   - name: اتصال پایدار 🔗
     type: url-test
@@ -516,7 +512,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 92.113.149.59:443
       - 34.147.59.126:443
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -524,7 +519,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 92.113.149.59:443
       - 34.147.59.126:443
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -532,7 +526,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 92.113.149.59:443
       - 34.147.59.126:443
   - name: دانلود منیجر 📥
     type: select

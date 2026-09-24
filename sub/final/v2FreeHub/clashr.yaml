@@ -5,95 +5,60 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 🇨🇦 Canada 🇨🇦, server: 142.4.216.225, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 3ssumf2, udp: true, tfo: false}
-  - {name: 🇫🇷 France 🇫🇷, server: 20.111.9.76, port: 59380, type: ss, cipher: chacha20-ietf-poly1305, password: DdhrBvEX2dHRjaakWHBZUa, udp: true, tfo: false}
-  - {name: "@v2FreeHub 🇬🇧", server: 158.173.221.214, port: 11001, type: ss, cipher: chacha20-ietf-poly1305, password: c58d16e593d44f42, udp: true, tfo: false}
-  - {name: 🇷🇺 Russia 🇷🇺, server: 195.133.23.200, port: 50111, type: ss, cipher: aes-256-gcm, password: 81a20429165df87e, udp: true, tfo: false}
-  - {name: 🇺🇸 United States 🇺🇸, server: 192.3.247.109, port: 43579, type: ss, cipher: aes-256-gcm, password: 8c009bb6-08b3-4526-a86b-5af7ddfc567a-4c757b72-6eec-4faf-8c2e-09fd1c7fa936, udp: true, tfo: false}
-  - {name: "@v2FreeHub 🇮🇹", server: 185.164.175.81, port: 19999, type: ss, cipher: aes-256-gcm, password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=, udp: true, tfo: false}
-  - {name: "@v2FreeHub 🇦🇹", server: 82.110.60.9, port: 19999, type: ss, cipher: aes-256-gcm, password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=, udp: true, tfo: false}
-  - {name: 🇷🇺 Russia 🇷🇺`, server: 46.17.40.234, port: 50111, type: ss, cipher: aes-256-gcm, password: bdb313adf74c2ede, udp: true, tfo: false}
+  - {name: 🇳🇱 The Netherlands 🇳🇱, server: 130.49.176.26, port: 1443, type: ss, cipher: chacha20-ietf-poly1305, password: MGJiZ, udp: true, tfo: false}
+  - {name: 🇳🇱 The Netherlands 🇳🇱 2, server: 130.49.176.26, port: 8139, type: ss, cipher: chacha20-ietf-poly1305, password: MGJiZ, udp: true, tfo: false}
+  - {name: 🇳🇱 The Netherlands 🇳🇱`, server: 130.49.176.26, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: MGJiZ, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇨🇦 Canada 🇨🇦
-      - 🇫🇷 France 🇫🇷
-      - "@v2FreeHub 🇬🇧"
-      - 🇷🇺 Russia 🇷🇺
-      - 🇺🇸 United States 🇺🇸
-      - "@v2FreeHub 🇮🇹"
-      - "@v2FreeHub 🇦🇹"
-      - 🇷🇺 Russia 🇷🇺`
+      - 🇳🇱 The Netherlands 🇳🇱
+      - 🇳🇱 The Netherlands 🇳🇱 2
+      - 🇳🇱 The Netherlands 🇳🇱`
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 🇨🇦 Canada 🇨🇦
-      - 🇫🇷 France 🇫🇷
-      - "@v2FreeHub 🇬🇧"
-      - 🇷🇺 Russia 🇷🇺
-      - 🇺🇸 United States 🇺🇸
-      - "@v2FreeHub 🇮🇹"
-      - "@v2FreeHub 🇦🇹"
-      - 🇷🇺 Russia 🇷🇺`
+      - 🇳🇱 The Netherlands 🇳🇱
+      - 🇳🇱 The Netherlands 🇳🇱 2
+      - 🇳🇱 The Netherlands 🇳🇱`
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇨🇦 Canada 🇨🇦
-      - 🇫🇷 France 🇫🇷
-      - "@v2FreeHub 🇬🇧"
-      - 🇷🇺 Russia 🇷🇺
-      - 🇺🇸 United States 🇺🇸
-      - "@v2FreeHub 🇮🇹"
-      - "@v2FreeHub 🇦🇹"
-      - 🇷🇺 Russia 🇷🇺`
+      - 🇳🇱 The Netherlands 🇳🇱
+      - 🇳🇱 The Netherlands 🇳🇱 2
+      - 🇳🇱 The Netherlands 🇳🇱`
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇨🇦 Canada 🇨🇦
-      - 🇫🇷 France 🇫🇷
-      - "@v2FreeHub 🇬🇧"
-      - 🇷🇺 Russia 🇷🇺
-      - 🇺🇸 United States 🇺🇸
-      - "@v2FreeHub 🇮🇹"
-      - "@v2FreeHub 🇦🇹"
-      - 🇷🇺 Russia 🇷🇺`
+      - 🇳🇱 The Netherlands 🇳🇱
+      - 🇳🇱 The Netherlands 🇳🇱 2
+      - 🇳🇱 The Netherlands 🇳🇱`
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 🇨🇦 Canada 🇨🇦
-      - 🇫🇷 France 🇫🇷
-      - "@v2FreeHub 🇬🇧"
-      - 🇷🇺 Russia 🇷🇺
-      - 🇺🇸 United States 🇺🇸
-      - "@v2FreeHub 🇮🇹"
-      - "@v2FreeHub 🇦🇹"
-      - 🇷🇺 Russia 🇷🇺`
+      - 🇳🇱 The Netherlands 🇳🇱
+      - 🇳🇱 The Netherlands 🇳🇱 2
+      - 🇳🇱 The Netherlands 🇳🇱`
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇨🇦 Canada 🇨🇦
-      - 🇫🇷 France 🇫🇷
-      - "@v2FreeHub 🇬🇧"
-      - 🇷🇺 Russia 🇷🇺
-      - 🇺🇸 United States 🇺🇸
-      - "@v2FreeHub 🇮🇹"
-      - "@v2FreeHub 🇦🇹"
-      - 🇷🇺 Russia 🇷🇺`
+      - 🇳🇱 The Netherlands 🇳🇱
+      - 🇳🇱 The Netherlands 🇳🇱 2
+      - 🇳🇱 The Netherlands 🇳🇱`
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -121,14 +86,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇨🇦 Canada 🇨🇦
-      - 🇫🇷 France 🇫🇷
-      - "@v2FreeHub 🇬🇧"
-      - 🇷🇺 Russia 🇷🇺
-      - 🇺🇸 United States 🇺🇸
-      - "@v2FreeHub 🇮🇹"
-      - "@v2FreeHub 🇦🇹"
-      - 🇷🇺 Russia 🇷🇺`
+      - 🇳🇱 The Netherlands 🇳🇱
+      - 🇳🇱 The Netherlands 🇳🇱 2
+      - 🇳🇱 The Netherlands 🇳🇱`
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
