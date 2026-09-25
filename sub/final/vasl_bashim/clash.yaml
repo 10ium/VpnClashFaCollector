@@ -465,10 +465,14 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@vasl_bashim", server: 74.234.59.81, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: znEtjgHLXH4FBLic, udp: true, tfo: false}
-  - {name: "@vasl_bashim 2", server: 94.249.180.45, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fed5c436-f9aa-4a60-b25f-876052fdf578, servername: pl.spbculture.org, host: pl.spbculture.org, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim`", server: 89.124.69.148, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: ff6d2dda-7b90-404e-9951-34b3124bfdfa, servername: storage.yandexcloud.net, host: storage.yandexcloud.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc, short-id: d8d4ee29}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim 3", server: 103.215.218.158, port: 22324, type: vmess, uuid: 04621bae-ab36-11ec-b909-0242ac120002, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim", server: 206.189.52.4, port: 17000, type: ss, cipher: aes-256-gcm, password: pX0uhU3ZjUcLWYs0Vez55BO3JoQrRlL, udp: true, tfo: false}
+  - {name: "@vasl_bashim`", server: 188.137.239.58, port: 25654, type: vless, tls: true, packet-encoding: xudp, uuid: 2b13751c-0372-4b07-8b4d-49459c5c4681, servername: play.google.com, host: play.google.com, path: /, reality-opts: {public-key: EpEBUY3kuebxQusY7SAJT4K3Axcsm_daJbqYC8ifxiw, short-id: 7f29de891f}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim 2", server: 188.137.239.58, port: 28618, type: vless, tls: true, packet-encoding: xudp, uuid: 2b13751c-0372-4b07-8b4d-49459c5c4681, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim 3", server: 188.137.235.28, port: 39070, type: vless, tls: true, packet-encoding: xudp, uuid: bff43cfe-8222-4b33-a13d-8e759caefa8a, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim 4", server: 45.95.96.236, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c5694dc5-39fd-4a92-8430-3837baa522a3, servername: gesmankos.sadiepinki.com, host: gesmankos.sadiepinki.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: rCkSHJ7goy7ZvSlau4LfXF-QLloOJMNeMxpeeQtwtVs, short-id: 4fa44664f6a566d3}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim 5", server: gesmankos.sadiepinki.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c5694dc5-39fd-4a92-8430-3837baa522a3, host: gesmankos.sadiepinki.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: rCkSHJ7goy7ZvSlau4LfXF-QLloOJMNeMxpeeQtwtVs, short-id: 4fa44664f6a566d3}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim 6", server: tgfree.rush-server.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ebd1c0d6-7ff4-4b9f-8692-237517a27a64, servername: anyfile2file.com, host: anyfile2file.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0, short-id: 64c1fe36c7846400}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim 7", server: 91.107.174.119, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f9b4f68a-0c42-4168-9a72-d0753a144773, host: play.google.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,9 +490,13 @@ proxy-groups:
     type: select
     proxies:
       - "@vasl_bashim"
-      - "@vasl_bashim 2"
       - "@vasl_bashim`"
+      - "@vasl_bashim 2"
       - "@vasl_bashim 3"
+      - "@vasl_bashim 4"
+      - "@vasl_bashim 5"
+      - "@vasl_bashim 6"
+      - "@vasl_bashim 7"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -496,9 +504,13 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@vasl_bashim"
-      - "@vasl_bashim 2"
       - "@vasl_bashim`"
+      - "@vasl_bashim 2"
       - "@vasl_bashim 3"
+      - "@vasl_bashim 4"
+      - "@vasl_bashim 5"
+      - "@vasl_bashim 6"
+      - "@vasl_bashim 7"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -506,9 +518,13 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@vasl_bashim"
-      - "@vasl_bashim 2"
       - "@vasl_bashim`"
+      - "@vasl_bashim 2"
       - "@vasl_bashim 3"
+      - "@vasl_bashim 4"
+      - "@vasl_bashim 5"
+      - "@vasl_bashim 6"
+      - "@vasl_bashim 7"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -525,9 +541,13 @@ proxy-groups:
     interval: 600
     proxies:
       - "@vasl_bashim"
-      - "@vasl_bashim 2"
       - "@vasl_bashim`"
+      - "@vasl_bashim 2"
       - "@vasl_bashim 3"
+      - "@vasl_bashim 4"
+      - "@vasl_bashim 5"
+      - "@vasl_bashim 6"
+      - "@vasl_bashim 7"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -535,9 +555,13 @@ proxy-groups:
     interval: 600
     proxies:
       - "@vasl_bashim"
-      - "@vasl_bashim 2"
       - "@vasl_bashim`"
+      - "@vasl_bashim 2"
       - "@vasl_bashim 3"
+      - "@vasl_bashim 4"
+      - "@vasl_bashim 5"
+      - "@vasl_bashim 6"
+      - "@vasl_bashim 7"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -545,9 +569,13 @@ proxy-groups:
     interval: 600
     proxies:
       - "@vasl_bashim"
-      - "@vasl_bashim 2"
       - "@vasl_bashim`"
+      - "@vasl_bashim 2"
       - "@vasl_bashim 3"
+      - "@vasl_bashim 4"
+      - "@vasl_bashim 5"
+      - "@vasl_bashim 6"
+      - "@vasl_bashim 7"
   - name: دانلود منیجر 📥
     type: select
     proxies:

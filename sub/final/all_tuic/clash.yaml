@@ -465,9 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: ⛽95@oneclickvpnkeys, server: 198.200.42.129, port: 52649, type: tuic, uuid: 2f6f1856-5466-4078-b1f0-d3f977211ada, password: 2f6f1856-5466-4078-b1f0-d3f977211ada, alpn: [h3], udp-relay-mode: native, congestion-controller: bbr, sni: www.bing.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 171029 | ⚡️Telegram - t.me/SOSkeyNET, server: 198.200.42.129, port: 52649, type: tuic, uuid: 2f6f1856-5466-4078-b1f0-d3f977211ada, password: 2f6f1856-5466-4078-b1f0-d3f977211ada, alpn: [h3], udp-relay-mode: native, congestion-controller: bbr, sni: www.bing.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "***✅***@AR14N24b", server: 198.200.42.129, port: 52649, type: tuic, uuid: 2f6f1856-5466-4078-b1f0-d3f977211ada, password: 2f6f1856-5466-4078-b1f0-d3f977211ada, alpn: [h3], udp-relay-mode: native, congestion-controller: bbr, sni: www.bing.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 108.186.180.148:22723, server: 108.186.180.148, port: 22723, type: tuic, uuid: af24a0e4-f5a2-4b97-a678-992d45346147, password: af24a0e4-f5a2-4b97-a678-992d45346147, alpn: [h3], udp-relay-mode: native, congestion-controller: bbr, sni: www.bing.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 181265 | ⚡️Telegram - t.me/SOSkeyNET, server: 108.186.180.148, port: 22723, type: tuic, uuid: af24a0e4-f5a2-4b97-a678-992d45346147, password: af24a0e4-f5a2-4b97-a678-992d45346147, alpn: [h3], udp-relay-mode: native, congestion-controller: bbr, sni: www.bing.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 2🕊️@oneclickvpnkeys, server: 108.186.180.148, port: 22723, type: tuic, uuid: af24a0e4-f5a2-4b97-a678-992d45346147, password: af24a0e4-f5a2-4b97-a678-992d45346147, alpn: [h3], udp-relay-mode: native, congestion-controller: bbr, sni: www.bing.com, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,27 +484,27 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - ⛽95@oneclickvpnkeys
-      - 171029 | ⚡️Telegram - t.me/SOSkeyNET
-      - "***✅***@AR14N24b"
+      - 108.186.180.148:22723
+      - 181265 | ⚡️Telegram - t.me/SOSkeyNET
+      - 2🕊️@oneclickvpnkeys
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - ⛽95@oneclickvpnkeys
-      - 171029 | ⚡️Telegram - t.me/SOSkeyNET
-      - "***✅***@AR14N24b"
+      - 108.186.180.148:22723
+      - 181265 | ⚡️Telegram - t.me/SOSkeyNET
+      - 2🕊️@oneclickvpnkeys
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - ⛽95@oneclickvpnkeys
-      - 171029 | ⚡️Telegram - t.me/SOSkeyNET
-      - "***✅***@AR14N24b"
+      - 108.186.180.148:22723
+      - 181265 | ⚡️Telegram - t.me/SOSkeyNET
+      - 2🕊️@oneclickvpnkeys
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -520,27 +520,27 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - ⛽95@oneclickvpnkeys
-      - 171029 | ⚡️Telegram - t.me/SOSkeyNET
-      - "***✅***@AR14N24b"
+      - 108.186.180.148:22723
+      - 181265 | ⚡️Telegram - t.me/SOSkeyNET
+      - 2🕊️@oneclickvpnkeys
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - ⛽95@oneclickvpnkeys
-      - 171029 | ⚡️Telegram - t.me/SOSkeyNET
-      - "***✅***@AR14N24b"
+      - 108.186.180.148:22723
+      - 181265 | ⚡️Telegram - t.me/SOSkeyNET
+      - 2🕊️@oneclickvpnkeys
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - ⛽95@oneclickvpnkeys
-      - 171029 | ⚡️Telegram - t.me/SOSkeyNET
-      - "***✅***@AR14N24b"
+      - 108.186.180.148:22723
+      - 181265 | ⚡️Telegram - t.me/SOSkeyNET
+      - 2🕊️@oneclickvpnkeys
   - name: دانلود منیجر 📥
     type: select
     proxies:

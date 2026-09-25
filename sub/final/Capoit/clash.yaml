@@ -465,8 +465,13 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Capoit`", server: 46.225.11.46, port: 209, type: vless, tls: true, packet-encoding: xudp, uuid: 90c8673d-416b-4ea8-b75c-5cc2db2308b0, servername: aparat.com, host: aparat.com, path: /, reality-opts: {public-key: 4Q5c7xpGQa7AH591KSZQzfU7gFkBxCwMSL9LkgSat3w, short-id: 0aeb62b0}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 2", server: 151.101.56.7, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: efd8d1f0-8c99-4733-9654-a2c959a1d1ca, servername: ssl.fastly.com, network: ws, ws-opts: {path: /, headers: {Host: ssl.fastly.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit`", server: 65.109.176.251, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 59dc89dd-873b-46c5-80a7-91437406fe8b, servername: storage.googleapis.com, host: storage.googleapis.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: QYf4bxG9Vh5Mr2jatCjRspBxTwfYFO0qWgP5YI2FJSY, short-id: 9a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 2", server: 104.143.223.230, port: 2085, type: vless, tls: true, packet-encoding: xudp, uuid: 9bb5dd4e-bd32-4bdb-a60d-9368433f3885, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: vless}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 3", server: 93.190.9.192, port: 3090, type: vless, tls: true, packet-encoding: xudp, uuid: 9bb5dd4e-bd32-4bdb-a60d-9368433f3885, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: vless}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 4", server: 188.137.235.28, port: 39070, type: vless, tls: true, packet-encoding: xudp, uuid: bff43cfe-8222-4b33-a13d-8e759caefa8a, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 5", server: 188.137.235.28, port: 56413, type: vless, tls: true, packet-encoding: xudp, uuid: bff43cfe-8222-4b33-a13d-8e759caefa8a, servername: 0cc0f6a1.vless-reality-sni.staticedge-delivery.net, host: 0cc0f6a1.vless-reality-sni.staticedge-delivery.net, path: /, reality-opts: {public-key: dBK1Uu9s-8Ke6NcE3vQnv_RMMczuMGbGIVFbIA_oIig, short-id: 0a809cfd4605f7b9}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 6", server: 18.169.126.60, port: 22222, type: vless, tls: true, packet-encoding: xudp, uuid: e4514801-0d5a-42ba-869f-39bd605aef9e, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 7", server: 151.101.56.7, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: efd8d1f0-8c99-4733-9654-a2c959a1d1ca, servername: ssl.fastly.com, network: ws, ws-opts: {path: /, headers: {Host: ssl.fastly.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,6 +490,11 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
+      - "@Capoit` 3"
+      - "@Capoit` 4"
+      - "@Capoit` 5"
+      - "@Capoit` 6"
+      - "@Capoit` 7"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -493,6 +503,11 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
+      - "@Capoit` 3"
+      - "@Capoit` 4"
+      - "@Capoit` 5"
+      - "@Capoit` 6"
+      - "@Capoit` 7"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -501,6 +516,11 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
+      - "@Capoit` 3"
+      - "@Capoit` 4"
+      - "@Capoit` 5"
+      - "@Capoit` 6"
+      - "@Capoit` 7"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -518,6 +538,11 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
+      - "@Capoit` 3"
+      - "@Capoit` 4"
+      - "@Capoit` 5"
+      - "@Capoit` 6"
+      - "@Capoit` 7"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -526,6 +551,11 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
+      - "@Capoit` 3"
+      - "@Capoit` 4"
+      - "@Capoit` 5"
+      - "@Capoit` 6"
+      - "@Capoit` 7"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -534,6 +564,11 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
+      - "@Capoit` 3"
+      - "@Capoit` 4"
+      - "@Capoit` 5"
+      - "@Capoit` 6"
+      - "@Capoit` 7"
   - name: دانلود منیجر 📥
     type: select
     proxies:
