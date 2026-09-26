@@ -465,15 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: Lagos-1, server: 103.97.91.17, port: 443, type: trojan, password: 600421cf-11d7-429f-a65b-c30397f1bc03, sni: la.freeguard.org, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Los Angeles-14, server: 104.160.44.203, port: 443, type: trojan, password: 600421cf-11d7-429f-a65b-c30397f1bc03, sni: la14.freeguard.org, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Canberra-1, server: 113.20.12.98, port: 443, type: trojan, password: 600421cf-11d7-429f-a65b-c30397f1bc03, sni: ca.freeguard.org, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Ashburn-2, server: 152.53.80.195, port: 443, type: trojan, password: 600421cf-11d7-429f-a65b-c30397f1bc03, sni: abr2.freeguard.org, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Seoul`, server: 158.247.222.240, port: 443, type: trojan, password: 600421cf-11d7-429f-a65b-c30397f1bc03, sni: kr.freeguard.org, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: San Jose-6, server: 23.106.44.14, port: 443, type: trojan, password: 600421cf-11d7-429f-a65b-c30397f1bc03, sni: sj6.freeguard.org, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Bucharest-2, server: 38.180.35.145, port: 443, type: trojan, password: 600421cf-11d7-429f-a65b-c30397f1bc03, sni: bu2.freeguard.org, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: Graz-1, server: 86.106.119.23, port: 443, type: trojan, password: 600421cf-11d7-429f-a65b-c30397f1bc03, sni: gr.freeguard.org, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 86.106.119.23:443, server: 86.106.119.23, port: 443, type: trojan, password: 600421cf-11d7-429f-a65b-c30397f1bc03, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: S1-reality, server: xray1-direct-mci1-fs-ce.freesocks.work, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 3258e8fa-dcff-4e38-9974-38ba8d76a0d7, servername: dl.google.com, host: dl.google.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: S2-reality, server: xray2-direct-mci1-fs-ce.freesocks.work, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 715569e9-ee89-4b7d-b276-e73c8b4e964b, servername: dl.google.com, host: dl.google.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: S3-reality`, server: xray1-direct-mci1-fs-ce.freesocks.work, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e48c7652-cee6-40e7-b41e-c9b8fa0e329a, servername: dl.google.com, host: dl.google.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -490,45 +484,27 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - Lagos-1
-      - Los Angeles-14
-      - Canberra-1
-      - Ashburn-2
-      - Seoul`
-      - San Jose-6
-      - Bucharest-2
-      - Graz-1
-      - 86.106.119.23:443
+      - S1-reality
+      - S2-reality
+      - S3-reality`
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - Lagos-1
-      - Los Angeles-14
-      - Canberra-1
-      - Ashburn-2
-      - Seoul`
-      - San Jose-6
-      - Bucharest-2
-      - Graz-1
-      - 86.106.119.23:443
+      - S1-reality
+      - S2-reality
+      - S3-reality`
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - Lagos-1
-      - Los Angeles-14
-      - Canberra-1
-      - Ashburn-2
-      - Seoul`
-      - San Jose-6
-      - Bucharest-2
-      - Graz-1
-      - 86.106.119.23:443
+      - S1-reality
+      - S2-reality
+      - S3-reality`
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -544,45 +520,27 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Lagos-1
-      - Los Angeles-14
-      - Canberra-1
-      - Ashburn-2
-      - Seoul`
-      - San Jose-6
-      - Bucharest-2
-      - Graz-1
-      - 86.106.119.23:443
+      - S1-reality
+      - S2-reality
+      - S3-reality`
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Lagos-1
-      - Los Angeles-14
-      - Canberra-1
-      - Ashburn-2
-      - Seoul`
-      - San Jose-6
-      - Bucharest-2
-      - Graz-1
-      - 86.106.119.23:443
+      - S1-reality
+      - S2-reality
+      - S3-reality`
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - Lagos-1
-      - Los Angeles-14
-      - Canberra-1
-      - Ashburn-2
-      - Seoul`
-      - San Jose-6
-      - Bucharest-2
-      - Graz-1
-      - 86.106.119.23:443
+      - S1-reality
+      - S2-reality
+      - S3-reality`
   - name: دانلود منیجر 📥
     type: select
     proxies:

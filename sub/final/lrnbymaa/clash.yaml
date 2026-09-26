@@ -465,7 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: lrnbymaa, server: 199.232.237.79, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: turboo-server, servername: turboo-server-telegram.com, alpn: [h3%2Ch2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: turboo-server-telegram.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: lrnbymaa, server: 150.241.105.184, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4cf9c712-11c4-47d8-aa31-a1693a1aa4e5, servername: www.v2host.ru, host: www.v2host.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: hXqnRjRf0FfXsWWfj-tJY9hxq7dDfu_KWB9udeNGkFI, short-id: 7791cacf0b57f34c}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: lrnbymaa 2, server: 62.60.152.1, port: 56328, type: vless, tls: true, packet-encoding: xudp, uuid: ce230b9c-0531-40da-bc3f-f27a8e059db1, servername: table.vkroom-it-service.xyz, host: table.vkroom-it-service.xyz, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: iI1pc8k9-mIPHL2Dga-4n4h3KoBT68lN434nglpgm2M, short-id: f3a9c21e8b6d4571}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: lrnbymaa 3, server: 193.56.135.212, port: 9543, type: vless, tls: true, packet-encoding: xudp, uuid: ff6d2dda-7b90-404e-9951-34b3124bfdfa, servername: storage.yandexcloud.net, host: storage.yandexcloud.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc, short-id: 123abcde}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,6 +485,8 @@ proxy-groups:
     type: select
     proxies:
       - lrnbymaa
+      - lrnbymaa 2
+      - lrnbymaa 3
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -490,6 +494,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - lrnbymaa
+      - lrnbymaa 2
+      - lrnbymaa 3
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -497,6 +503,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - lrnbymaa
+      - lrnbymaa 2
+      - lrnbymaa 3
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -513,6 +521,8 @@ proxy-groups:
     interval: 600
     proxies:
       - lrnbymaa
+      - lrnbymaa 2
+      - lrnbymaa 3
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -520,6 +530,8 @@ proxy-groups:
     interval: 600
     proxies:
       - lrnbymaa
+      - lrnbymaa 2
+      - lrnbymaa 3
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -527,6 +539,8 @@ proxy-groups:
     interval: 600
     proxies:
       - lrnbymaa
+      - lrnbymaa 2
+      - lrnbymaa 3
   - name: دانلود منیجر 📥
     type: select
     proxies:

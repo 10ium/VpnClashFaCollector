@@ -5,7 +5,9 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: lrnbymaa, server: 199.232.237.79, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: turboo-server, servername: turboo-server-telegram.com, alpn: [h3%2Ch2%2Chttp%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: turboo-server-telegram.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: lrnbymaa, server: 150.241.105.184, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4cf9c712-11c4-47d8-aa31-a1693a1aa4e5, servername: www.v2host.ru, host: www.v2host.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: hXqnRjRf0FfXsWWfj-tJY9hxq7dDfu_KWB9udeNGkFI, short-id: 7791cacf0b57f34c}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: lrnbymaa 2, server: 62.60.152.1, port: 56328, type: vless, tls: true, packet-encoding: xudp, uuid: ce230b9c-0531-40da-bc3f-f27a8e059db1, servername: table.vkroom-it-service.xyz, host: table.vkroom-it-service.xyz, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: iI1pc8k9-mIPHL2Dga-4n4h3KoBT68lN434nglpgm2M, short-id: f3a9c21e8b6d4571}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: lrnbymaa 3, server: 193.56.135.212, port: 9543, type: vless, tls: true, packet-encoding: xudp, uuid: ff6d2dda-7b90-404e-9951-34b3124bfdfa, servername: storage.yandexcloud.net, host: storage.yandexcloud.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc, short-id: 123abcde}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -13,6 +15,8 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - lrnbymaa
+      - lrnbymaa 2
+      - lrnbymaa 3
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -20,6 +24,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - lrnbymaa
+      - lrnbymaa 2
+      - lrnbymaa 3
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -27,24 +33,32 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - lrnbymaa
+      - lrnbymaa 2
+      - lrnbymaa 3
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - lrnbymaa
+      - lrnbymaa 2
+      - lrnbymaa 3
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - lrnbymaa
+      - lrnbymaa 2
+      - lrnbymaa 3
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - lrnbymaa
+      - lrnbymaa 2
+      - lrnbymaa 3
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -73,6 +87,8 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - lrnbymaa
+      - lrnbymaa 2
+      - lrnbymaa 3
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
