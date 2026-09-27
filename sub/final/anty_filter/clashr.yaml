@@ -5,67 +5,81 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@vpnbaz ☂️", server: 185.156.47.97, port: 9443, type: ss, cipher: aes-256-gcm, password: eveaaTOb8ji8yntw2Z9yWUG0d6Ir8Ld8m3ymH8THdC5egiTH1mXCiBc0Skr7FibH, udp: true, tfo: false}
-  - {name: "@vpnbaz ⭐", server: 129.101.120.5, port: 37951, type: vless, tls: true, packet-encoding: xudp, uuid: 25284368-40d5-4abe-9f56-54a07e88a7af, servername: nl2.dzvn.space, host: nl2.dzvn.space, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: O6ZOpoz4sxon8iHxCd5EEvx2K9NUThd4SvOCBEvADEI, short-id: a9e21fd097d019c6}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz 🛸", server: 15.204.97.206, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz 🌊", server: 169.40.42.75, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d65cc14c-f53f-4fe2-b262-97856601319c, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg, short-id: c39cc7310a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz 🍭", server: 185.156.47.97, port: 9443, type: ss, cipher: aes-256-gcm, password: eveaaTOb8ji8yntw2Z9yWUG0d6Ir8Ld8m3ymH8THdC5egiTH1mXCiBc0Skr7FibH, udp: true, tfo: false}
+  - {name: "@vpnbaz 🛸", server: hinet1.2yly.com, port: 24215, type: vless, tls: true, packet-encoding: xudp, uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a, servername: addons.mozilla.org, host: addons.mozilla.org, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz 🛸 2", server: 89.35.14.31, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be, servername: md2.univesalsrv.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: hub.v1.SyncService}, reality-opts: {public-key: JXFsWHYjhAcR-7yz9tuCTMdcfuiyC9a-C9ewA55Z63o, short-id: d36a38659ce106cb}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz 🌊", server: pl-waw.dontblockmepls.com, port: 2063, type: vless, tls: true, packet-encoding: xudp, uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a, servername: rusbid.de, host: rusbid.de, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz ☂️", server: 169.40.42.184, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d65cc14c-f53f-4fe2-b262-97856601319c, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg, short-id: c39cc7310a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz 🍭 2", server: 169.40.42.229, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d65cc14c-f53f-4fe2-b262-97856601319c, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg, short-id: c39cc7310a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@vpnbaz ☂️"
-      - "@vpnbaz ⭐"
+      - "@vpnbaz 🍭"
       - "@vpnbaz 🛸"
+      - "@vpnbaz 🛸 2"
       - "@vpnbaz 🌊"
+      - "@vpnbaz ☂️"
+      - "@vpnbaz 🍭 2"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@vpnbaz ☂️"
-      - "@vpnbaz ⭐"
+      - "@vpnbaz 🍭"
       - "@vpnbaz 🛸"
+      - "@vpnbaz 🛸 2"
       - "@vpnbaz 🌊"
+      - "@vpnbaz ☂️"
+      - "@vpnbaz 🍭 2"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@vpnbaz ☂️"
-      - "@vpnbaz ⭐"
+      - "@vpnbaz 🍭"
       - "@vpnbaz 🛸"
+      - "@vpnbaz 🛸 2"
       - "@vpnbaz 🌊"
+      - "@vpnbaz ☂️"
+      - "@vpnbaz 🍭 2"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@vpnbaz ☂️"
-      - "@vpnbaz ⭐"
+      - "@vpnbaz 🍭"
       - "@vpnbaz 🛸"
+      - "@vpnbaz 🛸 2"
       - "@vpnbaz 🌊"
+      - "@vpnbaz ☂️"
+      - "@vpnbaz 🍭 2"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@vpnbaz ☂️"
-      - "@vpnbaz ⭐"
+      - "@vpnbaz 🍭"
       - "@vpnbaz 🛸"
+      - "@vpnbaz 🛸 2"
       - "@vpnbaz 🌊"
+      - "@vpnbaz ☂️"
+      - "@vpnbaz 🍭 2"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@vpnbaz ☂️"
-      - "@vpnbaz ⭐"
+      - "@vpnbaz 🍭"
       - "@vpnbaz 🛸"
+      - "@vpnbaz 🛸 2"
       - "@vpnbaz 🌊"
+      - "@vpnbaz ☂️"
+      - "@vpnbaz 🍭 2"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -93,10 +107,12 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@vpnbaz ☂️"
-      - "@vpnbaz ⭐"
+      - "@vpnbaz 🍭"
       - "@vpnbaz 🛸"
+      - "@vpnbaz 🛸 2"
       - "@vpnbaz 🌊"
+      - "@vpnbaz ☂️"
+      - "@vpnbaz 🍭 2"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
