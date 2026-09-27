@@ -465,8 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 151.241.138.151:8444, server: 151.241.138.151, port: 8444, type: vless, tls: true, packet-encoding: xudp, uuid: 02bd8b5a-170b-4a79-8e68-9cec710272c7, servername: pl1.gursub.com, host: pl1.gursub.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: sQ9CcspZ6urWlzGNjjmtfp8EuuDll5RVtcsVoq_EfUE, short-id: a3f509aa7a4b41cc}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 146.103.42.119:9543, server: 146.103.42.119, port: 9543, type: vless, tls: true, packet-encoding: xudp, uuid: ff6d2dda-7b90-404e-9951-34b3124bfdfa, servername: storage.yandexcloud.net, host: storage.yandexcloud.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc, short-id: 123abcdf}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 139.100.236.74:2, server: 139.100.236.74, port: 2, type: ss, cipher: chacha20-ietf-poly1305, password: WxYpOK1iPSJySbVNMMJDtw, udp: true, tfo: false}
+  - {name: 🇳🇱 nl2.gursub.com:443, server: nl2.gursub.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 02bd8b5a-170b-4a79-8e68-9cec710272c7, servername: nl2.gursub.com, host: nl2.gursub.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: ltHl15Wq549qC2JdAtesy-POs6Hwm_BbrlzuwDkWoUk, short-id: a1b2c3d4e5f6a1b2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 151.241.138.151:8444
-      - 146.103.42.119:9543
+      - 139.100.236.74:2
+      - 🇳🇱 nl2.gursub.com:443
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 151.241.138.151:8444
-      - 146.103.42.119:9543
+      - 139.100.236.74:2
+      - 🇳🇱 nl2.gursub.com:443
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 151.241.138.151:8444
-      - 146.103.42.119:9543
+      - 139.100.236.74:2
+      - 🇳🇱 nl2.gursub.com:443
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 151.241.138.151:8444
-      - 146.103.42.119:9543
+      - 139.100.236.74:2
+      - 🇳🇱 nl2.gursub.com:443
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 151.241.138.151:8444
-      - 146.103.42.119:9543
+      - 139.100.236.74:2
+      - 🇳🇱 nl2.gursub.com:443
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 151.241.138.151:8444
-      - 146.103.42.119:9543
+      - 139.100.236.74:2
+      - 🇳🇱 nl2.gursub.com:443
   - name: دانلود منیجر 📥
     type: select
     proxies:
