@@ -5,165 +5,74 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 51.170.191.141:45819, server: 51.170.191.141, port: 45819, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: f/NpUKMY1ik7lr86dtH+rKX7U12gqCzzzdJYv7QZXk0=, udp: true, tfo: false}
-  - {name: 158.178.150.120:45819, server: 158.178.150.120, port: 45819, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: kUJhsSGKnl5fQILCiKCWPPd2j3xj/GWl+vrf8qCXEU8=, udp: true, tfo: false}
-  - {name: 129.151.70.113:61312, server: 129.151.70.113, port: 61312, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: n12fSnv7G5u+/HcjQHq61FsQgrGuTfkXt/vbUMzRi3E=, udp: true, tfo: false}
-  - {name: 158.178.144.253:45819, server: 158.178.144.253, port: 45819, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: pWj1DGzUHRHjxz7SSvKLbmW1C6ivekCfcINb9U77l6g=, udp: true, tfo: false}
-  - {name: 158.178.148.7:45819, server: 158.178.148.7, port: 45819, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: vNoCxihjVyhIFWBlYnKneEfNcEFU/rxVqQhR6/FoGUk=, udp: true, tfo: false}
-  - {name: 72.4.65.116:443, server: 72.4.65.116, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 0dca2cfe-98eb-4f9d-9a47-cf87510c558b, servername: assets-de2.pleiades.codes, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: cdn.v1.AssetService}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 93.190.9.52:3090, server: 93.190.9.52, port: 3090, type: vless, tls: true, packet-encoding: xudp, uuid: 52e8bce3-b255-486d-beb2-aa1b549c44b1, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: vless}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 31.77.13.19:2063, server: 31.77.13.19, port: 2063, type: vless, tls: true, packet-encoding: xudp, uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a, servername: rusbid.de, host: rusbid.de, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 172.104.237.173:20855, server: 172.104.237.173, port: 20855, type: vless, tls: true, packet-encoding: xudp, uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec, servername: www.cloudflare.com, host: www.cloudflare.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: c6Pu0_yAYxIrnYjbwIYLsKB_xhcLsk17BgojLeaIvE8, short-id: efe9}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 172.104.237.173:20855 2, server: 172.104.237.173, port: 20855, type: vless, tls: true, packet-encoding: xudp, uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec, servername: www.cloudflare.com, host: www.cloudflare.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: c6Pu0_yAYxIrnYjbwIYLsKB_xhcLsk17BgojLeaIvE8, short-id: efe9}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 178.79.149.80:22117, server: 178.79.149.80, port: 22117, type: vless, tls: true, packet-encoding: xudp, uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec, servername: www.cloudflare.com, host: www.cloudflare.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: Vqwhml0SG253PsBtx9xi3GJY-hhyA6sgGUJ_wVI7Q1g, short-id: c7994be0}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 18.136.119.69:20975, server: 18.136.119.69, port: 20975, type: vless, tls: true, packet-encoding: xudp, uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec, servername: www.cloudflare.com, host: www.cloudflare.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: GVg6RWWCJfXATSmArzQD69rXqs9-804Ot-_uX3WrJE4, short-id: 2bb0dc48}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 129.151.66.142:61312, server: 129.151.66.142, port: 61312, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: +Nt5IdazH1gH7Cg7OvFoDX8Rx3koZi3YnHbunnlAuUM=, udp: true, tfo: false}
+  - {name: 130.61.238.73:59924, server: 130.61.238.73, port: 59924, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: Myitj2dzi6O4zVyl9FpAcvzBArkfvs7vcUgfLvT+hZQ=, udp: true, tfo: false}
+  - {name: 134.65.57.26:61312, server: 134.65.57.26, port: 61312, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: Sm4F5fX+ZJpWpkXMNbw0yYrWolYIiwknVYDwx8eus78=, udp: true, tfo: false}
+  - {name: 62.77.158.1:443, server: 62.77.158.1, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 2eceaf2b-a775-5a9c-9990-dad2b3660fb6, servername: online.1c.ru, host: online.1c.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: sVhkyiMXvpofflCdSszxQmsqOXV1kg1Ldxq1a9mOPjs, short-id: 6a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 18.139.227.162:28243, server: 18.139.227.162, port: 28243, type: vless, tls: true, packet-encoding: xudp, uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec, servername: www.cloudflare.com, host: www.cloudflare.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: IXxfPvq2OkbSuA-ZTBFpMzkDU1uO8dEI1e7s9VfHh1Y, short-id: 7996bf4dcf194d18}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "🇭🇰 [openproxylist.com] vmess-HK", server: ADncdOvLHR4M1P36.v.3dns.vip, port: 443, type: vmess, uuid: f0b7bbd66aad458aaec0e9acaab768b6, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: ADncdOvLHR4M1P36.v.3dns.vip, network: ws, ws-opts: {path: /ws-vmess, headers: {Host: ADncdOvLHR4M1P36.v.3dns.vip}}, udp: true, tfo: false}
-  - {name: "🇭🇰 [openproxylist.com] vmess-HK 2", server: aZW0eunYVdvRe73k.v.3dns.vip, port: 443, type: vmess, uuid: f0b7bbd66aad458aaec0e9acaab768b6, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: aZW0eunYVdvRe73k.v.3dns.vip, network: ws, ws-opts: {path: /ws-vmess, headers: {Host: aZW0eunYVdvRe73k.v.3dns.vip}}, udp: true, tfo: false}
-  - {name: "🇭🇰 [openproxylist.com] vmess-HK 3", server: syJ2gGUgMwBwQwQx.v.3dns.vip, port: 443, type: vmess, uuid: f0b7bbd66aad458aaec0e9acaab768b6, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: syJ2gGUgMwBwQwQx.v.3dns.vip, network: ws, ws-opts: {path: /ws-vmess, headers: {Host: syJ2gGUgMwBwQwQx.v.3dns.vip}}, udp: true, tfo: false}
-  - {name: "🇯🇵 [openproxylist.com] vmess-JP", server: kQov7UKaDknXb8a3.v.3dns.vip, port: 443, type: vmess, uuid: f0b7bbd66aad458aaec0e9acaab768b6, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: kQov7UKaDknXb8a3.v.3dns.vip, network: ws, ws-opts: {path: /ws-vmess, headers: {Host: kQov7UKaDknXb8a3.v.3dns.vip}}, udp: true, tfo: false}
-  - {name: "🇸🇬 [openproxylist.com] vmess-SG", server: 6JiziO8PxQAXBAtZ.v.3dns.vip, port: 443, type: vmess, uuid: f0b7bbd66aad458aaec0e9acaab768b6, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: 6JiziO8PxQAXBAtZ.v.3dns.vip, network: ws, ws-opts: {path: /ws-vmess, headers: {Host: 6JiziO8PxQAXBAtZ.v.3dns.vip}}, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 51.170.191.141:45819
-      - 158.178.150.120:45819
-      - 129.151.70.113:61312
-      - 158.178.144.253:45819
-      - 158.178.148.7:45819
-      - 72.4.65.116:443
-      - 93.190.9.52:3090
-      - 31.77.13.19:2063
-      - 172.104.237.173:20855
-      - 172.104.237.173:20855 2
-      - 178.79.149.80:22117
-      - 18.136.119.69:20975
+      - 129.151.66.142:61312
+      - 130.61.238.73:59924
+      - 134.65.57.26:61312
+      - 62.77.158.1:443
       - 18.139.227.162:28243
-      - 🇭🇰 [openproxylist.com] vmess-HK
-      - 🇭🇰 [openproxylist.com] vmess-HK 2
-      - 🇭🇰 [openproxylist.com] vmess-HK 3
-      - 🇯🇵 [openproxylist.com] vmess-JP
-      - 🇸🇬 [openproxylist.com] vmess-SG
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 51.170.191.141:45819
-      - 158.178.150.120:45819
-      - 129.151.70.113:61312
-      - 158.178.144.253:45819
-      - 158.178.148.7:45819
-      - 72.4.65.116:443
-      - 93.190.9.52:3090
-      - 31.77.13.19:2063
-      - 172.104.237.173:20855
-      - 172.104.237.173:20855 2
-      - 178.79.149.80:22117
-      - 18.136.119.69:20975
+      - 129.151.66.142:61312
+      - 130.61.238.73:59924
+      - 134.65.57.26:61312
+      - 62.77.158.1:443
       - 18.139.227.162:28243
-      - 🇭🇰 [openproxylist.com] vmess-HK
-      - 🇭🇰 [openproxylist.com] vmess-HK 2
-      - 🇭🇰 [openproxylist.com] vmess-HK 3
-      - 🇯🇵 [openproxylist.com] vmess-JP
-      - 🇸🇬 [openproxylist.com] vmess-SG
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 51.170.191.141:45819
-      - 158.178.150.120:45819
-      - 129.151.70.113:61312
-      - 158.178.144.253:45819
-      - 158.178.148.7:45819
-      - 72.4.65.116:443
-      - 93.190.9.52:3090
-      - 31.77.13.19:2063
-      - 172.104.237.173:20855
-      - 172.104.237.173:20855 2
-      - 178.79.149.80:22117
-      - 18.136.119.69:20975
+      - 129.151.66.142:61312
+      - 130.61.238.73:59924
+      - 134.65.57.26:61312
+      - 62.77.158.1:443
       - 18.139.227.162:28243
-      - 🇭🇰 [openproxylist.com] vmess-HK
-      - 🇭🇰 [openproxylist.com] vmess-HK 2
-      - 🇭🇰 [openproxylist.com] vmess-HK 3
-      - 🇯🇵 [openproxylist.com] vmess-JP
-      - 🇸🇬 [openproxylist.com] vmess-SG
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 51.170.191.141:45819
-      - 158.178.150.120:45819
-      - 129.151.70.113:61312
-      - 158.178.144.253:45819
-      - 158.178.148.7:45819
-      - 72.4.65.116:443
-      - 93.190.9.52:3090
-      - 31.77.13.19:2063
-      - 172.104.237.173:20855
-      - 172.104.237.173:20855 2
-      - 178.79.149.80:22117
-      - 18.136.119.69:20975
+      - 129.151.66.142:61312
+      - 130.61.238.73:59924
+      - 134.65.57.26:61312
+      - 62.77.158.1:443
       - 18.139.227.162:28243
-      - 🇭🇰 [openproxylist.com] vmess-HK
-      - 🇭🇰 [openproxylist.com] vmess-HK 2
-      - 🇭🇰 [openproxylist.com] vmess-HK 3
-      - 🇯🇵 [openproxylist.com] vmess-JP
-      - 🇸🇬 [openproxylist.com] vmess-SG
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 51.170.191.141:45819
-      - 158.178.150.120:45819
-      - 129.151.70.113:61312
-      - 158.178.144.253:45819
-      - 158.178.148.7:45819
-      - 72.4.65.116:443
-      - 93.190.9.52:3090
-      - 31.77.13.19:2063
-      - 172.104.237.173:20855
-      - 172.104.237.173:20855 2
-      - 178.79.149.80:22117
-      - 18.136.119.69:20975
+      - 129.151.66.142:61312
+      - 130.61.238.73:59924
+      - 134.65.57.26:61312
+      - 62.77.158.1:443
       - 18.139.227.162:28243
-      - 🇭🇰 [openproxylist.com] vmess-HK
-      - 🇭🇰 [openproxylist.com] vmess-HK 2
-      - 🇭🇰 [openproxylist.com] vmess-HK 3
-      - 🇯🇵 [openproxylist.com] vmess-JP
-      - 🇸🇬 [openproxylist.com] vmess-SG
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 51.170.191.141:45819
-      - 158.178.150.120:45819
-      - 129.151.70.113:61312
-      - 158.178.144.253:45819
-      - 158.178.148.7:45819
-      - 72.4.65.116:443
-      - 93.190.9.52:3090
-      - 31.77.13.19:2063
-      - 172.104.237.173:20855
-      - 172.104.237.173:20855 2
-      - 178.79.149.80:22117
-      - 18.136.119.69:20975
+      - 129.151.66.142:61312
+      - 130.61.238.73:59924
+      - 134.65.57.26:61312
+      - 62.77.158.1:443
       - 18.139.227.162:28243
-      - 🇭🇰 [openproxylist.com] vmess-HK
-      - 🇭🇰 [openproxylist.com] vmess-HK 2
-      - 🇭🇰 [openproxylist.com] vmess-HK 3
-      - 🇯🇵 [openproxylist.com] vmess-JP
-      - 🇸🇬 [openproxylist.com] vmess-SG
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -191,24 +100,11 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 51.170.191.141:45819
-      - 158.178.150.120:45819
-      - 129.151.70.113:61312
-      - 158.178.144.253:45819
-      - 158.178.148.7:45819
-      - 72.4.65.116:443
-      - 93.190.9.52:3090
-      - 31.77.13.19:2063
-      - 172.104.237.173:20855
-      - 172.104.237.173:20855 2
-      - 178.79.149.80:22117
-      - 18.136.119.69:20975
+      - 129.151.66.142:61312
+      - 130.61.238.73:59924
+      - 134.65.57.26:61312
+      - 62.77.158.1:443
       - 18.139.227.162:28243
-      - 🇭🇰 [openproxylist.com] vmess-HK
-      - 🇭🇰 [openproxylist.com] vmess-HK 2
-      - 🇭🇰 [openproxylist.com] vmess-HK 3
-      - 🇯🇵 [openproxylist.com] vmess-JP
-      - 🇸🇬 [openproxylist.com] vmess-SG
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
