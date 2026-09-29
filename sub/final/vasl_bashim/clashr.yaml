@@ -5,88 +5,95 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@vasl_bashim", server: 20.234.96.89, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: C8QhmBLJzhKo2JHR, udp: true, tfo: false}
-  - {name: "@vasl_bashim 2", server: 129.101.120.5, port: 37951, type: vless, tls: true, packet-encoding: xudp, uuid: 25284368-40d5-4abe-9f56-54a07e88a7af, servername: nl2.dzvn.space, host: nl2.dzvn.space, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: O6ZOpoz4sxon8iHxCd5EEvx2K9NUThd4SvOCBEvADEI, short-id: a9e21fd097d019c6}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim`", server: 185.171.202.105, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4bdeee92-97e8-414d-bef6-ec1d5e2ab73b, servername: fra.loozerp.wiki, host: fra.loozerp.wiki, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: bZpzmeWiEJyJQy0W2hHc34Nr6BuFXj1UDd80Cbwh1Fk, short-id: ff776ff77be48b88}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim 3", server: 144.31.5.3, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277, servername: pl4.moritech.net, alpn: [h2], host: pl4.moritech.net, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim 4", server: d1.ge.fluxora.ir, port: 2436, type: vless, tls: true, packet-encoding: xudp, uuid: e9560616-9899-4836-abdd-6caa52613768, servername: 0cc0f6a1.vless-reality-sni.staticedge-delivery.net, host: 0cc0f6a1.vless-reality-sni.staticedge-delivery.net, path: /, reality-opts: {public-key: zmqcaHqIZJfKGwM61QT19F8dP8BZzZrTKSu5BoAW6gA, short-id: 9b3acd2f7ecdfb59}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim 5", server: vlxl2.mapsateam.ir, port: 2436, type: vless, tls: true, packet-encoding: xudp, uuid: e9560616-9899-4836-abdd-6caa52613768, servername: 0cc0f6a1.vless-reality-sni.staticedge-delivery.net, host: 0cc0f6a1.vless-reality-sni.staticedge-delivery.net, path: /, reality-opts: {public-key: zmqcaHqIZJfKGwM61QT19F8dP8BZzZrTKSu5BoAW6gA, short-id: 32a3d5f4b406ad63}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim 6", server: tgfree.rush-server.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ebd1c0d6-7ff4-4b9f-8692-237517a27a64, servername: anyfile2file.com, host: anyfile2file.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0, short-id: 64c1fe36c7846400}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "*", server: 64.188.98.179, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 3ada8d7b-806e-47e0-9cac-aa35061104ce, servername: support-shield.nvidia.no, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: grpc}, reality-opts: {public-key: I88bya0Wf4iHIQb19bHZII3UlJ-oWBRbcnzvF0WFKyg, short-id: bf6f}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "* 2", server: 45.152.113.206, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 859a537b-09cf-4bce-8da4-ecbb72950e3a, servername: 1.ru.oncloudnineservicestreang.com, host: 1.ru.oncloudnineservicestreang.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: Thx57ocixT-wpeK_mdnJaluVW6eAwhlMgglxgjxEmhs, short-id: 65557338e1cd5605}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "* 3", server: 107.148.158.100, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a368752a-32fc-42f3-980a-6b049218b23f, servername: usa-2.letsconnectpoint.com, host: usa-2.letsconnectpoint.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: iOXJkurGWCpwU-Z1B3RPJnjXGSQ_v1-H5XtHa6mEeFc, short-id: b1c1b5e2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "* 4", server: 88.216.220.88, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a8e3155b-ceb1-4fcb-bc0c-2e77ec005401, servername: files.noneok.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: api.v1.StreamService}, reality-opts: {public-key: q3kOYHdjmqWLLYj8oikvna1bTjofk45ktegGaJE611g, short-id: d3b394558cfe0266}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "* 5", server: files.noneok.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a8e3155b-ceb1-4fcb-bc0c-2e77ec005401, servername: files.noneok.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: api.v1.StreamService}, reality-opts: {public-key: q3kOYHdjmqWLLYj8oikvna1bTjofk45ktegGaJE611g, short-id: d3b394558cfe0266}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "* 6", server: 31.77.227.10, port: 52006, type: vless, tls: true, packet-encoding: xudp, uuid: bc659d88-a1e0-4c65-a49a-7b51b26a7a7f, servername: fr.setlisting.ru, alpn: [h2%2Chttp%2F1.1], host: fr.setlisting.ru, path: /, flow: xtls-rprx-vision-udp443, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "* 7", server: 87.192.47.10, port: 52006, type: vless, tls: true, packet-encoding: xudp, uuid: bc659d88-a1e0-4c65-a49a-7b51b26a7a7f, servername: grok.setlisting.ru, alpn: [h2%2Chttp%2F1.1], host: grok.setlisting.ru, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "* 8", server: tgfree.rush-server.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ebd1c0d6-7ff4-4b9f-8692-237517a27a64, servername: anyfile2file.com, host: anyfile2file.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0, short-id: 64c1fe36c7846400}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@vasl_bashim"
-      - "@vasl_bashim 2"
-      - "@vasl_bashim`"
-      - "@vasl_bashim 3"
-      - "@vasl_bashim 4"
-      - "@vasl_bashim 5"
-      - "@vasl_bashim 6"
+      - "*"
+      - "* 2"
+      - "* 3"
+      - "* 4"
+      - "* 5"
+      - "* 6"
+      - "* 7"
+      - "* 8"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@vasl_bashim"
-      - "@vasl_bashim 2"
-      - "@vasl_bashim`"
-      - "@vasl_bashim 3"
-      - "@vasl_bashim 4"
-      - "@vasl_bashim 5"
-      - "@vasl_bashim 6"
+      - "*"
+      - "* 2"
+      - "* 3"
+      - "* 4"
+      - "* 5"
+      - "* 6"
+      - "* 7"
+      - "* 8"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@vasl_bashim"
-      - "@vasl_bashim 2"
-      - "@vasl_bashim`"
-      - "@vasl_bashim 3"
-      - "@vasl_bashim 4"
-      - "@vasl_bashim 5"
-      - "@vasl_bashim 6"
+      - "*"
+      - "* 2"
+      - "* 3"
+      - "* 4"
+      - "* 5"
+      - "* 6"
+      - "* 7"
+      - "* 8"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@vasl_bashim"
-      - "@vasl_bashim 2"
-      - "@vasl_bashim`"
-      - "@vasl_bashim 3"
-      - "@vasl_bashim 4"
-      - "@vasl_bashim 5"
-      - "@vasl_bashim 6"
+      - "*"
+      - "* 2"
+      - "* 3"
+      - "* 4"
+      - "* 5"
+      - "* 6"
+      - "* 7"
+      - "* 8"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@vasl_bashim"
-      - "@vasl_bashim 2"
-      - "@vasl_bashim`"
-      - "@vasl_bashim 3"
-      - "@vasl_bashim 4"
-      - "@vasl_bashim 5"
-      - "@vasl_bashim 6"
+      - "*"
+      - "* 2"
+      - "* 3"
+      - "* 4"
+      - "* 5"
+      - "* 6"
+      - "* 7"
+      - "* 8"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@vasl_bashim"
-      - "@vasl_bashim 2"
-      - "@vasl_bashim`"
-      - "@vasl_bashim 3"
-      - "@vasl_bashim 4"
-      - "@vasl_bashim 5"
-      - "@vasl_bashim 6"
+      - "*"
+      - "* 2"
+      - "* 3"
+      - "* 4"
+      - "* 5"
+      - "* 6"
+      - "* 7"
+      - "* 8"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -114,13 +121,14 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@vasl_bashim"
-      - "@vasl_bashim 2"
-      - "@vasl_bashim`"
-      - "@vasl_bashim 3"
-      - "@vasl_bashim 4"
-      - "@vasl_bashim 5"
-      - "@vasl_bashim 6"
+      - "*"
+      - "* 2"
+      - "* 3"
+      - "* 4"
+      - "* 5"
+      - "* 6"
+      - "* 7"
+      - "* 8"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

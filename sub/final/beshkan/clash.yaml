@@ -465,14 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: " ", server: 82.38.31.183, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
-  - {name: "  2", server: 82.38.31.149, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
-  - {name: "  3", server: 72.4.65.116, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 0dca2cfe-98eb-4f9d-9a47-cf87510c558b, servername: assets-de2.pleiades.codes, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: cdn.v1.AssetService}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "  4", server: 89.105.197.202, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 22a375e0-f7c6-4d8f-a154-81189914bbf4, servername: findmypackets.com, host: findmypackets.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: mza5Hn1aolSz65qu-UwvBP3oesxMe25r11o4nxvikF0, short-id: 64c1fe36c7846400}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "  5", server: 104.252.19.114, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 40cba749-bca9-4089-9c02-84a357244ce0, servername: omvpn.info, host: omvpn.info, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "  6", server: pl-waw.dontblockmepls.com, port: 2063, type: vless, tls: true, packet-encoding: xudp, uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a, servername: rusbid.de, host: rusbid.de, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "  7", server: 169.40.42.15, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d65cc14c-f53f-4fe2-b262-97856601319c, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg, short-id: c39cc7310a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "  8", server: 62.60.159.81, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: fc00adfb-232a-46ce-8b93-0c70e516aa8a, servername: www.samsung.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: grpce5bb9e71}, reality-opts: {public-key: ygmJxS-Mc7g0buNSUTVGhazT-FoBjyYtLLfUYIQxFTw, short-id: d0ea1847066af5a6}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: " ", server: 82.38.31.149, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
+  - {name: "  2", server: 104.252.19.114, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 40cba749-bca9-4089-9c02-84a357244ce0, servername: omvpn.info, host: omvpn.info, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "  3", server: pl-waw.dontblockmepls.com, port: 2063, type: vless, tls: true, packet-encoding: xudp, uuid: b18d5990-96eb-4587-a386-7f8ef7591e6a, servername: rusbid.de, host: rusbid.de, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "  4", server: 169.40.42.15, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d65cc14c-f53f-4fe2-b262-97856601319c, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg, short-id: c39cc7310a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "  5", server: 62.60.159.81, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: fc00adfb-232a-46ce-8b93-0c70e516aa8a, servername: www.samsung.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: grpce5bb9e71}, reality-opts: {public-key: ygmJxS-Mc7g0buNSUTVGhazT-FoBjyYtLLfUYIQxFTw, short-id: d0ea1847066af5a6}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -494,9 +491,6 @@ proxy-groups:
       - "  3"
       - "  4"
       - "  5"
-      - "  6"
-      - "  7"
-      - "  8"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -508,9 +502,6 @@ proxy-groups:
       - "  3"
       - "  4"
       - "  5"
-      - "  6"
-      - "  7"
-      - "  8"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -522,9 +513,6 @@ proxy-groups:
       - "  3"
       - "  4"
       - "  5"
-      - "  6"
-      - "  7"
-      - "  8"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -545,9 +533,6 @@ proxy-groups:
       - "  3"
       - "  4"
       - "  5"
-      - "  6"
-      - "  7"
-      - "  8"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -559,9 +544,6 @@ proxy-groups:
       - "  3"
       - "  4"
       - "  5"
-      - "  6"
-      - "  7"
-      - "  8"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -573,9 +555,6 @@ proxy-groups:
       - "  3"
       - "  4"
       - "  5"
-      - "  6"
-      - "  7"
-      - "  8"
   - name: دانلود منیجر 📥
     type: select
     proxies:
