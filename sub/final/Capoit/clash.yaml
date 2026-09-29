@@ -465,8 +465,10 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Capoit`", server: 188.34.184.151, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: dc31fe25-d91d-4691-94cb-1085d31ab4f8, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoi`", server: 52.56.163.183, port: 22224, type: vless, tls: true, packet-encoding: xudp, uuid: e4514801-0d5a-42ba-869f-39bd605aef9e, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit`", server: 116.202.23.136, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 7404e53c-c7a1-4afd-9039-4898fa4820a1, host: wordpress.org, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 2", server: 195.189.98.120, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 94877739-3af6-4fbb-85b6-ca6fe86c7696, servername: reg.jarbook.net, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: BookCatalog}, reality-opts: {public-key: SiyX5MHMfE_232cYFpidAhU4eBxaoNphSSnNbVc1xnc, short-id: 085f6d90}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 3", server: irp7.cactustory.site, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a6008b38-dc9e-4c36-b19b-b29362f1e73a, servername: ir7.cactustory.site, network: ws, ws-opts: {path: /, headers: {Host: ir7.cactustory.site}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 4", server: victoryprovpn-production-30ea.up.railway.app, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: cf343405-da5b-248f-0164-193c3cf9e271, servername: victoryprovpn-production-30ea.up.railway.app, alpn: [http%2F1.1], network: ws, ws-opts: {path: /ws/cf343405-da5b-248f-0164-193c3cf9e271, headers: {Host: victoryprovpn-production-30ea.up.railway.app}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,7 +486,9 @@ proxy-groups:
     type: select
     proxies:
       - "@Capoit`"
-      - "@Capoi`"
+      - "@Capoit` 2"
+      - "@Capoit` 3"
+      - "@Capoit` 4"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -492,7 +496,9 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Capoit`"
-      - "@Capoi`"
+      - "@Capoit` 2"
+      - "@Capoit` 3"
+      - "@Capoit` 4"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -500,7 +506,9 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Capoit`"
-      - "@Capoi`"
+      - "@Capoit` 2"
+      - "@Capoit` 3"
+      - "@Capoit` 4"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -517,7 +525,9 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit`"
-      - "@Capoi`"
+      - "@Capoit` 2"
+      - "@Capoit` 3"
+      - "@Capoit` 4"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -525,7 +535,9 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit`"
-      - "@Capoi`"
+      - "@Capoit` 2"
+      - "@Capoit` 3"
+      - "@Capoit` 4"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -533,7 +545,9 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit`"
-      - "@Capoi`"
+      - "@Capoit` 2"
+      - "@Capoit` 3"
+      - "@Capoit` 4"
   - name: دانلود منیجر 📥
     type: select
     proxies:
