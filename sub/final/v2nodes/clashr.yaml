@@ -5,81 +5,74 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 129.151.66.142:61312, server: 129.151.66.142, port: 61312, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: +Nt5IdazH1gH7Cg7OvFoDX8Rx3koZi3YnHbunnlAuUM=, udp: true, tfo: false}
-  - {name: 130.61.238.73:59924, server: 130.61.238.73, port: 59924, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: Myitj2dzi6O4zVyl9FpAcvzBArkfvs7vcUgfLvT+hZQ=, udp: true, tfo: false}
   - {name: 130.61.239.221:59924, server: 130.61.239.221, port: 59924, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: SHqxWT07Pxp6FnJE3d2aP7NuKJoiq7o9OPkXZi9ccZY=, udp: true, tfo: false}
-  - {name: 134.65.57.26:61312, server: 134.65.57.26, port: 61312, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: Sm4F5fX+ZJpWpkXMNbw0yYrWolYIiwknVYDwx8eus78=, udp: true, tfo: false}
+  - {name: 🇳🇱 nl-irancell3.xelfona.ir:49548, server: nl-irancell3.xelfona.ir, port: 49548, type: ss, cipher: 2022-blake3-aes-256-gcm, password: zZ+k8UwdTQ9ZTnxEodTN2YI6KrFKEAcBWgCbLZIVUTE=:LbWEdFyjKcvZcv9agyGttSn0HNap+ecf50/UrlGMBCQ=, udp: true, tfo: false}
   - {name: 79.137.192.2:443, server: 79.137.192.2, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 2412bd96-925b-43f2-81d1-0ed4f0793699, servername: cdn.cloudflare.steamstatic.com, host: cdn.cloudflare.steamstatic.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 62.77.158.1:443, server: 62.77.158.1, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 2eceaf2b-a775-5a9c-9990-dad2b3660fb6, servername: online.1c.ru, host: online.1c.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: sVhkyiMXvpofflCdSszxQmsqOXV1kg1Ldxq1a9mOPjs, short-id: 6a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 113.30.154.65:443, server: 113.30.154.65, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 550a69ec-fec1-4eca-b939-4ee076875fa8, servername: sellflow.org, host: sellflow.org, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 31.59.125.75:443, server: 31.59.125.75, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e9844617-e393-4876-afa7-11859695f4ee, servername: pl.gazladder.work, host: pl.gazladder.work, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 129.151.66.142:61312
-      - 130.61.238.73:59924
       - 130.61.239.221:59924
-      - 134.65.57.26:61312
+      - 🇳🇱 nl-irancell3.xelfona.ir:49548
       - 79.137.192.2:443
-      - 62.77.158.1:443
+      - 113.30.154.65:443
+      - 31.59.125.75:443
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 129.151.66.142:61312
-      - 130.61.238.73:59924
       - 130.61.239.221:59924
-      - 134.65.57.26:61312
+      - 🇳🇱 nl-irancell3.xelfona.ir:49548
       - 79.137.192.2:443
-      - 62.77.158.1:443
+      - 113.30.154.65:443
+      - 31.59.125.75:443
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 129.151.66.142:61312
-      - 130.61.238.73:59924
       - 130.61.239.221:59924
-      - 134.65.57.26:61312
+      - 🇳🇱 nl-irancell3.xelfona.ir:49548
       - 79.137.192.2:443
-      - 62.77.158.1:443
+      - 113.30.154.65:443
+      - 31.59.125.75:443
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 129.151.66.142:61312
-      - 130.61.238.73:59924
       - 130.61.239.221:59924
-      - 134.65.57.26:61312
+      - 🇳🇱 nl-irancell3.xelfona.ir:49548
       - 79.137.192.2:443
-      - 62.77.158.1:443
+      - 113.30.154.65:443
+      - 31.59.125.75:443
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 129.151.66.142:61312
-      - 130.61.238.73:59924
       - 130.61.239.221:59924
-      - 134.65.57.26:61312
+      - 🇳🇱 nl-irancell3.xelfona.ir:49548
       - 79.137.192.2:443
-      - 62.77.158.1:443
+      - 113.30.154.65:443
+      - 31.59.125.75:443
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 129.151.66.142:61312
-      - 130.61.238.73:59924
       - 130.61.239.221:59924
-      - 134.65.57.26:61312
+      - 🇳🇱 nl-irancell3.xelfona.ir:49548
       - 79.137.192.2:443
-      - 62.77.158.1:443
+      - 113.30.154.65:443
+      - 31.59.125.75:443
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -107,12 +100,11 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 129.151.66.142:61312
-      - 130.61.238.73:59924
       - 130.61.239.221:59924
-      - 134.65.57.26:61312
+      - 🇳🇱 nl-irancell3.xelfona.ir:49548
       - 79.137.192.2:443
-      - 62.77.158.1:443
+      - 113.30.154.65:443
+      - 31.59.125.75:443
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

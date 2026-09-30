@@ -5,12 +5,8 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@Capoit`", server: www.speedtest.net, port: 443, type: trojan, password: humanity, sni: www.ignitelimit.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.ignitelimit.com}}, udp: true, tfo: false}
-  - {name: "@Capoit` 2", server: 167.82.76.7, port: 443, type: trojan, password: mitivpn, sni: ssl.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: /---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/NLSs---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN, headers: {Host: ssl.fastly.com}}, udp: true, tfo: false}
-  - {name: "@Capoit` 3", server: 199.232.78.101, port: 443, type: trojan, password: mitivpn, sni: ssl.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: /---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/NLSus---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN, headers: {Host: ssl.fastly.com}}, udp: true, tfo: false}
-  - {name: "@Capoit` 4", server: 199.232.78.160, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: XpnTeam-49, servername: ssl.fastly.com, alpn: [http%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: ssl.fastly.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 5", server: 159.195.253.15, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: bc221702-dd43-4642-a203-24d8d6a81165, servername: au1.pad-sservice.lat, network: ws, ws-opts: {path: /au1, headers: {Host: au1.pad-sservice.lat}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 6", server: 152.53.253.213, port: 5443, type: vless, tls: true, packet-encoding: xudp, uuid: c47d9a64-5237-4386-bb5b-a5d0d312cab9, servername: hyperbeam.com, host: hyperbeam.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 7pr2qWG1_3TjBDCidQWJ2lnbEf72lOcse4Gca8anwEo, short-id: 57f0eca7ae6be8}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit`", server: 159.200.230.202, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 1b37dae1-f2f1-4787-9f39-28ffa6556922, servername: www.paperandpaths.eu, host: www.paperandpaths.eu, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: GBaL4fKf6KafZIOJ7Zxn9XWkGvgNTA536OvNmHmCIn0, short-id: 5ecabf5e44ce3b0f}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit", server: 193.233.245.205, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 1b37dae1-f2f1-4787-9f39-28ffa6556922, servername: podcasts.radiopult.net, host: podcasts.radiopult.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: YXNmCyyyvFqCWjgUzDexg0CHjk8QYRgWNfqvpFdIk3k, short-id: d30cb21db3289c97}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -18,11 +14,7 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - "@Capoit`"
-      - "@Capoit` 2"
-      - "@Capoit` 3"
-      - "@Capoit` 4"
-      - "@Capoit` 5"
-      - "@Capoit` 6"
+      - "@Capoit"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -30,11 +22,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Capoit`"
-      - "@Capoit` 2"
-      - "@Capoit` 3"
-      - "@Capoit` 4"
-      - "@Capoit` 5"
-      - "@Capoit` 6"
+      - "@Capoit"
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -42,44 +30,28 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - "@Capoit`"
-      - "@Capoit` 2"
-      - "@Capoit` 3"
-      - "@Capoit` 4"
-      - "@Capoit` 5"
-      - "@Capoit` 6"
+      - "@Capoit"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@Capoit`"
-      - "@Capoit` 2"
-      - "@Capoit` 3"
-      - "@Capoit` 4"
-      - "@Capoit` 5"
-      - "@Capoit` 6"
+      - "@Capoit"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
       - "@Capoit`"
-      - "@Capoit` 2"
-      - "@Capoit` 3"
-      - "@Capoit` 4"
-      - "@Capoit` 5"
-      - "@Capoit` 6"
+      - "@Capoit"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - "@Capoit`"
-      - "@Capoit` 2"
-      - "@Capoit` 3"
-      - "@Capoit` 4"
-      - "@Capoit` 5"
-      - "@Capoit` 6"
+      - "@Capoit"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -108,11 +80,7 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - "@Capoit`"
-      - "@Capoit` 2"
-      - "@Capoit` 3"
-      - "@Capoit` 4"
-      - "@Capoit` 5"
-      - "@Capoit` 6"
+      - "@Capoit"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
