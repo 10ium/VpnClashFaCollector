@@ -11,7 +11,6 @@ proxies:
   - {name: 134.65.57.26:61312, server: 134.65.57.26, port: 61312, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: Sm4F5fX+ZJpWpkXMNbw0yYrWolYIiwknVYDwx8eus78=, udp: true, tfo: false}
   - {name: 79.137.192.2:443, server: 79.137.192.2, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 2412bd96-925b-43f2-81d1-0ed4f0793699, servername: cdn.cloudflare.steamstatic.com, host: cdn.cloudflare.steamstatic.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 62.77.158.1:443, server: 62.77.158.1, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 2eceaf2b-a775-5a9c-9990-dad2b3660fb6, servername: online.1c.ru, host: online.1c.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: sVhkyiMXvpofflCdSszxQmsqOXV1kg1Ldxq1a9mOPjs, short-id: 6a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 18.139.227.162:28243, server: 18.139.227.162, port: 28243, type: vless, tls: true, packet-encoding: xudp, uuid: d00d9d18-20cf-4191-be76-6f73d43a27ec, servername: www.cloudflare.com, host: www.cloudflare.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: IXxfPvq2OkbSuA-ZTBFpMzkDU1uO8dEI1e7s9VfHh1Y, short-id: 7996bf4dcf194d18}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -24,7 +23,6 @@ proxy-groups:
       - 134.65.57.26:61312
       - 79.137.192.2:443
       - 62.77.158.1:443
-      - 18.139.227.162:28243
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -37,7 +35,6 @@ proxy-groups:
       - 134.65.57.26:61312
       - 79.137.192.2:443
       - 62.77.158.1:443
-      - 18.139.227.162:28243
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -50,7 +47,6 @@ proxy-groups:
       - 134.65.57.26:61312
       - 79.137.192.2:443
       - 62.77.158.1:443
-      - 18.139.227.162:28243
   - name: 📲 电报信息
     type: select
     proxies:
@@ -62,7 +58,6 @@ proxy-groups:
       - 134.65.57.26:61312
       - 79.137.192.2:443
       - 62.77.158.1:443
-      - 18.139.227.162:28243
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -74,7 +69,6 @@ proxy-groups:
       - 134.65.57.26:61312
       - 79.137.192.2:443
       - 62.77.158.1:443
-      - 18.139.227.162:28243
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -86,7 +80,6 @@ proxy-groups:
       - 134.65.57.26:61312
       - 79.137.192.2:443
       - 62.77.158.1:443
-      - 18.139.227.162:28243
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -120,7 +113,6 @@ proxy-groups:
       - 134.65.57.26:61312
       - 79.137.192.2:443
       - 62.77.158.1:443
-      - 18.139.227.162:28243
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
