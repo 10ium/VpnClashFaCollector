@@ -465,7 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Capoit`", server: 159.200.230.202, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 1b37dae1-f2f1-4787-9f39-28ffa6556922, servername: www.paperandpaths.eu, host: www.paperandpaths.eu, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: GBaL4fKf6KafZIOJ7Zxn9XWkGvgNTA536OvNmHmCIn0, short-id: 5ecabf5e44ce3b0f}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit`", server: 199.232.78.188, port: 443, type: trojan, password: mitivpn, sni: ssl.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: "/?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET", headers: {Host: ssl.fastly.com}}, udp: true, tfo: false}
+  - {name: "@Capoit` 2", server: 199.232.78.188, port: 443, type: trojan, password: mitivpn, sni: ssl.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: "%40rzea8pppooopppppppp", headers: {Host: ssl.fastly.com}}, udp: true, tfo: false}
+  - {name: "@Capoit` 3", server: 159.200.230.202, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 1b37dae1-f2f1-4787-9f39-28ffa6556922, servername: www.paperandpaths.eu, host: www.paperandpaths.eu, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: GBaL4fKf6KafZIOJ7Zxn9XWkGvgNTA536OvNmHmCIn0, short-id: 5ecabf5e44ce3b0f}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@Capoit", server: 193.233.245.205, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 1b37dae1-f2f1-4787-9f39-28ffa6556922, servername: podcasts.radiopult.net, host: podcasts.radiopult.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: YXNmCyyyvFqCWjgUzDexg0CHjk8QYRgWNfqvpFdIk3k, short-id: d30cb21db3289c97}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -484,6 +486,8 @@ proxy-groups:
     type: select
     proxies:
       - "@Capoit`"
+      - "@Capoit` 2"
+      - "@Capoit` 3"
       - "@Capoit"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -492,6 +496,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Capoit`"
+      - "@Capoit` 2"
+      - "@Capoit` 3"
       - "@Capoit"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -500,6 +506,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Capoit`"
+      - "@Capoit` 2"
+      - "@Capoit` 3"
       - "@Capoit"
   - name: اتصال پایدار 🔗
     type: url-test
@@ -517,6 +525,8 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit`"
+      - "@Capoit` 2"
+      - "@Capoit` 3"
       - "@Capoit"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -525,6 +535,8 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit`"
+      - "@Capoit` 2"
+      - "@Capoit` 3"
       - "@Capoit"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -533,6 +545,8 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit`"
+      - "@Capoit` 2"
+      - "@Capoit` 3"
       - "@Capoit"
   - name: دانلود منیجر 📥
     type: select
