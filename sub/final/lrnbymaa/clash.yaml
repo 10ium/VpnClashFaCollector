@@ -465,9 +465,14 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: lrnbymaa, server: 150.241.105.184, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4cf9c712-11c4-47d8-aa31-a1693a1aa4e5, servername: www.v2host.ru, host: www.v2host.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: hXqnRjRf0FfXsWWfj-tJY9hxq7dDfu_KWB9udeNGkFI, short-id: 7791cacf0b57f34c}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: lrnbymaa 2, server: 62.60.152.1, port: 56328, type: vless, tls: true, packet-encoding: xudp, uuid: ce230b9c-0531-40da-bc3f-f27a8e059db1, servername: table.vkroom-it-service.xyz, host: table.vkroom-it-service.xyz, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: iI1pc8k9-mIPHL2Dga-4n4h3KoBT68lN434nglpgm2M, short-id: f3a9c21e8b6d4571}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: lrnbymaa 3, server: 193.56.135.212, port: 9543, type: vless, tls: true, packet-encoding: xudp, uuid: ff6d2dda-7b90-404e-9951-34b3124bfdfa, servername: storage.yandexcloud.net, host: storage.yandexcloud.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc, short-id: 123abcde}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: lrnbymaa, server: 31.56.196.18, port: 44925, type: ss, cipher: 2022-blake3-aes-256-gcm, password: 4E7elQ/GMfiXO3P+BGEe/t5H2qFT68TVcoYha+Wa8sM=:tMB/uCYCcIA6gdJn/Tn95FyCnk8HD68Y2uYDB3HjJXo=, udp: true, tfo: false}
+  - {name: lrnbymaa 2, server: 20.166.59.119, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: gJe7umStIck5Mieg, udp: true, tfo: false}
+  - {name: lrnbymaa 3, server: 20.123.34.66, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: r5D6YOSrT6kC76ro, udp: true, tfo: false}
+  - {name: lrnbymaa 4, server: mortxzaaz98-production.up.railway.app, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8ddcc140-6a23-dfb8-2b54-39e58adba0ce, servername: mortxzaaz98-production.up.railway.app, alpn: [http%2F1.1], network: ws, ws-opts: {path: /ws/8ddcc140-6a23-dfb8-2b54-39e58adba0ce, headers: {Host: mortxzaaz98-production.up.railway.app}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: lrnbymaa 5, server: slowkd.sadiepinki.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d4cae7df-50a1-428c-bd62-881c8f3bbd90, servername: slowkd.sadiepinki.com, host: slowkd.sadiepinki.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: z37XIezsPyfMgmdXyFd9qT4C4maDAs1OcRt-wfyrXVo, short-id: 9c2378562188c3cb}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: lrnbymaa 6, server: 169.40.42.179, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d65cc14c-f53f-4fe2-b262-97856601319c, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg, short-id: c39cc7310a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: lrnbymaa 7, server: p2real4.greewebservices.ir, port: 1340, type: vless, tls: true, packet-encoding: xudp, uuid: da803bc9-ec45-4c72-b81f-15ad8dd02eaa, servername: play.googleapis.com, host: play.googleapis.com, path: /, reality-opts: {public-key: xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8, short-id: 9b60d3}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: lrnbymaa 8, server: server.slavkiti.monster, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fad0b9a6-187d-4fcc-96fc-498bc5b3135a, servername: www.foxsports.com, host: www.foxsports.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: J-dv-HrWfQ_IOoyutv0Kg-rO8QwoRwc02dS1dS_tblk, short-id: 8325360e8bd2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,6 +492,11 @@ proxy-groups:
       - lrnbymaa
       - lrnbymaa 2
       - lrnbymaa 3
+      - lrnbymaa 4
+      - lrnbymaa 5
+      - lrnbymaa 6
+      - lrnbymaa 7
+      - lrnbymaa 8
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -496,6 +506,11 @@ proxy-groups:
       - lrnbymaa
       - lrnbymaa 2
       - lrnbymaa 3
+      - lrnbymaa 4
+      - lrnbymaa 5
+      - lrnbymaa 6
+      - lrnbymaa 7
+      - lrnbymaa 8
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -505,6 +520,11 @@ proxy-groups:
       - lrnbymaa
       - lrnbymaa 2
       - lrnbymaa 3
+      - lrnbymaa 4
+      - lrnbymaa 5
+      - lrnbymaa 6
+      - lrnbymaa 7
+      - lrnbymaa 8
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -523,6 +543,11 @@ proxy-groups:
       - lrnbymaa
       - lrnbymaa 2
       - lrnbymaa 3
+      - lrnbymaa 4
+      - lrnbymaa 5
+      - lrnbymaa 6
+      - lrnbymaa 7
+      - lrnbymaa 8
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -532,6 +557,11 @@ proxy-groups:
       - lrnbymaa
       - lrnbymaa 2
       - lrnbymaa 3
+      - lrnbymaa 4
+      - lrnbymaa 5
+      - lrnbymaa 6
+      - lrnbymaa 7
+      - lrnbymaa 8
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -541,6 +571,11 @@ proxy-groups:
       - lrnbymaa
       - lrnbymaa 2
       - lrnbymaa 3
+      - lrnbymaa 4
+      - lrnbymaa 5
+      - lrnbymaa 6
+      - lrnbymaa 7
+      - lrnbymaa 8
   - name: دانلود منیجر 📥
     type: select
     proxies:
