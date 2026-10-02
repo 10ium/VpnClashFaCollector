@@ -1,59 +1,179 @@
 # آرشیو کانال: @ConfigWireguard
-بروزرسانی: 2026-10-02 02:56:56 UTC
+بروزرسانی: 2026-10-02 16:06:07 UTC
 
-### 🕒 2026-10-01 09:19:01 UTC
+### 🕒 2026-10-02 15:31:01 UTC
+**آموزش دور زدن فیلترینگ کانفیگ‌های کلودفلر با PattN و PattNG (نسخه آپدیت شده)**
+1- ابتدا اپلیکیشن PattNG(برای اندروید از اینجا 
+[https://github.com/patterniha/PattNG/releases](https://github.com/patterniha/PattNG/releases)
+)
+یا نرم‌افزار PattN(برای ویندوز از اینجا 
+[https://github.com/patterniha/PattN/releases](https://github.com/patterniha/PattN/releases)
+)
+دانلود کنید.
+2- کانفیگ V2ray خودتون که با Worker کلودفلر ساختید(آموزش ساخت کانفیگ رایگانش اینجاست: 
+[https://youtu.be/iAbYpjXyLpY](https://youtu.be/iAbYpjXyLpY)
+) رو وارد اپلیکیشن(PattNG یا PattN) کنید
+3- توی اپلیکیشن اندروید، روی مداد سمت راست کانفیگ و توی اپلیکیشن ویندوز، دوبار روی کانفیگِ وارد شده کلیک کنید تا پنجره‌ی تغییر تنظیماتش باز بشه
+4- توی بخش Finalmask raw json، این مقدار رو وارد کنید:
+{"tcp": [{"type": "fragment", "settings": {"packets": "tlshello", "lengths": ["0", "104", "1"], "delays": ["0"], "maxSplit": "0"}},{"type": "fragment", "settings": {"packets": "1-1", "lengths": ["114", "1"], "delays": ["1"], "maxSplit": "11"}}]}
+5- توی بخش Fingerprint، مقدار رو روی 
+`Unsafe`
+ تنظیم کنید.
+6- مقدار Alpn رو روی http/1.1 تنظیم کنید
+7- توی بخش Cipher Suits، این مقدار رو کپی پیست کنید:
+TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256:TLS_AES_128_GCM_SHA256:TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384:TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384:TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256:TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256:TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256:TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256:TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA:TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA:TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256:TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256
+8- کانفیگ رو ذخیره کنید و پینگ بگیرید. دقت کنید تمام موارد رو انجام بدید. آیپی تمیز 
+[188.114.97.6](http://188.114.97.6/)
+ عموما کار می‌کنه. اگر کار نکرد، از اسکنر 
+[https://github.com/MatinSenPai/SenPaiScanner/releases](https://github.com/MatinSenPai/SenPaiScanner/releases)
+ که هم نسخه اندروید داره هم ویندوز و مک و لینوکس، استفاده کنید و آیپی تمیز پیدا کنید.
+مقادیر ممکنه عوض بشن، مقادیر جدید رو می‌ذارم خدمتتون.
+موفق باشید
+***✉️***
+ 
+[t.me/MatinSenPaii](http://t.me/MatinSenPaii)
+
+---
+
+### 🕒 2026-10-02 11:48:01 UTC
 پل Argo VPN
 -----BEGIN ARGO VPN BRIDGE BLOCK-----
-eNoVzMFugjAAANB/6dmEwpwJ3qQia0UU5yIYLi0yWqjUUSiri/++7fyS9wNM1Wuh
-OrB0Z+BOrVT0CpagsmQqbz5kXmIYwgvchiJG5HHJiHfJsNgLIvMscOl5WFD72jAP
-/vvEXgjEjYLJOvHBDGhRd3QY++qv3IU5wun6EX1zWX66E3xjvHCygyaxKpyVaeox
-yIOj4GeUbvbQ+PU9xXx1GOcxJ6dtQ+xHqFsc4BYdbcQ9bZQunPI9Qd2VDVJ+RT14
-/gLt2kVt
+eJwNzN0KgjAYANB32XXQMsgWeKES+Yk/2Y+pd9NGLd0qly6L
+3j3vD+eLetYqfpdoNZugBx2aOz2jFWKDrytBcGlEfenCAuo1
+D1z/U2S+UWTAY+7fqGzU2YjaQIxmDwqk01cy4fEtweEcW2iC
+FL9I+upaNpbhOnHBi0yybR4iLrH9gmqnyWXabd3TO6dNHGDv
+sIeN+dY6rQubO+n1dK2cg172+YIs8yPFzywRKi0EK8mUzaLu
+86xbEcJgWxb6/QGRbkSr
 -----END ARGO VPN BRIDGE BLOCK-----
 -----BEGIN ARGO VPN BRIDGE BLOCK-----
-eJwNzMEOgiAAANB/4VoHoc2irUORFpQ2a030ZonKSqwUHLb+
-Pe9v7wuM+LSyUWAJp+CV2WeT5WAJhGX9vcbODYXmRqhLH548
-EjaknKGUU3mSzCYIvvPZVScId1T28r7DNh9tuI2GIlqtwBS0
-slRZpz9iLAMvITTa4rSKFZlfA+4wVyVNibh+vOLY0ai2Dhzc
-1PgVXlxw2dNqfQjVs3sLbuLZxXB5aguyj0S3oTAQfeWda+Uq
-X2cTsYfg9wc2gUP2
+eJwNzF8TgTAAAPDvslfuytCZOw/dJBstOVr1Fk0mif5aznfn
+/Xe/D2hFWcniAeajIXjG6l7ECZgDoWh3zpF+gqw9YWKQzJJb
+TPsooDAKiHQl7QX3s9ieNCFENZGdPNtIJX/Lll5/8RYLMASV
+TB9x3ZTiXzpWiImHR0aR6wdcG+9dONYHyTp9NehqPRvfSXjk
++iqtlkf+3rCyI1eT6bPVBSpVmrUmTI6CfMe3t9nN2dsDrc0s
+d0qZSYw20yD4/gBIIEMd
 -----END ARGO VPN BRIDGE BLOCK-----
 
 ---
 
-### 🕒 2026-10-01 04:44:01 UTC
+### 🕒 2026-10-02 10:39:02 UTC
+Telegram Proxy
+[https://t.me/proxy?server=nostalgi.khodkarbic.info&port=8443&secret=1603010200010001fc030386e24c3add](https://t.me/proxy?server=nostalgi.khodkarbic.info&port=8443&secret=1603010200010001fc030386e24c3add)
+[https://t.me/proxy?server=jedi-migi.ebimarh.info&port=8443&secret=1603010200010001fc030386e24c3add](https://t.me/proxy?server=jedi-migi.ebimarh.info&port=8443&secret=1603010200010001fc030386e24c3add)
+[https://t.me/proxy?server=rond-hamrahaval.ebimarh.info&port=8443&secret=1603010200010001fc030386e24c3add](https://t.me/proxy?server=rond-hamrahaval.ebimarh.info&port=8443&secret=1603010200010001fc030386e24c3add)
+[https://t.me/proxy?server=vasle-daii.barekatbashe.info&port=8443&secret=1603010200010001fc030386e24c3add](https://t.me/proxy?server=vasle-daii.barekatbashe.info&port=8443&secret=1603010200010001fc030386e24c3add)
+[https://t.me/proxy?server=portal.flashspder.info&port=8443&secret=1603010200010001fc030386e24c3add](https://t.me/proxy?server=portal.flashspder.info&port=8443&secret=1603010200010001fc030386e24c3add)
+[https://t.me/proxy?server=borujerd-tehran-esfahan.miandoabs.info&port=8443&secret=1603010200010001fc030386e24c3add](https://t.me/proxy?server=borujerd-tehran-esfahan.miandoabs.info&port=8443&secret=1603010200010001fc030386e24c3add)
+[https://t.me/proxy?server=mashti-khan.ebimarh.info&port=8443&secret=1603010200010001fc030386e24c3add](https://t.me/proxy?server=mashti-khan.ebimarh.info&port=8443&secret=1603010200010001fc030386e24c3add)
+[https://t.me/proxy?server=vizhzhzhzhzh.bypased.info&port=8443&secret=1603010200010001fc030386e24c3add](https://t.me/proxy?server=vizhzhzhzhzh.bypased.info&port=8443&secret=1603010200010001fc030386e24c3add)
+[https://t.me/proxy?server=gardeshgar.miandoabs.info&port=8443&secret=1603010200010001fc030386e24c3add](https://t.me/proxy?server=gardeshgar.miandoabs.info&port=8443&secret=1603010200010001fc030386e24c3add)
+[https://t.me/proxy?server=range-sal.browncolor.info&port=8443&secret=1603010200010001fc030386e24c3add](https://t.me/proxy?server=range-sal.browncolor.info&port=8443&secret=1603010200010001fc030386e24c3add)
+[https://t.me/proxy?server=khobi-alhamdolelah.ebimarh.info&port=8443&secret=1603010200010001fc030386e24c3add](https://t.me/proxy?server=khobi-alhamdolelah.ebimarh.info&port=8443&secret=1603010200010001fc030386e24c3add)
+[https://t.me/proxy?server=habib-lisanser.browncolor.info&port=8443&secret=1603010200010001fc030386e24c3add](https://t.me/proxy?server=habib-lisanser.browncolor.info&port=8443&secret=1603010200010001fc030386e24c3add)
+[https://t.me/proxy?server=jhndoes.co.uk.&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ](https://t.me/proxy?server=jhndoes.co.uk.&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ)
+[https://t.me/proxy?server=ghasam-be-shab.hosiyaman.info&port=8443&secret=1603010200010001fc030386e24c3add](https://t.me/proxy?server=ghasam-be-shab.hosiyaman.info&port=8443&secret=1603010200010001fc030386e24c3add)
+[https://t.me/proxy?server=felan-by.lolauth.info&port=8443&secret=1603010200010001fc030386e24c3add](https://t.me/proxy?server=felan-by.lolauth.info&port=8443&secret=1603010200010001fc030386e24c3add)
+[https://t.me/proxy?server=atr.golabkashan.info&port=8443&secret=1603010200010001fc030386e24c3add](https://t.me/proxy?server=atr.golabkashan.info&port=8443&secret=1603010200010001fc030386e24c3add)
+[https://t.me/proxy?server=khanda-makoni.lolauth.info&port=8443&secret=1603010200010001fc030386e24c3add](https://t.me/proxy?server=khanda-makoni.lolauth.info&port=8443&secret=1603010200010001fc030386e24c3add)
+[https://t.me/proxy?server=haji-jan.golabkashan.info&port=8443&secret=1603010200010001fc030386e24c3add](https://t.me/proxy?server=haji-jan.golabkashan.info&port=8443&secret=1603010200010001fc030386e24c3add)
+[https://t.me/proxy?server=flat.flashspder.info&port=8443&secret=1603010200010001fc030386e24c3add](https://t.me/proxy?server=flat.flashspder.info&port=8443&secret=1603010200010001fc030386e24c3add)
+[https://t.me/proxy?server=nakhand-mesvak-gerone.lolauth.info&port=8443&secret=1603010200010001fc030386e24c3add](https://t.me/proxy?server=nakhand-mesvak-gerone.lolauth.info&port=8443&secret=1603010200010001fc030386e24c3add)
+[https://t.me/proxy?server=team-daemi.barekatbashe.info&port=8443&secret=1603010200010001fc030386e24c3add](https://t.me/proxy?server=team-daemi.barekatbashe.info&port=8443&secret=1603010200010001fc030386e24c3add)
+[https://t.me/proxy?server=ssd-hdd-nvme.sillakhor.info&port=8443&secret=1603010200010001fc030386e24c3add](https://t.me/proxy?server=ssd-hdd-nvme.sillakhor.info&port=8443&secret=1603010200010001fc030386e24c3add)
+[https://t.me/proxy?server=mashti-khobi.khodkarbic.info&port=8443&secret=1603010200010001fc030386e24c3add](https://t.me/proxy?server=mashti-khobi.khodkarbic.info&port=8443&secret=1603010200010001fc030386e24c3add)
+[https://t.me/proxy?server=id466.sillakhor.info&port=8443&secret=1603010200010001fc030386e24c3add](https://t.me/proxy?server=id466.sillakhor.info&port=8443&secret=1603010200010001fc030386e24c3add)
+[https://t.me/proxy?server=karbar123456.sillakhor.info&port=8443&secret=1603010200010001fc030386e24c3add](https://t.me/proxy?server=karbar123456.sillakhor.info&port=8443&secret=1603010200010001fc030386e24c3add)
+[https://t.me/proxy?server=talfighi.barekatbashe.info&port=8443&secret=1603010200010001fc030386e24c3add](https://t.me/proxy?server=talfighi.barekatbashe.info&port=8443&secret=1603010200010001fc030386e24c3add)
+[https://t.me/proxy?server=nakoshimon-jomong.lolauth.info&port=8443&secret=1603010200010001fc030386e24c3add](https://t.me/proxy?server=nakoshimon-jomong.lolauth.info&port=8443&secret=1603010200010001fc030386e24c3add)
+[https://t.me/proxy?server=vasle-sho-binam.ebimarh.info&port=8443&secret=1603010200010001fc030386e24c3add](https://t.me/proxy?server=vasle-sho-binam.ebimarh.info&port=8443&secret=1603010200010001fc030386e24c3add)
+[https://t.me/proxy?server=zenon.flashspder.info&port=8443&secret=1603010200010001fc030386e24c3add](https://t.me/proxy?server=zenon.flashspder.info&port=8443&secret=1603010200010001fc030386e24c3add)
+[https://t.me/proxy?server=manager-add.sillakhor.info&port=8443&secret=1603010200010001fc030386e24c3add](https://t.me/proxy?server=manager-add.sillakhor.info&port=8443&secret=1603010200010001fc030386e24c3add)
+[https://t.me/proxy?server=join-in-play.khodkarbic.info&port=8443&secret=1603010200010001fc030386e24c3add](https://t.me/proxy?server=join-in-play.khodkarbic.info&port=8443&secret=1603010200010001fc030386e24c3add)
+[https://t.me/proxy?server=last-of-you.sillakhor.info&port=8443&secret=1603010200010001fc030386e24c3add](https://t.me/proxy?server=last-of-you.sillakhor.info&port=8443&secret=1603010200010001fc030386e24c3add)
+[https://t.me/proxy?server=nocloudnew.co.uk.&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ](https://t.me/proxy?server=nocloudnew.co.uk.&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ)
+[https://t.me/proxy?server=chalesh.khodkarbic.info&port=8443&secret=1603010200010001fc030386e24c3add](https://t.me/proxy?server=chalesh.khodkarbic.info&port=8443&secret=1603010200010001fc030386e24c3add)
+[https://t.me/proxy?server=3etare.co.uk.&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ](https://t.me/proxy?server=3etare.co.uk.&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ)
+[https://t.me/proxy?server=daemi.barekatbashe.info&port=8443&secret=1603010200010001fc030386e24c3add](https://t.me/proxy?server=daemi.barekatbashe.info&port=8443&secret=1603010200010001fc030386e24c3add)
+[https://t.me/proxy?server=asli-orginal-daemi.khodkarbic.info&port=8443&secret=1603010200010001fc030386e24c3add](https://t.me/proxy?server=asli-orginal-daemi.khodkarbic.info&port=8443&secret=1603010200010001fc030386e24c3add)
+[https://t.me/proxy?server=mosabeghe.khodkarbic.info&port=8443&secret=1603010200010001fc030386e24c3add](https://t.me/proxy?server=mosabeghe.khodkarbic.info&port=8443&secret=1603010200010001fc030386e24c3add)
+
+---
+
+### 🕒 2026-10-02 07:57:01 UTC
 > ↪️ **Forwarded**
 
-**🇳⁮🇪⁮🇼   🇵 🇷⁮⁮🇴 🇽⁮🇾**
-❏❏❏❏❏❏❏❏❏❏❏❏❏❏
-**🇮🇷**
+**معرفی می‌کنم: NEXA Player؛ یک وب‌پلیر مدرن، سریع و جمع‌وجور برای دیدن آنلاین شبکه‌های تلویزیونی ایرانی و بین‌المللی 🖥**
+فقط کافیه صفحه‌ش رو توی مرورگرتون باز کنید و تمام! بدون نیاز به ثبت‌نام، اکانت یا نصب هیچ برنامه‌ای.
+چه چیزایی داره؟
+***🔹***
+ سورس پیش‌فرض نِکسا: به صورت خودکار به آخرین لیست شبکه‌های فارسی بدون قطعی وصله.
+***🔹***
+ پشتیبانی از هر لینک M3U: لیست شخصی خودت یا فایل‌های لوکال رو داری؟ راحت آپلودش کن یا لینکش رو بده تا پخش کنه.
+***🔹***
+ امکان اشتراک‌گذاری (دیپ‌لینک): وسط دیدن فوتبال یا یه برنامه باحالی؟ دکمه کپی لینک رو بزن و بفرست واسه دوستت؛ لینک رو که باز کنه مستقیم همون شبکه براش پلی میشه! 
+***🔗***
+***🔹***
+ رابط کاربری مدرن و کاملاً فارسی: تایپوگرافی چشم‌نواز با فونت وزیرمتن و حالت دارک‌مود شیشه‌ای (Glassmorphism).
+***🔹***
+ فیلترهای کاربردی: تفکیک شبکه‌های HD، دسته‌بندی موضوعی، و لیست علاقه‌مندی‌ها (ستاره‌دار کردن شبکه‌ها).
+***🔹***
+ کلیدهای میانبر کیبورد: با زدن کلیدهای N و P کانال عوض کن، با F تمام‌صفحه شو و با M صدا رو قطع و وصل کن.
+**هم روی گوشی کار می‌کنه، هم لپ‌تاپ و حتی مرورگر تلویزیون هوشمند! 🔥**
+***🔗***
+ لینک: 
+[https://itsyebekhe.github.io/nexa](https://itsyebekhe.github.io/nexa)
+***🔗***
+ سورس پروژه: 
+[https://github.com/itsyebekhe/nexa](https://github.com/itsyebekhe/nexa)
+حتماً تستش کنید و اگه دوست داشتید برای رفقاتون هم بفرستید 
+***❤️***
+━━━━━━━━━━━━━━━━━━━━
+***📢***
  
-`1405/07/09`
-**🇬🇧**
+[@yebekhe](https://t.me/yebekhe)
+  |  
+***🤖***
  
-`2026/10/01`
-**🕒**
+[@itsyebekhebot](https://t.me/itsyebekhebot)
+***☕️***
  
-`07:30:18`
-[***🏳️*** ᴘʀᴏxʏ](tg://proxy?server=good.cipservice.co.uk&amp;port=2083&amp;secret=eeNEgYdJvXrFGRMCIMJdCQ)
- | 
-[***🇫🇮*** ᴘʀᴏxʏ](tg://proxy?server=65.109.200.61&amp;port=8443&amp;secret=dd104462821249bd7ac519130220c25d09)
- | 
-[***🇩🇪*** ᴘʀᴏxʏ](tg://proxy?server=91.107.154.120&amp;port=8443&amp;secret=dd104462821249bd7ac519130220c25d09)
- | 
-[***🇩🇪*** ᴘʀᴏxʏ](tg://proxy?server=srv-icjwgv.mtp-ab.lol&amp;port=443&amp;secret=ee251e38db136e1ce2047237c71e5e1e866d6963726f736f66742e636f6d)
-[***🇩🇪*** ᴘʀᴏxʏ](tg://proxy?server=srv-phdcra.mtp-ab.lol&amp;port=443&amp;secret=ee251e38db136e1ce2047237c71e5e1e866d6963726f736f66742e636f6d)
- | 
-[***🇩🇪*** ᴘʀᴏxʏ](tg://proxy?server=srv-lwbmgk.mtp-ab.lol&amp;port=443&amp;secret=ee251e38db136e1ce2047237c71e5e1e866d6963726f736f66742e636f6d)
- | 
-[***🇫🇮*** ᴘʀᴏxʏ](tg://proxy?server=srv-dxvkwg.mtp-ab.lol&amp;port=443&amp;secret=ee251e38db136e1ce2047237c71e5e1e866d6963726f736f66742e636f6d)
- | 
-[***🇳🇱*** ᴘʀᴏxʏ](tg://proxy?server=78.128-273-66.ir.&amp;port=8443&amp;secret=ee104462821249bd7ac519130220c25d09626973636f7474692e79656b74616e65742e636f6d)
-***🆔***
+[حمایت مالی از پروژه‌ها (Donate)](https://t.me/itsyebekhebot?start=donate)
+
+---
+
+### 🕒 2026-10-02 07:12:24 UTC
+> ↪️ **Forwarded**
+
+***🚨***
+[ᑎΞᗯ ᑌᑭᗪᗩTΞ](https://lastest-update.pages.dev/)
+***🚀***
+ نسخه جدید منتشر شد برای 
+[**MahsaNG**](https://github.com/GFW-knocker/MahsaNG)
+:
+***🧪***
  
-[@ZPrxy](https://t.me/ZPrxy)
- | 
-[***🌐*** ᴡᴇʙ ᴘʀᴏxʏ](https://telegram-proxy-fetcher.pages.dev/)
+**v18-(1405-7-10)**
+ (v18-(1405-7-10)) [Pre-release]
+توضیحی موجود نیست.
+***🔗***
+ 
+[مشاهده در گیت‌هاب](https://github.com/GFW-knocker/MahsaNG/releases/tag/v18-(1405-7-10))
+[𓄂𓆃](https://t.me/update_releases)
+
+---
+
+### 🕒 2026-10-02 06:26:41 UTC
+> ↪️ **Forwarded**
+
+aether://188.114.97.9:3138?protocol=wg&scan=balanced&noize=balanced&ip=v4#%40FREE2CONFIG%20
+aether://?protocol=gool&scan=balanced&noize=balanced&ip=v4&outer=162.159.192.200%3A903&inner=188.114.96.1%3A1701#%40FREE2CONFIG%20
+aether://?protocol=gool&scan=balanced&noize=balanced&ip=v4&outer=162.159.192.1%3A2408&inner=162.159.195.1%3A500#%40FREE2CONFIG%20
+aether://188.114.97.93:968?protocol=wg&scan=balanced&noize=balanced&ip=v4#%40FREE2CONFIG%20
+aether://?protocol=gool&scan=balanced&noize=balanced&ip=v4&outer=162.159.195.251%3A908&inner=188.114.99.65%3A891#%40FREE2CONFIG%20
+***❇️***
+**کانفیگ کلاینت  **
+[**PattNG**](https://t.me/FREET2CONFIG/585?single)
+** سری چهارم**
 
 ---
 

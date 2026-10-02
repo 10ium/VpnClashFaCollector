@@ -466,9 +466,6 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: 201.34.159.221:443, server: 201.34.159.221, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e0b9fb0f-1bbd-478b-9580-c2294778338b, servername: us1.g4m1.biz, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: cdn.v1.AssetService}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 162.35.242.252:443, server: 162.35.242.252, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e3e9805a-6c8b-4edd-8ee8-621df79806eb, servername: nl.aksay.pro, host: nl.aksay.pro, path: /, reality-opts: {public-key: ClG6fvriBTK8donGsTlKusJ0dwRCgVDDTAGzAtZzJDY, short-id: 82c2b7d5e70ff000}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇳🇱 id-nl-01.mintrocket.org:443, server: id-nl-01.mintrocket.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f0a52dd3-4377-4402-a450-210bc81bcf25, servername: id-nl-01.mintrocket.org, host: id-nl-01.mintrocket.org, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: XU7da9vkBex4TUPo1d-ctFY_N6zouBiCRnbnUK82i3Q, short-id: fee1f986a72444db}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "🇭🇰 [openproxylist.com] vmess-HK", server: yg1.ygkkk.dpdns.org, port: 443, type: vmess, uuid: b2ba4a73-3123-479e-aa96-5973a9ecd0c0, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: jmp1.907737.xyz, network: ws, ws-opts: {path: /b2ba4a73-3123-479e-aa96-5973a9ecd0c0-vm, headers: {Host: jmp1.907737.xyz}}, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,9 +483,6 @@ proxy-groups:
     type: select
     proxies:
       - 201.34.159.221:443
-      - 162.35.242.252:443
-      - 🇳🇱 id-nl-01.mintrocket.org:443
-      - 🇭🇰 [openproxylist.com] vmess-HK
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -496,9 +490,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 201.34.159.221:443
-      - 162.35.242.252:443
-      - 🇳🇱 id-nl-01.mintrocket.org:443
-      - 🇭🇰 [openproxylist.com] vmess-HK
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -506,9 +497,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 201.34.159.221:443
-      - 162.35.242.252:443
-      - 🇳🇱 id-nl-01.mintrocket.org:443
-      - 🇭🇰 [openproxylist.com] vmess-HK
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -525,9 +513,6 @@ proxy-groups:
     interval: 600
     proxies:
       - 201.34.159.221:443
-      - 162.35.242.252:443
-      - 🇳🇱 id-nl-01.mintrocket.org:443
-      - 🇭🇰 [openproxylist.com] vmess-HK
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -535,9 +520,6 @@ proxy-groups:
     interval: 600
     proxies:
       - 201.34.159.221:443
-      - 162.35.242.252:443
-      - 🇳🇱 id-nl-01.mintrocket.org:443
-      - 🇭🇰 [openproxylist.com] vmess-HK
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -545,9 +527,6 @@ proxy-groups:
     interval: 600
     proxies:
       - 201.34.159.221:443
-      - 162.35.242.252:443
-      - 🇳🇱 id-nl-01.mintrocket.org:443
-      - 🇭🇰 [openproxylist.com] vmess-HK
   - name: دانلود منیجر 📥
     type: select
     proxies:
