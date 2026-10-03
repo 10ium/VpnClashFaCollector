@@ -465,14 +465,10 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Kia_Net (611.2)", server: areal5.greewebservices.ir, port: 5455, type: vless, tls: true, packet-encoding: xudp, uuid: 1c2e9b1f-ab95-4c2b-a8eb-188c83d7efa2, servername: amp-api-edge.apps.apple.com, host: amp-api-edge.apps.apple.com, path: /, reality-opts: {public-key: xQnXh5EfPDhcEBB7rRiLca33GYrMEeUa35domLL_yA8, short-id: e3085d4fc679ba12}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 𝓹𝓵𝓪𝓼 ♡, server: fn2q.sublinkplas.ir, port: 12040, type: vless, tls: true, packet-encoding: xudp, uuid: 3f822439-b9da-497c-813c-f21fcd2e3c5d, servername: testspeed-foreign.tci.ir, host: testspeed-foreign.tci.ir, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 33hVTwP-1rQYG0F92oXJ-o1zPo4Cc8n2Uml_i9tv6XM, short-id: aa74a7a98e86f2ed}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 𝓹𝓵𝓪𝓼 ♡`, server: tu1a.plasdomain.ir, port: 15694, type: vless, tls: true, packet-encoding: xudp, uuid: 3f822439-b9da-497c-813c-f21fcd2e3c5d, servername: ajax.googleapis.com, host: ajax.googleapis.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: BY0QfaqwH2Kv1WUU584R7NHcm4Z1Praq5YuYGrJ1BkM, short-id: aa74a7a98e86f2ed}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 𝓹𝓵𝓪𝓼 ♡ 2, server: upes2.plasmoon.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 3f822439-b9da-497c-813c-f21fcd2e3c5d, servername: play.google.com, host: play.google.com, path: /, reality-opts: {public-key: ASmPIMB25D2LpasCAfuMuNDN3Kv-Dj3bX8THE7YpknE, short-id: 0f8938e71c53a6cd}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 𝓹𝓵𝓪𝓼 ♡ 3, server: upnl2.plasmoon.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 3f822439-b9da-497c-813c-f21fcd2e3c5d, servername: play.google.com, host: play.google.com, path: /, reality-opts: {public-key: ASmPIMB25D2LpasCAfuMuNDN3Kv-Dj3bX8THE7YpknE, short-id: 0f8938e71c53a6cd}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Kia_Net (611)", server: 176.108.245.167, port: 9881, type: vless, tls: true, packet-encoding: xudp, uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef, servername: dl.google.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: grpc-tunnel}, reality-opts: {public-key: Dfgu8Ey0M8Hz4gXGZAwQ3H9jLt2HByVsjAOTWiuKDB0, short-id: aabbccdd}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Kia_Net (611.3)", server: 199.232.78.159, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f8aba8c3-6ab6-4fa0-8815-17e15f4721b1, servername: global.fastly.com, network: ws, ws-opts: {path: /, headers: {Host: global.fastly.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Kia_Net (611.4)", server: 199.232.78.159, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f8aba8c3-6ab6-4fa0-8815-17e15f4721b1, servername: global.fastly.com, network: ws, ws-opts: {path: /, headers: {Host: global.fastly.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -489,42 +485,30 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@Kia_Net (611.2)"
       - 𝓹𝓵𝓪𝓼 ♡
       - 𝓹𝓵𝓪𝓼 ♡`
       - 𝓹𝓵𝓪𝓼 ♡ 2
       - 𝓹𝓵𝓪𝓼 ♡ 3
-      - "@Kia_Net (611)"
-      - "@Kia_Net (611.3)"
-      - "@Kia_Net (611.4)"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@Kia_Net (611.2)"
       - 𝓹𝓵𝓪𝓼 ♡
       - 𝓹𝓵𝓪𝓼 ♡`
       - 𝓹𝓵𝓪𝓼 ♡ 2
       - 𝓹𝓵𝓪𝓼 ♡ 3
-      - "@Kia_Net (611)"
-      - "@Kia_Net (611.3)"
-      - "@Kia_Net (611.4)"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@Kia_Net (611.2)"
       - 𝓹𝓵𝓪𝓼 ♡
       - 𝓹𝓵𝓪𝓼 ♡`
       - 𝓹𝓵𝓪𝓼 ♡ 2
       - 𝓹𝓵𝓪𝓼 ♡ 3
-      - "@Kia_Net (611)"
-      - "@Kia_Net (611.3)"
-      - "@Kia_Net (611.4)"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -540,42 +524,30 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Kia_Net (611.2)"
       - 𝓹𝓵𝓪𝓼 ♡
       - 𝓹𝓵𝓪𝓼 ♡`
       - 𝓹𝓵𝓪𝓼 ♡ 2
       - 𝓹𝓵𝓪𝓼 ♡ 3
-      - "@Kia_Net (611)"
-      - "@Kia_Net (611.3)"
-      - "@Kia_Net (611.4)"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Kia_Net (611.2)"
       - 𝓹𝓵𝓪𝓼 ♡
       - 𝓹𝓵𝓪𝓼 ♡`
       - 𝓹𝓵𝓪𝓼 ♡ 2
       - 𝓹𝓵𝓪𝓼 ♡ 3
-      - "@Kia_Net (611)"
-      - "@Kia_Net (611.3)"
-      - "@Kia_Net (611.4)"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Kia_Net (611.2)"
       - 𝓹𝓵𝓪𝓼 ♡
       - 𝓹𝓵𝓪𝓼 ♡`
       - 𝓹𝓵𝓪𝓼 ♡ 2
       - 𝓹𝓵𝓪𝓼 ♡ 3
-      - "@Kia_Net (611)"
-      - "@Kia_Net (611.3)"
-      - "@Kia_Net (611.4)"
   - name: دانلود منیجر 📥
     type: select
     proxies:
