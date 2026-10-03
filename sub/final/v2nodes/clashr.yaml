@@ -5,6 +5,7 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: ttww11.bpca2026.top:443, server: ttww11.bpca2026.top, port: 443, type: trojan, password: 9efd3f19-c7cb-4fa9-8d66-0598043597dc, sni: ttww11.bpca2026.top, skip-cert-verify: false, network: ws, ws-opts: {path: /images, headers: {Host: ttww11.bpca2026.top}}, udp: true, tfo: false}
   - {name: tk1.high-speed-test-56424.me:443, server: tk1.high-speed-test-56424.me, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 37615d66-5467-44a3-bc23-f2c3bef7f761, servername: aws.amazon.com, host: aws.amazon.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: p8VhFzvFOBAhWAEAeWmwDxT3xBSRsGYixqi0qnLFnBM, short-id: 21270a66}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
@@ -12,6 +13,7 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - ttww11.bpca2026.top:443
       - tk1.high-speed-test-56424.me:443
   - name: ♻️ 自动选择
     type: url-test
@@ -19,6 +21,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - ttww11.bpca2026.top:443
       - tk1.high-speed-test-56424.me:443
   - name: 🌍 国外媒体
     type: select
@@ -26,24 +29,28 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - ttww11.bpca2026.top:443
       - tk1.high-speed-test-56424.me:443
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - ttww11.bpca2026.top:443
       - tk1.high-speed-test-56424.me:443
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - ttww11.bpca2026.top:443
       - tk1.high-speed-test-56424.me:443
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - ttww11.bpca2026.top:443
       - tk1.high-speed-test-56424.me:443
   - name: 🎯 全球直连
     type: select
@@ -72,6 +79,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - ttww11.bpca2026.top:443
       - tk1.high-speed-test-56424.me:443
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连

@@ -465,6 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: ttww11.bpca2026.top:443, server: ttww11.bpca2026.top, port: 443, type: trojan, password: 9efd3f19-c7cb-4fa9-8d66-0598043597dc, sni: ttww11.bpca2026.top, skip-cert-verify: false, network: ws, ws-opts: {path: /images, headers: {Host: ttww11.bpca2026.top}}, udp: true, tfo: false}
   - {name: tk1.high-speed-test-56424.me:443, server: tk1.high-speed-test-56424.me, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 37615d66-5467-44a3-bc23-f2c3bef7f761, servername: aws.amazon.com, host: aws.amazon.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: p8VhFzvFOBAhWAEAeWmwDxT3xBSRsGYixqi0qnLFnBM, short-id: 21270a66}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -482,6 +483,7 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - ttww11.bpca2026.top:443
       - tk1.high-speed-test-56424.me:443
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -489,6 +491,7 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - ttww11.bpca2026.top:443
       - tk1.high-speed-test-56424.me:443
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -496,6 +499,7 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - ttww11.bpca2026.top:443
       - tk1.high-speed-test-56424.me:443
   - name: اتصال پایدار 🔗
     type: url-test
@@ -512,6 +516,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - ttww11.bpca2026.top:443
       - tk1.high-speed-test-56424.me:443
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -519,6 +524,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - ttww11.bpca2026.top:443
       - tk1.high-speed-test-56424.me:443
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -526,6 +532,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - ttww11.bpca2026.top:443
       - tk1.high-speed-test-56424.me:443
   - name: دانلود منیجر 📥
     type: select
