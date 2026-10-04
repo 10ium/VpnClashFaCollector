@@ -465,9 +465,10 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Capoit`", server: 199.232.78.101, port: 443, type: trojan, password: mitivpn, sni: ssl.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSus---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN, headers: {Host: ssl.fastly.com}}, udp: true, tfo: false}
-  - {name: "@Capoit` 2", server: 151.101.1.194, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 83021686-64bf-4a68-9fba-1f8addb07e18, network: ws, ws-opts: {path: /, headers: {Host: simorghfr.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 3", server: 151.101.65.57, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 83021686-64bf-4a68-9fba-1f8addb07e18, network: ws, ws-opts: {path: /, headers: {Host: simorghtrr.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit`", server: 167.82.76.7, port: 443, type: trojan, password: mitivpn, sni: ssl.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: /---@npv_vpn11---@npv_vpn11/---@npv_vpn11---@npv_vpn11/---@npv_vpn11---@npv_vpn11/NLSus---@npv_vpn11---@npv_vpn11/---@npv_vpn11---@npv_vpn11/---@npv_vpn11---@npv_vpn11, headers: {Host: ssl.fastly.com}}, udp: true, tfo: false}
+  - {name: "@Capoit` 2", server: 199.232.78.101, port: 443, type: trojan, password: mitivpn, sni: ssl.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSus---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN, headers: {Host: ssl.fastly.com}}, udp: true, tfo: false}
+  - {name: "@Capoit` 3", server: 151.101.1.194, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 83021686-64bf-4a68-9fba-1f8addb07e18, network: ws, ws-opts: {path: /, headers: {Host: simorghfr.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 4", server: 151.101.65.57, port: 80, type: vless, tls: true, packet-encoding: xudp, uuid: 83021686-64bf-4a68-9fba-1f8addb07e18, network: ws, ws-opts: {path: /, headers: {Host: simorghtrr.global.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,6 +488,7 @@ proxy-groups:
       - "@Capoit`"
       - "@Capoit` 2"
       - "@Capoit` 3"
+      - "@Capoit` 4"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -496,6 +498,7 @@ proxy-groups:
       - "@Capoit`"
       - "@Capoit` 2"
       - "@Capoit` 3"
+      - "@Capoit` 4"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -505,6 +508,7 @@ proxy-groups:
       - "@Capoit`"
       - "@Capoit` 2"
       - "@Capoit` 3"
+      - "@Capoit` 4"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -523,6 +527,7 @@ proxy-groups:
       - "@Capoit`"
       - "@Capoit` 2"
       - "@Capoit` 3"
+      - "@Capoit` 4"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -532,6 +537,7 @@ proxy-groups:
       - "@Capoit`"
       - "@Capoit` 2"
       - "@Capoit` 3"
+      - "@Capoit` 4"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -541,6 +547,7 @@ proxy-groups:
       - "@Capoit`"
       - "@Capoit` 2"
       - "@Capoit` 3"
+      - "@Capoit` 4"
   - name: دانلود منیجر 📥
     type: select
     proxies:

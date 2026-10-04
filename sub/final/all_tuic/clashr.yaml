@@ -5,53 +5,60 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 181265 | ⚡️Telegram - t.me/SOSkeyNET, server: 108.186.180.148, port: 22723, type: tuic, uuid: af24a0e4-f5a2-4b97-a678-992d45346147, password: af24a0e4-f5a2-4b97-a678-992d45346147, alpn: [h3], udp-relay-mode: native, congestion-controller: bbr, sni: www.bing.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 2🕊️@oneclickvpnkeys, server: 108.186.180.148, port: 22723, type: tuic, uuid: af24a0e4-f5a2-4b97-a678-992d45346147, password: af24a0e4-f5a2-4b97-a678-992d45346147, alpn: [h3], udp-relay-mode: native, congestion-controller: bbr, sni: www.bing.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇸🇬 sg2-8sb.6121999.dpdns.org:33738, server: sg2-8sb.6121999.dpdns.org, port: 33738, type: tuic, uuid: 2d1ad594-80a4-4bfb-87a6-038e39701f51, password: 2d1ad594-80a4-4bfb-87a6-038e39701f51, alpn: [h3], udp-relay-mode: quic, congestion-controller: bbr, sni: sg2-8sb.6121999.dpdns.org, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 187402 | ⚡️Telegram - t.me/SOSkeyNET, server: sg2-8sb.6121999.dpdns.org, port: 33738, type: tuic, uuid: 2d1ad594-80a4-4bfb-87a6-038e39701f51, password: 2d1ad594-80a4-4bfb-87a6-038e39701f51, alpn: [h3], udp-relay-mode: quic, congestion-controller: bbr, sni: sg2-8sb.6121999.dpdns.org, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇸🇬 sg@oneclickvpnkeys`, server: sg2-8sb.6121999.dpdns.org, port: 33738, type: tuic, uuid: 2d1ad594-80a4-4bfb-87a6-038e39701f51, password: 2d1ad594-80a4-4bfb-87a6-038e39701f51, alpn: [h3], udp-relay-mode: quic, congestion-controller: bbr, sni: sg2-8sb.6121999.dpdns.org, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 181265 | ⚡️Telegram - t.me/SOSkeyNET
-      - 2🕊️@oneclickvpnkeys
+      - 🇸🇬 sg2-8sb.6121999.dpdns.org:33738
+      - 187402 | ⚡️Telegram - t.me/SOSkeyNET
+      - 🇸🇬 sg@oneclickvpnkeys`
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 181265 | ⚡️Telegram - t.me/SOSkeyNET
-      - 2🕊️@oneclickvpnkeys
+      - 🇸🇬 sg2-8sb.6121999.dpdns.org:33738
+      - 187402 | ⚡️Telegram - t.me/SOSkeyNET
+      - 🇸🇬 sg@oneclickvpnkeys`
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 181265 | ⚡️Telegram - t.me/SOSkeyNET
-      - 2🕊️@oneclickvpnkeys
+      - 🇸🇬 sg2-8sb.6121999.dpdns.org:33738
+      - 187402 | ⚡️Telegram - t.me/SOSkeyNET
+      - 🇸🇬 sg@oneclickvpnkeys`
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 181265 | ⚡️Telegram - t.me/SOSkeyNET
-      - 2🕊️@oneclickvpnkeys
+      - 🇸🇬 sg2-8sb.6121999.dpdns.org:33738
+      - 187402 | ⚡️Telegram - t.me/SOSkeyNET
+      - 🇸🇬 sg@oneclickvpnkeys`
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 181265 | ⚡️Telegram - t.me/SOSkeyNET
-      - 2🕊️@oneclickvpnkeys
+      - 🇸🇬 sg2-8sb.6121999.dpdns.org:33738
+      - 187402 | ⚡️Telegram - t.me/SOSkeyNET
+      - 🇸🇬 sg@oneclickvpnkeys`
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 181265 | ⚡️Telegram - t.me/SOSkeyNET
-      - 2🕊️@oneclickvpnkeys
+      - 🇸🇬 sg2-8sb.6121999.dpdns.org:33738
+      - 187402 | ⚡️Telegram - t.me/SOSkeyNET
+      - 🇸🇬 sg@oneclickvpnkeys`
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -79,8 +86,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 181265 | ⚡️Telegram - t.me/SOSkeyNET
-      - 2🕊️@oneclickvpnkeys
+      - 🇸🇬 sg2-8sb.6121999.dpdns.org:33738
+      - 187402 | ⚡️Telegram - t.me/SOSkeyNET
+      - 🇸🇬 sg@oneclickvpnkeys`
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
