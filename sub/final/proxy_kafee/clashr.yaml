@@ -5,109 +5,151 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: "@proxy_kafee", server: 20.238.125.195, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: Qr3RLHJLngbplPWd, udp: true, tfo: false}
+  - {name: "@proxy_kafee 2", server: 20.238.125.195, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: jUg9wluj5iOiY9sI, udp: true, tfo: false}
+  - {name: "@proxy_kafee 3", server: 20.238.125.195, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: ng0XTChgbJJ3Sv2d, udp: true, tfo: false}
   - {name: "@@proxy_kafee |  [ 𝑽𝒊𝑷 𝑴𝒆𝒍𝒊🇩🇪`", server: 167.82.76.27, port: 443, type: trojan, password: mitivpn, sni: ssl.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSus---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN, headers: {Host: ssl.fastly.com}}, udp: true, tfo: false}
   - {name: "@@proxy_kafee | [ 𝑽𝒊𝑷 𝑴𝒆𝒍𝒊🇩🇪 4", server: 167.82.76.7, port: 443, type: trojan, password: mitivpn, sni: ssl.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSs---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN, headers: {Host: ssl.fastly.com}}, udp: true, tfo: false}
   - {name: "@@proxy_kafee |  [ 𝑽𝒊𝑷 𝑴𝒆𝒍𝒊🇩🇪", server: 199.232.78.101, port: 443, type: trojan, password: mitivpn, sni: ssl.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSus---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN, headers: {Host: ssl.fastly.com}}, udp: true, tfo: false}
   - {name: "@@proxy_kafee | [ 𝑽𝒊𝑷 𝑴𝒆𝒍𝒊🇩🇪 2", server: 199.232.78.160, port: 443, type: trojan, password: mitivpn, sni: ssl.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/D-e1i@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN, headers: {Host: ssl.fastly.com}}, udp: true, tfo: false}
+  - {name: "@proxy_kafee 4", server: 27.44.143.169, port: 14343, type: vless, tls: true, packet-encoding: xudp, uuid: 1b60cff4-49ce-4bf3-9027-e4f9c47d6158, servername: thuk.huaweiyouxuan.com, host: thuk.huaweiyouxuan.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee`", server: higv-production.up.railway.app, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 2b98faff-5a9f-4c84-9f89-8eb0328a698e, servername: higv-production.up.railway.app, alpn: [http%2F1.1], network: ws, ws-opts: {path: /ws/2b98faff-5a9f-4c84-9f89-8eb0328a698e, headers: {Host: higv-production.up.railway.app}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "Channel : @proxy_kafee", server: 199.232.78.159, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 36e8e5e8-8010-45a1-9fb7-9fa21f7e4c66, servername: ssl.fastly.com, network: ws, ws-opts: {path: /, headers: {Host: ssl.fastly.com}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "Channel : @proxy_kafee 2", server: fi1.rovilo.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 452f869f-7720-47c3-a175-b6673e31d3e8, servername: store.steampowered.com, host: store.steampowered.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: i_cD6qpNHvE-j2vFGxEBmXNvX5U8PE4-lBkxcti8Ry8, short-id: 714369014b7679bf}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "Channel : @proxy_kafee 3", server: 179.254.109.69, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 61bd5829-a243-4548-97f0-a210c2069fec, servername: m.swegg.daxaryx.fun, host: m.swegg.daxaryx.fun, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: u9_Ta0DYmqruY94DwuZv4g_gnvY1xGMF1iT1SdV3cT8, short-id: d3a09fd1}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "Channel : @proxy_kafee 4", server: 199.232.78.159, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8453bdb7-dd58-419d-b002-9456dd2e73d7, servername: ssl.fastly.com, network: ws, ws-opts: {path: /, headers: {Host: ssl.fastly.com}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "Channel : @proxy_kafee 5", server: 199.232.78.159, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8453bdb7-dd58-419d-b002-9456dd2e73d7, servername: ssl.fastly.com, network: ws, ws-opts: {path: "?ed#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET", headers: {Host: ssl.fastly.com}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "Channel : @proxy_kafee 6", server: 201.34.129.54, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: aa827c4c-d89f-4b37-95be-228e2a4ab01b, servername: ru.streis.ru, host: ru.streis.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: WXFbhnK-3rLsBSC0JHcaH8XQnfELn5ru2jC0Sx1YU28, short-id: 2a254d0228aaac7e}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@proxy_kafee 5", server: 185.236.8.32, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ff35ca20-2304-4b3a-80e5-2c82953cf2ce, servername: nl32.mech-pro.online, host: nl32.mech-pro.online, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: jbiddtGRgeBvlkjbuA3aU-WPjKgEX87tOVh1mFfvOUI, short-id: 16e0f049}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - "@proxy_kafee"
+      - "@proxy_kafee 2"
+      - "@proxy_kafee 3"
       - "@@proxy_kafee |  [ 𝑽𝒊𝑷 𝑴𝒆𝒍𝒊🇩🇪`"
       - "@@proxy_kafee | [ 𝑽𝒊𝑷 𝑴𝒆𝒍𝒊🇩🇪 4"
       - "@@proxy_kafee |  [ 𝑽𝒊𝑷 𝑴𝒆𝒍𝒊🇩🇪"
       - "@@proxy_kafee | [ 𝑽𝒊𝑷 𝑴𝒆𝒍𝒊🇩🇪 2"
+      - "@proxy_kafee 4"
+      - "@proxy_kafee`"
       - "Channel : @proxy_kafee"
       - "Channel : @proxy_kafee 2"
       - "Channel : @proxy_kafee 3"
       - "Channel : @proxy_kafee 4"
       - "Channel : @proxy_kafee 5"
       - "Channel : @proxy_kafee 6"
+      - "@proxy_kafee 5"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - "@proxy_kafee"
+      - "@proxy_kafee 2"
+      - "@proxy_kafee 3"
       - "@@proxy_kafee |  [ 𝑽𝒊𝑷 𝑴𝒆𝒍𝒊🇩🇪`"
       - "@@proxy_kafee | [ 𝑽𝒊𝑷 𝑴𝒆𝒍𝒊🇩🇪 4"
       - "@@proxy_kafee |  [ 𝑽𝒊𝑷 𝑴𝒆𝒍𝒊🇩🇪"
       - "@@proxy_kafee | [ 𝑽𝒊𝑷 𝑴𝒆𝒍𝒊🇩🇪 2"
+      - "@proxy_kafee 4"
+      - "@proxy_kafee`"
       - "Channel : @proxy_kafee"
       - "Channel : @proxy_kafee 2"
       - "Channel : @proxy_kafee 3"
       - "Channel : @proxy_kafee 4"
       - "Channel : @proxy_kafee 5"
       - "Channel : @proxy_kafee 6"
+      - "@proxy_kafee 5"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - "@proxy_kafee"
+      - "@proxy_kafee 2"
+      - "@proxy_kafee 3"
       - "@@proxy_kafee |  [ 𝑽𝒊𝑷 𝑴𝒆𝒍𝒊🇩🇪`"
       - "@@proxy_kafee | [ 𝑽𝒊𝑷 𝑴𝒆𝒍𝒊🇩🇪 4"
       - "@@proxy_kafee |  [ 𝑽𝒊𝑷 𝑴𝒆𝒍𝒊🇩🇪"
       - "@@proxy_kafee | [ 𝑽𝒊𝑷 𝑴𝒆𝒍𝒊🇩🇪 2"
+      - "@proxy_kafee 4"
+      - "@proxy_kafee`"
       - "Channel : @proxy_kafee"
       - "Channel : @proxy_kafee 2"
       - "Channel : @proxy_kafee 3"
       - "Channel : @proxy_kafee 4"
       - "Channel : @proxy_kafee 5"
       - "Channel : @proxy_kafee 6"
+      - "@proxy_kafee 5"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - "@proxy_kafee"
+      - "@proxy_kafee 2"
+      - "@proxy_kafee 3"
       - "@@proxy_kafee |  [ 𝑽𝒊𝑷 𝑴𝒆𝒍𝒊🇩🇪`"
       - "@@proxy_kafee | [ 𝑽𝒊𝑷 𝑴𝒆𝒍𝒊🇩🇪 4"
       - "@@proxy_kafee |  [ 𝑽𝒊𝑷 𝑴𝒆𝒍𝒊🇩🇪"
       - "@@proxy_kafee | [ 𝑽𝒊𝑷 𝑴𝒆𝒍𝒊🇩🇪 2"
+      - "@proxy_kafee 4"
+      - "@proxy_kafee`"
       - "Channel : @proxy_kafee"
       - "Channel : @proxy_kafee 2"
       - "Channel : @proxy_kafee 3"
       - "Channel : @proxy_kafee 4"
       - "Channel : @proxy_kafee 5"
       - "Channel : @proxy_kafee 6"
+      - "@proxy_kafee 5"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - "@proxy_kafee"
+      - "@proxy_kafee 2"
+      - "@proxy_kafee 3"
       - "@@proxy_kafee |  [ 𝑽𝒊𝑷 𝑴𝒆𝒍𝒊🇩🇪`"
       - "@@proxy_kafee | [ 𝑽𝒊𝑷 𝑴𝒆𝒍𝒊🇩🇪 4"
       - "@@proxy_kafee |  [ 𝑽𝒊𝑷 𝑴𝒆𝒍𝒊🇩🇪"
       - "@@proxy_kafee | [ 𝑽𝒊𝑷 𝑴𝒆𝒍𝒊🇩🇪 2"
+      - "@proxy_kafee 4"
+      - "@proxy_kafee`"
       - "Channel : @proxy_kafee"
       - "Channel : @proxy_kafee 2"
       - "Channel : @proxy_kafee 3"
       - "Channel : @proxy_kafee 4"
       - "Channel : @proxy_kafee 5"
       - "Channel : @proxy_kafee 6"
+      - "@proxy_kafee 5"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - "@proxy_kafee"
+      - "@proxy_kafee 2"
+      - "@proxy_kafee 3"
       - "@@proxy_kafee |  [ 𝑽𝒊𝑷 𝑴𝒆𝒍𝒊🇩🇪`"
       - "@@proxy_kafee | [ 𝑽𝒊𝑷 𝑴𝒆𝒍𝒊🇩🇪 4"
       - "@@proxy_kafee |  [ 𝑽𝒊𝑷 𝑴𝒆𝒍𝒊🇩🇪"
       - "@@proxy_kafee | [ 𝑽𝒊𝑷 𝑴𝒆𝒍𝒊🇩🇪 2"
+      - "@proxy_kafee 4"
+      - "@proxy_kafee`"
       - "Channel : @proxy_kafee"
       - "Channel : @proxy_kafee 2"
       - "Channel : @proxy_kafee 3"
       - "Channel : @proxy_kafee 4"
       - "Channel : @proxy_kafee 5"
       - "Channel : @proxy_kafee 6"
+      - "@proxy_kafee 5"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -135,16 +177,22 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - "@proxy_kafee"
+      - "@proxy_kafee 2"
+      - "@proxy_kafee 3"
       - "@@proxy_kafee |  [ 𝑽𝒊𝑷 𝑴𝒆𝒍𝒊🇩🇪`"
       - "@@proxy_kafee | [ 𝑽𝒊𝑷 𝑴𝒆𝒍𝒊🇩🇪 4"
       - "@@proxy_kafee |  [ 𝑽𝒊𝑷 𝑴𝒆𝒍𝒊🇩🇪"
       - "@@proxy_kafee | [ 𝑽𝒊𝑷 𝑴𝒆𝒍𝒊🇩🇪 2"
+      - "@proxy_kafee 4"
+      - "@proxy_kafee`"
       - "Channel : @proxy_kafee"
       - "Channel : @proxy_kafee 2"
       - "Channel : @proxy_kafee 3"
       - "Channel : @proxy_kafee 4"
       - "Channel : @proxy_kafee 5"
       - "Channel : @proxy_kafee 6"
+      - "@proxy_kafee 5"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
