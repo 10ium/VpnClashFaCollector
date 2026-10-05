@@ -5,67 +5,60 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 𝓹𝓵𝓪𝓼 ♡, server: fn2q.sublinkplas.ir, port: 12040, type: vless, tls: true, packet-encoding: xudp, uuid: 3f822439-b9da-497c-813c-f21fcd2e3c5d, servername: testspeed-foreign.tci.ir, host: testspeed-foreign.tci.ir, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 33hVTwP-1rQYG0F92oXJ-o1zPo4Cc8n2Uml_i9tv6XM, short-id: aa74a7a98e86f2ed}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 𝓹𝓵𝓪𝓼 ♡`, server: tu1a.plasdomain.ir, port: 15694, type: vless, tls: true, packet-encoding: xudp, uuid: 3f822439-b9da-497c-813c-f21fcd2e3c5d, servername: ajax.googleapis.com, host: ajax.googleapis.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: BY0QfaqwH2Kv1WUU584R7NHcm4Z1Praq5YuYGrJ1BkM, short-id: aa74a7a98e86f2ed}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 𝓹𝓵𝓪𝓼 ♡ 2, server: upes2.plasmoon.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 3f822439-b9da-497c-813c-f21fcd2e3c5d, servername: play.google.com, host: play.google.com, path: /, reality-opts: {public-key: ASmPIMB25D2LpasCAfuMuNDN3Kv-Dj3bX8THE7YpknE, short-id: 0f8938e71c53a6cd}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 𝓹𝓵𝓪𝓼 ♡ 3, server: upnl2.plasmoon.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 3f822439-b9da-497c-813c-f21fcd2e3c5d, servername: play.google.com, host: play.google.com, path: /, reality-opts: {public-key: ASmPIMB25D2LpasCAfuMuNDN3Kv-Dj3bX8THE7YpknE, short-id: 0f8938e71c53a6cd}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "[@ Kia_Net] 🇷🇺", server: 188.225.57.78, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 7610be85-9855-4010-8929-ce16d4993969, servername: app4.betust.net, host: app4.betust.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: NCW-zK60GXsiDdlbxww18Pqp4kz3zTG1URHWS_bnfDk, short-id: 3f7e0363}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "[@Kia_Net] 🇱🇹", server: 84.32.215.96, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 7610be85-9855-4010-8929-ce16d4993969, servername: app26.betust.net, host: app26.betust.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 5pR15ATlWW3tVzfnMN3xoiN56LjIUbhnOMp37ZvTFUc, short-id: d44d6d46}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "[@Kia_Net] 🇩🇪", server: de-1.srv.dvzh.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 91344c03-b37f-42c5-90f1-cbb95c5cf256, servername: de-1.srv.dvzh.net, alpn: [h3%2Ch2], network: ws, ws-opts: {path: /upload/session, headers: {Host: de-1.srv.dvzh.net}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 𝓹𝓵𝓪𝓼 ♡
-      - 𝓹𝓵𝓪𝓼 ♡`
-      - 𝓹𝓵𝓪𝓼 ♡ 2
-      - 𝓹𝓵𝓪𝓼 ♡ 3
+      - "[@ Kia_Net] 🇷🇺"
+      - "[@Kia_Net] 🇱🇹"
+      - "[@Kia_Net] 🇩🇪"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 𝓹𝓵𝓪𝓼 ♡
-      - 𝓹𝓵𝓪𝓼 ♡`
-      - 𝓹𝓵𝓪𝓼 ♡ 2
-      - 𝓹𝓵𝓪𝓼 ♡ 3
+      - "[@ Kia_Net] 🇷🇺"
+      - "[@Kia_Net] 🇱🇹"
+      - "[@Kia_Net] 🇩🇪"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 𝓹𝓵𝓪𝓼 ♡
-      - 𝓹𝓵𝓪𝓼 ♡`
-      - 𝓹𝓵𝓪𝓼 ♡ 2
-      - 𝓹𝓵𝓪𝓼 ♡ 3
+      - "[@ Kia_Net] 🇷🇺"
+      - "[@Kia_Net] 🇱🇹"
+      - "[@Kia_Net] 🇩🇪"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 𝓹𝓵𝓪𝓼 ♡
-      - 𝓹𝓵𝓪𝓼 ♡`
-      - 𝓹𝓵𝓪𝓼 ♡ 2
-      - 𝓹𝓵𝓪𝓼 ♡ 3
+      - "[@ Kia_Net] 🇷🇺"
+      - "[@Kia_Net] 🇱🇹"
+      - "[@Kia_Net] 🇩🇪"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 𝓹𝓵𝓪𝓼 ♡
-      - 𝓹𝓵𝓪𝓼 ♡`
-      - 𝓹𝓵𝓪𝓼 ♡ 2
-      - 𝓹𝓵𝓪𝓼 ♡ 3
+      - "[@ Kia_Net] 🇷🇺"
+      - "[@Kia_Net] 🇱🇹"
+      - "[@Kia_Net] 🇩🇪"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 𝓹𝓵𝓪𝓼 ♡
-      - 𝓹𝓵𝓪𝓼 ♡`
-      - 𝓹𝓵𝓪𝓼 ♡ 2
-      - 𝓹𝓵𝓪𝓼 ♡ 3
+      - "[@ Kia_Net] 🇷🇺"
+      - "[@Kia_Net] 🇱🇹"
+      - "[@Kia_Net] 🇩🇪"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -93,10 +86,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 𝓹𝓵𝓪𝓼 ♡
-      - 𝓹𝓵𝓪𝓼 ♡`
-      - 𝓹𝓵𝓪𝓼 ♡ 2
-      - 𝓹𝓵𝓪𝓼 ♡ 3
+      - "[@ Kia_Net] 🇷🇺"
+      - "[@Kia_Net] 🇱🇹"
+      - "[@Kia_Net] 🇩🇪"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
