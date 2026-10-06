@@ -6,10 +6,8 @@ log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
   - {name: "@Capoit`", server: 167.82.76.27, port: 443, type: trojan, password: mitivpn, sni: ssl.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: "", headers: {Host: ssl.fastly.com}}, udp: true, tfo: false}
-  - {name: "@Capoit` 2", server: 199.232.78.160, port: 443, type: trojan, password: mitivpn, sni: ssl.fastly.com, skip-cert-verify: false, network: ws, ws-opts: {path: "/?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET", headers: {Host: ssl.fastly.com}}, udp: true, tfo: false}
-  - {name: "@Capoit` 3", server: 62.152.58.96, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 23a64225-0119-44ce-a24e-114eae8648a9, servername: adm.ichveter.click, network: ws, ws-opts: {path: /api/v1/events, headers: {Host: adm.ichveter.click}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 4", server: 195.252.179.1, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 596086c9-3167-0004-97a1-c04311039e06, servername: diffoscope.com, host: diffoscope.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 6VMgXXhZdJCiOG05EyK_zTHh00kpFGrZJeZIEPgqhjY, short-id: 1c3e8241a8743df9}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 5", server: 50.7.121.4, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: effd2c78-3ab8-4d3f-893f-49a703c27208, servername: filesconvert.org, host: filesconvert.org, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: U_E3xSI6QY_Mj-3zjkB4esvMj0aVvYH6W6oHOR50XBs, short-id: 10debbdf94767541}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 2", server: 195.252.179.1, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 596086c9-3167-0004-97a1-c04311039e06, servername: diffoscope.com, host: diffoscope.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 6VMgXXhZdJCiOG05EyK_zTHh00kpFGrZJeZIEPgqhjY, short-id: 1c3e8241a8743df9}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 3", server: 194.62.105.40, port: 37387, type: vless, tls: true, packet-encoding: xudp, uuid: a44768a4-f613-4083-a76d-0df966efdd7e, host: play.google.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -19,8 +17,6 @@ proxy-groups:
       - "@Capoit`"
       - "@Capoit` 2"
       - "@Capoit` 3"
-      - "@Capoit` 4"
-      - "@Capoit` 5"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -30,8 +26,6 @@ proxy-groups:
       - "@Capoit`"
       - "@Capoit` 2"
       - "@Capoit` 3"
-      - "@Capoit` 4"
-      - "@Capoit` 5"
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -41,8 +35,6 @@ proxy-groups:
       - "@Capoit`"
       - "@Capoit` 2"
       - "@Capoit` 3"
-      - "@Capoit` 4"
-      - "@Capoit` 5"
   - name: 📲 电报信息
     type: select
     proxies:
@@ -51,8 +43,6 @@ proxy-groups:
       - "@Capoit`"
       - "@Capoit` 2"
       - "@Capoit` 3"
-      - "@Capoit` 4"
-      - "@Capoit` 5"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -61,8 +51,6 @@ proxy-groups:
       - "@Capoit`"
       - "@Capoit` 2"
       - "@Capoit` 3"
-      - "@Capoit` 4"
-      - "@Capoit` 5"
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -71,8 +59,6 @@ proxy-groups:
       - "@Capoit`"
       - "@Capoit` 2"
       - "@Capoit` 3"
-      - "@Capoit` 4"
-      - "@Capoit` 5"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -103,8 +89,6 @@ proxy-groups:
       - "@Capoit`"
       - "@Capoit` 2"
       - "@Capoit` 3"
-      - "@Capoit` 4"
-      - "@Capoit` 5"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

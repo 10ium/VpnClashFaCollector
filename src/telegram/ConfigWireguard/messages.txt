@@ -1,97 +1,100 @@
 # آرشیو کانال: @ConfigWireguard
-بروزرسانی: 2026-10-06 01:05:29 UTC
+بروزرسانی: 2026-10-06 16:25:39 UTC
+
+### 🕒 2026-10-06 15:00:35 UTC
+> ↪️ **Forwarded**
+
+جمع بندی راه‌های کنونی اتصال به کلودفلر بر روی فایروال همراه اول:  1. CDN/WORKER with ECH  برای اتصال به یک کانفیگ cdn/worker از طریق ECH باید ابتدا از یک آدرس مناسب به طور مثال 188.114.97.6 استفاده کنید، finalMask و cipherSuites را پاک کنید، فینگرپرینت را…
+
+---
+
+### 🕒 2026-10-06 15:00:35 UTC
+> ↪️ **Forwarded**
+
+**جمع بندی راه‌های کنونی اتصال به کلودفلر بر روی فایروال همراه اول:**
+1. CDN/WORKER with ECH
+برای اتصال به یک کانفیگ cdn/worker از طریق ECH باید ابتدا از یک آدرس مناسب به طور مثال 
+`188.114.97.6`
+ استفاده کنید، finalMask و cipherSuites را پاک کنید، فینگرپرینت را روی chrome قرار دهید و در قسمت echConfigList به طور مثال مقدار:
+`cloudflare-ech.com+udp://1.1.1.1`
+را وارد کنید.
+2. CDN/WORKER with IPv6
+ابتدا echConfigList و cipherSuites را پاک کنید، فینگرپرینت را روی chrome قرار دهید و سپس از یک آدرس IPv6 به طور مثال 
+`2a06:98c1:3121::7`
+ استفاده کنید.
+سپس در صورتی که دامنه‌ی شما فیلتر نیست، finalMask را خالی بزارید، در غیر این صورت finalMask را باید tlshello-0-len (همان مقدار متد F&F) قرار دهید.
+3. WARP with IPv6
+از قسمت add aether ابتدا پروتوکل را روی wireguard/warp-in-warp قرار دهید، نوع آیپی را IPv6 انتخاب کنید، اسکن کنید، بعد از پیدا شدن آیپی اسم انتخاب کنید و سیو کنید.
+////////////////////
+**جمع بندی راه‌های کنونی اتصال به کلودفلر بر روی فایروال ایرانسل:**
+1. CDN/WORKER with F&F method
+ابتدا echConfigList را پاک کنید، از یک آدرس مناسب به طور مثال 
+`188.114.97.6`
+ استفاده کنید، finalMask را tlshello-0-len (همان مقدار متد F&F) قرار دهید و برای فایروال ایرانسل حتما باید cipherSuites را روی semi-python (همان مقدار متد F&F) و فینگرپرینت را روی unsafe قرار دهید، همچنین دقت کنید که مقدار ALPN را درست انتخاب کرده باشید (http/1.1 برای ws و h2,http/1.1 برای XHTTP)
+2. WARP 
+همان مراحل فایروال همراه اول، منتها روی فایروال ایرانسل میتوانید از هر نوع IPی استفاده کنید.
+3. MASQUE/H2 
+از قسمت add aether ابتدا پروتوکل را روی MASQUE-HTTP/2 قرار دهید، فینگرپرینت را روی semi-python و finalMask را روی tlshello-0-len قرار دهید سپس اسکن کنید، و بعد از پیدا شدن آیپی اسم انتخاب کنید و سیو کنید.
+////////////////////
+**دقت کنید در برخی مناطق سیم کارتتون میتونه همراه اول باشه ولی فایروالتون ایرانسل باشه و بالعکس سیم کارتتون میتونه ایرانسل باشه ولی فایروالتون همراه اول باشه.**
+سایر نت ها هم معمولا از یکی از این دو فایروال استفاده میکنند.
+
+---
+
+### 🕒 2026-10-06 11:31:27 UTC
+Telegram Proxy
+[https://t.me/proxy?server=91.98.124.25&port=443&secret=YyEEgYdJXfrFmgMCIMJdjjRueWVrdGFuZXQA](https://t.me/proxy?server=91.98.124.25&port=443&secret=YyEEgYdJXfrFmgMCIMJdjjRueWVrdGFuZXQA)
+[https://t.me/proxy?server=nasho.poolaki.co.uk&port=8443&secret=EERighJJvXrFGRMCIMJdCQ](https://t.me/proxy?server=nasho.poolaki.co.uk&port=8443&secret=EERighJJvXrFGRMCIMJdCQ)
+ 
+[https://t.me/proxy?server=51.254.130.47&port=8443&secret=a84102e409230c3b69dd4f68cef86baf](https://t.me/proxy?server=51.254.130.47&port=8443&secret=a84102e409230c3b69dd4f68cef86baf)
+[https://t.me/proxy?server=faq.slamawna.info&port=444&secret=dd41b712fe12019c64e281bcb6aeccded7](https://t.me/proxy?server=faq.slamawna.info&port=444&secret=dd41b712fe12019c64e281bcb6aeccded7)
+[https://t.me/proxy?server=atr.golabkashan.info&port=8443&secret=1603010200010001fc030386e24c3add](https://t.me/proxy?server=atr.golabkashan.info&port=8443&secret=1603010200010001fc030386e24c3add)
+[https://t.me/proxy?server=me.foltmeingop.co.uk&port=8880&secret=eeNEgYdJvXrFGRMCIMJdCQ](https://t.me/proxy?server=me.foltmeingop.co.uk&port=8880&secret=eeNEgYdJvXrFGRMCIMJdCQ)
+[https://t.me/proxy?server=bale.foltmeingop.co.uk&port=8880&secret=eeNEgYdJvXrFGRMCIMJdCQ](https://t.me/proxy?server=bale.foltmeingop.co.uk&port=8880&secret=eeNEgYdJvXrFGRMCIMJdCQ)
+[https://t.me/proxy?server=dizgrakh.mamadali.co.uk&port=4455&secret=dd104462821249bd7ac519130220c25d09](https://t.me/proxy?server=dizgrakh.mamadali.co.uk&port=4455&secret=dd104462821249bd7ac519130220c25d09)
+[https://t.me/proxy?server=irogallery.golgoli1.co.uk&port=2096&secret=eeNEgYdJvXrFGRMCIMJdCQ](https://t.me/proxy?server=irogallery.golgoli1.co.uk&port=2096&secret=eeNEgYdJvXrFGRMCIMJdCQ)
+[https://t.me/proxy?server=noone.lavazemi1.co.uk&port=2083&secret=eeNEgYdJvXrFGRMCIMJdCQ](https://t.me/proxy?server=noone.lavazemi1.co.uk&port=2083&secret=eeNEgYdJvXrFGRMCIMJdCQ)
+[https://t.me/proxy?server=dedicated.syscloudio.co.uk&port=8443&secret=EERighJJvXrFGRMCIMJdCQ](https://t.me/proxy?server=dedicated.syscloudio.co.uk&port=8443&secret=EERighJJvXrFGRMCIMJdCQ)
+[https://t.me/proxy?server=mini.lavazemi4.co.uk&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d](https://t.me/proxy?server=mini.lavazemi4.co.uk&port=443&secret=ee1603010200010001fc030386e24c3add626973636f7474692e79656b74616e65742e636f6d)
+[https://t.me/proxy?server=n88j8b9.ir.meli-n13.info&port=8443&secret=104462821249bd7ac519130220c25d09](https://t.me/proxy?server=n88j8b9.ir.meli-n13.info&port=8443&secret=104462821249bd7ac519130220c25d09)
+[https://t.me/proxy?server=1addnl1.ir.ir.ir.meli-n12.info&port=8443&secret=dd104462821249bd7ac519130220c25d09](https://t.me/proxy?server=1addnl1.ir.ir.ir.meli-n12.info&port=8443&secret=dd104462821249bd7ac519130220c25d09)
+[https://t.me/proxy?server=d4a7c1f8-3e9b-425d-a1c6-9f8e2b7a4d5c.casa&port=80&secret=eefc56fb73c972a2309c4787bc1364c2207777772e636c6f7564666c6172652e636f6d](https://t.me/proxy?server=d4a7c1f8-3e9b-425d-a1c6-9f8e2b7a4d5c.casa&port=80&secret=eefc56fb73c972a2309c4787bc1364c2207777772e636c6f7564666c6172652e636f6d)
+[https://t.me/proxy?server=188.245.1.146&port=443&secret=YyEEgYdJXfrFmgMCIMJdjjRueWVrdGFuZXQA](https://t.me/proxy?server=188.245.1.146&port=443&secret=YyEEgYdJXfrFmgMCIMJdjjRueWVrdGFuZXQA)
+[https://t.me/proxy?server=167.233.135.233&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ](https://t.me/proxy?server=167.233.135.233&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ)
+[https://t.me/proxy?server=cocorichmond.pareporeh.info.&port=7799&secret=dd10400103324995b07c030386e886e7f1](https://t.me/proxy?server=cocorichmond.pareporeh.info.&port=7799&secret=dd10400103324995b07c030386e886e7f1)
+[https://t.me/proxy?server=esteghlal.goooalir.co.uk&port=8443&secret=dd104462821249bd7ac519130220c25d09](https://t.me/proxy?server=esteghlal.goooalir.co.uk&port=8443&secret=dd104462821249bd7ac519130220c25d09)
+[https://t.me/proxy?server=www.digikallamall.ir.&port=8443&secret=dd104462821249bd7ac519130220c25d09](https://t.me/proxy?server=www.digikallamall.ir.&port=8443&secret=dd104462821249bd7ac519130220c25d09)
+[https://t.me/proxy?server=bale.foltmeingop.co.uk&port=8880&secret=eeNEgYdJvXrFGRMCIMJdCQ](https://t.me/proxy?server=bale.foltmeingop.co.uk&port=8880&secret=eeNEgYdJvXrFGRMCIMJdCQ)
+[https://t.me/proxy?server=bookmook.hichibehichi-co.info.&port=2882&secret=dd10400103324995b07c030386e886e7f1](https://t.me/proxy?server=bookmook.hichibehichi-co.info.&port=2882&secret=dd10400103324995b07c030386e886e7f1)
+[https://t.me/proxy?server=silnet.varfootball.co.uk&port=2053&secret=eeNEgYdJvXrFGRMCIMJdCQ](https://t.me/proxy?server=silnet.varfootball.co.uk&port=2053&secret=eeNEgYdJvXrFGRMCIMJdCQ)
+[https://t.me/proxy?server=silver.ciaude.co.uk&port=2096&secret=eeNEgYdJvXrFGRMCIMJdCQ](https://t.me/proxy?server=silver.ciaude.co.uk&port=2096&secret=eeNEgYdJvXrFGRMCIMJdCQ)
+[https://t.me/proxy?server=vahshianeh.ghodratitarin.info.&port=7799&secret=dd10400103324995b07c030386e886e7f1](https://t.me/proxy?server=vahshianeh.ghodratitarin.info.&port=7799&secret=dd10400103324995b07c030386e886e7f1)
+[https://t.me/proxy?server=irogallery.golgoli1.co.uk&port=2096&secret=eeNEgYdJvXrFGRMCIMJdCQ](https://t.me/proxy?server=irogallery.golgoli1.co.uk&port=2096&secret=eeNEgYdJvXrFGRMCIMJdCQ)
+[https://t.me/proxy?server=blue.golgoli2.co.uk&port=2096&secret=ee1603010200010001fc030386e24c3add7777772e7961686f6f2e636f6d](https://t.me/proxy?server=blue.golgoli2.co.uk&port=2096&secret=ee1603010200010001fc030386e24c3add7777772e7961686f6f2e636f6d)
+[https://t.me/proxy?server=run.golgoli2.co.uk&port=2053&secret=eeNEgYdJvXrFGRMCIMJdCQ](https://t.me/proxy?server=run.golgoli2.co.uk&port=2053&secret=eeNEgYdJvXrFGRMCIMJdCQ)
+
+---
+
+### 🕒 2026-10-06 06:30:01 UTC
+فیلترشکن دیفیکس توی جدیدترین بروزرسانی خودش قابلیت تانل‌کردن کل سیستم رو بصورت آزمایشی برای ویندوز و لینوکس اضافه کرده.
+در این بروزرسانی عملکرد کلی تانل بهبود پیدا کرده، مشکل نمایش پرچم کشور محل اتصال رفع شده و چند ایراد جزئی برطرف شدن. این نسخه درحال حاضر روی گیت‌هاب و گوگل‌پلی منتشر شده و بروزرسانی مایکروسافت‌استور و اپل‌استور هم بعد از تکمیل ریویو، در دسترس عموم قرار می‌گیرن.
+***👉***
+ 
+[defyxvpn.com/download](http://defyxvpn.com/download)
+***🔗***
+ 
+[ᴡᴇʙꜱɪᴛᴇ](https://ircf.space/)
+ • 
+[ᴠᴘɴʜᴜʙ](https://t.me/persianvpnhub)
+ • 
+[ɢɪᴛʜᴜʙᴍɪʀʀᴏʀ](https://t.me/PersianGithubMirror)
+[@ircfspace](https://t.me/ircfspace)
+
+---
 
 ### 🕒 2026-10-05 16:50:21 UTC
 Amnezia VPN , WG Tunnel 
 `[Interface]PrivateKey = eAVqHOPWm9081sH1firI68Qv3H719bTEBV+2MNazQGw=Address = 100.64.7.7/32DNS = 198.18.0.1,198.18.0.2Jc = 4Jmin = 40Jmax = 70S1 = 0S2 = 0S3 = 0S4 = 0H1 = 1H2 = 2H3 = 3H4 = 4I1 = <b 0x494e56495445207369703a626f624062696c6f78692e636f6d205349502f322e300d0a5669613a205349502f322e302f55445020706333332e61746c616e74612e636f6d3b6272616e63683d7a39684734624b3737366173646864730d0a4d61782d466f7277617264733a2037300d0a546f3a20426f62203c7369703a626f624062696c6f78692e636f6d3e0d0a46726f6d3a20416c696365203c7369703a616c6963654061746c616e74612e636f6d3e3b7461673d313932383330313737340d0a43616c6c2d49443a20613834623463373665363637313040706333332e61746c616e74612e636f6d0d0a435365713a2033313431353920494e564954450d0a436f6e746163743a203c7369703a616c69636540706333332e61746c616e74612e636f6d3e0d0a436f6e74656e742d547970653a206170706c69636174696f6e2f7364700d0a436f6e74656e742d4c656e6774683a20300d0a0d0a>I2 = <b 0x5349502f322e302031303020547279696e670d0a5669613a205349502f322e302f55445020706333332e61746c616e74612e636f6d3b6272616e63683d7a39684734624b3737366173646864730d0a546f3a20426f62203c7369703a626f624062696c6f78692e636f6d3e0d0a46726f6d3a20416c696365203c7369703a616c6963654061746c616e74612e636f6d3e3b7461673d313932383330313737340d0a43616c6c2d49443a20613834623463373665363637313040706333332e61746c616e74612e636f6d0d0a435365713a2033313431353920494e564954450d0a436f6e74656e742d4c656e6774683a20300d0a0d0a>[Peer]PublicKey = KgTUh3KLijVluDvNpzDCJJfrJ7EyLzYLmdHCksG4sRg=Endpoint = 91.148.248.64:51820AllowedIPs = 0.0.0.0/0`
-
----
-
-### 🕒 2026-10-05 11:45:16 UTC
-پل Argo VPN
------BEGIN ARGO VPN BRIDGE BLOCK-----
-eJwNzMuOgjAUANB/6VYT8eo0YsKCR6dTFATf465QhlxHwJRX
-wMy/j/uT8yJdpmusSrKeT8lTDo9KKrIm2eD3aWEaCYRd4goq
-fhluXX+8XX24XQXu0K+SxRkk9O03mI3AHlNuDuptQy8ef2LL
-IlNSY17KptXZuwzYyRUeMB0FF2Mojkab2qlXZI3Kl2E0cWGM
-+Lgx4KvTuLsH3EZmL/dc5XtJ2dZzlOlM4tnqjpR+HGyqH3LW
-z8tnDPVnxKvcIn//8npB+Q==
------END ARGO VPN BRIDGE BLOCK-----
------BEGIN ARGO VPN BRIDGE BLOCK-----
-eJwVzE0TgUAYAOD/stccUkJmHGrR7A5LGLO6tQlv6WOlbVrj
-v+P8zDxvpNJnA1WJZsMBquP+UcUXNENpT7ukcE1hMSUwGZN8
-CWtMdcSpFXECW6BNUj6yc1HfBTiZsMy/d8KmJskqky2Yiwao
-gVsZv9pn+is3yxAT/2S3UqqDlsku9NscL+S+F7nB+6niYSRT
-Iy6ircv8K3jgaVUGOzL2AqZZcllNpk2n+XVE2uDmSGZDjd3h
-saiCveHN5+jzBaOkREs=
------END ARGO VPN BRIDGE BLOCK-----
-
----
-
-### 🕒 2026-10-05 08:42:02 UTC
-Telegram Proxy
-[https://t.me/proxy?server=napoli.goooalir.co.uk&port=8443&secret=dd104462821249bd7ac519130220c25d09](https://t.me/proxy?server=napoli.goooalir.co.uk&port=8443&secret=dd104462821249bd7ac519130220c25d09)
-[https://t.me/proxy?server=BAHMAN.goooalir.co.uk&port=8443&secret=dd104462821249bd7ac519130220c25d09](https://t.me/proxy?server=BAHMAN.goooalir.co.uk&port=8443&secret=dd104462821249bd7ac519130220c25d09)
-[tg://proxy?server=91.107.152.115&port=8443&secret=dd104462821249bd7ac519130220c25d09](tg://proxy?server=91.107.152.115&port=8443&secret=dd104462821249bd7ac519130220c25d09)
-[https://t.me/proxy?server=xvif.0mhku.cst.8bfy5.hif6.9pn.ir.&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ](https://t.me/proxy?server=xvif.0mhku.cst.8bfy5.hif6.9pn.ir.&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ)
-[https://t.me/proxy?server=www.lwww.ir.&port=8443&secret=3WMho4GHSV36xZoDAiDCXY4AAq5W5G55ZWt0YW5ldC5jb21mYXJheqF2LmNvbXZhbi5uYWp2YS5jb20AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA](https://t.me/proxy?server=www.lwww.ir.&port=8443&secret=3WMho4GHSV36xZoDAiDCXY4AAq5W5G55ZWt0YW5ldC5jb21mYXJheqF2LmNvbXZhbi5uYWp2YS5jb20AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
-[https://t.me/proxy?server=91.98.124.25&port=443&secret=YyEEgYdJXfrFmgMCIMJdjjRueWVrdGFuZXQA](https://t.me/proxy?server=91.98.124.25&port=443&secret=YyEEgYdJXfrFmgMCIMJdjjRueWVrdGFuZXQA)
-[https://t.me/proxy?server=ir.esdata.info&port=8443&secret=EERighJJvXrFGRMCIMjdCQ](https://t.me/proxy?server=ir.esdata.info&port=8443&secret=EERighJJvXrFGRMCIMjdCQ)
-[https://t.me/proxy?server=5ti.do.ru7.lq.v.8v.ir.ir.ir.pd.8kmc.co.uk.&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQAAq5W5G55ZWt0YW5ldC5jb21mYXJheqF2LmNvbXZhbi5uYWp2YS5jb20AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA](https://t.me/proxy?server=5ti.do.ru7.lq.v.8v.ir.ir.ir.pd.8kmc.co.uk.&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQAAq5W5G55ZWt0YW5ldC5jb21mYXJheqF2LmNvbXZhbi5uYWp2YS5jb20AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
-[https://t.me/proxy?server=91.98.124.25&port=443&secret=YyEEgYdJXfrFmgMCIMJdjjRueWVrdGFuZXQA](https://t.me/proxy?server=91.98.124.25&port=443&secret=YyEEgYdJXfrFmgMCIMJdjjRueWVrdGFuZXQA)
-[https://t.me/proxy?server=www.yesyesno.ir.&port=8443&secret=3RcBGGq9DqYBIxkuJkNPkaU](https://t.me/proxy?server=www.yesyesno.ir.&port=8443&secret=3RcBGGq9DqYBIxkuJkNPkaU)
-[https://t.me/proxy?server=188.206-197-43.ir.&port=8443&secret=3RBEBIGHSV36xZoDAiDCXLM](https://t.me/proxy?server=188.206-197-43.ir.&port=8443&secret=3RBEBIGHSV36xZoDAiDCXLM)
-[https://t.me/proxy?server=yassnab.pan.weed.hamintori.co.uk&port=443&secret=7l984oosSBbGySPf1NVjDgE=](https://t.me/proxy?server=yassnab.pan.weed.hamintori.co.uk&port=443&secret=7l984oosSBbGySPf1NVjDgE=)
-[https://t.me/proxy?server=hey.foltmeingop.co.uk&port=8880&secret=eeNEgYdJvXrFGRMCIMJdCQ](https://t.me/proxy?server=hey.foltmeingop.co.uk&port=8880&secret=eeNEgYdJvXrFGRMCIMJdCQ)
-[tg://proxy?server=yyh.ir.meli-n13.info&port=8443&secret=104462821249bd7ac519130220c25d09](tg://proxy?server=yyh.ir.meli-n13.info&port=8443&secret=104462821249bd7ac519130220c25d09)
-[https://t.me/proxy?server=mmh.ir.ir.ir.meli-n12.info&port=8443&secret=dd104462821249bd7ac519130220c25d09](https://t.me/proxy?server=mmh.ir.ir.ir.meli-n12.info&port=8443&secret=dd104462821249bd7ac519130220c25d09)
-[https://t.me/proxy?server=xvif.0mhku.cst.8bfy5.hif6.9pn.ir.&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ](https://t.me/proxy?server=xvif.0mhku.cst.8bfy5.hif6.9pn.ir.&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ)
-[https://t.me/proxy?server=www.lwww.ir.&port=8443&secret=3WMho4GHSV36xZoDAiDCXY4AAq5W5G55ZWt0YW5ldC5jb21mYXJheqF2LmNvbXZhbi5uYWp2YS5jb20AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA](https://t.me/proxy?server=www.lwww.ir.&port=8443&secret=3WMho4GHSV36xZoDAiDCXY4AAq5W5G55ZWt0YW5ldC5jb21mYXJheqF2LmNvbXZhbi5uYWp2YS5jb20AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
-[https://t.me/proxy?server=91.98.124.25&port=443&secret=YyEEgYdJXfrFmgMCIMJdjjRueWVrdGFuZXQA](https://t.me/proxy?server=91.98.124.25&port=443&secret=YyEEgYdJXfrFmgMCIMJdjjRueWVrdGFuZXQA)
-[https://t.me/proxy?server=ir.esdata.info&port=8443&secret=EERighJJvXrFGRMCIMjdCQ](https://t.me/proxy?server=ir.esdata.info&port=8443&secret=EERighJJvXrFGRMCIMjdCQ)
-[https://t.me/proxy?server=188.245.1.146&port=443&secret=YyEEgYdJXfrFmgMCIMJdjjRueWVrdGFuZXQA](https://t.me/proxy?server=188.245.1.146&port=443&secret=YyEEgYdJXfrFmgMCIMJdjjRueWVrdGFuZXQA)
-[https://t.me/proxy?server=91.107.141.165&port=443&secret=YyEEgYdJXfrFmgMCIMJdjjRueWVrdGFuZXQ](https://t.me/proxy?server=91.107.141.165&port=443&secret=YyEEgYdJXfrFmgMCIMJdjjRueWVrdGFuZXQ)
-[https://t.me/proxy?server=91.98.124.25&port=443&secret=YyEEgYdJXfrFmgMCIMJdjjRueWVrdGFuZXQA](https://t.me/proxy?server=91.98.124.25&port=443&secret=YyEEgYdJXfrFmgMCIMJdjjRueWVrdGFuZXQA)
-[https://t.me/proxy?server=188.245.1.146&port=443&secret=YyEEgYdJXfrFmgMCIMJdjjRueWVrdGFuZXQA](https://t.me/proxy?server=188.245.1.146&port=443&secret=YyEEgYdJXfrFmgMCIMJdjjRueWVrdGFuZXQA)
-[https://t.me/proxy?server=91.107.141.165&port=443&secret=YyEEgYdJXfrFmgMCIMJdjjRueWVrdGFuZXQ](https://t.me/proxy?server=91.107.141.165&port=443&secret=YyEEgYdJXfrFmgMCIMJdjjRueWVrdGFuZXQ)
-[https://t.me/proxy?server=91.98.124.25&port=443&secret=YyEEgYdJXfrFmgMCIMJdjjRueWVrdGFuZXQA](https://t.me/proxy?server=91.98.124.25&port=443&secret=YyEEgYdJXfrFmgMCIMJdjjRueWVrdGFuZXQA)
-[https://t.me/proxy?server=fruit.golgoli2.co.uk&port=2096&secret=eeNEgYdJvXrFGRMCIMJdCQ](https://t.me/proxy?server=fruit.golgoli2.co.uk&port=2096&secret=eeNEgYdJvXrFGRMCIMJdCQ)
-[https://t.me/proxy?server=xvif.0mhku.cst.8bfy5.hif6.9pn.ir.&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ](https://t.me/proxy?server=xvif.0mhku.cst.8bfy5.hif6.9pn.ir.&port=8443&secret=eeNEgYdJvXrFGRMCIMJdCQ)
-[https://t.me/proxy?server=www.lwww.ir.&port=8443&secret=3WMho4GHSV36xZoDAiDCXY4AAq5W5G55ZWt0YW5ldC5jb21mYXJheqF2LmNvbXZhbi5uYWp2YS5jb20AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA](https://t.me/proxy?server=www.lwww.ir.&port=8443&secret=3WMho4GHSV36xZoDAiDCXY4AAq5W5G55ZWt0YW5ldC5jb21mYXJheqF2LmNvbXZhbi5uYWp2YS5jb20AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
-[https://t.me/proxy?server=fruit.golgoli2.co.uk&port=2096&secret=eeNEgYdJvXrFGRMCIMJdCQ](https://t.me/proxy?server=fruit.golgoli2.co.uk&port=2096&secret=eeNEgYdJvXrFGRMCIMJdCQ)
-[https://t.me/proxy?server=www.yesyesno.ir.&port=8443&secret=3RcBGGq9DqYBIxkuJkNPkaU](https://t.me/proxy?server=www.yesyesno.ir.&port=8443&secret=3RcBGGq9DqYBIxkuJkNPkaU)
-[https://t.me/proxy?server=188.206-197-43.ir.&port=8443&secret=3RBEBIGHSV36xZoDAiDCXLM](https://t.me/proxy?server=188.206-197-43.ir.&port=8443&secret=3RBEBIGHSV36xZoDAiDCXLM)
-[https://t.me/proxy?server=yassnab.pan.weed.hamintori.co.uk&port=443&secret=7l984oosSBbGySPf1NVjDgE=](https://t.me/proxy?server=yassnab.pan.weed.hamintori.co.uk&port=443&secret=7l984oosSBbGySPf1NVjDgE=)
-[https://t.me/proxy?server=91.98.124.25&port=443&secret=YyEEgYdJXfrFmgMCIMJdjjRueWVrdGFuZXQA](https://t.me/proxy?server=91.98.124.25&port=443&secret=YyEEgYdJXfrFmgMCIMJdjjRueWVrdGFuZXQA)
-[https://t.me/proxy?server=j4y67nf.ir.meli-n13.info&port=8443&secret=104462821249bd7ac519130220c25d09](https://t.me/proxy?server=j4y67nf.ir.meli-n13.info&port=8443&secret=104462821249bd7ac519130220c25d09)
-
----
-
-### 🕒 2026-10-05 07:01:44 UTC
-𝗙𝗥𝗘𝗘 𝗧𝗢 𝗨𝗦𝗘
-این پروژه برای استفاده، بررسی،
-توسعه و شخصی‌سازی در اختیار شماست.
-**❗برای فروش کانفنیگ نیست❗**
- توضیحات:
-برای حمایت شما ممنونیم تا چند روز دیگر که نسخع اصلی انتشار پیدا کرد قطعا  تو گیت هاب پخش نموده.
-**کانفنیگ هایی که میسازید بهتر است از قسمت تنظیمات یا خود قسمت افزودن کانفنیگ کانفنیگ های خود را اضافه نموده و استفاده کنید**
-**❗چند نکته مهم ❗**
-**وقتی ورکر خودتون ساختید بعد از ادرس ورکر /panel/ اضافه کنیدرمز پیش فرض parham هست بعدا میتونی از قسمت تنظیمات رمز عوض کنید ❗**
-**﻿**
-اموزش مرحله به مرحله در یار پنل هست حتما نگاه کنید
-***🫵***
-کانال:
-[https://t.me/parham_ste01](https://t.me/parham_ste01)
-لینک گپ :
-[https://t.me/+SchgZ4s1dGU4N2Y0](https://t.me/+SchgZ4s1dGU4N2Y0)
-**لینک ریپزاتوری گیت هاب**
-[https://github.com/parham-01/free-vpn-cludflare/tree/main](https://github.com/parham-01/free-vpn-cludflare/tree/main)
-— Parham 01
- 
-***🖤***
- 𝗠𝗔𝗗𝗘 𝗪𝗜𝗧𝗛 𝗖𝗢𝗗𝗘 & 𝗣𝗔𝗦𝗦𝗜𝗢𝗡
-    𝙇𝙚𝙩'𝙨 𝘽𝙪𝙞𝙡𝙙 𝙎𝙤𝙢𝙚𝙩𝙝𝙞𝙣𝙜 𝘾𝙤𝙤𝙡 
-***🚀***
 
 ---
 
