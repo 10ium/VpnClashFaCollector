@@ -466,10 +466,7 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: 45.32.52.173:8886, server: 45.32.52.173, port: 8886, type: trojan, password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437, sni: 45.32.52.173, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 77.74.123.106:4443, server: 77.74.123.106, port: 4443, type: trojan, password: s0_sdK93x9wer_D02Lz9cvK3_Sa014Oakl_C2z, sni: grape-test-italy.dynuddns.net, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 163.245.43.50:443, server: 163.245.43.50, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 203d434a-2a92-45df-8973-ca80434ecf73, servername: se-twitch.global-cdn.org, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: content.v1.Feed}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇩🇪 de2.srv.vbuste.ru:443, server: de2.srv.vbuste.ru, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 318c935d-c195-41d3-99ad-9bbcfdab3386, servername: de2.srv.vbuste.ru, host: de2.srv.vbuste.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 0-or5ogGhYbBgsVSrSC2Fhxyp2BN97Y9pqIdg61Qd08, short-id: 4be4110078ebed4a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇩🇪 de2.srv.vbuste.ru:443 2, server: de2.srv.vbuste.ru, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 318c935d-c195-41d3-99ad-9bbcfdab3386, servername: de2.srv.vbuste.ru, host: de2.srv.vbuste.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 0-or5ogGhYbBgsVSrSC2Fhxyp2BN97Y9pqIdg61Qd08, short-id: 4be4110078ebed4a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 188.130.209.216:443, server: 188.130.209.216, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 444623e9-f27d-487c-b7cc-436931967e79, servername: emaar.ru, host: emaar.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: M7yPV6xLi9h6EevpqZfXLZBuxoey8kz1c6Bh0pK5fho, short-id: 170ab9ced015571f}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -488,10 +485,7 @@ proxy-groups:
     type: select
     proxies:
       - 45.32.52.173:8886
-      - 77.74.123.106:4443
       - 163.245.43.50:443
-      - 🇩🇪 de2.srv.vbuste.ru:443
-      - 🇩🇪 de2.srv.vbuste.ru:443 2
       - 188.130.209.216:443
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -500,10 +494,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 45.32.52.173:8886
-      - 77.74.123.106:4443
       - 163.245.43.50:443
-      - 🇩🇪 de2.srv.vbuste.ru:443
-      - 🇩🇪 de2.srv.vbuste.ru:443 2
       - 188.130.209.216:443
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -512,10 +503,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 45.32.52.173:8886
-      - 77.74.123.106:4443
       - 163.245.43.50:443
-      - 🇩🇪 de2.srv.vbuste.ru:443
-      - 🇩🇪 de2.srv.vbuste.ru:443 2
       - 188.130.209.216:443
   - name: اتصال پایدار 🔗
     type: url-test
@@ -533,10 +521,7 @@ proxy-groups:
     interval: 600
     proxies:
       - 45.32.52.173:8886
-      - 77.74.123.106:4443
       - 163.245.43.50:443
-      - 🇩🇪 de2.srv.vbuste.ru:443
-      - 🇩🇪 de2.srv.vbuste.ru:443 2
       - 188.130.209.216:443
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -545,10 +530,7 @@ proxy-groups:
     interval: 600
     proxies:
       - 45.32.52.173:8886
-      - 77.74.123.106:4443
       - 163.245.43.50:443
-      - 🇩🇪 de2.srv.vbuste.ru:443
-      - 🇩🇪 de2.srv.vbuste.ru:443 2
       - 188.130.209.216:443
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -557,10 +539,7 @@ proxy-groups:
     interval: 600
     proxies:
       - 45.32.52.173:8886
-      - 77.74.123.106:4443
       - 163.245.43.50:443
-      - 🇩🇪 de2.srv.vbuste.ru:443
-      - 🇩🇪 de2.srv.vbuste.ru:443 2
       - 188.130.209.216:443
   - name: دانلود منیجر 📥
     type: select
