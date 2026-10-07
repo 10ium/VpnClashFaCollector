@@ -5,7 +5,6 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 45.32.52.173:8886, server: 45.32.52.173, port: 8886, type: trojan, password: e26a229d-e8f2-4ff9-8c7d-58a9d83ee437, sni: 45.32.52.173, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 163.245.43.50:443, server: 163.245.43.50, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 203d434a-2a92-45df-8973-ca80434ecf73, servername: se-twitch.global-cdn.org, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: content.v1.Feed}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 188.130.209.216:443, server: 188.130.209.216, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 444623e9-f27d-487c-b7cc-436931967e79, servername: emaar.ru, host: emaar.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: M7yPV6xLi9h6EevpqZfXLZBuxoey8kz1c6Bh0pK5fho, short-id: 170ab9ced015571f}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
@@ -14,7 +13,6 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 45.32.52.173:8886
       - 163.245.43.50:443
       - 188.130.209.216:443
   - name: ♻️ 自动选择
@@ -23,7 +21,6 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 45.32.52.173:8886
       - 163.245.43.50:443
       - 188.130.209.216:443
   - name: 🌍 国外媒体
@@ -32,7 +29,6 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 45.32.52.173:8886
       - 163.245.43.50:443
       - 188.130.209.216:443
   - name: 📲 电报信息
@@ -40,7 +36,6 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 45.32.52.173:8886
       - 163.245.43.50:443
       - 188.130.209.216:443
   - name: Ⓜ️ 微软服务
@@ -48,7 +43,6 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 45.32.52.173:8886
       - 163.245.43.50:443
       - 188.130.209.216:443
   - name: 🍎 苹果服务
@@ -56,7 +50,6 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 45.32.52.173:8886
       - 163.245.43.50:443
       - 188.130.209.216:443
   - name: 🎯 全球直连
@@ -86,7 +79,6 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 45.32.52.173:8886
       - 163.245.43.50:443
       - 188.130.209.216:443
 rules:
