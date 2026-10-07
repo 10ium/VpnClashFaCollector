@@ -465,13 +465,10 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: " ", server: de2.srv.vbuste.ru, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 318c935d-c195-41d3-99ad-9bbcfdab3386, servername: de2.srv.vbuste.ru, host: de2.srv.vbuste.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 0-or5ogGhYbBgsVSrSC2Fhxyp2BN97Y9pqIdg61Qd08, short-id: 4be4110078ebed4a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "  2", server: 45.151.71.63, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 3984a6ee-9fc6-4219-93fd-706c59e02171, servername: abuse.sellflow.org, host: abuse.sellflow.org, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "  3", server: 163.245.52.91, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 87fd990d-ca93-440a-bbd4-e8281c4a0910, servername: d3-ee1.cloud-cdn.xyz, host: d3-ee1.cloud-cdn.xyz, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: g36Z7YIqJMJP-uv3DBr72X5jvfjyW1qIAxa8TkWmpmQ, short-id: ad6e08b22389abd2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "  4", server: 157.228.155.185, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8, servername: addons.mozilla.org, host: addons.mozilla.org, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 4q8nqNb-0c-akP3XqVmen67BLXJVlx48a_GDRw16nVg, short-id: 5ea112e8}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "  5", server: 157.228.160.166, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8, servername: addons.mozilla.org, host: addons.mozilla.org, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: NOw-idkk3OCn-N0IRS93leujH4ik-E749O2T5BYJQ0M, short-id: 3cef317b}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "  6", server: 2.27.35.74, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8, servername: addons.mozilla.org, host: addons.mozilla.org, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: zAmNLsLPizp96b55zNe2kJ3zXBdpuNY0olnRaOpluks, short-id: 34e797af}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "  7", server: 2.27.69.117, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: df53b6c2-8005-475c-9eb9-74e1be785dc8, servername: addons.mozilla.org, host: addons.mozilla.org, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: -bn-69fLm8-ZIN4AWcFJTvliohVXnevdOK6E0HJF90Y, short-id: 123c2bff}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: " ", server: 193.29.139.234, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: 4a2rfixophdjffa8KVA4Aa, udp: true, tfo: false}
+  - {name: "  2", server: 31.59.210.26, port: 2088, type: vless, tls: true, packet-encoding: xudp, uuid: 5413edfb-08d6-4fba-b51c-809c04feb127, servername: www.yandex.ru, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: astracat}, reality-opts: {public-key: Eq3c19Y0WGB1APWMADQB-oxCvZFSVFAQxG5L6b8EkUg, short-id: b1ad165f903c62fe}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "  3", server: 169.40.42.15, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d65cc14c-f53f-4fe2-b262-97856601319c, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg, short-id: c39cc7310a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "", server: 38.110.1.246, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -491,10 +488,7 @@ proxy-groups:
       - " "
       - "  2"
       - "  3"
-      - "  4"
-      - "  5"
-      - "  6"
-      - "  7"
+      - ""
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -504,10 +498,7 @@ proxy-groups:
       - " "
       - "  2"
       - "  3"
-      - "  4"
-      - "  5"
-      - "  6"
-      - "  7"
+      - ""
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -517,10 +508,7 @@ proxy-groups:
       - " "
       - "  2"
       - "  3"
-      - "  4"
-      - "  5"
-      - "  6"
-      - "  7"
+      - ""
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -539,10 +527,7 @@ proxy-groups:
       - " "
       - "  2"
       - "  3"
-      - "  4"
-      - "  5"
-      - "  6"
-      - "  7"
+      - ""
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -552,10 +537,7 @@ proxy-groups:
       - " "
       - "  2"
       - "  3"
-      - "  4"
-      - "  5"
-      - "  6"
-      - "  7"
+      - ""
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -565,10 +547,7 @@ proxy-groups:
       - " "
       - "  2"
       - "  3"
-      - "  4"
-      - "  5"
-      - "  6"
-      - "  7"
+      - ""
   - name: دانلود منیجر 📥
     type: select
     proxies:
