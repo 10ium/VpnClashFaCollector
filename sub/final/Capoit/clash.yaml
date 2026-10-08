@@ -466,6 +466,8 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: "@Capoit`", server: 199.232.78.159, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6ead3f4c-023f-4322-b5c4-ac4e327d259d, servername: default.ssl.fastly.net, network: ws, ws-opts: {path: "/?", headers: {Host: default.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 2", server: 199.232.78.159, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6ead3f4c-023f-4322-b5c4-ac4e327d259d, servername: default.ssl.fastly.net, network: ws, ws-opts: {path: /, headers: {Host: default.ssl.fastly.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 3", server: 188.114.97.6, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e6df2095-a73c-4043-8693-8d5a03686870, servername: lucasjow.us.ci, alpn: [http%2F1.1], network: ws, ws-opts: {path: "/cart/docs/www/proxyip=108.160.132.132?ed#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET", headers: {Host: lucasjow.us.ci}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,6 +485,8 @@ proxy-groups:
     type: select
     proxies:
       - "@Capoit`"
+      - "@Capoit` 2"
+      - "@Capoit` 3"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -490,6 +494,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Capoit`"
+      - "@Capoit` 2"
+      - "@Capoit` 3"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -497,6 +503,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Capoit`"
+      - "@Capoit` 2"
+      - "@Capoit` 3"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -513,6 +521,8 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit`"
+      - "@Capoit` 2"
+      - "@Capoit` 3"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -520,6 +530,8 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit`"
+      - "@Capoit` 2"
+      - "@Capoit` 3"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -527,6 +539,8 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit`"
+      - "@Capoit` 2"
+      - "@Capoit` 3"
   - name: دانلود منیجر 📥
     type: select
     proxies:
