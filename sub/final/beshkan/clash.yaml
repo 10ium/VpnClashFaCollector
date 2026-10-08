@@ -466,8 +466,10 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: " ", server: 193.29.139.234, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: 4a2rfixophdjffa8KVA4Aa, udp: true, tfo: false}
-  - {name: "  2", server: 31.59.210.26, port: 2088, type: vless, tls: true, packet-encoding: xudp, uuid: 5413edfb-08d6-4fba-b51c-809c04feb127, servername: www.yandex.ru, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: astracat}, reality-opts: {public-key: Eq3c19Y0WGB1APWMADQB-oxCvZFSVFAQxG5L6b8EkUg, short-id: b1ad165f903c62fe}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "  3", server: 169.40.42.15, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d65cc14c-f53f-4fe2-b262-97856601319c, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg, short-id: c39cc7310a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "  2", server: 82.38.31.149, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
+  - {name: "  3", server: 82.38.31.155, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: oZIoA69Q8yhcQV8ka3Pa3A, udp: true, tfo: false}
+  - {name: "  4", server: 31.131.251.17, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 9ea8b000-58ce-005a-b108-989dd4f248f1, servername: quatro.lmstream.org, host: quatro.lmstream.org, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "  5", server: 169.40.42.15, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d65cc14c-f53f-4fe2-b262-97856601319c, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg, short-id: c39cc7310a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "", server: 38.110.1.246, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -488,6 +490,8 @@ proxy-groups:
       - " "
       - "  2"
       - "  3"
+      - "  4"
+      - "  5"
       - ""
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -498,6 +502,8 @@ proxy-groups:
       - " "
       - "  2"
       - "  3"
+      - "  4"
+      - "  5"
       - ""
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -508,6 +514,8 @@ proxy-groups:
       - " "
       - "  2"
       - "  3"
+      - "  4"
+      - "  5"
       - ""
   - name: اتصال پایدار 🔗
     type: url-test
@@ -527,6 +535,8 @@ proxy-groups:
       - " "
       - "  2"
       - "  3"
+      - "  4"
+      - "  5"
       - ""
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -537,6 +547,8 @@ proxy-groups:
       - " "
       - "  2"
       - "  3"
+      - "  4"
+      - "  5"
       - ""
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -547,6 +559,8 @@ proxy-groups:
       - " "
       - "  2"
       - "  3"
+      - "  4"
+      - "  5"
       - ""
   - name: دانلود منیجر 📥
     type: select
