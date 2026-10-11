@@ -466,9 +466,8 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: ss.042.node-for-bigairport.win:20006, server: ss.042.node-for-bigairport.win, port: 20006, type: ss, cipher: chacha20-ietf-poly1305, password: 792e0bdb-01db-450c-94c4-925151eb396e, udp: true, tfo: false}
-  - {name: 172.66.40.99:443, server: 172.66.40.99, port: 443, type: trojan, password: humanity, sni: www.trusteeforward.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.trusteeforward.com}}, udp: true, tfo: false}
   - {name: tk1.high-speed-test-56424.me:443, server: tk1.high-speed-test-56424.me, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 37615d66-5467-44a3-bc23-f2c3bef7f761, servername: aws.amazon.com, host: aws.amazon.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: p8VhFzvFOBAhWAEAeWmwDxT3xBSRsGYixqi0qnLFnBM, short-id: 21270a66}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: tk1.high-speed-test-56424.me:443 2, server: tk1.high-speed-test-56424.me, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 37615d66-5467-44a3-bc23-f2c3bef7f761, servername: aws.amazon.com, host: aws.amazon.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: p8VhFzvFOBAhWAEAeWmwDxT3xBSRsGYixqi0qnLFnBM, short-id: 21270a66}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 37.49.230.85:8443, server: 37.49.230.85, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: c6db98c5-9959-425e-9340-300779fc4e4b, servername: fr5.sodahub.online, alpn: [h2], network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: fr5grpc}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,9 +485,8 @@ proxy-groups:
     type: select
     proxies:
       - ss.042.node-for-bigairport.win:20006
-      - 172.66.40.99:443
       - tk1.high-speed-test-56424.me:443
-      - tk1.high-speed-test-56424.me:443 2
+      - 37.49.230.85:8443
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -496,9 +494,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - ss.042.node-for-bigairport.win:20006
-      - 172.66.40.99:443
       - tk1.high-speed-test-56424.me:443
-      - tk1.high-speed-test-56424.me:443 2
+      - 37.49.230.85:8443
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -506,9 +503,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - ss.042.node-for-bigairport.win:20006
-      - 172.66.40.99:443
       - tk1.high-speed-test-56424.me:443
-      - tk1.high-speed-test-56424.me:443 2
+      - 37.49.230.85:8443
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -525,9 +521,8 @@ proxy-groups:
     interval: 600
     proxies:
       - ss.042.node-for-bigairport.win:20006
-      - 172.66.40.99:443
       - tk1.high-speed-test-56424.me:443
-      - tk1.high-speed-test-56424.me:443 2
+      - 37.49.230.85:8443
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -535,9 +530,8 @@ proxy-groups:
     interval: 600
     proxies:
       - ss.042.node-for-bigairport.win:20006
-      - 172.66.40.99:443
       - tk1.high-speed-test-56424.me:443
-      - tk1.high-speed-test-56424.me:443 2
+      - 37.49.230.85:8443
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -545,9 +539,8 @@ proxy-groups:
     interval: 600
     proxies:
       - ss.042.node-for-bigairport.win:20006
-      - 172.66.40.99:443
       - tk1.high-speed-test-56424.me:443
-      - tk1.high-speed-test-56424.me:443 2
+      - 37.49.230.85:8443
   - name: دانلود منیجر 📥
     type: select
     proxies:
