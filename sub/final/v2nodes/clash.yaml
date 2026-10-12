@@ -465,9 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: ss.042.node-for-bigairport.win:20006, server: ss.042.node-for-bigairport.win, port: 20006, type: ss, cipher: chacha20-ietf-poly1305, password: 792e0bdb-01db-450c-94c4-925151eb396e, udp: true, tfo: false}
-  - {name: tk1.high-speed-test-56424.me:443, server: tk1.high-speed-test-56424.me, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 37615d66-5467-44a3-bc23-f2c3bef7f761, servername: aws.amazon.com, host: aws.amazon.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: p8VhFzvFOBAhWAEAeWmwDxT3xBSRsGYixqi0qnLFnBM, short-id: 21270a66}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: z5n1.vpnpolar.online:443, server: z5n1.vpnpolar.online, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 49e4b91a-bd15-4e54-9b51-41a3380afb51, servername: z5n1.vpnpolar.online, network: ws, ws-opts: {path: /beeline, headers: {Host: z5n1.vpnpolar.online}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 37.49.230.85:8443, server: 37.49.230.85, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: c6db98c5-9959-425e-9340-300779fc4e4b, servername: fr5.sodahub.online, alpn: [h2], network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: fr5grpc}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 80.47.12.94:443, server: 80.47.12.94, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c6e3c24c-ce20-4ad5-8c8c-68cb05890ea8, servername: pl-1-1.unturned-rust-dead.lol, host: pl-1-1.unturned-rust-dead.lol, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: edge.luxcloud.space:443, server: edge.luxcloud.space, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fc87e0d6-0f6a-423a-828e-1fed7e7ef29c, servername: edge.luxcloud.space, alpn: ["h2,http/1.1"], host: edge.luxcloud.space, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇨🇳 [openproxylist.com] vmess-TW", server: 654168416355441.d6f54hd1j.cc, port: 443, type: vmess, uuid: ecdc303d-bcbf-4129-bc02-dd67703f7081, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: 654168416355441.d6f54hd1j.cc, network: ws, ws-opts: {path: /, headers: {Host: 654168416355441.d6f54hd1j.cc}}, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,27 +486,33 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - ss.042.node-for-bigairport.win:20006
-      - tk1.high-speed-test-56424.me:443
+      - z5n1.vpnpolar.online:443
       - 37.49.230.85:8443
+      - 80.47.12.94:443
+      - edge.luxcloud.space:443
+      - 🇨🇳 [openproxylist.com] vmess-TW
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - ss.042.node-for-bigairport.win:20006
-      - tk1.high-speed-test-56424.me:443
+      - z5n1.vpnpolar.online:443
       - 37.49.230.85:8443
+      - 80.47.12.94:443
+      - edge.luxcloud.space:443
+      - 🇨🇳 [openproxylist.com] vmess-TW
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - ss.042.node-for-bigairport.win:20006
-      - tk1.high-speed-test-56424.me:443
+      - z5n1.vpnpolar.online:443
       - 37.49.230.85:8443
+      - 80.47.12.94:443
+      - edge.luxcloud.space:443
+      - 🇨🇳 [openproxylist.com] vmess-TW
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -520,27 +528,33 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - ss.042.node-for-bigairport.win:20006
-      - tk1.high-speed-test-56424.me:443
+      - z5n1.vpnpolar.online:443
       - 37.49.230.85:8443
+      - 80.47.12.94:443
+      - edge.luxcloud.space:443
+      - 🇨🇳 [openproxylist.com] vmess-TW
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - ss.042.node-for-bigairport.win:20006
-      - tk1.high-speed-test-56424.me:443
+      - z5n1.vpnpolar.online:443
       - 37.49.230.85:8443
+      - 80.47.12.94:443
+      - edge.luxcloud.space:443
+      - 🇨🇳 [openproxylist.com] vmess-TW
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - ss.042.node-for-bigairport.win:20006
-      - tk1.high-speed-test-56424.me:443
+      - z5n1.vpnpolar.online:443
       - 37.49.230.85:8443
+      - 80.47.12.94:443
+      - edge.luxcloud.space:443
+      - 🇨🇳 [openproxylist.com] vmess-TW
   - name: دانلود منیجر 📥
     type: select
     proxies:

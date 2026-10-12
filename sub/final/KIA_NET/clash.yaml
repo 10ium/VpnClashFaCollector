@@ -465,9 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "[@ Kia_Net] 🇷🇺", server: 188.225.57.78, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 7610be85-9855-4010-8929-ce16d4993969, servername: app4.betust.net, host: app4.betust.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: NCW-zK60GXsiDdlbxww18Pqp4kz3zTG1URHWS_bnfDk, short-id: 3f7e0363}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "[@Kia_Net] 🇱🇹", server: 84.32.215.96, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 7610be85-9855-4010-8929-ce16d4993969, servername: app26.betust.net, host: app26.betust.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 5pR15ATlWW3tVzfnMN3xoiN56LjIUbhnOMp37ZvTFUc, short-id: d44d6d46}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "[@Kia_Net] 🇩🇪", server: de-1.srv.dvzh.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 91344c03-b37f-42c5-90f1-cbb95c5cf256, servername: de-1.srv.dvzh.net, alpn: [h3%2Ch2], network: ws, ws-opts: {path: /upload/session, headers: {Host: de-1.srv.dvzh.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇹🇷 Turkey04🇹🇷`, server: 8.47.69.0, port: 443, type: trojan, password: humanity, sni: www.pleadcourt.org, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.pleadcourt.org}}, udp: true, tfo: false}
+  - {name: 🇵🇱 Poland01🇵🇱, server: 195.133.80.152, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ee18d188-14cc-417e-beb1-70e4add6d023, servername: pl3.nztvpn.com, host: pl3.nztvpn.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: UcFVpzbYTy8Iym6ZnCAtLQK-MeRg6wZuyni4xEOKG18, short-id: 0da7e14db353e7d0}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇫🇷 France💥@Kia_Net, server: ovhpok.goalir.co.uk, port: 2083, type: vmess, uuid: ff453627-5e7b-4943-8279-fc5f34bd3927, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,27 +484,27 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "[@ Kia_Net] 🇷🇺"
-      - "[@Kia_Net] 🇱🇹"
-      - "[@Kia_Net] 🇩🇪"
+      - 🇹🇷 Turkey04🇹🇷`
+      - 🇵🇱 Poland01🇵🇱
+      - 🇫🇷 France💥@Kia_Net
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "[@ Kia_Net] 🇷🇺"
-      - "[@Kia_Net] 🇱🇹"
-      - "[@Kia_Net] 🇩🇪"
+      - 🇹🇷 Turkey04🇹🇷`
+      - 🇵🇱 Poland01🇵🇱
+      - 🇫🇷 France💥@Kia_Net
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "[@ Kia_Net] 🇷🇺"
-      - "[@Kia_Net] 🇱🇹"
-      - "[@Kia_Net] 🇩🇪"
+      - 🇹🇷 Turkey04🇹🇷`
+      - 🇵🇱 Poland01🇵🇱
+      - 🇫🇷 France💥@Kia_Net
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -520,27 +520,27 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "[@ Kia_Net] 🇷🇺"
-      - "[@Kia_Net] 🇱🇹"
-      - "[@Kia_Net] 🇩🇪"
+      - 🇹🇷 Turkey04🇹🇷`
+      - 🇵🇱 Poland01🇵🇱
+      - 🇫🇷 France💥@Kia_Net
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "[@ Kia_Net] 🇷🇺"
-      - "[@Kia_Net] 🇱🇹"
-      - "[@Kia_Net] 🇩🇪"
+      - 🇹🇷 Turkey04🇹🇷`
+      - 🇵🇱 Poland01🇵🇱
+      - 🇫🇷 France💥@Kia_Net
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "[@ Kia_Net] 🇷🇺"
-      - "[@Kia_Net] 🇱🇹"
-      - "[@Kia_Net] 🇩🇪"
+      - 🇹🇷 Turkey04🇹🇷`
+      - 🇵🇱 Poland01🇵🇱
+      - 🇫🇷 France💥@Kia_Net
   - name: دانلود منیجر 📥
     type: select
     proxies:
