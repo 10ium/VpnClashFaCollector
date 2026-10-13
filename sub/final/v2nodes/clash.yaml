@@ -466,9 +466,10 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: z5n1.vpnpolar.online:443, server: z5n1.vpnpolar.online, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 49e4b91a-bd15-4e54-9b51-41a3380afb51, servername: z5n1.vpnpolar.online, network: ws, ws-opts: {path: /beeline, headers: {Host: z5n1.vpnpolar.online}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 37.49.230.85:8443, server: 37.49.230.85, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: c6db98c5-9959-425e-9340-300779fc4e4b, servername: fr5.sodahub.online, alpn: [h2], network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: fr5grpc}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 80.47.12.94:443, server: 80.47.12.94, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c6e3c24c-ce20-4ad5-8c8c-68cb05890ea8, servername: pl-1-1.unturned-rust-dead.lol, host: pl-1-1.unturned-rust-dead.lol, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ee.h1cloud.net:25895, server: ee.h1cloud.net, port: 25895, type: vless, tls: true, packet-encoding: xudp, uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2, servername: www.samsung.com, host: www.samsung.com, path: /, reality-opts: {public-key: jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k, short-id: a73f0410d728c823}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: edge.luxcloud.space:443, server: edge.luxcloud.space, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fc87e0d6-0f6a-423a-828e-1fed7e7ef29c, servername: edge.luxcloud.space, alpn: ["h2,http/1.1"], host: edge.luxcloud.space, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇬🇧 [openproxylist.com] vmess-GB", server: 172.67.142.177, port: 443, type: vmess, uuid: af4399b8-a152-486b-9cf6-acdd42d6c40c, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /London3, headers: {Host: uk.lovehk.xyz}}, udp: true, tfo: false}
   - {name: "🇨🇳 [openproxylist.com] vmess-TW", server: 654168416355441.d6f54hd1j.cc, port: 443, type: vmess, uuid: ecdc303d-bcbf-4129-bc02-dd67703f7081, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: 654168416355441.d6f54hd1j.cc, network: ws, ws-opts: {path: /, headers: {Host: 654168416355441.d6f54hd1j.cc}}, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -487,9 +488,10 @@ proxy-groups:
     type: select
     proxies:
       - z5n1.vpnpolar.online:443
-      - 37.49.230.85:8443
       - 80.47.12.94:443
+      - ee.h1cloud.net:25895
       - edge.luxcloud.space:443
+      - 🇬🇧 [openproxylist.com] vmess-GB
       - 🇨🇳 [openproxylist.com] vmess-TW
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -498,9 +500,10 @@ proxy-groups:
     tolerance: 50
     proxies:
       - z5n1.vpnpolar.online:443
-      - 37.49.230.85:8443
       - 80.47.12.94:443
+      - ee.h1cloud.net:25895
       - edge.luxcloud.space:443
+      - 🇬🇧 [openproxylist.com] vmess-GB
       - 🇨🇳 [openproxylist.com] vmess-TW
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -509,9 +512,10 @@ proxy-groups:
     tolerance: 50
     proxies:
       - z5n1.vpnpolar.online:443
-      - 37.49.230.85:8443
       - 80.47.12.94:443
+      - ee.h1cloud.net:25895
       - edge.luxcloud.space:443
+      - 🇬🇧 [openproxylist.com] vmess-GB
       - 🇨🇳 [openproxylist.com] vmess-TW
   - name: اتصال پایدار 🔗
     type: url-test
@@ -529,9 +533,10 @@ proxy-groups:
     interval: 600
     proxies:
       - z5n1.vpnpolar.online:443
-      - 37.49.230.85:8443
       - 80.47.12.94:443
+      - ee.h1cloud.net:25895
       - edge.luxcloud.space:443
+      - 🇬🇧 [openproxylist.com] vmess-GB
       - 🇨🇳 [openproxylist.com] vmess-TW
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -540,9 +545,10 @@ proxy-groups:
     interval: 600
     proxies:
       - z5n1.vpnpolar.online:443
-      - 37.49.230.85:8443
       - 80.47.12.94:443
+      - ee.h1cloud.net:25895
       - edge.luxcloud.space:443
+      - 🇬🇧 [openproxylist.com] vmess-GB
       - 🇨🇳 [openproxylist.com] vmess-TW
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -551,9 +557,10 @@ proxy-groups:
     interval: 600
     proxies:
       - z5n1.vpnpolar.online:443
-      - 37.49.230.85:8443
       - 80.47.12.94:443
+      - ee.h1cloud.net:25895
       - edge.luxcloud.space:443
+      - 🇬🇧 [openproxylist.com] vmess-GB
       - 🇨🇳 [openproxylist.com] vmess-TW
   - name: دانلود منیجر 📥
     type: select
