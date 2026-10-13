@@ -5,6 +5,7 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: 🇳🇱 ruot.ayucloudservices.nl:40022, server: ruot.ayucloudservices.nl, port: 40022, type: ss, cipher: aes-128-gcm, password: 49b07b98-6b76-4c70-b046-39be88e75abf, udp: true, tfo: false}
   - {name: 104.21.70.22:443, server: 104.21.70.22, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: efe19c5a-0ea1-4666-8a4c-4a33f4670775, servername: brightlux.forum, alpn: [http/1.1], network: ws, ws-opts: {path: /raccoonwsvless, headers: {Host: brightlux.forum}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: video-origin.lovkisport.blog:443, server: video-origin.lovkisport.blog, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f310a861-cca2-4f6f-8db2-30102fccd0ae, servername: video-origin.lovkisport.blog, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: grpc}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: ee.h1cloud.net:25895, server: ee.h1cloud.net, port: 25895, type: vless, tls: true, packet-encoding: xudp, uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2, servername: www.samsung.com, host: www.samsung.com, path: /, reality-opts: {public-key: jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k, short-id: a73f0410d728c823}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
@@ -15,6 +16,7 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - 🇳🇱 ruot.ayucloudservices.nl:40022
       - 104.21.70.22:443
       - video-origin.lovkisport.blog:443
       - ee.h1cloud.net:25895
@@ -25,6 +27,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - 🇳🇱 ruot.ayucloudservices.nl:40022
       - 104.21.70.22:443
       - video-origin.lovkisport.blog:443
       - ee.h1cloud.net:25895
@@ -35,6 +38,7 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 🇳🇱 ruot.ayucloudservices.nl:40022
       - 104.21.70.22:443
       - video-origin.lovkisport.blog:443
       - ee.h1cloud.net:25895
@@ -44,6 +48,7 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 🇳🇱 ruot.ayucloudservices.nl:40022
       - 104.21.70.22:443
       - video-origin.lovkisport.blog:443
       - ee.h1cloud.net:25895
@@ -53,6 +58,7 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - 🇳🇱 ruot.ayucloudservices.nl:40022
       - 104.21.70.22:443
       - video-origin.lovkisport.blog:443
       - ee.h1cloud.net:25895
@@ -62,6 +68,7 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 🇳🇱 ruot.ayucloudservices.nl:40022
       - 104.21.70.22:443
       - video-origin.lovkisport.blog:443
       - ee.h1cloud.net:25895
@@ -93,6 +100,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 🇳🇱 ruot.ayucloudservices.nl:40022
       - 104.21.70.22:443
       - video-origin.lovkisport.blog:443
       - ee.h1cloud.net:25895
