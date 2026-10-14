@@ -466,9 +466,11 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: 🇳🇱 ruot.ayucloudservices.nl:40022, server: ruot.ayucloudservices.nl, port: 40022, type: ss, cipher: aes-128-gcm, password: 49b07b98-6b76-4c70-b046-39be88e75abf, udp: true, tfo: false}
+  - {name: 🇩🇪 de-bots4.h1cloud.net:25267, server: de-bots4.h1cloud.net, port: 25267, type: trojan, password: happybirthdaydaniel, sni: t.me/FuckTheWall, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 188.225.38.216:443, server: 188.225.38.216, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 30292475-4666-4c26-bcb2-338a0919958b, servername: lalibobi.online, alpn: [h2], network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: lalibobi.orbit.v3.Connect}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇷🇺 ch.srv.vbuste.ru:444, server: ch.srv.vbuste.ru, port: 444, type: vless, tls: true, packet-encoding: xudp, uuid: 318c935d-c195-41d3-99ad-9bbcfdab3386, servername: ch.srv.vbuste.ru, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, reality-opts: {public-key: 0-or5ogGhYbBgsVSrSC2Fhxyp2BN97Y9pqIdg61Qd08, short-id: 4be4110078ebed4a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 177.1.187.139:1984, server: 177.1.187.139, port: 1984, type: vless, tls: true, packet-encoding: xudp, uuid: d9eb02da-a469-44a7-a393-ba1c5fbbc8c4, servername: ruori.ai, host: ruori.ai, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: ikKnBJfcuPy1U0O3Cb71zv_G1liM5QcAYhR10A0Ech0, short-id: 0f00666a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 104.21.70.22:443, server: 104.21.70.22, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: efe19c5a-0ea1-4666-8a4c-4a33f4670775, servername: brightlux.forum, alpn: [http/1.1], network: ws, ws-opts: {path: /raccoonwsvless, headers: {Host: brightlux.forum}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: video-origin.lovkisport.blog:443, server: video-origin.lovkisport.blog, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f310a861-cca2-4f6f-8db2-30102fccd0ae, servername: video-origin.lovkisport.blog, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: grpc}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ee.h1cloud.net:25895, server: ee.h1cloud.net, port: 25895, type: vless, tls: true, packet-encoding: xudp, uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2, servername: www.samsung.com, host: www.samsung.com, path: /, reality-opts: {public-key: jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k, short-id: a73f0410d728c823}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,9 +488,11 @@ proxy-groups:
     type: select
     proxies:
       - 🇳🇱 ruot.ayucloudservices.nl:40022
+      - 🇩🇪 de-bots4.h1cloud.net:25267
+      - 188.225.38.216:443
+      - 🇷🇺 ch.srv.vbuste.ru:444
+      - 177.1.187.139:1984
       - 104.21.70.22:443
-      - video-origin.lovkisport.blog:443
-      - ee.h1cloud.net:25895
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -496,9 +500,11 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 🇳🇱 ruot.ayucloudservices.nl:40022
+      - 🇩🇪 de-bots4.h1cloud.net:25267
+      - 188.225.38.216:443
+      - 🇷🇺 ch.srv.vbuste.ru:444
+      - 177.1.187.139:1984
       - 104.21.70.22:443
-      - video-origin.lovkisport.blog:443
-      - ee.h1cloud.net:25895
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -506,9 +512,11 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 🇳🇱 ruot.ayucloudservices.nl:40022
+      - 🇩🇪 de-bots4.h1cloud.net:25267
+      - 188.225.38.216:443
+      - 🇷🇺 ch.srv.vbuste.ru:444
+      - 177.1.187.139:1984
       - 104.21.70.22:443
-      - video-origin.lovkisport.blog:443
-      - ee.h1cloud.net:25895
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -525,9 +533,11 @@ proxy-groups:
     interval: 600
     proxies:
       - 🇳🇱 ruot.ayucloudservices.nl:40022
+      - 🇩🇪 de-bots4.h1cloud.net:25267
+      - 188.225.38.216:443
+      - 🇷🇺 ch.srv.vbuste.ru:444
+      - 177.1.187.139:1984
       - 104.21.70.22:443
-      - video-origin.lovkisport.blog:443
-      - ee.h1cloud.net:25895
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -535,9 +545,11 @@ proxy-groups:
     interval: 600
     proxies:
       - 🇳🇱 ruot.ayucloudservices.nl:40022
+      - 🇩🇪 de-bots4.h1cloud.net:25267
+      - 188.225.38.216:443
+      - 🇷🇺 ch.srv.vbuste.ru:444
+      - 177.1.187.139:1984
       - 104.21.70.22:443
-      - video-origin.lovkisport.blog:443
-      - ee.h1cloud.net:25895
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -545,9 +557,11 @@ proxy-groups:
     interval: 600
     proxies:
       - 🇳🇱 ruot.ayucloudservices.nl:40022
+      - 🇩🇪 de-bots4.h1cloud.net:25267
+      - 188.225.38.216:443
+      - 🇷🇺 ch.srv.vbuste.ru:444
+      - 177.1.187.139:1984
       - 104.21.70.22:443
-      - video-origin.lovkisport.blog:443
-      - ee.h1cloud.net:25895
   - name: دانلود منیجر 📥
     type: select
     proxies:
