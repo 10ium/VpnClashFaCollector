@@ -5,81 +5,88 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 🇳🇱 ruot.ayucloudservices.nl:40022, server: ruot.ayucloudservices.nl, port: 40022, type: ss, cipher: aes-128-gcm, password: 49b07b98-6b76-4c70-b046-39be88e75abf, udp: true, tfo: false}
+  - {name: 66.23.203.21:59689, server: 66.23.203.21, port: 59689, type: trojan, password: ae7eb4dwyaz25pxwgq59, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 🇩🇪 de-bots4.h1cloud.net:25267, server: de-bots4.h1cloud.net, port: 25267, type: trojan, password: happybirthdaydaniel, sni: t.me/FuckTheWall, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 188.225.38.216:443, server: 188.225.38.216, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 30292475-4666-4c26-bcb2-338a0919958b, servername: lalibobi.online, alpn: [h2], network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: lalibobi.orbit.v3.Connect}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 🇷🇺 ch.srv.vbuste.ru:444, server: ch.srv.vbuste.ru, port: 444, type: vless, tls: true, packet-encoding: xudp, uuid: 318c935d-c195-41d3-99ad-9bbcfdab3386, servername: ch.srv.vbuste.ru, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: /}, reality-opts: {public-key: 0-or5ogGhYbBgsVSrSC2Fhxyp2BN97Y9pqIdg61Qd08, short-id: 4be4110078ebed4a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 177.1.187.139:1984, server: 177.1.187.139, port: 1984, type: vless, tls: true, packet-encoding: xudp, uuid: d9eb02da-a469-44a7-a393-ba1c5fbbc8c4, servername: ruori.ai, host: ruori.ai, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: ikKnBJfcuPy1U0O3Cb71zv_G1liM5QcAYhR10A0Ech0, short-id: 0f00666a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 104.21.70.22:443, server: 104.21.70.22, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: efe19c5a-0ea1-4666-8a4c-4a33f4670775, servername: brightlux.forum, alpn: [http/1.1], network: ws, ws-opts: {path: /raccoonwsvless, headers: {Host: brightlux.forum}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇩🇪 [openproxylist.com] vmess-DE", server: hgky2opr5Fr3nKjG.v.3dns.vip, port: 443, type: vmess, uuid: 545a503ba94849b38105e6a0fbc493e8, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: hgky2opr5Fr3nKjG.v.3dns.vip, network: ws, ws-opts: {path: /ws-vmess, headers: {Host: hgky2opr5Fr3nKjG.v.3dns.vip}}, udp: true, tfo: false}
+  - {name: "🇰🇷 [openproxylist.com] vmess-KR", server: zwRcf79GExd13VGH.v.3dns.vip, port: 443, type: vmess, uuid: ad8685f2-5d17-411e-855c-1cc2ed5144a9, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: zwRcf79GExd13VGH.v.3dns.vip, network: ws, ws-opts: {path: /ws-vmess, headers: {Host: zwRcf79GExd13VGH.v.3dns.vip}}, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇳🇱 ruot.ayucloudservices.nl:40022
+      - 66.23.203.21:59689
       - 🇩🇪 de-bots4.h1cloud.net:25267
       - 188.225.38.216:443
       - 🇷🇺 ch.srv.vbuste.ru:444
       - 177.1.187.139:1984
-      - 104.21.70.22:443
+      - 🇩🇪 [openproxylist.com] vmess-DE
+      - 🇰🇷 [openproxylist.com] vmess-KR
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 🇳🇱 ruot.ayucloudservices.nl:40022
+      - 66.23.203.21:59689
       - 🇩🇪 de-bots4.h1cloud.net:25267
       - 188.225.38.216:443
       - 🇷🇺 ch.srv.vbuste.ru:444
       - 177.1.187.139:1984
-      - 104.21.70.22:443
+      - 🇩🇪 [openproxylist.com] vmess-DE
+      - 🇰🇷 [openproxylist.com] vmess-KR
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇳🇱 ruot.ayucloudservices.nl:40022
+      - 66.23.203.21:59689
       - 🇩🇪 de-bots4.h1cloud.net:25267
       - 188.225.38.216:443
       - 🇷🇺 ch.srv.vbuste.ru:444
       - 177.1.187.139:1984
-      - 104.21.70.22:443
+      - 🇩🇪 [openproxylist.com] vmess-DE
+      - 🇰🇷 [openproxylist.com] vmess-KR
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇳🇱 ruot.ayucloudservices.nl:40022
+      - 66.23.203.21:59689
       - 🇩🇪 de-bots4.h1cloud.net:25267
       - 188.225.38.216:443
       - 🇷🇺 ch.srv.vbuste.ru:444
       - 177.1.187.139:1984
-      - 104.21.70.22:443
+      - 🇩🇪 [openproxylist.com] vmess-DE
+      - 🇰🇷 [openproxylist.com] vmess-KR
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 🇳🇱 ruot.ayucloudservices.nl:40022
+      - 66.23.203.21:59689
       - 🇩🇪 de-bots4.h1cloud.net:25267
       - 188.225.38.216:443
       - 🇷🇺 ch.srv.vbuste.ru:444
       - 177.1.187.139:1984
-      - 104.21.70.22:443
+      - 🇩🇪 [openproxylist.com] vmess-DE
+      - 🇰🇷 [openproxylist.com] vmess-KR
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇳🇱 ruot.ayucloudservices.nl:40022
+      - 66.23.203.21:59689
       - 🇩🇪 de-bots4.h1cloud.net:25267
       - 188.225.38.216:443
       - 🇷🇺 ch.srv.vbuste.ru:444
       - 177.1.187.139:1984
-      - 104.21.70.22:443
+      - 🇩🇪 [openproxylist.com] vmess-DE
+      - 🇰🇷 [openproxylist.com] vmess-KR
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -107,12 +114,13 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇳🇱 ruot.ayucloudservices.nl:40022
+      - 66.23.203.21:59689
       - 🇩🇪 de-bots4.h1cloud.net:25267
       - 188.225.38.216:443
       - 🇷🇺 ch.srv.vbuste.ru:444
       - 177.1.187.139:1984
-      - 104.21.70.22:443
+      - 🇩🇪 [openproxylist.com] vmess-DE
+      - 🇰🇷 [openproxylist.com] vmess-KR
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

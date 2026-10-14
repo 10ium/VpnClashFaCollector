@@ -465,8 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Capoit`", server: 188.114.97.6, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b0a100ee-c397-43f2-bdae-2adfb7a0d4e5, servername: rnxq-1lpi3m.linmeisoft.com, alpn: [http%2F1.1], network: ws, ws-opts: {path: "/b0a100ee-c397-43f2-bdae-2adfb7a0d4e5?ed#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET", headers: {Host: rnxq-1lpi3m.linmeisoft.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 2", server: 199.232.78.159, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: eea97160-a606-4552-97ad-8acc1ce863e1, servername: speedtest.net, network: ws, ws-opts: {path: "/?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET", headers: {Host: speedtest.net}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit`", server: 199.232.78.159, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 1f53fbaf-a976-47ad-8df7-ee89bf803c97, servername: google.com, network: ws, ws-opts: {path: /, headers: {Host: google.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 2", server: 199.232.78.159, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 517736fa-17b6-4fc5-a77a-43627e3f526b, servername: google.com, network: ws, ws-opts: {path: "/?TELEGRAM-CAPOIT", headers: {Host: google.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 3", server: 193.233.230.64, port: 24443, type: vless, tls: true, packet-encoding: xudp, uuid: 92e135b9-4c04-4e7e-8b28-d8074a202cf8, servername: img.suzuki.lol, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: grpc}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,6 +486,7 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
+      - "@Capoit` 3"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -493,6 +495,7 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
+      - "@Capoit` 3"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -501,6 +504,7 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
+      - "@Capoit` 3"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -518,6 +522,7 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
+      - "@Capoit` 3"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -526,6 +531,7 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
+      - "@Capoit` 3"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -534,6 +540,7 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
+      - "@Capoit` 3"
   - name: دانلود منیجر 📥
     type: select
     proxies:
