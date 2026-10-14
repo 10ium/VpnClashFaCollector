@@ -469,7 +469,6 @@ proxies:
   - {name: 104.21.70.22:443, server: 104.21.70.22, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: efe19c5a-0ea1-4666-8a4c-4a33f4670775, servername: brightlux.forum, alpn: [http/1.1], network: ws, ws-opts: {path: /raccoonwsvless, headers: {Host: brightlux.forum}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: video-origin.lovkisport.blog:443, server: video-origin.lovkisport.blog, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f310a861-cca2-4f6f-8db2-30102fccd0ae, servername: video-origin.lovkisport.blog, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: grpc}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: ee.h1cloud.net:25895, server: ee.h1cloud.net, port: 25895, type: vless, tls: true, packet-encoding: xudp, uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2, servername: www.samsung.com, host: www.samsung.com, path: /, reality-opts: {public-key: jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k, short-id: a73f0410d728c823}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "🇬🇧 [openproxylist.com] vmess-GB", server: 172.67.142.177, port: 443, type: vmess, uuid: af4399b8-a152-486b-9cf6-acdd42d6c40c, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /London3, headers: {Host: uk.lovehk.xyz}}, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -490,7 +489,6 @@ proxy-groups:
       - 104.21.70.22:443
       - video-origin.lovkisport.blog:443
       - ee.h1cloud.net:25895
-      - 🇬🇧 [openproxylist.com] vmess-GB
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -501,7 +499,6 @@ proxy-groups:
       - 104.21.70.22:443
       - video-origin.lovkisport.blog:443
       - ee.h1cloud.net:25895
-      - 🇬🇧 [openproxylist.com] vmess-GB
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -512,7 +509,6 @@ proxy-groups:
       - 104.21.70.22:443
       - video-origin.lovkisport.blog:443
       - ee.h1cloud.net:25895
-      - 🇬🇧 [openproxylist.com] vmess-GB
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -532,7 +528,6 @@ proxy-groups:
       - 104.21.70.22:443
       - video-origin.lovkisport.blog:443
       - ee.h1cloud.net:25895
-      - 🇬🇧 [openproxylist.com] vmess-GB
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -543,7 +538,6 @@ proxy-groups:
       - 104.21.70.22:443
       - video-origin.lovkisport.blog:443
       - ee.h1cloud.net:25895
-      - 🇬🇧 [openproxylist.com] vmess-GB
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -554,7 +548,6 @@ proxy-groups:
       - 104.21.70.22:443
       - video-origin.lovkisport.blog:443
       - ee.h1cloud.net:25895
-      - 🇬🇧 [openproxylist.com] vmess-GB
   - name: دانلود منیجر 📥
     type: select
     proxies:
