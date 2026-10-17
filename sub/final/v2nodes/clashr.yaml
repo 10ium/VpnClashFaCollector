@@ -5,60 +5,46 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: pl4.h1cloud.net:25080, server: pl4.h1cloud.net, port: 25080, type: vless, tls: true, packet-encoding: xudp, uuid: 0c3ad9d5-cffd-4748-b8df-ab145288144b, servername: www.ceneo.pl, host: www.ceneo.pl, path: /, reality-opts: {public-key: CMAkhR1kevtK85rK9B5nmQtFZATsLOIq6nuG83BA8lI, short-id: 103d1dc5ed8eaf4c}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 3.20.126.177:10101, server: 3.20.126.177, port: 10101, type: vless, tls: true, packet-encoding: xudp, uuid: VPNSaint, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 31.57.190.49:443, server: 31.57.190.49, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e6df2095-a73c-4043-8693-8d5a03686870, servername: lucasjow.us.ci, alpn: [http/1.1], network: ws, ws-opts: {path: /cart/docs/www/proxyip=108.160.132.132fp=unsafe, headers: {Host: lucasjow.us.ci}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: funagfrdfs.alixxplay.com:56656, server: funagfrdfs.alixxplay.com, port: 56656, type: vless, tls: true, packet-encoding: xudp, uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134, servername: cdn-dynmedia-1.microsoft.com, host: cdn-dynmedia-1.microsoft.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: QFM3jTzb5n-E9L2cfFo6GHqioGmIkjmG60l8wXA4IXc, short-id: aae6d935}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - pl4.h1cloud.net:25080
-      - 3.20.126.177:10101
-      - 31.57.190.49:443
+      - funagfrdfs.alixxplay.com:56656
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - pl4.h1cloud.net:25080
-      - 3.20.126.177:10101
-      - 31.57.190.49:443
+      - funagfrdfs.alixxplay.com:56656
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - pl4.h1cloud.net:25080
-      - 3.20.126.177:10101
-      - 31.57.190.49:443
+      - funagfrdfs.alixxplay.com:56656
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - pl4.h1cloud.net:25080
-      - 3.20.126.177:10101
-      - 31.57.190.49:443
+      - funagfrdfs.alixxplay.com:56656
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - pl4.h1cloud.net:25080
-      - 3.20.126.177:10101
-      - 31.57.190.49:443
+      - funagfrdfs.alixxplay.com:56656
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - pl4.h1cloud.net:25080
-      - 3.20.126.177:10101
-      - 31.57.190.49:443
+      - funagfrdfs.alixxplay.com:56656
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -86,9 +72,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - pl4.h1cloud.net:25080
-      - 3.20.126.177:10101
-      - 31.57.190.49:443
+      - funagfrdfs.alixxplay.com:56656
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
