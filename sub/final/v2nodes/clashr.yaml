@@ -5,6 +5,7 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: 45.128.60.127:443, server: 45.128.60.127, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 1a11d3a8-f327-4f97-81b2-f776c138dec7, servername: www.nokia.com, host: www.nokia.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: kb93iSFmgqH_hIEAL15LZdrB9E-QfGFYG1mspAYJUzI, short-id: 557d83da1a36996f}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: funagfrdfs.alixxplay.com:56656, server: funagfrdfs.alixxplay.com, port: 56656, type: vless, tls: true, packet-encoding: xudp, uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134, servername: cdn-dynmedia-1.microsoft.com, host: cdn-dynmedia-1.microsoft.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: QFM3jTzb5n-E9L2cfFo6GHqioGmIkjmG60l8wXA4IXc, short-id: aae6d935}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
@@ -12,6 +13,7 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - 45.128.60.127:443
       - funagfrdfs.alixxplay.com:56656
   - name: ♻️ 自动选择
     type: url-test
@@ -19,6 +21,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - 45.128.60.127:443
       - funagfrdfs.alixxplay.com:56656
   - name: 🌍 国外媒体
     type: select
@@ -26,24 +29,28 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 45.128.60.127:443
       - funagfrdfs.alixxplay.com:56656
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 45.128.60.127:443
       - funagfrdfs.alixxplay.com:56656
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - 45.128.60.127:443
       - funagfrdfs.alixxplay.com:56656
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 45.128.60.127:443
       - funagfrdfs.alixxplay.com:56656
   - name: 🎯 全球直连
     type: select
@@ -72,6 +79,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 45.128.60.127:443
       - funagfrdfs.alixxplay.com:56656
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
