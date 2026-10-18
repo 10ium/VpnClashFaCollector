@@ -5,46 +5,53 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 𝗚𝗲𝗿𝗺𝗮𝗻𝘆`, server: 2.31.52.171, port: 28110, type: vless, tls: true, packet-encoding: xudp, uuid: f8040af5-d028-4bd0-8038-a59f7f1a3ff3, host: play.google.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Kia_Net (613.2)", server: 2.26.224.25, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 355a9948-c284-4669-bd57-43fcdc8dd71e, servername: wifi-pl.convertvideo123.online, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: simplegrpc}, reality-opts: {public-key: zvDl-tnM_FtSLG45j7FXchPAl1dFJaE_T0Lgy26xuXU, short-id: b9e7a1c4d8329f10}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Kia_Net (613.3)", server: 109.176.91.52, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 902f2ea9-fd1e-41eb-81ae-aa05d17c207e, servername: convertvideo123.online, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: simplegrpc}, reality-opts: {public-key: 36gCTf6guU1bPIRVS56qE1NXx-6rAW1zW1mxwA6ZzUk, short-id: 2c21c347d30c2a12}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 𝗚𝗲𝗿𝗺𝗮𝗻𝘆`
+      - "@Kia_Net (613.2)"
+      - "@Kia_Net (613.3)"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 𝗚𝗲𝗿𝗺𝗮𝗻𝘆`
+      - "@Kia_Net (613.2)"
+      - "@Kia_Net (613.3)"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 𝗚𝗲𝗿𝗺𝗮𝗻𝘆`
+      - "@Kia_Net (613.2)"
+      - "@Kia_Net (613.3)"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 𝗚𝗲𝗿𝗺𝗮𝗻𝘆`
+      - "@Kia_Net (613.2)"
+      - "@Kia_Net (613.3)"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 𝗚𝗲𝗿𝗺𝗮𝗻𝘆`
+      - "@Kia_Net (613.2)"
+      - "@Kia_Net (613.3)"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 𝗚𝗲𝗿𝗺𝗮𝗻𝘆`
+      - "@Kia_Net (613.2)"
+      - "@Kia_Net (613.3)"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +79,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 𝗚𝗲𝗿𝗺𝗮𝗻𝘆`
+      - "@Kia_Net (613.2)"
+      - "@Kia_Net (613.3)"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

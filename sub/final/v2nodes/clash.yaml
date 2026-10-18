@@ -466,8 +466,12 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: 152.232.57.10:443, server: 152.232.57.10, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 082f5694-9019-4110-b67b-8125dbb9bab8, servername: api.videobereg.cc, host: api.videobereg.cc, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs, short-id: a8}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 45.128.60.127:443, server: 45.128.60.127, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 1a11d3a8-f327-4f97-81b2-f776c138dec7, servername: www.nokia.com, host: www.nokia.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: kb93iSFmgqH_hIEAL15LZdrB9E-QfGFYG1mspAYJUzI, short-id: 557d83da1a36996f}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: api.mediapolyana.cc:443, server: api.mediapolyana.cc, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 082f5694-9019-4110-b67b-8125dbb9bab8, servername: api.mediapolyana.cc, host: api.mediapolyana.cc, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs, short-id: a8}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: edge10.cyrionflare.com:2052, server: edge10.cyrionflare.com, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286, host: edge10.cyrionflare.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: funagfrdfs.alixxplay.com:55688, server: funagfrdfs.alixxplay.com, port: 55688, type: vless, tls: true, packet-encoding: xudp, uuid: 57beeeb0-03fc-4fc9-94da-7604488a7134, servername: bilibili-vn.biliimg.com, host: bilibili-vn.biliimg.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: KeV1nArisy7FO5DjqTSmn0hBnlNd38rzhbIMMpe-MBw, short-id: a46bb5972cf50671}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: uitestytre-production.up.railway.app:443, server: uitestytre-production.up.railway.app, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6a9443a2-b756-21f8-0e91-5eacf9a86382, servername: uitestytre-production.up.railway.app, alpn: [http/1.1], network: ws, ws-opts: {path: /ws/6a9443a2-b756-21f8-0e91-5eacf9a86382, headers: {Host: uitestytre-production.up.railway.app}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 87.242.117.59:443, server: 87.242.117.59, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c19ecc7f-8312-4d9d-90c9-1a997d82d3c5, servername: se1.my-cdn.org, alpn: [h2], network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: hls-vod.iJxGWWENB3HP4nTjN8IcrA.1790085537.2512.0x5000039ce83a2b8d.2ac8ad72028049619c2fb844a825a.ca.mp4.segment-20-v1-a1.ts}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 13.135.17.74:22222, server: 13.135.17.74, port: 22222, type: vless, tls: true, packet-encoding: xudp, uuid: e4514801-0d5a-42ba-869f-39bd605aef9e, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,8 +489,12 @@ proxy-groups:
     type: select
     proxies:
       - 152.232.57.10:443
-      - 45.128.60.127:443
+      - api.mediapolyana.cc:443
+      - edge10.cyrionflare.com:2052
       - funagfrdfs.alixxplay.com:55688
+      - uitestytre-production.up.railway.app:443
+      - 87.242.117.59:443
+      - 13.135.17.74:22222
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -494,8 +502,12 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 152.232.57.10:443
-      - 45.128.60.127:443
+      - api.mediapolyana.cc:443
+      - edge10.cyrionflare.com:2052
       - funagfrdfs.alixxplay.com:55688
+      - uitestytre-production.up.railway.app:443
+      - 87.242.117.59:443
+      - 13.135.17.74:22222
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -503,8 +515,12 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 152.232.57.10:443
-      - 45.128.60.127:443
+      - api.mediapolyana.cc:443
+      - edge10.cyrionflare.com:2052
       - funagfrdfs.alixxplay.com:55688
+      - uitestytre-production.up.railway.app:443
+      - 87.242.117.59:443
+      - 13.135.17.74:22222
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -521,8 +537,12 @@ proxy-groups:
     interval: 600
     proxies:
       - 152.232.57.10:443
-      - 45.128.60.127:443
+      - api.mediapolyana.cc:443
+      - edge10.cyrionflare.com:2052
       - funagfrdfs.alixxplay.com:55688
+      - uitestytre-production.up.railway.app:443
+      - 87.242.117.59:443
+      - 13.135.17.74:22222
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -530,8 +550,12 @@ proxy-groups:
     interval: 600
     proxies:
       - 152.232.57.10:443
-      - 45.128.60.127:443
+      - api.mediapolyana.cc:443
+      - edge10.cyrionflare.com:2052
       - funagfrdfs.alixxplay.com:55688
+      - uitestytre-production.up.railway.app:443
+      - 87.242.117.59:443
+      - 13.135.17.74:22222
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -539,8 +563,12 @@ proxy-groups:
     interval: 600
     proxies:
       - 152.232.57.10:443
-      - 45.128.60.127:443
+      - api.mediapolyana.cc:443
+      - edge10.cyrionflare.com:2052
       - funagfrdfs.alixxplay.com:55688
+      - uitestytre-production.up.railway.app:443
+      - 87.242.117.59:443
+      - 13.135.17.74:22222
   - name: دانلود منیجر 📥
     type: select
     proxies:
