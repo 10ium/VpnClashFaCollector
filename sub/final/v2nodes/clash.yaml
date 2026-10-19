@@ -466,10 +466,12 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: 🇩🇪 de7.dedushka.top:443, server: de7.dedushka.top, port: 443, type: trojan, password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA, sni: de7.dedushka.top, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: resources.findlocaljobnetworkandbuildcommunityconnections.com:443, server: resources.findlocaljobnetworkandbuildcommunityconnections.com, port: 443, type: trojan, password: f0eb8c92ce8946aaba856569cff1a16b, sni: resources.findlocaljobnetworkandbuildcommunityconnections.com, skip-cert-verify: false, udp: true, tfo: false}
   - {name: api.mediapolyana.cc:443, server: api.mediapolyana.cc, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 082f5694-9019-4110-b67b-8125dbb9bab8, servername: api.mediapolyana.cc, host: api.mediapolyana.cc, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: r5WB5FnSCt4eeBC1FJMfkWHbzsMuabo0Rc6wuAhlZUs, short-id: a8}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: hinet1.2yly.com:24215, server: hinet1.2yly.com, port: 24215, type: vless, tls: true, packet-encoding: xudp, uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a, servername: addons.mozilla.org, host: addons.mozilla.org, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: edge10.cyrionflare.com:2052, server: edge10.cyrionflare.com, port: 2052, type: vless, tls: true, packet-encoding: xudp, uuid: 1a8ecc41-6e62-431b-8eca-87c2fa4dc286, host: edge10.cyrionflare.com, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: uitestytre-production.up.railway.app:443, server: uitestytre-production.up.railway.app, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6a9443a2-b756-21f8-0e91-5eacf9a86382, servername: uitestytre-production.up.railway.app, alpn: [http/1.1], network: ws, ws-opts: {path: /ws/6a9443a2-b756-21f8-0e91-5eacf9a86382, headers: {Host: uitestytre-production.up.railway.app}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: studio.10media.top:443, server: studio.10media.top, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 9cb8d71c-fe06-4402-a591-eaa1f173b890, servername: studio.10media.top, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: studiofeed}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 87.242.117.59:443, server: 87.242.117.59, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c19ecc7f-8312-4d9d-90c9-1a997d82d3c5, servername: se1.my-cdn.org, alpn: [h2], network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: hls-vod.iJxGWWENB3HP4nTjN8IcrA.1790085537.2512.0x5000039ce83a2b8d.2ac8ad72028049619c2fb844a825a.ca.mp4.segment-20-v1-a1.ts}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 13.135.17.74:22222, server: 13.135.17.74, port: 22222, type: vless, tls: true, packet-encoding: xudp, uuid: e4514801-0d5a-42ba-869f-39bd605aef9e, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
@@ -489,10 +491,12 @@ proxy-groups:
     type: select
     proxies:
       - 🇩🇪 de7.dedushka.top:443
+      - resources.findlocaljobnetworkandbuildcommunityconnections.com:443
       - api.mediapolyana.cc:443
       - hinet1.2yly.com:24215
       - edge10.cyrionflare.com:2052
       - uitestytre-production.up.railway.app:443
+      - studio.10media.top:443
       - 87.242.117.59:443
       - 13.135.17.74:22222
   - name: خودکار (بهترین پینگ) 🤖
@@ -502,10 +506,12 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 🇩🇪 de7.dedushka.top:443
+      - resources.findlocaljobnetworkandbuildcommunityconnections.com:443
       - api.mediapolyana.cc:443
       - hinet1.2yly.com:24215
       - edge10.cyrionflare.com:2052
       - uitestytre-production.up.railway.app:443
+      - studio.10media.top:443
       - 87.242.117.59:443
       - 13.135.17.74:22222
   - name: پشتیبان (در صورت قطعی) 🧯
@@ -515,10 +521,12 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 🇩🇪 de7.dedushka.top:443
+      - resources.findlocaljobnetworkandbuildcommunityconnections.com:443
       - api.mediapolyana.cc:443
       - hinet1.2yly.com:24215
       - edge10.cyrionflare.com:2052
       - uitestytre-production.up.railway.app:443
+      - studio.10media.top:443
       - 87.242.117.59:443
       - 13.135.17.74:22222
   - name: اتصال پایدار 🔗
@@ -537,10 +545,12 @@ proxy-groups:
     interval: 600
     proxies:
       - 🇩🇪 de7.dedushka.top:443
+      - resources.findlocaljobnetworkandbuildcommunityconnections.com:443
       - api.mediapolyana.cc:443
       - hinet1.2yly.com:24215
       - edge10.cyrionflare.com:2052
       - uitestytre-production.up.railway.app:443
+      - studio.10media.top:443
       - 87.242.117.59:443
       - 13.135.17.74:22222
   - name: توزیع بار (گردشی) 🔁
@@ -550,10 +560,12 @@ proxy-groups:
     interval: 600
     proxies:
       - 🇩🇪 de7.dedushka.top:443
+      - resources.findlocaljobnetworkandbuildcommunityconnections.com:443
       - api.mediapolyana.cc:443
       - hinet1.2yly.com:24215
       - edge10.cyrionflare.com:2052
       - uitestytre-production.up.railway.app:443
+      - studio.10media.top:443
       - 87.242.117.59:443
       - 13.135.17.74:22222
   - name: توزیع بار (موقت) ⏳
@@ -563,10 +575,12 @@ proxy-groups:
     interval: 600
     proxies:
       - 🇩🇪 de7.dedushka.top:443
+      - resources.findlocaljobnetworkandbuildcommunityconnections.com:443
       - api.mediapolyana.cc:443
       - hinet1.2yly.com:24215
       - edge10.cyrionflare.com:2052
       - uitestytre-production.up.railway.app:443
+      - studio.10media.top:443
       - 87.242.117.59:443
       - 13.135.17.74:22222
   - name: دانلود منیجر 📥
