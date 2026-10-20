@@ -467,6 +467,7 @@ rule-providers:
 proxies:
   - {name: blog.findlocaljobnetworkandbuildcommunityconnections.com:443, server: blog.findlocaljobnetworkandbuildcommunityconnections.com, port: 443, type: trojan, password: dba20dcb635e430fa4d3bfc303a149d2, sni: blog.findlocaljobnetworkandbuildcommunityconnections.com, skip-cert-verify: false, udp: true, tfo: false}
   - {name: app-ss-64.ecom-ai-search.com:443, server: app-ss-64.ecom-ai-search.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 074690f9-cb30-44f5-84e5-f3ce8fc6cf29, servername: assets-ss-64.ecom-ai-search.com, host: assets-ss-64.ecom-ai-search.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: xXMV-UbVMpP75hZoXS_QSaj_DK1O58mrPIrreudQ71o, short-id: 294cd0660fde9027}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: sw.golangwikito.cfd:443, server: sw.golangwikito.cfd, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f8d52ece-fad4-478d-875d-df6eed3befa7, servername: sw.golangwikito.cfd, host: sw.golangwikito.cfd, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: Kb8SsVPprs46BJSUNp5JvWLI-TFEiHmlBOXLQd37Glg, short-id: a1037b25dcef6aa7}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,6 +486,7 @@ proxy-groups:
     proxies:
       - blog.findlocaljobnetworkandbuildcommunityconnections.com:443
       - app-ss-64.ecom-ai-search.com:443
+      - sw.golangwikito.cfd:443
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -493,6 +495,7 @@ proxy-groups:
     proxies:
       - blog.findlocaljobnetworkandbuildcommunityconnections.com:443
       - app-ss-64.ecom-ai-search.com:443
+      - sw.golangwikito.cfd:443
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -501,6 +504,7 @@ proxy-groups:
     proxies:
       - blog.findlocaljobnetworkandbuildcommunityconnections.com:443
       - app-ss-64.ecom-ai-search.com:443
+      - sw.golangwikito.cfd:443
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -518,6 +522,7 @@ proxy-groups:
     proxies:
       - blog.findlocaljobnetworkandbuildcommunityconnections.com:443
       - app-ss-64.ecom-ai-search.com:443
+      - sw.golangwikito.cfd:443
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -526,6 +531,7 @@ proxy-groups:
     proxies:
       - blog.findlocaljobnetworkandbuildcommunityconnections.com:443
       - app-ss-64.ecom-ai-search.com:443
+      - sw.golangwikito.cfd:443
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -534,6 +540,7 @@ proxy-groups:
     proxies:
       - blog.findlocaljobnetworkandbuildcommunityconnections.com:443
       - app-ss-64.ecom-ai-search.com:443
+      - sw.golangwikito.cfd:443
   - name: دانلود منیجر 📥
     type: select
     proxies:
