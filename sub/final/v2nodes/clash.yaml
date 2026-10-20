@@ -465,11 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 4c2d5151.266nets.com:12001, server: 4c2d5151.266nets.com, port: 12001, type: trojan, password: bad06c3525a6eaee1757b34776b83892, sni: ixigua.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 4c2d5151.266nets.com:12019, server: 4c2d5151.266nets.com, port: 12019, type: trojan, password: bad06c3525a6eaee1757b34776b83892, sni: ixigua.com, skip-cert-verify: false, udp: true, tfo: false}
   - {name: blog.findlocaljobnetworkandbuildcommunityconnections.com:443, server: blog.findlocaljobnetworkandbuildcommunityconnections.com, port: 443, type: trojan, password: dba20dcb635e430fa4d3bfc303a149d2, sni: blog.findlocaljobnetworkandbuildcommunityconnections.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: connect.hondamotor.site:10002, server: connect.hondamotor.site, port: 10002, type: vless, tls: true, packet-encoding: xudp, uuid: c6362720-0931-4b91-b187-d8ecf3149734, host: connect.hondamotor.site, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 64.188.66.181:443, server: 64.188.66.181, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f8d52ece-fad4-478d-875d-df6eed3befa7, servername: ge-s-1.pythonmakemigreat.wiki, host: ge-s-1.pythonmakemigreat.wiki, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 5fkwwCKZzMsE6Eb_b3iqluu-1AWIfnYl-p0N3EL9Al8, short-id: 2c9a2790ad5900b2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: app-ss-64.ecom-ai-search.com:443, server: app-ss-64.ecom-ai-search.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 074690f9-cb30-44f5-84e5-f3ce8fc6cf29, servername: assets-ss-64.ecom-ai-search.com, host: assets-ss-64.ecom-ai-search.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: xXMV-UbVMpP75hZoXS_QSaj_DK1O58mrPIrreudQ71o, short-id: 294cd0660fde9027}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,33 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 4c2d5151.266nets.com:12001
-      - 4c2d5151.266nets.com:12019
       - blog.findlocaljobnetworkandbuildcommunityconnections.com:443
-      - connect.hondamotor.site:10002
-      - 64.188.66.181:443
+      - app-ss-64.ecom-ai-search.com:443
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 4c2d5151.266nets.com:12001
-      - 4c2d5151.266nets.com:12019
       - blog.findlocaljobnetworkandbuildcommunityconnections.com:443
-      - connect.hondamotor.site:10002
-      - 64.188.66.181:443
+      - app-ss-64.ecom-ai-search.com:443
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 4c2d5151.266nets.com:12001
-      - 4c2d5151.266nets.com:12019
       - blog.findlocaljobnetworkandbuildcommunityconnections.com:443
-      - connect.hondamotor.site:10002
-      - 64.188.66.181:443
+      - app-ss-64.ecom-ai-search.com:443
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -528,33 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 4c2d5151.266nets.com:12001
-      - 4c2d5151.266nets.com:12019
       - blog.findlocaljobnetworkandbuildcommunityconnections.com:443
-      - connect.hondamotor.site:10002
-      - 64.188.66.181:443
+      - app-ss-64.ecom-ai-search.com:443
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 4c2d5151.266nets.com:12001
-      - 4c2d5151.266nets.com:12019
       - blog.findlocaljobnetworkandbuildcommunityconnections.com:443
-      - connect.hondamotor.site:10002
-      - 64.188.66.181:443
+      - app-ss-64.ecom-ai-search.com:443
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 4c2d5151.266nets.com:12001
-      - 4c2d5151.266nets.com:12019
       - blog.findlocaljobnetworkandbuildcommunityconnections.com:443
-      - connect.hondamotor.site:10002
-      - 64.188.66.181:443
+      - app-ss-64.ecom-ai-search.com:443
   - name: دانلود منیجر 📥
     type: select
     proxies:
