@@ -465,12 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 202.50.253.36:19999, server: 202.50.253.36, port: 19999, type: ss, cipher: aes-256-gcm, password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=, udp: true, tfo: false}
-  - {name: 202.50.253.45:19999, server: 202.50.253.45, port: 19999, type: ss, cipher: aes-256-gcm, password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=, udp: true, tfo: false}
-  - {name: 202.50.253.72:19999, server: 202.50.253.72, port: 19999, type: ss, cipher: aes-256-gcm, password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=, udp: true, tfo: false}
-  - {name: 202.50.253.81:19999, server: 202.50.253.81, port: 19999, type: ss, cipher: aes-256-gcm, password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=, udp: true, tfo: false}
-  - {name: 202.50.253.99:19999, server: 202.50.253.99, port: 19999, type: ss, cipher: aes-256-gcm, password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=, udp: true, tfo: false}
-  - {name: lv1.dedushka.top:443, server: lv1.dedushka.top, port: 443, type: trojan, password: 4_VfP9fKaM-3LpSVvoZuc_WUzLoCdHaA, sni: lv1.dedushka.top, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: tjhg.m2k699.com:24999, server: tjhg.m2k699.com, port: 24999, type: trojan, password: 28c4a59d-c2a0-4d6c-ba7d-db6a354990de, sni: www.itunes.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 111.88.128.167:8517, server: 111.88.128.167, port: 8517, type: vless, tls: true, packet-encoding: xudp, uuid: 92a4056a-38d6-49d0-8bd2-600e55af1e9f, servername: r47mp8qsel.j.cloudfront.hls.ttvnw.net, alpn: [h2], network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: api.v1.StreamService}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,36 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 202.50.253.36:19999
-      - 202.50.253.45:19999
-      - 202.50.253.72:19999
-      - 202.50.253.81:19999
-      - 202.50.253.99:19999
-      - lv1.dedushka.top:443
+      - tjhg.m2k699.com:24999
+      - 111.88.128.167:8517
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 202.50.253.36:19999
-      - 202.50.253.45:19999
-      - 202.50.253.72:19999
-      - 202.50.253.81:19999
-      - 202.50.253.99:19999
-      - lv1.dedushka.top:443
+      - tjhg.m2k699.com:24999
+      - 111.88.128.167:8517
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 202.50.253.36:19999
-      - 202.50.253.45:19999
-      - 202.50.253.72:19999
-      - 202.50.253.81:19999
-      - 202.50.253.99:19999
-      - lv1.dedushka.top:443
+      - tjhg.m2k699.com:24999
+      - 111.88.128.167:8517
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -532,36 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 202.50.253.36:19999
-      - 202.50.253.45:19999
-      - 202.50.253.72:19999
-      - 202.50.253.81:19999
-      - 202.50.253.99:19999
-      - lv1.dedushka.top:443
+      - tjhg.m2k699.com:24999
+      - 111.88.128.167:8517
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 202.50.253.36:19999
-      - 202.50.253.45:19999
-      - 202.50.253.72:19999
-      - 202.50.253.81:19999
-      - 202.50.253.99:19999
-      - lv1.dedushka.top:443
+      - tjhg.m2k699.com:24999
+      - 111.88.128.167:8517
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 202.50.253.36:19999
-      - 202.50.253.45:19999
-      - 202.50.253.72:19999
-      - 202.50.253.81:19999
-      - 202.50.253.99:19999
-      - lv1.dedushka.top:443
+      - tjhg.m2k699.com:24999
+      - 111.88.128.167:8517
   - name: دانلود منیجر 📥
     type: select
     proxies:
