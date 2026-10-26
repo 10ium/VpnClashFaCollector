@@ -465,18 +465,13 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@filembad", server: 23.254.194.215, port: 8080, type: vmess, uuid: 3c75a551-81d6-46d0-876d-79519719bb22, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, servername: www.bing.com, network: ws, ws-opts: {path: 3c75a551-81d6-46d0-876d-79519719bb22-vm, headers: {Host: www.bing.com}}, udp: true, tfo: false}
-  - {name: "@filembad 2", server: 3.68.92.72, port: 1003, type: vmess, uuid: 3d94220c-a974-49ca-a1a3-d7e3c7359ccd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@i10VPN⁵", server: 38.110.1.246, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@i10VPN⁵ 2", server: 38.110.1.246, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad", server: us-23.hihu.net, port: 80, type: vmess, uuid: 8a9aaa70-ced9-11f1-b934-205c6d5f5d78, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /870ao26f, headers: {Host: 172.66.0.251}}, udp: true, tfo: false}
+  - {name: "@filembad 2", server: us-23.hihu.net, port: 80, type: vmess, uuid: 8a9aaa70-ced9-11f1-b934-205c6d5f5d78, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, servername: 172.66.0.251, network: ws, ws-opts: {path: /, headers: {Host: us-23.hihu.net}}, udp: true, tfo: false}
   - {name: "@filembad 3", server: us-23.hihu.net, port: 80, type: vmess, uuid: 8a9aaa70-ced9-11f1-b934-205c6d5f5d78, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: us-23.hihu.net}}, udp: true, tfo: false}
-  - {name: "@meliproxy", server: us-23.hihu.net, port: 80, type: vmess, uuid: 8a9aaa70-ced9-11f1-b934-205c6d5f5d78, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: us-23.hihu.net}}, udp: true, tfo: false}
-  - {name: "@filembad 4", server: us-23.hihu.net, port: 80, type: vmess, uuid: 8a9aaa70-ced9-11f1-b934-205c6d5f5d78, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /870ao26f, headers: {Host: 172.66.0.251}}, udp: true, tfo: false}
-  - {name: "@filembad 5", server: us-23.hihu.net, port: 80, type: vmess, uuid: 8a9aaa70-ced9-11f1-b934-205c6d5f5d78, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: us-23.hihu.net}}, udp: true, tfo: false}
-  - {name: "@filembad 6", server: dashboard.ojestore.top, port: 5381, type: vmess, uuid: 185b8bb1-5690-49de-9832-e6d5d356e95c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 7", server: dashboard.ojestore.top, port: 5381, type: vmess, uuid: 7938f847-a4be-4bec-8e71-1f8a91e18f96, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@TheClonazepam", server: dashboard.ojestore.top, port: 5381, type: vmess, uuid: e387c0f5-4192-490d-ac86-7e17163e694c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@TheClonazepam 2", server: dashboard.ojestore.top, port: 5381, type: vmess, uuid: e387c0f5-4192-490d-ac86-7e17163e694c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@meliproxy", server: de.zhou-yufan.com, port: 443, type: vmess, uuid: f38e591d-d13a-4c30-9763-6be3ad65f3ec, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: de.zhou-yufan.com, udp: true, tfo: false}
+  - {name: "@TheClonazepam 3", server: ir.yzcq.ir, port: 2050, type: vmess, uuid: ae093fc1-0e87-4a15-8593-6518d74dce93, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -495,16 +490,11 @@ proxy-groups:
     proxies:
       - "@filembad"
       - "@filembad 2"
-      - "@i10VPN⁵"
-      - "@i10VPN⁵ 2"
       - "@filembad 3"
-      - "@meliproxy"
-      - "@filembad 4"
-      - "@filembad 5"
-      - "@filembad 6"
-      - "@filembad 7"
       - "@TheClonazepam"
       - "@TheClonazepam 2"
+      - "@meliproxy"
+      - "@TheClonazepam 3"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -513,16 +503,11 @@ proxy-groups:
     proxies:
       - "@filembad"
       - "@filembad 2"
-      - "@i10VPN⁵"
-      - "@i10VPN⁵ 2"
       - "@filembad 3"
-      - "@meliproxy"
-      - "@filembad 4"
-      - "@filembad 5"
-      - "@filembad 6"
-      - "@filembad 7"
       - "@TheClonazepam"
       - "@TheClonazepam 2"
+      - "@meliproxy"
+      - "@TheClonazepam 3"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -531,16 +516,11 @@ proxy-groups:
     proxies:
       - "@filembad"
       - "@filembad 2"
-      - "@i10VPN⁵"
-      - "@i10VPN⁵ 2"
       - "@filembad 3"
-      - "@meliproxy"
-      - "@filembad 4"
-      - "@filembad 5"
-      - "@filembad 6"
-      - "@filembad 7"
       - "@TheClonazepam"
       - "@TheClonazepam 2"
+      - "@meliproxy"
+      - "@TheClonazepam 3"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -558,16 +538,11 @@ proxy-groups:
     proxies:
       - "@filembad"
       - "@filembad 2"
-      - "@i10VPN⁵"
-      - "@i10VPN⁵ 2"
       - "@filembad 3"
-      - "@meliproxy"
-      - "@filembad 4"
-      - "@filembad 5"
-      - "@filembad 6"
-      - "@filembad 7"
       - "@TheClonazepam"
       - "@TheClonazepam 2"
+      - "@meliproxy"
+      - "@TheClonazepam 3"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -576,16 +551,11 @@ proxy-groups:
     proxies:
       - "@filembad"
       - "@filembad 2"
-      - "@i10VPN⁵"
-      - "@i10VPN⁵ 2"
       - "@filembad 3"
-      - "@meliproxy"
-      - "@filembad 4"
-      - "@filembad 5"
-      - "@filembad 6"
-      - "@filembad 7"
       - "@TheClonazepam"
       - "@TheClonazepam 2"
+      - "@meliproxy"
+      - "@TheClonazepam 3"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -594,16 +564,11 @@ proxy-groups:
     proxies:
       - "@filembad"
       - "@filembad 2"
-      - "@i10VPN⁵"
-      - "@i10VPN⁵ 2"
       - "@filembad 3"
-      - "@meliproxy"
-      - "@filembad 4"
-      - "@filembad 5"
-      - "@filembad 6"
-      - "@filembad 7"
       - "@TheClonazepam"
       - "@TheClonazepam 2"
+      - "@meliproxy"
+      - "@TheClonazepam 3"
   - name: دانلود منیجر 📥
     type: select
     proxies:
