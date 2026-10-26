@@ -5,9 +5,12 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: 🇩🇪 de-bots4.h1cloud.net:25267, server: de-bots4.h1cloud.net, port: 25267, type: trojan, password: happybirthdaydaniel, sni: t.me/FuckTheWall, skip-cert-verify: false, udp: true, tfo: false}
   - {name: hinet1.2yly.com:24215, server: hinet1.2yly.com, port: 24215, type: vless, tls: true, packet-encoding: xudp, uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a, servername: addons.mozilla.org, host: addons.mozilla.org, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 85.198.83.46:443, server: 85.198.83.46, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 27653b37-603c-4c90-b1f5-25c4d23f8932, servername: renderer-bridge-1-881.mirra.now, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: VideoRenderer}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 🇩🇪 de10.pad-sservice.lat:8443, server: de10.pad-sservice.lat, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e, servername: de10.pad-sservice.lat, network: ws, ws-opts: {path: /DE10W, headers: {Host: de10.pad-sservice.lat}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 🇩🇪 de4.pad-sservice.lat:8443, server: de4.pad-sservice.lat, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 2b0e5676-fb62-4bf0-9607-6e7818421e8e, servername: de4.pad-sservice.lat, network: ws, ws-opts: {path: /D14E, headers: {Host: de4.pad-sservice.lat}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 46.8.43.125:443, server: 46.8.43.125, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 846cedee-2a52-4a62-a0b9-11850ead6a8b, servername: kz-central.v8x2b.lol, host: kz-central.v8x2b.lol, path: /, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 45-149-147-213.sslip.io:4443, server: 45-149-147-213.sslip.io, port: 4443, type: vless, tls: true, packet-encoding: xudp, uuid: 9b347a9b-d7a6-4b51-9890-eff62b832834, servername: 45-149-147-213.sslip.io, alpn: [h2], network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: kobedin-server1-vless}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 77.239.102.129:17232, server: 77.239.102.129, port: 17232, type: vless, tls: true, packet-encoding: xudp, uuid: afbd410e-1663-4f40-9d3b-df5117aa23ca, servername: 77.239.102.129.sslip.io, host: 77.239.102.129.sslip.io, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: OYFQrEB_Zt7kvR5OtebA3tzKEUQ57C8Pg16MXUg1A1g, short-id: 67aec74e00f0e90f}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 213.152.165.203:2095, server: 213.152.165.203, port: 2095, type: vless, tls: true, packet-encoding: xudp, uuid: b38712cb-e4aa-4462-b7e3-df20508d2b39, servername: www.apple.com, host: www.apple.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: OKksVHWL5JepTv7if7Ta_L_7vn8OxW0INwV71HJM1jI, short-id: 3869d49a9a79e06a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
@@ -18,9 +21,12 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - 🇩🇪 de-bots4.h1cloud.net:25267
       - hinet1.2yly.com:24215
+      - 85.198.83.46:443
       - 🇩🇪 de10.pad-sservice.lat:8443
       - 🇩🇪 de4.pad-sservice.lat:8443
+      - 46.8.43.125:443
       - 45-149-147-213.sslip.io:4443
       - 77.239.102.129:17232
       - 213.152.165.203:2095
@@ -31,9 +37,12 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - 🇩🇪 de-bots4.h1cloud.net:25267
       - hinet1.2yly.com:24215
+      - 85.198.83.46:443
       - 🇩🇪 de10.pad-sservice.lat:8443
       - 🇩🇪 de4.pad-sservice.lat:8443
+      - 46.8.43.125:443
       - 45-149-147-213.sslip.io:4443
       - 77.239.102.129:17232
       - 213.152.165.203:2095
@@ -44,9 +53,12 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 🇩🇪 de-bots4.h1cloud.net:25267
       - hinet1.2yly.com:24215
+      - 85.198.83.46:443
       - 🇩🇪 de10.pad-sservice.lat:8443
       - 🇩🇪 de4.pad-sservice.lat:8443
+      - 46.8.43.125:443
       - 45-149-147-213.sslip.io:4443
       - 77.239.102.129:17232
       - 213.152.165.203:2095
@@ -56,9 +68,12 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 🇩🇪 de-bots4.h1cloud.net:25267
       - hinet1.2yly.com:24215
+      - 85.198.83.46:443
       - 🇩🇪 de10.pad-sservice.lat:8443
       - 🇩🇪 de4.pad-sservice.lat:8443
+      - 46.8.43.125:443
       - 45-149-147-213.sslip.io:4443
       - 77.239.102.129:17232
       - 213.152.165.203:2095
@@ -68,9 +83,12 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - 🇩🇪 de-bots4.h1cloud.net:25267
       - hinet1.2yly.com:24215
+      - 85.198.83.46:443
       - 🇩🇪 de10.pad-sservice.lat:8443
       - 🇩🇪 de4.pad-sservice.lat:8443
+      - 46.8.43.125:443
       - 45-149-147-213.sslip.io:4443
       - 77.239.102.129:17232
       - 213.152.165.203:2095
@@ -80,9 +98,12 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 🇩🇪 de-bots4.h1cloud.net:25267
       - hinet1.2yly.com:24215
+      - 85.198.83.46:443
       - 🇩🇪 de10.pad-sservice.lat:8443
       - 🇩🇪 de4.pad-sservice.lat:8443
+      - 46.8.43.125:443
       - 45-149-147-213.sslip.io:4443
       - 77.239.102.129:17232
       - 213.152.165.203:2095
@@ -114,9 +135,12 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 🇩🇪 de-bots4.h1cloud.net:25267
       - hinet1.2yly.com:24215
+      - 85.198.83.46:443
       - 🇩🇪 de10.pad-sservice.lat:8443
       - 🇩🇪 de4.pad-sservice.lat:8443
+      - 46.8.43.125:443
       - 45-149-147-213.sslip.io:4443
       - 77.239.102.129:17232
       - 213.152.165.203:2095
