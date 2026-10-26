@@ -5,151 +5,46 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: lrnbymaa, server: 51.79.64.198, port: 8119, type: ss, cipher: aes-256-gcm, password: cdBIDV42DCwnfIN, udp: true, tfo: false}
-  - {name: lrnbymaa 2, server: 108.162.194.134, port: 443, type: trojan, password: humanity, sni: www.pleadcourt.org, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.pleadcourt.org}}, udp: true, tfo: false}
-  - {name: lrnbymaa 3, server: 188.114.97.6, port: 443, type: trojan, password: humanity, sni: www.calmlunch.com, skip-cert-verify: false, network: ws, ws-opts: {path: "/assignment?ed#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET", headers: {Host: www.calmlunch.com}}, udp: true, tfo: false}
-  - {name: lrnbymaa 4, server: 188.42.145.180, port: 443, type: trojan, password: humanity, sni: www.volumeroot.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.volumeroot.com}}, udp: true, tfo: false}
-  - {name: lrnbymaa 5, server: 77.110.105.122, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 019fbe0f-2d9f-4b89-9f81-e1e36129892a, servername: co-de.speedtec.ru, host: co-de.speedtec.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: EBISh6QAVskJ_nvet-Qio9jS2yqxe9de6GMScYlbjhI, short-id: 226509f017e4c36d}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: lrnbymaa 6, server: 807879f465ae1aa6.tunvi.w-ert.org, port: 32093, type: vless, tls: true, packet-encoding: xudp, uuid: 43fa2612-1e1b-4c82-9011-ebb7f8835bf2, servername: www.aparat.com, host: www.aparat.com, path: /, reality-opts: {public-key: woId47r1U8pEuDwHoC026bJHVWha2RHjufq1Kw3QoRU, short-id: ca4134a0ed2592b6}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: lrnbymaa 7, server: 103.167.234.179, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8007dda2-aed2-4514-8299-6e3edbdb015b, servername: al3.magazinnarubeva.ru, host: al3.magazinnarubeva.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: trN5x0amt2YuVzF2vZnK294YBAuh_zl5QkZjPyWz-TI, short-id: 8718c58d3d51db59}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: lrnbymaa 8, server: 179.43.170.84, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8007dda2-aed2-4514-8299-6e3edbdb015b, servername: si2.greenzone12.com, host: si2.greenzone12.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: hyOYRfDSIYyqALQt3N2H0RjK8gbV1JvPTkNACC4PJF8, short-id: 8718c58d3d51db59}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: lrnbymaa 9, server: 179.43.170.84, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8007dda2-aed2-4514-8299-6e3edbdb015b, servername: si2.greenzone12.com, host: si2.greenzone12.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: hyOYRfDSIYyqALQt3N2H0RjK8gbV1JvPTkNACC4PJF8, short-id: 8718c58d3d51db59}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: lrnbymaa 10, server: 185.16.38.132, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8007dda2-aed2-4514-8299-6e3edbdb015b, servername: pl1.magazinnarubeva.ru, host: pl1.magazinnarubeva.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: jIq_COD-tIXTvgDn-TslFGtB_a8HVgUOOIlUByv8fkg, short-id: 8718c58d3d51db59}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: lrnbymaa 11, server: 66.90.106.228, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8007dda2-aed2-4514-8299-6e3edbdb015b, servername: au1.wolffast.net, host: au1.wolffast.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: hyOYRfDSIYyqALQt3N2H0RjK8gbV1JvPTkNACC4PJF8, short-id: 8718c58d3d51db59}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: lrnbymaa 12, server: 45.91.248.127, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 81a227e3-cb97-40fe-b7b6-45a60ed065cf, servername: node.nodebrcsp.ru, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: grpc-api-v2}, reality-opts: {public-key: 75SvxhvlOLct7K2eSg4-a1o6Z6N3JMTqp3wIQmLSqTA, short-id: 8c609726e0233f08}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: lrnbymaa 13, server: 151.123.187.198, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b24ad12f-f6ce-4f0b-a264-d58a76104026, servername: al2.magazinnarubeva.ru, host: al2.magazinnarubeva.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: trN5x0amt2YuVzF2vZnK294YBAuh_zl5QkZjPyWz-TI, short-id: 8718c58d3d51db59}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: lrnbymaa 14, server: 13.143.182.175, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: cba98ec5-9f00-4ada-a0ce-f490257af2ee, servername: esti.fileconvertpro.ru, host: esti.fileconvertpro.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 8PGoRfefKAWaX4N7rqWyIap71L6JOL15feshsAoOphM, short-id: 89a72356470b2478}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: lrnbymaa 15, server: 172.66.0.162, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d342d11e-d224-4463-b982-532309285094, servername: ccc.010304.xyz, network: ws, ws-opts: {path: /, headers: {Host: ccc.010304.xyz}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: lrnbymaa 16, server: tun2.w-ert.org, port: 447, type: vless, tls: true, packet-encoding: xudp, uuid: dea52dae-2472-45ab-8a22-dd8d7ac21e4b, servername: www.aparat.com, host: www.aparat.com, path: /, reality-opts: {public-key: woId47r1U8pEuDwHoC026bJHVWha2RHjufq1Kw3QoRU, short-id: ca4134a0ed2592b6}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Telegram @lrnbymaa, server: 199.232.78.160, port: 443, type: trojan, password: "%6D%69%74%69%76%70%6E", sni: community.fastly.steamstatic.com, skip-cert-verify: false, network: ws, ws-opts: {path: /MTMVPN---MTMVPN---MTMVPN---MTMVPN---MTMVPN---MTMVPN---MTMVPN---MTMVPN, headers: {Host: community.fastly.steamstatic.com}}, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - lrnbymaa
-      - lrnbymaa 2
-      - lrnbymaa 3
-      - lrnbymaa 4
-      - lrnbymaa 5
-      - lrnbymaa 6
-      - lrnbymaa 7
-      - lrnbymaa 8
-      - lrnbymaa 9
-      - lrnbymaa 10
-      - lrnbymaa 11
-      - lrnbymaa 12
-      - lrnbymaa 13
-      - lrnbymaa 14
-      - lrnbymaa 15
-      - lrnbymaa 16
+      - Telegram @lrnbymaa
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - lrnbymaa
-      - lrnbymaa 2
-      - lrnbymaa 3
-      - lrnbymaa 4
-      - lrnbymaa 5
-      - lrnbymaa 6
-      - lrnbymaa 7
-      - lrnbymaa 8
-      - lrnbymaa 9
-      - lrnbymaa 10
-      - lrnbymaa 11
-      - lrnbymaa 12
-      - lrnbymaa 13
-      - lrnbymaa 14
-      - lrnbymaa 15
-      - lrnbymaa 16
+      - Telegram @lrnbymaa
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - lrnbymaa
-      - lrnbymaa 2
-      - lrnbymaa 3
-      - lrnbymaa 4
-      - lrnbymaa 5
-      - lrnbymaa 6
-      - lrnbymaa 7
-      - lrnbymaa 8
-      - lrnbymaa 9
-      - lrnbymaa 10
-      - lrnbymaa 11
-      - lrnbymaa 12
-      - lrnbymaa 13
-      - lrnbymaa 14
-      - lrnbymaa 15
-      - lrnbymaa 16
+      - Telegram @lrnbymaa
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - lrnbymaa
-      - lrnbymaa 2
-      - lrnbymaa 3
-      - lrnbymaa 4
-      - lrnbymaa 5
-      - lrnbymaa 6
-      - lrnbymaa 7
-      - lrnbymaa 8
-      - lrnbymaa 9
-      - lrnbymaa 10
-      - lrnbymaa 11
-      - lrnbymaa 12
-      - lrnbymaa 13
-      - lrnbymaa 14
-      - lrnbymaa 15
-      - lrnbymaa 16
+      - Telegram @lrnbymaa
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - lrnbymaa
-      - lrnbymaa 2
-      - lrnbymaa 3
-      - lrnbymaa 4
-      - lrnbymaa 5
-      - lrnbymaa 6
-      - lrnbymaa 7
-      - lrnbymaa 8
-      - lrnbymaa 9
-      - lrnbymaa 10
-      - lrnbymaa 11
-      - lrnbymaa 12
-      - lrnbymaa 13
-      - lrnbymaa 14
-      - lrnbymaa 15
-      - lrnbymaa 16
+      - Telegram @lrnbymaa
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - lrnbymaa
-      - lrnbymaa 2
-      - lrnbymaa 3
-      - lrnbymaa 4
-      - lrnbymaa 5
-      - lrnbymaa 6
-      - lrnbymaa 7
-      - lrnbymaa 8
-      - lrnbymaa 9
-      - lrnbymaa 10
-      - lrnbymaa 11
-      - lrnbymaa 12
-      - lrnbymaa 13
-      - lrnbymaa 14
-      - lrnbymaa 15
-      - lrnbymaa 16
+      - Telegram @lrnbymaa
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -177,22 +72,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - lrnbymaa
-      - lrnbymaa 2
-      - lrnbymaa 3
-      - lrnbymaa 4
-      - lrnbymaa 5
-      - lrnbymaa 6
-      - lrnbymaa 7
-      - lrnbymaa 8
-      - lrnbymaa 9
-      - lrnbymaa 10
-      - lrnbymaa 11
-      - lrnbymaa 12
-      - lrnbymaa 13
-      - lrnbymaa 14
-      - lrnbymaa 15
-      - lrnbymaa 16
+      - Telegram @lrnbymaa
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
