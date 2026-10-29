@@ -466,9 +466,7 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: 216.152.156.212:443, server: 216.152.156.212, port: 443, type: trojan, password: 0ab6c98dae3b48e8b9c4a776b6c9c19a, sni: courses.healthcarejobshubenhancemedicalprofessionalskillstoday.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 66.163.114.132:443, server: 66.163.114.132, port: 443, type: trojan, password: 0ab6c98dae3b48e8b9c4a776b6c9c19a, sni: courses.findconnectwithemployersandbuildprofessionalnetwork.com, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 66.163.122.7:443, server: 66.163.122.7, port: 443, type: trojan, password: 0ab6c98dae3b48e8b9c4a776b6c9c19a, sni: www.searchnationwidecareerchangehelperandguidancetoday.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: tau1.freerunet.online:443, server: tau1.freerunet.online, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ca14493b-b984-4ffb-bc0e-9cb5da969e15, servername: tau1.freerunet.online, host: tau1.freerunet.online, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: l1mx_plNc2oiWxJCcZLh3SGfFU-5QxYpgQ__Ea59WEg, short-id: 4a7b1c8d}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,9 +484,7 @@ proxy-groups:
     type: select
     proxies:
       - 216.152.156.212:443
-      - 66.163.114.132:443
       - 66.163.122.7:443
-      - tau1.freerunet.online:443
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -496,9 +492,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 216.152.156.212:443
-      - 66.163.114.132:443
       - 66.163.122.7:443
-      - tau1.freerunet.online:443
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -506,9 +500,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - 216.152.156.212:443
-      - 66.163.114.132:443
       - 66.163.122.7:443
-      - tau1.freerunet.online:443
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -525,9 +517,7 @@ proxy-groups:
     interval: 600
     proxies:
       - 216.152.156.212:443
-      - 66.163.114.132:443
       - 66.163.122.7:443
-      - tau1.freerunet.online:443
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -535,9 +525,7 @@ proxy-groups:
     interval: 600
     proxies:
       - 216.152.156.212:443
-      - 66.163.114.132:443
       - 66.163.122.7:443
-      - tau1.freerunet.online:443
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -545,9 +533,7 @@ proxy-groups:
     interval: 600
     proxies:
       - 216.152.156.212:443
-      - 66.163.114.132:443
       - 66.163.122.7:443
-      - tau1.freerunet.online:443
   - name: دانلود منیجر 📥
     type: select
     proxies:
