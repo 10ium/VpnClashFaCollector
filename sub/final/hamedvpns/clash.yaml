@@ -465,8 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: test-hamedvpns, server: 104.18.35.86, port: 443, type: trojan, password: humanity, sni: www.volumerOot.coM., skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.volumerOot.coM.}}, udp: true, tfo: false}
-  - {name: test-hamedvpns 2, server: 104.18.35.86, port: 443, type: trojan, password: humanity, sni: www.volumerOot.coM., skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.volumerOot.coM.}}, udp: true, tfo: false}
+  - {name: 83.217.9.230:43000, server: 83.217.9.230, port: 43000, type: vless, tls: true, packet-encoding: xudp, uuid: 4f8493b1-9876-46c4-8ded-01cafb22cee0, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: ptE_QnAka3pXNEf8BYKpA9CHdgj4U4xXTixjYWOji0U, short-id: 68d2eb23}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - test-hamedvpns
-      - test-hamedvpns 2
+      - 83.217.9.230:43000
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - test-hamedvpns
-      - test-hamedvpns 2
+      - 83.217.9.230:43000
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - test-hamedvpns
-      - test-hamedvpns 2
+      - 83.217.9.230:43000
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - test-hamedvpns
-      - test-hamedvpns 2
+      - 83.217.9.230:43000
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - test-hamedvpns
-      - test-hamedvpns 2
+      - 83.217.9.230:43000
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - test-hamedvpns
-      - test-hamedvpns 2
+      - 83.217.9.230:43000
   - name: دانلود منیجر 📥
     type: select
     proxies:

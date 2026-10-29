@@ -5,8 +5,10 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@Capoit`", server: dlx-2.viralforge.ru, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 047466dd-05aa-4331-abf7-322c5aaecf97, servername: dlx-2.viralforge.ru, host: dlx-2.viralforge.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: HLKQ0JvyaZ16JNdl0pbEPkiVRYJDiZNzGz9prDMiw2s, short-id: a1b2c3d4b5}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 2", server: 91.107.247.174, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a01eabc2-bfdd-457c-a02a-73993237a3c4, servername: gspe121-rh-ssl.ls.apple.com, host: gspe121-rh-ssl.ls.apple.com, path: /, reality-opts: {public-key: MjBRMMMBFIu4jSHSdDzdK4VPczAVkC1GHhHvugU3myI, short-id: c76b1008265b1a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit`", server: hw3.divarkhaghazi.com, port: 465, type: vless, tls: true, packet-encoding: xudp, uuid: 924e20da-fcad-4e7e-8113-c62d27a0d01e, servername: hw3.divarkhaghazi.com., alpn: [http%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: hw3.divarkhaghazi.com.}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 2", server: 193.160.140.159, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: d4353076-3ec7-47dc-88b0-f21eb59fbfb8, servername: apple.com, host: apple.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 3", server: 185.32.6.26, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e0216964-ffa1-4d39-82c4-0e40879a470d, servername: stable.nullo.pro, host: stable.nullo.pro, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: XYkuP_Keu-yL7EQ8xZc4RTmcVAfp06Z1onV2ZNrlsHM, short-id: c31f187b}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 4", server: 83.97.79.93, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: e0216964-ffa1-4d39-82c4-0e40879a470d, servername: ger.nullo.pro, host: ger.nullo.pro, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: e8vusEkL9FTC7oxFCp8biOWMFH-e-1IN21V6YNynGDg, short-id: 6350d1647a4880}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -15,6 +17,8 @@ proxy-groups:
       - DIRECT
       - "@Capoit`"
       - "@Capoit` 2"
+      - "@Capoit` 3"
+      - "@Capoit` 4"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -23,6 +27,8 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
+      - "@Capoit` 3"
+      - "@Capoit` 4"
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -31,6 +37,8 @@ proxy-groups:
       - 🎯 全球直连
       - "@Capoit`"
       - "@Capoit` 2"
+      - "@Capoit` 3"
+      - "@Capoit` 4"
   - name: 📲 电报信息
     type: select
     proxies:
@@ -38,6 +46,8 @@ proxy-groups:
       - 🎯 全球直连
       - "@Capoit`"
       - "@Capoit` 2"
+      - "@Capoit` 3"
+      - "@Capoit` 4"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -45,6 +55,8 @@ proxy-groups:
       - 🚀 节点选择
       - "@Capoit`"
       - "@Capoit` 2"
+      - "@Capoit` 3"
+      - "@Capoit` 4"
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -52,6 +64,8 @@ proxy-groups:
       - 🎯 全球直连
       - "@Capoit`"
       - "@Capoit` 2"
+      - "@Capoit` 3"
+      - "@Capoit` 4"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -81,6 +95,8 @@ proxy-groups:
       - ♻️ 自动选择
       - "@Capoit`"
       - "@Capoit` 2"
+      - "@Capoit` 3"
+      - "@Capoit` 4"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
