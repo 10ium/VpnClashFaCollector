@@ -465,12 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Capoit`", server: hw3.divarkhaghazi.com, port: 465, type: vless, tls: true, packet-encoding: xudp, uuid: 924e20da-fcad-4e7e-8113-c62d27a0d01e, servername: hw3.divarkhaghazi.com., alpn: [http%2F1.1], network: ws, ws-opts: {path: /, headers: {Host: hw3.divarkhaghazi.com.}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 2", server: 45.92.218.130, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 9ff5db63-88ff-4276-ab71-ac2b5cb2a740, servername: delivery.mp.microsoft.com, host: delivery.mp.microsoft.com, path: /, reality-opts: {public-key: I0vZxWIjZYvtzlcvGaW01Q1U3M-vHD8iI8BM5KTuuiM, short-id: d3feff5d570d6b}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 3", server: 45.152.192.229, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ce8fbdea-c3c3-4fb1-9658-32599d1f853f, servername: 8a11e6a89110.j.cloudfront.hls.ttvnw.net, host: 8a11e6a89110.j.cloudfront.hls.ttvnw.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 8ZYjmjb0b2QJKCGMrcdhQNV28jZZPCKgIQbIdqChQ0w, short-id: 61e21f9aa67aa1bf}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 4", server: 193.160.140.159, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: d4353076-3ec7-47dc-88b0-f21eb59fbfb8, servername: apple.com, host: apple.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 5", server: 185.32.6.26, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e0216964-ffa1-4d39-82c4-0e40879a470d, servername: stable.nullo.pro, host: stable.nullo.pro, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: XYkuP_Keu-yL7EQ8xZc4RTmcVAfp06Z1onV2ZNrlsHM, short-id: c31f187b}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 6", server: 83.97.79.93, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: e0216964-ffa1-4d39-82c4-0e40879a470d, servername: ger.nullo.pro, host: ger.nullo.pro, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: e8vusEkL9FTC7oxFCp8biOWMFH-e-1IN21V6YNynGDg, short-id: 6350d1647a4880}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit`", server: 45.92.218.130, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 9ff5db63-88ff-4276-ab71-ac2b5cb2a740, servername: delivery.mp.microsoft.com, host: delivery.mp.microsoft.com, path: /, reality-opts: {public-key: I0vZxWIjZYvtzlcvGaW01Q1U3M-vHD8iI8BM5KTuuiM, short-id: d3feff5d570d6b}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 2", server: 45.152.192.229, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ce8fbdea-c3c3-4fb1-9658-32599d1f853f, servername: 8a11e6a89110.j.cloudfront.hls.ttvnw.net, host: 8a11e6a89110.j.cloudfront.hls.ttvnw.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 8ZYjmjb0b2QJKCGMrcdhQNV28jZZPCKgIQbIdqChQ0w, short-id: 61e21f9aa67aa1bf}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -489,10 +485,6 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
-      - "@Capoit` 3"
-      - "@Capoit` 4"
-      - "@Capoit` 5"
-      - "@Capoit` 6"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -501,10 +493,6 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
-      - "@Capoit` 3"
-      - "@Capoit` 4"
-      - "@Capoit` 5"
-      - "@Capoit` 6"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -513,10 +501,6 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
-      - "@Capoit` 3"
-      - "@Capoit` 4"
-      - "@Capoit` 5"
-      - "@Capoit` 6"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -534,10 +518,6 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
-      - "@Capoit` 3"
-      - "@Capoit` 4"
-      - "@Capoit` 5"
-      - "@Capoit` 6"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -546,10 +526,6 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
-      - "@Capoit` 3"
-      - "@Capoit` 4"
-      - "@Capoit` 5"
-      - "@Capoit` 6"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -558,10 +534,6 @@ proxy-groups:
     proxies:
       - "@Capoit`"
       - "@Capoit` 2"
-      - "@Capoit` 3"
-      - "@Capoit` 4"
-      - "@Capoit` 5"
-      - "@Capoit` 6"
   - name: دانلود منیجر 📥
     type: select
     proxies:
