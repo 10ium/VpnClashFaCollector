@@ -465,7 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@hamedvpns", server: 57.131.38.163, port: 2053, type: vless, tls: true, packet-encoding: xudp, uuid: d4b08cd6-0903-411a-9dac-45dbdf5c9712, servername: www.apple.com, host: www.apple.com, path: /, reality-opts: {public-key: Ej2H5ucT7qKegYcT8wODdlxa-cLHr7F4hDVUHzAhcnc, short-id: 5b8a942318178e7b}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@hamedvpns 🇮🇳1", server: 5.253.30.99, port: 40443, type: vless, tls: true, packet-encoding: xudp, uuid: 511c1563-2cb6-4064-abc6-a59ee49818a8, servername: deepl.com, host: deepl.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0, short-id: 88b6}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@hamedvpns 🇮🇳2", server: 5.253.42.164, port: 40443, type: vless, tls: true, packet-encoding: xudp, uuid: e99ba96d-dec8-42eb-be53-19e71eef7cab, servername: deepl.com, host: deepl.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw, short-id: 68a8}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@hsmedvpns 🇮🇳", server: 5.253.42.164, port: 40443, type: vless, tls: true, packet-encoding: xudp, uuid: e99ba96d-dec8-42eb-be53-19e71eef7cab, servername: deepl.com, host: deepl.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw, short-id: 68a8}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +484,27 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@hamedvpns"
+      - "@hamedvpns 🇮🇳1"
+      - "@hamedvpns 🇮🇳2"
+      - "@hsmedvpns 🇮🇳"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@hamedvpns"
+      - "@hamedvpns 🇮🇳1"
+      - "@hamedvpns 🇮🇳2"
+      - "@hsmedvpns 🇮🇳"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@hamedvpns"
+      - "@hamedvpns 🇮🇳1"
+      - "@hamedvpns 🇮🇳2"
+      - "@hsmedvpns 🇮🇳"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +520,27 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@hamedvpns"
+      - "@hamedvpns 🇮🇳1"
+      - "@hamedvpns 🇮🇳2"
+      - "@hsmedvpns 🇮🇳"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@hamedvpns"
+      - "@hamedvpns 🇮🇳1"
+      - "@hamedvpns 🇮🇳2"
+      - "@hsmedvpns 🇮🇳"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@hamedvpns"
+      - "@hamedvpns 🇮🇳1"
+      - "@hamedvpns 🇮🇳2"
+      - "@hsmedvpns 🇮🇳"
   - name: دانلود منیجر 📥
     type: select
     proxies:
