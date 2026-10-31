@@ -465,13 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 169.197.140.169:443, server: 169.197.140.169, port: 443, type: trojan, password: 0ab6c98dae3b48e8b9c4a776b6c9c19a, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 193.108.119.15:443, server: 193.108.119.15, port: 443, type: trojan, password: 0ab6c98dae3b48e8b9c4a776b6c9c19a, sni: courses.iloverussia2026.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 66.163.112.242:443, server: 66.163.112.242, port: 443, type: trojan, password: 0ab6c98dae3b48e8b9c4a776b6c9c19a, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇮🇳 in002.zestapp778.com:42733, server: in002.zestapp778.com, port: 42733, type: trojan, password: 5t6i121em5lkmsmk, sni: in002.zestapp778.com, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 187.52.44.20:47443, server: 187.52.44.20, port: 47443, type: vless, tls: true, packet-encoding: xudp, uuid: 1fe01c8a-ab37-4e95-bbfc-95d4a608931e, servername: nl4.waspnest.space, host: nl4.waspnest.space, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: g5am2VhZkx_xH2TSKfUU8OYLxAzFrmcszNQg8AbOenE, short-id: ae97223a8f799872}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 94.249.195.81:43000, server: 94.249.195.81, port: 43000, type: vless, tls: true, packet-encoding: xudp, uuid: 6ddd64ac-972b-4809-8399-9ada51b64837, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: pR4VpawT5rTi2LKtKvRtAiaW5p1ZGRNiao6_5TAkawI, short-id: c6552fdd}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 189.74.114.119:443, server: 189.74.114.119, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: abd5755a-8b77-4ed4-afbd-f2ccbc08e6f5, servername: api.mediaklenov.cc, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: 3e99d50d5740985d}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 87.232.116.20:443, server: 87.232.116.20, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d86e6fda-e519-46ab-98eb-9ff9a9da5984, servername: fafeqdhlett2p5la6d.cdn.cachefleet.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: 67h2o3erm0t9imsj}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -488,39 +486,33 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 169.197.140.169:443
       - 193.108.119.15:443
-      - 66.163.112.242:443
-      - 🇮🇳 in002.zestapp778.com:42733
       - 187.52.44.20:47443
       - 94.249.195.81:43000
       - 189.74.114.119:443
+      - 87.232.116.20:443
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 169.197.140.169:443
       - 193.108.119.15:443
-      - 66.163.112.242:443
-      - 🇮🇳 in002.zestapp778.com:42733
       - 187.52.44.20:47443
       - 94.249.195.81:43000
       - 189.74.114.119:443
+      - 87.232.116.20:443
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 169.197.140.169:443
       - 193.108.119.15:443
-      - 66.163.112.242:443
-      - 🇮🇳 in002.zestapp778.com:42733
       - 187.52.44.20:47443
       - 94.249.195.81:43000
       - 189.74.114.119:443
+      - 87.232.116.20:443
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -536,39 +528,33 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 169.197.140.169:443
       - 193.108.119.15:443
-      - 66.163.112.242:443
-      - 🇮🇳 in002.zestapp778.com:42733
       - 187.52.44.20:47443
       - 94.249.195.81:43000
       - 189.74.114.119:443
+      - 87.232.116.20:443
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 169.197.140.169:443
       - 193.108.119.15:443
-      - 66.163.112.242:443
-      - 🇮🇳 in002.zestapp778.com:42733
       - 187.52.44.20:47443
       - 94.249.195.81:43000
       - 189.74.114.119:443
+      - 87.232.116.20:443
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 169.197.140.169:443
       - 193.108.119.15:443
-      - 66.163.112.242:443
-      - 🇮🇳 in002.zestapp778.com:42733
       - 187.52.44.20:47443
       - 94.249.195.81:43000
       - 189.74.114.119:443
+      - 87.232.116.20:443
   - name: دانلود منیجر 📥
     type: select
     proxies:
