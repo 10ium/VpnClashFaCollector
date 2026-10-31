@@ -5,14 +5,11 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@vasl_bashim", server: node11.botkeep.cloud, port: 53567, type: ss, cipher: aes-256-gcm, password: SnOSRfo0h6mnWehTG_Xang, udp: true, tfo: false}
-  - {name: "@vasl_bashim 2", server: 185.215.132.18, port: 19999, type: ss, cipher: aes-256-gcm, password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=, udp: true, tfo: false}
-  - {name: "@vasl_bashim 3", server: 51.83.192.80, port: 8388, type: ss, cipher: aes-256-gcm, password: itzvpn@321, udp: true, tfo: false}
-  - {name: "@vasl_bashim 4", server: 216.152.156.49, port: 443, type: trojan, password: 0ab6c98dae3b48e8b9c4a776b6c9c19a, sni: cdn.healthcarejobshubenhancemedicalprofessionalskillstoday.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim 5", server: 66.163.118.62, port: 443, type: trojan, password: 0ab6c98dae3b48e8b9c4a776b6c9c19a, sni: courses.discovergreatjobsandadvanceyourcareer.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim 6", server: 109.234.211.232, port: 443, type: trojan, password: humanity, sni: www.pleadcourt.org, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.pleadcourt.org}}, udp: true, tfo: false}
-  - {name: "@vasl_bashim 7", server: FL.Private-Ai.IR, port: 58300, type: vless, tls: true, packet-encoding: xudp, uuid: a6f263ad-2d3e-42c6-9584-ed80a5b1134d, servername: tgju.org, host: tgju.org, path: /, reality-opts: {public-key: pv_PFRpAmvac9C9JtEoDiVAplQckvo6APb0H3DTFbF4, short-id: 0eaccdda0679cf22}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim 8", server: TGR.Private-Ai.IR, port: 58302, type: vless, tls: true, packet-encoding: xudp, uuid: a6f263ad-2d3e-42c6-9584-ed80a5b1134d, host: tgju.org, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim", server: 202.50.253.27, port: 19999, type: ss, cipher: aes-256-gcm, password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=, udp: true, tfo: false}
+  - {name: "@vasl_bashim 2", server: 202.50.253.63, port: 19999, type: ss, cipher: aes-256-gcm, password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=, udp: true, tfo: false}
+  - {name: "@vasl_bashim 3", server: 8.6.112.206, port: 443, type: trojan, password: humanity, sni: www.trusteeforward.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.trusteeforward.com}}, udp: true, tfo: false}
+  - {name: "@vasl_bashim 4", server: 150.40.126.22, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 2f35965a-9a9b-45fd-ba32-987296dfb6be, servername: rs4.univesalsrv.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: media.v1.StreamService}, reality-opts: {public-key: sXsJ4ET-50TYqlhKZf03nPQr2JIy1F0D4m6lOsI0cAs, short-id: 861ac7d66953e55f}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim 5", server: 13.143.184.226, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a449b942-e70d-4124-96c1-a489e701d7ee, servername: msc1.serverslocal.ru, host: msc1.serverslocal.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: qPh1iuwpELosLWTxOXyfCiMghs_sjSzCOGbkiF0gdkk, short-id: f7e66e308136e1a1}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -24,9 +21,6 @@ proxy-groups:
       - "@vasl_bashim 3"
       - "@vasl_bashim 4"
       - "@vasl_bashim 5"
-      - "@vasl_bashim 6"
-      - "@vasl_bashim 7"
-      - "@vasl_bashim 8"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -38,9 +32,6 @@ proxy-groups:
       - "@vasl_bashim 3"
       - "@vasl_bashim 4"
       - "@vasl_bashim 5"
-      - "@vasl_bashim 6"
-      - "@vasl_bashim 7"
-      - "@vasl_bashim 8"
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -52,9 +43,6 @@ proxy-groups:
       - "@vasl_bashim 3"
       - "@vasl_bashim 4"
       - "@vasl_bashim 5"
-      - "@vasl_bashim 6"
-      - "@vasl_bashim 7"
-      - "@vasl_bashim 8"
   - name: 📲 电报信息
     type: select
     proxies:
@@ -65,9 +53,6 @@ proxy-groups:
       - "@vasl_bashim 3"
       - "@vasl_bashim 4"
       - "@vasl_bashim 5"
-      - "@vasl_bashim 6"
-      - "@vasl_bashim 7"
-      - "@vasl_bashim 8"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -78,9 +63,6 @@ proxy-groups:
       - "@vasl_bashim 3"
       - "@vasl_bashim 4"
       - "@vasl_bashim 5"
-      - "@vasl_bashim 6"
-      - "@vasl_bashim 7"
-      - "@vasl_bashim 8"
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -91,9 +73,6 @@ proxy-groups:
       - "@vasl_bashim 3"
       - "@vasl_bashim 4"
       - "@vasl_bashim 5"
-      - "@vasl_bashim 6"
-      - "@vasl_bashim 7"
-      - "@vasl_bashim 8"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -126,9 +105,6 @@ proxy-groups:
       - "@vasl_bashim 3"
       - "@vasl_bashim 4"
       - "@vasl_bashim 5"
-      - "@vasl_bashim 6"
-      - "@vasl_bashim 7"
-      - "@vasl_bashim 8"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

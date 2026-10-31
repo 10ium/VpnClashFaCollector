@@ -465,9 +465,15 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@hamedvpns 🇮🇳1", server: 5.253.30.99, port: 40443, type: vless, tls: true, packet-encoding: xudp, uuid: 511c1563-2cb6-4064-abc6-a59ee49818a8, servername: deepl.com, host: deepl.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: cwmcqsfS7klQlkcoUNuATEk0NiPY-NnRb9z8rCJDQw0, short-id: 88b6}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@hamedvpns 🇮🇳2", server: 5.253.42.164, port: 40443, type: vless, tls: true, packet-encoding: xudp, uuid: e99ba96d-dec8-42eb-be53-19e71eef7cab, servername: deepl.com, host: deepl.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw, short-id: 68a8}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@hsmedvpns 🇮🇳", server: 5.253.42.164, port: 40443, type: vless, tls: true, packet-encoding: xudp, uuid: e99ba96d-dec8-42eb-be53-19e71eef7cab, servername: deepl.com, host: deepl.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: g77ZJbm18JEotapmVRjaXi133MzkbhkU2lxhVeXx8zw, short-id: 68a8}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hamedvpns, server: 198.13.140.193, port: 443, type: hysteria2, ports: 443, password: 59018379-d5df-4314-ab23-df0e838d7953, obfs: salamander, obfs-password: litevpn, sni: efa11.lumariqis.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hamedvpns 2, server: 109.248.148.140, port: 11470, type: ss, cipher: aes-128-gcm, password: 37f61556b774c79cb72c2f176dba794b, udp: true, tfo: false}
+  - {name: 🇳🇱, server: 45.128.76.242, port: 443, type: trojan, password: humanity, sni: www.trusteeforward.com, skip-cert-verify: false, network: ws, ws-opts: {path: /assignment, headers: {Host: www.trusteeforward.com}}, udp: true, tfo: false}
+  - {name: hamedvpns 3, server: 109.248.148.140, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 28e7f9e1-006c-4c38-822d-2d2903477444, servername: www.apple.com, host: www.apple.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hamedvpns 4, server: 147.78.1.253, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 39a390af-1f90-4c0e-89e4-4e2023732e4b, servername: www.apple.com, host: www.apple.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hamedvpns 5, server: 79.141.164.81, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 82544447-89fc-45a2-b014-4327804fa85d, servername: nla.kosmosapp.net, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: neurex}, reality-opts: {public-key: pR39Vv5qhk8r6akOicoy6mMs4-ppSWUez8MyAXG7wwQ, short-id: 27350908de933e09}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hamedvpns 6, server: 92.243.74.224, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: a52fd54b-ba4d-4d11-8e00-301e2646cd66, servername: de8.vpngold.ru, host: de8.vpngold.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1H1DiBCBB7fpALV71pH1q66ePybBFlVOcxftdlQimQ8, short-id: 385cb18df0892069}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hamedvpns 7, server: pl10.sky-vault.top, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ad804c2d-7ce7-42e9-bb04-d689d259e484, servername: pl10.sky-vault.top, host: pl10.sky-vault.top, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: _KTsOFhGnC0W28ZqO8_FApozMp7tJ9cVBTLKLAA_OR0, short-id: ae64c9b46bff174a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: hamedvpns 8, server: uk3.sky-vault.top, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ad804c2d-7ce7-42e9-bb04-d689d259e484, servername: uk3.sky-vault.top, host: uk3.sky-vault.top, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: _KTsOFhGnC0W28ZqO8_FApozMp7tJ9cVBTLKLAA_OR0, short-id: ae64c9b46bff174a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,27 +490,45 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@hamedvpns 🇮🇳1"
-      - "@hamedvpns 🇮🇳2"
-      - "@hsmedvpns 🇮🇳"
+      - hamedvpns
+      - hamedvpns 2
+      - 🇳🇱
+      - hamedvpns 3
+      - hamedvpns 4
+      - hamedvpns 5
+      - hamedvpns 6
+      - hamedvpns 7
+      - hamedvpns 8
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@hamedvpns 🇮🇳1"
-      - "@hamedvpns 🇮🇳2"
-      - "@hsmedvpns 🇮🇳"
+      - hamedvpns
+      - hamedvpns 2
+      - 🇳🇱
+      - hamedvpns 3
+      - hamedvpns 4
+      - hamedvpns 5
+      - hamedvpns 6
+      - hamedvpns 7
+      - hamedvpns 8
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@hamedvpns 🇮🇳1"
-      - "@hamedvpns 🇮🇳2"
-      - "@hsmedvpns 🇮🇳"
+      - hamedvpns
+      - hamedvpns 2
+      - 🇳🇱
+      - hamedvpns 3
+      - hamedvpns 4
+      - hamedvpns 5
+      - hamedvpns 6
+      - hamedvpns 7
+      - hamedvpns 8
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -520,27 +544,45 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@hamedvpns 🇮🇳1"
-      - "@hamedvpns 🇮🇳2"
-      - "@hsmedvpns 🇮🇳"
+      - hamedvpns
+      - hamedvpns 2
+      - 🇳🇱
+      - hamedvpns 3
+      - hamedvpns 4
+      - hamedvpns 5
+      - hamedvpns 6
+      - hamedvpns 7
+      - hamedvpns 8
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@hamedvpns 🇮🇳1"
-      - "@hamedvpns 🇮🇳2"
-      - "@hsmedvpns 🇮🇳"
+      - hamedvpns
+      - hamedvpns 2
+      - 🇳🇱
+      - hamedvpns 3
+      - hamedvpns 4
+      - hamedvpns 5
+      - hamedvpns 6
+      - hamedvpns 7
+      - hamedvpns 8
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@hamedvpns 🇮🇳1"
-      - "@hamedvpns 🇮🇳2"
-      - "@hsmedvpns 🇮🇳"
+      - hamedvpns
+      - hamedvpns 2
+      - 🇳🇱
+      - hamedvpns 3
+      - hamedvpns 4
+      - hamedvpns 5
+      - hamedvpns 6
+      - hamedvpns 7
+      - hamedvpns 8
   - name: دانلود منیجر 📥
     type: select
     proxies:
