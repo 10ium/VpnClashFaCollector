@@ -465,8 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 🇬🇧 United Kingdom, server: 178.107.60.242, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: effd2c78-3ab8-4d3f-893f-49a703c27208, servername: filesconvert.org, host: filesconvert.org, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: U_E3xSI6QY_Mj-3zjkB4esvMj0aVvYH6W6oHOR50XBs, short-id: 10debbdf94767541}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇳🇱 Netherlands, server: 50.7.121.4, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: effd2c78-3ab8-4d3f-893f-49a703c27208, servername: filesconvert.org, host: filesconvert.org, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: U_E3xSI6QY_Mj-3zjkB4esvMj0aVvYH6W6oHOR50XBs, short-id: 10debbdf94767541}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ᴳᵉʳᵐᵃⁿʸ 🇩🇪`, server: loos.cksurge.ir, port: 47456, type: vless, tls: true, packet-encoding: xudp, uuid: 76cdb797-1c32-4e14-820b-c36f08f3f2cc, host: loos.cksurge.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 🇬🇧 United Kingdom
-      - 🇳🇱 Netherlands
+      - ᴳᵉʳᵐᵃⁿʸ 🇩🇪`
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 🇬🇧 United Kingdom
-      - 🇳🇱 Netherlands
+      - ᴳᵉʳᵐᵃⁿʸ 🇩🇪`
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 🇬🇧 United Kingdom
-      - 🇳🇱 Netherlands
+      - ᴳᵉʳᵐᵃⁿʸ 🇩🇪`
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇬🇧 United Kingdom
-      - 🇳🇱 Netherlands
+      - ᴳᵉʳᵐᵃⁿʸ 🇩🇪`
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇬🇧 United Kingdom
-      - 🇳🇱 Netherlands
+      - ᴳᵉʳᵐᵃⁿʸ 🇩🇪`
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇬🇧 United Kingdom
-      - 🇳🇱 Netherlands
+      - ᴳᵉʳᵐᵃⁿʸ 🇩🇪`
   - name: دانلود منیجر 📥
     type: select
     proxies:
