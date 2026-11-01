@@ -467,12 +467,16 @@ rule-providers:
 proxies:
   - {name: 167.88.61.193:443, server: 167.88.61.193, port: 443, type: trojan, password: 0ab6c98dae3b48e8b9c4a776b6c9c19a, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 193.108.119.15:443, server: 193.108.119.15, port: 443, type: trojan, password: 0ab6c98dae3b48e8b9c4a776b6c9c19a, sni: courses.iloverussia2026.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 208.69.78.19:443, server: 208.69.78.19, port: 443, type: trojan, password: 0ab6c98dae3b48e8b9c4a776b6c9c19a, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 216.152.147.89:443, server: 216.152.147.89, port: 443, type: trojan, password: 0ab6c98dae3b48e8b9c4a776b6c9c19a, skip-cert-verify: false, udp: true, tfo: false}
   - {name: en001.zestapp778.com:29813, server: en001.zestapp778.com, port: 29813, type: trojan, password: 5t6i121em5lkmsmk, sni: en001.zestapp778.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: swself2.yandex-api.com:443, server: swself2.yandex-api.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 1b7ee703-fa08-4305-8469-ae3e30e61e44, servername: swself2.yandex-api.com, host: swself2.yandex-api.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: HXFe_cPryw01zqXchAFjZciDAS4UJg1-xScx6vjgjjY, short-id: 7f2e9c4b1a8d6e25}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 5.181.158.195:8463, server: 5.181.158.195, port: 8463, type: vless, tls: true, packet-encoding: xudp, uuid: 1c8f7130-8c1a-4949-831d-1d45b39c795b, servername: svoboda2.bystriynet.online, host: svoboda2.bystriynet.online, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: k2jSuvKPXyN0fCJiGpl1NMzzN7kzo64vsbbLD4gdKQ4, short-id: f017b721750fd683}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 31.77.68.36:443, server: 31.77.68.36, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 7a0348d6-55d3-4c23-b22f-6277fcb2264c, servername: addons.mozilla.org, host: addons.mozilla.org, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: Daj7jHuHFEC_LV-Fv1fBSaTSQRM9vfgf_DtjMn9svl0, short-id: 64e4efa1}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 178.236.242.254:8443, server: 178.236.242.254, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: c05ec3c7-2784-da2b-aa98-a3c132860fcb, servername: xnod13x.artemida.live, host: xnod13x.artemida.live, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: ZRTNgwFRP8viY4SQOgPTfWlLWJCwY3dr0aawA7vHwhU, short-id: a1b2c3d4e5f6a7b8}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 87.232.116.20:443, server: 87.232.116.20, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d86e6fda-e519-46ab-98eb-9ff9a9da5984, servername: fafeqdhlett2p5la6d.cdn.cachefleet.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: 67h2o3erm0t9imsj}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇩🇪 [openproxylist.com] vmess-DE", server: dBcaeS0WKJRoAhsQ.v.3dns.vip, port: 443, type: vmess, uuid: 234a80412b4d44a3a8d8523cbfd58dc4, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: dBcaeS0WKJRoAhsQ.v.3dns.vip, network: ws, ws-opts: {path: /ws-vmess, headers: {Host: dBcaeS0WKJRoAhsQ.v.3dns.vip}}, udp: true, tfo: false}
+  - {name: "🇭🇰 [openproxylist.com] vmess-HK", server: az-1.linkaa.xyz, port: 53617, type: vmess, uuid: 6E571484-4166-4699-8F58-B34A1823691F, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, servername: az-1.linkaa.xyz, network: ws, ws-opts: {path: /game/resources, headers: {Host: az-1.linkaa.xyz}}, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -491,12 +495,16 @@ proxy-groups:
     proxies:
       - 167.88.61.193:443
       - 193.108.119.15:443
+      - 208.69.78.19:443
       - 216.152.147.89:443
       - en001.zestapp778.com:29813
+      - swself2.yandex-api.com:443
       - 5.181.158.195:8463
       - 31.77.68.36:443
       - 178.236.242.254:8443
       - 87.232.116.20:443
+      - 🇩🇪 [openproxylist.com] vmess-DE
+      - 🇭🇰 [openproxylist.com] vmess-HK
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -505,12 +513,16 @@ proxy-groups:
     proxies:
       - 167.88.61.193:443
       - 193.108.119.15:443
+      - 208.69.78.19:443
       - 216.152.147.89:443
       - en001.zestapp778.com:29813
+      - swself2.yandex-api.com:443
       - 5.181.158.195:8463
       - 31.77.68.36:443
       - 178.236.242.254:8443
       - 87.232.116.20:443
+      - 🇩🇪 [openproxylist.com] vmess-DE
+      - 🇭🇰 [openproxylist.com] vmess-HK
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -519,12 +531,16 @@ proxy-groups:
     proxies:
       - 167.88.61.193:443
       - 193.108.119.15:443
+      - 208.69.78.19:443
       - 216.152.147.89:443
       - en001.zestapp778.com:29813
+      - swself2.yandex-api.com:443
       - 5.181.158.195:8463
       - 31.77.68.36:443
       - 178.236.242.254:8443
       - 87.232.116.20:443
+      - 🇩🇪 [openproxylist.com] vmess-DE
+      - 🇭🇰 [openproxylist.com] vmess-HK
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -542,12 +558,16 @@ proxy-groups:
     proxies:
       - 167.88.61.193:443
       - 193.108.119.15:443
+      - 208.69.78.19:443
       - 216.152.147.89:443
       - en001.zestapp778.com:29813
+      - swself2.yandex-api.com:443
       - 5.181.158.195:8463
       - 31.77.68.36:443
       - 178.236.242.254:8443
       - 87.232.116.20:443
+      - 🇩🇪 [openproxylist.com] vmess-DE
+      - 🇭🇰 [openproxylist.com] vmess-HK
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -556,12 +576,16 @@ proxy-groups:
     proxies:
       - 167.88.61.193:443
       - 193.108.119.15:443
+      - 208.69.78.19:443
       - 216.152.147.89:443
       - en001.zestapp778.com:29813
+      - swself2.yandex-api.com:443
       - 5.181.158.195:8463
       - 31.77.68.36:443
       - 178.236.242.254:8443
       - 87.232.116.20:443
+      - 🇩🇪 [openproxylist.com] vmess-DE
+      - 🇭🇰 [openproxylist.com] vmess-HK
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -570,12 +594,16 @@ proxy-groups:
     proxies:
       - 167.88.61.193:443
       - 193.108.119.15:443
+      - 208.69.78.19:443
       - 216.152.147.89:443
       - en001.zestapp778.com:29813
+      - swself2.yandex-api.com:443
       - 5.181.158.195:8463
       - 31.77.68.36:443
       - 178.236.242.254:8443
       - 87.232.116.20:443
+      - 🇩🇪 [openproxylist.com] vmess-DE
+      - 🇭🇰 [openproxylist.com] vmess-HK
   - name: دانلود منیجر 📥
     type: select
     proxies:
