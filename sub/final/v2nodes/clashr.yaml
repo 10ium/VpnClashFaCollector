@@ -5,60 +5,60 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 🇩🇪 de-bots4.h1cloud.net:25267, server: de-bots4.h1cloud.net, port: 25267, type: trojan, password: happybirthdaydaniel, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 87.232.116.20:443, server: 87.232.116.20, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d86e6fda-e519-46ab-98eb-9ff9a9da5984, servername: fafeqdhlett2p5la6d.cdn.cachefleet.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: 67h2o3erm0t9imsj}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ee.h1cloud.net:25895, server: ee.h1cloud.net, port: 25895, type: vless, tls: true, packet-encoding: xudp, uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2, servername: www.samsung.com, host: www.samsung.com, path: /, reality-opts: {public-key: jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k, short-id: a73f0410d728c823}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 208.69.78.19:443, server: 208.69.78.19, port: 443, type: trojan, password: 0ab6c98dae3b48e8b9c4a776b6c9c19a, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 66.163.127.155:443, server: 66.163.127.155, port: 443, type: trojan, password: 0ab6c98dae3b48e8b9c4a776b6c9c19a, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 89.169.47.96:443, server: 89.169.47.96, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 27653b37-603c-4c90-b1f5-25c4d23f8932, servername: renderer-bridge-2-129.mirra.now, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: VideoRenderer}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇩🇪 de-bots4.h1cloud.net:25267
-      - 87.232.116.20:443
-      - ee.h1cloud.net:25895
+      - 208.69.78.19:443
+      - 66.163.127.155:443
+      - 89.169.47.96:443
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 🇩🇪 de-bots4.h1cloud.net:25267
-      - 87.232.116.20:443
-      - ee.h1cloud.net:25895
+      - 208.69.78.19:443
+      - 66.163.127.155:443
+      - 89.169.47.96:443
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇩🇪 de-bots4.h1cloud.net:25267
-      - 87.232.116.20:443
-      - ee.h1cloud.net:25895
+      - 208.69.78.19:443
+      - 66.163.127.155:443
+      - 89.169.47.96:443
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇩🇪 de-bots4.h1cloud.net:25267
-      - 87.232.116.20:443
-      - ee.h1cloud.net:25895
+      - 208.69.78.19:443
+      - 66.163.127.155:443
+      - 89.169.47.96:443
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 🇩🇪 de-bots4.h1cloud.net:25267
-      - 87.232.116.20:443
-      - ee.h1cloud.net:25895
+      - 208.69.78.19:443
+      - 66.163.127.155:443
+      - 89.169.47.96:443
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇩🇪 de-bots4.h1cloud.net:25267
-      - 87.232.116.20:443
-      - ee.h1cloud.net:25895
+      - 208.69.78.19:443
+      - 66.163.127.155:443
+      - 89.169.47.96:443
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -86,9 +86,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇩🇪 de-bots4.h1cloud.net:25267
-      - 87.232.116.20:443
-      - ee.h1cloud.net:25895
+      - 208.69.78.19:443
+      - 66.163.127.155:443
+      - 89.169.47.96:443
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
