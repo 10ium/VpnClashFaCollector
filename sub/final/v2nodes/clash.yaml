@@ -465,9 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 208.69.78.19:443, server: 208.69.78.19, port: 443, type: trojan, password: 0ab6c98dae3b48e8b9c4a776b6c9c19a, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 66.163.127.155:443, server: 66.163.127.155, port: 443, type: trojan, password: 0ab6c98dae3b48e8b9c4a776b6c9c19a, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 89.169.47.96:443, server: 89.169.47.96, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 27653b37-603c-4c90-b1f5-25c4d23f8932, servername: renderer-bridge-2-129.mirra.now, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: VideoRenderer}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 207.148.115.152:443, server: 207.148.115.152, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a1de0630-5786-48a0-84f6-dc6f2de10d6d, servername: vlso5.1d.mom, network: ws, ws-opts: {path: /socks5=888:888@hkip.1d.mom:1080fp=chrome, headers: {Host: vlso5.1d.mom}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,27 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 208.69.78.19:443
-      - 66.163.127.155:443
       - 89.169.47.96:443
+      - 207.148.115.152:443
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 208.69.78.19:443
-      - 66.163.127.155:443
       - 89.169.47.96:443
+      - 207.148.115.152:443
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 208.69.78.19:443
-      - 66.163.127.155:443
       - 89.169.47.96:443
+      - 207.148.115.152:443
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -520,27 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 208.69.78.19:443
-      - 66.163.127.155:443
       - 89.169.47.96:443
+      - 207.148.115.152:443
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 208.69.78.19:443
-      - 66.163.127.155:443
       - 89.169.47.96:443
+      - 207.148.115.152:443
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 208.69.78.19:443
-      - 66.163.127.155:443
       - 89.169.47.96:443
+      - 207.148.115.152:443
   - name: دانلود منیجر 📥
     type: select
     proxies:
