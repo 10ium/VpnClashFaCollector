@@ -465,12 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@v2ray_free_config_iran", server: netherlands.vpnserverhub.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 0b213159-c028-468b-b6a9-1efb3673c9b2, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2ray_free_config_iran 2", server: netherlands.vpnserverhub.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5ba555a5-5101-4bbc-8576-7fcdf8ecc82e, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2ray_free_config_iran 3", server: netherlands.vpnserverhub.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5c84bc99-a8ca-45ec-9fac-0d21d210b8d4, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2ray_free_config_iran 4", server: netherlands.vpnserverhub.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 75a123c5-4b1d-4a49-b387-740f4d649877, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2ray_free_config_iran 5", server: netherlands.vpnserverhub.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 7fc1faf9-c0b4-4608-9fda-d628abe43117, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2ray_free_config_iran 6", server: netherlands.vpnserverhub.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: cf2f1946-f845-482c-bd9f-e59c325b0889, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2ray_free_config_iran", server: netherlands.vpnserverhub.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a34d6335-b344-4c17-93d5-3b24c74a248c, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: …, server: netherlands.vpnserverhub.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a34d6335-b344-4c17-93d5-3b24c74a248c, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2ray_free_config_iran 2", server: netherlands.vpnserverhub.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: bc80fe5c-cbf1-4b21-b7c0-20e661496b80, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -488,11 +485,8 @@ proxy-groups:
     type: select
     proxies:
       - "@v2ray_free_config_iran"
+      - …
       - "@v2ray_free_config_iran 2"
-      - "@v2ray_free_config_iran 3"
-      - "@v2ray_free_config_iran 4"
-      - "@v2ray_free_config_iran 5"
-      - "@v2ray_free_config_iran 6"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -500,11 +494,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@v2ray_free_config_iran"
+      - …
       - "@v2ray_free_config_iran 2"
-      - "@v2ray_free_config_iran 3"
-      - "@v2ray_free_config_iran 4"
-      - "@v2ray_free_config_iran 5"
-      - "@v2ray_free_config_iran 6"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -512,11 +503,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@v2ray_free_config_iran"
+      - …
       - "@v2ray_free_config_iran 2"
-      - "@v2ray_free_config_iran 3"
-      - "@v2ray_free_config_iran 4"
-      - "@v2ray_free_config_iran 5"
-      - "@v2ray_free_config_iran 6"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -533,11 +521,8 @@ proxy-groups:
     interval: 600
     proxies:
       - "@v2ray_free_config_iran"
+      - …
       - "@v2ray_free_config_iran 2"
-      - "@v2ray_free_config_iran 3"
-      - "@v2ray_free_config_iran 4"
-      - "@v2ray_free_config_iran 5"
-      - "@v2ray_free_config_iran 6"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -545,11 +530,8 @@ proxy-groups:
     interval: 600
     proxies:
       - "@v2ray_free_config_iran"
+      - …
       - "@v2ray_free_config_iran 2"
-      - "@v2ray_free_config_iran 3"
-      - "@v2ray_free_config_iran 4"
-      - "@v2ray_free_config_iran 5"
-      - "@v2ray_free_config_iran 6"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -557,11 +539,8 @@ proxy-groups:
     interval: 600
     proxies:
       - "@v2ray_free_config_iran"
+      - …
       - "@v2ray_free_config_iran 2"
-      - "@v2ray_free_config_iran 3"
-      - "@v2ray_free_config_iran 4"
-      - "@v2ray_free_config_iran 5"
-      - "@v2ray_free_config_iran 6"
   - name: دانلود منیجر 📥
     type: select
     proxies:
