@@ -7,8 +7,8 @@ external-controller: 127.0.0.1:9090
 proxies:
   - {name: "@v2ray_free_config_iran", server: poland.vpnserverhub.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 3cd559a7-b896-4852-ab8b-81a192dc8460, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@v2ray_free_config_iran 2", server: netherlands.vpnserverhub.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a34d6335-b344-4c17-93d5-3b24c74a248c, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: …, server: netherlands.vpnserverhub.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a34d6335-b344-4c17-93d5-3b24c74a248c, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2ray_free_config_iran 3", server: netherlands.vpnserverhub.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: bc80fe5c-cbf1-4b21-b7c0-20e661496b80, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2ray_free_config_iran 3", server: poland.vpnserverhub.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: daf6138e-88d0-493a-99c7-917047c515fb, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇨🇦 canada.vpnserverhub.com:443, server: canada.vpnserverhub.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: eb8722ff-8269-4c5c-a8ba-490850aedab9, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -17,8 +17,8 @@ proxy-groups:
       - DIRECT
       - "@v2ray_free_config_iran"
       - "@v2ray_free_config_iran 2"
-      - …
       - "@v2ray_free_config_iran 3"
+      - 🇨🇦 canada.vpnserverhub.com:443
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -27,8 +27,8 @@ proxy-groups:
     proxies:
       - "@v2ray_free_config_iran"
       - "@v2ray_free_config_iran 2"
-      - …
       - "@v2ray_free_config_iran 3"
+      - 🇨🇦 canada.vpnserverhub.com:443
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -37,8 +37,8 @@ proxy-groups:
       - 🎯 全球直连
       - "@v2ray_free_config_iran"
       - "@v2ray_free_config_iran 2"
-      - …
       - "@v2ray_free_config_iran 3"
+      - 🇨🇦 canada.vpnserverhub.com:443
   - name: 📲 电报信息
     type: select
     proxies:
@@ -46,8 +46,8 @@ proxy-groups:
       - 🎯 全球直连
       - "@v2ray_free_config_iran"
       - "@v2ray_free_config_iran 2"
-      - …
       - "@v2ray_free_config_iran 3"
+      - 🇨🇦 canada.vpnserverhub.com:443
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -55,8 +55,8 @@ proxy-groups:
       - 🚀 节点选择
       - "@v2ray_free_config_iran"
       - "@v2ray_free_config_iran 2"
-      - …
       - "@v2ray_free_config_iran 3"
+      - 🇨🇦 canada.vpnserverhub.com:443
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -64,8 +64,8 @@ proxy-groups:
       - 🎯 全球直连
       - "@v2ray_free_config_iran"
       - "@v2ray_free_config_iran 2"
-      - …
       - "@v2ray_free_config_iran 3"
+      - 🇨🇦 canada.vpnserverhub.com:443
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -95,8 +95,8 @@ proxy-groups:
       - ♻️ 自动选择
       - "@v2ray_free_config_iran"
       - "@v2ray_free_config_iran 2"
-      - …
       - "@v2ray_free_config_iran 3"
+      - 🇨🇦 canada.vpnserverhub.com:443
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
