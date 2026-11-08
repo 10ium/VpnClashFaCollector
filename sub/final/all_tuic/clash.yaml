@@ -465,8 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 51.75.118.5:8443, server: 51.75.118.5, port: 8443, type: tuic, uuid: 418ddc75-aa9c-4e5d-a9a3-82c50a5a02b6, password: 418ddc75-aa9c-4e5d-a9a3-82c50a5a02b6, alpn: [h3], congestion-controller: bbr, sni: www.google.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 205471 | ⚡️Telegram - t.me/SOSkeyNET, server: 51.75.118.5, port: 8443, type: tuic, uuid: 418ddc75-aa9c-4e5d-a9a3-82c50a5a02b6, password: 418ddc75-aa9c-4e5d-a9a3-82c50a5a02b6, alpn: [h3], congestion-controller: bbr, sni: www.google.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com:443, server: 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com, port: 443, type: tuic, uuid: 73bfcc1c-5814-5f2a-b43a-3ef6af011db8, password: 73bfcc1c-5814-5f2a-b43a-3ef6af011db8, alpn: [h3], udp-relay-mode: native, congestion-controller: bbr, sni: 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 210404 | ⚡️Telegram - t.me/SOSkeyNET, server: 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com, port: 443, type: tuic, uuid: 73bfcc1c-5814-5f2a-b43a-3ef6af011db8, password: 73bfcc1c-5814-5f2a-b43a-3ef6af011db8, alpn: [h3], udp-relay-mode: native, congestion-controller: bbr, sni: 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 100@oneclickvpnkeys`, server: 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com, port: 443, type: tuic, uuid: 73bfcc1c-5814-5f2a-b43a-3ef6af011db8, password: 73bfcc1c-5814-5f2a-b43a-3ef6af011db8, alpn: [h3], udp-relay-mode: native, congestion-controller: bbr, sni: 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +484,27 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 51.75.118.5:8443
-      - 205471 | ⚡️Telegram - t.me/SOSkeyNET
+      - 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com:443
+      - 210404 | ⚡️Telegram - t.me/SOSkeyNET
+      - 100@oneclickvpnkeys`
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 51.75.118.5:8443
-      - 205471 | ⚡️Telegram - t.me/SOSkeyNET
+      - 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com:443
+      - 210404 | ⚡️Telegram - t.me/SOSkeyNET
+      - 100@oneclickvpnkeys`
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 51.75.118.5:8443
-      - 205471 | ⚡️Telegram - t.me/SOSkeyNET
+      - 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com:443
+      - 210404 | ⚡️Telegram - t.me/SOSkeyNET
+      - 100@oneclickvpnkeys`
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +520,27 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 51.75.118.5:8443
-      - 205471 | ⚡️Telegram - t.me/SOSkeyNET
+      - 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com:443
+      - 210404 | ⚡️Telegram - t.me/SOSkeyNET
+      - 100@oneclickvpnkeys`
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 51.75.118.5:8443
-      - 205471 | ⚡️Telegram - t.me/SOSkeyNET
+      - 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com:443
+      - 210404 | ⚡️Telegram - t.me/SOSkeyNET
+      - 100@oneclickvpnkeys`
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 51.75.118.5:8443
-      - 205471 | ⚡️Telegram - t.me/SOSkeyNET
+      - 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com:443
+      - 210404 | ⚡️Telegram - t.me/SOSkeyNET
+      - 100@oneclickvpnkeys`
   - name: دانلود منیجر 📥
     type: select
     proxies:
