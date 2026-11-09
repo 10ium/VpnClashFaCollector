@@ -465,11 +465,15 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@vasl_bashim", server: 152.53.1.57, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: AdawffFMHymlasRb0VOP3HFf7sTG5sJx, udp: true, tfo: false}
-  - {name: "@vasl_bashim 2", server: 158.51.121.221, port: 19999, type: ss, cipher: aes-256-gcm, password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=, udp: true, tfo: false}
-  - {name: "@vasl_bashim 3", server: 193.108.119.78, port: 443, type: trojan, password: 0ab6c98dae3b48e8b9c4a776b6c9c19a, sni: www.iloverussia2026.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim 4", server: 216.152.155.54, port: 443, type: trojan, password: 0ab6c98dae3b48e8b9c4a776b6c9c19a, sni: learn.nextjobopportunityandclaimyouridealrole.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim 5", server: 198.100.154.175, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: e17150a9-f949-467b-94ea-4d50e4c84186, servername: icloud.com, host: icloud.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 2PYoIhSKvVE-DgFzPYGo4cD2b7_8Ul2Vm8QKGWH1sAo, short-id: 4b}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim`", server: 185.215.132.18, port: 19999, type: ss, cipher: aes-256-gcm, password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=, udp: true, tfo: false}
+  - {name: "@vasl_bashim", server: 104.25.95.49, port: 443, type: trojan, password: 883e3cc8-9613-4f2d-8c42-0dd3d429db55, sni: ltf8.jueson.de5.net, skip-cert-verify: false, network: ws, ws-opts: {path: "/?Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET", headers: {Host: ltf8.jueson.de5.net}}, udp: true, tfo: false}
+  - {name: "@vasl_bashim 2", server: 200.96.106.2, port: 9889, type: vless, tls: true, packet-encoding: xudp, uuid: 0dcefe19-a42a-4d57-96be-83dcbffd425f, servername: tiktok2.transitbp2systems.com, host: tiktok2.transitbp2systems.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim 3", server: 200.96.106.2, port: 9889, type: vless, tls: true, packet-encoding: xudp, uuid: 0dcefe19-a42a-4d57-96be-83dcbffd425f, servername: tiktok2.transitbp2systems.com, host: tiktok2.transitbp2systems.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim 4", server: 179.43.187.67, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 9dd38d60-e683-47c6-bd53-d71bdfee78f3, servername: portal.mavexa.ir, host: portal.mavexa.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim 5", server: tg.riotvpn.eu, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a18f7c2d-9e45-4b8a-af3c-1d5e7f9c8b2a, servername: ads.x5.ru, host: ads.x5.ru, path: /, reality-opts: {public-key: 8h8t5eBWL9oERK7xWHQLFJE5j6sZdgNDQAs3EGnNbho, short-id: 2f49bccf11150ef2}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim 6", server: 9.247.23.209, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f, servername: mother-earth.fyi, host: mother-earth.fyi, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim 7", server: edge.bookmai.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b9bfa54d-bc44-4592-a6d6-89a9665d286f, servername: mother-earth.fyi, host: mother-earth.fyi, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim 8", server: 46.105.222.157, port: 1270, type: vmess, uuid: 5c040f1d-45db-43bd-8d46-e4950e433735, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: xmfhlpy.com, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,33 +490,45 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - "@vasl_bashim`"
       - "@vasl_bashim"
       - "@vasl_bashim 2"
       - "@vasl_bashim 3"
       - "@vasl_bashim 4"
       - "@vasl_bashim 5"
+      - "@vasl_bashim 6"
+      - "@vasl_bashim 7"
+      - "@vasl_bashim 8"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
+      - "@vasl_bashim`"
       - "@vasl_bashim"
       - "@vasl_bashim 2"
       - "@vasl_bashim 3"
       - "@vasl_bashim 4"
       - "@vasl_bashim 5"
+      - "@vasl_bashim 6"
+      - "@vasl_bashim 7"
+      - "@vasl_bashim 8"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
+      - "@vasl_bashim`"
       - "@vasl_bashim"
       - "@vasl_bashim 2"
       - "@vasl_bashim 3"
       - "@vasl_bashim 4"
       - "@vasl_bashim 5"
+      - "@vasl_bashim 6"
+      - "@vasl_bashim 7"
+      - "@vasl_bashim 8"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -528,33 +544,45 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@vasl_bashim`"
       - "@vasl_bashim"
       - "@vasl_bashim 2"
       - "@vasl_bashim 3"
       - "@vasl_bashim 4"
       - "@vasl_bashim 5"
+      - "@vasl_bashim 6"
+      - "@vasl_bashim 7"
+      - "@vasl_bashim 8"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@vasl_bashim`"
       - "@vasl_bashim"
       - "@vasl_bashim 2"
       - "@vasl_bashim 3"
       - "@vasl_bashim 4"
       - "@vasl_bashim 5"
+      - "@vasl_bashim 6"
+      - "@vasl_bashim 7"
+      - "@vasl_bashim 8"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@vasl_bashim`"
       - "@vasl_bashim"
       - "@vasl_bashim 2"
       - "@vasl_bashim 3"
       - "@vasl_bashim 4"
       - "@vasl_bashim 5"
+      - "@vasl_bashim 6"
+      - "@vasl_bashim 7"
+      - "@vasl_bashim 8"
   - name: دانلود منیجر 📥
     type: select
     proxies:
