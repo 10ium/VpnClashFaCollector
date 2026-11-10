@@ -5,67 +5,67 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@v2ray_free_config_iran", server: netherlands.vpnserverhub.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6a1378e9-d7ab-4212-8fd1-d185fcf4ccbe, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@v2ray_free_config_iran | VIP", server: 172.86.118.139, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 863d4ecf-5718-42bd-96b2-05d308a6658c, servername: www.cloudflare.com, host: www.cloudflare.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: vpB0E3ADvPsMwO7vfTaWiIR5fmSge5f2ol7Qs0Zo7ks, short-id: 88927f9a6f55b428}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2ray_free_config_iran 2", server: 172.86.118.139, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 89e1c3b9-43ef-45c3-9e0c-ccf79fd11597, servername: www.cloudflare.com, host: www.cloudflare.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: vpB0E3ADvPsMwO7vfTaWiIR5fmSge5f2ol7Qs0Zo7ks, short-id: 04fbfa50b3cfec}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2ray_free_config_iran 3", server: netherlands.vpnserverhub.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b86c94f3-cc7b-4917-8203-064f435516b6, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2ray_free_config_iran", server: netherlands.vpnserverhub.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b86c94f3-cc7b-4917-8203-064f435516b6, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Vip-hd7drhzb5s, server: spring-pine-698a.mramzanian1375.workers.dev, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ef5312af-7dc9-4b0e-8aa1-6f3c393cbf62, network: ws, ws-opts: {path: /a8f3k2, headers: {Host: spring-pine-698a.mramzanian1375.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: spring-pine-698a.mramzanian1375.workers.dev:443, server: spring-pine-698a.mramzanian1375.workers.dev, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ef5312af-7dc9-4b0e-8aa1-6f3c393cbf62, servername: spring-pine-698a.mramz…, network: ws, ws-opts: {path: /a8f3k2, headers: {Host: spring-pine-698a.mramz…}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@v2ray_free_config_iran"
       - "@v2ray_free_config_iran | VIP"
-      - "@v2ray_free_config_iran 2"
-      - "@v2ray_free_config_iran 3"
+      - "@v2ray_free_config_iran"
+      - Vip-hd7drhzb5s
+      - spring-pine-698a.mramzanian1375.workers.dev:443
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@v2ray_free_config_iran"
       - "@v2ray_free_config_iran | VIP"
-      - "@v2ray_free_config_iran 2"
-      - "@v2ray_free_config_iran 3"
+      - "@v2ray_free_config_iran"
+      - Vip-hd7drhzb5s
+      - spring-pine-698a.mramzanian1375.workers.dev:443
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@v2ray_free_config_iran"
       - "@v2ray_free_config_iran | VIP"
-      - "@v2ray_free_config_iran 2"
-      - "@v2ray_free_config_iran 3"
+      - "@v2ray_free_config_iran"
+      - Vip-hd7drhzb5s
+      - spring-pine-698a.mramzanian1375.workers.dev:443
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@v2ray_free_config_iran"
       - "@v2ray_free_config_iran | VIP"
-      - "@v2ray_free_config_iran 2"
-      - "@v2ray_free_config_iran 3"
+      - "@v2ray_free_config_iran"
+      - Vip-hd7drhzb5s
+      - spring-pine-698a.mramzanian1375.workers.dev:443
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@v2ray_free_config_iran"
       - "@v2ray_free_config_iran | VIP"
-      - "@v2ray_free_config_iran 2"
-      - "@v2ray_free_config_iran 3"
+      - "@v2ray_free_config_iran"
+      - Vip-hd7drhzb5s
+      - spring-pine-698a.mramzanian1375.workers.dev:443
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@v2ray_free_config_iran"
       - "@v2ray_free_config_iran | VIP"
-      - "@v2ray_free_config_iran 2"
-      - "@v2ray_free_config_iran 3"
+      - "@v2ray_free_config_iran"
+      - Vip-hd7drhzb5s
+      - spring-pine-698a.mramzanian1375.workers.dev:443
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -93,10 +93,10 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@v2ray_free_config_iran"
       - "@v2ray_free_config_iran | VIP"
-      - "@v2ray_free_config_iran 2"
-      - "@v2ray_free_config_iran 3"
+      - "@v2ray_free_config_iran"
+      - Vip-hd7drhzb5s
+      - spring-pine-698a.mramzanian1375.workers.dev:443
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

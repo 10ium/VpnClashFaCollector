@@ -11,6 +11,7 @@ proxies:
   - {name: images.mediacorphub.org:443, server: images.mediacorphub.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 1653818d-532e-46be-b825-384107fb7c3a, servername: images.mediacorphub.org, alpn: [h2], network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: stats.v2.StreamService}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: img.mediacorphub.org:443, server: img.mediacorphub.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 1653818d-532e-46be-b825-384107fb7c3a, servername: img.mediacorphub.org, alpn: [h2], network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: home.v2.MetricsService}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 80.47.13.182:443, server: 80.47.13.182, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 95f85937-7b95-45c4-8d69-95da6a978569, servername: dl.megadrishto.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: stats.v2.StreamService}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 46.250.254.187:443, server: 46.250.254.187, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e, servername: fs.qicai99.com, network: ws, ws-opts: {path: /fp=chrome, headers: {Host: fs.qicai99.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -23,6 +24,7 @@ proxy-groups:
       - images.mediacorphub.org:443
       - img.mediacorphub.org:443
       - 80.47.13.182:443
+      - 46.250.254.187:443
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -35,6 +37,7 @@ proxy-groups:
       - images.mediacorphub.org:443
       - img.mediacorphub.org:443
       - 80.47.13.182:443
+      - 46.250.254.187:443
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -47,6 +50,7 @@ proxy-groups:
       - images.mediacorphub.org:443
       - img.mediacorphub.org:443
       - 80.47.13.182:443
+      - 46.250.254.187:443
   - name: 📲 电报信息
     type: select
     proxies:
@@ -58,6 +62,7 @@ proxy-groups:
       - images.mediacorphub.org:443
       - img.mediacorphub.org:443
       - 80.47.13.182:443
+      - 46.250.254.187:443
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -69,6 +74,7 @@ proxy-groups:
       - images.mediacorphub.org:443
       - img.mediacorphub.org:443
       - 80.47.13.182:443
+      - 46.250.254.187:443
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -80,6 +86,7 @@ proxy-groups:
       - images.mediacorphub.org:443
       - img.mediacorphub.org:443
       - 80.47.13.182:443
+      - 46.250.254.187:443
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -113,6 +120,7 @@ proxy-groups:
       - images.mediacorphub.org:443
       - img.mediacorphub.org:443
       - 80.47.13.182:443
+      - 46.250.254.187:443
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
