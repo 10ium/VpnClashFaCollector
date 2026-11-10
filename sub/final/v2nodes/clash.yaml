@@ -465,12 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 89.105.195.148:443, server: 89.105.195.148, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 1653818d-532e-46be-b825-384107fb7c3a, servername: api.mediacorphub.org, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: gw.v2.PushService}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: edge.mediacorphub.org:443, server: edge.mediacorphub.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 1653818d-532e-46be-b825-384107fb7c3a, servername: edge.mediacorphub.org, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: hub.v1.ObjectService}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: fetch.mediacorphub.org:443, server: fetch.mediacorphub.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 1653818d-532e-46be-b825-384107fb7c3a, servername: fetch.mediacorphub.org, alpn: [h2], network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: api.v1.FeedService}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: images.mediacorphub.org:443, server: images.mediacorphub.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 1653818d-532e-46be-b825-384107fb7c3a, servername: images.mediacorphub.org, alpn: [h2], network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: stats.v2.StreamService}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: img.mediacorphub.org:443, server: img.mediacorphub.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 1653818d-532e-46be-b825-384107fb7c3a, servername: img.mediacorphub.org, alpn: [h2], network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: home.v2.MetricsService}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 80.47.13.182:443, server: 80.47.13.182, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 95f85937-7b95-45c4-8d69-95da6a978569, servername: dl.megadrishto.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: stats.v2.StreamService}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 176.122.173.224:443, server: 176.122.173.224, port: 443, type: trojan, password: a75243d0f5c2e31bd6c8c118b4f6442f81ad, sni: www.cloudflare.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 84.32.209.103:443, server: 84.32.209.103, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 3f25b15b-1777-4c08-9ade-60336ac92a82, servername: edge-lt.lindenpixel.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: grpc}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 46.250.254.187:443, server: 46.250.254.187, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e, servername: fs.qicai99.com, network: ws, ws-opts: {path: /fp=chrome, headers: {Host: fs.qicai99.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -488,12 +484,8 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 89.105.195.148:443
-      - edge.mediacorphub.org:443
-      - fetch.mediacorphub.org:443
-      - images.mediacorphub.org:443
-      - img.mediacorphub.org:443
-      - 80.47.13.182:443
+      - 176.122.173.224:443
+      - 84.32.209.103:443
       - 46.250.254.187:443
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -501,12 +493,8 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - 89.105.195.148:443
-      - edge.mediacorphub.org:443
-      - fetch.mediacorphub.org:443
-      - images.mediacorphub.org:443
-      - img.mediacorphub.org:443
-      - 80.47.13.182:443
+      - 176.122.173.224:443
+      - 84.32.209.103:443
       - 46.250.254.187:443
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -514,12 +502,8 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - 89.105.195.148:443
-      - edge.mediacorphub.org:443
-      - fetch.mediacorphub.org:443
-      - images.mediacorphub.org:443
-      - img.mediacorphub.org:443
-      - 80.47.13.182:443
+      - 176.122.173.224:443
+      - 84.32.209.103:443
       - 46.250.254.187:443
   - name: اتصال پایدار 🔗
     type: url-test
@@ -536,12 +520,8 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 89.105.195.148:443
-      - edge.mediacorphub.org:443
-      - fetch.mediacorphub.org:443
-      - images.mediacorphub.org:443
-      - img.mediacorphub.org:443
-      - 80.47.13.182:443
+      - 176.122.173.224:443
+      - 84.32.209.103:443
       - 46.250.254.187:443
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -549,12 +529,8 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 89.105.195.148:443
-      - edge.mediacorphub.org:443
-      - fetch.mediacorphub.org:443
-      - images.mediacorphub.org:443
-      - img.mediacorphub.org:443
-      - 80.47.13.182:443
+      - 176.122.173.224:443
+      - 84.32.209.103:443
       - 46.250.254.187:443
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -562,12 +538,8 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 89.105.195.148:443
-      - edge.mediacorphub.org:443
-      - fetch.mediacorphub.org:443
-      - images.mediacorphub.org:443
-      - img.mediacorphub.org:443
-      - 80.47.13.182:443
+      - 176.122.173.224:443
+      - 84.32.209.103:443
       - 46.250.254.187:443
   - name: دانلود منیجر 📥
     type: select
