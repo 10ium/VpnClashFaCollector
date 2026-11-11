@@ -465,7 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
+  - {name: oztq9osla2ad.dop15.com:26412, server: oztq9osla2ad.dop15.com, port: 26412, type: ss, cipher: 2022-blake3-aes-256-gcm, password: L9F2GjYbyk6gICuLp2LFmHC0lKaEW7HOA32XTf29C6Y=:OvfxPVBCAsZFpN0pIx9AwgxwxV+U3A7XtRagdUwio+U=, udp: true, tfo: false}
   - {name: 176.122.173.224:443, server: 176.122.173.224, port: 443, type: trojan, password: a75243d0f5c2e31bd6c8c118b4f6442f81ad, sni: www.cloudflare.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: vps3.nemnogogo.com:443, server: vps3.nemnogogo.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e, servername: vps3.nemnogogo.com, alpn: [h2], network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: mobile.api.Event}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 84.32.209.103:443, server: 84.32.209.103, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 3f25b15b-1777-4c08-9ade-60336ac92a82, servername: edge-lt.lindenpixel.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: grpc}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 46.250.254.187:443, server: 46.250.254.187, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e, servername: fs.qicai99.com, network: ws, ws-opts: {path: /fp=chrome, headers: {Host: fs.qicai99.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
@@ -484,7 +486,9 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - oztq9osla2ad.dop15.com:26412
       - 176.122.173.224:443
+      - vps3.nemnogogo.com:443
       - 84.32.209.103:443
       - 46.250.254.187:443
   - name: خودکار (بهترین پینگ) 🤖
@@ -493,7 +497,9 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - oztq9osla2ad.dop15.com:26412
       - 176.122.173.224:443
+      - vps3.nemnogogo.com:443
       - 84.32.209.103:443
       - 46.250.254.187:443
   - name: پشتیبان (در صورت قطعی) 🧯
@@ -502,7 +508,9 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
+      - oztq9osla2ad.dop15.com:26412
       - 176.122.173.224:443
+      - vps3.nemnogogo.com:443
       - 84.32.209.103:443
       - 46.250.254.187:443
   - name: اتصال پایدار 🔗
@@ -520,7 +528,9 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - oztq9osla2ad.dop15.com:26412
       - 176.122.173.224:443
+      - vps3.nemnogogo.com:443
       - 84.32.209.103:443
       - 46.250.254.187:443
   - name: توزیع بار (گردشی) 🔁
@@ -529,7 +539,9 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - oztq9osla2ad.dop15.com:26412
       - 176.122.173.224:443
+      - vps3.nemnogogo.com:443
       - 84.32.209.103:443
       - 46.250.254.187:443
   - name: توزیع بار (موقت) ⏳
@@ -538,7 +550,9 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - oztq9osla2ad.dop15.com:26412
       - 176.122.173.224:443
+      - vps3.nemnogogo.com:443
       - 84.32.209.103:443
       - 46.250.254.187:443
   - name: دانلود منیجر 📥
