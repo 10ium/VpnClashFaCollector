@@ -465,7 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Darcproxy`", server: 188.120.242.189, port: 2058, type: vless, tls: true, packet-encoding: xudp, uuid: 4ad9f982-b56a-444a-9684-35ce51307a36, servername: www.cloudflare.com, host: www.cloudflare.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: lJBsn9ndieTIUBzXkJUhf6O0OE8pm29_z1fUtARwL0s, short-id: 937255313d6ce673}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ⚡️ @Darcproxy 🇱🇻`, server: n3.topingr.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e5be613e-0b23-4c08-88fb-6b4a82055365, servername: oslo.zovip2.ir, alpn: [http%2F1.1], network: ws, ws-opts: {path: /api/v3/pulse, headers: {Host: oslo.zovip2.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@Darcproxy`"
+      - ⚡️ @Darcproxy 🇱🇻`
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - "@Darcproxy`"
+      - ⚡️ @Darcproxy 🇱🇻`
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - "@Darcproxy`"
+      - ⚡️ @Darcproxy 🇱🇻`
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Darcproxy`"
+      - ⚡️ @Darcproxy 🇱🇻`
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Darcproxy`"
+      - ⚡️ @Darcproxy 🇱🇻`
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@Darcproxy`"
+      - ⚡️ @Darcproxy 🇱🇻`
   - name: دانلود منیجر 📥
     type: select
     proxies:

@@ -5,60 +5,88 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@v2ray_free_config_iran", server: cdn-nl.vpnserverhub.com, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 7e3591fa-3583-4718-b088-4f047f6b74d6, network: ws, ws-opts: {path: /vpn-secure-cdn, headers: {Host: cdn-nl.vpnserverhub.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: xray-m0642ki4-silver-nebula-10.cloady.io:443, server: xray-m0642ki4-silver-nebula-10.cloady.io, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: bcd3798c-a56f-6bfc-b738-a17c43bd4a50, servername: xray-m0642ki4-silver-nebula…, network: ws, ws-opts: {path: /362b2b2c7197d648, headers: {Host: xray-m0642ki4-silver-nebula…}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇯🇵 japan, server: xray-p1vi234h-lunar-forest-6.cloady.io, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4f82d72b-9644-c39a-ac6b-abbf15a862aa, servername: xray-p1vi234h-lunar-forest-6.cloady.io, network: ws, ws-opts: {path: /e3e2aa65089989f0, headers: {Host: xray-p1vi234h-lunar-forest-6.cloady.io}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇺🇸 us, server: xray-piox09gf-calm-maple-6.cloady.io, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5633d1c3-fa8e-cd74-5b6b-6c464f36472a, servername: xray-piox09gf-calm-maple-6.cloady.io, network: ws, ws-opts: {path: /0f6186ec3c6d8474, headers: {Host: xray-piox09gf-calm-maple-6.cloady.io}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: Vip-Public, server: spring-pine-698a.mramzanian1375.workers.dev, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 69bc4383-7886-4b88-8389-bf4202f57e79, network: ws, ws-opts: {path: /a8f3k2, headers: {Host: spring-pine-698a.mramzanian1375.workers.dev}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2ray_free_config_iran", server: cdn-nl.vpnserverhub.com, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 8573f3c6-2e80-4b63-9270-602548925b34, network: ws, ws-opts: {path: /vpn-secure-cdn, headers: {Host: cdn-nl.vpnserverhub.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2ray_free_config_iran 2", server: xray-bprkdwje-clever-comet-4.cloady.io, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f1a7e2c8-b140-50d1-8acf-e62090f96599, servername: xray-bprkdwje-clever-comet-4.cloady.io, network: ws, ws-opts: {path: /27dbf143acdd7bca, headers: {Host: xray-bprkdwje-clever-comet-4.cloady.io}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@v…", server: xray-bprkdwje-clever-comet-4.cloady.io, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f1a7e2c8-b140-50d1-8acf-e62090f96599, servername: xray-bprkdwje-clever-comet-4.cloady.io, network: ws, ws-opts: {path: /27dbf143acdd7bca, headers: {Host: xray-bprkdwje-clever-comet-4.cloady.io}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2ray_free_config_iran 3", server: xray-wwui2m58-workspace-wbahjf.cloady.io, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: fdf5d282-eba8-16a9-defb-39ef903a31d2, servername: xray-wwui2m58-workspace-wbahjf.cloady.io, network: ws, ws-opts: {path: /7a9b1a2a0f39e546, headers: {Host: xray-wwui2m58-workspace-wbahjf.cloady.io}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - 🇯🇵 japan
+      - 🇺🇸 us
+      - Vip-Public
       - "@v2ray_free_config_iran"
-      - xray-m0642ki4-silver-nebula-10.cloady.io:443
+      - "@v2ray_free_config_iran 2"
       - "@v…"
+      - "@v2ray_free_config_iran 3"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - 🇯🇵 japan
+      - 🇺🇸 us
+      - Vip-Public
       - "@v2ray_free_config_iran"
-      - xray-m0642ki4-silver-nebula-10.cloady.io:443
+      - "@v2ray_free_config_iran 2"
       - "@v…"
+      - "@v2ray_free_config_iran 3"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 🇯🇵 japan
+      - 🇺🇸 us
+      - Vip-Public
       - "@v2ray_free_config_iran"
-      - xray-m0642ki4-silver-nebula-10.cloady.io:443
+      - "@v2ray_free_config_iran 2"
       - "@v…"
+      - "@v2ray_free_config_iran 3"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 🇯🇵 japan
+      - 🇺🇸 us
+      - Vip-Public
       - "@v2ray_free_config_iran"
-      - xray-m0642ki4-silver-nebula-10.cloady.io:443
+      - "@v2ray_free_config_iran 2"
       - "@v…"
+      - "@v2ray_free_config_iran 3"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - 🇯🇵 japan
+      - 🇺🇸 us
+      - Vip-Public
       - "@v2ray_free_config_iran"
-      - xray-m0642ki4-silver-nebula-10.cloady.io:443
+      - "@v2ray_free_config_iran 2"
       - "@v…"
+      - "@v2ray_free_config_iran 3"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 🇯🇵 japan
+      - 🇺🇸 us
+      - Vip-Public
       - "@v2ray_free_config_iran"
-      - xray-m0642ki4-silver-nebula-10.cloady.io:443
+      - "@v2ray_free_config_iran 2"
       - "@v…"
+      - "@v2ray_free_config_iran 3"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -86,9 +114,13 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 🇯🇵 japan
+      - 🇺🇸 us
+      - Vip-Public
       - "@v2ray_free_config_iran"
-      - xray-m0642ki4-silver-nebula-10.cloady.io:443
+      - "@v2ray_free_config_iran 2"
       - "@v…"
+      - "@v2ray_free_config_iran 3"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
