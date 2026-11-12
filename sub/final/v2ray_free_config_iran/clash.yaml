@@ -465,9 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@v2ray_free_config_iran-VLESS-WS-CDN", server: cdn-nl.vpnserverhub.com, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 6f6731ba-cb54-4c47-840d-7b0a66c8a661, network: ws, ws-opts: {path: /vpn-secure-cdn, headers: {Host: cdn-nl.vpnserverhub.com}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@v2ray_free_config_iran", server: cdn-nl.vpnserverhub.com, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 7e3591fa-3583-4718-b088-4f047f6b74d6, network: ws, ws-opts: {path: /vpn-secure-cdn, headers: {Host: cdn-nl.vpnserverhub.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2ray_free_config_iran 2", server: cdn-nl.vpnserverhub.com, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: a9b95914-dd1d-466a-b628-0e603a76383e, network: ws, ws-opts: {path: /vpn-secure-cdn, headers: {Host: cdn-nl.vpnserverhub.com}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: xray-m0642ki4-silver-nebula-10.cloady.io:443, server: xray-m0642ki4-silver-nebula-10.cloady.io, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: bcd3798c-a56f-6bfc-b738-a17c43bd4a50, servername: xray-m0642ki4-silver-nebula…, network: ws, ws-opts: {path: /362b2b2c7197d648, headers: {Host: xray-m0642ki4-silver-nebula…}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@v…", server: xray-bprkdwje-clever-comet-4.cloady.io, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: f1a7e2c8-b140-50d1-8acf-e62090f96599, servername: xray-bprkdwje-clever-comet-4.cloady.io, network: ws, ws-opts: {path: /27dbf143acdd7bca, headers: {Host: xray-bprkdwje-clever-comet-4.cloady.io}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
@@ -486,9 +484,7 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@v2ray_free_config_iran-VLESS-WS-CDN"
       - "@v2ray_free_config_iran"
-      - "@v2ray_free_config_iran 2"
       - xray-m0642ki4-silver-nebula-10.cloady.io:443
       - "@v…"
   - name: خودکار (بهترین پینگ) 🤖
@@ -497,9 +493,7 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - "@v2ray_free_config_iran-VLESS-WS-CDN"
       - "@v2ray_free_config_iran"
-      - "@v2ray_free_config_iran 2"
       - xray-m0642ki4-silver-nebula-10.cloady.io:443
       - "@v…"
   - name: پشتیبان (در صورت قطعی) 🧯
@@ -508,9 +502,7 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - "@v2ray_free_config_iran-VLESS-WS-CDN"
       - "@v2ray_free_config_iran"
-      - "@v2ray_free_config_iran 2"
       - xray-m0642ki4-silver-nebula-10.cloady.io:443
       - "@v…"
   - name: اتصال پایدار 🔗
@@ -528,9 +520,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2ray_free_config_iran-VLESS-WS-CDN"
       - "@v2ray_free_config_iran"
-      - "@v2ray_free_config_iran 2"
       - xray-m0642ki4-silver-nebula-10.cloady.io:443
       - "@v…"
   - name: توزیع بار (گردشی) 🔁
@@ -539,9 +529,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2ray_free_config_iran-VLESS-WS-CDN"
       - "@v2ray_free_config_iran"
-      - "@v2ray_free_config_iran 2"
       - xray-m0642ki4-silver-nebula-10.cloady.io:443
       - "@v…"
   - name: توزیع بار (موقت) ⏳
@@ -550,9 +538,7 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@v2ray_free_config_iran-VLESS-WS-CDN"
       - "@v2ray_free_config_iran"
-      - "@v2ray_free_config_iran 2"
       - xray-m0642ki4-silver-nebula-10.cloady.io:443
       - "@v…"
   - name: دانلود منیجر 📥
