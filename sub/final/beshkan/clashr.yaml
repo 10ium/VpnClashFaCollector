@@ -5,10 +5,13 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: " ", server: 103.11.76.248, port: 28679, type: ss, cipher: 2022-blake3-aes-128-gcm, password: NzJlOTQ5NWYtM2ZkYi00Cg==, udp: true, tfo: false}
-  - {name: "  2", server: 82.38.31.214, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
-  - {name: "  3", server: 172.213.24.16, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: 52a5a29f-c162-411a-8a37-a3f11b0dc537, servername: www.apple.com, host: www.apple.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: WbgtxLlo2gmTzB4Wzxgh_U7G97d4ENTS10fYIoujET4, short-id: 0123456789abcdef}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "  4", server: 201.58.189.105, port: 2083, type: vless, tls: true, packet-encoding: xudp, uuid: d7ddade6-b7a0-4cab-a910-d5d5c378d98a, servername: dl.google.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: google.storage.v2.Storage}, reality-opts: {public-key: B7x5bYp-YhtLeH31zYcilpKFCkGTMe3jtSECSw-bMC4, short-id: 8bd80253}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: " ", server: 82.38.31.191, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
+  - {name: "  2", server: 82.38.31.212, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
+  - {name: "  3", server: 82.38.31.213, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
+  - {name: "  4", server: 82.38.31.214, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: k1dBOmOB4oqi7Ump37a1bQ, udp: true, tfo: false}
+  - {name: "  5", server: sclass-b1.catcat321.com, port: 20027, type: trojan, password: d7563108-615c-4338-a7bd-77f359869a4a, sni: hk.catxstar.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "  6", server: sclass-b1.catcat321.com, port: 20028, type: trojan, password: d7563108-615c-4338-a7bd-77f359869a4a, sni: hk.catxstar.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "  7", server: 50.7.178.197, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 3f5e89d5-591f-4ac9-b071-b05680b573c3, servername: fr2.gacvpn.site, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: connect-fr}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -19,6 +22,9 @@ proxy-groups:
       - "  2"
       - "  3"
       - "  4"
+      - "  5"
+      - "  6"
+      - "  7"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -29,6 +35,9 @@ proxy-groups:
       - "  2"
       - "  3"
       - "  4"
+      - "  5"
+      - "  6"
+      - "  7"
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -39,6 +48,9 @@ proxy-groups:
       - "  2"
       - "  3"
       - "  4"
+      - "  5"
+      - "  6"
+      - "  7"
   - name: 📲 电报信息
     type: select
     proxies:
@@ -48,6 +60,9 @@ proxy-groups:
       - "  2"
       - "  3"
       - "  4"
+      - "  5"
+      - "  6"
+      - "  7"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -57,6 +72,9 @@ proxy-groups:
       - "  2"
       - "  3"
       - "  4"
+      - "  5"
+      - "  6"
+      - "  7"
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -66,6 +84,9 @@ proxy-groups:
       - "  2"
       - "  3"
       - "  4"
+      - "  5"
+      - "  6"
+      - "  7"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -97,6 +118,9 @@ proxy-groups:
       - "  2"
       - "  3"
       - "  4"
+      - "  5"
+      - "  6"
+      - "  7"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
