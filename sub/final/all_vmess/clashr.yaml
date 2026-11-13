@@ -5,466 +5,501 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@meliproxy", server: 176.9.199.190, port: 443, type: vmess, uuid: 6bb70a79-c55b-4180-89e3-fc29bfab6662, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@meliproxy 2", server: 123466.ru, port: 26032, type: vmess, uuid: 804334e2-04ca-434c-8311-3ccee8218175, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@meliproxy 3", server: 67.220.95.3, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad", server: 132.145.80.230, port: 80, type: vmess, uuid: 5155860e-d07d-46c3-9128-3afbd84626c7, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /cctv13.m3u8, headers: {Host: kr02.a0a.xyz}}, udp: true, tfo: false}
-  - {name: "@filembad 2", server: 176.9.199.190, port: 443, type: vmess, uuid: 6bb70a79-c55b-4180-89e3-fc29bfab6662, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 3", server: 3.18.102.2, port: 57998, type: vmess, uuid: 1a8c4fce-7b08-458e-b9a4-94c0a23572d9, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad", server: 109.70.74.217, port: 19829, type: vmess, uuid: 2c00cd64-2ba3-4400-b227-04be9bddb15a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 2", server: 67.220.95.3, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 3", server: 67.220.95.3, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@filembad 4", server: 67.220.95.3, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 5", server: 67.220.95.3, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 6", server: 67.220.95.3, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 7", server: 57.129.132.223, port: 80, type: vmess, uuid: a25cbf11-2908-4a1b-a3a8-9a571777dca3, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/vmess/?ed#", headers: {Host: google.com}}, udp: true, tfo: false}
+  - {name: "[openproxylist.com] vmess-ID", server: 13.249.231.85, port: 443, type: vmess, uuid: a84c132a-3151-40fe-947b-4dd9a7d2122c, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /vmess, headers: {Host: d7pu5mzr9c4b0.cloudfront.net}}, udp: true, tfo: false}
+  - {name: "@filembad 5", server: 57.129.132.223, port: 80, type: vmess, uuid: a25cbf11-2908-4a1b-a3a8-9a571777dca3, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/vmess/?ed#", headers: {Host: google.com}}, udp: true, tfo: false}
   - {name: "@FarazV2ray", server: 57.129.132.223, port: 80, type: vmess, uuid: a25cbf11-2908-4a1b-a3a8-9a571777dca3, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/vmess/?ed#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET", headers: {Host: google.com}}, udp: true, tfo: false}
   - {name: "@FarazV2ray 2", server: 57.129.132.223, port: 80, type: vmess, uuid: a25cbf11-2908-4a1b-a3a8-9a571777dca3, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/vmess/?ed#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET", headers: {Host: google.com}}, udp: true, tfo: false}
-  - {name: "@filembad 8", server: 57.129.132.223, port: 80, type: vmess, uuid: a25cbf11-2908-4a1b-a3a8-9a571777dca3, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/vmess/?ed#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET", headers: {Host: google.com}}, udp: true, tfo: false}
-  - {name: "@filembad 9", server: 67.220.95.3, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 10", server: 67.220.95.3, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Vpn_Tehran 🩵 کانال تلگرام", server: 67.220.95.3, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "Channel : @proxy_kafee", server: 67.220.95.3, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 11", server: 67.220.95.3, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@FarazV2ray 3", server: 57.129.132.223, port: 80, type: vmess, uuid: a25cbf11-2908-4a1b-a3a8-9a571777dca3, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/vmess/?ed#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET", headers: {Host: google.com}}, udp: true, tfo: false}
+  - {name: "@filembad 6", server: 67.220.95.3, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@FarazV2ray 4", server: 67.220.95.3, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@FarazV2ray 5", server: 67.220.95.3, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@FarazV2ray 6", server: 67.220.95.3, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@FarazV2ray 7", server: 67.220.95.3, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@FarazV2ray 8", server: 67.220.95.3, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, servername: community.fastly.steamstatic.com, udp: true, tfo: false}
+  - {name: "@FarazV2ray 9", server: 67.220.95.3, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, servername: community.fastly.steamstatic.com, udp: true, tfo: false}
+  - {name: "@meliproxy", server: 67.220.95.3, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@vpnbaz 🍭", server: 67.220.95.3, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 12", server: 67.220.95.3, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 13", server: 67.220.95.3, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Vpn_Tehran 🩵 کانال تلگرام 2", server: 67.220.95.3, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, servername: 67.220.95.3, udp: true, tfo: false}
-  - {name: "@filembad 14", server: 67.220.95.3, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 15", server: 91.207.18.145, port: 50755, type: vmess, uuid: 125a30a6-74d8-4a4c-a3ad-aa8dd6f66c4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 16", server: 91.207.18.145, port: 50755, type: vmess, uuid: 22ef01b8-c1f9-43eb-ac37-540a4fa53930, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 17", server: 91.207.18.145, port: 52352, type: vmess, uuid: 624a504c-68f2-412b-b555-1c64c1a31e69, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 18", server: 91.207.18.145, port: 57885, type: vmess, uuid: a7c02c92-8940-43a0-b941-3b3dac14683e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 19", server: 94.184.18.131, port: 44580, type: vmess, uuid: 45dc5086-f30d-4b34-aac4-612c074243c8, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@FarazV2ray 3", server: 104.21.3.99, port: 443, type: vmess, uuid: 80be2deb-3b27-4775-9bd1-7f2a2b9c261b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: www.windowsmsidownloads.com, network: ws, ws-opts: {path: /truth, headers: {Host: www.windowsmsidownloads.com}}, udp: true, tfo: false}
-  - {name: "@FarazV2ray 4", server: 104.21.3.99, port: 443, type: vmess, uuid: 80be2deb-3b27-4775-9bd1-7f2a2b9c261b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: www.windowsmsidownloads.com, network: ws, ws-opts: {path: /truth, headers: {Host: www.windowsmsidownloads.com}}, udp: true, tfo: false}
-  - {name: "@filembad 20", server: 109.70.74.130, port: 57875, type: vmess, uuid: 69aa90b8-bf6f-49b6-b19f-d53667572eb4, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 21", server: 109.70.74.201, port: 28382, type: vmess, uuid: 8989cf19-e300-424a-8f7c-765b802bf10c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 22", server: 109.70.74.201, port: 28382, type: vmess, uuid: bbb8cee8-548d-4ae2-b2c4-4419160ec1ee, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 23", server: 109.70.74.201, port: 28382, type: vmess, uuid: 60e16949-8396-4fa8-ad8f-cb34f5873d66, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 24", server: 109.70.74.201, port: 28382, type: vmess, uuid: 8989cf19-e300-424a-8f7c-765b802bf10c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 25", server: 109.70.74.201, port: 28382, type: vmess, uuid: 09f0df6a-dea9-4a63-9192-0c9d5e0c9cd2, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 26", server: 109.70.74.201, port: 28382, type: vmess, uuid: 0b2d816c-9772-4f8a-8daa-3b5de3263846, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 27", server: 109.70.74.201, port: 28382, type: vmess, uuid: 2c3b9a3a-861a-4bed-9e07-42f65b941177, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 28", server: 109.70.74.201, port: 28382, type: vmess, uuid: 3dae2640-35f4-4216-9f24-352bd92f40bd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 29", server: 109.70.74.201, port: 28382, type: vmess, uuid: a8535133-f7b7-4b52-9a2e-75b4d54ce9c3, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 30", server: 123466.ru, port: 26032, type: vmess, uuid: 804334e2-04ca-434c-8311-3ccee8218175, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "Channel : @proxy_kafee 2", server: 123466.ru, port: 26032, type: vmess, uuid: 804334e2-04ca-434c-8311-3ccee8218175, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@FarazV2ray 5", server: 123466.ru, port: 26032, type: vmess, uuid: 804334e2-04ca-434c-8311-3ccee8218175, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 7", server: 67.220.95.3, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 8", server: 67.220.95.3, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Tehran ❤️ کانال تلگرام", server: 67.220.95.3, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, servername: 67.220.95.3, udp: true, tfo: false}
+  - {name: "@filembad 9", server: 67.220.95.3, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 10", server: 91.207.18.145, port: 50755, type: vmess, uuid: 125a30a6-74d8-4a4c-a3ad-aa8dd6f66c4e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 11", server: 91.207.18.145, port: 50755, type: vmess, uuid: 22ef01b8-c1f9-43eb-ac37-540a4fa53930, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 12", server: 91.207.18.145, port: 57885, type: vmess, uuid: a7c02c92-8940-43a0-b941-3b3dac14683e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@FarazV2ray 10", server: 104.21.3.99, port: 443, type: vmess, uuid: 80be2deb-3b27-4775-9bd1-7f2a2b9c261b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: www.windowsmsidownloads.com, network: ws, ws-opts: {path: /truth, headers: {Host: www.windowsmsidownloads.com}}, udp: true, tfo: false}
+  - {name: "@FarazV2ray 11", server: 104.21.3.99, port: 443, type: vmess, uuid: 80be2deb-3b27-4775-9bd1-7f2a2b9c261b, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: www.windowsmsidownloads.com, network: ws, ws-opts: {path: /truth, headers: {Host: www.windowsmsidownloads.com}}, udp: true, tfo: false}
+  - {name: "@meliproxy 2", server: 109.70.74.217, port: 19829, type: vmess, uuid: a83f3700-e75b-47c1-aff8-808ea793f23d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "Channel : @proxy_kafee", server: 109.70.74.217, port: 19829, type: vmess, uuid: a83f3700-e75b-47c1-aff8-808ea793f23d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 13", server: 109.70.74.217, port: 19829, type: vmess, uuid: fc1bf4a4-3abc-4f30-8806-da8b0a4f4cfd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 14", server: 109.70.74.217, port: 19829, type: vmess, uuid: fc1bf4a4-3abc-4f30-8806-da8b0a4f4cfd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 15", server: 109.70.74.217, port: 19829, type: vmess, uuid: a83f3700-e75b-47c1-aff8-808ea793f23d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 16", server: 109.70.74.217, port: 19829, type: vmess, uuid: 111375a6-b489-4bb8-82f9-0463fe9bbf23, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 17", server: 109.70.74.217, port: 19829, type: vmess, uuid: 561d9752-c270-4d84-ac34-993fedc55a6c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 18", server: 109.70.74.217, port: 19829, type: vmess, uuid: 61d4bd1e-2def-46cb-a7ac-6c98d002e7da, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 19", server: 109.70.74.217, port: 19829, type: vmess, uuid: 7705e406-f31a-470b-bc5c-d04b56fbcd53, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 20", server: 109.70.74.217, port: 19829, type: vmess, uuid: 9ede3c5f-a479-45ae-bd2a-0931524c9667, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "اگه میخوای قطع نشی جوین شو : @farsiproxy", server: 109.70.74.217, port: 19829, type: vmess, uuid: 9ede3c5f-a479-45ae-bd2a-0931524c9667, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "اگه میخوای قطع نشی جوین شو : @farsiproxy 2", server: 109.70.74.217, port: 19829, type: vmess, uuid: 9ede3c5f-a479-45ae-bd2a-0931524c9667, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 21", server: 109.70.74.217, port: 19829, type: vmess, uuid: 2c00cd64-2ba3-4400-b227-04be9bddb15a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 22", server: 109.70.74.217, port: 19829, type: vmess, uuid: a83f3700-e75b-47c1-aff8-808ea793f23d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 23", server: 109.70.74.217, port: 19829, type: vmess, uuid: c04dd82f-983f-4ef3-943a-80567feacbdf, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 24", server: 109.70.74.217, port: 19829, type: vmess, uuid: e9df538f-73a4-4948-92f5-4ab74b3e1617, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 25", server: 109.70.74.217, port: 19829, type: vmess, uuid: fc1bf4a4-3abc-4f30-8806-da8b0a4f4cfd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@FarazV2ray 12", server: 123466.ru, port: 26032, type: vmess, uuid: 804334e2-04ca-434c-8311-3ccee8218175, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 26", server: 134.195.196.211, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: ⚡@V2ray_official, server: 134.195.196.211, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ⚡@V2ray_official 2, server: 134.195.196.211, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 31", server: 153.56.228.254, port: 443, type: vmess, uuid: Nitro_Skybot, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /}, udp: true, tfo: false}
+  - {name: "@filembad 27", server: 134.195.196.211, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@MTproxy22_v2ray", server: 145.239.55.210, port: 80, type: vmess, uuid: 2bc80e77-9590-4ded-a48b-0eda493f611b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: google.whatsapp.snapp.torob.basalam.fortresshost.ir.}}, udp: true, tfo: false}
   - {name: "@Miarencia", server: 169.197.142.22, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ⚡@V2ray_official 3, server: 169.197.142.22, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 32", server: 169.197.142.22, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, servername: 169.197.142.22, udp: true, tfo: false}
-  - {name: "@Vpn_Tehran 🤍‌کانال‌تلگرام", server: 176.65.151.175, port: 11674, type: vmess, uuid: a98a98cb-ae86-43ae-b695-cf0dbcad3fc2, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 33", server: 2001:bc8:32d7:1a9::2, port: 18901, type: vmess, uuid: 3a966d20-7b9d-48cc-ba2c-8d38161b6d3a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/github.com/Alvin9999-newpac/fanqiang?ed#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET"}, udp: true, tfo: false}
-  - {name: ⚡@V2ray_official 4, server: 2001:bc8:32d7:1a9::2, port: 18901, type: vmess, uuid: 3a966d20-7b9d-48cc-ba2c-8d38161b6d3a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /github.com/Alvin9999-newpac/fanqiang}, udp: true, tfo: false}
-  - {name: ⚡@V2ray_official 5, server: 2001:bc8:32d7:1a9::2, port: 18901, type: vmess, uuid: 3a966d20-7b9d-48cc-ba2c-8d38161b6d3a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: "/github.com/Alvin9999-newpac/fanqiang?ed#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET"}, udp: true, tfo: false}
+  - {name: "@filembad 28", server: 169.197.142.22, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 29", server: 169.197.142.22, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, servername: 169.197.142.22, udp: true, tfo: false}
+  - {name: "@filembad 30", server: 169.197.142.22, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, servername: 169.197.142.22, udp: true, tfo: false}
+  - {name: "@filembad 31", server: 23.162.200.198, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 32", server: 23.162.200.198, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 33", server: 38.91.107.49, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@filembad 34", server: 38.91.107.49, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@filembad 35", server: 38.91.107.49, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@FarazV2ray 6", server: 38.91.107.49, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Vpn_Tehran 🩵 کانال تلگرام 3", server: 38.91.107.49, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 36", server: 38.91.107.49, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@FarazV2ray 13", server: 38.91.107.49, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Vpn_Tehran ❤️ کانال تلگرام 2", server: 38.91.107.49, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@filembad 36", server: 38.91.107.49, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, servername: 38.91.107.49, udp: true, tfo: false}
   - {name: "@Vpn_Tehran 💠 کانال تلگرام", server: 38.91.107.57, port: 1270, type: vmess, uuid: 5c040f1d-45db-43bd-8d46-e4950e433735, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: xmfhlpy.com, udp: true, tfo: false}
-  - {name: "@filembad 37", server: 38.110.1.246, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@filembad 38", server: mahdipoktstm.iranfilm.space, port: 8880, type: vmess, uuid: 43baa885-d7a1-4c6d-a026-e7fc5bd61bd5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: برای اتصال دائمی جوین شو🪻 TelegramID ⌲Express_freevpn 🪩, server: www.windowssearchtools.com, port: 443, type: vmess, uuid: ba1116e2-8c2f-4e3d-8e50-c954360cf970, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: www.windowssearchtools.com, network: ws, ws-opts: {path: /truth, headers: {Host: www.windowssearchtools.com}}, udp: true, tfo: false}
+  - {name: "@filembad 37", server: mahdipoktstm.iranfilm.space, port: 8880, type: vmess, uuid: 43baa885-d7a1-4c6d-a026-e7fc5bd61bd5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@meliproxy 3", server: mortedaxsq-production.up.railway.app, port: 443, type: vmess, uuid: 1558fb81-e3d9-4a6d-848e-d2d321e7363e, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: mortedaxsq-production.up.railway.app, network: ws, ws-opts: {path: /api/0zAYgT, headers: {Host: mortedaxsq-production.up.railway.app}}, udp: true, tfo: false}
+  - {name: "Channel : @proxy_kafee 2", server: mortedaxsq-production.up.railway.app, port: 443, type: vmess, uuid: 1558fb81-e3d9-4a6d-848e-d2d321e7363e, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: mortedaxsq-production.up.railway.app, network: ws, ws-opts: {path: /api/0zAYgT, headers: {Host: mortedaxsq-production.up.railway.app}}, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@meliproxy"
-      - "@meliproxy 2"
-      - "@meliproxy 3"
       - "@filembad"
       - "@filembad 2"
       - "@filembad 3"
       - "@filembad 4"
+      - "[openproxylist.com] vmess-ID"
       - "@filembad 5"
-      - "@filembad 6"
-      - "@filembad 7"
       - "@FarazV2ray"
       - "@FarazV2ray 2"
+      - "@FarazV2ray 3"
+      - "@filembad 6"
+      - "@FarazV2ray 4"
+      - "@FarazV2ray 5"
+      - "@FarazV2ray 6"
+      - "@FarazV2ray 7"
+      - "@FarazV2ray 8"
+      - "@FarazV2ray 9"
+      - "@meliproxy"
+      - "@vpnbaz 🍭"
+      - "@filembad 7"
       - "@filembad 8"
+      - "@Vpn_Tehran ❤️ کانال تلگرام"
       - "@filembad 9"
       - "@filembad 10"
-      - "@Vpn_Tehran 🩵 کانال تلگرام"
-      - "Channel : @proxy_kafee"
       - "@filembad 11"
-      - "@vpnbaz 🍭"
       - "@filembad 12"
+      - "@FarazV2ray 10"
+      - "@FarazV2ray 11"
+      - "@meliproxy 2"
+      - "Channel : @proxy_kafee"
       - "@filembad 13"
-      - "@Vpn_Tehran 🩵 کانال تلگرام 2"
       - "@filembad 14"
       - "@filembad 15"
       - "@filembad 16"
       - "@filembad 17"
       - "@filembad 18"
       - "@filembad 19"
-      - "@FarazV2ray 3"
-      - "@FarazV2ray 4"
       - "@filembad 20"
+      - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
+      - "اگه میخوای قطع نشی جوین شو : @farsiproxy 2"
       - "@filembad 21"
       - "@filembad 22"
       - "@filembad 23"
       - "@filembad 24"
       - "@filembad 25"
+      - "@FarazV2ray 12"
       - "@filembad 26"
+      - ⚡@V2ray_official
       - "@filembad 27"
+      - "@MTproxy22_v2ray"
+      - "@Miarencia"
       - "@filembad 28"
       - "@filembad 29"
       - "@filembad 30"
-      - "Channel : @proxy_kafee 2"
-      - "@FarazV2ray 5"
-      - ⚡@V2ray_official
-      - ⚡@V2ray_official 2
       - "@filembad 31"
-      - "@Miarencia"
-      - ⚡@V2ray_official 3
       - "@filembad 32"
-      - "@Vpn_Tehran 🤍‌کانال‌تلگرام"
       - "@filembad 33"
-      - ⚡@V2ray_official 4
-      - ⚡@V2ray_official 5
       - "@filembad 34"
       - "@filembad 35"
-      - "@FarazV2ray 6"
-      - "@Vpn_Tehran 🩵 کانال تلگرام 3"
+      - "@FarazV2ray 13"
+      - "@Vpn_Tehran ❤️ کانال تلگرام 2"
       - "@filembad 36"
       - "@Vpn_Tehran 💠 کانال تلگرام"
+      - برای اتصال دائمی جوین شو🪻 TelegramID ⌲Express_freevpn 🪩
       - "@filembad 37"
-      - "@filembad 38"
+      - "@meliproxy 3"
+      - "Channel : @proxy_kafee 2"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@meliproxy"
-      - "@meliproxy 2"
-      - "@meliproxy 3"
       - "@filembad"
       - "@filembad 2"
       - "@filembad 3"
       - "@filembad 4"
+      - "[openproxylist.com] vmess-ID"
       - "@filembad 5"
-      - "@filembad 6"
-      - "@filembad 7"
       - "@FarazV2ray"
       - "@FarazV2ray 2"
+      - "@FarazV2ray 3"
+      - "@filembad 6"
+      - "@FarazV2ray 4"
+      - "@FarazV2ray 5"
+      - "@FarazV2ray 6"
+      - "@FarazV2ray 7"
+      - "@FarazV2ray 8"
+      - "@FarazV2ray 9"
+      - "@meliproxy"
+      - "@vpnbaz 🍭"
+      - "@filembad 7"
       - "@filembad 8"
+      - "@Vpn_Tehran ❤️ کانال تلگرام"
       - "@filembad 9"
       - "@filembad 10"
-      - "@Vpn_Tehran 🩵 کانال تلگرام"
-      - "Channel : @proxy_kafee"
       - "@filembad 11"
-      - "@vpnbaz 🍭"
       - "@filembad 12"
+      - "@FarazV2ray 10"
+      - "@FarazV2ray 11"
+      - "@meliproxy 2"
+      - "Channel : @proxy_kafee"
       - "@filembad 13"
-      - "@Vpn_Tehran 🩵 کانال تلگرام 2"
       - "@filembad 14"
       - "@filembad 15"
       - "@filembad 16"
       - "@filembad 17"
       - "@filembad 18"
       - "@filembad 19"
-      - "@FarazV2ray 3"
-      - "@FarazV2ray 4"
       - "@filembad 20"
+      - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
+      - "اگه میخوای قطع نشی جوین شو : @farsiproxy 2"
       - "@filembad 21"
       - "@filembad 22"
       - "@filembad 23"
       - "@filembad 24"
       - "@filembad 25"
+      - "@FarazV2ray 12"
       - "@filembad 26"
+      - ⚡@V2ray_official
       - "@filembad 27"
+      - "@MTproxy22_v2ray"
+      - "@Miarencia"
       - "@filembad 28"
       - "@filembad 29"
       - "@filembad 30"
-      - "Channel : @proxy_kafee 2"
-      - "@FarazV2ray 5"
-      - ⚡@V2ray_official
-      - ⚡@V2ray_official 2
       - "@filembad 31"
-      - "@Miarencia"
-      - ⚡@V2ray_official 3
       - "@filembad 32"
-      - "@Vpn_Tehran 🤍‌کانال‌تلگرام"
       - "@filembad 33"
-      - ⚡@V2ray_official 4
-      - ⚡@V2ray_official 5
       - "@filembad 34"
       - "@filembad 35"
-      - "@FarazV2ray 6"
-      - "@Vpn_Tehran 🩵 کانال تلگرام 3"
+      - "@FarazV2ray 13"
+      - "@Vpn_Tehran ❤️ کانال تلگرام 2"
       - "@filembad 36"
       - "@Vpn_Tehran 💠 کانال تلگرام"
+      - برای اتصال دائمی جوین شو🪻 TelegramID ⌲Express_freevpn 🪩
       - "@filembad 37"
-      - "@filembad 38"
+      - "@meliproxy 3"
+      - "Channel : @proxy_kafee 2"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@meliproxy"
-      - "@meliproxy 2"
-      - "@meliproxy 3"
       - "@filembad"
       - "@filembad 2"
       - "@filembad 3"
       - "@filembad 4"
+      - "[openproxylist.com] vmess-ID"
       - "@filembad 5"
-      - "@filembad 6"
-      - "@filembad 7"
       - "@FarazV2ray"
       - "@FarazV2ray 2"
+      - "@FarazV2ray 3"
+      - "@filembad 6"
+      - "@FarazV2ray 4"
+      - "@FarazV2ray 5"
+      - "@FarazV2ray 6"
+      - "@FarazV2ray 7"
+      - "@FarazV2ray 8"
+      - "@FarazV2ray 9"
+      - "@meliproxy"
+      - "@vpnbaz 🍭"
+      - "@filembad 7"
       - "@filembad 8"
+      - "@Vpn_Tehran ❤️ کانال تلگرام"
       - "@filembad 9"
       - "@filembad 10"
-      - "@Vpn_Tehran 🩵 کانال تلگرام"
-      - "Channel : @proxy_kafee"
       - "@filembad 11"
-      - "@vpnbaz 🍭"
       - "@filembad 12"
+      - "@FarazV2ray 10"
+      - "@FarazV2ray 11"
+      - "@meliproxy 2"
+      - "Channel : @proxy_kafee"
       - "@filembad 13"
-      - "@Vpn_Tehran 🩵 کانال تلگرام 2"
       - "@filembad 14"
       - "@filembad 15"
       - "@filembad 16"
       - "@filembad 17"
       - "@filembad 18"
       - "@filembad 19"
-      - "@FarazV2ray 3"
-      - "@FarazV2ray 4"
       - "@filembad 20"
+      - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
+      - "اگه میخوای قطع نشی جوین شو : @farsiproxy 2"
       - "@filembad 21"
       - "@filembad 22"
       - "@filembad 23"
       - "@filembad 24"
       - "@filembad 25"
+      - "@FarazV2ray 12"
       - "@filembad 26"
+      - ⚡@V2ray_official
       - "@filembad 27"
+      - "@MTproxy22_v2ray"
+      - "@Miarencia"
       - "@filembad 28"
       - "@filembad 29"
       - "@filembad 30"
-      - "Channel : @proxy_kafee 2"
-      - "@FarazV2ray 5"
-      - ⚡@V2ray_official
-      - ⚡@V2ray_official 2
       - "@filembad 31"
-      - "@Miarencia"
-      - ⚡@V2ray_official 3
       - "@filembad 32"
-      - "@Vpn_Tehran 🤍‌کانال‌تلگرام"
       - "@filembad 33"
-      - ⚡@V2ray_official 4
-      - ⚡@V2ray_official 5
       - "@filembad 34"
       - "@filembad 35"
-      - "@FarazV2ray 6"
-      - "@Vpn_Tehran 🩵 کانال تلگرام 3"
+      - "@FarazV2ray 13"
+      - "@Vpn_Tehran ❤️ کانال تلگرام 2"
       - "@filembad 36"
       - "@Vpn_Tehran 💠 کانال تلگرام"
+      - برای اتصال دائمی جوین شو🪻 TelegramID ⌲Express_freevpn 🪩
       - "@filembad 37"
-      - "@filembad 38"
+      - "@meliproxy 3"
+      - "Channel : @proxy_kafee 2"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@meliproxy"
-      - "@meliproxy 2"
-      - "@meliproxy 3"
       - "@filembad"
       - "@filembad 2"
       - "@filembad 3"
       - "@filembad 4"
+      - "[openproxylist.com] vmess-ID"
       - "@filembad 5"
-      - "@filembad 6"
-      - "@filembad 7"
       - "@FarazV2ray"
       - "@FarazV2ray 2"
+      - "@FarazV2ray 3"
+      - "@filembad 6"
+      - "@FarazV2ray 4"
+      - "@FarazV2ray 5"
+      - "@FarazV2ray 6"
+      - "@FarazV2ray 7"
+      - "@FarazV2ray 8"
+      - "@FarazV2ray 9"
+      - "@meliproxy"
+      - "@vpnbaz 🍭"
+      - "@filembad 7"
       - "@filembad 8"
+      - "@Vpn_Tehran ❤️ کانال تلگرام"
       - "@filembad 9"
       - "@filembad 10"
-      - "@Vpn_Tehran 🩵 کانال تلگرام"
-      - "Channel : @proxy_kafee"
       - "@filembad 11"
-      - "@vpnbaz 🍭"
       - "@filembad 12"
+      - "@FarazV2ray 10"
+      - "@FarazV2ray 11"
+      - "@meliproxy 2"
+      - "Channel : @proxy_kafee"
       - "@filembad 13"
-      - "@Vpn_Tehran 🩵 کانال تلگرام 2"
       - "@filembad 14"
       - "@filembad 15"
       - "@filembad 16"
       - "@filembad 17"
       - "@filembad 18"
       - "@filembad 19"
-      - "@FarazV2ray 3"
-      - "@FarazV2ray 4"
       - "@filembad 20"
+      - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
+      - "اگه میخوای قطع نشی جوین شو : @farsiproxy 2"
       - "@filembad 21"
       - "@filembad 22"
       - "@filembad 23"
       - "@filembad 24"
       - "@filembad 25"
+      - "@FarazV2ray 12"
       - "@filembad 26"
+      - ⚡@V2ray_official
       - "@filembad 27"
+      - "@MTproxy22_v2ray"
+      - "@Miarencia"
       - "@filembad 28"
       - "@filembad 29"
       - "@filembad 30"
-      - "Channel : @proxy_kafee 2"
-      - "@FarazV2ray 5"
-      - ⚡@V2ray_official
-      - ⚡@V2ray_official 2
       - "@filembad 31"
-      - "@Miarencia"
-      - ⚡@V2ray_official 3
       - "@filembad 32"
-      - "@Vpn_Tehran 🤍‌کانال‌تلگرام"
       - "@filembad 33"
-      - ⚡@V2ray_official 4
-      - ⚡@V2ray_official 5
       - "@filembad 34"
       - "@filembad 35"
-      - "@FarazV2ray 6"
-      - "@Vpn_Tehran 🩵 کانال تلگرام 3"
+      - "@FarazV2ray 13"
+      - "@Vpn_Tehran ❤️ کانال تلگرام 2"
       - "@filembad 36"
       - "@Vpn_Tehran 💠 کانال تلگرام"
+      - برای اتصال دائمی جوین شو🪻 TelegramID ⌲Express_freevpn 🪩
       - "@filembad 37"
-      - "@filembad 38"
+      - "@meliproxy 3"
+      - "Channel : @proxy_kafee 2"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@meliproxy"
-      - "@meliproxy 2"
-      - "@meliproxy 3"
       - "@filembad"
       - "@filembad 2"
       - "@filembad 3"
       - "@filembad 4"
+      - "[openproxylist.com] vmess-ID"
       - "@filembad 5"
-      - "@filembad 6"
-      - "@filembad 7"
       - "@FarazV2ray"
       - "@FarazV2ray 2"
+      - "@FarazV2ray 3"
+      - "@filembad 6"
+      - "@FarazV2ray 4"
+      - "@FarazV2ray 5"
+      - "@FarazV2ray 6"
+      - "@FarazV2ray 7"
+      - "@FarazV2ray 8"
+      - "@FarazV2ray 9"
+      - "@meliproxy"
+      - "@vpnbaz 🍭"
+      - "@filembad 7"
       - "@filembad 8"
+      - "@Vpn_Tehran ❤️ کانال تلگرام"
       - "@filembad 9"
       - "@filembad 10"
-      - "@Vpn_Tehran 🩵 کانال تلگرام"
-      - "Channel : @proxy_kafee"
       - "@filembad 11"
-      - "@vpnbaz 🍭"
       - "@filembad 12"
+      - "@FarazV2ray 10"
+      - "@FarazV2ray 11"
+      - "@meliproxy 2"
+      - "Channel : @proxy_kafee"
       - "@filembad 13"
-      - "@Vpn_Tehran 🩵 کانال تلگرام 2"
       - "@filembad 14"
       - "@filembad 15"
       - "@filembad 16"
       - "@filembad 17"
       - "@filembad 18"
       - "@filembad 19"
-      - "@FarazV2ray 3"
-      - "@FarazV2ray 4"
       - "@filembad 20"
+      - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
+      - "اگه میخوای قطع نشی جوین شو : @farsiproxy 2"
       - "@filembad 21"
       - "@filembad 22"
       - "@filembad 23"
       - "@filembad 24"
       - "@filembad 25"
+      - "@FarazV2ray 12"
       - "@filembad 26"
+      - ⚡@V2ray_official
       - "@filembad 27"
+      - "@MTproxy22_v2ray"
+      - "@Miarencia"
       - "@filembad 28"
       - "@filembad 29"
       - "@filembad 30"
-      - "Channel : @proxy_kafee 2"
-      - "@FarazV2ray 5"
-      - ⚡@V2ray_official
-      - ⚡@V2ray_official 2
       - "@filembad 31"
-      - "@Miarencia"
-      - ⚡@V2ray_official 3
       - "@filembad 32"
-      - "@Vpn_Tehran 🤍‌کانال‌تلگرام"
       - "@filembad 33"
-      - ⚡@V2ray_official 4
-      - ⚡@V2ray_official 5
       - "@filembad 34"
       - "@filembad 35"
-      - "@FarazV2ray 6"
-      - "@Vpn_Tehran 🩵 کانال تلگرام 3"
+      - "@FarazV2ray 13"
+      - "@Vpn_Tehran ❤️ کانال تلگرام 2"
       - "@filembad 36"
       - "@Vpn_Tehran 💠 کانال تلگرام"
+      - برای اتصال دائمی جوین شو🪻 TelegramID ⌲Express_freevpn 🪩
       - "@filembad 37"
-      - "@filembad 38"
+      - "@meliproxy 3"
+      - "Channel : @proxy_kafee 2"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@meliproxy"
-      - "@meliproxy 2"
-      - "@meliproxy 3"
       - "@filembad"
       - "@filembad 2"
       - "@filembad 3"
       - "@filembad 4"
+      - "[openproxylist.com] vmess-ID"
       - "@filembad 5"
-      - "@filembad 6"
-      - "@filembad 7"
       - "@FarazV2ray"
       - "@FarazV2ray 2"
+      - "@FarazV2ray 3"
+      - "@filembad 6"
+      - "@FarazV2ray 4"
+      - "@FarazV2ray 5"
+      - "@FarazV2ray 6"
+      - "@FarazV2ray 7"
+      - "@FarazV2ray 8"
+      - "@FarazV2ray 9"
+      - "@meliproxy"
+      - "@vpnbaz 🍭"
+      - "@filembad 7"
       - "@filembad 8"
+      - "@Vpn_Tehran ❤️ کانال تلگرام"
       - "@filembad 9"
       - "@filembad 10"
-      - "@Vpn_Tehran 🩵 کانال تلگرام"
-      - "Channel : @proxy_kafee"
       - "@filembad 11"
-      - "@vpnbaz 🍭"
       - "@filembad 12"
+      - "@FarazV2ray 10"
+      - "@FarazV2ray 11"
+      - "@meliproxy 2"
+      - "Channel : @proxy_kafee"
       - "@filembad 13"
-      - "@Vpn_Tehran 🩵 کانال تلگرام 2"
       - "@filembad 14"
       - "@filembad 15"
       - "@filembad 16"
       - "@filembad 17"
       - "@filembad 18"
       - "@filembad 19"
-      - "@FarazV2ray 3"
-      - "@FarazV2ray 4"
       - "@filembad 20"
+      - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
+      - "اگه میخوای قطع نشی جوین شو : @farsiproxy 2"
       - "@filembad 21"
       - "@filembad 22"
       - "@filembad 23"
       - "@filembad 24"
       - "@filembad 25"
+      - "@FarazV2ray 12"
       - "@filembad 26"
+      - ⚡@V2ray_official
       - "@filembad 27"
+      - "@MTproxy22_v2ray"
+      - "@Miarencia"
       - "@filembad 28"
       - "@filembad 29"
       - "@filembad 30"
-      - "Channel : @proxy_kafee 2"
-      - "@FarazV2ray 5"
-      - ⚡@V2ray_official
-      - ⚡@V2ray_official 2
       - "@filembad 31"
-      - "@Miarencia"
-      - ⚡@V2ray_official 3
       - "@filembad 32"
-      - "@Vpn_Tehran 🤍‌کانال‌تلگرام"
       - "@filembad 33"
-      - ⚡@V2ray_official 4
-      - ⚡@V2ray_official 5
       - "@filembad 34"
       - "@filembad 35"
-      - "@FarazV2ray 6"
-      - "@Vpn_Tehran 🩵 کانال تلگرام 3"
+      - "@FarazV2ray 13"
+      - "@Vpn_Tehran ❤️ کانال تلگرام 2"
       - "@filembad 36"
       - "@Vpn_Tehran 💠 کانال تلگرام"
+      - برای اتصال دائمی جوین شو🪻 TelegramID ⌲Express_freevpn 🪩
       - "@filembad 37"
-      - "@filembad 38"
+      - "@meliproxy 3"
+      - "Channel : @proxy_kafee 2"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -492,67 +527,72 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@meliproxy"
-      - "@meliproxy 2"
-      - "@meliproxy 3"
       - "@filembad"
       - "@filembad 2"
       - "@filembad 3"
       - "@filembad 4"
+      - "[openproxylist.com] vmess-ID"
       - "@filembad 5"
-      - "@filembad 6"
-      - "@filembad 7"
       - "@FarazV2ray"
       - "@FarazV2ray 2"
+      - "@FarazV2ray 3"
+      - "@filembad 6"
+      - "@FarazV2ray 4"
+      - "@FarazV2ray 5"
+      - "@FarazV2ray 6"
+      - "@FarazV2ray 7"
+      - "@FarazV2ray 8"
+      - "@FarazV2ray 9"
+      - "@meliproxy"
+      - "@vpnbaz 🍭"
+      - "@filembad 7"
       - "@filembad 8"
+      - "@Vpn_Tehran ❤️ کانال تلگرام"
       - "@filembad 9"
       - "@filembad 10"
-      - "@Vpn_Tehran 🩵 کانال تلگرام"
-      - "Channel : @proxy_kafee"
       - "@filembad 11"
-      - "@vpnbaz 🍭"
       - "@filembad 12"
+      - "@FarazV2ray 10"
+      - "@FarazV2ray 11"
+      - "@meliproxy 2"
+      - "Channel : @proxy_kafee"
       - "@filembad 13"
-      - "@Vpn_Tehran 🩵 کانال تلگرام 2"
       - "@filembad 14"
       - "@filembad 15"
       - "@filembad 16"
       - "@filembad 17"
       - "@filembad 18"
       - "@filembad 19"
-      - "@FarazV2ray 3"
-      - "@FarazV2ray 4"
       - "@filembad 20"
+      - "اگه میخوای قطع نشی جوین شو : @farsiproxy"
+      - "اگه میخوای قطع نشی جوین شو : @farsiproxy 2"
       - "@filembad 21"
       - "@filembad 22"
       - "@filembad 23"
       - "@filembad 24"
       - "@filembad 25"
+      - "@FarazV2ray 12"
       - "@filembad 26"
+      - ⚡@V2ray_official
       - "@filembad 27"
+      - "@MTproxy22_v2ray"
+      - "@Miarencia"
       - "@filembad 28"
       - "@filembad 29"
       - "@filembad 30"
-      - "Channel : @proxy_kafee 2"
-      - "@FarazV2ray 5"
-      - ⚡@V2ray_official
-      - ⚡@V2ray_official 2
       - "@filembad 31"
-      - "@Miarencia"
-      - ⚡@V2ray_official 3
       - "@filembad 32"
-      - "@Vpn_Tehran 🤍‌کانال‌تلگرام"
       - "@filembad 33"
-      - ⚡@V2ray_official 4
-      - ⚡@V2ray_official 5
       - "@filembad 34"
       - "@filembad 35"
-      - "@FarazV2ray 6"
-      - "@Vpn_Tehran 🩵 کانال تلگرام 3"
+      - "@FarazV2ray 13"
+      - "@Vpn_Tehran ❤️ کانال تلگرام 2"
       - "@filembad 36"
       - "@Vpn_Tehran 💠 کانال تلگرام"
+      - برای اتصال دائمی جوین شو🪻 TelegramID ⌲Express_freevpn 🪩
       - "@filembad 37"
-      - "@filembad 38"
+      - "@meliproxy 3"
+      - "Channel : @proxy_kafee 2"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
