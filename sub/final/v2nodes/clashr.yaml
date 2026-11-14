@@ -7,9 +7,7 @@ external-controller: 127.0.0.1:9090
 proxies:
   - {name: dns24.m3hrzd.ir:1349, server: dns24.m3hrzd.ir, port: 1349, type: ss, cipher: chacha20-ietf-poly1305, password: byX4-DV0C42PLFTWQhMTAQ63mZ8qrDRB, udp: true, tfo: false}
   - {name: dns24.m3hrzd.ir:1352, server: dns24.m3hrzd.ir, port: 1352, type: ss, cipher: chacha20-ietf-poly1305, password: byX4-DV0C42PLFTWQhMTAQ63mZ8qrDRB, udp: true, tfo: false}
-  - {name: sclass-01.catcat321.com:20103, server: sclass-01.catcat321.com, port: 20103, type: trojan, password: d7563108-615c-4338-a7bd-77f359869a4a, sni: hk.catxstar.com, skip-cert-verify: false, udp: true, tfo: false}
   - {name: sclass-c2.catcat321.com:20051, server: sclass-c2.catcat321.com, port: 20051, type: trojan, password: d9064589-74af-432a-9390-5d8a9da281bf, sni: hk.catxstar.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 178.214.125.1:443, server: 178.214.125.1, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 3f3160a0-747d-4fed-bf3d-4d884bfa964d, servername: conf.emaar.ru, host: conf.emaar.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: ZxCwJxbsZWJYYCPzeWj7_fxJMVhwh4XGfpvjmEIQjHY, short-id: 6172ba9cffe9c22f}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -18,9 +16,7 @@ proxy-groups:
       - DIRECT
       - dns24.m3hrzd.ir:1349
       - dns24.m3hrzd.ir:1352
-      - sclass-01.catcat321.com:20103
       - sclass-c2.catcat321.com:20051
-      - 178.214.125.1:443
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -29,9 +25,7 @@ proxy-groups:
     proxies:
       - dns24.m3hrzd.ir:1349
       - dns24.m3hrzd.ir:1352
-      - sclass-01.catcat321.com:20103
       - sclass-c2.catcat321.com:20051
-      - 178.214.125.1:443
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -40,9 +34,7 @@ proxy-groups:
       - 🎯 全球直连
       - dns24.m3hrzd.ir:1349
       - dns24.m3hrzd.ir:1352
-      - sclass-01.catcat321.com:20103
       - sclass-c2.catcat321.com:20051
-      - 178.214.125.1:443
   - name: 📲 电报信息
     type: select
     proxies:
@@ -50,9 +42,7 @@ proxy-groups:
       - 🎯 全球直连
       - dns24.m3hrzd.ir:1349
       - dns24.m3hrzd.ir:1352
-      - sclass-01.catcat321.com:20103
       - sclass-c2.catcat321.com:20051
-      - 178.214.125.1:443
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -60,9 +50,7 @@ proxy-groups:
       - 🚀 节点选择
       - dns24.m3hrzd.ir:1349
       - dns24.m3hrzd.ir:1352
-      - sclass-01.catcat321.com:20103
       - sclass-c2.catcat321.com:20051
-      - 178.214.125.1:443
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -70,9 +58,7 @@ proxy-groups:
       - 🎯 全球直连
       - dns24.m3hrzd.ir:1349
       - dns24.m3hrzd.ir:1352
-      - sclass-01.catcat321.com:20103
       - sclass-c2.catcat321.com:20051
-      - 178.214.125.1:443
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -102,9 +88,7 @@ proxy-groups:
       - ♻️ 自动选择
       - dns24.m3hrzd.ir:1349
       - dns24.m3hrzd.ir:1352
-      - sclass-01.catcat321.com:20103
       - sclass-c2.catcat321.com:20051
-      - 178.214.125.1:443
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
