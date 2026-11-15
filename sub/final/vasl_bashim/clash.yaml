@@ -465,12 +465,12 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@vasl_bashim", server: 147.45.66.60, port: 43000, type: vless, tls: true, packet-encoding: xudp, uuid: 01e61db7-9e0b-4431-a995-a5288a01b951, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: DbL9RJFvJrnxBu6fFhWkHF8nsD6cK_DKMuMV00RmlWg, short-id: 4d3d8e15}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim 2", server: vps3.nemnogogo.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 38308ff1-5aa9-494f-a25a-0f2870d56b3e, servername: vps3.nemnogogo.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: mobile.api.Event}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim 3", server: 109.69.218.172, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 664f65f4-33b3-43a3-b9e5-68192d1d428e, servername: zealous-vortex.cdn.cachefleet.com, host: zealous-vortex.cdn.cachefleet.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim 4", server: 200.102.183.30, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 664f65f4-33b3-43a3-b9e5-68192d1d428e, servername: misty-harbor.cdn.cachefleet.com, host: misty-harbor.cdn.cachefleet.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: OQAbaaN0abHDcEOtiu5rpU_A4Op_gDbOzuAVlHplP3s, short-id: aa5294f481769382}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim 5", server: 200.102.183.5, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 664f65f4-33b3-43a3-b9e5-68192d1d428e, servername: 68r2nrw6avta71yq.cdn.cachefleet.com, host: 68r2nrw6avta71yq.cdn.cachefleet.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vasl_bashim`", server: get.jarbook.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: dd5bed0b-ee77-481b-9f2c-250a632ddd9f, servername: get.jarbook.net, host: get.jarbook.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: BIy6H-jndn24Ukyw83ML8LDB1HL8WLJmfCADEy8lzVs, short-id: c6f97313}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@`", server: 102.133.161.245, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: 3DsS0OglPsfUyTZz, udp: true, tfo: false}
+  - {name: "@vasl_bashim", server: 57.131.4.13, port: 8080, type: ss, cipher: chacha20-ietf-poly1305, password: mx81glqbtlwuhcjo, udp: true, tfo: false}
+  - {name: "@vasl_bashim 2", server: 213.176.92.148, port: 40647, type: ss, cipher: aes-256-gcm, password: DgMywXKqojHXeuXY8hOJaYGPFcjweCIJeD5cdg/cUUY=, udp: true, tfo: false}
+  - {name: "@vasl_bashim 3", server: 158.51.121.221, port: 19999, type: ss, cipher: aes-256-gcm, password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=, udp: true, tfo: false}
+  - {name: "@vasl_bashim 4", server: 179.43.187.67, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 9dd38d60-e683-47c6-bd53-d71bdfee78f3, servername: portal.mavexa.ir, host: portal.mavexa.ir, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vasl_bashim 5", server: webdisk.jaggyslawa.org, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b62e3646-b84d-443c-9c94-718b646502e0, servername: www.foxsports.com, host: www.foxsports.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: zfsjt2A8ur0qHWIuCG7F9W4wZN3VTuL6fkTljC-9R0s, short-id: dda5f542d835}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,36 +487,36 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
+      - "@`"
       - "@vasl_bashim"
       - "@vasl_bashim 2"
       - "@vasl_bashim 3"
       - "@vasl_bashim 4"
       - "@vasl_bashim 5"
-      - "@vasl_bashim`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
+      - "@`"
       - "@vasl_bashim"
       - "@vasl_bashim 2"
       - "@vasl_bashim 3"
       - "@vasl_bashim 4"
       - "@vasl_bashim 5"
-      - "@vasl_bashim`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
+      - "@`"
       - "@vasl_bashim"
       - "@vasl_bashim 2"
       - "@vasl_bashim 3"
       - "@vasl_bashim 4"
       - "@vasl_bashim 5"
-      - "@vasl_bashim`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -532,36 +532,36 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@`"
       - "@vasl_bashim"
       - "@vasl_bashim 2"
       - "@vasl_bashim 3"
       - "@vasl_bashim 4"
       - "@vasl_bashim 5"
-      - "@vasl_bashim`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@`"
       - "@vasl_bashim"
       - "@vasl_bashim 2"
       - "@vasl_bashim 3"
       - "@vasl_bashim 4"
       - "@vasl_bashim 5"
-      - "@vasl_bashim`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
+      - "@`"
       - "@vasl_bashim"
       - "@vasl_bashim 2"
       - "@vasl_bashim 3"
       - "@vasl_bashim 4"
       - "@vasl_bashim 5"
-      - "@vasl_bashim`"
   - name: دانلود منیجر 📥
     type: select
     proxies:
