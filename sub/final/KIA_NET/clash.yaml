@@ -465,15 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 🇩🇪 Germany (@kia_net), server: 8.220.81.25, port: 443, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=, udp: true, tfo: false}
-  - {name: 🇩🇪 Germany (@kia_net) 2, server: 193.108.117.111, port: 19999, type: ss, cipher: aes-256-gcm, password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=, udp: true, tfo: false}
-  - {name: 🇨🇭 Switzerland (@kia_net), server: 79.127.184.104, port: 19999, type: ss, cipher: aes-256-gcm, password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=, udp: true, tfo: false}
-  - {name: 🇨🇦 Canada (@kia_net), server: 216.152.147.201, port: 443, type: trojan, password: 0ab6c98dae3b48e8b9c4a776b6c9c19a, sni: resources.connectingpeoplewithgreatjobs.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇨🇦 Canada (@kia_net) 2, server: 216.152.147.85, port: 443, type: trojan, password: 0ab6c98dae3b48e8b9c4a776b6c9c19a, sni: cdn.connectingpeoplewithgreatjobs.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇺🇸 United States (@kia_net), server: 66.163.112.13, port: 443, type: trojan, password: 0ab6c98dae3b48e8b9c4a776b6c9c19a, sni: blog.unlockyourfuturefindyourperfectcareer.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇩🇪 Germany (@kia_net) 3, server: 5.175.171.30, port: 8444, type: vless, tls: true, packet-encoding: xudp, uuid: 555b35c4-30f9-40c6-a61a-7f53ab1bea45, servername: www.volkswagen.de, host: www.volkswagen.de, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: kBTMVLCNE0jjwuJF6H5-65l5Pe0QToS0Hg-9Tmaa7Sk, short-id: 1a2b3c4d}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇩🇪 Germany (@kia_net) 4, server: 178.214.125.2, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 62546819-be8b-4ecf-bb90-ed04fdf610f3, servername: conf.emaar.ru, host: conf.emaar.ru, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: ZxCwJxbsZWJYYCPzeWj7_fxJMVhwh4XGfpvjmEIQjHY, short-id: 6172ba9cffe9c22f}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇩🇪 Germany (@kia_net) 5, server: 91.107.255.63, port: 39653, type: vless, tls: true, packet-encoding: xudp, uuid: baded307-189c-4ffc-a271-9acdab51a324, servername: online.shop.ir.eeso.cc, alpn: [h2%2Chttp%2F1.1], host: online.shop.ir.eeso.cc, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: همه.سیمکارتا, server: 172.233.33.78, port: 33819, type: hysteria2, ports: 33819, password: wgb0ydxdltgjabxe, obfs: salamander, obfs-password: 8drfqtsqoq38b2kp, sni: 172.233.33.78, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: کیانت`, server: 172.233.33.78, port: 25397, type: ss, cipher: chacha20-ietf-poly1305, password: 4wqzjbejkwh5ipep, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -490,45 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 🇩🇪 Germany (@kia_net)
-      - 🇩🇪 Germany (@kia_net) 2
-      - 🇨🇭 Switzerland (@kia_net)
-      - 🇨🇦 Canada (@kia_net)
-      - 🇨🇦 Canada (@kia_net) 2
-      - 🇺🇸 United States (@kia_net)
-      - 🇩🇪 Germany (@kia_net) 3
-      - 🇩🇪 Germany (@kia_net) 4
-      - 🇩🇪 Germany (@kia_net) 5
+      - همه.سیمکارتا
+      - کیانت`
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 🇩🇪 Germany (@kia_net)
-      - 🇩🇪 Germany (@kia_net) 2
-      - 🇨🇭 Switzerland (@kia_net)
-      - 🇨🇦 Canada (@kia_net)
-      - 🇨🇦 Canada (@kia_net) 2
-      - 🇺🇸 United States (@kia_net)
-      - 🇩🇪 Germany (@kia_net) 3
-      - 🇩🇪 Germany (@kia_net) 4
-      - 🇩🇪 Germany (@kia_net) 5
+      - همه.سیمکارتا
+      - کیانت`
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 🇩🇪 Germany (@kia_net)
-      - 🇩🇪 Germany (@kia_net) 2
-      - 🇨🇭 Switzerland (@kia_net)
-      - 🇨🇦 Canada (@kia_net)
-      - 🇨🇦 Canada (@kia_net) 2
-      - 🇺🇸 United States (@kia_net)
-      - 🇩🇪 Germany (@kia_net) 3
-      - 🇩🇪 Germany (@kia_net) 4
-      - 🇩🇪 Germany (@kia_net) 5
+      - همه.سیمکارتا
+      - کیانت`
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -544,45 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇩🇪 Germany (@kia_net)
-      - 🇩🇪 Germany (@kia_net) 2
-      - 🇨🇭 Switzerland (@kia_net)
-      - 🇨🇦 Canada (@kia_net)
-      - 🇨🇦 Canada (@kia_net) 2
-      - 🇺🇸 United States (@kia_net)
-      - 🇩🇪 Germany (@kia_net) 3
-      - 🇩🇪 Germany (@kia_net) 4
-      - 🇩🇪 Germany (@kia_net) 5
+      - همه.سیمکارتا
+      - کیانت`
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇩🇪 Germany (@kia_net)
-      - 🇩🇪 Germany (@kia_net) 2
-      - 🇨🇭 Switzerland (@kia_net)
-      - 🇨🇦 Canada (@kia_net)
-      - 🇨🇦 Canada (@kia_net) 2
-      - 🇺🇸 United States (@kia_net)
-      - 🇩🇪 Germany (@kia_net) 3
-      - 🇩🇪 Germany (@kia_net) 4
-      - 🇩🇪 Germany (@kia_net) 5
+      - همه.سیمکارتا
+      - کیانت`
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇩🇪 Germany (@kia_net)
-      - 🇩🇪 Germany (@kia_net) 2
-      - 🇨🇭 Switzerland (@kia_net)
-      - 🇨🇦 Canada (@kia_net)
-      - 🇨🇦 Canada (@kia_net) 2
-      - 🇺🇸 United States (@kia_net)
-      - 🇩🇪 Germany (@kia_net) 3
-      - 🇩🇪 Germany (@kia_net) 4
-      - 🇩🇪 Germany (@kia_net) 5
+      - همه.سیمکارتا
+      - کیانت`
   - name: دانلود منیجر 📥
     type: select
     proxies:

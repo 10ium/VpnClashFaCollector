@@ -5,88 +5,53 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: calm-maple-7, server: xray-dmr3b3hy-calm-maple-7.cloady.io, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 06a5afa1-2bbc-a5d1-1770-becd1089c636, servername: xray-dmr3b3hy-calm-maple-7.cloady.io, network: ws, ws-opts: {path: /0175469f14317d82, headers: {Host: xray-dmr3b3hy-calm-maple-7.cloady.io}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2ray_free_config_iran", server: cdn-nl.vpnserverhub.com, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 60de825c-54eb-4c9a-abb0-8c7eedb6130f, network: ws, ws-opts: {path: /vpn-secure-cdn, headers: {Host: cdn-nl.vpnserverhub.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2ray_free_config_iran 2", server: netherlands.vpnserverhub.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 60de825c-54eb-4c9a-abb0-8c7eedb6130f, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2ray_free_config_iran 3", server: cdn-nl.vpnserverhub.com, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: d54061b7-f698-4a0e-aa6c-c565d2cc42b0, network: ws, ws-opts: {path: /vpn-secure-cdn, headers: {Host: cdn-nl.vpnserverhub.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇳🇱 Netherlands-VLESS, server: netherlands.vpnserverhub.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d54061b7-f698-4a0e-aa6c-c565d2cc42b0, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇳🇱 netherlands.vpnserverhub.com:443, server: netherlands.vpnserverhub.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d54061b7-f698-4a0e-aa6c-c565d2cc42b0, host: netherlands.vpnserverhub.com, path: /, flow: xtls…, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇳🇱 netherlands.vpnserverhub.com:443 2, server: netherlands.vpnserverhub.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ecaad3a3-d099-4718-8034-23d6185a0ce2, host: netherlands.vpnserverhub.com, path: /, flow: xtls…, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2ray_free_config_iran", server: cdn-nl.vpnserverhub.com, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: d52531f2-3b44-47a0-b60f-de7b1297d5e8, network: ws, ws-opts: {path: /vpn-secure-cdn, headers: {Host: cdn-nl.vpnserverhub.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2ray_free_config_iran 2", server: netherlands.vpnserverhub.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d52531f2-3b44-47a0-b60f-de7b1297d5e8, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - calm-maple-7
       - "@v2ray_free_config_iran"
       - "@v2ray_free_config_iran 2"
-      - "@v2ray_free_config_iran 3"
-      - 🇳🇱 Netherlands-VLESS
-      - 🇳🇱 netherlands.vpnserverhub.com:443
-      - 🇳🇱 netherlands.vpnserverhub.com:443 2
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - calm-maple-7
       - "@v2ray_free_config_iran"
       - "@v2ray_free_config_iran 2"
-      - "@v2ray_free_config_iran 3"
-      - 🇳🇱 Netherlands-VLESS
-      - 🇳🇱 netherlands.vpnserverhub.com:443
-      - 🇳🇱 netherlands.vpnserverhub.com:443 2
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - calm-maple-7
       - "@v2ray_free_config_iran"
       - "@v2ray_free_config_iran 2"
-      - "@v2ray_free_config_iran 3"
-      - 🇳🇱 Netherlands-VLESS
-      - 🇳🇱 netherlands.vpnserverhub.com:443
-      - 🇳🇱 netherlands.vpnserverhub.com:443 2
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - calm-maple-7
       - "@v2ray_free_config_iran"
       - "@v2ray_free_config_iran 2"
-      - "@v2ray_free_config_iran 3"
-      - 🇳🇱 Netherlands-VLESS
-      - 🇳🇱 netherlands.vpnserverhub.com:443
-      - 🇳🇱 netherlands.vpnserverhub.com:443 2
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - calm-maple-7
       - "@v2ray_free_config_iran"
       - "@v2ray_free_config_iran 2"
-      - "@v2ray_free_config_iran 3"
-      - 🇳🇱 Netherlands-VLESS
-      - 🇳🇱 netherlands.vpnserverhub.com:443
-      - 🇳🇱 netherlands.vpnserverhub.com:443 2
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - calm-maple-7
       - "@v2ray_free_config_iran"
       - "@v2ray_free_config_iran 2"
-      - "@v2ray_free_config_iran 3"
-      - 🇳🇱 Netherlands-VLESS
-      - 🇳🇱 netherlands.vpnserverhub.com:443
-      - 🇳🇱 netherlands.vpnserverhub.com:443 2
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -114,13 +79,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - calm-maple-7
       - "@v2ray_free_config_iran"
       - "@v2ray_free_config_iran 2"
-      - "@v2ray_free_config_iran 3"
-      - 🇳🇱 Netherlands-VLESS
-      - 🇳🇱 netherlands.vpnserverhub.com:443
-      - 🇳🇱 netherlands.vpnserverhub.com:443 2
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
