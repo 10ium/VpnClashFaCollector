@@ -6,10 +6,8 @@ log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
   - {name: S4, server: xray2-direct-mci1-fs-ce.freesocks.work, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 00487d40-deaa-4bfa-871b-dd6af5ffe76c, servername: dl.google.com, host: dl.google.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: S1, server: xray2-direct-mci1-fs-ce.freesocks.work, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 058a5d84-08f5-486e-97a5-a09f87030206, servername: dl.google.com, host: dl.google.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: S2`, server: xray2-direct-mci1-fs-ce.freesocks.work, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 0e3d392d-7ea6-460c-9d82-d4f0eb1f23bc, servername: dl.google.com, host: dl.google.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
   - {name: S5`, server: xray2-direct-mci1-fs-ce.freesocks.work, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 11adad6a-9e43-4d21-bfff-75b06f0d6f0e, servername: dl.google.com, host: dl.google.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: S1 2, server: xray2-direct-mci1-fs-ce.freesocks.work, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 177a7c5a-79bf-4228-b609-73330735f62d, servername: dl.google.com, host: dl.google.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: S1, server: xray2-direct-mci1-fs-ce.freesocks.work, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 177a7c5a-79bf-4228-b609-73330735f62d, servername: dl.google.com, host: dl.google.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
   - {name: S3, server: xray2-direct-mci1-fs-ce.freesocks.work, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 811ae93a-19c4-44f6-8f1f-4d9206da9640, servername: dl.google.com, host: dl.google.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
   - {name: S2, server: xray2-direct-mci1-fs-ce.freesocks.work, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 82ecfd16-42b8-4c35-9a68-065a6d17b471, servername: dl.google.com, host: dl.google.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
@@ -19,10 +17,8 @@ proxy-groups:
       - ♻️ 自动选择
       - DIRECT
       - S4
-      - S1
-      - S2`
       - S5`
-      - S1 2
+      - S1
       - S3
       - S2
   - name: ♻️ 自动选择
@@ -32,10 +28,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - S4
-      - S1
-      - S2`
       - S5`
-      - S1 2
+      - S1
       - S3
       - S2
   - name: 🌍 国外媒体
@@ -45,10 +39,8 @@ proxy-groups:
       - ♻️ 自动选择
       - 🎯 全球直连
       - S4
-      - S1
-      - S2`
       - S5`
-      - S1 2
+      - S1
       - S3
       - S2
   - name: 📲 电报信息
@@ -57,10 +49,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - S4
-      - S1
-      - S2`
       - S5`
-      - S1 2
+      - S1
       - S3
       - S2
   - name: Ⓜ️ 微软服务
@@ -69,10 +59,8 @@ proxy-groups:
       - 🎯 全球直连
       - 🚀 节点选择
       - S4
-      - S1
-      - S2`
       - S5`
-      - S1 2
+      - S1
       - S3
       - S2
   - name: 🍎 苹果服务
@@ -81,10 +69,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - S4
-      - S1
-      - S2`
       - S5`
-      - S1 2
+      - S1
       - S3
       - S2
   - name: 🎯 全球直连
@@ -115,10 +101,8 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - S4
-      - S1
-      - S2`
       - S5`
-      - S1 2
+      - S1
       - S3
       - S2
 rules:
