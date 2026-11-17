@@ -465,8 +465,10 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 47.242.93.89:12012, server: 47.242.93.89, port: 12012, type: trojan, password: !<str> 12012, sni: ali-hk.b-gfw.cfd, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 31.77.28.68:443, server: 31.77.28.68, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 372931d3-91c5-4564-b79c-041302de9a17, servername: nl2.soshelper.space, host: nl2.soshelper.space, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: mEo4kHPpRns7efJfVW1G-gDEsPag0jELFQK-HIwrvjY, short-id: 6562cf617728186e}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 94.183.234.245:443, server: 94.183.234.245, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5de0c218-0138-45d8-94d2-c2c3f37a1a6d, servername: www.bing.com, host: www.bing.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: tfFzmbVByvoZxxIEUiHMv22_k0-nQz00L0XjU0bd_Fc, short-id: 7f1e29593aa94ad1}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 195.72.62.7:443, server: 195.72.62.7, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8197b9b9-8945-460f-99c9-325ef8a8a7c3, servername: fexzoo.net, host: fexzoo.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: GQC47B2ZbBygpgJap7Em9lZmCZZkzlckiadXWXlVxGU, short-id: 2a67748b0d641e16}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: d58daft.plp1.h1cloud.net:443, server: d58daft.plp1.h1cloud.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c82031be-e90f-4b15-ab4f-7ccef236d3ca, servername: d58daft.plp1.h1cloud.net, host: d58daft.plp1.h1cloud.net, path: /, reality-opts: {public-key: ixnCbdlT5sAVd-ilp2nG11CvnNsBCf9xPD56TlXxlR4, short-id: a91531ad58c8611c}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +485,30 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 47.242.93.89:12012
+      - 31.77.28.68:443
       - 94.183.234.245:443
+      - 195.72.62.7:443
+      - d58daft.plp1.h1cloud.net:443
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 47.242.93.89:12012
+      - 31.77.28.68:443
       - 94.183.234.245:443
+      - 195.72.62.7:443
+      - d58daft.plp1.h1cloud.net:443
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 47.242.93.89:12012
+      - 31.77.28.68:443
       - 94.183.234.245:443
+      - 195.72.62.7:443
+      - d58daft.plp1.h1cloud.net:443
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +524,30 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 47.242.93.89:12012
+      - 31.77.28.68:443
       - 94.183.234.245:443
+      - 195.72.62.7:443
+      - d58daft.plp1.h1cloud.net:443
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 47.242.93.89:12012
+      - 31.77.28.68:443
       - 94.183.234.245:443
+      - 195.72.62.7:443
+      - d58daft.plp1.h1cloud.net:443
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 47.242.93.89:12012
+      - 31.77.28.68:443
       - 94.183.234.245:443
+      - 195.72.62.7:443
+      - d58daft.plp1.h1cloud.net:443
   - name: دانلود منیجر 📥
     type: select
     proxies:

@@ -465,9 +465,10 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Capoit`", server: 51.158.206.26, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 2", server: 199.232.78.159, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 64ce5faf-427b-4dd1-926c-6b7ced6b8c38, servername: cdn.akamai.steamstatic.com, network: ws, ws-opts: {path: /, headers: {Host: cdn.akamai.steamstatic.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit`", server: 199.232.78.160, port: 443, type: trojan, password: MiTiVPN, sni: steamstatic.com, skip-cert-verify: false, network: ws, ws-opts: {path: "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN=26?ed#Telegram---PLANB_NET---PLANB_NET---PLANB_NET---PLANB_NET", headers: {Host: steamstatic.com}}, udp: true, tfo: false}
+  - {name: "@Capoit` 2", server: 51.158.206.12, port: 23576, type: vless, tls: true, packet-encoding: xudp, uuid: 48ff2b70-e180-582f-8866-d9a2edeed5f5, servername: fuck.rkn, host: fuck.rkn, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 1y5h2FGWKXTJ9xLPCqPo6Mw7RxoZzh6fGkEQKNxpZ3s, short-id: 01}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@Capoit` 3", server: 193.243.189.64, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8197b9b9-8945-460f-99c9-325ef8a8a7c3, servername: no1.gofizz.in, host: no1.gofizz.in, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 631qtx5_iiR8HBYdp3duf2SMqdN0URE1AWVb85I_FFg, short-id: b12c3119d219dc}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit` 4", server: 169.40.42.89, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d65cc14c-f53f-4fe2-b262-97856601319c, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: e2RLf57Li_-MDZGE9ss1BWPgP54mqRb5PfXhW2jcVVg, short-id: c39cc7310a}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,6 +488,7 @@ proxy-groups:
       - "@Capoit`"
       - "@Capoit` 2"
       - "@Capoit` 3"
+      - "@Capoit` 4"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -496,6 +498,7 @@ proxy-groups:
       - "@Capoit`"
       - "@Capoit` 2"
       - "@Capoit` 3"
+      - "@Capoit` 4"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -505,6 +508,7 @@ proxy-groups:
       - "@Capoit`"
       - "@Capoit` 2"
       - "@Capoit` 3"
+      - "@Capoit` 4"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -523,6 +527,7 @@ proxy-groups:
       - "@Capoit`"
       - "@Capoit` 2"
       - "@Capoit` 3"
+      - "@Capoit` 4"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -532,6 +537,7 @@ proxy-groups:
       - "@Capoit`"
       - "@Capoit` 2"
       - "@Capoit` 3"
+      - "@Capoit` 4"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -541,6 +547,7 @@ proxy-groups:
       - "@Capoit`"
       - "@Capoit` 2"
       - "@Capoit` 3"
+      - "@Capoit` 4"
   - name: دانلود منیجر 📥
     type: select
     proxies:
