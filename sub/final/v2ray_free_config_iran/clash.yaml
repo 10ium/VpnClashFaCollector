@@ -465,8 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@v2ray_free_config_iran", server: cdn-nl.vpnserverhub.com, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: d52531f2-3b44-47a0-b60f-de7b1297d5e8, network: ws, ws-opts: {path: /vpn-secure-cdn, headers: {Host: cdn-nl.vpnserverhub.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2ray_free_config_iran 2", server: netherlands.vpnserverhub.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: d52531f2-3b44-47a0-b60f-de7b1297d5e8, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2ray_free_config_iran", server: 63.189.231.176, port: 443, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=, udp: true, tfo: false}
+  - {name: "@v2ray_free_config_iran 2", server: 199.232.78.160, port: 443, type: trojan, password: MiTiVPN, sni: steamstatic.com, skip-cert-verify: false, network: ws, ws-opts: {path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN=26, headers: {Host: steamstatic.com}}, udp: true, tfo: false}
+  - {name: "@v2ray_free_config_iran 3", server: cdn-nl.vpnserverhub.com, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 2ba6c5c3-4ad1-4ce1-9f85-345e674f3239, network: ws, ws-opts: {path: /vpn-secure-cdn, headers: {Host: cdn-nl.vpnserverhub.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2ray_free_config_iran 4", server: netherlands.vpnserverhub.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 2ba6c5c3-4ad1-4ce1-9f85-345e674f3239, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2ray_free_config_iran 5", server: 199.232.78.120, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8d2cbffd-43d0-458d-906b-7c54b7b51f38, servername: cdn.akamai.steamstatic.com, network: ws, ws-opts: {path: /, headers: {Host: cdn.akamai.steamstatic.com}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,6 +488,9 @@ proxy-groups:
     proxies:
       - "@v2ray_free_config_iran"
       - "@v2ray_free_config_iran 2"
+      - "@v2ray_free_config_iran 3"
+      - "@v2ray_free_config_iran 4"
+      - "@v2ray_free_config_iran 5"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -493,6 +499,9 @@ proxy-groups:
     proxies:
       - "@v2ray_free_config_iran"
       - "@v2ray_free_config_iran 2"
+      - "@v2ray_free_config_iran 3"
+      - "@v2ray_free_config_iran 4"
+      - "@v2ray_free_config_iran 5"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -501,6 +510,9 @@ proxy-groups:
     proxies:
       - "@v2ray_free_config_iran"
       - "@v2ray_free_config_iran 2"
+      - "@v2ray_free_config_iran 3"
+      - "@v2ray_free_config_iran 4"
+      - "@v2ray_free_config_iran 5"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -518,6 +530,9 @@ proxy-groups:
     proxies:
       - "@v2ray_free_config_iran"
       - "@v2ray_free_config_iran 2"
+      - "@v2ray_free_config_iran 3"
+      - "@v2ray_free_config_iran 4"
+      - "@v2ray_free_config_iran 5"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -526,6 +541,9 @@ proxy-groups:
     proxies:
       - "@v2ray_free_config_iran"
       - "@v2ray_free_config_iran 2"
+      - "@v2ray_free_config_iran 3"
+      - "@v2ray_free_config_iran 4"
+      - "@v2ray_free_config_iran 5"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -534,6 +552,9 @@ proxy-groups:
     proxies:
       - "@v2ray_free_config_iran"
       - "@v2ray_free_config_iran 2"
+      - "@v2ray_free_config_iran 3"
+      - "@v2ray_free_config_iran 4"
+      - "@v2ray_free_config_iran 5"
   - name: دانلود منیجر 📥
     type: select
     proxies:
