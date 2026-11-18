@@ -5,67 +5,46 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 31.77.28.68:443, server: 31.77.28.68, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 372931d3-91c5-4564-b79c-041302de9a17, servername: nl2.soshelper.space, host: nl2.soshelper.space, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: mEo4kHPpRns7efJfVW1G-gDEsPag0jELFQK-HIwrvjY, short-id: 6562cf617728186e}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 94.183.234.245:443, server: 94.183.234.245, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5de0c218-0138-45d8-94d2-c2c3f37a1a6d, servername: www.bing.com, host: www.bing.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: tfFzmbVByvoZxxIEUiHMv22_k0-nQz00L0XjU0bd_Fc, short-id: 7f1e29593aa94ad1}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 195.72.62.7:443, server: 195.72.62.7, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8197b9b9-8945-460f-99c9-325ef8a8a7c3, servername: fexzoo.net, host: fexzoo.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: GQC47B2ZbBygpgJap7Em9lZmCZZkzlckiadXWXlVxGU, short-id: 2a67748b0d641e16}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: d58daft.plp1.h1cloud.net:443, server: d58daft.plp1.h1cloud.net, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c82031be-e90f-4b15-ab4f-7ccef236d3ca, servername: d58daft.plp1.h1cloud.net, host: d58daft.plp1.h1cloud.net, path: /, reality-opts: {public-key: ixnCbdlT5sAVd-ilp2nG11CvnNsBCf9xPD56TlXxlR4, short-id: a91531ad58c8611c}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 80.47.10.106:443, server: 80.47.10.106, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c, servername: pl8.galioncc.com, host: pl8.galioncc.com, path: /, reality-opts: {public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ, short-id: a7c92e4b10d6f835}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 31.77.28.68:443
-      - 94.183.234.245:443
-      - 195.72.62.7:443
-      - d58daft.plp1.h1cloud.net:443
+      - 80.47.10.106:443
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 31.77.28.68:443
-      - 94.183.234.245:443
-      - 195.72.62.7:443
-      - d58daft.plp1.h1cloud.net:443
+      - 80.47.10.106:443
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 31.77.28.68:443
-      - 94.183.234.245:443
-      - 195.72.62.7:443
-      - d58daft.plp1.h1cloud.net:443
+      - 80.47.10.106:443
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 31.77.28.68:443
-      - 94.183.234.245:443
-      - 195.72.62.7:443
-      - d58daft.plp1.h1cloud.net:443
+      - 80.47.10.106:443
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 31.77.28.68:443
-      - 94.183.234.245:443
-      - 195.72.62.7:443
-      - d58daft.plp1.h1cloud.net:443
+      - 80.47.10.106:443
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 31.77.28.68:443
-      - 94.183.234.245:443
-      - 195.72.62.7:443
-      - d58daft.plp1.h1cloud.net:443
+      - 80.47.10.106:443
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -93,10 +72,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 31.77.28.68:443
-      - 94.183.234.245:443
-      - 195.72.62.7:443
-      - d58daft.plp1.h1cloud.net:443
+      - 80.47.10.106:443
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
