@@ -5,21 +5,21 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: S4, server: xray2-direct-mci1-fs-ce.freesocks.work, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 398131d7-0d52-4116-81c3-d4c06bb12ab4, servername: dl.google.com, host: dl.google.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: S3, server: xray2-direct-mci1-fs-ce.freesocks.work, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 6c86997c-ba48-4aeb-bf84-3b461f3300d0, servername: dl.google.com, host: dl.google.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: S1, server: xray2-direct-mci1-fs-ce.freesocks.work, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 7efb2dda-5bcd-4a22-9625-46a313be2c2d, servername: dl.google.com, host: dl.google.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: S5`, server: xray2-direct-mci1-fs-ce.freesocks.work, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 8610cd1c-01dc-4c5c-b15a-b810522c61c2, servername: dl.google.com, host: dl.google.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: S2, server: xray2-direct-mci1-fs-ce.freesocks.work, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: e9a959e4-7ff6-43db-b6c8-beb233825e8a, servername: dl.google.com, host: dl.google.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: S1, server: xray2-direct-mci1-fs-ce.freesocks.work, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 0496fabd-8356-428a-809e-6e60ade49f32, servername: dl.google.com, host: dl.google.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: S4, server: xray2-direct-mci1-fs-ce.freesocks.work, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 80dc1f77-13ae-451c-8267-8187b9961344, servername: dl.google.com, host: dl.google.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: S5`, server: xray2-direct-mci1-fs-ce.freesocks.work, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 9b4abcc9-cfb9-4728-a641-eb694a0c24d5, servername: dl.google.com, host: dl.google.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: S3, server: xray2-direct-mci1-fs-ce.freesocks.work, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: be5b8af8-a0b1-4e22-92c0-dbee37de1aa6, servername: dl.google.com, host: dl.google.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: S2, server: xray2-direct-mci1-fs-ce.freesocks.work, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c49f9637-f2e7-45ae-bc26-50c83ca7aa4d, servername: dl.google.com, host: dl.google.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - S4
-      - S3
       - S1
+      - S4
       - S5`
+      - S3
       - S2
   - name: ♻️ 自动选择
     type: url-test
@@ -27,10 +27,10 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - S4
-      - S3
       - S1
+      - S4
       - S5`
+      - S3
       - S2
   - name: 🌍 国外媒体
     type: select
@@ -38,40 +38,40 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - S4
-      - S3
       - S1
+      - S4
       - S5`
+      - S3
       - S2
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - S4
-      - S3
       - S1
+      - S4
       - S5`
+      - S3
       - S2
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - S4
-      - S3
       - S1
+      - S4
       - S5`
+      - S3
       - S2
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - S4
-      - S3
       - S1
+      - S4
       - S5`
+      - S3
       - S2
   - name: 🎯 全球直连
     type: select
@@ -100,10 +100,10 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - S4
-      - S3
       - S1
+      - S4
       - S5`
+      - S3
       - S2
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
