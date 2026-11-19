@@ -465,7 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 80.47.10.106:443, server: 80.47.10.106, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a30903dc-1bf0-4be5-8b1b-603a3a56211c, servername: pl8.galioncc.com, host: pl8.galioncc.com, path: /, reality-opts: {public-key: drl7nndYdfzZY1aQ0eUAWmNV0nsHig2uDnu9siy9biQ, short-id: a7c92e4b10d6f835}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: alireza.karamoz1.ir:443, server: alireza.karamoz1.ir, port: 443, type: trojan, password: poimnap, sni: alireza.karamoz1.ir, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 13.143.197.74:8443, server: 13.143.197.74, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 12910384-1ef8-40a3-818a-57277063ea66, servername: kk-tr-74.testkknegr.online, alpn: [h2], network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: vlgrpc}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 94.183.234.245:443, server: 94.183.234.245, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5de0c218-0138-45d8-94d2-c2c3f37a1a6d, servername: www.bing.com, host: www.bing.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: tfFzmbVByvoZxxIEUiHMv22_k0-nQz00L0XjU0bd_Fc, short-id: 7f1e29593aa94ad1}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: free.fugui.lol:47396, server: free.fugui.lol, port: 47396, type: vless, tls: true, packet-encoding: xudp, uuid: ead3595f-4020-4e76-a3ec-c248e1a2f2f7, servername: swdist.apple.com, host: swdist.apple.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: IjWYbHNrZb3UCQxsTJyekEOA3tHq42L6Jw3O8MmLYVQ, short-id: fa514b83}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -483,7 +485,9 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 80.47.10.106:443
+      - alireza.karamoz1.ir:443
+      - 13.143.197.74:8443
+      - 94.183.234.245:443
       - free.fugui.lol:47396
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -491,7 +495,9 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - 80.47.10.106:443
+      - alireza.karamoz1.ir:443
+      - 13.143.197.74:8443
+      - 94.183.234.245:443
       - free.fugui.lol:47396
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -499,7 +505,9 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - 80.47.10.106:443
+      - alireza.karamoz1.ir:443
+      - 13.143.197.74:8443
+      - 94.183.234.245:443
       - free.fugui.lol:47396
   - name: اتصال پایدار 🔗
     type: url-test
@@ -516,7 +524,9 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 80.47.10.106:443
+      - alireza.karamoz1.ir:443
+      - 13.143.197.74:8443
+      - 94.183.234.245:443
       - free.fugui.lol:47396
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -524,7 +534,9 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 80.47.10.106:443
+      - alireza.karamoz1.ir:443
+      - 13.143.197.74:8443
+      - 94.183.234.245:443
       - free.fugui.lol:47396
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -532,7 +544,9 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 80.47.10.106:443
+      - alireza.karamoz1.ir:443
+      - 13.143.197.74:8443
+      - 94.183.234.245:443
       - free.fugui.lol:47396
   - name: دانلود منیجر 📥
     type: select
