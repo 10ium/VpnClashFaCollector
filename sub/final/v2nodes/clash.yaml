@@ -466,9 +466,9 @@ rule-providers:
     path: ./ruleset/mihSpotify.yaml
 proxies:
   - {name: alireza.karamoz1.ir:443, server: alireza.karamoz1.ir, port: 443, type: trojan, password: poimnap, sni: alireza.karamoz1.ir, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: music.3apes.online:443, server: music.3apes.online, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 12776e55-6230-48b9-b069-1bb8a04b4237, servername: music.3apes.online, host: music.3apes.online, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 13.143.197.74:8443, server: 13.143.197.74, port: 8443, type: vless, tls: true, packet-encoding: xudp, uuid: 12910384-1ef8-40a3-818a-57277063ea66, servername: kk-tr-74.testkknegr.online, alpn: [h2], network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: vlgrpc}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 94.183.234.245:443, server: 94.183.234.245, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5de0c218-0138-45d8-94d2-c2c3f37a1a6d, servername: www.bing.com, host: www.bing.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: tfFzmbVByvoZxxIEUiHMv22_k0-nQz00L0XjU0bd_Fc, short-id: 7f1e29593aa94ad1}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: free.fugui.lol:47396, server: free.fugui.lol, port: 47396, type: vless, tls: true, packet-encoding: xudp, uuid: ead3595f-4020-4e76-a3ec-c248e1a2f2f7, servername: swdist.apple.com, host: swdist.apple.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: IjWYbHNrZb3UCQxsTJyekEOA3tHq42L6Jw3O8MmLYVQ, short-id: fa514b83}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -486,9 +486,9 @@ proxy-groups:
     type: select
     proxies:
       - alireza.karamoz1.ir:443
+      - music.3apes.online:443
       - 13.143.197.74:8443
       - 94.183.234.245:443
-      - free.fugui.lol:47396
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -496,9 +496,9 @@ proxy-groups:
     tolerance: 50
     proxies:
       - alireza.karamoz1.ir:443
+      - music.3apes.online:443
       - 13.143.197.74:8443
       - 94.183.234.245:443
-      - free.fugui.lol:47396
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -506,9 +506,9 @@ proxy-groups:
     tolerance: 50
     proxies:
       - alireza.karamoz1.ir:443
+      - music.3apes.online:443
       - 13.143.197.74:8443
       - 94.183.234.245:443
-      - free.fugui.lol:47396
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -525,9 +525,9 @@ proxy-groups:
     interval: 600
     proxies:
       - alireza.karamoz1.ir:443
+      - music.3apes.online:443
       - 13.143.197.74:8443
       - 94.183.234.245:443
-      - free.fugui.lol:47396
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -535,9 +535,9 @@ proxy-groups:
     interval: 600
     proxies:
       - alireza.karamoz1.ir:443
+      - music.3apes.online:443
       - 13.143.197.74:8443
       - 94.183.234.245:443
-      - free.fugui.lol:47396
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -545,9 +545,9 @@ proxy-groups:
     interval: 600
     proxies:
       - alireza.karamoz1.ir:443
+      - music.3apes.online:443
       - 13.143.197.74:8443
       - 94.183.234.245:443
-      - free.fugui.lol:47396
   - name: دانلود منیجر 📥
     type: select
     proxies:
