@@ -465,9 +465,10 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com:443, server: 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com, port: 443, type: tuic, uuid: 73bfcc1c-5814-5f2a-b43a-3ef6af011db8, password: 73bfcc1c-5814-5f2a-b43a-3ef6af011db8, alpn: [h3], udp-relay-mode: native, congestion-controller: bbr, sni: 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 210404 | ⚡️Telegram - t.me/SOSkeyNET, server: 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com, port: 443, type: tuic, uuid: 73bfcc1c-5814-5f2a-b43a-3ef6af011db8, password: 73bfcc1c-5814-5f2a-b43a-3ef6af011db8, alpn: [h3], udp-relay-mode: native, congestion-controller: bbr, sni: 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 100@oneclickvpnkeys`, server: 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com, port: 443, type: tuic, uuid: 73bfcc1c-5814-5f2a-b43a-3ef6af011db8, password: 73bfcc1c-5814-5f2a-b43a-3ef6af011db8, alpn: [h3], udp-relay-mode: native, congestion-controller: bbr, sni: 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 45.192.193.54:35602, server: 45.192.193.54, port: 35602, type: tuic, uuid: 8614bde7-34cf-4413-8360-e96f1b960528, password: 8614bde7-34cf-4413-8360-e96f1b960528, alpn: [h3], udp-relay-mode: native, congestion-controller: bbr, sni: www.bing.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇮🇷 @IranProxyPlus, server: 45.192.193.54, port: 35602, type: tuic, uuid: 8614bde7-34cf-4413-8360-e96f1b960528, password: 8614bde7-34cf-4413-8360-e96f1b960528, alpn: [h3], udp-relay-mode: native, congestion-controller: bbr, sni: www.bing.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ⭕91@oneclickvpnkeys, server: 45.192.193.54, port: 35602, type: tuic, uuid: 8614bde7-34cf-4413-8360-e96f1b960528, password: 8614bde7-34cf-4413-8360-e96f1b960528, alpn: [h3], udp-relay-mode: native, congestion-controller: bbr, sni: www.bing.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 221173 | ⚡️Telegram - t.me/SOSkeyNET, server: 45.192.193.54, port: 35602, type: tuic, uuid: 8614bde7-34cf-4413-8360-e96f1b960528, password: 8614bde7-34cf-4413-8360-e96f1b960528, alpn: [h3], udp-relay-mode: native, congestion-controller: bbr, sni: www.bing.com, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,27 +485,30 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com:443
-      - 210404 | ⚡️Telegram - t.me/SOSkeyNET
-      - 100@oneclickvpnkeys`
+      - 45.192.193.54:35602
+      - 🇮🇷 @IranProxyPlus
+      - ⭕91@oneclickvpnkeys
+      - 221173 | ⚡️Telegram - t.me/SOSkeyNET
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com:443
-      - 210404 | ⚡️Telegram - t.me/SOSkeyNET
-      - 100@oneclickvpnkeys`
+      - 45.192.193.54:35602
+      - 🇮🇷 @IranProxyPlus
+      - ⭕91@oneclickvpnkeys
+      - 221173 | ⚡️Telegram - t.me/SOSkeyNET
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com:443
-      - 210404 | ⚡️Telegram - t.me/SOSkeyNET
-      - 100@oneclickvpnkeys`
+      - 45.192.193.54:35602
+      - 🇮🇷 @IranProxyPlus
+      - ⭕91@oneclickvpnkeys
+      - 221173 | ⚡️Telegram - t.me/SOSkeyNET
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -520,27 +524,30 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com:443
-      - 210404 | ⚡️Telegram - t.me/SOSkeyNET
-      - 100@oneclickvpnkeys`
+      - 45.192.193.54:35602
+      - 🇮🇷 @IranProxyPlus
+      - ⭕91@oneclickvpnkeys
+      - 221173 | ⚡️Telegram - t.me/SOSkeyNET
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com:443
-      - 210404 | ⚡️Telegram - t.me/SOSkeyNET
-      - 100@oneclickvpnkeys`
+      - 45.192.193.54:35602
+      - 🇮🇷 @IranProxyPlus
+      - ⭕91@oneclickvpnkeys
+      - 221173 | ⚡️Telegram - t.me/SOSkeyNET
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 54fb07dd-tk7400-toh6wi-jx5r.pccw3.hyhuawei.com:443
-      - 210404 | ⚡️Telegram - t.me/SOSkeyNET
-      - 100@oneclickvpnkeys`
+      - 45.192.193.54:35602
+      - 🇮🇷 @IranProxyPlus
+      - ⭕91@oneclickvpnkeys
+      - 221173 | ⚡️Telegram - t.me/SOSkeyNET
   - name: دانلود منیجر 📥
     type: select
     proxies:

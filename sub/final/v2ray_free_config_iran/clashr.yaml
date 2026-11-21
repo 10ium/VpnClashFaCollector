@@ -9,9 +9,6 @@ proxies:
   - {name: "@v2ray_free_config_iran 2", server: netherlands.vpnserverhub.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 10953ab3-7842-451c-9604-102aa3649a89, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@v2ray_free_config_iran 3", server: cdn-nl.vpnserverhub.com, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 27164cf0-16e8-4bbd-b807-fbf247874650, network: ws, ws-opts: {path: /vpn-secure-cdn, headers: {Host: cdn-nl.vpnserverhub.com}}, skip-cert-verify: false, udp: true, tfo: false}
   - {name: "@v2ray_free_config_iran 4", server: netherlands.vpnserverhub.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 27164cf0-16e8-4bbd-b807-fbf247874650, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2ray_free_config_iran 5", server: cdn-nl.vpnserverhub.com, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: a143358a-c71f-4a49-b89f-f6403469be43, network: ws, ws-opts: {path: /vpn-secure-cdn, headers: {Host: cdn-nl.vpnserverhub.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2ray_free_config_iran 6", server: netherlands.vpnserverhub.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a143358a-c71f-4a49-b89f-f6403469be43, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2ray_free_config_iran-x", server: 209.50.50.174, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: ed98bc0f-cfd8-42f5-a446-d06e83c211d6, servername: www.microsoft.com, host: www.microsoft.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: SetkHCEuwTCJLii9zJ4K_wz2Oe8ut4au8Czm5y_xt18, short-id: fa0435d4}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -22,9 +19,6 @@ proxy-groups:
       - "@v2ray_free_config_iran 2"
       - "@v2ray_free_config_iran 3"
       - "@v2ray_free_config_iran 4"
-      - "@v2ray_free_config_iran 5"
-      - "@v2ray_free_config_iran 6"
-      - "@v2ray_free_config_iran-x"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -35,9 +29,6 @@ proxy-groups:
       - "@v2ray_free_config_iran 2"
       - "@v2ray_free_config_iran 3"
       - "@v2ray_free_config_iran 4"
-      - "@v2ray_free_config_iran 5"
-      - "@v2ray_free_config_iran 6"
-      - "@v2ray_free_config_iran-x"
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -48,9 +39,6 @@ proxy-groups:
       - "@v2ray_free_config_iran 2"
       - "@v2ray_free_config_iran 3"
       - "@v2ray_free_config_iran 4"
-      - "@v2ray_free_config_iran 5"
-      - "@v2ray_free_config_iran 6"
-      - "@v2ray_free_config_iran-x"
   - name: 📲 电报信息
     type: select
     proxies:
@@ -60,9 +48,6 @@ proxy-groups:
       - "@v2ray_free_config_iran 2"
       - "@v2ray_free_config_iran 3"
       - "@v2ray_free_config_iran 4"
-      - "@v2ray_free_config_iran 5"
-      - "@v2ray_free_config_iran 6"
-      - "@v2ray_free_config_iran-x"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -72,9 +57,6 @@ proxy-groups:
       - "@v2ray_free_config_iran 2"
       - "@v2ray_free_config_iran 3"
       - "@v2ray_free_config_iran 4"
-      - "@v2ray_free_config_iran 5"
-      - "@v2ray_free_config_iran 6"
-      - "@v2ray_free_config_iran-x"
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -84,9 +66,6 @@ proxy-groups:
       - "@v2ray_free_config_iran 2"
       - "@v2ray_free_config_iran 3"
       - "@v2ray_free_config_iran 4"
-      - "@v2ray_free_config_iran 5"
-      - "@v2ray_free_config_iran 6"
-      - "@v2ray_free_config_iran-x"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -118,9 +97,6 @@ proxy-groups:
       - "@v2ray_free_config_iran 2"
       - "@v2ray_free_config_iran 3"
       - "@v2ray_free_config_iran 4"
-      - "@v2ray_free_config_iran 5"
-      - "@v2ray_free_config_iran 6"
-      - "@v2ray_free_config_iran-x"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
