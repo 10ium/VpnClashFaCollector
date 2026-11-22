@@ -5,60 +5,46 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 179.254.94.184:8444, server: 179.254.94.184, port: 8444, type: tuic, uuid: c6898f49-359a-4211-b2f2-dad8af91ecf8, password: bcbc51ba0a32e30cfd675ebfe9116db2, alpn: [h3], udp-relay-mode: native, congestion-controller: bbr, sni: www.bing.com, skip-cert-verify: false, udp: true, tfo: false}
   - {name: ⚙️67@oneclickvpnkeys, server: 179.254.94.184, port: 8444, type: tuic, uuid: c6898f49-359a-4211-b2f2-dad8af91ecf8, password: bcbc51ba0a32e30cfd675ebfe9116db2, alpn: [h3], udp-relay-mode: native, congestion-controller: bbr, sni: www.bing.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 222041 | ⚡️Telegram - t.me/SOSkeyNET, server: 179.254.94.184, port: 8444, type: tuic, uuid: c6898f49-359a-4211-b2f2-dad8af91ecf8, password: bcbc51ba0a32e30cfd675ebfe9116db2, alpn: [h3], udp-relay-mode: native, congestion-controller: bbr, sni: www.bing.com, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 179.254.94.184:8444
       - ⚙️67@oneclickvpnkeys
-      - 222041 | ⚡️Telegram - t.me/SOSkeyNET
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 179.254.94.184:8444
       - ⚙️67@oneclickvpnkeys
-      - 222041 | ⚡️Telegram - t.me/SOSkeyNET
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 179.254.94.184:8444
       - ⚙️67@oneclickvpnkeys
-      - 222041 | ⚡️Telegram - t.me/SOSkeyNET
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 179.254.94.184:8444
       - ⚙️67@oneclickvpnkeys
-      - 222041 | ⚡️Telegram - t.me/SOSkeyNET
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 179.254.94.184:8444
       - ⚙️67@oneclickvpnkeys
-      - 222041 | ⚡️Telegram - t.me/SOSkeyNET
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 179.254.94.184:8444
       - ⚙️67@oneclickvpnkeys
-      - 222041 | ⚡️Telegram - t.me/SOSkeyNET
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -86,9 +72,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 179.254.94.184:8444
       - ⚙️67@oneclickvpnkeys
-      - 222041 | ⚡️Telegram - t.me/SOSkeyNET
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连

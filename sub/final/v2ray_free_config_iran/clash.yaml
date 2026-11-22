@@ -465,10 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 🇳🇱 Netherlands-VLESS-WS-CDN, server: cdn-nl.vpnserverhub.com, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 1ee6b165-ca78-442f-95c8-3a243ab6d95f, network: ws, ws-opts: {path: /vpn-secure-cdn, headers: {Host: cdn-nl.vpnserverhub.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇳🇱 Netherlands-VLESS, server: netherlands.vpnserverhub.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 1ee6b165-ca78-442f-95c8-3a243ab6d95f, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇳🇱 Netherlands-VLESS-WS-CDN 2, server: cdn-nl.vpnserverhub.com, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 9159da16-615e-41ec-8dd7-8a6e582c9304, network: ws, ws-opts: {path: /vpn-secure-cdn, headers: {Host: cdn-nl.vpnserverhub.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇳🇱 Netherlands-VLESS 2, server: netherlands.vpnserverhub.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 9159da16-615e-41ec-8dd7-8a6e582c9304, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2ray_free_config_iran", server: cdn-nl.vpnserverhub.com, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 3fe2284d-e606-412e-a1f0-01e1e5309695, network: ws, ws-opts: {path: /vpn-secure-cdn, headers: {Host: cdn-nl.vpnserverhub.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@v2ray_free_config_iran 2", server: netherlands.vpnserverhub.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 3fe2284d-e606-412e-a1f0-01e1e5309695, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,30 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 🇳🇱 Netherlands-VLESS-WS-CDN
-      - 🇳🇱 Netherlands-VLESS
-      - 🇳🇱 Netherlands-VLESS-WS-CDN 2
-      - 🇳🇱 Netherlands-VLESS 2
+      - "@v2ray_free_config_iran"
+      - "@v2ray_free_config_iran 2"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 🇳🇱 Netherlands-VLESS-WS-CDN
-      - 🇳🇱 Netherlands-VLESS
-      - 🇳🇱 Netherlands-VLESS-WS-CDN 2
-      - 🇳🇱 Netherlands-VLESS 2
+      - "@v2ray_free_config_iran"
+      - "@v2ray_free_config_iran 2"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 🇳🇱 Netherlands-VLESS-WS-CDN
-      - 🇳🇱 Netherlands-VLESS
-      - 🇳🇱 Netherlands-VLESS-WS-CDN 2
-      - 🇳🇱 Netherlands-VLESS 2
+      - "@v2ray_free_config_iran"
+      - "@v2ray_free_config_iran 2"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -524,30 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇳🇱 Netherlands-VLESS-WS-CDN
-      - 🇳🇱 Netherlands-VLESS
-      - 🇳🇱 Netherlands-VLESS-WS-CDN 2
-      - 🇳🇱 Netherlands-VLESS 2
+      - "@v2ray_free_config_iran"
+      - "@v2ray_free_config_iran 2"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇳🇱 Netherlands-VLESS-WS-CDN
-      - 🇳🇱 Netherlands-VLESS
-      - 🇳🇱 Netherlands-VLESS-WS-CDN 2
-      - 🇳🇱 Netherlands-VLESS 2
+      - "@v2ray_free_config_iran"
+      - "@v2ray_free_config_iran 2"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 🇳🇱 Netherlands-VLESS-WS-CDN
-      - 🇳🇱 Netherlands-VLESS
-      - 🇳🇱 Netherlands-VLESS-WS-CDN 2
-      - 🇳🇱 Netherlands-VLESS 2
+      - "@v2ray_free_config_iran"
+      - "@v2ray_free_config_iran 2"
   - name: دانلود منیجر 📥
     type: select
     proxies:

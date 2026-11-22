@@ -5,46 +5,46 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@SiNAVM کانال تلگرامی`", server: sinavm.soft10.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 69768555-bf07-4127-8ce5-eed7a0d0baba, servername: sinavm.soft10.ir, alpn: [http/1.1], network: ws, ws-opts: {path: /assignment----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM----SiNAVM, headers: {Host: sinavm.soft10.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@SiNAVM کانال تلگرام", server: chatgpt.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c2425034-91ef-44bf-9fd4-f2be9c1e989a, servername: sinavm3.soft10.ir, alpn: [http%2F1.1], network: ws, ws-opts: {path: /SiNAVM-SiNAVM-SiNAVM-SiNAVM, headers: {Host: sinavm3.soft10.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@SiNAVM کانال تلگرامی`"
+      - "@SiNAVM کانال تلگرام"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@SiNAVM کانال تلگرامی`"
+      - "@SiNAVM کانال تلگرام"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@SiNAVM کانال تلگرامی`"
+      - "@SiNAVM کانال تلگرام"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@SiNAVM کانال تلگرامی`"
+      - "@SiNAVM کانال تلگرام"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@SiNAVM کانال تلگرامی`"
+      - "@SiNAVM کانال تلگرام"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@SiNAVM کانال تلگرامی`"
+      - "@SiNAVM کانال تلگرام"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -72,7 +72,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@SiNAVM کانال تلگرامی`"
+      - "@SiNAVM کانال تلگرام"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
