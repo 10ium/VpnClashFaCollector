@@ -5,74 +5,109 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: 47.254.167.157:443, server: 47.254.167.157, port: 443, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=, udp: true, tfo: false}
   - {name: 48.103.218.77:18443, server: 48.103.218.77, port: 18443, type: ss, cipher: aes-256-gcm, password: 5mKjXAGrliIAlYwWDeFzkCEMIgQdFQLe, udp: true, tfo: false}
+  - {name: a2dgus.supertoolify.com:443, server: a2dgus.supertoolify.com, port: 443, type: trojan, password: 57beeeb0-03fc-4fc9-94da-7604488a7134, sni: a2dgus.supertoolify.com, skip-cert-verify: false, udp: true, tfo: false}
   - {name: bgsg1.hikigo.com:443, server: bgsg1.hikigo.com, port: 443, type: trojan, password: 57beeeb0-03fc-4fc9-94da-7604488a7134, sni: bgsg1.hikigo.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: i1tr.mateflora.com:443, server: i1tr.mateflora.com, port: 443, type: trojan, password: 57beeeb0-03fc-4fc9-94da-7604488a7134, sni: i1tr.mateflora.com, skip-cert-verify: false, udp: true, tfo: false}
   - {name: win2loxfde0303.gggrelay.org:34745, server: win2loxfde0303.gggrelay.org, port: 34745, type: trojan, password: 57beeeb0-03fc-4fc9-94da-7604488a7134, sni: nu3rb.supertoolify.com, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 156.246.93.237:17443, server: 156.246.93.237, port: 17443, type: trojan, password: LDSLDq9XlM4-92pvTPOUuklMb99BLOCrdyejsupEca4, sni: jpk.wentibuxiaobuda.xyz, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: free.fugui.lol:19482, server: free.fugui.lol, port: 19482, type: vless, tls: true, packet-encoding: xudp, uuid: ead3595f-4020-4e76-a3ec-c248e1a2f2f7, servername: swdist.apple.com, host: swdist.apple.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: IjWYbHNrZb3UCQxsTJyekEOA3tHq42L6Jw3O8MmLYVQ, short-id: fa514b83}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 150.251.143.253:443, server: 150.251.143.253, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4201786b-d99b-4147-a5f0-20d47acddb81, servername: 4935e4t.de25.h1clayd.click, host: 4935e4t.de25.h1clayd.click, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: MzgB17ZFbKqs8pbC3EscTzHid_ENc-k_Cp6nXl-2knw, short-id: 6976d670818644cc}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 196.196.149.81:443, server: 196.196.149.81, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4201786b-d99b-4147-a5f0-20d47acddb81, servername: 7aa271t.es1.h1clayd.click, host: 7aa271t.es1.h1clayd.click, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: ZSmetD4e9QG5CiXhniHg5HJB68L4kwbgAkJmMHtVwEE, short-id: 42426c882c5fcd41}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "🇭🇰 [openproxylist.com] vmess-HK", server: pdmv4.xiaoyan.io, port: 16632, type: vmess, uuid: 904f0569-8695-466f-97cf-0de2face1b46, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: f9309cc88637c26f552a1a64fb311cae.mobgslb.tbcache.com}}, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - 47.254.167.157:443
       - 48.103.218.77:18443
+      - a2dgus.supertoolify.com:443
       - bgsg1.hikigo.com:443
+      - i1tr.mateflora.com:443
       - win2loxfde0303.gggrelay.org:34745
       - 156.246.93.237:17443
-      - free.fugui.lol:19482
+      - 150.251.143.253:443
+      - 196.196.149.81:443
+      - 🇭🇰 [openproxylist.com] vmess-HK
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
+      - 47.254.167.157:443
       - 48.103.218.77:18443
+      - a2dgus.supertoolify.com:443
       - bgsg1.hikigo.com:443
+      - i1tr.mateflora.com:443
       - win2loxfde0303.gggrelay.org:34745
       - 156.246.93.237:17443
-      - free.fugui.lol:19482
+      - 150.251.143.253:443
+      - 196.196.149.81:443
+      - 🇭🇰 [openproxylist.com] vmess-HK
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 47.254.167.157:443
       - 48.103.218.77:18443
+      - a2dgus.supertoolify.com:443
       - bgsg1.hikigo.com:443
+      - i1tr.mateflora.com:443
       - win2loxfde0303.gggrelay.org:34745
       - 156.246.93.237:17443
-      - free.fugui.lol:19482
+      - 150.251.143.253:443
+      - 196.196.149.81:443
+      - 🇭🇰 [openproxylist.com] vmess-HK
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 47.254.167.157:443
       - 48.103.218.77:18443
+      - a2dgus.supertoolify.com:443
       - bgsg1.hikigo.com:443
+      - i1tr.mateflora.com:443
       - win2loxfde0303.gggrelay.org:34745
       - 156.246.93.237:17443
-      - free.fugui.lol:19482
+      - 150.251.143.253:443
+      - 196.196.149.81:443
+      - 🇭🇰 [openproxylist.com] vmess-HK
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - 47.254.167.157:443
       - 48.103.218.77:18443
+      - a2dgus.supertoolify.com:443
       - bgsg1.hikigo.com:443
+      - i1tr.mateflora.com:443
       - win2loxfde0303.gggrelay.org:34745
       - 156.246.93.237:17443
-      - free.fugui.lol:19482
+      - 150.251.143.253:443
+      - 196.196.149.81:443
+      - 🇭🇰 [openproxylist.com] vmess-HK
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 47.254.167.157:443
       - 48.103.218.77:18443
+      - a2dgus.supertoolify.com:443
       - bgsg1.hikigo.com:443
+      - i1tr.mateflora.com:443
       - win2loxfde0303.gggrelay.org:34745
       - 156.246.93.237:17443
-      - free.fugui.lol:19482
+      - 150.251.143.253:443
+      - 196.196.149.81:443
+      - 🇭🇰 [openproxylist.com] vmess-HK
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -100,11 +135,16 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 47.254.167.157:443
       - 48.103.218.77:18443
+      - a2dgus.supertoolify.com:443
       - bgsg1.hikigo.com:443
+      - i1tr.mateflora.com:443
       - win2loxfde0303.gggrelay.org:34745
       - 156.246.93.237:17443
-      - free.fugui.lol:19482
+      - 150.251.143.253:443
+      - 196.196.149.81:443
+      - 🇭🇰 [openproxylist.com] vmess-HK
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
