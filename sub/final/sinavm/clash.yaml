@@ -465,7 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@SiNAVM کانال تلگرام", server: chatgpt.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: c2425034-91ef-44bf-9fd4-f2be9c1e989a, servername: sinavm3.soft10.ir, alpn: [http%2F1.1], network: ws, ws-opts: {path: /SiNAVM-SiNAVM-SiNAVM-SiNAVM, headers: {Host: sinavm3.soft10.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@SiNAVM کانال تلگرام", server: 172.64.155.209, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 14eccb4f-ca88-4732-b191-d8daacf63448, servername: sinavm3.soft10.ir, alpn: [http%2F1.1], network: ws, ws-opts: {path: /SiNAVM-SiNAVM-SiNAVM-SiNAVM, headers: {Host: sinavm3.soft10.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@SiNAVM کانال تلگرامی", server: 172.64.155.209, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 55b3fd10-3658-40a2-8951-ec90932d1d30, servername: sinavm2.soft10.ir, alpn: [http%2F1.1%2Ch2%2Ch3], network: ws, ws-opts: {path: /SiNAVM-SiNAVM-SiNAVM-SiNAVM, headers: {Host: sinavm2.soft10.ir}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@SiNAVM کانال تلگرامی 2", server: chatgpt.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 55b3fd10-3658-40a2-8951-ec90932d1d30, servername: sinavm2.soft10.ir, alpn: [http%2F1.1%2Ch2%2Ch3], network: ws, ws-opts: {path: /SiNAVM-SiNAVM-SiNAVM-SiNAVM, headers: {Host: sinavm2.soft10.ir}}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,6 +485,8 @@ proxy-groups:
     type: select
     proxies:
       - "@SiNAVM کانال تلگرام"
+      - "@SiNAVM کانال تلگرامی"
+      - "@SiNAVM کانال تلگرامی 2"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -490,6 +494,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@SiNAVM کانال تلگرام"
+      - "@SiNAVM کانال تلگرامی"
+      - "@SiNAVM کانال تلگرامی 2"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -497,6 +503,8 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@SiNAVM کانال تلگرام"
+      - "@SiNAVM کانال تلگرامی"
+      - "@SiNAVM کانال تلگرامی 2"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -513,6 +521,8 @@ proxy-groups:
     interval: 600
     proxies:
       - "@SiNAVM کانال تلگرام"
+      - "@SiNAVM کانال تلگرامی"
+      - "@SiNAVM کانال تلگرامی 2"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -520,6 +530,8 @@ proxy-groups:
     interval: 600
     proxies:
       - "@SiNAVM کانال تلگرام"
+      - "@SiNAVM کانال تلگرامی"
+      - "@SiNAVM کانال تلگرامی 2"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -527,6 +539,8 @@ proxy-groups:
     interval: 600
     proxies:
       - "@SiNAVM کانال تلگرام"
+      - "@SiNAVM کانال تلگرامی"
+      - "@SiNAVM کانال تلگرامی 2"
   - name: دانلود منیجر 📥
     type: select
     proxies:

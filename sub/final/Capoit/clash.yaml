@@ -465,8 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Capoit`", server: 217.179.5.167, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 76da82c0-fc08-4281-b808-119920ee5cfd, host: tgju.org, path: /, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@Capoit` 2", server: 212.192.3.63, port: 9543, type: vless, tls: true, packet-encoding: xudp, uuid: 920b3cd9-4f82-4669-bbd2-d4a28b9052c6, servername: storage.yandexcloud.net, host: storage.yandexcloud.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc, short-id: 123abcdf}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit`", server: ipfast.kingmna.com, port: 443, type: trojan, password: GBEqN2BggZfFExc5pTTHUA, sni: cdn.akamai.steamstatic.com, skip-cert-verify: false, network: ws, ws-opts: {path: /TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER, headers: {Host: cdn.akamai.steamstatic.com}}, udp: true, tfo: false}
+  - {name: "@Capoi`", server: 195.201.225.248, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 566a19dc-591e-4ddf-a727-2b95d68ae4a5, servername: c3nztvix78ee.dx4x.com, host: c3nztvix78ee.dx4x.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,7 +484,7 @@ proxy-groups:
     type: select
     proxies:
       - "@Capoit`"
-      - "@Capoit` 2"
+      - "@Capoi`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -492,7 +492,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Capoit`"
-      - "@Capoit` 2"
+      - "@Capoi`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -500,7 +500,7 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Capoit`"
-      - "@Capoit` 2"
+      - "@Capoi`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -517,7 +517,7 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit`"
-      - "@Capoit` 2"
+      - "@Capoi`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -525,7 +525,7 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit`"
-      - "@Capoit` 2"
+      - "@Capoi`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -533,7 +533,7 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit`"
-      - "@Capoit` 2"
+      - "@Capoi`"
   - name: دانلود منیجر 📥
     type: select
     proxies:
