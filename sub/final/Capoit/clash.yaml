@@ -465,8 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@Capoit`", server: ipfast.kingmna.com, port: 443, type: trojan, password: GBEqN2BggZfFExc5pTTHUA, sni: cdn.akamai.steamstatic.com, skip-cert-verify: false, network: ws, ws-opts: {path: /TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER, headers: {Host: cdn.akamai.steamstatic.com}}, udp: true, tfo: false}
-  - {name: "@Capoi`", server: 195.201.225.248, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 566a19dc-591e-4ddf-a727-2b95d68ae4a5, servername: c3nztvix78ee.dx4x.com, host: c3nztvix78ee.dx4x.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@Capoit`", server: 193.111.248.54, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a8e5585a-6020-4649-a364-c1ebf3a40548, servername: tagderdeutscheneinheit.de, host: tagderdeutscheneinheit.de, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 0KDql59THS-DXg30wMR0QGgFB6rXARDhr8WoWyfVA2M, short-id: 6f0091ebe3029ebb}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -484,7 +483,6 @@ proxy-groups:
     type: select
     proxies:
       - "@Capoit`"
-      - "@Capoi`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
@@ -492,7 +490,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Capoit`"
-      - "@Capoi`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
@@ -500,7 +497,6 @@ proxy-groups:
     tolerance: 50
     proxies:
       - "@Capoit`"
-      - "@Capoi`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -517,7 +513,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit`"
-      - "@Capoi`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
@@ -525,7 +520,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit`"
-      - "@Capoi`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
@@ -533,7 +527,6 @@ proxy-groups:
     interval: 600
     proxies:
       - "@Capoit`"
-      - "@Capoi`"
   - name: دانلود منیجر 📥
     type: select
     proxies:
