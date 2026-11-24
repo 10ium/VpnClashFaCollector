@@ -465,10 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 64.118.130.152:443, server: 64.118.130.152, port: 443, type: trojan, password: 57beeeb0-03fc-4fc9-94da-7604488a7134, sni: nb1hk.hikigo.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: a2dgus.supertoolify.com:443, server: a2dgus.supertoolify.com, port: 443, type: trojan, password: 57beeeb0-03fc-4fc9-94da-7604488a7134, sni: a2dgus.supertoolify.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 109.248.17.252:443, server: 109.248.17.252, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 9000a7f3-df2a-49a8-ae56-3e7777bd32f7, servername: v4.clequinix.globalinetforallalwaysandneverbanyoubelieveme.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: v4-clequinix-globalinetforallalwaysandneverbanyoubelieveme-com}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 87.82.59.60:837, server: 87.82.59.60, port: 837, type: vless, tls: true, packet-encoding: xudp, uuid: d8b42cd5-b149-4356-9e61-444444444444, path: /, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 88.151.197.87:2025, server: 88.151.197.87, port: 2025, type: vless, tls: true, packet-encoding: xudp, uuid: 1697852e-cd5c-472d-b377-0def0f301d98, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 193.111.248.54:443, server: 193.111.248.54, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a8e5585a-6020-4649-a364-c1ebf3a40548, servername: tagderdeutscheneinheit.de, host: tagderdeutscheneinheit.de, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 0KDql59THS-DXg30wMR0QGgFB6rXARDhr8WoWyfVA2M, short-id: 6f0091ebe3029ebb}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -485,30 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 64.118.130.152:443
-      - a2dgus.supertoolify.com:443
-      - 109.248.17.252:443
-      - 87.82.59.60:837
+      - 88.151.197.87:2025
+      - 193.111.248.54:443
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 64.118.130.152:443
-      - a2dgus.supertoolify.com:443
-      - 109.248.17.252:443
-      - 87.82.59.60:837
+      - 88.151.197.87:2025
+      - 193.111.248.54:443
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 64.118.130.152:443
-      - a2dgus.supertoolify.com:443
-      - 109.248.17.252:443
-      - 87.82.59.60:837
+      - 88.151.197.87:2025
+      - 193.111.248.54:443
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -524,30 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 64.118.130.152:443
-      - a2dgus.supertoolify.com:443
-      - 109.248.17.252:443
-      - 87.82.59.60:837
+      - 88.151.197.87:2025
+      - 193.111.248.54:443
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 64.118.130.152:443
-      - a2dgus.supertoolify.com:443
-      - 109.248.17.252:443
-      - 87.82.59.60:837
+      - 88.151.197.87:2025
+      - 193.111.248.54:443
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 64.118.130.152:443
-      - a2dgus.supertoolify.com:443
-      - 109.248.17.252:443
-      - 87.82.59.60:837
+      - 88.151.197.87:2025
+      - 193.111.248.54:443
   - name: دانلود منیجر 📥
     type: select
     proxies:
