@@ -5,53 +5,53 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: "@v2ray_free_config_iran", server: cdn-nl.vpnserverhub.com, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: 93ad7771-2a98-4933-8001-3b0c20fa88dd, network: ws, ws-opts: {path: /vpn-secure-cdn, headers: {Host: cdn-nl.vpnserverhub.com}}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@v2ray_free_config_iran 2", server: netherlands.vpnserverhub.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 93ad7771-2a98-4933-8001-3b0c20fa88dd, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇳🇱 Netherlands-VLESS-WS-CDN, server: cdn-nl.vpnserverhub.com, port: 8080, type: vless, tls: true, packet-encoding: xudp, uuid: b4ce0b7d-6e59-4f35-83b3-d921486e42c3, network: ws, ws-opts: {path: /vpn-secure-cdn, headers: {Host: cdn-nl.vpnserverhub.com}}, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇳🇱 Netherlands-VLESS, server: netherlands.vpnserverhub.com, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: b4ce0b7d-6e59-4f35-83b3-d921486e42c3, servername: yahoo.com, host: yahoo.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - "@v2ray_free_config_iran"
-      - "@v2ray_free_config_iran 2"
+      - 🇳🇱 Netherlands-VLESS-WS-CDN
+      - 🇳🇱 Netherlands-VLESS
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - "@v2ray_free_config_iran"
-      - "@v2ray_free_config_iran 2"
+      - 🇳🇱 Netherlands-VLESS-WS-CDN
+      - 🇳🇱 Netherlands-VLESS
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - "@v2ray_free_config_iran"
-      - "@v2ray_free_config_iran 2"
+      - 🇳🇱 Netherlands-VLESS-WS-CDN
+      - 🇳🇱 Netherlands-VLESS
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@v2ray_free_config_iran"
-      - "@v2ray_free_config_iran 2"
+      - 🇳🇱 Netherlands-VLESS-WS-CDN
+      - 🇳🇱 Netherlands-VLESS
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - "@v2ray_free_config_iran"
-      - "@v2ray_free_config_iran 2"
+      - 🇳🇱 Netherlands-VLESS-WS-CDN
+      - 🇳🇱 Netherlands-VLESS
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - "@v2ray_free_config_iran"
-      - "@v2ray_free_config_iran 2"
+      - 🇳🇱 Netherlands-VLESS-WS-CDN
+      - 🇳🇱 Netherlands-VLESS
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -79,8 +79,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - "@v2ray_free_config_iran"
-      - "@v2ray_free_config_iran 2"
+      - 🇳🇱 Netherlands-VLESS-WS-CDN
+      - 🇳🇱 Netherlands-VLESS
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
