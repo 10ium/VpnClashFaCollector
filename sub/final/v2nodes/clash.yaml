@@ -465,8 +465,9 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 88.151.197.87:2025, server: 88.151.197.87, port: 2025, type: vless, tls: true, packet-encoding: xudp, uuid: 1697852e-cd5c-472d-b377-0def0f301d98, network: ws, ws-opts: {path: /}, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 193.111.248.54:443, server: 193.111.248.54, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a8e5585a-6020-4649-a364-c1ebf3a40548, servername: tagderdeutscheneinheit.de, host: tagderdeutscheneinheit.de, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: 0KDql59THS-DXg30wMR0QGgFB6rXARDhr8WoWyfVA2M, short-id: 6f0091ebe3029ebb}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ddrr1.tube-cat.com:28478, server: ddrr1.tube-cat.com, port: 28478, type: trojan, password: d7563108-615c-4338-a7bd-77f359869a4a, sni: r.tw2.cat.bilibili.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: ddrr2.tube-cat.com:59188, server: ddrr2.tube-cat.com, port: 59188, type: trojan, password: d7563108-615c-4338-a7bd-77f359869a4a, sni: r.tw3.cat.bilibili.com, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 🇳🇱 15b171g.nl7.h1clayd.click:443, server: 15b171g.nl7.h1clayd.click, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839, servername: 15b171g.nl7.h1clayd.click, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: 5b79e8a94241}, reality-opts: {public-key: zbz--PMjcIC4Ggr3j-ibDf0fzXRTj0lM_HzjPJyMkVE, short-id: 50a749f0eccb628c}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +484,27 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 88.151.197.87:2025
-      - 193.111.248.54:443
+      - ddrr1.tube-cat.com:28478
+      - ddrr2.tube-cat.com:59188
+      - 🇳🇱 15b171g.nl7.h1clayd.click:443
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 88.151.197.87:2025
-      - 193.111.248.54:443
+      - ddrr1.tube-cat.com:28478
+      - ddrr2.tube-cat.com:59188
+      - 🇳🇱 15b171g.nl7.h1clayd.click:443
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 88.151.197.87:2025
-      - 193.111.248.54:443
+      - ddrr1.tube-cat.com:28478
+      - ddrr2.tube-cat.com:59188
+      - 🇳🇱 15b171g.nl7.h1clayd.click:443
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +520,27 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 88.151.197.87:2025
-      - 193.111.248.54:443
+      - ddrr1.tube-cat.com:28478
+      - ddrr2.tube-cat.com:59188
+      - 🇳🇱 15b171g.nl7.h1clayd.click:443
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 88.151.197.87:2025
-      - 193.111.248.54:443
+      - ddrr1.tube-cat.com:28478
+      - ddrr2.tube-cat.com:59188
+      - 🇳🇱 15b171g.nl7.h1clayd.click:443
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 88.151.197.87:2025
-      - 193.111.248.54:443
+      - ddrr1.tube-cat.com:28478
+      - ddrr2.tube-cat.com:59188
+      - 🇳🇱 15b171g.nl7.h1clayd.click:443
   - name: دانلود منیجر 📥
     type: select
     proxies:
