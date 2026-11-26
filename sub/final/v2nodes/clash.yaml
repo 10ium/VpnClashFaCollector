@@ -465,8 +465,6 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: ddrr1.tube-cat.com:28478, server: ddrr1.tube-cat.com, port: 28478, type: trojan, password: d7563108-615c-4338-a7bd-77f359869a4a, sni: r.tw2.cat.bilibili.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: ddrr2.tube-cat.com:59188, server: ddrr2.tube-cat.com, port: 59188, type: trojan, password: d7563108-615c-4338-a7bd-77f359869a4a, sni: r.tw3.cat.bilibili.com, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 94.183.234.245:443, server: 94.183.234.245, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5de0c218-0138-45d8-94d2-c2c3f37a1a6d, servername: www.bing.com, host: www.bing.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: tfFzmbVByvoZxxIEUiHMv22_k0-nQz00L0XjU0bd_Fc, short-id: 7f1e29593aa94ad1}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
@@ -484,8 +482,6 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - ddrr1.tube-cat.com:28478
-      - ddrr2.tube-cat.com:59188
       - 94.183.234.245:443
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -493,8 +489,6 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - ddrr1.tube-cat.com:28478
-      - ddrr2.tube-cat.com:59188
       - 94.183.234.245:443
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -502,8 +496,6 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - ddrr1.tube-cat.com:28478
-      - ddrr2.tube-cat.com:59188
       - 94.183.234.245:443
   - name: اتصال پایدار 🔗
     type: url-test
@@ -520,8 +512,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - ddrr1.tube-cat.com:28478
-      - ddrr2.tube-cat.com:59188
       - 94.183.234.245:443
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -529,8 +519,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - ddrr1.tube-cat.com:28478
-      - ddrr2.tube-cat.com:59188
       - 94.183.234.245:443
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -538,8 +526,6 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - ddrr1.tube-cat.com:28478
-      - ddrr2.tube-cat.com:59188
       - 94.183.234.245:443
   - name: دانلود منیجر 📥
     type: select
