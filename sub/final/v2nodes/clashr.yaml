@@ -7,7 +7,7 @@ external-controller: 127.0.0.1:9090
 proxies:
   - {name: ddrr1.tube-cat.com:28478, server: ddrr1.tube-cat.com, port: 28478, type: trojan, password: d7563108-615c-4338-a7bd-77f359869a4a, sni: r.tw2.cat.bilibili.com, skip-cert-verify: false, udp: true, tfo: false}
   - {name: ddrr2.tube-cat.com:59188, server: ddrr2.tube-cat.com, port: 59188, type: trojan, password: d7563108-615c-4338-a7bd-77f359869a4a, sni: r.tw3.cat.bilibili.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: 🇳🇱 15b171g.nl7.h1clayd.click:443, server: 15b171g.nl7.h1clayd.click, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: cda0862a-0f87-4be9-8ed8-1d0c9e382839, servername: 15b171g.nl7.h1clayd.click, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: 5b79e8a94241}, reality-opts: {public-key: zbz--PMjcIC4Ggr3j-ibDf0fzXRTj0lM_HzjPJyMkVE, short-id: 50a749f0eccb628c}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 94.183.234.245:443, server: 94.183.234.245, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5de0c218-0138-45d8-94d2-c2c3f37a1a6d, servername: www.bing.com, host: www.bing.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: tfFzmbVByvoZxxIEUiHMv22_k0-nQz00L0XjU0bd_Fc, short-id: 7f1e29593aa94ad1}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -16,7 +16,7 @@ proxy-groups:
       - DIRECT
       - ddrr1.tube-cat.com:28478
       - ddrr2.tube-cat.com:59188
-      - 🇳🇱 15b171g.nl7.h1clayd.click:443
+      - 94.183.234.245:443
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -25,7 +25,7 @@ proxy-groups:
     proxies:
       - ddrr1.tube-cat.com:28478
       - ddrr2.tube-cat.com:59188
-      - 🇳🇱 15b171g.nl7.h1clayd.click:443
+      - 94.183.234.245:443
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -34,7 +34,7 @@ proxy-groups:
       - 🎯 全球直连
       - ddrr1.tube-cat.com:28478
       - ddrr2.tube-cat.com:59188
-      - 🇳🇱 15b171g.nl7.h1clayd.click:443
+      - 94.183.234.245:443
   - name: 📲 电报信息
     type: select
     proxies:
@@ -42,7 +42,7 @@ proxy-groups:
       - 🎯 全球直连
       - ddrr1.tube-cat.com:28478
       - ddrr2.tube-cat.com:59188
-      - 🇳🇱 15b171g.nl7.h1clayd.click:443
+      - 94.183.234.245:443
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -50,7 +50,7 @@ proxy-groups:
       - 🚀 节点选择
       - ddrr1.tube-cat.com:28478
       - ddrr2.tube-cat.com:59188
-      - 🇳🇱 15b171g.nl7.h1clayd.click:443
+      - 94.183.234.245:443
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -58,7 +58,7 @@ proxy-groups:
       - 🎯 全球直连
       - ddrr1.tube-cat.com:28478
       - ddrr2.tube-cat.com:59188
-      - 🇳🇱 15b171g.nl7.h1clayd.click:443
+      - 94.183.234.245:443
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -88,7 +88,7 @@ proxy-groups:
       - ♻️ 自动选择
       - ddrr1.tube-cat.com:28478
       - ddrr2.tube-cat.com:59188
-      - 🇳🇱 15b171g.nl7.h1clayd.click:443
+      - 94.183.234.245:443
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
