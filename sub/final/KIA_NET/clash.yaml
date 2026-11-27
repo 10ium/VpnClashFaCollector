@@ -465,8 +465,7 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: همه.سیمکارتا, server: 172.233.33.78, port: 33819, type: hysteria2, ports: 33819, password: wgb0ydxdltgjabxe, obfs: salamander, obfs-password: 8drfqtsqoq38b2kp, sni: 172.233.33.78, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: کیانت`, server: 172.233.33.78, port: 25397, type: ss, cipher: chacha20-ietf-poly1305, password: 4wqzjbejkwh5ipep, udp: true, tfo: false}
+  - {name: "`", server: www.pexqelo.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a95c6854-eff6-4c66-bf15-805ab372470a, servername: opensuse.org, host: opensuse.org, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: EMMr7Eqwy3wpgbatnOaAmym5Tm4nXyJlC83iVvCadmk, short-id: f3f00787a8b3f471}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -483,24 +482,21 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - همه.سیمکارتا
-      - کیانت`
+      - "`"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - همه.سیمکارتا
-      - کیانت`
+      - "`"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - همه.سیمکارتا
-      - کیانت`
+      - "`"
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -516,24 +512,21 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - همه.سیمکارتا
-      - کیانت`
+      - "`"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - همه.سیمکارتا
-      - کیانت`
+      - "`"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - همه.سیمکارتا
-      - کیانت`
+      - "`"
   - name: دانلود منیجر 📥
     type: select
     proxies:

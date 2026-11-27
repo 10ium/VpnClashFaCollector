@@ -5,53 +5,46 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: همه.سیمکارتا, server: 172.233.33.78, port: 33819, type: hysteria2, ports: 33819, password: wgb0ydxdltgjabxe, obfs: salamander, obfs-password: 8drfqtsqoq38b2kp, sni: 172.233.33.78, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: کیانت`, server: 172.233.33.78, port: 25397, type: ss, cipher: chacha20-ietf-poly1305, password: 4wqzjbejkwh5ipep, udp: true, tfo: false}
+  - {name: "`", server: www.pexqelo.ir, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: a95c6854-eff6-4c66-bf15-805ab372470a, servername: opensuse.org, host: opensuse.org, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: EMMr7Eqwy3wpgbatnOaAmym5Tm4nXyJlC83iVvCadmk, short-id: f3f00787a8b3f471}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - همه.سیمکارتا
-      - کیانت`
+      - "`"
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - همه.سیمکارتا
-      - کیانت`
+      - "`"
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - همه.سیمکارتا
-      - کیانت`
+      - "`"
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - همه.سیمکارتا
-      - کیانت`
+      - "`"
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - همه.سیمکارتا
-      - کیانت`
+      - "`"
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - همه.سیمکارتا
-      - کیانت`
+      - "`"
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -79,8 +72,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - همه.سیمکارتا
-      - کیانت`
+      - "`"
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
