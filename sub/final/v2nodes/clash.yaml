@@ -465,7 +465,8 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: 94.183.234.245:443, server: 94.183.234.245, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5de0c218-0138-45d8-94d2-c2c3f37a1a6d, servername: www.bing.com, host: www.bing.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: tfFzmbVByvoZxxIEUiHMv22_k0-nQz00L0XjU0bd_Fc, short-id: 7f1e29593aa94ad1}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 47.254.167.157:443, server: 47.254.167.157, port: 443, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=, udp: true, tfo: false}
+  - {name: 🇩🇪 71b840t.de7.h1clayd.click:443, server: 71b840t.de7.h1clayd.click, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 26843758-24de-4f76-b5d0-624038e353c4, servername: 71b840t.de7.h1clayd.click, host: 71b840t.de7.h1clayd.click, path: /, reality-opts: {public-key: 3wFF83gtIA0sXj-6GGCAa--oQbSr0MVUj0FBc-0QmiE, short-id: e572b6579ea525d4}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -482,21 +483,24 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - 94.183.234.245:443
+      - 47.254.167.157:443
+      - 🇩🇪 71b840t.de7.h1clayd.click:443
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     tolerance: 50
     proxies:
-      - 94.183.234.245:443
+      - 47.254.167.157:443
+      - 🇩🇪 71b840t.de7.h1clayd.click:443
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
     url: https://www.gstatic.com/generate_204
     interval: 600
     tolerance: 50
     proxies:
-      - 94.183.234.245:443
+      - 47.254.167.157:443
+      - 🇩🇪 71b840t.de7.h1clayd.click:443
   - name: اتصال پایدار 🔗
     type: url-test
     url: https://cp.cloudflare.com/generate_204
@@ -512,21 +516,24 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 94.183.234.245:443
+      - 47.254.167.157:443
+      - 🇩🇪 71b840t.de7.h1clayd.click:443
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 94.183.234.245:443
+      - 47.254.167.157:443
+      - 🇩🇪 71b840t.de7.h1clayd.click:443
   - name: توزیع بار (موقت) ⏳
     type: load-balance
     strategy: consistent-hashing
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - 94.183.234.245:443
+      - 47.254.167.157:443
+      - 🇩🇪 71b840t.de7.h1clayd.click:443
   - name: دانلود منیجر 📥
     type: select
     proxies:
