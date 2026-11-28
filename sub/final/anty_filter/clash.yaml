@@ -465,12 +465,11 @@ rule-providers:
     interval: 86400
     path: ./ruleset/mihSpotify.yaml
 proxies:
-  - {name: "@vpnbaz ⭐", server: 185.164.175.81, port: 19999, type: ss, cipher: aes-256-gcm, password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=, udp: true, tfo: false}
-  - {name: "@vpnbaz ☂️", server: 66.163.127.155, port: 443, type: trojan, password: 0ab6c98dae3b48e8b9c4a776b6c9c19a, sni: indyourperfectremotetechjobfromthecomfortofhome.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz 🛸", server: 66.163.127.155, port: 443, type: trojan, password: 0ab6c98dae3b48e8b9c4a776b6c9c19a, sni: indyourperfectremotetechjobfromthecomfortofhome.com, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz 🌊", server: 47.251.25.74, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 18805ff3-b420-45de-af18-93be14024ae8, servername: www.amazon.com, host: www.amazon.com, path: /, flow: xtls-rprx-vision, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz 🍋‍🟩", server: 146.103.42.78, port: 9543, type: vless, tls: true, packet-encoding: xudp, uuid: 920b3cd9-4f82-4669-bbd2-d4a28b9052c6, servername: storage.yandexcloud.net, host: storage.yandexcloud.net, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: M6Ck7wUfOLhQl4582CBnaXwscPEP6SCpdEkUDzoj4Fc, short-id: 123abcdf}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
-  - {name: "@vpnbaz 🍭", server: 67.220.95.3, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz ☂️", server: 152.53.1.57, port: 8388, type: ss, cipher: chacha20-ietf-poly1305, password: AdawffFMHymlasRb0VOP3HFf7sTG5sJx, udp: true, tfo: false}
+  - {name: "@vpnbaz 🛸", server: 158.173.20.208, port: 443, type: ss, cipher: aes-128-gcm, password: shadowsocks, udp: true, tfo: false}
+  - {name: "@vpnbaz 🍋‍🟩", server: 169.197.142.22, port: 18000, type: vmess, uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: "@vpnbaz 🌊", server: www.windowssearchtools.com, port: 443, type: vmess, uuid: ba1116e2-8c2f-4e3d-8e50-c954360cf970, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: www.windowssearchtools.com, network: ws, ws-opts: {path: /truth, headers: {Host: www.windowssearchtools.com}}, udp: true, tfo: false}
+  - {name: "@vpnbaz 🍭", server: www.windowssearchtools.com, port: 443, type: vmess, uuid: ba1116e2-8c2f-4e3d-8e50-c954360cf970, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: www.windowssearchtools.com, network: ws, ws-opts: {path: /truth, headers: {Host: www.windowssearchtools.com}}, udp: true, tfo: false}
 proxy-groups:
   - name: نوع انتخاب پروکسی 🔀
     type: select
@@ -487,11 +486,10 @@ proxy-groups:
   - name: دستی 🤏🏻
     type: select
     proxies:
-      - "@vpnbaz ⭐"
       - "@vpnbaz ☂️"
       - "@vpnbaz 🛸"
-      - "@vpnbaz 🌊"
       - "@vpnbaz 🍋‍🟩"
+      - "@vpnbaz 🌊"
       - "@vpnbaz 🍭"
   - name: خودکار (بهترین پینگ) 🤖
     type: url-test
@@ -499,11 +497,10 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - "@vpnbaz ⭐"
       - "@vpnbaz ☂️"
       - "@vpnbaz 🛸"
-      - "@vpnbaz 🌊"
       - "@vpnbaz 🍋‍🟩"
+      - "@vpnbaz 🌊"
       - "@vpnbaz 🍭"
   - name: پشتیبان (در صورت قطعی) 🧯
     type: fallback
@@ -511,11 +508,10 @@ proxy-groups:
     interval: 600
     tolerance: 50
     proxies:
-      - "@vpnbaz ⭐"
       - "@vpnbaz ☂️"
       - "@vpnbaz 🛸"
-      - "@vpnbaz 🌊"
       - "@vpnbaz 🍋‍🟩"
+      - "@vpnbaz 🌊"
       - "@vpnbaz 🍭"
   - name: اتصال پایدار 🔗
     type: url-test
@@ -532,11 +528,10 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@vpnbaz ⭐"
       - "@vpnbaz ☂️"
       - "@vpnbaz 🛸"
-      - "@vpnbaz 🌊"
       - "@vpnbaz 🍋‍🟩"
+      - "@vpnbaz 🌊"
       - "@vpnbaz 🍭"
   - name: توزیع بار (گردشی) 🔁
     type: load-balance
@@ -544,11 +539,10 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@vpnbaz ⭐"
       - "@vpnbaz ☂️"
       - "@vpnbaz 🛸"
-      - "@vpnbaz 🌊"
       - "@vpnbaz 🍋‍🟩"
+      - "@vpnbaz 🌊"
       - "@vpnbaz 🍭"
   - name: توزیع بار (موقت) ⏳
     type: load-balance
@@ -556,11 +550,10 @@ proxy-groups:
     url: https://api.v2fly.org/checkConnection.svgz
     interval: 600
     proxies:
-      - "@vpnbaz ⭐"
       - "@vpnbaz ☂️"
       - "@vpnbaz 🛸"
-      - "@vpnbaz 🌊"
       - "@vpnbaz 🍋‍🟩"
+      - "@vpnbaz 🌊"
       - "@vpnbaz 🍭"
   - name: دانلود منیجر 📥
     type: select

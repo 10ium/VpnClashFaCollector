@@ -5,9 +5,8 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 47.254.167.157:443, server: 47.254.167.157, port: 443, type: ss, cipher: 2022-blake3-chacha20-poly1305, password: 8yO3ANWefuuGs1lRKXECQA1FEhxlWFV2ppQMcBaZo5Y=, udp: true, tfo: false}
   - {name: 47.245.40.193:5555, server: 47.245.40.193, port: 5555, type: ss, cipher: aes-256-gcm, password: !<str> 123456, udp: true, tfo: false}
-  - {name: 🇩🇪 71b840t.de7.h1clayd.click:443, server: 71b840t.de7.h1clayd.click, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 26843758-24de-4f76-b5d0-624038e353c4, servername: 71b840t.de7.h1clayd.click, host: 71b840t.de7.h1clayd.click, path: /, reality-opts: {public-key: 3wFF83gtIA0sXj-6GGCAa--oQbSr0MVUj0FBc-0QmiE, short-id: e572b6579ea525d4}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
+  - {name: 150.251.143.253:443, server: 150.251.143.253, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 4201786b-d99b-4147-a5f0-20d47acddb81, servername: 4935e4t.de25.h1clayd.click, host: 4935e4t.de25.h1clayd.click, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: MzgB17ZFbKqs8pbC3EscTzHid_ENc-k_Cp6nXl-2knw, short-id: 6976d670818644cc}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 94.183.234.245:443, server: 94.183.234.245, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 5de0c218-0138-45d8-94d2-c2c3f37a1a6d, servername: www.bing.com, host: www.bing.com, path: /, flow: xtls-rprx-vision, reality-opts: {public-key: tfFzmbVByvoZxxIEUiHMv22_k0-nQz00L0XjU0bd_Fc, short-id: 7f1e29593aa94ad1}, client-fingerprint: random, skip-cert-verify: false, udp: true, tfo: false}
   - {name: 51.194.118.38:443, server: 51.194.118.38, port: 443, type: vless, tls: true, packet-encoding: xudp, uuid: 7ff1e7e1-2b5a-4e53-ae77-1516f9eb7754, servername: a1259.ve8nzuk.com, network: grpc, grpc-opts: {grpc-mode: gun, grpc-service-name: 50a5f706c8ea4433838a207d435fbf031b008a9a}, skip-cert-verify: false, udp: true, tfo: false}
 proxy-groups:
@@ -16,9 +15,8 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 47.254.167.157:443
       - 47.245.40.193:5555
-      - 🇩🇪 71b840t.de7.h1clayd.click:443
+      - 150.251.143.253:443
       - 94.183.234.245:443
       - 51.194.118.38:443
   - name: ♻️ 自动选择
@@ -27,9 +25,8 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 47.254.167.157:443
       - 47.245.40.193:5555
-      - 🇩🇪 71b840t.de7.h1clayd.click:443
+      - 150.251.143.253:443
       - 94.183.234.245:443
       - 51.194.118.38:443
   - name: 🌍 国外媒体
@@ -38,9 +35,8 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 47.254.167.157:443
       - 47.245.40.193:5555
-      - 🇩🇪 71b840t.de7.h1clayd.click:443
+      - 150.251.143.253:443
       - 94.183.234.245:443
       - 51.194.118.38:443
   - name: 📲 电报信息
@@ -48,9 +44,8 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 47.254.167.157:443
       - 47.245.40.193:5555
-      - 🇩🇪 71b840t.de7.h1clayd.click:443
+      - 150.251.143.253:443
       - 94.183.234.245:443
       - 51.194.118.38:443
   - name: Ⓜ️ 微软服务
@@ -58,9 +53,8 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 47.254.167.157:443
       - 47.245.40.193:5555
-      - 🇩🇪 71b840t.de7.h1clayd.click:443
+      - 150.251.143.253:443
       - 94.183.234.245:443
       - 51.194.118.38:443
   - name: 🍎 苹果服务
@@ -68,9 +62,8 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 47.254.167.157:443
       - 47.245.40.193:5555
-      - 🇩🇪 71b840t.de7.h1clayd.click:443
+      - 150.251.143.253:443
       - 94.183.234.245:443
       - 51.194.118.38:443
   - name: 🎯 全球直连
@@ -100,9 +93,8 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 47.254.167.157:443
       - 47.245.40.193:5555
-      - 🇩🇪 71b840t.de7.h1clayd.click:443
+      - 150.251.143.253:443
       - 94.183.234.245:443
       - 51.194.118.38:443
 rules:
